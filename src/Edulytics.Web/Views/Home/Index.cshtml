@@ -1,8 +1,48 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+@{
+    Layout = "_PublicLayout";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<section class="language-shell">
+    <div class="language-brand"
+         aria-label="Edulytics">
+        <div class="language-brand-mark"
+             aria-hidden="true">E</div>
+        <div class="language-brand-name">Edulytics</div>
+    </div>
+
+    <div class="language-grid">
+        <form asp-controller="Home"
+              asp-action="SetCulture"
+              method="post"
+              class="language-form">
+            @Html.AntiForgeryToken()
+            <input type="hidden"
+                   name="culture"
+                   value="pl" />
+            <button type="submit"
+                    class="language-card"
+                    aria-label="Polski">
+                <span class="language-code"
+                      aria-hidden="true">PL</span>
+                <span>Polski</span>
+            </button>
+        </form>
+
+        <form asp-controller="Home"
+              asp-action="SetCulture"
+              method="post"
+              class="language-form">
+            @Html.AntiForgeryToken()
+            <input type="hidden"
+                   name="culture"
+                   value="en" />
+            <button type="submit"
+                    class="language-card"
+                    aria-label="English">
+                <span class="language-code"
+                      aria-hidden="true">EN</span>
+                <span>English</span>
+            </button>
+        </form>
+    </div>
+</section>

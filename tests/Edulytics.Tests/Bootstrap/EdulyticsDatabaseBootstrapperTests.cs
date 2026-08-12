@@ -47,7 +47,7 @@ public class EdulyticsDatabaseBootstrapperTests
         var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
         var roleManager = services.GetRequiredService<RoleManager<ApplicationRole>>();
 
-        Assert.Equal(1, (await userManager.GetUsersInRoleAsync(RoleNames.SuperAdmin)).Count);
+        Assert.Single(await userManager.GetUsersInRoleAsync(RoleNames.SuperAdmin));
         Assert.Equal(5, await roleManager.Roles.CountAsync());
     }
 
@@ -95,7 +95,7 @@ public class EdulyticsDatabaseBootstrapperTests
 
         // Roles are always created, but SuperAdmin user is not
         Assert.Equal(5, await roleManager.Roles.CountAsync());
-        Assert.Equal(0, (await userManager.Users.ToListAsync()).Count);
+        Assert.Empty(await userManager.Users.ToListAsync());
     }
 
     [Fact]

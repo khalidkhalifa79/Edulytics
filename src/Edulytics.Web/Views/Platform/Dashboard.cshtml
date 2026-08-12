@@ -1,0 +1,27 @@
+@inject IStringLocalizer<PlatformResource> Text
+
+@{
+    ViewData["Title"] = Text["DashboardTitle"];
+}
+
+<section class="dashboard-shell">
+    <div class="dashboard-hero">
+        <div>
+            <span class="dashboard-eyebrow">
+                @Text["PlatformContext"]
+            </span>
+
+            <h1>@Text["DashboardTitle"]</h1>
+
+            <p>@Text["DashboardMessage"]</p>
+        </div>
+
+        <div class="dashboard-user-card">
+            <span class="dashboard-user-label">
+                @Text["SignedInAs"]
+            </span>
+
+            <strong>@User.Identity?.Name</strong>
+        </div>
+    </div>
+</section>

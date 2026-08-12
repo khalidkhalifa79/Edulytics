@@ -1,0 +1,86 @@
+@model LoginViewModel
+@inject IStringLocalizer<AccountResource> Text
+
+@{
+    Layout = "_AuthLayout";
+    ViewData["Title"] = Text["SignInTitle"];
+    var returnUrl = ViewData["ReturnUrl"] as string;
+}
+
+<section class="auth-shell">
+    <div class="auth-card">
+        <a asp-controller="Home"
+           asp-action="Index"
+           class="auth-brand"
+           aria-label="Edulytics">
+            <span class="auth-brand-mark"
+                  aria-hidden="true">E</span>
+            <span>Edulytics</span>
+        </a>
+
+        <div class="auth-heading">
+            <h1>@Text["SignInTitle"]</h1>
+            <p>@Text["SignInSubtitle"]</p>
+        </div>
+
+        <form asp-controller="Account"
+              asp-action="Login"
+              asp-route-returnUrl="@returnUrl"
+              method="post"
+              class="auth-form">
+            @Html.AntiForgeryToken()
+
+            <div asp-validation-summary="ModelOnly"
+                 class="validation-summary"
+                 role="alert"></div>
+
+            <div class="field-group">
+                <label asp-for="Email"
+                       class="form-label">
+                    @Text["EmailLabel"]
+                </label>
+
+                <input asp-for="Email"
+                       type="email"
+                       class="form-control ed-input"
+                       autocomplete="username"
+                       placeholder="@Text["EmailPlaceholder"]"
+                       aria-label="@Text["EmailLabel"]" />
+
+                <span asp-validation-for="Email"
+                      class="field-validation"
+                      role="alert"></span>
+            </div>
+
+            <div class="field-group">
+                <label asp-for="Password"
+                       class="form-label">
+                    @Text["PasswordLabel"]
+                </label>
+
+                <input asp-for="Password"
+                       class="form-control ed-input"
+                       autocomplete="current-password"
+                       placeholder="@Text["PasswordPlaceholder"]"
+                       aria-label="@Text["PasswordLabel"]" />
+
+                <span asp-validation-for="Password"
+                      class="field-validation"
+                      role="alert"></span>
+            </div>
+
+            <button type="submit"
+                    class="btn ed-primary-button"
+                    aria-label="@Text["SignInButton"]">
+                @Text["SignInButton"]
+            </button>
+        </form>
+
+        <a asp-controller="Home"
+           asp-action="Index"
+           class="change-language-link"
+           aria-label="@Text["ChangeLanguage"]">
+            @Text["ChangeLanguage"]
+        </a>
+    </div>
+</section>

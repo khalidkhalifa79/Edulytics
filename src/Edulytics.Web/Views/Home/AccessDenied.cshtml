@@ -1,0 +1,16 @@
+@inject IStringLocalizer<SharedResource> Text
+
+@{
+    ViewData["Title"] = Text["AccessDeniedTitle"];
+}
+
+<section class="state-shell">
+    <div class="state-card">
+        <div class="state-icon"
+             aria-hidden="true">!</div>
+
+        <h1>@Text["AccessDeniedTitle"]</h1>
+
+        <p>@Text["AccessDeniedMessage"]</p>
+    </div>
+</section>

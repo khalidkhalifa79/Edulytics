@@ -1,0 +1,50 @@
+@using System.Globalization
+@inject IStringLocalizer<SharedResource> SharedText
+<!DOCTYPE html>
+<html lang="@CultureInfo.CurrentUICulture.TwoLetterISOLanguageName">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] | Edulytics</title>
+    <link rel="stylesheet"
+          href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+          href="~/css/site.css"
+          asp-append-version="true" />
+</head>
+<body class="ed-app-body">
+    <header class="ed-app-header">
+        <div class="ed-app-header-inner">
+            <a class="ed-brand"
+               asp-controller="Platform"
+               asp-action="Dashboard">
+                Edulytics
+            </a>
+
+            @if (User.Identity?.IsAuthenticated == true)
+            {
+                <form asp-controller="Account"
+                      asp-action="Logout"
+                      method="post"
+                      class="m-0">
+                    @Html.AntiForgeryToken()
+                    <button type="submit"
+                            class="ed-signout-button"
+                            aria-label="@SharedText["SignOut"]">
+                        @SharedText["SignOut"]
+                    </button>
+                </form>
+            }
+        </div>
+    </header>
+
+    <main class="ed-app-main">
+        @RenderBody()
+    </main>
+
+    @await RenderSectionAsync(
+        "Scripts",
+        required: false)
+</body>
+</html>

@@ -1,24 +1,65 @@
 using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
+using Edulytics.Web.Localization;
 using Edulytics.Web.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Edulytics.Web.Controllers;
 
-public class HomeController : Controller
+public sealed class HomeController : Controller
 {
+    [AllowAnonymous]
+    [HttpGet("/")]
     public IActionResult Index()
     {
         return View();
     }
 
-    public IActionResult Privacy()
+    [AllowAnonymous]
+    [HttpPost("/set-culture")]
+    [ValidateAntiForgeryToken]
+    public IActionResult SetCulture(string? culture)
+    {
+        if (!CultureCookie.IsSupported(culture))
+        {
+            return RedirectToAction(nameof(Index));
+        }
+
+        Response.Cookies.Append(
+            CultureCookie.Name,
+            CultureCookie.CreateValue(culture!),
+            new CookieOptions
+            {
+                Path = "/",
+                Expires = DateTimeOffset.UtcNow.AddYears(1),
+                IsEssential = true,
+                HttpOnly = true,
+                SameSite = SameSiteMode.Strict,
+                Secure = Request.IsHttps
+            });
+
+        return RedirectToAction("Login", "Account");
+    }
+
+    [Authorize]
+    [HttpGet("/access-denied")]
+    public IActionResult AccessDenied()
     {
         return View();
     }
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+    [AllowAnonymous]
+    [ResponseCache(
+        Duration = 0,
+        Location = ResponseCacheLocation.None,
+        NoStore = true)]
     public IActionResult Error()
     {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        return View(new ErrorViewModel
+        {
+            RequestId =
+                Activity.Current?.Id ??
+                HttpContext.TraceIdentifier
+        });
     }
 }
