@@ -4,11 +4,19 @@
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>edulytics-superadmin-secrets</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="../Edulytics.Services/Edulytics.Services.csproj" />
     <ProjectReference Include="../Edulytics.Data/Edulytics.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
