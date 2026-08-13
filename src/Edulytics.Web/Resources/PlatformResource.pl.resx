@@ -24,4 +24,217 @@
   <data name="SignedInAs" xml:space="preserve">
     <value>Zalogowano jako</value>
   </data>
+  <data name="NavSchools" xml:space="preserve">
+    <value>Szkoły</value>
+  </data>
+  <data name="DashboardSchoolsTitle" xml:space="preserve">
+    <value>Zarządzanie szkołami</value>
+  </data>
+  <data name="DashboardSchoolsDescription" xml:space="preserve">
+    <value>Twórz i zarządzaj szkołami, ich statusem oraz podstawowymi informacjami.</value>
+  </data>
+  <data name="ManageSchools" xml:space="preserve">
+    <value>Zarządzaj szkołami</value>
+  </data>
+  <data name="SchoolsTitle" xml:space="preserve">
+    <value>Szkoły</value>
+  </data>
+  <data name="SchoolsSubtitle" xml:space="preserve">
+    <value>Zarządzaj szkołami w ramach platformy Edulytics.</value>
+  </data>
+  <data name="CreateSchool" xml:space="preserve">
+    <value>Utwórz szkołę</value>
+  </data>
+  <data name="EmptyTitle" xml:space="preserve">
+    <value>Brak szkół</value>
+  </data>
+  <data name="EmptyDescription" xml:space="preserve">
+    <value>Utwórz pierwszą szkołę, aby rozpocząć konfigurację platformy.</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nazwa szkoły</value>
+  </data>
+  <data name="SchoolCode" xml:space="preserve">
+    <value>Kod szkoły</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="CountryCode" xml:space="preserve">
+    <value>Kod kraju</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Miasto</value>
+  </data>
+  <data name="ContactEmail" xml:space="preserve">
+    <value>Adres e-mail kontaktowy</value>
+  </data>
+  <data name="DefaultCulture" xml:space="preserve">
+    <value>Domyślny język</value>
+  </data>
+  <data name="TimeZoneId" xml:space="preserve">
+    <value>Strefa czasowa</value>
+  </data>
+  <data name="CreatedAt" xml:space="preserve">
+    <value>Utworzono</value>
+  </data>
+  <data name="UpdatedAt" xml:space="preserve">
+    <value>Ostatnia aktualizacja</value>
+  </data>
+  <data name="ArchivedAt" xml:space="preserve">
+    <value>Zarchiwizowano</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Działania</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Szczegóły</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edytuj</value>
+  </data>
+  <data name="BackToSchools" xml:space="preserve">
+    <value>Wróć do szkół</value>
+  </data>
+  <data name="SaveChanges" xml:space="preserve">
+    <value>Zapisz zmiany</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Utwórz szkołę</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Anuluj</value>
+  </data>
+  <data name="SchoolDetails" xml:space="preserve">
+    <value>Szczegóły szkoły</value>
+  </data>
+  <data name="SchoolInformation" xml:space="preserve">
+    <value>Informacje o szkole</value>
+  </data>
+  <data name="StatusActive" xml:space="preserve">
+    <value>Aktywna</value>
+  </data>
+  <data name="StatusSuspended" xml:space="preserve">
+    <value>Zawieszona</value>
+  </data>
+  <data name="StatusArchived" xml:space="preserve">
+    <value>Zarchiwizowana</value>
+  </data>
+  <data name="Suspend" xml:space="preserve">
+    <value>Zawieś</value>
+  </data>
+  <data name="Reactivate" xml:space="preserve">
+    <value>Aktywuj ponownie</value>
+  </data>
+  <data name="Archive" xml:space="preserve">
+    <value>Archiwizuj</value>
+  </data>
+  <data name="ConfirmSuspend" xml:space="preserve">
+    <value>Czy zawiesić tę szkołę?</value>
+  </data>
+  <data name="ConfirmReactivate" xml:space="preserve">
+    <value>Czy ponownie aktywować tę szkołę?</value>
+  </data>
+  <data name="ConfirmArchive" xml:space="preserve">
+    <value>Czy zarchiwizować tę szkołę? W obecnym procesie tej operacji nie można cofnąć.</value>
+  </data>
+  <data name="CreateSuccess" xml:space="preserve">
+    <value>Szkoła została utworzona.</value>
+  </data>
+  <data name="UpdateSuccess" xml:space="preserve">
+    <value>Dane szkoły zostały zaktualizowane.</value>
+  </data>
+  <data name="SuspendSuccess" xml:space="preserve">
+    <value>Szkoła została zawieszona.</value>
+  </data>
+  <data name="ReactivateSuccess" xml:space="preserve">
+    <value>Szkoła została ponownie aktywowana.</value>
+  </data>
+  <data name="ArchiveSuccess" xml:space="preserve">
+    <value>Szkoła została zarchiwizowana.</value>
+  </data>
+  <data name="RequiredName" xml:space="preserve">
+    <value>Nazwa szkoły jest wymagana.</value>
+  </data>
+  <data name="NameTooLong" xml:space="preserve">
+    <value>Nazwa szkoły jest zbyt długa.</value>
+  </data>
+  <data name="RequiredSchoolCode" xml:space="preserve">
+    <value>Kod szkoły jest wymagany.</value>
+  </data>
+  <data name="SchoolCodeTooLong" xml:space="preserve">
+    <value>Kod szkoły jest zbyt długi.</value>
+  </data>
+  <data name="InvalidSchoolCode" xml:space="preserve">
+    <value>Kod szkoły może zawierać wyłącznie litery A-Z, cyfry 0-9 i łączniki.</value>
+  </data>
+  <data name="DuplicateSchoolCode" xml:space="preserve">
+    <value>Szkoła z tym kodem już istnieje.</value>
+  </data>
+  <data name="RequiredCountryCode" xml:space="preserve">
+    <value>Kod kraju jest wymagany.</value>
+  </data>
+  <data name="CountryCodeTooLong" xml:space="preserve">
+    <value>Kod kraju jest zbyt długi.</value>
+  </data>
+  <data name="RequiredCity" xml:space="preserve">
+    <value>Miasto jest wymagane.</value>
+  </data>
+  <data name="CityTooLong" xml:space="preserve">
+    <value>Nazwa miasta jest zbyt długa.</value>
+  </data>
+  <data name="RequiredContactEmail" xml:space="preserve">
+    <value>Adres e-mail kontaktowy jest wymagany.</value>
+  </data>
+  <data name="ContactEmailTooLong" xml:space="preserve">
+    <value>Adres e-mail kontaktowy jest zbyt długi.</value>
+  </data>
+  <data name="InvalidContactEmail" xml:space="preserve">
+    <value>Wprowadź prawidłowy adres e-mail.</value>
+  </data>
+  <data name="RequiredDefaultCulture" xml:space="preserve">
+    <value>Domyślny język jest wymagany.</value>
+  </data>
+  <data name="InvalidDefaultCulture" xml:space="preserve">
+    <value>Wybierz język angielski lub polski.</value>
+  </data>
+  <data name="RequiredTimeZoneId" xml:space="preserve">
+    <value>Strefa czasowa jest wymagana.</value>
+  </data>
+  <data name="TimeZoneIdTooLong" xml:space="preserve">
+    <value>Identyfikator strefy czasowej jest zbyt długi.</value>
+  </data>
+  <data name="SchoolNotFound" xml:space="preserve">
+    <value>Nie znaleziono szkoły.</value>
+  </data>
+  <data name="ArchivedCannotEdit" xml:space="preserve">
+    <value>Zarchiwizowanej szkoły nie można edytować.</value>
+  </data>
+  <data name="InvalidStatusTransition" xml:space="preserve">
+    <value>Ta zmiana statusu szkoły jest niedozwolona.</value>
+  </data>
+  <data name="ConcurrencyConflict" xml:space="preserve">
+    <value>Dane szkoły zostały zmienione przez innego użytkownika. Odśwież stronę i spróbuj ponownie.</value>
+  </data>
+  <data name="PersistenceError" xml:space="preserve">
+    <value>Nie udało się zapisać danych szkoły. Spróbuj ponownie.</value>
+  </data>
+  <data name="CultureEnglish" xml:space="preserve">
+    <value>Angielski</value>
+  </data>
+  <data name="CulturePolish" xml:space="preserve">
+    <value>Polski</value>
+  </data>
+  <data name="ImmutableCodeHelp" xml:space="preserve">
+    <value>Po utworzeniu szkoły jej kod nie może być zmieniany.</value>
+  </data>
+  <data name="CreateIntro" xml:space="preserve">
+    <value>Wprowadź podstawowe informacje o szkole.</value>
+  </data>
+  <data name="EditIntro" xml:space="preserve">
+    <value>Zaktualizuj podstawowe informacje o szkole.</value>
+  </data>
+  <data name="UtcSuffix" xml:space="preserve">
+    <value>UTC</value>
+  </data>
 </root>

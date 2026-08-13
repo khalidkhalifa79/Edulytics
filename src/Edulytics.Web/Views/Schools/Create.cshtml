@@ -1,0 +1,108 @@
+@model Edulytics.Web.ViewModels.Schools.SchoolFormViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.PlatformResource> T
+
+@{
+    ViewData["Title"] = T["CreateSchool"].Value;
+}
+
+<section class="school-page school-form-page">
+    <header class="school-page-header">
+        <div>
+            <a class="school-back-link"
+               asp-controller="Schools"
+               asp-action="Index">
+                ← @T["BackToSchools"]
+            </a>
+
+            <h1>@T["CreateSchool"]</h1>
+            <p class="school-page-subtitle">@T["CreateIntro"]</p>
+        </div>
+    </header>
+
+    <form method="post"
+          asp-controller="Schools"
+          asp-action="Create"
+          class="school-form"
+          novalidate>
+
+        <div asp-validation-summary="ModelOnly"
+             class="school-validation-summary"
+             role="alert"></div>
+
+        <div class="school-form-grid">
+            <div class="school-field school-field-wide">
+                <label asp-for="Name">@T["Name"]</label>
+                <input asp-for="Name"
+                       autocomplete="organization" />
+                <span asp-validation-for="Name"
+                      class="school-field-error"></span>
+            </div>
+
+            <div class="school-field">
+                <label asp-for="SchoolCode">@T["SchoolCode"]</label>
+                <input asp-for="SchoolCode"
+                       autocomplete="off"
+                       autocapitalize="characters" />
+                <span asp-validation-for="SchoolCode"
+                      class="school-field-error"></span>
+                <small>@T["ImmutableCodeHelp"]</small>
+            </div>
+
+            <div class="school-field">
+                <label asp-for="CountryCode">@T["CountryCode"]</label>
+                <input asp-for="CountryCode"
+                       autocomplete="country" />
+                <span asp-validation-for="CountryCode"
+                      class="school-field-error"></span>
+            </div>
+
+            <div class="school-field">
+                <label asp-for="City">@T["City"]</label>
+                <input asp-for="City"
+                       autocomplete="address-level2" />
+                <span asp-validation-for="City"
+                      class="school-field-error"></span>
+            </div>
+
+            <div class="school-field">
+                <label asp-for="ContactEmail">@T["ContactEmail"]</label>
+                <input asp-for="ContactEmail"
+                       type="email"
+                       autocomplete="email" />
+                <span asp-validation-for="ContactEmail"
+                      class="school-field-error"></span>
+            </div>
+
+            <div class="school-field">
+                <label asp-for="DefaultCulture">@T["DefaultCulture"]</label>
+                <select asp-for="DefaultCulture">
+                    <option value="en">@T["CultureEnglish"]</option>
+                    <option value="pl">@T["CulturePolish"]</option>
+                </select>
+                <span asp-validation-for="DefaultCulture"
+                      class="school-field-error"></span>
+            </div>
+
+            <div class="school-field">
+                <label asp-for="TimeZoneId">@T["TimeZoneId"]</label>
+                <input asp-for="TimeZoneId"
+                       autocomplete="off" />
+                <span asp-validation-for="TimeZoneId"
+                      class="school-field-error"></span>
+            </div>
+        </div>
+
+        <div class="school-form-actions">
+            <button type="submit"
+                    class="school-button school-button-primary">
+                @T["Create"]
+            </button>
+
+            <a class="school-button school-button-ghost"
+               asp-controller="Schools"
+               asp-action="Index">
+                @T["Cancel"]
+            </a>
+        </div>
+    </form>
+</section>

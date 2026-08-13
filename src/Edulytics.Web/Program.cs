@@ -58,6 +58,8 @@ builder.Services.Configure<RequestLocalizationOptions>(
             });
     });
 
+builder.Services.AddSchoolManagementPhase04();
+
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())

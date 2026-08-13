@@ -1,0 +1,162 @@
+@model Edulytics.Web.ViewModels.Schools.SchoolListViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.PlatformResource> T
+
+@{
+    ViewData["Title"] = T["SchoolsTitle"].Value;
+}
+
+<section class="school-page">
+    <header class="school-page-header">
+        <div>
+            <p class="school-eyebrow">Edulytics</p>
+            <h1>@T["SchoolsTitle"]</h1>
+            <p class="school-page-subtitle">@T["SchoolsSubtitle"]</p>
+        </div>
+
+        <a class="school-button school-button-primary"
+           asp-controller="Schools"
+           asp-action="Create">
+            @T["CreateSchool"]
+        </a>
+    </header>
+
+    @if (TempData["SchoolSuccess"] is string success)
+    {
+        <div class="school-alert school-alert-success" role="status">
+            @success
+        </div>
+    }
+
+    @if (TempData["SchoolError"] is string error)
+    {
+        <div class="school-alert school-alert-error" role="alert">
+            @error
+        </div>
+    }
+
+    @if (Model.Schools.Count == 0)
+    {
+        <section class="school-empty">
+            <h2>@T["EmptyTitle"]</h2>
+            <p>@T["EmptyDescription"]</p>
+
+            <a class="school-button school-button-primary"
+               asp-controller="Schools"
+               asp-action="Create">
+                @T["CreateSchool"]
+            </a>
+        </section>
+    }
+    else
+    {
+        <div class="school-table-wrap">
+            <table class="school-table">
+                <thead>
+                    <tr>
+                        <th>@T["Name"]</th>
+                        <th>@T["SchoolCode"]</th>
+                        <th>@T["City"]</th>
+                        <th>@T["Status"]</th>
+                        <th>@T["CreatedAt"]</th>
+                        <th class="school-actions-column">@T["Actions"]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var school in Model.Schools)
+                    {
+                        <tr>
+                            <td>
+                                <strong>@school.Name</strong>
+                            </td>
+                            <td>
+                                <span class="school-code">@school.SchoolCode</span>
+                            </td>
+                            <td>
+                                @school.City
+                            </td>
+                            <td>
+                                <span class="school-status"
+                                      data-status="@school.Status">
+                                    @T[$"Status{school.Status}"]
+                                </span>
+                            </td>
+                            <td>
+                                @school.CreatedAtUtc.ToString("g")
+                                <span class="school-utc">@T["UtcSuffix"]</span>
+                            </td>
+                            <td>
+                                <div class="school-row-actions">
+                                    <a class="school-button school-button-secondary school-button-small"
+                                       asp-controller="Schools"
+                                       asp-action="Details"
+                                       asp-route-id="@school.Id">
+                                        @T["View"]
+                                    </a>
+
+                                    @if (school.CanEdit)
+                                    {
+                                        <a class="school-button school-button-ghost school-button-small"
+                                           asp-controller="Schools"
+                                           asp-action="Edit"
+                                           asp-route-id="@school.Id">
+                                            @T["Edit"]
+                                        </a>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="school-mobile-list">
+            @foreach (var school in Model.Schools)
+            {
+                <article class="school-mobile-card">
+                    <div class="school-mobile-card-head">
+                        <div>
+                            <h2>@school.Name</h2>
+                            <span class="school-code">@school.SchoolCode</span>
+                        </div>
+
+                        <span class="school-status"
+                              data-status="@school.Status">
+                            @T[$"Status{school.Status}"]
+                        </span>
+                    </div>
+
+                    <dl class="school-mini-details">
+                        <div>
+                            <dt>@T["City"]</dt>
+                            <dd>@school.City</dd>
+                        </div>
+                        <div>
+                            <dt>@T["CountryCode"]</dt>
+                            <dd>@school.CountryCode</dd>
+                        </div>
+                    </dl>
+
+                    <div class="school-mobile-actions">
+                        <a class="school-button school-button-secondary"
+                           asp-controller="Schools"
+                           asp-action="Details"
+                           asp-route-id="@school.Id">
+                            @T["View"]
+                        </a>
+
+                        @if (school.CanEdit)
+                        {
+                            <a class="school-button school-button-ghost"
+                               asp-controller="Schools"
+                               asp-action="Edit"
+                               asp-route-id="@school.Id">
+                                @T["Edit"]
+                            </a>
+                        }
+                    </div>
+                </article>
+            }
+        </div>
+    }
+</section>
