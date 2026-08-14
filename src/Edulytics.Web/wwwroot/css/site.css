@@ -1414,3 +1414,177 @@ input:focus-visible {
         padding: 1rem;
     }
 }
+
+/* ===== Phase 06 — Academic Structure ===== */
+.academic-page {
+    width: min(100%, 1440px);
+    margin: 0 auto;
+    padding: 1.25rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.academic-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.academic-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55rem;
+}
+
+.academic-nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.5rem;
+    padding: .55rem .8rem;
+    border: 1px solid #d8dee8;
+    border-radius: .65rem;
+    text-decoration: none;
+    background: #fff;
+}
+
+.academic-section {
+    display: grid;
+    gap: 1rem;
+    scroll-margin-top: 1rem;
+}
+
+.academic-two-column,
+.academic-grid {
+    display: grid;
+    grid-template-columns: minmax(0, .85fr) minmax(0, 1.65fr);
+    gap: 1rem;
+    align-items: start;
+}
+
+.academic-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.academic-card {
+    min-width: 0;
+    padding: 1rem;
+    border: 1px solid #d8dee8;
+    border-radius: .85rem;
+    background: #fff;
+}
+
+.academic-form {
+    display: grid;
+    gap: .65rem;
+}
+
+.academic-form label {
+    font-weight: 600;
+}
+
+.academic-form input,
+.academic-form select {
+    width: 100%;
+    min-height: 2.75rem;
+    padding: .6rem .7rem;
+    border: 1px solid #b9c2cf;
+    border-radius: .55rem;
+    background: #fff;
+}
+
+.academic-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.academic-table th,
+.academic-table td {
+    padding: .7rem .55rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #e5e9ef;
+    overflow-wrap: anywhere;
+}
+
+.academic-alert {
+    padding: .8rem 1rem;
+    border-radius: .65rem;
+    border: 1px solid currentColor;
+}
+
+.academic-alert-success { background: #f2fbf5; }
+.academic-alert-error { background: #fff5f5; }
+.academic-edit-page { max-width: 760px; }
+.academic-list-grid { margin-top: 1rem; }
+
+@media (max-width: 767px) {
+    .academic-page {
+        padding: .8rem;
+        gap: 1rem;
+    }
+
+    .academic-header,
+    .academic-two-column,
+    .academic-grid {
+        grid-template-columns: 1fr;
+        display: grid;
+    }
+
+    .academic-header .school-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .academic-nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .academic-nav a {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .academic-table,
+    .academic-table tbody,
+    .academic-table tr,
+    .academic-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .academic-table thead { display: none; }
+
+    .academic-table tr {
+        padding: .7rem 0;
+        border-bottom: 1px solid #d8dee8;
+    }
+
+    .academic-table td {
+        display: grid;
+        grid-template-columns: minmax(7rem, .8fr) minmax(0, 1.4fr);
+        gap: .6rem;
+        padding: .35rem 0;
+        border: 0;
+    }
+
+    .academic-table td::before {
+        content: attr(data-label);
+        font-weight: 700;
+    }
+
+    .academic-table td:not([data-label]) {
+        display: block;
+        padding-top: .55rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .academic-nav { grid-template-columns: 1fr; }
+    .academic-card { padding: .8rem; }
+    .academic-table td {
+        grid-template-columns: 1fr;
+        gap: .15rem;
+    }
+}

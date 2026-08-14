@@ -104,6 +104,16 @@ public static class ServiceCollectionExtensions
                     policy.AddRequirements(
                         new SchoolAccessRequirement());
                 });
+
+            options.AddPolicy(
+                "AcademicStructureAdministration",
+                policy =>
+                {
+                    policy.RequireAuthenticatedUser();
+
+                    policy.AddRequirements(
+                        new AcademicStructureAdministrationRequirement());
+                });
         });
 
         services.AddScoped<

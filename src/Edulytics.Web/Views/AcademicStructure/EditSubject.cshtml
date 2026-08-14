@@ -1,0 +1,30 @@
+@model Edulytics.Web.ViewModels.Academics.SubjectEditViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.AcademicResource> A
+@using Edulytics.Core.Enums
+@{ ViewData["Title"] = A["EditSubject"].Value; }
+
+<section class="academic-page academic-edit-page">
+    <a asp-action="Index">@A["BackToDashboard"]</a>
+    <form method="post" class="academic-card academic-form">
+        <h1>@A["EditSubject"]</h1>
+        <input type="hidden" name="rowVersion"
+               value="@Convert.ToBase64String(Model.Subject.RowVersion)" />
+        <label for="name">@A["Name"]</label>
+        <input id="name" name="name" value="@Model.Subject.Name" maxlength="150" required />
+        <label for="code">@A["Code"]</label>
+        <input id="code" name="code" value="@Model.Subject.Code" maxlength="50"
+               pattern="[A-Za-z0-9-]+" required />
+        <label for="status">@A["Status"]</label>
+        <select id="status" name="status">
+            <option value="@((int)AcademicStructureStatus.Active)"
+                    selected="@(Model.Subject.Status == AcademicStructureStatus.Active ? "selected" : null)">
+                @A["StatusActive"]
+            </option>
+            <option value="@((int)AcademicStructureStatus.Inactive)"
+                    selected="@(Model.Subject.Status == AcademicStructureStatus.Inactive ? "selected" : null)">
+                @A["StatusInactive"]
+            </option>
+        </select>
+        <button type="submit" class="school-button school-button-primary">@A["SaveChanges"]</button>
+    </form>
+</section>

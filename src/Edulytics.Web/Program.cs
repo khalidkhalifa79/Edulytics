@@ -64,6 +64,7 @@ builder.Services.Configure<RequestLocalizationOptions>(
 
 builder.Services.AddSchoolManagementPhase04();
 builder.Services.AddSchoolUserManagementPhase05();
+builder.Services.AddAcademicStructurePhase06();
 builder.Services.AddInvitationEmailDelivery(
     builder.Configuration);
 

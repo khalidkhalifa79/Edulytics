@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="AcademicStructureSubtitle" xml:space="preserve"><value>Configure academic years, terms, grades, classes, subjects, teacher assignments and student enrollment for your school.</value></data>
+  <data name="AcademicStructureTitle" xml:space="preserve"><value>Academic structure</value></data>
+  <data name="AcademicYear" xml:space="preserve"><value>Academic year</value></data>
+  <data name="AcademicYears" xml:space="preserve"><value>Academic years</value></data>
+  <data name="AssignTeacher" xml:space="preserve"><value>Assign teacher</value></data>
+  <data name="BackToDashboard" xml:space="preserve"><value>Back to school dashboard</value></data>
+  <data name="Class" xml:space="preserve"><value>Class</value></data>
+  <data name="Classes" xml:space="preserve"><value>Classes</value></data>
+  <data name="Code" xml:space="preserve"><value>Code</value></data>
+  <data name="CreateAcademicYear" xml:space="preserve"><value>Create academic year</value></data>
+  <data name="CreateClass" xml:space="preserve"><value>Create class</value></data>
+  <data name="CreateGradeLevel" xml:space="preserve"><value>Create grade level</value></data>
+  <data name="CreateStudent" xml:space="preserve"><value>Create student profile</value></data>
+  <data name="CreateSubject" xml:space="preserve"><value>Create subject</value></data>
+  <data name="CreateTerm" xml:space="preserve"><value>Create term</value></data>
+  <data name="Edit" xml:space="preserve"><value>Edit</value></data>
+  <data name="EditAcademicYear" xml:space="preserve"><value>Edit academic year</value></data>
+  <data name="EditClass" xml:space="preserve"><value>Edit class</value></data>
+  <data name="EditSubject" xml:space="preserve"><value>Edit subject</value></data>
+  <data name="EndsOn" xml:space="preserve"><value>Ends on</value></data>
+  <data name="EnrollStudent" xml:space="preserve"><value>Enroll student</value></data>
+  <data name="ErrorAcademicYearNotFound" xml:space="preserve"><value>Academic year was not found.</value></data>
+  <data name="ErrorAccessDenied" xml:space="preserve"><value>You do not have permission to administer academic structure.</value></data>
+  <data name="ErrorClassGroupNotFound" xml:space="preserve"><value>Class was not found.</value></data>
+  <data name="ErrorConcurrencyConflict" xml:space="preserve"><value>This record changed after you opened it. Reload it and try again.</value></data>
+  <data name="ErrorDuplicateAcademicYear" xml:space="preserve"><value>An academic year with this name already exists.</value></data>
+  <data name="ErrorDuplicateClassCode" xml:space="preserve"><value>This class code already exists in the academic year.</value></data>
+  <data name="ErrorDuplicateEnrollment" xml:space="preserve"><value>This student is already enrolled in a class for this academic year.</value></data>
+  <data name="ErrorDuplicateGradeLevel" xml:space="preserve"><value>A grade level with this name already exists.</value></data>
+  <data name="ErrorDuplicateGradeOrder" xml:space="preserve"><value>This grade order is already used.</value></data>
+  <data name="ErrorDuplicateStudentNumber" xml:space="preserve"><value>This student number already exists.</value></data>
+  <data name="ErrorDuplicateStudentUserLink" xml:space="preserve"><value>This login account is already linked to a student profile.</value></data>
+  <data name="ErrorDuplicateSubjectCode" xml:space="preserve"><value>This subject code already exists.</value></data>
+  <data name="ErrorDuplicateTeacherAssignment" xml:space="preserve"><value>This teacher assignment already exists.</value></data>
+  <data name="ErrorDuplicateTerm" xml:space="preserve"><value>A term with this name already exists in the academic year.</value></data>
+  <data name="ErrorGradeLevelNotFound" xml:space="preserve"><value>Grade level was not found.</value></data>
+  <data name="ErrorInvalidCode" xml:space="preserve"><value>Use only A-Z, 0-9 and hyphen in the code.</value></data>
+  <data name="ErrorInvalidDateRange" xml:space="preserve"><value>The start date must be before the end date.</value></data>
+  <data name="ErrorInvalidName" xml:space="preserve"><value>The name is invalid or too long.</value></data>
+  <data name="ErrorInvalidOrder" xml:space="preserve"><value>Order must be greater than zero.</value></data>
+  <data name="ErrorInvalidStudentAccount" xml:space="preserve"><value>Select an active Student account from this school.</value></data>
+  <data name="ErrorInvalidTeacher" xml:space="preserve"><value>Select an active Teacher account from this school.</value></data>
+  <data name="ErrorPersistenceError" xml:space="preserve"><value>The change could not be saved.</value></data>
+  <data name="ErrorRequired" xml:space="preserve"><value>A required value is missing.</value></data>
+  <data name="ErrorSchoolNotActive" xml:space="preserve"><value>Academic structure can only be changed for an active school.</value></data>
+  <data name="ErrorStudentProfileNotFound" xml:space="preserve"><value>Student profile was not found.</value></data>
+  <data name="ErrorSubjectNotFound" xml:space="preserve"><value>Subject was not found.</value></data>
+  <data name="ErrorTermOutsideAcademicYear" xml:space="preserve"><value>The term must stay inside its academic year.</value></data>
+  <data name="FirstName" xml:space="preserve"><value>First name</value></data>
+  <data name="GradeLevel" xml:space="preserve"><value>Grade level</value></data>
+  <data name="GradeLevels" xml:space="preserve"><value>Grade levels</value></data>
+  <data name="LastName" xml:space="preserve"><value>Last name</value></data>
+  <data name="LinkedAccount" xml:space="preserve"><value>Linked login account</value></data>
+  <data name="LinkedUser" xml:space="preserve"><value>Login account</value></data>
+  <data name="ManageAcademicStructure" xml:space="preserve"><value>Manage academic structure</value></data>
+  <data name="Name" xml:space="preserve"><value>Name</value></data>
+  <data name="NoLinkedAccount" xml:space="preserve"><value>No linked account</value></data>
+  <data name="NoRecords" xml:space="preserve"><value>No records yet.</value></data>
+  <data name="Optional" xml:space="preserve"><value>Optional</value></data>
+  <data name="Order" xml:space="preserve"><value>Order</value></data>
+  <data name="SaveChanges" xml:space="preserve"><value>Save changes</value></data>
+  <data name="School" xml:space="preserve"><value>School</value></data>
+  <data name="SelectOption" xml:space="preserve"><value>Select an option</value></data>
+  <data name="StartsOn" xml:space="preserve"><value>Starts on</value></data>
+  <data name="Status" xml:space="preserve"><value>Status</value></data>
+  <data name="StatusActive" xml:space="preserve"><value>Active</value></data>
+  <data name="StatusInactive" xml:space="preserve"><value>Inactive</value></data>
+  <data name="Student" xml:space="preserve"><value>Student</value></data>
+  <data name="StudentEnrollment" xml:space="preserve"><value>Student enrollment</value></data>
+  <data name="StudentNumber" xml:space="preserve"><value>Student number</value></data>
+  <data name="Students" xml:space="preserve"><value>Students</value></data>
+  <data name="Subject" xml:space="preserve"><value>Subject</value></data>
+  <data name="Subjects" xml:space="preserve"><value>Subjects</value></data>
+  <data name="SuccessAcademicYearCreated" xml:space="preserve"><value>Academic year created.</value></data>
+  <data name="SuccessAcademicYearUpdated" xml:space="preserve"><value>Academic year updated.</value></data>
+  <data name="SuccessClassCreated" xml:space="preserve"><value>Class created.</value></data>
+  <data name="SuccessClassUpdated" xml:space="preserve"><value>Class updated.</value></data>
+  <data name="SuccessGradeCreated" xml:space="preserve"><value>Grade level created.</value></data>
+  <data name="SuccessStudentCreated" xml:space="preserve"><value>Student profile created.</value></data>
+  <data name="SuccessStudentEnrolled" xml:space="preserve"><value>Student enrolled.</value></data>
+  <data name="SuccessSubjectCreated" xml:space="preserve"><value>Subject created.</value></data>
+  <data name="SuccessSubjectUpdated" xml:space="preserve"><value>Subject updated.</value></data>
+  <data name="SuccessTeacherAssigned" xml:space="preserve"><value>Teacher assignment created.</value></data>
+  <data name="SuccessTermCreated" xml:space="preserve"><value>Term created.</value></data>
+  <data name="Teacher" xml:space="preserve"><value>Teacher</value></data>
+  <data name="TeacherAssignments" xml:space="preserve"><value>Teacher assignments</value></data>
+  <data name="Terms" xml:space="preserve"><value>Terms</value></data>
+  <data name="YearDates" xml:space="preserve"><value>Dates</value></data>
+</root>

@@ -1,0 +1,33 @@
+@model Edulytics.Web.ViewModels.Academics.AcademicYearEditViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.AcademicResource> A
+@using Edulytics.Core.Enums
+@{ ViewData["Title"] = A["EditAcademicYear"].Value; }
+
+<section class="academic-page academic-edit-page">
+    <a asp-action="Index">@A["BackToDashboard"]</a>
+    <form method="post" class="academic-card academic-form">
+        <h1>@A["EditAcademicYear"]</h1>
+        <input type="hidden" name="rowVersion"
+               value="@Convert.ToBase64String(Model.Year.RowVersion)" />
+        <label for="name">@A["Name"]</label>
+        <input id="name" name="name" value="@Model.Year.Name" maxlength="100" required />
+        <label for="startsOn">@A["StartsOn"]</label>
+        <input id="startsOn" name="startsOn" type="date"
+               value="@Model.Year.StartsOn.ToString("yyyy-MM-dd")" required />
+        <label for="endsOn">@A["EndsOn"]</label>
+        <input id="endsOn" name="endsOn" type="date"
+               value="@Model.Year.EndsOn.ToString("yyyy-MM-dd")" required />
+        <label for="status">@A["Status"]</label>
+        <select id="status" name="status">
+            <option value="@((int)AcademicStructureStatus.Active)"
+                    selected="@(Model.Year.Status == AcademicStructureStatus.Active ? "selected" : null)">
+                @A["StatusActive"]
+            </option>
+            <option value="@((int)AcademicStructureStatus.Inactive)"
+                    selected="@(Model.Year.Status == AcademicStructureStatus.Inactive ? "selected" : null)">
+                @A["StatusInactive"]
+            </option>
+        </select>
+        <button type="submit" class="school-button school-button-primary">@A["SaveChanges"]</button>
+    </form>
+</section>

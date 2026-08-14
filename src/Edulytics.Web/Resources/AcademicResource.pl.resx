@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="AcademicStructureSubtitle" xml:space="preserve"><value>Skonfiguruj lata szkolne, okresy, poziomy, klasy, przedmioty, przydziały nauczycieli i zapisy uczniów w swojej szkole.</value></data>
+  <data name="AcademicStructureTitle" xml:space="preserve"><value>Struktura akademicka</value></data>
+  <data name="AcademicYear" xml:space="preserve"><value>Rok szkolny</value></data>
+  <data name="AcademicYears" xml:space="preserve"><value>Lata szkolne</value></data>
+  <data name="AssignTeacher" xml:space="preserve"><value>Przydziel nauczyciela</value></data>
+  <data name="BackToDashboard" xml:space="preserve"><value>Wróć do panelu szkoły</value></data>
+  <data name="Class" xml:space="preserve"><value>Klasa</value></data>
+  <data name="Classes" xml:space="preserve"><value>Klasy</value></data>
+  <data name="Code" xml:space="preserve"><value>Kod</value></data>
+  <data name="CreateAcademicYear" xml:space="preserve"><value>Utwórz rok szkolny</value></data>
+  <data name="CreateClass" xml:space="preserve"><value>Utwórz klasę</value></data>
+  <data name="CreateGradeLevel" xml:space="preserve"><value>Utwórz poziom klasy</value></data>
+  <data name="CreateStudent" xml:space="preserve"><value>Utwórz profil ucznia</value></data>
+  <data name="CreateSubject" xml:space="preserve"><value>Utwórz przedmiot</value></data>
+  <data name="CreateTerm" xml:space="preserve"><value>Utwórz okres</value></data>
+  <data name="Edit" xml:space="preserve"><value>Edytuj</value></data>
+  <data name="EditAcademicYear" xml:space="preserve"><value>Edytuj rok szkolny</value></data>
+  <data name="EditClass" xml:space="preserve"><value>Edytuj klasę</value></data>
+  <data name="EditSubject" xml:space="preserve"><value>Edytuj przedmiot</value></data>
+  <data name="EndsOn" xml:space="preserve"><value>Data zakończenia</value></data>
+  <data name="EnrollStudent" xml:space="preserve"><value>Zapisz ucznia</value></data>
+  <data name="ErrorAcademicYearNotFound" xml:space="preserve"><value>Nie znaleziono roku szkolnego.</value></data>
+  <data name="ErrorAccessDenied" xml:space="preserve"><value>Nie masz uprawnień do zarządzania strukturą akademicką.</value></data>
+  <data name="ErrorClassGroupNotFound" xml:space="preserve"><value>Nie znaleziono klasy.</value></data>
+  <data name="ErrorConcurrencyConflict" xml:space="preserve"><value>Ten rekord zmienił się po jego otwarciu. Odśwież stronę i spróbuj ponownie.</value></data>
+  <data name="ErrorDuplicateAcademicYear" xml:space="preserve"><value>Rok szkolny o tej nazwie już istnieje.</value></data>
+  <data name="ErrorDuplicateClassCode" xml:space="preserve"><value>Ten kod klasy już istnieje w tym roku szkolnym.</value></data>
+  <data name="ErrorDuplicateEnrollment" xml:space="preserve"><value>Uczeń jest już zapisany do klasy w tym roku szkolnym.</value></data>
+  <data name="ErrorDuplicateGradeLevel" xml:space="preserve"><value>Poziom klasy o tej nazwie już istnieje.</value></data>
+  <data name="ErrorDuplicateGradeOrder" xml:space="preserve"><value>Ta kolejność poziomu jest już używana.</value></data>
+  <data name="ErrorDuplicateStudentNumber" xml:space="preserve"><value>Ten numer ucznia już istnieje.</value></data>
+  <data name="ErrorDuplicateStudentUserLink" xml:space="preserve"><value>To konto logowania jest już powiązane z profilem ucznia.</value></data>
+  <data name="ErrorDuplicateSubjectCode" xml:space="preserve"><value>Ten kod przedmiotu już istnieje.</value></data>
+  <data name="ErrorDuplicateTeacherAssignment" xml:space="preserve"><value>Ten przydział nauczyciela już istnieje.</value></data>
+  <data name="ErrorDuplicateTerm" xml:space="preserve"><value>Okres o tej nazwie już istnieje w tym roku szkolnym.</value></data>
+  <data name="ErrorGradeLevelNotFound" xml:space="preserve"><value>Nie znaleziono poziomu klasy.</value></data>
+  <data name="ErrorInvalidCode" xml:space="preserve"><value>W kodzie użyj tylko A-Z, 0-9 i łącznika.</value></data>
+  <data name="ErrorInvalidDateRange" xml:space="preserve"><value>Data rozpoczęcia musi być wcześniejsza niż data zakończenia.</value></data>
+  <data name="ErrorInvalidName" xml:space="preserve"><value>Nazwa jest nieprawidłowa lub zbyt długa.</value></data>
+  <data name="ErrorInvalidOrder" xml:space="preserve"><value>Kolejność musi być większa od zera.</value></data>
+  <data name="ErrorInvalidStudentAccount" xml:space="preserve"><value>Wybierz aktywne konto ucznia z tej szkoły.</value></data>
+  <data name="ErrorInvalidTeacher" xml:space="preserve"><value>Wybierz aktywne konto nauczyciela z tej szkoły.</value></data>
+  <data name="ErrorPersistenceError" xml:space="preserve"><value>Nie udało się zapisać zmiany.</value></data>
+  <data name="ErrorRequired" xml:space="preserve"><value>Brakuje wymaganej wartości.</value></data>
+  <data name="ErrorSchoolNotActive" xml:space="preserve"><value>Strukturę akademicką można zmieniać tylko dla aktywnej szkoły.</value></data>
+  <data name="ErrorStudentProfileNotFound" xml:space="preserve"><value>Nie znaleziono profilu ucznia.</value></data>
+  <data name="ErrorSubjectNotFound" xml:space="preserve"><value>Nie znaleziono przedmiotu.</value></data>
+  <data name="ErrorTermOutsideAcademicYear" xml:space="preserve"><value>Okres musi mieścić się w granicach roku szkolnego.</value></data>
+  <data name="FirstName" xml:space="preserve"><value>Imię</value></data>
+  <data name="GradeLevel" xml:space="preserve"><value>Poziom klasy</value></data>
+  <data name="GradeLevels" xml:space="preserve"><value>Poziomy klas</value></data>
+  <data name="LastName" xml:space="preserve"><value>Nazwisko</value></data>
+  <data name="LinkedAccount" xml:space="preserve"><value>Powiązane konto logowania</value></data>
+  <data name="LinkedUser" xml:space="preserve"><value>Konto logowania</value></data>
+  <data name="ManageAcademicStructure" xml:space="preserve"><value>Zarządzaj strukturą akademicką</value></data>
+  <data name="Name" xml:space="preserve"><value>Nazwa</value></data>
+  <data name="NoLinkedAccount" xml:space="preserve"><value>Brak powiązanego konta</value></data>
+  <data name="NoRecords" xml:space="preserve"><value>Brak danych.</value></data>
+  <data name="Optional" xml:space="preserve"><value>Opcjonalne</value></data>
+  <data name="Order" xml:space="preserve"><value>Kolejność</value></data>
+  <data name="SaveChanges" xml:space="preserve"><value>Zapisz zmiany</value></data>
+  <data name="School" xml:space="preserve"><value>Szkoła</value></data>
+  <data name="SelectOption" xml:space="preserve"><value>Wybierz opcję</value></data>
+  <data name="StartsOn" xml:space="preserve"><value>Data rozpoczęcia</value></data>
+  <data name="Status" xml:space="preserve"><value>Status</value></data>
+  <data name="StatusActive" xml:space="preserve"><value>Aktywny</value></data>
+  <data name="StatusInactive" xml:space="preserve"><value>Nieaktywny</value></data>
+  <data name="Student" xml:space="preserve"><value>Uczeń</value></data>
+  <data name="StudentEnrollment" xml:space="preserve"><value>Zapisy uczniów</value></data>
+  <data name="StudentNumber" xml:space="preserve"><value>Numer ucznia</value></data>
+  <data name="Students" xml:space="preserve"><value>Uczniowie</value></data>
+  <data name="Subject" xml:space="preserve"><value>Przedmiot</value></data>
+  <data name="Subjects" xml:space="preserve"><value>Przedmioty</value></data>
+  <data name="SuccessAcademicYearCreated" xml:space="preserve"><value>Utworzono rok szkolny.</value></data>
+  <data name="SuccessAcademicYearUpdated" xml:space="preserve"><value>Zaktualizowano rok szkolny.</value></data>
+  <data name="SuccessClassCreated" xml:space="preserve"><value>Utworzono klasę.</value></data>
+  <data name="SuccessClassUpdated" xml:space="preserve"><value>Zaktualizowano klasę.</value></data>
+  <data name="SuccessGradeCreated" xml:space="preserve"><value>Utworzono poziom klasy.</value></data>
+  <data name="SuccessStudentCreated" xml:space="preserve"><value>Utworzono profil ucznia.</value></data>
+  <data name="SuccessStudentEnrolled" xml:space="preserve"><value>Zapisano ucznia.</value></data>
+  <data name="SuccessSubjectCreated" xml:space="preserve"><value>Utworzono przedmiot.</value></data>
+  <data name="SuccessSubjectUpdated" xml:space="preserve"><value>Zaktualizowano przedmiot.</value></data>
+  <data name="SuccessTeacherAssigned" xml:space="preserve"><value>Utworzono przydział nauczyciela.</value></data>
+  <data name="SuccessTermCreated" xml:space="preserve"><value>Utworzono okres.</value></data>
+  <data name="Teacher" xml:space="preserve"><value>Nauczyciel</value></data>
+  <data name="TeacherAssignments" xml:space="preserve"><value>Przydziały nauczycieli</value></data>
+  <data name="Terms" xml:space="preserve"><value>Okresy</value></data>
+  <data name="YearDates" xml:space="preserve"><value>Daty</value></data>
+</root>

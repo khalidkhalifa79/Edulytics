@@ -14,6 +14,14 @@ public class EdulyticsDbContext : IdentityDbContext<ApplicationUser, Application
     }
 
     public DbSet<School> Schools => Set<School>();
+    public DbSet<AcademicYear> AcademicYears => Set<AcademicYear>();
+    public DbSet<Term> Terms => Set<Term>();
+    public DbSet<GradeLevel> GradeLevels => Set<GradeLevel>();
+    public DbSet<ClassGroup> ClassGroups => Set<ClassGroup>();
+    public DbSet<Subject> Subjects => Set<Subject>();
+    public DbSet<StudentProfile> StudentProfiles => Set<StudentProfile>();
+    public DbSet<TeacherAssignment> TeacherAssignments => Set<TeacherAssignment>();
+    public DbSet<StudentEnrollment> StudentEnrollments => Set<StudentEnrollment>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -21,6 +29,14 @@ public class EdulyticsDbContext : IdentityDbContext<ApplicationUser, Application
 
         builder.ApplyConfiguration(new SchoolConfiguration());
         builder.ApplyConfiguration(new ApplicationUserConfiguration());
+        builder.ApplyConfiguration(new AcademicYearConfiguration());
+        builder.ApplyConfiguration(new TermConfiguration());
+        builder.ApplyConfiguration(new GradeLevelConfiguration());
+        builder.ApplyConfiguration(new ClassGroupConfiguration());
+        builder.ApplyConfiguration(new SubjectConfiguration());
+        builder.ApplyConfiguration(new StudentProfileConfiguration());
+        builder.ApplyConfiguration(new TeacherAssignmentConfiguration());
+        builder.ApplyConfiguration(new StudentEnrollmentConfiguration());
 
         builder.Entity<ApplicationRole>(entity =>
         {

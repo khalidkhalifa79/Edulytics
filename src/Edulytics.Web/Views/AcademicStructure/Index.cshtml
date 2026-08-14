@@ -1,0 +1,485 @@
+@model Edulytics.Services.Academics.AcademicStructureDashboard
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.AcademicResource> A
+@using Edulytics.Core.Enums
+
+@{
+    ViewData["Title"] = A["AcademicStructureTitle"].Value;
+}
+
+<section class="academic-page">
+    <header class="academic-header">
+        <div>
+            <div class="user-eyebrow">@A["School"]</div>
+            <h1>@A["AcademicStructureTitle"]</h1>
+            <p>@A["AcademicStructureSubtitle"]</p>
+            <strong>@Model.SchoolName</strong>
+        </div>
+        <a class="school-button"
+           asp-controller="SchoolHome"
+           asp-action="Dashboard">
+            @A["BackToDashboard"]
+        </a>
+    </header>
+
+    @if (TempData["AcademicSuccess"] is string success)
+    {
+        <div class="academic-alert academic-alert-success" role="status">@success</div>
+    }
+
+    @if (TempData["AcademicError"] is string error)
+    {
+        <div class="academic-alert academic-alert-error" role="alert">@error</div>
+    }
+
+    <nav class="academic-nav" aria-label="@A["AcademicStructureTitle"]">
+        <a href="#years">@A["AcademicYears"]</a>
+        <a href="#terms">@A["Terms"]</a>
+        <a href="#grades">@A["GradeLevels"]</a>
+        <a href="#classes">@A["Classes"]</a>
+        <a href="#subjects">@A["Subjects"]</a>
+        <a href="#teachers">@A["TeacherAssignments"]</a>
+        <a href="#students">@A["Students"]</a>
+    </nav>
+
+    <section id="years" class="academic-section">
+        <h2>@A["AcademicYears"]</h2>
+        <div class="academic-two-column">
+            <form asp-action="CreateAcademicYear" method="post"
+                  class="academic-card academic-form">
+                <h3>@A["CreateAcademicYear"]</h3>
+                <label for="year-name">@A["Name"]</label>
+                <input id="year-name" name="name" maxlength="100" required />
+                <label for="year-start">@A["StartsOn"]</label>
+                <input id="year-start" name="startsOn" type="date" required />
+                <label for="year-end">@A["EndsOn"]</label>
+                <input id="year-end" name="endsOn" type="date" required />
+                <label for="year-status">@A["Status"]</label>
+                <select id="year-status" name="status">
+                    <option value="@((int)AcademicStructureStatus.Active)">@A["StatusActive"]</option>
+                    <option value="@((int)AcademicStructureStatus.Inactive)">@A["StatusInactive"]</option>
+                </select>
+                <button class="school-button school-button-primary" type="submit">
+                    @A["CreateAcademicYear"]
+                </button>
+            </form>
+
+            <div class="academic-card">
+                @if (Model.AcademicYears.Count == 0)
+                {
+                    <p>@A["NoRecords"]</p>
+                }
+                else
+                {
+                    <table class="academic-table">
+                        <thead>
+                        <tr>
+                            <th>@A["Name"]</th>
+                            <th>@A["YearDates"]</th>
+                            <th>@A["Status"]</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (var item in Model.AcademicYears)
+                        {
+                            <tr>
+                                <td data-label="@A["Name"]">@item.Name</td>
+                                <td data-label="@A["YearDates"]">
+                                    @item.StartsOn.ToString("yyyy-MM-dd") – @item.EndsOn.ToString("yyyy-MM-dd")
+                                </td>
+                                <td data-label="@A["Status"]">@A[$"Status{item.Status}"]</td>
+                                <td>
+                                    <a asp-action="EditAcademicYear" asp-route-id="@item.Id">@A["Edit"]</a>
+                                </td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                }
+            </div>
+        </div>
+    </section>
+
+    <section id="terms" class="academic-section">
+        <h2>@A["Terms"]</h2>
+        <div class="academic-two-column">
+            <form asp-action="CreateTerm" method="post"
+                  class="academic-card academic-form">
+                <h3>@A["CreateTerm"]</h3>
+                <label for="term-year">@A["AcademicYear"]</label>
+                <select id="term-year" name="academicYearId" required>
+                    <option value="">@A["SelectOption"]</option>
+                    @foreach (var year in Model.AcademicYears)
+                    {
+                        <option value="@year.Id">@year.Name</option>
+                    }
+                </select>
+                <label for="term-name">@A["Name"]</label>
+                <input id="term-name" name="name" maxlength="100" required />
+                <label for="term-start">@A["StartsOn"]</label>
+                <input id="term-start" name="startsOn" type="date" required />
+                <label for="term-end">@A["EndsOn"]</label>
+                <input id="term-end" name="endsOn" type="date" required />
+                <label for="term-status">@A["Status"]</label>
+                <select id="term-status" name="status">
+                    <option value="@((int)AcademicStructureStatus.Active)">@A["StatusActive"]</option>
+                    <option value="@((int)AcademicStructureStatus.Inactive)">@A["StatusInactive"]</option>
+                </select>
+                <button class="school-button school-button-primary" type="submit">@A["CreateTerm"]</button>
+            </form>
+
+            <div class="academic-card">
+                @if (Model.Terms.Count == 0)
+                {
+                    <p>@A["NoRecords"]</p>
+                }
+                else
+                {
+                    <table class="academic-table">
+                        <thead>
+                        <tr>
+                            <th>@A["AcademicYear"]</th>
+                            <th>@A["Name"]</th>
+                            <th>@A["YearDates"]</th>
+                            <th>@A["Status"]</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (var item in Model.Terms)
+                        {
+                            <tr>
+                                <td data-label="@A["AcademicYear"]">@item.AcademicYearName</td>
+                                <td data-label="@A["Name"]">@item.Name</td>
+                                <td data-label="@A["YearDates"]">
+                                    @item.StartsOn.ToString("yyyy-MM-dd") – @item.EndsOn.ToString("yyyy-MM-dd")
+                                </td>
+                                <td data-label="@A["Status"]">@A[$"Status{item.Status}"]</td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                }
+            </div>
+        </div>
+    </section>
+
+    <section id="grades" class="academic-section">
+        <h2>@A["GradeLevels"]</h2>
+        <div class="academic-two-column">
+            <form asp-action="CreateGradeLevel" method="post"
+                  class="academic-card academic-form">
+                <h3>@A["CreateGradeLevel"]</h3>
+                <label for="grade-name">@A["Name"]</label>
+                <input id="grade-name" name="name" maxlength="100" required />
+                <label for="grade-order">@A["Order"]</label>
+                <input id="grade-order" name="order" type="number" min="1" required />
+                <button class="school-button school-button-primary" type="submit">
+                    @A["CreateGradeLevel"]
+                </button>
+            </form>
+
+            <div class="academic-card">
+                @if (Model.GradeLevels.Count == 0)
+                {
+                    <p>@A["NoRecords"]</p>
+                }
+                else
+                {
+                    <table class="academic-table">
+                        <thead><tr><th>@A["Order"]</th><th>@A["Name"]</th></tr></thead>
+                        <tbody>
+                        @foreach (var item in Model.GradeLevels)
+                        {
+                            <tr>
+                                <td data-label="@A["Order"]">@item.Order</td>
+                                <td data-label="@A["Name"]">@item.Name</td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                }
+            </div>
+        </div>
+    </section>
+
+    <section id="classes" class="academic-section">
+        <h2>@A["Classes"]</h2>
+        <div class="academic-two-column">
+            <form asp-action="CreateClassGroup" method="post"
+                  class="academic-card academic-form">
+                <h3>@A["CreateClass"]</h3>
+                <label for="class-year">@A["AcademicYear"]</label>
+                <select id="class-year" name="academicYearId" required>
+                    <option value="">@A["SelectOption"]</option>
+                    @foreach (var year in Model.AcademicYears)
+                    {
+                        <option value="@year.Id">@year.Name</option>
+                    }
+                </select>
+                <label for="class-grade">@A["GradeLevel"]</label>
+                <select id="class-grade" name="gradeLevelId" required>
+                    <option value="">@A["SelectOption"]</option>
+                    @foreach (var grade in Model.GradeLevels)
+                    {
+                        <option value="@grade.Id">@grade.Name</option>
+                    }
+                </select>
+                <label for="class-name">@A["Name"]</label>
+                <input id="class-name" name="name" maxlength="150" required />
+                <label for="class-code">@A["Code"]</label>
+                <input id="class-code" name="code" maxlength="50"
+                       pattern="[A-Za-z0-9-]+" required />
+                <label for="class-status">@A["Status"]</label>
+                <select id="class-status" name="status">
+                    <option value="@((int)AcademicStructureStatus.Active)">@A["StatusActive"]</option>
+                    <option value="@((int)AcademicStructureStatus.Inactive)">@A["StatusInactive"]</option>
+                </select>
+                <button class="school-button school-button-primary" type="submit">@A["CreateClass"]</button>
+            </form>
+
+            <div class="academic-card">
+                @if (Model.ClassGroups.Count == 0)
+                {
+                    <p>@A["NoRecords"]</p>
+                }
+                else
+                {
+                    <table class="academic-table">
+                        <thead>
+                        <tr>
+                            <th>@A["Code"]</th>
+                            <th>@A["Name"]</th>
+                            <th>@A["AcademicYear"]</th>
+                            <th>@A["GradeLevel"]</th>
+                            <th>@A["Status"]</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (var item in Model.ClassGroups)
+                        {
+                            <tr>
+                                <td data-label="@A["Code"]">@item.Code</td>
+                                <td data-label="@A["Name"]">@item.Name</td>
+                                <td data-label="@A["AcademicYear"]">@item.AcademicYearName</td>
+                                <td data-label="@A["GradeLevel"]">@item.GradeLevelName</td>
+                                <td data-label="@A["Status"]">@A[$"Status{item.Status}"]</td>
+                                <td><a asp-action="EditClassGroup" asp-route-id="@item.Id">@A["Edit"]</a></td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                }
+            </div>
+        </div>
+    </section>
+
+    <section id="subjects" class="academic-section">
+        <h2>@A["Subjects"]</h2>
+        <div class="academic-two-column">
+            <form asp-action="CreateSubject" method="post"
+                  class="academic-card academic-form">
+                <h3>@A["CreateSubject"]</h3>
+                <label for="subject-name">@A["Name"]</label>
+                <input id="subject-name" name="name" maxlength="150" required />
+                <label for="subject-code">@A["Code"]</label>
+                <input id="subject-code" name="code" maxlength="50"
+                       pattern="[A-Za-z0-9-]+" required />
+                <label for="subject-status">@A["Status"]</label>
+                <select id="subject-status" name="status">
+                    <option value="@((int)AcademicStructureStatus.Active)">@A["StatusActive"]</option>
+                    <option value="@((int)AcademicStructureStatus.Inactive)">@A["StatusInactive"]</option>
+                </select>
+                <button class="school-button school-button-primary" type="submit">@A["CreateSubject"]</button>
+            </form>
+
+            <div class="academic-card">
+                @if (Model.Subjects.Count == 0)
+                {
+                    <p>@A["NoRecords"]</p>
+                }
+                else
+                {
+                    <table class="academic-table">
+                        <thead><tr><th>@A["Code"]</th><th>@A["Name"]</th><th>@A["Status"]</th><th></th></tr></thead>
+                        <tbody>
+                        @foreach (var item in Model.Subjects)
+                        {
+                            <tr>
+                                <td data-label="@A["Code"]">@item.Code</td>
+                                <td data-label="@A["Name"]">@item.Name</td>
+                                <td data-label="@A["Status"]">@A[$"Status{item.Status}"]</td>
+                                <td><a asp-action="EditSubject" asp-route-id="@item.Id">@A["Edit"]</a></td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                }
+            </div>
+        </div>
+    </section>
+
+    <section id="teachers" class="academic-section">
+        <h2>@A["TeacherAssignments"]</h2>
+        <div class="academic-two-column">
+            <form asp-action="CreateTeacherAssignment" method="post"
+                  class="academic-card academic-form">
+                <h3>@A["AssignTeacher"]</h3>
+                <label for="teacher-id">@A["Teacher"]</label>
+                <select id="teacher-id" name="teacherUserId" required>
+                    <option value="">@A["SelectOption"]</option>
+                    @foreach (var teacher in Model.TeacherCandidates)
+                    {
+                        <option value="@teacher.Id">@teacher.Email</option>
+                    }
+                </select>
+                <label for="teacher-class">@A["Class"]</label>
+                <select id="teacher-class" name="classGroupId" required>
+                    <option value="">@A["SelectOption"]</option>
+                    @foreach (var item in Model.ClassGroups)
+                    {
+                        <option value="@item.Id">@item.Code — @item.Name</option>
+                    }
+                </select>
+                <label for="teacher-subject">@A["Subject"]</label>
+                <select id="teacher-subject" name="subjectId" required>
+                    <option value="">@A["SelectOption"]</option>
+                    @foreach (var item in Model.Subjects)
+                    {
+                        <option value="@item.Id">@item.Code — @item.Name</option>
+                    }
+                </select>
+                <button class="school-button school-button-primary" type="submit">@A["AssignTeacher"]</button>
+            </form>
+
+            <div class="academic-card">
+                @if (Model.TeacherAssignments.Count == 0)
+                {
+                    <p>@A["NoRecords"]</p>
+                }
+                else
+                {
+                    <table class="academic-table">
+                        <thead><tr><th>@A["Teacher"]</th><th>@A["Class"]</th><th>@A["Subject"]</th><th>@A["AcademicYear"]</th></tr></thead>
+                        <tbody>
+                        @foreach (var item in Model.TeacherAssignments)
+                        {
+                            <tr>
+                                <td data-label="@A["Teacher"]">@item.TeacherEmail</td>
+                                <td data-label="@A["Class"]">@item.ClassCode — @item.ClassName</td>
+                                <td data-label="@A["Subject"]">@item.SubjectName</td>
+                                <td data-label="@A["AcademicYear"]">@item.AcademicYearName</td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                }
+            </div>
+        </div>
+    </section>
+
+    <section id="students" class="academic-section">
+        <h2>@A["Students"]</h2>
+
+        <div class="academic-grid">
+            <form asp-action="CreateStudentProfile" method="post"
+                  class="academic-card academic-form">
+                <h3>@A["CreateStudent"]</h3>
+                <label for="student-number">@A["StudentNumber"]</label>
+                <input id="student-number" name="studentNumber" maxlength="50"
+                       pattern="[A-Za-z0-9-]+" required />
+                <label for="student-first">@A["FirstName"]</label>
+                <input id="student-first" name="firstName" maxlength="100" required />
+                <label for="student-last">@A["LastName"]</label>
+                <input id="student-last" name="lastName" maxlength="100" required />
+                <label for="student-user">@A["LinkedAccount"] (@A["Optional"])</label>
+                <select id="student-user" name="userId">
+                    <option value="">@A["NoLinkedAccount"]</option>
+                    @foreach (var user in Model.StudentAccountCandidates)
+                    {
+                        <option value="@user.Id">@user.Email</option>
+                    }
+                </select>
+                <label for="student-status">@A["Status"]</label>
+                <select id="student-status" name="status">
+                    <option value="@((int)AcademicStructureStatus.Active)">@A["StatusActive"]</option>
+                    <option value="@((int)AcademicStructureStatus.Inactive)">@A["StatusInactive"]</option>
+                </select>
+                <button class="school-button school-button-primary" type="submit">@A["CreateStudent"]</button>
+            </form>
+
+            <form asp-action="CreateStudentEnrollment" method="post"
+                  class="academic-card academic-form">
+                <h3>@A["EnrollStudent"]</h3>
+                <label for="enroll-student">@A["Student"]</label>
+                <select id="enroll-student" name="studentProfileId" required>
+                    <option value="">@A["SelectOption"]</option>
+                    @foreach (var student in Model.StudentProfiles)
+                    {
+                        <option value="@student.Id">@student.StudentNumber — @student.DisplayName</option>
+                    }
+                </select>
+                <label for="enroll-class">@A["Class"]</label>
+                <select id="enroll-class" name="classGroupId" required>
+                    <option value="">@A["SelectOption"]</option>
+                    @foreach (var item in Model.ClassGroups)
+                    {
+                        <option value="@item.Id">@item.Code — @item.Name</option>
+                    }
+                </select>
+                <button class="school-button school-button-primary" type="submit">@A["EnrollStudent"]</button>
+            </form>
+        </div>
+
+        <div class="academic-two-column academic-list-grid">
+            <div class="academic-card">
+                <h3>@A["Students"]</h3>
+                @if (Model.StudentProfiles.Count == 0)
+                {
+                    <p>@A["NoRecords"]</p>
+                }
+                else
+                {
+                    <table class="academic-table">
+                        <thead><tr><th>@A["StudentNumber"]</th><th>@A["Name"]</th><th>@A["LinkedUser"]</th><th>@A["Status"]</th></tr></thead>
+                        <tbody>
+                        @foreach (var item in Model.StudentProfiles)
+                        {
+                            <tr>
+                                <td data-label="@A["StudentNumber"]">@item.StudentNumber</td>
+                                <td data-label="@A["Name"]">@item.DisplayName</td>
+                                <td data-label="@A["LinkedUser"]">@(item.UserEmail ?? A["NoLinkedAccount"].Value)</td>
+                                <td data-label="@A["Status"]">@A[$"Status{item.Status}"]</td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                }
+            </div>
+
+            <div class="academic-card">
+                <h3>@A["StudentEnrollment"]</h3>
+                @if (Model.StudentEnrollments.Count == 0)
+                {
+                    <p>@A["NoRecords"]</p>
+                }
+                else
+                {
+                    <table class="academic-table">
+                        <thead><tr><th>@A["Student"]</th><th>@A["Class"]</th><th>@A["AcademicYear"]</th></tr></thead>
+                        <tbody>
+                        @foreach (var item in Model.StudentEnrollments)
+                        {
+                            <tr>
+                                <td data-label="@A["Student"]">@item.StudentDisplayName</td>
+                                <td data-label="@A["Class"]">@item.ClassCode — @item.ClassName</td>
+                                <td data-label="@A["AcademicYear"]">@item.AcademicYearName</td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                }
+            </div>
+        </div>
+    </section>
+</section>
