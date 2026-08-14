@@ -38,6 +38,13 @@ public static class ServiceCollectionExtensions
             {
                 options.User.RequireUniqueEmail = true;
 
+                options.Password.RequiredLength = 12;
+                options.Password.RequiredUniqueChars = 4;
+                options.Password.RequireDigit = true;
+                options.Password.RequireLowercase = true;
+                options.Password.RequireUppercase = true;
+                options.Password.RequireNonAlphanumeric = true;
+
                 options.Lockout.AllowedForNewUsers = true;
                 options.Lockout.MaxFailedAccessAttempts = 5;
                 options.Lockout.DefaultLockoutTimeSpan =
@@ -77,11 +84,39 @@ public static class ServiceCollectionExtensions
                     policy.AddRequirements(
                         new PlatformAdministrationRequirement());
                 });
+
+            options.AddPolicy(
+                "UserManagement",
+                policy =>
+                {
+                    policy.RequireAuthenticatedUser();
+
+                    policy.AddRequirements(
+                        new UserManagementRequirement());
+                });
+
+            options.AddPolicy(
+                "SchoolAccess",
+                policy =>
+                {
+                    policy.RequireAuthenticatedUser();
+
+                    policy.AddRequirements(
+                        new SchoolAccessRequirement());
+                });
         });
 
         services.AddScoped<
             IAuthorizationHandler,
             PlatformAdministrationHandler>();
+
+        services.AddScoped<
+            IAuthorizationHandler,
+            UserManagementHandler>();
+
+        services.AddScoped<
+            IAuthorizationHandler,
+            SchoolAccessHandler>();
 
         return services;
     }

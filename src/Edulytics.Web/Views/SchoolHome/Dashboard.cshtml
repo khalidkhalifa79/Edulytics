@@ -1,0 +1,54 @@
+@model Edulytics.Web.ViewModels.SchoolUsers.SchoolHomeViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.PlatformResource> T
+
+@{
+    ViewData["Title"] = T["SchoolDashboardTitle"].Value;
+}
+
+<section class="user-page">
+    <header class="user-page-header">
+        <div>
+            <div class="user-eyebrow">
+                @T["YourSchool"]
+            </div>
+
+            <h1>@Model.SchoolName</h1>
+
+            <p class="user-page-subtitle">
+                @T["SchoolDashboardSubtitle"]
+            </p>
+        </div>
+    </header>
+
+    <section class="school-detail-card">
+        <h2>@T["AccountReady"]</h2>
+
+        <dl class="school-detail-grid">
+            <div>
+                <dt>@T["YourSchool"]</dt>
+                <dd>@Model.SchoolName</dd>
+            </div>
+
+            <div>
+                <dt>@T["YourRole"]</dt>
+                <dd>@T[$"Role{Model.Role}"]</dd>
+            </div>
+        </dl>
+    </section>
+
+    @if (Model.CanManageUsers)
+    {
+        <section class="user-dashboard-action">
+            <div>
+                <h2>@T["SchoolUsersTitle"]</h2>
+                <p>@T["SchoolUsersSubtitle"]</p>
+            </div>
+
+            <a class="school-button school-button-primary"
+               asp-controller="SchoolUsers"
+               asp-action="Index">
+                @T["ManageUsers"]
+            </a>
+        </section>
+    }
+</section>

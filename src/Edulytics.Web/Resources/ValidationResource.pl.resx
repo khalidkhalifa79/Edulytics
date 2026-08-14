@@ -21,4 +21,19 @@
   <data name="PasswordRequired" xml:space="preserve">
     <value>Hasło jest wymagane.</value>
   </data>
+  <data name="UserEmailRequired" xml:space="preserve">
+    <value>Adres e-mail jest wymagany.</value>
+  </data>
+  <data name="UserEmailInvalid" xml:space="preserve">
+    <value>Wprowadź prawidłowy adres e-mail.</value>
+  </data>
+  <data name="UserRoleRequired" xml:space="preserve">
+    <value>Rola jest wymagana.</value>
+  </data>
+  <data name="ConfirmPasswordRequired" xml:space="preserve">
+    <value>Potwierdź hasło.</value>
+  </data>
+  <data name="PasswordsDoNotMatch" xml:space="preserve">
+    <value>Hasła nie są takie same.</value>
+  </data>
 </root>

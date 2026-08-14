@@ -1,0 +1,223 @@
+@model Edulytics.Web.ViewModels.SchoolUsers.SchoolUserDetailsViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.PlatformResource> T
+
+@{
+    ViewData["Title"] = T["UserDetails"].Value;
+    var user = Model.User;
+}
+
+<section class="user-page">
+    <header class="user-page-header">
+        <div>
+            <a class="school-back-link"
+               asp-controller="SchoolUsers"
+               asp-action="Index"
+               asp-route-schoolId="@user.Context.SchoolId">
+                ← @T["BackToUsers"]
+            </a>
+
+            <div class="user-eyebrow">
+                @user.Context.SchoolName
+            </div>
+
+            <h1>@user.Email</h1>
+
+            <p class="user-page-subtitle">
+                @T["UserDetails"]
+            </p>
+        </div>
+    </header>
+
+    @if (TempData["SchoolUserSuccess"] is string success)
+    {
+        <div class="school-alert school-alert-success"
+             role="status">
+            @success
+        </div>
+    }
+
+    @if (TempData["SchoolUserError"] is string error)
+    {
+        <div class="school-alert school-alert-error"
+             role="alert">
+            @error
+        </div>
+    }
+
+    <section class="school-detail-card">
+        <h2>@T["UserInformation"]</h2>
+
+        <dl class="school-detail-grid">
+            <div>
+                <dt>@T["UserEmail"]</dt>
+                <dd>@user.Email</dd>
+            </div>
+
+            <div>
+                <dt>@T["UserRole"]</dt>
+                <dd>
+                    @if (string.IsNullOrWhiteSpace(user.Role))
+                    {
+                        @T["InvalidRoleState"]
+                    }
+                    else
+                    {
+                        @T[$"Role{user.Role}"]
+                    }
+                </dd>
+            </div>
+
+            <div>
+                <dt>@T["AccountStatus"]</dt>
+                <dd>
+                    @(user.IsActive
+                        ? T["UserActive"]
+                        : T["UserInactive"])
+                </dd>
+            </div>
+
+            <div>
+                <dt>@T["LockState"]</dt>
+                <dd>
+                    @(user.IsLocked
+                        ? T["UserLocked"]
+                        : T["UserUnlocked"])
+                </dd>
+            </div>
+
+            <div>
+                <dt>@T["CreatedAt"]</dt>
+                <dd>
+                    @user.CreatedAtUtc.ToString("g")
+                    @T["UtcSuffix"]
+                </dd>
+            </div>
+
+            <div>
+                <dt>@T["UpdatedAt"]</dt>
+                <dd>
+                    @user.UpdatedAtUtc.ToString("g")
+                    @T["UtcSuffix"]
+                </dd>
+            </div>
+        </dl>
+    </section>
+
+    @if (user.IsSelf && !user.Context.IsPlatformActor)
+    {
+        <div class="user-info-box">
+            @T["SelfManagementProtected"]
+        </div>
+    }
+
+    @if (user.CanModify)
+    {
+        <section class="user-admin-grid">
+            <div class="user-action-card">
+                <h2>@T["ChangeRole"]</h2>
+
+                <form method="post"
+                      asp-controller="SchoolUsers"
+                      asp-action="ChangeRole"
+                      asp-route-id="@user.Id">
+                    <input type="hidden"
+                           name="schoolId"
+                           value="@user.Context.SchoolId" />
+
+                    <select name="role"
+                            aria-label="@T["UserRole"]">
+                        @foreach (var option in Model.RoleOptions)
+                        {
+                            if (option.Value == user.Role)
+                            {
+                                <option value="@option.Value"
+                                        selected>
+                                    @T[option.ResourceKey]
+                                </option>
+                            }
+                            else
+                            {
+                                <option value="@option.Value">
+                                    @T[option.ResourceKey]
+                                </option>
+                            }
+                        }
+                    </select>
+
+                    <button type="submit"
+                            class="school-button school-button-primary">
+                        @T["SaveChanges"]
+                    </button>
+                </form>
+            </div>
+
+            <div class="user-action-card">
+                <h2>@T["AccountStatus"]</h2>
+
+                <form method="post"
+                      asp-controller="SchoolUsers"
+                      asp-action="SetActive"
+                      asp-route-id="@user.Id">
+                    <input type="hidden"
+                           name="schoolId"
+                           value="@user.Context.SchoolId" />
+
+                    <input type="hidden"
+                           name="isActive"
+                           value="@(!user.IsActive ? "true" : "false")" />
+
+                    <button type="submit"
+                            class="school-button @(user.IsActive ? "school-button-warning" : "school-button-primary")">
+                        @(user.IsActive
+                            ? T["DeactivateUser"]
+                            : T["ActivateUser"])
+                    </button>
+                </form>
+            </div>
+
+            <div class="user-action-card">
+                <h2>@T["LockState"]</h2>
+
+                <form method="post"
+                      asp-controller="SchoolUsers"
+                      asp-action="SetLocked"
+                      asp-route-id="@user.Id">
+                    <input type="hidden"
+                           name="schoolId"
+                           value="@user.Context.SchoolId" />
+
+                    <input type="hidden"
+                           name="isLocked"
+                           value="@(!user.IsLocked ? "true" : "false")" />
+
+                    <button type="submit"
+                            class="school-button @(user.IsLocked ? "school-button-primary" : "school-button-warning")">
+                        @(user.IsLocked
+                            ? T["UnlockUser"]
+                            : T["LockUser"])
+                    </button>
+                </form>
+            </div>
+
+            <div class="user-action-card">
+                <h2>@T["ResendInvitation"]</h2>
+
+                <p>@T["ResendInvitationDescription"]</p>
+
+                <form method="post"
+                      asp-controller="SchoolUsers"
+                      asp-action="PasswordLink"
+                      asp-route-id="@user.Id">
+                    <input type="hidden"
+                           name="schoolId"
+                           value="@user.Context.SchoolId" />
+
+                    <button type="submit"
+                            class="school-button school-button-primary">
+                        @T["ResendInvitation"]
+                    </button>
+                </form>
+            </div>
+        </section>
+    }
+</section>

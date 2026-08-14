@@ -1,0 +1,92 @@
+@model Edulytics.Web.ViewModels.SchoolUsers.SchoolUserCreateViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.PlatformResource> T
+
+@{
+    ViewData["Title"] = T["CreateSchoolUser"].Value;
+}
+
+<section class="user-page user-form-page">
+    <header class="user-page-header">
+        <div>
+            <a class="school-back-link"
+               asp-controller="SchoolUsers"
+               asp-action="Index"
+               asp-route-schoolId="@Model.SchoolId">
+                ← @T["BackToUsers"]
+            </a>
+
+            <h1>@T["CreateSchoolUser"]</h1>
+
+            <p class="user-page-subtitle">
+                @T["CreateUserIntro"]
+            </p>
+        </div>
+    </header>
+
+    <form method="post"
+          asp-controller="SchoolUsers"
+          asp-action="Create"
+          class="user-form-card">
+
+        <input asp-for="SchoolId"
+               type="hidden" />
+
+        <div asp-validation-summary="ModelOnly"
+             class="user-validation-summary"
+             role="alert">
+        </div>
+
+        <div class="user-field">
+            <label asp-for="Email">
+                @T["UserEmail"]
+            </label>
+
+            <input asp-for="Email"
+                   type="email"
+                   autocomplete="off"
+                   maxlength="256" />
+
+            <span asp-validation-for="Email"
+                  class="user-field-error">
+            </span>
+        </div>
+
+        <div class="user-field">
+            <label asp-for="Role">
+                @T["UserRole"]
+            </label>
+
+            <select asp-for="Role">
+                @foreach (var option in Model.RoleOptions)
+                {
+                    <option value="@option.Value">
+                        @T[option.ResourceKey]
+                    </option>
+                }
+            </select>
+
+            <span asp-validation-for="Role"
+                  class="user-field-error">
+            </span>
+        </div>
+
+        <div class="user-info-box">
+            <strong>@T["PasswordSetupTitle"]</strong>
+            <p>@T["InitialSetupExplanation"]</p>
+        </div>
+
+        <div class="user-form-actions">
+            <button type="submit"
+                    class="school-button school-button-primary">
+                @T["Create"]
+            </button>
+
+            <a class="school-button school-button-secondary"
+               asp-controller="SchoolUsers"
+               asp-action="Index"
+               asp-route-schoolId="@Model.SchoolId">
+                @T["Cancel"]
+            </a>
+        </div>
+    </form>
+</section>

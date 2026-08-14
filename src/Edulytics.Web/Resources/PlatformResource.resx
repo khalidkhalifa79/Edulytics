@@ -237,4 +237,259 @@
   <data name="UtcSuffix" xml:space="preserve">
     <value>UTC</value>
   </data>
-</root>
+  <data name="ManageSchoolUsers" xml:space="preserve">
+    <value>Manage users</value>
+  </data>
+  <data name="SchoolUsersTitle" xml:space="preserve">
+    <value>School users</value>
+  </data>
+  <data name="SchoolUsersSubtitle" xml:space="preserve">
+    <value>Create and manage user accounts for this school.</value>
+  </data>
+  <data name="CreateSchoolUser" xml:space="preserve">
+    <value>Create user</value>
+  </data>
+  <data name="NoSchoolUsers" xml:space="preserve">
+    <value>No school users yet</value>
+  </data>
+  <data name="NoSchoolUsersDescription" xml:space="preserve">
+    <value>Create the first user account for this school.</value>
+  </data>
+  <data name="UserEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="UserRole" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="AccountStatus" xml:space="preserve">
+    <value>Account status</value>
+  </data>
+  <data name="LockState" xml:space="preserve">
+    <value>Lock status</value>
+  </data>
+  <data name="UserActive" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="UserInactive" xml:space="preserve">
+    <value>Inactive</value>
+  </data>
+  <data name="UserLocked" xml:space="preserve">
+    <value>Locked</value>
+  </data>
+  <data name="UserUnlocked" xml:space="preserve">
+    <value>Unlocked</value>
+  </data>
+  <data name="UserDetails" xml:space="preserve">
+    <value>User details</value>
+  </data>
+  <data name="UserInformation" xml:space="preserve">
+    <value>User information</value>
+  </data>
+  <data name="BackToUsers" xml:space="preserve">
+    <value>Back to users</value>
+  </data>
+  <data name="BackToSchool" xml:space="preserve">
+    <value>Back to school</value>
+  </data>
+  <data name="BackToDashboard" xml:space="preserve">
+    <value>Back to dashboard</value>
+  </data>
+  <data name="CreateUserIntro" xml:space="preserve">
+    <value>Create a school-scoped account and assign one role.</value>
+  </data>
+  <data name="PasswordSetupTitle" xml:space="preserve">
+    <value>Set password</value>
+  </data>
+  <data name="InitialSetupExplanation" xml:space="preserve">
+    <value>The account is created without a password. A secure setup link will be generated after creation.</value>
+  </data>
+  <data name="PasswordSetupLink" xml:space="preserve">
+    <value>Password setup link</value>
+  </data>
+  <data name="CopyLinkInstruction" xml:space="preserve">
+    <value>Copy this link and send it securely to the user.</value>
+  </data>
+  <data name="SetupLinkSecurityNote" xml:space="preserve">
+    <value>Treat this link as sensitive. Anyone with the link can set the account password while the token remains valid.</value>
+  </data>
+  <data name="CreateUserSuccess" xml:space="preserve">
+    <value>User created successfully.</value>
+  </data>
+  <data name="ActivateUser" xml:space="preserve">
+    <value>Activate user</value>
+  </data>
+  <data name="DeactivateUser" xml:space="preserve">
+    <value>Deactivate user</value>
+  </data>
+  <data name="ActivateUserSuccess" xml:space="preserve">
+    <value>User activated successfully.</value>
+  </data>
+  <data name="DeactivateUserSuccess" xml:space="preserve">
+    <value>User deactivated successfully.</value>
+  </data>
+  <data name="LockUser" xml:space="preserve">
+    <value>Lock user</value>
+  </data>
+  <data name="UnlockUser" xml:space="preserve">
+    <value>Unlock user</value>
+  </data>
+  <data name="LockUserSuccess" xml:space="preserve">
+    <value>User locked successfully.</value>
+  </data>
+  <data name="UnlockUserSuccess" xml:space="preserve">
+    <value>User unlocked successfully.</value>
+  </data>
+  <data name="ChangeRole" xml:space="preserve">
+    <value>Change role</value>
+  </data>
+  <data name="RoleChangeSuccess" xml:space="preserve">
+    <value>User role changed successfully.</value>
+  </data>
+  <data name="GeneratePasswordLink" xml:space="preserve">
+    <value>Generate new password link</value>
+  </data>
+  <data name="PasswordResetLinkSuccess" xml:space="preserve">
+    <value>A new password setup link was generated.</value>
+  </data>
+  <data name="PasswordResetWarning" xml:space="preserve">
+    <value>Generating a new link removes the current password and invalidates existing sessions.</value>
+  </data>
+  <data name="RoleSchoolAdmin" xml:space="preserve">
+    <value>School administrator</value>
+  </data>
+  <data name="RoleSubjectSupervisor" xml:space="preserve">
+    <value>Subject supervisor</value>
+  </data>
+  <data name="RoleTeacher" xml:space="preserve">
+    <value>Teacher</value>
+  </data>
+  <data name="RoleStudent" xml:space="preserve">
+    <value>Student</value>
+  </data>
+  <data name="You" xml:space="preserve">
+    <value>You</value>
+  </data>
+  <data name="InvalidRoleState" xml:space="preserve">
+    <value>Invalid role configuration</value>
+  </data>
+  <data name="ArchivedUsersReadOnly" xml:space="preserve">
+    <value>This school is archived. User accounts are read-only.</value>
+  </data>
+  <data name="SelfManagementProtected" xml:space="preserve">
+    <value>For safety, a school administrator cannot change their own role, activation state, lock state, or password through this administration screen.</value>
+  </data>
+  <data name="UserAccessDenied" xml:space="preserve">
+    <value>You do not have permission to manage these users.</value>
+  </data>
+  <data name="UserSchoolArchived" xml:space="preserve">
+    <value>Users cannot be modified because this school is archived.</value>
+  </data>
+  <data name="UserNotFound" xml:space="preserve">
+    <value>The user could not be found.</value>
+  </data>
+  <data name="UserRequiredEmail" xml:space="preserve">
+    <value>Email is required.</value>
+  </data>
+  <data name="UserInvalidEmail" xml:space="preserve">
+    <value>Enter a valid email address.</value>
+  </data>
+  <data name="UserEmailTooLong" xml:space="preserve">
+    <value>Email is too long.</value>
+  </data>
+  <data name="UserDuplicateEmail" xml:space="preserve">
+    <value>A user with this email already exists.</value>
+  </data>
+  <data name="UserInvalidRole" xml:space="preserve">
+    <value>Select a valid school role.</value>
+  </data>
+  <data name="UserCannotManageSelf" xml:space="preserve">
+    <value>You cannot perform this action on your own administrator account.</value>
+  </data>
+  <data name="UserPersistenceError" xml:space="preserve">
+    <value>The user change could not be saved. Try again.</value>
+  </data>
+  <data name="UserInvalidPasswordSetup" xml:space="preserve">
+    <value>This password setup link is invalid or has expired.</value>
+  </data>
+  <data name="UserPasswordPolicy" xml:space="preserve">
+    <value>The password does not meet the required security policy.</value>
+  </data>
+  <data name="UserIdentityConflict" xml:space="preserve">
+    <value>The account changed while you were working. Reload and try again.</value>
+  </data>
+  <data name="PasswordSetupIntro" xml:space="preserve">
+    <value>Create a secure password for your Edulytics account.</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>New password</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm password</value>
+  </data>
+  <data name="PasswordPolicyDescription" xml:space="preserve">
+    <value>Use at least 12 characters with uppercase, lowercase, number, and special character.</value>
+  </data>
+  <data name="SetPassword" xml:space="preserve">
+    <value>Set password</value>
+  </data>
+  <data name="PasswordSetTitle" xml:space="preserve">
+    <value>Password created</value>
+  </data>
+  <data name="PasswordSetSuccess" xml:space="preserve">
+    <value>Your password has been set successfully. You can now sign in.</value>
+  </data>
+  <data name="GoToLogin" xml:space="preserve">
+    <value>Go to sign in</value>
+  </data>
+  <data name="SchoolDashboardTitle" xml:space="preserve">
+    <value>School dashboard</value>
+  </data>
+  <data name="SchoolDashboardSubtitle" xml:space="preserve">
+    <value>Your Edulytics school account is ready.</value>
+  </data>
+  <data name="YourSchool" xml:space="preserve">
+    <value>Your school</value>
+  </data>
+  <data name="YourRole" xml:space="preserve">
+    <value>Your role</value>
+  </data>
+  <data name="AccountReady" xml:space="preserve">
+    <value>Account information</value>
+  </data>
+  <data name="ManageUsers" xml:space="preserve">
+    <value>Manage users</value>
+  </data>
+  <data name="InvitationEmailSubject" xml:space="preserve">
+    <value>Your Edulytics account invitation</value>
+  </data>
+  <data name="InvitationEmailIntro" xml:space="preserve">
+    <value>You have been invited to Edulytics for {0}.</value>
+  </data>
+  <data name="InvitationEmailInstruction" xml:space="preserve">
+    <value>Use the secure link below to set up your password.</value>
+  </data>
+  <data name="InvitationEmailAction" xml:space="preserve">
+    <value>Set up your password</value>
+  </data>
+  <data name="InvitationEmailFallback" xml:space="preserve">
+    <value>If the button does not work, copy the link below into your browser.</value>
+  </data>
+  <data name="InvitationEmailSecurity" xml:space="preserve">
+    <value>If you did not expect this invitation, you can ignore this email.</value>
+  </data>
+  <data name="CreateUserInvitationSentSuccess" xml:space="preserve">
+    <value>User created successfully. Invitation email submitted for delivery to {0}.</value>
+  </data>
+  <data name="ResendInvitation" xml:space="preserve">
+    <value>Resend invitation</value>
+  </data>
+  <data name="ResendInvitationDescription" xml:space="preserve">
+    <value>Send a new password setup email to this user.</value>
+  </data>
+  <data name="InvitationResentSuccess" xml:space="preserve">
+    <value>Invitation email submitted for delivery.</value>
+  </data>
+  <data name="InvitationDeliveryFailed" xml:space="preserve">
+    <value>The user account is ready, but the invitation email could not be sent. Check the email delivery settings and try again.</value>
+  </data>
+  <data name="InvalidCredentials" xml:space="preserve">\n    <value>The email address or password is incorrect.</value>\n  </data>\n</root>

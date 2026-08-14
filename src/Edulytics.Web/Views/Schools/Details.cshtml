@@ -27,15 +27,24 @@
             </div>
         </div>
 
-        @if (Model.CanEdit)
-        {
-            <a class="school-button school-button-secondary"
-               asp-controller="Schools"
-               asp-action="Edit"
-               asp-route-id="@Model.Id">
-                @T["Edit"]
+        <div class="school-header-actions">
+            <a class="school-button school-button-primary"
+               asp-controller="SchoolUsers"
+               asp-action="Index"
+               asp-route-schoolId="@Model.Id">
+                @T["ManageSchoolUsers"]
             </a>
-        }
+
+            @if (Model.CanEdit)
+            {
+                <a class="school-button school-button-secondary"
+                   asp-controller="Schools"
+                   asp-action="Edit"
+                   asp-route-id="@Model.Id">
+                    @T["Edit"]
+                </a>
+            }
+        </div>
     </header>
 
     @if (TempData["SchoolSuccess"] is string success)

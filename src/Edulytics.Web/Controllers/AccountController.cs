@@ -1,41 +1,70 @@
-using Edulytics.Web;
+using System.Globalization;
 using Edulytics.Data.Identity;
-using Edulytics.Web.Localization;
+using Edulytics.Services.Users;
 using Edulytics.Web.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.Extensions.Localization;
 
 namespace Edulytics.Web.Controllers;
 
 public sealed class AccountController : Controller
 {
-    private readonly SignInManager<ApplicationUser> _signInManager;
-    private readonly UserManager<ApplicationUser> _userManager;
-    private readonly IStringLocalizer<AccountResource> _localizer;
+    private const string CultureCookieName =
+        "Edulytics.Culture";
+
+    private static readonly HashSet<string>
+        SupportedCultures =
+        new(
+            ["en", "pl"],
+            StringComparer.Ordinal);
+
+    private readonly SignInManager<ApplicationUser>
+        _signInManager;
+
+    private readonly UserManager<ApplicationUser>
+        _userManager;
+
+    private readonly ISchoolUserManagementService
+        _schoolUsers;
+
+    private readonly IStringLocalizer<PlatformResource>
+        _text;
 
     public AccountController(
         SignInManager<ApplicationUser> signInManager,
         UserManager<ApplicationUser> userManager,
-        IStringLocalizer<AccountResource> localizer)
+        ISchoolUserManagementService schoolUsers,
+        IStringLocalizer<PlatformResource> text)
     {
         _signInManager = signInManager;
         _userManager = userManager;
-        _localizer = localizer;
+        _schoolUsers = schoolUsers;
+        _text = text;
     }
 
     [AllowAnonymous]
     [HttpGet("/account/login")]
-    public IActionResult Login(string? returnUrl = null)
+    public IActionResult Login(
+        string? returnUrl = null)
     {
-        if (!CultureCookie.TryRead(Request, out _))
+        var culture =
+            Request.Cookies[CultureCookieName];
+
+        if (string.IsNullOrEmpty(culture))
         {
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction(
+                "Index",
+                "Home");
         }
 
-        ViewData["ReturnUrl"] = returnUrl;
-        return View(new LoginViewModel());
+        ViewData["ReturnUrl"] =
+            returnUrl;
+
+        return View(
+            new LoginViewModel());
     }
 
     [AllowAnonymous]
@@ -45,72 +74,229 @@ public sealed class AccountController : Controller
         LoginViewModel model,
         string? returnUrl = null)
     {
-        if (!CultureCookie.TryRead(Request, out _))
+        var culture =
+            Request.Cookies[CultureCookieName];
+
+        if (string.IsNullOrEmpty(culture))
         {
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction(
+                "Index",
+                "Home");
         }
 
-        ViewData["ReturnUrl"] = returnUrl;
+        ViewData["ReturnUrl"] =
+            returnUrl;
 
         if (!ModelState.IsValid)
         {
             return View(model);
         }
 
-        var user = await _userManager.FindByEmailAsync(model.Email!);
+        var user =
+            await _userManager.FindByEmailAsync(
+                model.Email!);
 
-        if (user is null || !user.IsActive)
+        if (user is null)
         {
-            AddGenericAuthenticationError();
+            AddInvalidCredentials();
             return View(model);
         }
 
-        var result = await _signInManager.PasswordSignInAsync(
-            user,
-            model.Password!,
-            isPersistent: false,
-            lockoutOnFailure: true);
+        var access =
+            await _schoolUsers
+                .EvaluateSignInAsync(user.Id);
+
+        if (!access.Allowed)
+        {
+            AddInvalidCredentials();
+            return View(model);
+        }
+
+        var result =
+            await _signInManager
+                .PasswordSignInAsync(
+                    user,
+                    model.Password!,
+                    isPersistent: false,
+                    lockoutOnFailure: true);
 
         if (!result.Succeeded)
         {
-            AddGenericAuthenticationError();
+            AddInvalidCredentials();
             return View(model);
         }
 
-        if (!string.IsNullOrWhiteSpace(returnUrl) &&
-            Url.IsLocalUrl(returnUrl))
+        if (Url.IsLocalUrl(returnUrl))
         {
-            return LocalRedirect(returnUrl);
+            return Redirect(returnUrl!);
+        }
+
+        return access.IsPlatformAdministrator
+            ? RedirectToAction(
+                "Dashboard",
+                "Platform")
+            : RedirectToAction(
+                "Dashboard",
+                "SchoolHome");
+    }
+
+    [AllowAnonymous]
+    [HttpGet("/account/set-password")]
+    public IActionResult SetPassword(
+        Guid userId,
+        string token,
+        string culture)
+    {
+        culture = ApplySetupCulture(culture);
+
+        if (userId == Guid.Empty ||
+            string.IsNullOrWhiteSpace(token))
+        {
+            return View(
+                new SetPasswordViewModel
+                {
+                    UserId = userId,
+                    Token = token ?? string.Empty,
+                    Culture = culture
+                });
+        }
+
+        return View(
+            new SetPasswordViewModel
+            {
+                UserId = userId,
+                Token = token,
+                Culture = culture
+            });
+    }
+
+    [AllowAnonymous]
+    [HttpPost("/account/set-password")]
+    [IgnoreAntiforgeryToken]
+    [EnableRateLimiting("PasswordSetup")]
+    public async Task<IActionResult> SetPassword(
+        SetPasswordViewModel model,
+        CancellationToken cancellationToken)
+    {
+        model.Culture =
+            ApplySetupCulture(model.Culture);
+
+        if (!ModelState.IsValid)
+        {
+            return View(model);
+        }
+
+        var result =
+            await _schoolUsers
+                .CompletePasswordSetupAsync(
+                    model.UserId,
+                    model.Token,
+                    model.Password,
+                    cancellationToken);
+
+        if (!result.Succeeded)
+        {
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(
+                    string.Empty,
+                    _text[
+                        error.Code.ToString()
+                    ].Value);
+            }
+
+            return View(model);
         }
 
         return RedirectToAction(
-            "Dashboard",
-            "Platform");
+            nameof(PasswordSet),
+            new
+            {
+                culture = model.Culture
+            });
     }
 
-    [Authorize]
+    [AllowAnonymous]
+    [HttpGet("/account/password-set")]
+    public IActionResult PasswordSet(
+        string? culture)
+    {
+        ApplySetupCulture(culture);
+
+        return View();
+    }
+
     [HttpPost("/account/logout")]
     [ValidateAntiForgeryToken]
+    [Authorize]
     public async Task<IActionResult> Logout()
     {
         await _signInManager.SignOutAsync();
 
         Response.Cookies.Delete(
-            CultureCookie.Name,
-            new CookieOptions
-            {
-                Path = "/"
-            });
+            CultureCookieName);
 
         return RedirectToAction(
             "Index",
             "Home");
     }
 
-    private void AddGenericAuthenticationError()
+    private void AddInvalidCredentials()
     {
         ModelState.AddModelError(
             string.Empty,
-            _localizer["InvalidCredentials"]);
+            _text["InvalidCredentials"].Value);
+    }
+
+    private string ApplySetupCulture(
+        string? culture)
+    {
+        culture =
+            culture?.Trim().ToLowerInvariant()
+            ?? string.Empty;
+
+        if (!SupportedCultures.Contains(culture))
+        {
+            var cookieCulture =
+                Request.Cookies[
+                    CultureCookieName]
+                    ?.Trim()
+                    .ToLowerInvariant();
+
+            culture =
+                !string.IsNullOrWhiteSpace(
+                    cookieCulture) &&
+                SupportedCultures.Contains(
+                    cookieCulture)
+                    ? cookieCulture
+                    : "en";
+        }
+
+        var cultureInfo =
+            CultureInfo.GetCultureInfo(culture);
+
+        CultureInfo.CurrentCulture =
+            cultureInfo;
+
+        CultureInfo.CurrentUICulture =
+            cultureInfo;
+
+        Response.Cookies.Append(
+            CultureCookieName,
+            culture,
+            new CookieOptions
+            {
+                Expires =
+                    DateTimeOffset.UtcNow
+                        .AddDays(365),
+                IsEssential = true,
+                HttpOnly = false,
+                SameSite =
+                    SameSiteMode.Strict,
+                Secure =
+                    Request.IsHttps
+            });
+
+        return culture;
     }
 }

@@ -1,0 +1,174 @@
+@model Edulytics.Web.ViewModels.SchoolUsers.SchoolUserListViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.PlatformResource> T
+
+@{
+    ViewData["Title"] = T["SchoolUsersTitle"].Value;
+}
+
+<section class="user-page">
+    <header class="user-page-header">
+        <div>
+            @if (Model.Context.IsPlatformActor)
+            {
+                <a class="school-back-link"
+                   asp-controller="Schools"
+                   asp-action="Details"
+                   asp-route-id="@Model.Context.SchoolId">
+                    ← @T["BackToSchool"]
+                </a>
+            }
+            else
+            {
+                <a class="school-back-link"
+                   asp-controller="SchoolHome"
+                   asp-action="Dashboard">
+                    ← @T["BackToDashboard"]
+                </a>
+            }
+
+            <div class="user-eyebrow">
+                @Model.Context.SchoolName
+            </div>
+
+            <h1>@T["SchoolUsersTitle"]</h1>
+
+            <p class="user-page-subtitle">
+                @T["SchoolUsersSubtitle"]
+            </p>
+        </div>
+
+        @if (Model.Context.CanMutate)
+        {
+            <a class="school-button school-button-primary"
+               asp-controller="SchoolUsers"
+               asp-action="Create"
+               asp-route-schoolId="@Model.Context.SchoolId">
+                @T["CreateSchoolUser"]
+            </a>
+        }
+    </header>
+
+    @if (TempData["SchoolUserSuccess"] is string success)
+    {
+        <div class="school-alert school-alert-success"
+             role="status">
+            @success
+        </div>
+    }
+
+    @if (TempData["SchoolUserError"] is string error)
+    {
+        <div class="school-alert school-alert-error"
+             role="alert">
+            @error
+        </div>
+    }
+
+    @if (Model.Context.SchoolStatus ==
+         Edulytics.Core.Enums.SchoolStatus.Archived)
+    {
+        <div class="school-alert school-alert-warning"
+             role="status">
+            @T["ArchivedUsersReadOnly"]
+        </div>
+    }
+
+    @if (Model.Users.Count == 0)
+    {
+        <section class="user-empty">
+            <h2>@T["NoSchoolUsers"]</h2>
+            <p>@T["NoSchoolUsersDescription"]</p>
+
+            @if (Model.Context.CanMutate)
+            {
+                <a class="school-button school-button-primary"
+                   asp-controller="SchoolUsers"
+                   asp-action="Create"
+                   asp-route-schoolId="@Model.Context.SchoolId">
+                    @T["CreateSchoolUser"]
+                </a>
+            }
+        </section>
+    }
+    else
+    {
+        <div class="user-table-wrap">
+            <table class="user-table">
+                <thead>
+                <tr>
+                    <th>@T["UserEmail"]</th>
+                    <th>@T["UserRole"]</th>
+                    <th>@T["AccountStatus"]</th>
+                    <th>@T["LockState"]</th>
+                    <th>@T["CreatedAt"]</th>
+                    <th>@T["Actions"]</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                @foreach (var user in Model.Users)
+                {
+                    <tr>
+                        <td data-label="@T["UserEmail"]">
+                            <strong>@user.Email</strong>
+
+                            @if (user.IsSelf)
+                            {
+                                <span class="user-self">
+                                    @T["You"]
+                                </span>
+                            }
+                        </td>
+
+                        <td data-label="@T["UserRole"]">
+                            @if (string.IsNullOrWhiteSpace(user.Role))
+                            {
+                                <span class="user-state user-state-error">
+                                    @T["InvalidRoleState"]
+                                </span>
+                            }
+                            else
+                            {
+                                @T[$"Role{user.Role}"]
+                            }
+                        </td>
+
+                        <td data-label="@T["AccountStatus"]">
+                            <span class="user-state"
+                                  data-state="@(user.IsActive ? "active" : "inactive")">
+                                @(user.IsActive
+                                    ? T["UserActive"]
+                                    : T["UserInactive"])
+                            </span>
+                        </td>
+
+                        <td data-label="@T["LockState"]">
+                            <span class="user-state"
+                                  data-state="@(user.IsLocked ? "locked" : "unlocked")">
+                                @(user.IsLocked
+                                    ? T["UserLocked"]
+                                    : T["UserUnlocked"])
+                            </span>
+                        </td>
+
+                        <td data-label="@T["CreatedAt"]">
+                            @user.CreatedAtUtc.ToString("g")
+                            @T["UtcSuffix"]
+                        </td>
+
+                        <td data-label="@T["Actions"]">
+                            <a class="school-button school-button-secondary school-button-small"
+                               asp-controller="SchoolUsers"
+                               asp-action="Details"
+                               asp-route-id="@user.Id"
+                               asp-route-schoolId="@Model.Context.SchoolId">
+                                @T["View"]
+                            </a>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    }
+</section>

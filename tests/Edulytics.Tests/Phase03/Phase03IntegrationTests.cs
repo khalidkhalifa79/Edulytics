@@ -232,7 +232,7 @@ public sealed class Phase03IntegrationTests
     }
 
     [Fact]
-    public async Task SchoolScopedSuperAdminRole_IsDenied()
+    public async Task SchoolScopedSuperAdminRole_IsRejectedAtLogin()
     {
         var email =
             $"school-super-{Guid.NewGuid():N}@example.test";
@@ -244,7 +244,7 @@ public sealed class Phase03IntegrationTests
 
         using var client = CreateClient();
 
-        await LoginAsync(
+        await LoginRejectedAsync(
             client,
             "en",
             email);
@@ -259,19 +259,19 @@ public sealed class Phase03IntegrationTests
 
         Assert.NotNull(response.Headers.Location);
 
-        var accessDeniedPath =
+        var loginPath =
             response.Headers.Location.IsAbsoluteUri
                 ? response.Headers.Location.AbsolutePath
                 : response.Headers.Location.OriginalString
                     .Split('?', 2)[0];
 
         Assert.Equal(
-            "/access-denied",
-            accessDeniedPath);
+            "/account/login",
+            loginPath);
     }
 
     [Fact]
-    public async Task NonSuperAdmin_IsDenied()
+    public async Task SchoolScopedUserWithoutTenantRole_IsRejectedAtLogin()
     {
         var email =
             $"teacher-{Guid.NewGuid():N}@example.test";
@@ -283,7 +283,7 @@ public sealed class Phase03IntegrationTests
 
         using var client = CreateClient();
 
-        await LoginAsync(
+        await LoginRejectedAsync(
             client,
             "en",
             email);
@@ -298,15 +298,15 @@ public sealed class Phase03IntegrationTests
 
         Assert.NotNull(response.Headers.Location);
 
-        var accessDeniedPath =
+        var loginPath =
             response.Headers.Location.IsAbsoluteUri
                 ? response.Headers.Location.AbsolutePath
                 : response.Headers.Location.OriginalString
                     .Split('?', 2)[0];
 
         Assert.Equal(
-            "/access-denied",
-            accessDeniedPath);
+            "/account/login",
+            loginPath);
     }
 
     [Fact]
@@ -446,6 +446,37 @@ public sealed class Phase03IntegrationTests
 
         Assert.Equal(
             HttpStatusCode.Redirect,
+            response.StatusCode);
+    }
+
+    private static async Task LoginRejectedAsync(
+        HttpClient client,
+        string culture,
+        string email)
+    {
+        await SelectCultureAsync(
+            client,
+            culture);
+
+        var token =
+            await GetAntiforgeryTokenAsync(
+                client,
+                "/account/login");
+
+        var response =
+            await client.PostAsync(
+                "/account/login",
+                new FormUrlEncodedContent(
+                    new Dictionary<string, string>
+                    {
+                        ["Email"] = email,
+                        ["Password"] = TestPassword,
+                        ["__RequestVerificationToken"] =
+                            token
+                    }));
+
+        Assert.Equal(
+            HttpStatusCode.OK,
             response.StatusCode);
     }
 
