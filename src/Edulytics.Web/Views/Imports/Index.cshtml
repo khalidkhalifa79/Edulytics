@@ -1,0 +1,198 @@
+@model Edulytics.Web.ViewModels.Imports.ImportIndexViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.ImportResource> I
+
+@{
+    ViewData["Title"] = I["ImportTitle"].Value;
+}
+
+<section class="import-page">
+    <header class="import-page-header">
+        <div>
+            <div class="user-eyebrow">
+                @I["ImportTitle"]
+            </div>
+
+            <h1>@I["ImportTitle"]</h1>
+
+            <p class="user-page-subtitle">
+                @I["ImportSubtitle"]
+            </p>
+        </div>
+
+        <a class="school-button"
+           asp-controller="SchoolHome"
+           asp-action="Dashboard">
+            @I["BackToDashboard"]
+        </a>
+    </header>
+
+    @if (TempData["ImportSuccess"] is string success)
+    {
+        <div class="import-message import-message-success"
+             role="status">
+            @success
+        </div>
+    }
+
+    @if (TempData["ImportError"] is string error)
+    {
+        <div class="import-message import-message-error"
+             role="alert">
+            @error
+        </div>
+    }
+
+    <section class="import-panel">
+        <h2>@I["UploadFile"]</h2>
+
+        <p>@I["FileRules"]</p>
+
+        <form asp-action="Upload"
+              method="post"
+              enctype="multipart/form-data"
+              class="import-upload-form">
+
+            <div class="import-field">
+                <label for="importType">
+                    @I["ImportType"]
+                </label>
+
+                <select id="importType"
+                        name="importType"
+                        required>
+                    @foreach (var option in Model.Workspace.AllowedTypes)
+                    {
+                        <option value="@option.Type">
+                            @I[$"Type{option.Type}"]
+                        </option>
+                    }
+                </select>
+            </div>
+
+            <div class="import-field">
+                <label for="importFile">
+                    @I["File"]
+                </label>
+
+                <input id="importFile"
+                       name="file"
+                       type="file"
+                       accept=".csv,.xlsx,text/csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                       required />
+            </div>
+
+            <button type="submit"
+                    class="school-button school-button-primary">
+                @I["UploadAndValidate"]
+            </button>
+        </form>
+    </section>
+
+    <section class="import-schema-grid">
+        @foreach (var option in Model.Workspace.AllowedTypes)
+        {
+            <article class="import-panel import-schema-card">
+                <h2>@I[$"Type{option.Type}"]</h2>
+
+                <strong>@I["RequiredColumns"]</strong>
+
+                <code>
+                    @string.Join(",", option.RequiredHeaders)
+                </code>
+
+                <a asp-action="Template"
+                   asp-route-importType="@option.Type">
+                    @I["DownloadTemplate"]
+                </a>
+
+                @if (option.Type == Edulytics.Core.Enums.ImportType.Teachers)
+                {
+                    <p>@I["TeacherImportNote"]</p>
+                }
+
+                @if (option.Type == Edulytics.Core.Enums.ImportType.AssessmentResults)
+                {
+                    <p>@I["ResultImportNote"]</p>
+                }
+
+                @if (option.Type == Edulytics.Core.Enums.ImportType.CurriculumMappings)
+                {
+                    <p>@I["MappingImportNote"]</p>
+                }
+            </article>
+        }
+    </section>
+
+    <section class="import-panel">
+        <h2>@I["History"]</h2>
+
+        <p>@I["IdempotencyNote"]</p>
+
+        @if (Model.Workspace.Batches.Count == 0)
+        {
+            <p>@I["NoHistory"]</p>
+        }
+        else
+        {
+            <div class="import-table-wrap">
+                <table class="import-table">
+                    <thead>
+                        <tr>
+                            <th>@I["ImportType"]</th>
+                            <th>@I["FileName"]</th>
+                            <th>@I["Status"]</th>
+                            <th>@I["Rows"]</th>
+                            <th>@I["Errors"]</th>
+                            <th>@I["Created"]</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var batch in Model.Workspace.Batches)
+                    {
+                        var statusKey = batch.Status switch
+                        {
+                            Edulytics.Core.Enums.ImportBatchStatus.Validated => "StatusValidated",
+                            Edulytics.Core.Enums.ImportBatchStatus.ValidationFailed => "StatusValidationFailed",
+                            _ => "StatusCompleted"
+                        };
+
+                        <tr>
+                            <td data-label="@I["ImportType"]">
+                                @I[$"Type{batch.Type}"]
+                            </td>
+
+                            <td data-label="@I["FileName"]">
+                                @batch.FileName
+                            </td>
+
+                            <td data-label="@I["Status"]">
+                                @I[statusKey]
+                            </td>
+
+                            <td data-label="@I["Rows"]">
+                                @batch.RowCount
+                            </td>
+
+                            <td data-label="@I["Errors"]">
+                                @batch.ErrorCount
+                            </td>
+
+                            <td data-label="@I["Created"]">
+                                @batch.CreatedAtUtc.ToString("u")
+                            </td>
+
+                            <td>
+                                <a asp-action="Details"
+                                   asp-route-batchId="@batch.Id">
+                                    @I["Open"]
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </section>
+</section>

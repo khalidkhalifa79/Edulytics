@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+  <data name="ImportTitle" xml:space="preserve"><value>Data import</value></data>
+  <data name="ImportSubtitle" xml:space="preserve"><value>Upload CSV or Excel data, validate every row, preview the batch, and confirm a transactional import.</value></data>
+  <data name="ManageImports" xml:space="preserve"><value>Manage data imports</value></data>
+  <data name="DashboardImportTitle" xml:space="preserve"><value>Data import</value></data>
+  <data name="DashboardImportSubtitle" xml:space="preserve"><value>Validate and import school data from CSV or Excel files.</value></data>
+  <data name="BackToDashboard" xml:space="preserve"><value>Back to school dashboard</value></data>
+  <data name="UploadFile" xml:space="preserve"><value>Upload file</value></data>
+  <data name="ImportType" xml:space="preserve"><value>Import type</value></data>
+  <data name="File" xml:space="preserve"><value>File</value></data>
+  <data name="UploadAndValidate" xml:space="preserve"><value>Upload and validate</value></data>
+  <data name="FileRules" xml:space="preserve"><value>CSV and XLSX are supported. Maximum 5 MiB, 10,000 data rows and 100 columns.</value></data>
+  <data name="RequiredColumns" xml:space="preserve"><value>Required columns</value></data>
+  <data name="DownloadTemplate" xml:space="preserve"><value>Download CSV template</value></data>
+  <data name="History" xml:space="preserve"><value>Import batch history</value></data>
+  <data name="NoHistory" xml:space="preserve"><value>No import batches are available.</value></data>
+  <data name="Batch" xml:space="preserve"><value>Import batch</value></data>
+  <data name="FileName" xml:space="preserve"><value>File name</value></data>
+  <data name="Rows" xml:space="preserve"><value>Rows</value></data>
+  <data name="ValidRows" xml:space="preserve"><value>Valid rows</value></data>
+  <data name="Errors" xml:space="preserve"><value>Errors</value></data>
+  <data name="Status" xml:space="preserve"><value>Status</value></data>
+  <data name="Created" xml:space="preserve"><value>Created</value></data>
+  <data name="Completed" xml:space="preserve"><value>Completed</value></data>
+  <data name="Open" xml:space="preserve"><value>Open</value></data>
+  <data name="Preview" xml:space="preserve"><value>Validation preview</value></data>
+  <data name="PreviewLimit" xml:space="preserve"><value>The preview shows up to the first 100 data rows.</value></data>
+  <data name="ValidationErrors" xml:space="preserve"><value>Validation errors</value></data>
+  <data name="NoValidationErrors" xml:space="preserve"><value>No validation errors were found.</value></data>
+  <data name="Row" xml:space="preserve"><value>Row</value></data>
+  <data name="Column" xml:space="preserve"><value>Column</value></data>
+  <data name="Value" xml:space="preserve"><value>Value</value></data>
+  <data name="ConfirmImport" xml:space="preserve"><value>Confirm import</value></data>
+  <data name="ConfirmHelp" xml:space="preserve"><value>Confirmation revalidates current school data and applies the complete batch in one transaction.</value></data>
+  <data name="CannotConfirm" xml:space="preserve"><value>This batch cannot be confirmed.</value></data>
+  <data name="TypeStudents" xml:space="preserve"><value>Students</value></data>
+  <data name="TypeTeachers" xml:space="preserve"><value>Teacher assignments</value></data>
+  <data name="TypeClasses" xml:space="preserve"><value>Classes</value></data>
+  <data name="TypeSubjects" xml:space="preserve"><value>Subjects</value></data>
+  <data name="TypeAssessmentResults" xml:space="preserve"><value>Assessment results</value></data>
+  <data name="TypeCurriculumMappings" xml:space="preserve"><value>Curriculum mappings</value></data>
+  <data name="StatusValidated" xml:space="preserve"><value>Validated</value></data>
+  <data name="StatusValidationFailed" xml:space="preserve"><value>Validation failed</value></data>
+  <data name="StatusCompleted" xml:space="preserve"><value>Completed</value></data>
+  <data name="SuccessUploaded" xml:space="preserve"><value>The file was parsed and validation is complete.</value></data>
+  <data name="SuccessCompleted" xml:space="preserve"><value>The import batch completed successfully.</value></data>
+  <data name="TeacherImportNote" xml:space="preserve"><value>Teacher import creates assignments for existing Teacher accounts. It does not create login accounts.</value></data>
+  <data name="ResultImportNote" xml:space="preserve"><value>Assessment results use one row for each assessment question.</value></data>
+  <data name="MappingImportNote" xml:space="preserve"><value>Curriculum mappings require a Draft assessment and an active adopted outcome.</value></data>
+  <data name="IdempotencyNote" xml:space="preserve"><value>Uploading the same file again for the same user and import type returns the existing batch.</value></data>
+  <data name="ErrorAccessDenied" xml:space="preserve"><value>You are not allowed to perform this import.</value></data>
+  <data name="ErrorSchoolNotActive" xml:space="preserve"><value>Imports are unavailable while the school is not active.</value></data>
+  <data name="ErrorUnsupportedFile" xml:space="preserve"><value>Only CSV and XLSX files are supported.</value></data>
+  <data name="ErrorInvalidFile" xml:space="preserve"><value>The uploaded file could not be parsed.</value></data>
+  <data name="ErrorFileTooLarge" xml:space="preserve"><value>The uploaded file exceeds the allowed size.</value></data>
+  <data name="ErrorTooManyRows" xml:space="preserve"><value>The file contains too many data rows.</value></data>
+  <data name="ErrorTooManyColumns" xml:space="preserve"><value>The file contains too many columns.</value></data>
+  <data name="ErrorDuplicateHeader" xml:space="preserve"><value>The file contains duplicate column headers.</value></data>
+  <data name="ErrorEmptyFile" xml:space="preserve"><value>The uploaded file contains no import data.</value></data>
+  <data name="ErrorBatchNotFound" xml:space="preserve"><value>The import batch was not found.</value></data>
+  <data name="ErrorBatchHasErrors" xml:space="preserve"><value>A batch with validation errors cannot be confirmed.</value></data>
+  <data name="ErrorBatchStateChanged" xml:space="preserve"><value>School data changed after validation. Review the updated validation errors.</value></data>
+  <data name="ErrorConcurrencyConflict" xml:space="preserve"><value>This import batch changed in another request. Reload and try again.</value></data>
+  <data name="ErrorPersistence" xml:space="preserve"><value>The import could not be saved.</value></data>
+  <data name="ValidationMissingColumn" xml:space="preserve"><value>A required column is missing.</value></data>
+  <data name="ValidationRequired" xml:space="preserve"><value>A required value is empty.</value></data>
+  <data name="ValidationInvalidType" xml:space="preserve"><value>The value has an invalid format or length.</value></data>
+  <data name="ValidationDuplicateRow" xml:space="preserve"><value>The file contains a duplicate logical row.</value></data>
+  <data name="ValidationUnknownReference" xml:space="preserve"><value>A referenced school record was not found.</value></data>
+  <data name="ValidationAmbiguousReference" xml:space="preserve"><value>The reference matches more than one eligible record.</value></data>
+  <data name="ValidationInvalidScore" xml:space="preserve"><value>The score is outside the allowed question range.</value></data>
+  <data name="ValidationExistingConflict" xml:space="preserve"><value>The row conflicts with an existing record.</value></data>
+  <data name="ValidationCrossSchoolReference" xml:space="preserve"><value>The referenced student is not enrolled in the required class and academic year.</value></data>
+  <data name="ValidationAccessDenied" xml:space="preserve"><value>The teacher is not assigned to the assessment class and subject.</value></data>
+  <data name="ValidationIncompleteResult" xml:space="preserve"><value>Every assessment question must occur exactly once for this student result.</value></data>
+</root>

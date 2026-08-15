@@ -7,6 +7,9 @@ public static class RealtimeEventTypes
 
     public const string AssessmentResultUpdated =
         "AssessmentResultUpdated";
+
+    public const string ImportBatchCompleted =
+        "ImportBatchCompleted";
 }
 
 public static class RealtimeGroupNames
@@ -29,6 +32,18 @@ public sealed record AssessmentResultChangedEvent(
     Guid ClassGroupId,
     Guid SubjectId,
     Guid StudentProfileId,
+    DateTime OccurredAtUtc);
+
+public sealed record ImportDashboardScope(
+    Guid ClassGroupId,
+    Guid SubjectId);
+
+public sealed record ImportBatchCompletedEvent(
+    Guid EventId,
+    Guid SchoolId,
+    Guid ImportBatchId,
+    string ImportType,
+    IReadOnlyList<ImportDashboardScope> AffectedScopes,
     DateTime OccurredAtUtc);
 
 public sealed record DashboardUpdatedMessage(

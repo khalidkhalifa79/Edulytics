@@ -70,6 +70,7 @@ builder.Services.AddCurriculumPhase07();
 builder.Services.AddAssessmentsPhase08();
 builder.Services.AddAnalyticsPhase09();
 builder.Services.AddRealtimeDashboardsPhase10();
+builder.Services.AddDataImportPhase11();
 builder.Services.AddInvitationEmailDelivery(
     builder.Configuration);
 

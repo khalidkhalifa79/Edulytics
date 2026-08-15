@@ -3,6 +3,7 @@ using Edulytics.Core.Entities;
 using Edulytics.Core.Interfaces;
 using Edulytics.Core.Realtime;
 using Edulytics.Services.Analytics;
+using Edulytics.Services.Imports;
 using Edulytics.Services.Realtime;
 
 namespace Edulytics.Web.Background;
@@ -20,11 +21,13 @@ public sealed class OutboxProcessorBackgroundService
         TimeSpan.FromSeconds(30);
 
     private readonly IServiceScopeFactory _scopeFactory;
-    private readonly ILogger<OutboxProcessorBackgroundService> _logger;
+    private readonly ILogger<
+        OutboxProcessorBackgroundService> _logger;
 
     public OutboxProcessorBackgroundService(
         IServiceScopeFactory scopeFactory,
-        ILogger<OutboxProcessorBackgroundService> logger)
+        ILogger<
+            OutboxProcessorBackgroundService> logger)
     {
         _scopeFactory = scopeFactory;
         _logger = logger;
@@ -73,18 +76,27 @@ public sealed class OutboxProcessorBackgroundService
             _scopeFactory.CreateScope();
 
         var outbox =
-            scope.ServiceProvider.GetRequiredService<
-                IOutboxRepository>();
+            scope.ServiceProvider
+                .GetRequiredService<
+                    IOutboxRepository>();
 
         var refresh =
-            scope.ServiceProvider.GetRequiredService<
-                IAnalyticsProjectionRefreshService>();
+            scope.ServiceProvider
+                .GetRequiredService<
+                    IAnalyticsProjectionRefreshService>();
 
-        var notifier =
-            scope.ServiceProvider.GetRequiredService<
-                IDashboardRealtimeNotifier>();
+        var resultNotifier =
+            scope.ServiceProvider
+                .GetRequiredService<
+                    IDashboardRealtimeNotifier>();
 
-        var now = DateTime.UtcNow;
+        var importNotifier =
+            scope.ServiceProvider
+                .GetRequiredService<
+                    IImportDashboardRealtimeNotifier>();
+
+        var now =
+            DateTime.UtcNow;
 
         var messages =
             await outbox.GetPendingAsync(
@@ -114,7 +126,8 @@ public sealed class OutboxProcessorBackgroundService
                 await ProcessMessageAsync(
                     message,
                     refresh,
-                    notifier,
+                    resultNotifier,
+                    importNotifier,
                     cancellationToken);
 
                 if (!await outbox.MarkProcessedAsync(
@@ -136,15 +149,18 @@ public sealed class OutboxProcessorBackgroundService
                         60,
                         Math.Pow(
                             2,
-                            Math.Min(attempt, 6)));
+                            Math.Min(
+                                attempt,
+                                6)));
 
                 try
                 {
                     await outbox.MarkFailedAsync(
                         message.Id,
                         ex.Message,
-                        DateTime.UtcNow.AddSeconds(
-                            delaySeconds),
+                        DateTime.UtcNow
+                            .AddSeconds(
+                                delaySeconds),
                         cancellationToken);
                 }
                 catch (Exception markEx)
@@ -168,49 +184,86 @@ public sealed class OutboxProcessorBackgroundService
     private static async Task ProcessMessageAsync(
         OutboxMessage message,
         IAnalyticsProjectionRefreshService refresh,
-        IDashboardRealtimeNotifier notifier,
+        IDashboardRealtimeNotifier resultNotifier,
+        IImportDashboardRealtimeNotifier importNotifier,
         CancellationToken cancellationToken)
     {
-        if (message.EventType !=
-                RealtimeEventTypes.AssessmentResultEntered &&
-            message.EventType !=
-                RealtimeEventTypes.AssessmentResultUpdated)
+        if (message.EventType ==
+                RealtimeEventTypes
+                    .AssessmentResultEntered ||
+            message.EventType ==
+                RealtimeEventTypes
+                    .AssessmentResultUpdated)
         {
-            throw new InvalidOperationException(
-                $"Unsupported event type: {message.EventType}");
+            var change =
+                JsonSerializer.Deserialize<
+                    AssessmentResultChangedEvent>(
+                        message.PayloadJson);
+
+            if (change is null ||
+                !message.SchoolId.HasValue ||
+                message.SchoolId.Value !=
+                    change.SchoolId)
+            {
+                throw new InvalidOperationException(
+                    "Invalid assessment-result outbox message.");
+            }
+
+            var refreshed =
+                await refresh.RefreshSchoolAsync(
+                    change.SchoolId,
+                    cancellationToken);
+
+            if (!refreshed.Succeeded)
+            {
+                throw new InvalidOperationException(
+                    $"Analytics refresh failed: {refreshed.Error}");
+            }
+
+            await resultNotifier
+                .NotifyAssessmentResultChangedAsync(
+                    change,
+                    cancellationToken);
+
+            return;
         }
 
-        var change =
-            JsonSerializer.Deserialize<
-                AssessmentResultChangedEvent>(
-                    message.PayloadJson);
-
-        if (change is null)
+        if (message.EventType ==
+            RealtimeEventTypes.ImportBatchCompleted)
         {
-            throw new InvalidOperationException(
-                "Invalid outbox payload.");
-        }
+            var completed =
+                JsonSerializer.Deserialize<
+                    ImportBatchCompletedEvent>(
+                        message.PayloadJson);
 
-        if (!message.SchoolId.HasValue ||
-            message.SchoolId.Value != change.SchoolId)
-        {
-            throw new InvalidOperationException(
-                "Outbox tenant mismatch.");
-        }
+            if (completed is null ||
+                !message.SchoolId.HasValue ||
+                message.SchoolId.Value !=
+                    completed.SchoolId)
+            {
+                throw new InvalidOperationException(
+                    "Invalid import outbox message.");
+            }
 
-        var refreshed =
-            await refresh.RefreshSchoolAsync(
-                change.SchoolId,
+            var refreshed =
+                await refresh.RefreshSchoolAsync(
+                    completed.SchoolId,
+                    cancellationToken);
+
+            if (!refreshed.Succeeded)
+            {
+                throw new InvalidOperationException(
+                    $"Analytics refresh failed: {refreshed.Error}");
+            }
+
+            await importNotifier.NotifyAsync(
+                completed,
                 cancellationToken);
 
-        if (!refreshed.Succeeded)
-        {
-            throw new InvalidOperationException(
-                $"Analytics refresh failed: {refreshed.Error}");
+            return;
         }
 
-        await notifier.NotifyAssessmentResultChangedAsync(
-            change,
-            cancellationToken);
+        throw new InvalidOperationException(
+            $"Unsupported event type: {message.EventType}");
     }
 }

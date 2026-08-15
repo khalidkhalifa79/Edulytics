@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+  <data name="ImportTitle" xml:space="preserve"><value>Import danych</value></data>
+  <data name="ImportSubtitle" xml:space="preserve"><value>Prześlij dane CSV lub Excel, zweryfikuj każdy wiersz, sprawdź podgląd partii i potwierdź import transakcyjny.</value></data>
+  <data name="ManageImports" xml:space="preserve"><value>Zarządzaj importem danych</value></data>
+  <data name="DashboardImportTitle" xml:space="preserve"><value>Import danych</value></data>
+  <data name="DashboardImportSubtitle" xml:space="preserve"><value>Weryfikuj i importuj dane szkoły z plików CSV lub Excel.</value></data>
+  <data name="BackToDashboard" xml:space="preserve"><value>Powrót do panelu szkoły</value></data>
+  <data name="UploadFile" xml:space="preserve"><value>Prześlij plik</value></data>
+  <data name="ImportType" xml:space="preserve"><value>Typ importu</value></data>
+  <data name="File" xml:space="preserve"><value>Plik</value></data>
+  <data name="UploadAndValidate" xml:space="preserve"><value>Prześlij i zweryfikuj</value></data>
+  <data name="FileRules" xml:space="preserve"><value>Obsługiwane są CSV i XLSX. Maksymalnie 5 MiB, 10 000 wierszy danych i 100 kolumn.</value></data>
+  <data name="RequiredColumns" xml:space="preserve"><value>Wymagane kolumny</value></data>
+  <data name="DownloadTemplate" xml:space="preserve"><value>Pobierz szablon CSV</value></data>
+  <data name="History" xml:space="preserve"><value>Historia partii importu</value></data>
+  <data name="NoHistory" xml:space="preserve"><value>Brak partii importu.</value></data>
+  <data name="Batch" xml:space="preserve"><value>Partia importu</value></data>
+  <data name="FileName" xml:space="preserve"><value>Nazwa pliku</value></data>
+  <data name="Rows" xml:space="preserve"><value>Wiersze</value></data>
+  <data name="ValidRows" xml:space="preserve"><value>Poprawne wiersze</value></data>
+  <data name="Errors" xml:space="preserve"><value>Błędy</value></data>
+  <data name="Status" xml:space="preserve"><value>Status</value></data>
+  <data name="Created" xml:space="preserve"><value>Utworzono</value></data>
+  <data name="Completed" xml:space="preserve"><value>Zakończono</value></data>
+  <data name="Open" xml:space="preserve"><value>Otwórz</value></data>
+  <data name="Preview" xml:space="preserve"><value>Podgląd walidacji</value></data>
+  <data name="PreviewLimit" xml:space="preserve"><value>Podgląd pokazuje maksymalnie pierwszych 100 wierszy danych.</value></data>
+  <data name="ValidationErrors" xml:space="preserve"><value>Błędy walidacji</value></data>
+  <data name="NoValidationErrors" xml:space="preserve"><value>Nie znaleziono błędów walidacji.</value></data>
+  <data name="Row" xml:space="preserve"><value>Wiersz</value></data>
+  <data name="Column" xml:space="preserve"><value>Kolumna</value></data>
+  <data name="Value" xml:space="preserve"><value>Wartość</value></data>
+  <data name="ConfirmImport" xml:space="preserve"><value>Potwierdź import</value></data>
+  <data name="ConfirmHelp" xml:space="preserve"><value>Potwierdzenie ponownie sprawdza bieżące dane szkoły i zapisuje całą partię w jednej transakcji.</value></data>
+  <data name="CannotConfirm" xml:space="preserve"><value>Tej partii nie można potwierdzić.</value></data>
+  <data name="TypeStudents" xml:space="preserve"><value>Uczniowie</value></data>
+  <data name="TypeTeachers" xml:space="preserve"><value>Przypisania nauczycieli</value></data>
+  <data name="TypeClasses" xml:space="preserve"><value>Klasy</value></data>
+  <data name="TypeSubjects" xml:space="preserve"><value>Przedmioty</value></data>
+  <data name="TypeAssessmentResults" xml:space="preserve"><value>Wyniki sprawdzianów</value></data>
+  <data name="TypeCurriculumMappings" xml:space="preserve"><value>Mapowania programu nauczania</value></data>
+  <data name="StatusValidated" xml:space="preserve"><value>Zweryfikowano</value></data>
+  <data name="StatusValidationFailed" xml:space="preserve"><value>Walidacja nie powiodła się</value></data>
+  <data name="StatusCompleted" xml:space="preserve"><value>Zakończono</value></data>
+  <data name="SuccessUploaded" xml:space="preserve"><value>Plik został odczytany i walidacja została zakończona.</value></data>
+  <data name="SuccessCompleted" xml:space="preserve"><value>Partia importu została zakończona pomyślnie.</value></data>
+  <data name="TeacherImportNote" xml:space="preserve"><value>Import nauczycieli tworzy przypisania dla istniejących kont Teacher. Nie tworzy kont logowania.</value></data>
+  <data name="ResultImportNote" xml:space="preserve"><value>Wyniki sprawdzianów używają jednego wiersza dla każdego pytania.</value></data>
+  <data name="MappingImportNote" xml:space="preserve"><value>Mapowania programu wymagają sprawdzianu w statusie Szkic i aktywnego przyjętego efektu.</value></data>
+  <data name="IdempotencyNote" xml:space="preserve"><value>Ponowne przesłanie tego samego pliku przez tego samego użytkownika dla tego samego typu zwraca istniejącą partię.</value></data>
+  <data name="ErrorAccessDenied" xml:space="preserve"><value>Nie masz uprawnień do wykonania tego importu.</value></data>
+  <data name="ErrorSchoolNotActive" xml:space="preserve"><value>Import jest niedostępny, gdy szkoła nie jest aktywna.</value></data>
+  <data name="ErrorUnsupportedFile" xml:space="preserve"><value>Obsługiwane są tylko pliki CSV i XLSX.</value></data>
+  <data name="ErrorInvalidFile" xml:space="preserve"><value>Nie udało się odczytać przesłanego pliku.</value></data>
+  <data name="ErrorFileTooLarge" xml:space="preserve"><value>Przesłany plik przekracza dozwolony rozmiar.</value></data>
+  <data name="ErrorTooManyRows" xml:space="preserve"><value>Plik zawiera zbyt wiele wierszy danych.</value></data>
+  <data name="ErrorTooManyColumns" xml:space="preserve"><value>Plik zawiera zbyt wiele kolumn.</value></data>
+  <data name="ErrorDuplicateHeader" xml:space="preserve"><value>Plik zawiera zduplikowane nagłówki kolumn.</value></data>
+  <data name="ErrorEmptyFile" xml:space="preserve"><value>Przesłany plik nie zawiera danych do importu.</value></data>
+  <data name="ErrorBatchNotFound" xml:space="preserve"><value>Nie znaleziono partii importu.</value></data>
+  <data name="ErrorBatchHasErrors" xml:space="preserve"><value>Partii z błędami walidacji nie można potwierdzić.</value></data>
+  <data name="ErrorBatchStateChanged" xml:space="preserve"><value>Dane szkoły zmieniły się po walidacji. Sprawdź zaktualizowane błędy.</value></data>
+  <data name="ErrorConcurrencyConflict" xml:space="preserve"><value>Ta partia importu została zmieniona w innym żądaniu. Odśwież stronę i spróbuj ponownie.</value></data>
+  <data name="ErrorPersistence" xml:space="preserve"><value>Nie udało się zapisać importu.</value></data>
+  <data name="ValidationMissingColumn" xml:space="preserve"><value>Brakuje wymaganej kolumny.</value></data>
+  <data name="ValidationRequired" xml:space="preserve"><value>Wymagana wartość jest pusta.</value></data>
+  <data name="ValidationInvalidType" xml:space="preserve"><value>Wartość ma nieprawidłowy format lub długość.</value></data>
+  <data name="ValidationDuplicateRow" xml:space="preserve"><value>Plik zawiera zduplikowany logiczny wiersz.</value></data>
+  <data name="ValidationUnknownReference" xml:space="preserve"><value>Nie znaleziono wskazanego rekordu szkoły.</value></data>
+  <data name="ValidationAmbiguousReference" xml:space="preserve"><value>Odwołanie pasuje do więcej niż jednego dostępnego rekordu.</value></data>
+  <data name="ValidationInvalidScore" xml:space="preserve"><value>Wynik jest poza dozwolonym zakresem pytania.</value></data>
+  <data name="ValidationExistingConflict" xml:space="preserve"><value>Wiersz koliduje z istniejącym rekordem.</value></data>
+  <data name="ValidationCrossSchoolReference" xml:space="preserve"><value>Uczeń nie jest zapisany do wymaganej klasy i roku szkolnego.</value></data>
+  <data name="ValidationAccessDenied" xml:space="preserve"><value>Nauczyciel nie jest przypisany do klasy i przedmiotu tego sprawdzianu.</value></data>
+  <data name="ValidationIncompleteResult" xml:space="preserve"><value>Każde pytanie sprawdzianu musi wystąpić dokładnie jeden raz dla wyniku ucznia.</value></data>
+</root>

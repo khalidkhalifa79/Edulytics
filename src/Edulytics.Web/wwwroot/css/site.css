@@ -2563,3 +2563,192 @@ input:focus-visible {
         border-radius: .65rem;
     }
 }
+
+/* Phase 11 — Data import */
+.import-page {
+    display: grid;
+    gap: 1rem;
+    min-width: 0;
+}
+
+.import-page-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    min-width: 0;
+}
+
+.import-panel,
+.import-metrics > article,
+.import-error-item {
+    min-width: 0;
+    padding: 1rem;
+    border: 1px solid #d7dce5;
+    border-radius: 1rem;
+    background: #fff;
+}
+
+.import-message {
+    padding: .85rem 1rem;
+    border: 1px solid currentColor;
+    border-radius: .8rem;
+}
+
+.import-upload-form {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1.4fr)
+        auto;
+    gap: .8rem;
+    align-items: end;
+}
+
+.import-field {
+    display: grid;
+    gap: .35rem;
+    min-width: 0;
+}
+
+.import-field input,
+.import-field select {
+    width: 100%;
+    min-width: 0;
+}
+
+.import-schema-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(
+                min(100%, 15rem),
+                1fr
+            )
+        );
+    gap: 1rem;
+}
+
+.import-schema-card {
+    display: grid;
+    gap: .6rem;
+    align-content: start;
+}
+
+.import-schema-card code,
+.import-error-item code {
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+.import-metrics {
+    display: grid;
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+    gap: .75rem;
+}
+
+.import-metrics > article {
+    display: grid;
+    gap: .3rem;
+}
+
+.import-table-wrap {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.import-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.import-table th,
+.import-table td {
+    padding: .7rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #e0e4eb;
+    overflow-wrap: anywhere;
+}
+
+.import-error-list {
+    display: grid;
+    gap: .65rem;
+}
+
+.import-error-item {
+    display: grid;
+    gap: .3rem;
+}
+
+@media (max-width: 767px) {
+    .import-page-header {
+        display: grid;
+    }
+
+    .import-upload-form {
+        grid-template-columns: 1fr;
+    }
+
+    .import-metrics {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .import-table-wrap {
+        overflow: visible;
+    }
+
+    .import-table,
+    .import-table tbody,
+    .import-table tr,
+    .import-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .import-table thead {
+        display: none;
+    }
+
+    .import-table tr {
+        margin-bottom: .75rem;
+        padding: .35rem;
+        border: 1px solid #d7dce5;
+        border-radius: .8rem;
+    }
+
+    .import-table td {
+        display: grid;
+        grid-template-columns:
+            minmax(7rem, .8fr)
+            minmax(0, 1.2fr);
+        gap: .6rem;
+        border: 0;
+        padding: .45rem;
+    }
+
+    .import-table td::before {
+        content: attr(data-label);
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 420px) {
+    .import-panel,
+    .import-metrics > article {
+        padding: .75rem;
+    }
+
+    .import-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .import-table td {
+        grid-template-columns: 1fr;
+        gap: .15rem;
+    }
+}

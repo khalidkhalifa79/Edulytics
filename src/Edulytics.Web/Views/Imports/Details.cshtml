@@ -1,0 +1,168 @@
+@model Edulytics.Web.ViewModels.Imports.ImportDetailsViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.ImportResource> I
+
+@{
+    ViewData["Title"] = I["Batch"].Value;
+}
+
+<section class="import-page">
+    <header class="import-page-header">
+        <div>
+            <div class="user-eyebrow">
+                @I[Model.TypeResourceKey]
+            </div>
+
+            <h1>@I["Batch"]</h1>
+
+            <p class="user-page-subtitle">
+                @Model.Batch.FileName
+            </p>
+        </div>
+
+        <a class="school-button"
+           asp-action="Index">
+            @I["ImportTitle"]
+        </a>
+    </header>
+
+    @if (TempData["ImportSuccess"] is string success)
+    {
+        <div class="import-message import-message-success"
+             role="status">
+            @success
+        </div>
+    }
+
+    @if (TempData["ImportError"] is string error)
+    {
+        <div class="import-message import-message-error"
+             role="alert">
+            @error
+        </div>
+    }
+
+    <section class="import-metrics">
+        <article>
+            <span>@I["Status"]</span>
+            <strong>@I[Model.StatusResourceKey]</strong>
+        </article>
+
+        <article>
+            <span>@I["Rows"]</span>
+            <strong>@Model.Batch.RowCount</strong>
+        </article>
+
+        <article>
+            <span>@I["ValidRows"]</span>
+            <strong>@Model.Batch.ValidRowCount</strong>
+        </article>
+
+        <article>
+            <span>@I["Errors"]</span>
+            <strong>@Model.Batch.ErrorCount</strong>
+        </article>
+    </section>
+
+    <section class="import-panel">
+        <h2>@I["ValidationErrors"]</h2>
+
+        @if (Model.Batch.Errors.Count == 0)
+        {
+            <p>@I["NoValidationErrors"]</p>
+        }
+        else
+        {
+            <div class="import-error-list">
+                @foreach (var item in Model.Batch.Errors)
+                {
+                    <article class="import-error-item">
+                        <strong>
+                            @I["Row"] @item.RowNumber
+                            · @item.ColumnName
+                        </strong>
+
+                        <span>
+                            @I[$"Validation{item.Code}"]
+                        </span>
+
+                        @if (!string.IsNullOrWhiteSpace(item.RawValue))
+                        {
+                            <code>@item.RawValue</code>
+                        }
+                    </article>
+                }
+            </div>
+        }
+    </section>
+
+    <section class="import-panel">
+        <h2>@I["Preview"]</h2>
+        <p>@I["PreviewLimit"]</p>
+
+        <div class="import-table-wrap">
+            <table class="import-table">
+                <thead>
+                    <tr>
+                        <th>@I["Row"]</th>
+
+                        @foreach (var header in Model.Batch.Headers)
+                        {
+                            <th>@header</th>
+                        }
+                    </tr>
+                </thead>
+
+                <tbody>
+                @foreach (var row in Model.Batch.PreviewRows)
+                {
+                    <tr>
+                        <td data-label="@I["Row"]">
+                            @row.RowNumber
+                        </td>
+
+                        @foreach (var header in Model.Batch.Headers)
+                        {
+                            var value =
+                                row.Values.TryGetValue(
+                                    header,
+                                    out var cell)
+                                    ? cell
+                                    : string.Empty;
+
+                            <td data-label="@header">
+                                @value
+                            </td>
+                        }
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="import-panel">
+        @if (Model.Batch.CanConfirm)
+        {
+            <h2>@I["ConfirmImport"]</h2>
+            <p>@I["ConfirmHelp"]</p>
+
+            <form asp-action="Confirm"
+                  asp-route-batchId="@Model.Batch.Id"
+                  method="post">
+
+                <input type="hidden"
+                       name="rowVersion"
+                       value="@Model.RowVersionBase64" />
+
+                <button type="submit"
+                        class="school-button school-button-primary">
+                    @I["ConfirmImport"]
+                </button>
+            </form>
+        }
+        else
+        {
+            <p>@I["CannotConfirm"]</p>
+        }
+    </section>
+</section>
