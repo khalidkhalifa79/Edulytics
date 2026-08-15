@@ -1,3 +1,7 @@
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.SharedResource> Brand
+@{
+    var localizedProductName = Brand["ProductName"].Value;
+}
 @using System.Globalization
 @inject IStringLocalizer<SharedResource> SharedText
 <!DOCTYPE html>
@@ -6,7 +10,7 @@
     <meta charset="utf-8" />
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] | Edulytics</title>
+    <title>@ViewData["Title"] | @localizedProductName</title>
     <link rel="stylesheet"
           href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet"
@@ -19,8 +23,8 @@
             <a class="ed-brand"
                asp-controller="Platform"
                asp-action="Dashboard">
-                Edulytics
-            </a>
+            <partial name="_LocalizedBrand" />
+        </a>
 
             @if (User.Identity?.IsAuthenticated == true)
             {

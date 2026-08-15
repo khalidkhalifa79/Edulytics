@@ -1,3 +1,7 @@
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.SharedResource> Brand
+@{
+    var localizedProductName = Brand["ProductName"].Value;
+}
 @model LoginViewModel
 @inject IStringLocalizer<AccountResource> Text
 
@@ -12,10 +16,8 @@
         <a asp-controller="Home"
            asp-action="Index"
            class="auth-brand"
-           aria-label="Edulytics">
-            <span class="auth-brand-mark"
-                  aria-hidden="true">E</span>
-            <span>Edulytics</span>
+           aria-label="@localizedProductName">
+            <partial name="_LocalizedBrand" />
         </a>
 
         <div class="auth-heading">

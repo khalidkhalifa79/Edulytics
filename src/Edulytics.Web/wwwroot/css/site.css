@@ -1975,3 +1975,78 @@ input:focus-visible {
         flex-direction: column;
     }
 }
+
+/* ===== Localized product branding — pre Phase 09 ===== */
+
+/*
+   Larger than the first branding pass so the eagle/crown stays recognizable.
+*/
+.localized-brand-logo {
+    display: block;
+    width: min(90vw, 30rem);
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    flex-shrink: 1;
+}
+
+.auth-brand .localized-brand-logo,
+.public-brand .localized-brand-logo,
+.language-brand .localized-brand-logo {
+    width: min(94vw, 34rem);
+    max-width: 100%;
+    height: auto;
+}
+
+.app-brand .localized-brand-logo,
+.navbar-brand .localized-brand-logo {
+    width: min(64vw, 20rem);
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .localized-brand-logo {
+        width: min(90vw, 28rem);
+        max-width: 100%;
+        height: auto;
+    }
+
+    .auth-brand .localized-brand-logo,
+    .public-brand .localized-brand-logo,
+    .language-brand .localized-brand-logo {
+        width: min(92vw, 30rem);
+        max-width: 100%;
+        height: auto;
+    }
+
+    .app-brand .localized-brand-logo,
+    .navbar-brand .localized-brand-logo {
+        width: min(72vw, 18rem);
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 420px) {
+    .localized-brand-logo {
+        width: min(90vw, 22rem);
+        max-width: 100%;
+        height: auto;
+    }
+
+    .auth-brand .localized-brand-logo,
+    .public-brand .localized-brand-logo,
+    .language-brand .localized-brand-logo {
+        width: min(90vw, 22rem);
+        max-width: 100%;
+        height: auto;
+    }
+
+    .app-brand .localized-brand-logo,
+    .navbar-brand .localized-brand-logo {
+        width: min(72vw, 15rem);
+        max-width: 100%;
+        height: auto;
+    }
+}

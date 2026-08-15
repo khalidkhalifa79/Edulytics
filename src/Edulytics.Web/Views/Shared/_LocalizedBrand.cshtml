@@ -1,0 +1,5 @@
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.SharedResource> Brand
+<img class="localized-brand-logo"
+     src="@Brand["BrandLogoPath"].Value"
+     alt="@Brand["ProductName"].Value"
+     asp-append-version="true" />
