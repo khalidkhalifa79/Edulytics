@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+  <data name="CurriculumTitle" xml:space="preserve"><value>Program nauczania i efekty uczenia się</value></data>
+  <data name="CurriculumSubtitle" xml:space="preserve"><value>Uporządkuj tematy i mierzalne efekty uczenia się dla każdej klasy i przedmiotu.</value></data>
+  <data name="ManageCurriculum" xml:space="preserve"><value>Zarządzaj programem nauczania</value></data>
+  <data name="BackToDashboard" xml:space="preserve"><value>Powrót do panelu szkoły</value></data>
+  <data name="CreateTopic" xml:space="preserve"><value>Utwórz temat</value></data>
+  <data name="EditTopic" xml:space="preserve"><value>Edytuj temat</value></data>
+  <data name="CreateOutcome" xml:space="preserve"><value>Utwórz efekt uczenia się</value></data>
+  <data name="EditOutcome" xml:space="preserve"><value>Edytuj efekt uczenia się</value></data>
+  <data name="Subject" xml:space="preserve"><value>Przedmiot</value></data>
+  <data name="GradeLevel" xml:space="preserve"><value>Poziom klasy</value></data>
+  <data name="Topic" xml:space="preserve"><value>Temat</value></data>
+  <data name="Topics" xml:space="preserve"><value>Tematy</value></data>
+  <data name="Name" xml:space="preserve"><value>Nazwa</value></data>
+  <data name="Order" xml:space="preserve"><value>Kolejność</value></data>
+  <data name="OutcomeCode" xml:space="preserve"><value>Kod efektu</value></data>
+  <data name="Description" xml:space="preserve"><value>Opis</value></data>
+  <data name="Weight" xml:space="preserve"><value>Waga (%)</value></data>
+  <data name="LearningOutcomes" xml:space="preserve"><value>Efekty uczenia się</value></data>
+  <data name="SaveChanges" xml:space="preserve"><value>Zapisz zmiany</value></data>
+  <data name="Create" xml:space="preserve"><value>Utwórz</value></data>
+  <data name="Edit" xml:space="preserve"><value>Edytuj</value></data>
+  <data name="NoTopics" xml:space="preserve"><value>Nie utworzono jeszcze tematów programu nauczania.</value></data>
+  <data name="NoOutcomes" xml:space="preserve"><value>Dla tego tematu nie utworzono jeszcze efektów uczenia się.</value></data>
+  <data name="InitialFocus" xml:space="preserve"><value>Początkowy zakres produktu: matematyka w klasie 6.</value></data>
+  <data name="OutcomeMappingReady" xml:space="preserve"><value>Stabilne identyfikatory i kody efektów są gotowe do mapowania pytań w fazie 08.</value></data>
+  <data name="SuccessTopicCreated" xml:space="preserve"><value>Utworzono temat programu nauczania.</value></data>
+  <data name="SuccessTopicUpdated" xml:space="preserve"><value>Zaktualizowano temat programu nauczania.</value></data>
+  <data name="SuccessOutcomeCreated" xml:space="preserve"><value>Utworzono efekt uczenia się.</value></data>
+  <data name="SuccessOutcomeUpdated" xml:space="preserve"><value>Zaktualizowano efekt uczenia się.</value></data>
+  <data name="ErrorAccessDenied" xml:space="preserve"><value>Nie masz uprawnień do zarządzania programem nauczania.</value></data>
+  <data name="ErrorSchoolNotActive" xml:space="preserve"><value>Nie można zmieniać programu nauczania, gdy szkoła nie jest aktywna.</value></data>
+  <data name="ErrorRequired" xml:space="preserve"><value>To pole jest wymagane.</value></data>
+  <data name="ErrorInvalidName" xml:space="preserve"><value>Wartość jest nieprawidłowa lub zbyt długa.</value></data>
+  <data name="ErrorInvalidOrder" xml:space="preserve"><value>Kolejność musi być większa od zera.</value></data>
+  <data name="ErrorInvalidCode" xml:space="preserve"><value>Użyj 1–50 znaków: A-Z, 0-9, kropka, podkreślenie lub łącznik.</value></data>
+  <data name="ErrorInvalidWeight" xml:space="preserve"><value>Waga musi być większa od 0 i nie większa niż 100.</value></data>
+  <data name="ErrorSubjectNotFound" xml:space="preserve"><value>Wybrany przedmiot nie należy do tej szkoły.</value></data>
+  <data name="ErrorGradeLevelNotFound" xml:space="preserve"><value>Wybrany poziom klasy nie należy do tej szkoły.</value></data>
+  <data name="ErrorTopicNotFound" xml:space="preserve"><value>Nie znaleziono tematu programu nauczania.</value></data>
+  <data name="ErrorOutcomeNotFound" xml:space="preserve"><value>Nie znaleziono efektu uczenia się.</value></data>
+  <data name="ErrorDuplicateTopicName" xml:space="preserve"><value>Temat o tej nazwie już istnieje dla wybranego przedmiotu i klasy.</value></data>
+  <data name="ErrorDuplicateTopicOrder" xml:space="preserve"><value>Ta kolejność tematu jest już używana dla wybranego przedmiotu i klasy.</value></data>
+  <data name="ErrorDuplicateOutcomeCode" xml:space="preserve"><value>Efekt uczenia się o tym kodzie już istnieje w tej szkole.</value></data>
+  <data name="ErrorDuplicateOutcomeOrder" xml:space="preserve"><value>Ta kolejność efektu jest już używana w tym temacie.</value></data>
+  <data name="ErrorPersistence" xml:space="preserve"><value>Nie udało się zapisać zmiany. Odśwież stronę i spróbuj ponownie.</value></data>
+  <data name="SelectSubject" xml:space="preserve"><value>Wybierz przedmiot</value></data>
+  <data name="SelectGrade" xml:space="preserve"><value>Wybierz poziom klasy</value></data>
+  <data name="SelectTopic" xml:space="preserve"><value>Wybierz temat</value></data>
+  <data name="WeightHelp" xml:space="preserve"><value>Waga jest wartością procentową większą od 0 i nie większą niż 100. Nie narzucamy sumy 100, ponieważ specyfikacja nie definiuje takiej zasady.</value></data>
+</root>

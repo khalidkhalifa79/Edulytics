@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+  <data name="CurriculumTitle" xml:space="preserve"><value>Curriculum and learning outcomes</value></data>
+  <data name="CurriculumSubtitle" xml:space="preserve"><value>Structure topics and measurable learning outcomes for each grade and subject.</value></data>
+  <data name="ManageCurriculum" xml:space="preserve"><value>Manage curriculum</value></data>
+  <data name="BackToDashboard" xml:space="preserve"><value>Back to school dashboard</value></data>
+  <data name="CreateTopic" xml:space="preserve"><value>Create topic</value></data>
+  <data name="EditTopic" xml:space="preserve"><value>Edit topic</value></data>
+  <data name="CreateOutcome" xml:space="preserve"><value>Create learning outcome</value></data>
+  <data name="EditOutcome" xml:space="preserve"><value>Edit learning outcome</value></data>
+  <data name="Subject" xml:space="preserve"><value>Subject</value></data>
+  <data name="GradeLevel" xml:space="preserve"><value>Grade level</value></data>
+  <data name="Topic" xml:space="preserve"><value>Topic</value></data>
+  <data name="Topics" xml:space="preserve"><value>Topics</value></data>
+  <data name="Name" xml:space="preserve"><value>Name</value></data>
+  <data name="Order" xml:space="preserve"><value>Order</value></data>
+  <data name="OutcomeCode" xml:space="preserve"><value>Outcome code</value></data>
+  <data name="Description" xml:space="preserve"><value>Description</value></data>
+  <data name="Weight" xml:space="preserve"><value>Weight (%)</value></data>
+  <data name="LearningOutcomes" xml:space="preserve"><value>Learning outcomes</value></data>
+  <data name="SaveChanges" xml:space="preserve"><value>Save changes</value></data>
+  <data name="Create" xml:space="preserve"><value>Create</value></data>
+  <data name="Edit" xml:space="preserve"><value>Edit</value></data>
+  <data name="NoTopics" xml:space="preserve"><value>No curriculum topics have been created yet.</value></data>
+  <data name="NoOutcomes" xml:space="preserve"><value>No learning outcomes have been created for this topic yet.</value></data>
+  <data name="InitialFocus" xml:space="preserve"><value>Initial product focus: Grade 6 Mathematics.</value></data>
+  <data name="OutcomeMappingReady" xml:space="preserve"><value>Stable outcome IDs and codes are ready for Phase 08 question mapping.</value></data>
+  <data name="SuccessTopicCreated" xml:space="preserve"><value>Curriculum topic created.</value></data>
+  <data name="SuccessTopicUpdated" xml:space="preserve"><value>Curriculum topic updated.</value></data>
+  <data name="SuccessOutcomeCreated" xml:space="preserve"><value>Learning outcome created.</value></data>
+  <data name="SuccessOutcomeUpdated" xml:space="preserve"><value>Learning outcome updated.</value></data>
+  <data name="ErrorAccessDenied" xml:space="preserve"><value>You do not have permission to manage curriculum.</value></data>
+  <data name="ErrorSchoolNotActive" xml:space="preserve"><value>Curriculum cannot be changed while the school is not active.</value></data>
+  <data name="ErrorRequired" xml:space="preserve"><value>This field is required.</value></data>
+  <data name="ErrorInvalidName" xml:space="preserve"><value>The value is invalid or too long.</value></data>
+  <data name="ErrorInvalidOrder" xml:space="preserve"><value>Order must be greater than zero.</value></data>
+  <data name="ErrorInvalidCode" xml:space="preserve"><value>Use 1-50 characters: A-Z, 0-9, dot, underscore or hyphen.</value></data>
+  <data name="ErrorInvalidWeight" xml:space="preserve"><value>Weight must be greater than 0 and no more than 100.</value></data>
+  <data name="ErrorSubjectNotFound" xml:space="preserve"><value>The selected subject does not belong to this school.</value></data>
+  <data name="ErrorGradeLevelNotFound" xml:space="preserve"><value>The selected grade level does not belong to this school.</value></data>
+  <data name="ErrorTopicNotFound" xml:space="preserve"><value>The curriculum topic was not found.</value></data>
+  <data name="ErrorOutcomeNotFound" xml:space="preserve"><value>The learning outcome was not found.</value></data>
+  <data name="ErrorDuplicateTopicName" xml:space="preserve"><value>A topic with this name already exists for the selected subject and grade.</value></data>
+  <data name="ErrorDuplicateTopicOrder" xml:space="preserve"><value>This topic order is already used for the selected subject and grade.</value></data>
+  <data name="ErrorDuplicateOutcomeCode" xml:space="preserve"><value>A learning outcome with this code already exists in this school.</value></data>
+  <data name="ErrorDuplicateOutcomeOrder" xml:space="preserve"><value>This outcome order is already used inside the topic.</value></data>
+  <data name="ErrorPersistence" xml:space="preserve"><value>The change could not be saved. Reload and try again.</value></data>
+  <data name="SelectSubject" xml:space="preserve"><value>Select subject</value></data>
+  <data name="SelectGrade" xml:space="preserve"><value>Select grade level</value></data>
+  <data name="SelectTopic" xml:space="preserve"><value>Select topic</value></data>
+  <data name="WeightHelp" xml:space="preserve"><value>Weight is a percentage greater than 0 and no more than 100. No sum-to-100 rule is imposed because the specification does not define one.</value></data>
+</root>

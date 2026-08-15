@@ -1,0 +1,206 @@
+@model Edulytics.Web.ViewModels.Curriculum.CurriculumIndexViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.CurriculumResource> C
+@{
+    ViewData["Title"] = C["CurriculumTitle"];
+}
+
+<section class="curriculum-page">
+    <header class="curriculum-header">
+        <div>
+            <h1>@C["CurriculumTitle"]</h1>
+            <p>@C["CurriculumSubtitle"]</p>
+            <p class="curriculum-note">@C["InitialFocus"]</p>
+        </div>
+        <a class="school-button"
+           asp-controller="SchoolHome"
+           asp-action="Dashboard">@C["BackToDashboard"]</a>
+    </header>
+
+    @if (TempData["Success"] is string success)
+    {
+        <div class="school-alert school-alert-success" role="status">@success</div>
+    }
+
+    @if (TempData["Error"] is string error)
+    {
+        <div class="school-alert school-alert-error" role="alert">@error</div>
+    }
+
+    <section class="curriculum-create-grid">
+        <article class="curriculum-card">
+            <h2>@C["CreateTopic"]</h2>
+            <form asp-action="CreateTopic"
+                  method="post"
+                  class="curriculum-form">
+                @Html.AntiForgeryToken()
+
+                <label for="subjectId">@C["Subject"]</label>
+                <select id="subjectId" name="subjectId" required>
+                    <option value="">@C["SelectSubject"]</option>
+                    @foreach (var subject in Model.Subjects)
+                    {
+                        <option value="@subject.Id">@subject.Name (@subject.Code)</option>
+                    }
+                </select>
+
+                <label for="gradeLevelId">@C["GradeLevel"]</label>
+                <select id="gradeLevelId" name="gradeLevelId" required>
+                    <option value="">@C["SelectGrade"]</option>
+                    @foreach (var grade in Model.GradeLevels)
+                    {
+                        <option value="@grade.Id">@grade.Name</option>
+                    }
+                </select>
+
+                <label for="topicName">@C["Name"]</label>
+                <input id="topicName"
+                       name="name"
+                       maxlength="200"
+                       required />
+
+                <label for="topicOrder">@C["Order"]</label>
+                <input id="topicOrder"
+                       name="order"
+                       type="number"
+                       min="1"
+                       required />
+
+                <button type="submit"
+                        class="school-button school-button-primary">
+                    @C["Create"]
+                </button>
+            </form>
+        </article>
+
+        <article class="curriculum-card">
+            <h2>@C["CreateOutcome"]</h2>
+            <form asp-action="CreateOutcome"
+                  method="post"
+                  class="curriculum-form">
+                @Html.AntiForgeryToken()
+
+                <label for="topicId">@C["Topic"]</label>
+                <select id="topicId" name="topicId" required>
+                    <option value="">@C["SelectTopic"]</option>
+                    @foreach (var topic in Model.Topics)
+                    {
+                        <option value="@topic.Id">
+                            @Model.SubjectName(topic.SubjectId) /
+                            @Model.GradeName(topic.GradeLevelId) /
+                            @topic.Name
+                        </option>
+                    }
+                </select>
+
+                <label for="code">@C["OutcomeCode"]</label>
+                <input id="code"
+                       name="code"
+                       maxlength="50"
+                       pattern="[A-Za-z0-9._-]+"
+                       required />
+
+                <label for="description">@C["Description"]</label>
+                <textarea id="description"
+                          name="description"
+                          maxlength="1000"
+                          rows="4"
+                          required></textarea>
+
+                <label for="weight">@C["Weight"]</label>
+                <input id="weight"
+                       name="weight"
+                       type="number"
+                       min="0.001"
+                       max="100"
+                       step="0.001"
+                       required />
+                <p class="curriculum-help">@C["WeightHelp"]</p>
+
+                <label for="outcomeOrder">@C["Order"]</label>
+                <input id="outcomeOrder"
+                       name="order"
+                       type="number"
+                       min="1"
+                       required />
+
+                <button type="submit"
+                        class="school-button school-button-primary">
+                    @C["Create"]
+                </button>
+            </form>
+        </article>
+    </section>
+
+    <section class="curriculum-list">
+        <div class="curriculum-section-heading">
+            <h2>@C["Topics"]</h2>
+            <p>@C["OutcomeMappingReady"]</p>
+        </div>
+
+        @if (Model.Topics.Count == 0)
+        {
+            <div class="curriculum-empty">@C["NoTopics"]</div>
+        }
+        else
+        {
+            @foreach (var topic in Model.Topics)
+            {
+                <article class="curriculum-topic-card">
+                    <header>
+                        <div>
+                            <span class="curriculum-context">
+                                @Model.SubjectName(topic.SubjectId) ·
+                                @Model.GradeName(topic.GradeLevelId)
+                            </span>
+                            <h3>@topic.Order. @topic.Name</h3>
+                        </div>
+                        <a class="school-button"
+                           asp-action="EditTopic"
+                           asp-route-id="@topic.Id">@C["EditTopic"]</a>
+                    </header>
+
+                    <div class="curriculum-outcomes">
+                        <h4>@C["LearningOutcomes"]</h4>
+
+                        @if (topic.Outcomes.Count == 0)
+                        {
+                            <p>@C["NoOutcomes"]</p>
+                        }
+                        else
+                        {
+                            <div class="curriculum-table-wrap">
+                                <table class="curriculum-table">
+                                    <thead>
+                                        <tr>
+                                            <th>@C["Order"]</th>
+                                            <th>@C["OutcomeCode"]</th>
+                                            <th>@C["Description"]</th>
+                                            <th>@C["Weight"]</th>
+                                            <th><span class="visually-hidden">@C["Edit"]</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    @foreach (var outcome in topic.Outcomes)
+                                    {
+                                        <tr>
+                                            <td data-label="@C["Order"]">@outcome.Order</td>
+                                            <td data-label="@C["OutcomeCode"]"><strong>@outcome.Code</strong></td>
+                                            <td data-label="@C["Description"]">@outcome.Description</td>
+                                            <td data-label="@C["Weight"]">@outcome.Weight.ToString("0.###")%</td>
+                                            <td>
+                                                <a class="school-button"
+                                                   asp-action="EditOutcome"
+                                                   asp-route-id="@outcome.Id">@C["Edit"]</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                    </tbody>
+                                </table>
+                            </div>
+                        }
+                    </div>
+                </article>
+            }
+        }
+    </section>
+</section>

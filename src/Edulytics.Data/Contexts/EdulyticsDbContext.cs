@@ -22,6 +22,8 @@ public class EdulyticsDbContext : IdentityDbContext<ApplicationUser, Application
     public DbSet<StudentProfile> StudentProfiles => Set<StudentProfile>();
     public DbSet<TeacherAssignment> TeacherAssignments => Set<TeacherAssignment>();
     public DbSet<StudentEnrollment> StudentEnrollments => Set<StudentEnrollment>();
+    public DbSet<CurriculumTopic> CurriculumTopics => Set<CurriculumTopic>();
+    public DbSet<LearningOutcome> LearningOutcomes => Set<LearningOutcome>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -37,6 +39,8 @@ public class EdulyticsDbContext : IdentityDbContext<ApplicationUser, Application
         builder.ApplyConfiguration(new StudentProfileConfiguration());
         builder.ApplyConfiguration(new TeacherAssignmentConfiguration());
         builder.ApplyConfiguration(new StudentEnrollmentConfiguration());
+        builder.ApplyConfiguration(new CurriculumTopicConfiguration());
+        builder.ApplyConfiguration(new LearningOutcomeConfiguration());
 
         builder.Entity<ApplicationRole>(entity =>
         {

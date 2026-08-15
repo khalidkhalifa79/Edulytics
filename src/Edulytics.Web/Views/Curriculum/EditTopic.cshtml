@@ -1,0 +1,49 @@
+@model Edulytics.Web.ViewModels.Curriculum.CurriculumTopicEditViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.CurriculumResource> C
+@{
+    ViewData["Title"] = C["EditTopic"];
+}
+
+<section class="curriculum-page curriculum-edit-page">
+    <header class="curriculum-header">
+        <div>
+            <h1>@C["EditTopic"]</h1>
+            <p>@Model.Topic.Name</p>
+        </div>
+        <a class="school-button" asp-action="Index">@C["CurriculumTitle"]</a>
+    </header>
+
+    @if (TempData["Error"] is string error)
+    {
+        <div class="school-alert school-alert-error" role="alert">@error</div>
+    }
+
+    <article class="curriculum-card">
+        <form asp-action="EditTopic"
+              asp-route-id="@Model.Topic.Id"
+              method="post"
+              class="curriculum-form">
+            @Html.AntiForgeryToken()
+
+            <label for="name">@C["Name"]</label>
+            <input id="name"
+                   name="name"
+                   value="@Model.Topic.Name"
+                   maxlength="200"
+                   required />
+
+            <label for="order">@C["Order"]</label>
+            <input id="order"
+                   name="order"
+                   type="number"
+                   min="1"
+                   value="@Model.Topic.Order"
+                   required />
+
+            <button type="submit"
+                    class="school-button school-button-primary">
+                @C["SaveChanges"]
+            </button>
+        </form>
+    </article>
+</section>

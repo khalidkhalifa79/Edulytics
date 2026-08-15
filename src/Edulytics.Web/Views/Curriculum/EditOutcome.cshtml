@@ -1,0 +1,68 @@
+@model Edulytics.Web.ViewModels.Curriculum.LearningOutcomeEditViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.CurriculumResource> C
+@{
+    ViewData["Title"] = C["EditOutcome"];
+}
+
+<section class="curriculum-page curriculum-edit-page">
+    <header class="curriculum-header">
+        <div>
+            <h1>@C["EditOutcome"]</h1>
+            <p>@Model.Outcome.Code</p>
+        </div>
+        <a class="school-button" asp-action="Index">@C["CurriculumTitle"]</a>
+    </header>
+
+    @if (TempData["Error"] is string error)
+    {
+        <div class="school-alert school-alert-error" role="alert">@error</div>
+    }
+
+    <article class="curriculum-card">
+        <form asp-action="EditOutcome"
+              asp-route-id="@Model.Outcome.Id"
+              method="post"
+              class="curriculum-form">
+            @Html.AntiForgeryToken()
+
+            <label for="code">@C["OutcomeCode"]</label>
+            <input id="code"
+                   name="code"
+                   value="@Model.Outcome.Code"
+                   maxlength="50"
+                   pattern="[A-Za-z0-9._-]+"
+                   required />
+
+            <label for="description">@C["Description"]</label>
+            <textarea id="description"
+                      name="description"
+                      maxlength="1000"
+                      rows="5"
+                      required>@Model.Outcome.Description</textarea>
+
+            <label for="weight">@C["Weight"]</label>
+            <input id="weight"
+                   name="weight"
+                   type="number"
+                   min="0.001"
+                   max="100"
+                   step="0.001"
+                   value="@Model.Outcome.Weight.ToString(System.Globalization.CultureInfo.InvariantCulture)"
+                   required />
+            <p class="curriculum-help">@C["WeightHelp"]</p>
+
+            <label for="order">@C["Order"]</label>
+            <input id="order"
+                   name="order"
+                   type="number"
+                   min="1"
+                   value="@Model.Outcome.Order"
+                   required />
+
+            <button type="submit"
+                    class="school-button school-button-primary">
+                @C["SaveChanges"]
+            </button>
+        </form>
+    </article>
+</section>
