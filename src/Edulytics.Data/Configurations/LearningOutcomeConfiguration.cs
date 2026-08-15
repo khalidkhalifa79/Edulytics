@@ -11,6 +11,7 @@ public sealed class LearningOutcomeConfiguration
     {
         builder.ToTable("LearningOutcomes");
         builder.HasKey(x => x.Id);
+        builder.HasAlternateKey(x => new { x.SchoolId, x.Id });
 
         builder.Property(x => x.Code)
             .HasMaxLength(50)
@@ -27,8 +28,14 @@ public sealed class LearningOutcomeConfiguration
         builder.Property(x => x.Order)
             .IsRequired();
 
-        builder.HasIndex(x => new { x.SchoolId, x.Code })
-            .IsUnique();
+        builder.HasIndex(x => new
+        {
+            x.SchoolId,
+            x.FrameworkVersionId,
+            x.SubjectId,
+            x.GradeLevelId,
+            x.Code
+        }).IsUnique();
 
         builder.HasIndex(x => new
         {
@@ -44,8 +51,22 @@ public sealed class LearningOutcomeConfiguration
 
         builder.HasOne<CurriculumTopic>()
             .WithMany()
-            .HasForeignKey(x => new { x.SchoolId, x.TopicId })
-            .HasPrincipalKey(x => new { x.SchoolId, x.Id })
+            .HasForeignKey(x => new
+            {
+                x.SchoolId,
+                x.FrameworkVersionId,
+                x.SubjectId,
+                x.GradeLevelId,
+                x.TopicId
+            })
+            .HasPrincipalKey(x => new
+            {
+                x.SchoolId,
+                x.FrameworkVersionId,
+                x.SubjectId,
+                x.GradeLevelId,
+                x.Id
+            })
             .OnDelete(DeleteBehavior.Restrict);
     }
 }

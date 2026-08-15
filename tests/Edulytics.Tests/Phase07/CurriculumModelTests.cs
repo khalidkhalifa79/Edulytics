@@ -16,7 +16,7 @@ public sealed class CurriculumModelTests
     }
 
     [Fact]
-    public void TopicSubjectAndGradeForeignKeys_ContainSchoolId()
+    public void Topic_SubjectAndGradeForeignKeysRemainTenantScoped()
     {
         using var db = CreateDb();
 
@@ -47,7 +47,7 @@ public sealed class CurriculumModelTests
     }
 
     [Fact]
-    public void OutcomeTopicForeignKey_ContainsSchoolId()
+    public void OutcomeTopicForeignKey_ContainsFullScope()
     {
         using var db = CreateDb();
 
@@ -62,6 +62,9 @@ public sealed class CurriculumModelTests
                     new[]
                     {
                         nameof(LearningOutcome.SchoolId),
+                        nameof(LearningOutcome.FrameworkVersionId),
+                        nameof(LearningOutcome.SubjectId),
+                        nameof(LearningOutcome.GradeLevelId),
                         nameof(LearningOutcome.TopicId)
                     }));
     }
@@ -84,7 +87,8 @@ public sealed class CurriculumModelTests
     {
         var options =
             new DbContextOptionsBuilder<EdulyticsDbContext>()
-                .UseInMemoryDatabase($"phase07-model-{Guid.NewGuid():N}")
+                .UseInMemoryDatabase(
+                    $"phase07-model-{Guid.NewGuid():N}")
                 .Options;
 
         return new EdulyticsDbContext(options);

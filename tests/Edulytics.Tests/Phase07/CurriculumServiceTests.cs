@@ -237,6 +237,33 @@ public sealed class CurriculumServiceTests
         db.Schools.Add(school);
         db.Subjects.Add(subject);
         db.GradeLevels.Add(grade);
+
+        var framework = new CurriculumFramework
+        {
+            Id = Guid.Parse("07500000-0000-0000-0000-000000000001"),
+            OwnerSchoolId = null,
+            Code = "EDULYTICS-DEFAULT",
+            NormalizedCode = "EDULYTICS-DEFAULT",
+            Name = "Edulytics Default Curriculum",
+            IsActive = true,
+            CreatedAtUtc = DateTime.UtcNow,
+            UpdatedAtUtc = DateTime.UtcNow
+        };
+
+        var version = new CurriculumFrameworkVersion
+        {
+            Id = Guid.Parse("07500000-0000-0000-0000-000000000002"),
+            FrameworkId = framework.Id,
+            VersionCode = "V1",
+            NormalizedVersionCode = "V1",
+            Name = "Version 1",
+            IsActive = true,
+            CreatedAtUtc = DateTime.UtcNow,
+            UpdatedAtUtc = DateTime.UtcNow
+        };
+
+        db.CurriculumFrameworks.Add(framework);
+        db.CurriculumFrameworkVersions.Add(version);
         db.SaveChanges();
 
         var schools = new FakeSchoolRepository();

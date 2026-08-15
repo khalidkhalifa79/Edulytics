@@ -24,6 +24,9 @@ public class EdulyticsDbContext : IdentityDbContext<ApplicationUser, Application
     public DbSet<StudentEnrollment> StudentEnrollments => Set<StudentEnrollment>();
     public DbSet<CurriculumTopic> CurriculumTopics => Set<CurriculumTopic>();
     public DbSet<LearningOutcome> LearningOutcomes => Set<LearningOutcome>();
+    public DbSet<CurriculumFramework> CurriculumFrameworks => Set<CurriculumFramework>();
+    public DbSet<CurriculumFrameworkVersion> CurriculumFrameworkVersions => Set<CurriculumFrameworkVersion>();
+    public DbSet<SchoolCurriculumAdoption> SchoolCurriculumAdoptions => Set<SchoolCurriculumAdoption>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -41,6 +44,9 @@ public class EdulyticsDbContext : IdentityDbContext<ApplicationUser, Application
         builder.ApplyConfiguration(new StudentEnrollmentConfiguration());
         builder.ApplyConfiguration(new CurriculumTopicConfiguration());
         builder.ApplyConfiguration(new LearningOutcomeConfiguration());
+        builder.ApplyConfiguration(new CurriculumFrameworkConfiguration());
+        builder.ApplyConfiguration(new CurriculumFrameworkVersionConfiguration());
+        builder.ApplyConfiguration(new SchoolCurriculumAdoptionConfiguration());
 
         builder.Entity<ApplicationRole>(entity =>
         {

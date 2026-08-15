@@ -32,7 +32,9 @@ public sealed class CurriculumService : ICurriculumService
             Guid actorUserId,
             CancellationToken cancellationToken = default)
     {
-        var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
+        var scope = await ResolveScopeAsync(
+            actorUserId,
+            cancellationToken);
 
         if (!scope.Succeeded)
             return CurriculumQueryResult<CurriculumDashboard>
@@ -92,7 +94,9 @@ public sealed class CurriculumService : ICurriculumService
             Guid id,
             CancellationToken cancellationToken = default)
     {
-        var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
+        var scope = await ResolveScopeAsync(
+            actorUserId,
+            cancellationToken);
 
         if (!scope.Succeeded)
             return CurriculumQueryResult<CurriculumTopicItem>
@@ -131,7 +135,9 @@ public sealed class CurriculumService : ICurriculumService
             Guid id,
             CancellationToken cancellationToken = default)
     {
-        var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
+        var scope = await ResolveScopeAsync(
+            actorUserId,
+            cancellationToken);
 
         if (!scope.Succeeded)
             return CurriculumQueryResult<LearningOutcomeItem>
@@ -154,7 +160,10 @@ public sealed class CurriculumService : ICurriculumService
         CreateCurriculumTopicRequest request,
         CancellationToken cancellationToken = default)
     {
-        var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
+        var scope = await ResolveScopeAsync(
+            actorUserId,
+            cancellationToken);
+
         if (!scope.Succeeded)
             return Fail(scope.Error!.Value);
 
@@ -173,7 +182,9 @@ public sealed class CurriculumService : ICurriculumService
                 request.SubjectId,
                 cancellationToken) is null)
         {
-            return Fail("SubjectId", CurriculumErrorCode.SubjectNotFound);
+            return Fail(
+                "SubjectId",
+                CurriculumErrorCode.SubjectNotFound);
         }
 
         if (await _curriculum.GetGradeLevelAsync(
@@ -186,26 +197,40 @@ public sealed class CurriculumService : ICurriculumService
                 CurriculumErrorCode.GradeLevelNotFound);
         }
 
-        var normalizedName = name.ToUpperInvariant();
+        var frameworkVersionId =
+            await ResolveOrCreateDefaultAdoptionAsync(
+                schoolId,
+                request.GradeLevelId,
+                request.SubjectId,
+                cancellationToken);
+
+        if (!frameworkVersionId.HasValue)
+            return Fail(CurriculumErrorCode.PersistenceError);
 
         if (await _curriculum.TopicNameExistsAsync(
                 schoolId,
+                frameworkVersionId.Value,
                 request.SubjectId,
                 request.GradeLevelId,
-                normalizedName,
+                name.ToUpperInvariant(),
                 cancellationToken: cancellationToken))
         {
-            return Fail("Name", CurriculumErrorCode.DuplicateTopicName);
+            return Fail(
+                "Name",
+                CurriculumErrorCode.DuplicateTopicName);
         }
 
         if (await _curriculum.TopicOrderExistsAsync(
                 schoolId,
+                frameworkVersionId.Value,
                 request.SubjectId,
                 request.GradeLevelId,
                 request.Order,
                 cancellationToken: cancellationToken))
         {
-            return Fail("Order", CurriculumErrorCode.DuplicateTopicOrder);
+            return Fail(
+                "Order",
+                CurriculumErrorCode.DuplicateTopicOrder);
         }
 
         await _curriculum.AddTopicAsync(
@@ -213,6 +238,7 @@ public sealed class CurriculumService : ICurriculumService
             {
                 Id = Guid.NewGuid(),
                 SchoolId = schoolId,
+                FrameworkVersionId = frameworkVersionId.Value,
                 SubjectId = request.SubjectId,
                 GradeLevelId = request.GradeLevelId,
                 Name = name,
@@ -228,7 +254,10 @@ public sealed class CurriculumService : ICurriculumService
         UpdateCurriculumTopicRequest request,
         CancellationToken cancellationToken = default)
     {
-        var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
+        var scope = await ResolveScopeAsync(
+            actorUserId,
+            cancellationToken);
+
         if (!scope.Succeeded)
             return Fail(scope.Error!.Value);
 
@@ -251,24 +280,30 @@ public sealed class CurriculumService : ICurriculumService
 
         if (await _curriculum.TopicNameExistsAsync(
                 schoolId,
+                topic.FrameworkVersionId,
                 topic.SubjectId,
                 topic.GradeLevelId,
                 name.ToUpperInvariant(),
                 topic.Id,
                 cancellationToken))
         {
-            return Fail("Name", CurriculumErrorCode.DuplicateTopicName);
+            return Fail(
+                "Name",
+                CurriculumErrorCode.DuplicateTopicName);
         }
 
         if (await _curriculum.TopicOrderExistsAsync(
                 schoolId,
+                topic.FrameworkVersionId,
                 topic.SubjectId,
                 topic.GradeLevelId,
                 request.Order,
                 topic.Id,
                 cancellationToken))
         {
-            return Fail("Order", CurriculumErrorCode.DuplicateTopicOrder);
+            return Fail(
+                "Order",
+                CurriculumErrorCode.DuplicateTopicOrder);
         }
 
         topic.Name = name;
@@ -282,19 +317,24 @@ public sealed class CurriculumService : ICurriculumService
         CreateLearningOutcomeRequest request,
         CancellationToken cancellationToken = default)
     {
-        var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
+        var scope = await ResolveScopeAsync(
+            actorUserId,
+            cancellationToken);
+
         if (!scope.Succeeded)
             return Fail(scope.Error!.Value);
 
         var schoolId = scope.School!.Id;
 
-        if (await _curriculum.GetTopicAsync(
-                schoolId,
-                request.TopicId,
-                cancellationToken) is null)
-        {
-            return Fail("TopicId", CurriculumErrorCode.TopicNotFound);
-        }
+        var topic = await _curriculum.GetTopicAsync(
+            schoolId,
+            request.TopicId,
+            cancellationToken);
+
+        if (topic is null)
+            return Fail(
+                "TopicId",
+                CurriculumErrorCode.TopicNotFound);
 
         var code = NormalizeCode(request.Code);
         if (!ValidCode(code))
@@ -305,7 +345,9 @@ public sealed class CurriculumService : ICurriculumService
             return Fail("Description", CurriculumErrorCode.Required);
 
         if (description.Length > 1000)
-            return Fail("Description", CurriculumErrorCode.InvalidName);
+            return Fail(
+                "Description",
+                CurriculumErrorCode.InvalidName);
 
         if (request.Weight <= 0 || request.Weight > 100)
             return Fail("Weight", CurriculumErrorCode.InvalidWeight);
@@ -315,10 +357,15 @@ public sealed class CurriculumService : ICurriculumService
 
         if (await _curriculum.OutcomeCodeExistsAsync(
                 schoolId,
+                topic.FrameworkVersionId,
+                topic.SubjectId,
+                topic.GradeLevelId,
                 code,
                 cancellationToken: cancellationToken))
         {
-            return Fail("Code", CurriculumErrorCode.DuplicateOutcomeCode);
+            return Fail(
+                "Code",
+                CurriculumErrorCode.DuplicateOutcomeCode);
         }
 
         if (await _curriculum.OutcomeOrderExistsAsync(
@@ -327,7 +374,9 @@ public sealed class CurriculumService : ICurriculumService
                 request.Order,
                 cancellationToken: cancellationToken))
         {
-            return Fail("Order", CurriculumErrorCode.DuplicateOutcomeOrder);
+            return Fail(
+                "Order",
+                CurriculumErrorCode.DuplicateOutcomeOrder);
         }
 
         await _curriculum.AddOutcomeAsync(
@@ -335,6 +384,9 @@ public sealed class CurriculumService : ICurriculumService
             {
                 Id = Guid.NewGuid(),
                 SchoolId = schoolId,
+                FrameworkVersionId = topic.FrameworkVersionId,
+                SubjectId = topic.SubjectId,
+                GradeLevelId = topic.GradeLevelId,
                 TopicId = request.TopicId,
                 Code = code,
                 Description = description,
@@ -351,7 +403,10 @@ public sealed class CurriculumService : ICurriculumService
         UpdateLearningOutcomeRequest request,
         CancellationToken cancellationToken = default)
     {
-        var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
+        var scope = await ResolveScopeAsync(
+            actorUserId,
+            cancellationToken);
+
         if (!scope.Succeeded)
             return Fail(scope.Error!.Value);
 
@@ -373,7 +428,9 @@ public sealed class CurriculumService : ICurriculumService
             return Fail("Description", CurriculumErrorCode.Required);
 
         if (description.Length > 1000)
-            return Fail("Description", CurriculumErrorCode.InvalidName);
+            return Fail(
+                "Description",
+                CurriculumErrorCode.InvalidName);
 
         if (request.Weight <= 0 || request.Weight > 100)
             return Fail("Weight", CurriculumErrorCode.InvalidWeight);
@@ -383,11 +440,16 @@ public sealed class CurriculumService : ICurriculumService
 
         if (await _curriculum.OutcomeCodeExistsAsync(
                 schoolId,
+                outcome.FrameworkVersionId,
+                outcome.SubjectId,
+                outcome.GradeLevelId,
                 code,
                 outcome.Id,
                 cancellationToken))
         {
-            return Fail("Code", CurriculumErrorCode.DuplicateOutcomeCode);
+            return Fail(
+                "Code",
+                CurriculumErrorCode.DuplicateOutcomeCode);
         }
 
         if (await _curriculum.OutcomeOrderExistsAsync(
@@ -397,7 +459,9 @@ public sealed class CurriculumService : ICurriculumService
                 outcome.Id,
                 cancellationToken))
         {
-            return Fail("Order", CurriculumErrorCode.DuplicateOutcomeOrder);
+            return Fail(
+                "Order",
+                CurriculumErrorCode.DuplicateOutcomeOrder);
         }
 
         outcome.Code = code;
@@ -406,6 +470,50 @@ public sealed class CurriculumService : ICurriculumService
         outcome.Order = request.Order;
 
         return await PersistAsync(cancellationToken);
+    }
+
+    private async Task<Guid?> ResolveOrCreateDefaultAdoptionAsync(
+        Guid schoolId,
+        Guid gradeLevelId,
+        Guid subjectId,
+        CancellationToken cancellationToken)
+    {
+        var existing =
+            await _curriculum.GetPrimaryDefaultFrameworkVersionIdAsync(
+                schoolId,
+                gradeLevelId,
+                subjectId,
+                cancellationToken);
+
+        if (existing.HasValue)
+            return existing.Value;
+
+        var platformDefault =
+            await _curriculum.GetPlatformDefaultFrameworkVersionIdAsync(
+                cancellationToken);
+
+        if (!platformDefault.HasValue)
+            return null;
+
+        var now = DateTime.UtcNow;
+
+        await _curriculum.AddDefaultAdoptionAsync(
+            new SchoolCurriculumAdoption
+            {
+                Id = Guid.NewGuid(),
+                SchoolId = schoolId,
+                AcademicYearId = null,
+                GradeLevelId = gradeLevelId,
+                SubjectId = subjectId,
+                FrameworkVersionId = platformDefault.Value,
+                IsPrimary = true,
+                IsActive = true,
+                CreatedAtUtc = now,
+                UpdatedAtUtc = now
+            },
+            cancellationToken);
+
+        return platformDefault.Value;
     }
 
     private async Task<ScopeResult> ResolveScopeAsync(
@@ -422,15 +530,20 @@ public sealed class CurriculumService : ICurriculumService
             actor.SchoolId is null ||
             SingleRole(actor.Roles) != RoleNames.SchoolAdmin)
         {
-            return ScopeResult.Fail(CurriculumErrorCode.AccessDenied);
+            return ScopeResult.Fail(
+                CurriculumErrorCode.AccessDenied);
         }
 
         var school = await _schools.GetByIdAsync(
             actor.SchoolId.Value,
             cancellationToken);
 
-        if (school is null || school.Status != SchoolStatus.Active)
-            return ScopeResult.Fail(CurriculumErrorCode.SchoolNotActive);
+        if (school is null ||
+            school.Status != SchoolStatus.Active)
+        {
+            return ScopeResult.Fail(
+                CurriculumErrorCode.SchoolNotActive);
+        }
 
         return ScopeResult.Ok(actor, school);
     }
@@ -438,7 +551,8 @@ public sealed class CurriculumService : ICurriculumService
     private async Task<CurriculumCommandResult> PersistAsync(
         CancellationToken cancellationToken)
     {
-        var result = await _curriculum.SaveAsync(cancellationToken);
+        var result = await _curriculum.SaveAsync(
+            cancellationToken);
 
         return result.Succeeded
             ? CurriculumCommandResult.Success()
@@ -468,7 +582,8 @@ public sealed class CurriculumService : ICurriculumService
     private static string? SingleRole(IReadOnlyList<string> roles) =>
         roles.Count == 1 ? roles[0] : null;
 
-    private static LearningOutcomeItem MapOutcome(LearningOutcome x) =>
+    private static LearningOutcomeItem MapOutcome(
+        LearningOutcome x) =>
         new(
             x.Id,
             x.TopicId,
@@ -479,12 +594,16 @@ public sealed class CurriculumService : ICurriculumService
 
     private static CurriculumCommandResult Fail(
         CurriculumErrorCode error) =>
-        CurriculumCommandResult.Failure(string.Empty, error);
+        CurriculumCommandResult.Failure(
+            string.Empty,
+            error);
 
     private static CurriculumCommandResult Fail(
         string field,
         CurriculumErrorCode error) =>
-        CurriculumCommandResult.Failure(field, error);
+        CurriculumCommandResult.Failure(
+            field,
+            error);
 
     private sealed record ScopeResult(
         bool Succeeded,

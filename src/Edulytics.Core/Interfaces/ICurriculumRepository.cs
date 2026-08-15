@@ -29,8 +29,18 @@ public interface ICurriculumRepository
         Guid id,
         CancellationToken cancellationToken = default);
 
+    Task<Guid?> GetPrimaryDefaultFrameworkVersionIdAsync(
+        Guid schoolId,
+        Guid gradeLevelId,
+        Guid subjectId,
+        CancellationToken cancellationToken = default);
+
+    Task<Guid?> GetPlatformDefaultFrameworkVersionIdAsync(
+        CancellationToken cancellationToken = default);
+
     Task<bool> TopicNameExistsAsync(
         Guid schoolId,
+        Guid frameworkVersionId,
         Guid subjectId,
         Guid gradeLevelId,
         string normalizedName,
@@ -39,6 +49,7 @@ public interface ICurriculumRepository
 
     Task<bool> TopicOrderExistsAsync(
         Guid schoolId,
+        Guid frameworkVersionId,
         Guid subjectId,
         Guid gradeLevelId,
         int order,
@@ -47,6 +58,9 @@ public interface ICurriculumRepository
 
     Task<bool> OutcomeCodeExistsAsync(
         Guid schoolId,
+        Guid frameworkVersionId,
+        Guid subjectId,
+        Guid gradeLevelId,
         string normalizedCode,
         Guid? excludeId = null,
         CancellationToken cancellationToken = default);
@@ -56,6 +70,10 @@ public interface ICurriculumRepository
         Guid topicId,
         int order,
         Guid? excludeId = null,
+        CancellationToken cancellationToken = default);
+
+    Task AddDefaultAdoptionAsync(
+        SchoolCurriculumAdoption adoption,
         CancellationToken cancellationToken = default);
 
     Task AddTopicAsync(

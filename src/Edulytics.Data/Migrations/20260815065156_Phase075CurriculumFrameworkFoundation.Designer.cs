@@ -4,6 +4,7 @@ using Edulytics.Data.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Edulytics.Data.Migrations
 {
     [DbContext(typeof(EdulyticsDbContext))]
-    partial class EdulyticsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260815065156_Phase075CurriculumFrameworkFoundation")]
+    partial class Phase075CurriculumFrameworkFoundation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

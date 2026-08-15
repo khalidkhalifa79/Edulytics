@@ -11,7 +11,17 @@ public sealed class CurriculumTopicConfiguration
     {
         builder.ToTable("CurriculumTopics");
         builder.HasKey(x => x.Id);
+
         builder.HasAlternateKey(x => new { x.SchoolId, x.Id });
+
+        builder.HasAlternateKey(x => new
+        {
+            x.SchoolId,
+            x.FrameworkVersionId,
+            x.SubjectId,
+            x.GradeLevelId,
+            x.Id
+        });
 
         builder.Property(x => x.Name)
             .HasMaxLength(200)
@@ -23,6 +33,7 @@ public sealed class CurriculumTopicConfiguration
         builder.HasIndex(x => new
         {
             x.SchoolId,
+            x.FrameworkVersionId,
             x.SubjectId,
             x.GradeLevelId,
             x.Name
@@ -31,6 +42,7 @@ public sealed class CurriculumTopicConfiguration
         builder.HasIndex(x => new
         {
             x.SchoolId,
+            x.FrameworkVersionId,
             x.SubjectId,
             x.GradeLevelId,
             x.Order
@@ -39,6 +51,11 @@ public sealed class CurriculumTopicConfiguration
         builder.HasOne<School>()
             .WithMany()
             .HasForeignKey(x => x.SchoolId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        builder.HasOne<CurriculumFrameworkVersion>()
+            .WithMany()
+            .HasForeignKey(x => x.FrameworkVersionId)
             .OnDelete(DeleteBehavior.Restrict);
 
         builder.HasOne<Subject>()
