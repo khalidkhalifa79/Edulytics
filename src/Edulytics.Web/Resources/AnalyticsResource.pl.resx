@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+  <data name="AcademicYear" xml:space="preserve"><value>Rok szkolny</value></data>
+  <data name="AllClasses" xml:space="preserve"><value>Wszystkie klasy</value></data>
+  <data name="AllSubjects" xml:space="preserve"><value>Wszystkie przedmioty</value></data>
+  <data name="AllYears" xml:space="preserve"><value>Wszystkie lata szkolne</value></data>
+  <data name="AnalyticsSubtitle" xml:space="preserve"><value>Analizuj poziom opanowania, braki w efektach uczenia się, słabe tematy, postępy i uczniów wymagających wsparcia.</value></data>
+  <data name="AnalyticsTitle" xml:space="preserve"><value>Analityka i opanowanie materiału</value></data>
+  <data name="ApplyFilters" xml:space="preserve"><value>Zastosuj filtry</value></data>
+  <data name="Assessment" xml:space="preserve"><value>Ocena</value></data>
+  <data name="AtRisk" xml:space="preserve"><value>Zagrożeni</value></data>
+  <data name="AtRiskStudents" xml:space="preserve"><value>Uczniowie zagrożeni</value></data>
+  <data name="Average" xml:space="preserve"><value>Średnia</value></data>
+  <data name="BackToDashboard" xml:space="preserve"><value>Powrót do panelu szkoły</value></data>
+  <data name="Class" xml:space="preserve"><value>Klasa</value></data>
+  <data name="ClassHeatmap" xml:space="preserve"><value>Mapa opanowania klasy</value></data>
+  <data name="ClassHeatmapHelp" xml:space="preserve"><value>Poziom opanowania efektów uczenia się według klasy i przedmiotu.</value></data>
+  <data name="CriticalGaps" xml:space="preserve"><value>Krytyczne braki</value></data>
+  <data name="CriticalOutcomes" xml:space="preserve"><value>Krytyczne braki w efektach</value></data>
+  <data name="Date" xml:space="preserve"><value>Data</value></data>
+  <data name="ErrorAccessDenied" xml:space="preserve"><value>Nie masz uprawnień do przeglądania tej analityki.</value></data>
+  <data name="ErrorInvalidSourceData" xml:space="preserve"><value>Nie można obliczyć analityki, ponieważ dane oceniania są niespójne.</value></data>
+  <data name="ErrorPersistence" xml:space="preserve"><value>Nie udało się zapisać analityki. Spróbuj ponownie.</value></data>
+  <data name="ErrorRecalculateAdminOnly" xml:space="preserve"><value>Tylko administrator szkoły może przeliczyć analitykę szkoły.</value></data>
+  <data name="ErrorSchoolNotActive" xml:space="preserve"><value>Analityka jest niedostępna, ponieważ szkoła nie jest aktywna.</value></data>
+  <data name="Evidence" xml:space="preserve"><value>Liczba wyników</value></data>
+  <data name="EvidenceRule" xml:space="preserve"><value>Analityka wykorzystuje zapisane wyniki z otwartych i zamkniętych ocen. Wersje robocze są pomijane.</value></data>
+  <data name="Filters" xml:space="preserve"><value>Filtry</value></data>
+  <data name="GeneratedAt" xml:space="preserve"><value>Obliczono</value></data>
+  <data name="ManageAnalytics" xml:space="preserve"><value>Otwórz analitykę</value></data>
+  <data name="Mastery" xml:space="preserve"><value>Opanowanie</value></data>
+  <data name="MasteryCritical" xml:space="preserve"><value>Krytyczny brak</value></data>
+  <data name="MasteryDeveloping" xml:space="preserve"><value>Rozwijający się</value></data>
+  <data name="MasteryLegend" xml:space="preserve"><value>Skala opanowania</value></data>
+  <data name="MasterySecure" xml:space="preserve"><value>Pewny</value></data>
+  <data name="MasteryStrong" xml:space="preserve"><value>Bardzo dobry</value></data>
+  <data name="MasteryWeak" xml:space="preserve"><value>Słaby</value></data>
+  <data name="NoAnalytics" xml:space="preserve"><value>Brak danych analitycznych w bieżącym zakresie.</value></data>
+  <data name="NoAnalyticsHint" xml:space="preserve"><value>Wprowadź wyniki oceniania i poproś administratora szkoły o przeliczenie analityki.</value></data>
+  <data name="NoOutcomes" xml:space="preserve"><value>Brak analityki efektów uczenia się dla wybranych filtrów.</value></data>
+  <data name="NoRisks" xml:space="preserve"><value>W tym zakresie żaden uczeń nie znajduje się poniżej progu ryzyka.</value></data>
+  <data name="NoTopics" xml:space="preserve"><value>Brak analityki tematów dla wybranych filtrów.</value></data>
+  <data name="NoTrend" xml:space="preserve"><value>Brak danych o postępie dla wybranych filtrów.</value></data>
+  <data name="Outcome" xml:space="preserve"><value>Efekt uczenia się</value></data>
+  <data name="Outcomes" xml:space="preserve"><value>Efekty</value></data>
+  <data name="OverallMastery" xml:space="preserve"><value>Ogólny poziom opanowania</value></data>
+  <data name="Percent" xml:space="preserve"><value>Procent</value></data>
+  <data name="ProgressOverTime" xml:space="preserve"><value>Postęp w czasie</value></data>
+  <data name="Recalculate" xml:space="preserve"><value>Przelicz analitykę</value></data>
+  <data name="RecalculateHelp" xml:space="preserve"><value>Przeliczenie odbudowuje projekcje analityczne na podstawie wyników oceniania bez zmiany surowych punktów.</value></data>
+  <data name="RiskStudents" xml:space="preserve"><value>Uczniowie zagrożeni</value></data>
+  <data name="StaleData" xml:space="preserve"><value>Dostępne są nowsze wyniki oceniania</value></data>
+  <data name="StaleDataHelp" xml:space="preserve"><value>Wyświetlane projekcje są starsze niż najnowsze wyniki. Przelicz analitykę, aby je odświeżyć.</value></data>
+  <data name="Student" xml:space="preserve"><value>Uczeń</value></data>
+  <data name="StudentNumber" xml:space="preserve"><value>Numer ucznia</value></data>
+  <data name="Students" xml:space="preserve"><value>Uczniowie</value></data>
+  <data name="StudentsWithEvidence" xml:space="preserve"><value>Uczniowie z wynikami</value></data>
+  <data name="Subject" xml:space="preserve"><value>Przedmiot</value></data>
+  <data name="SuccessRecalculated" xml:space="preserve"><value>Projekcje analityczne zostały pomyślnie przeliczone.</value></data>
+  <data name="Topic" xml:space="preserve"><value>Temat</value></data>
+  <data name="TopicAnalysis" xml:space="preserve"><value>Analiza słabych tematów</value></data>
+  <data name="UpToDate" xml:space="preserve"><value>Analityka jest aktualna</value></data>
+  <data name="WeakOutcomes" xml:space="preserve"><value>Słabe efekty</value></data>
+  <data name="WeakTopics" xml:space="preserve"><value>Słabe tematy</value></data>
+</root>

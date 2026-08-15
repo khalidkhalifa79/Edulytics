@@ -67,6 +67,7 @@ builder.Services.AddSchoolUserManagementPhase05();
 builder.Services.AddAcademicStructurePhase06();
 builder.Services.AddCurriculumPhase07();
 builder.Services.AddAssessmentsPhase08();
+builder.Services.AddAnalyticsPhase09();
 builder.Services.AddInvitationEmailDelivery(
     builder.Configuration);
 

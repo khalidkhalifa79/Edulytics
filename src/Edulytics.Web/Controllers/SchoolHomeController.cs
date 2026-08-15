@@ -1,3 +1,4 @@
+using Edulytics.Core.Constants;
 using System.Security.Claims;
 using Edulytics.Services.Users;
 using Edulytics.Web.ViewModels.SchoolUsers;
@@ -50,7 +51,10 @@ public sealed class SchoolHomeController : Controller
                 Role =
                     context.Role,
                 CanManageUsers =
-                    context.CanManageUsers
+                    context.CanManageUsers,
+                CanViewAnalytics =
+                    context.Role == RoleNames.SchoolAdmin ||
+                    context.Role == RoleNames.Teacher
             });
     }
 }

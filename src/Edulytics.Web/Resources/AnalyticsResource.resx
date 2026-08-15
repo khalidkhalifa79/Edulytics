@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+  <data name="AcademicYear" xml:space="preserve"><value>Academic year</value></data>
+  <data name="AllClasses" xml:space="preserve"><value>All classes</value></data>
+  <data name="AllSubjects" xml:space="preserve"><value>All subjects</value></data>
+  <data name="AllYears" xml:space="preserve"><value>All academic years</value></data>
+  <data name="AnalyticsSubtitle" xml:space="preserve"><value>Explore mastery, learning-outcome gaps, topic weaknesses, progress and students who may need intervention.</value></data>
+  <data name="AnalyticsTitle" xml:space="preserve"><value>Analytics and mastery</value></data>
+  <data name="ApplyFilters" xml:space="preserve"><value>Apply filters</value></data>
+  <data name="Assessment" xml:space="preserve"><value>Assessment</value></data>
+  <data name="AtRisk" xml:space="preserve"><value>At risk</value></data>
+  <data name="AtRiskStudents" xml:space="preserve"><value>Students at risk</value></data>
+  <data name="Average" xml:space="preserve"><value>Average</value></data>
+  <data name="BackToDashboard" xml:space="preserve"><value>Back to school dashboard</value></data>
+  <data name="Class" xml:space="preserve"><value>Class</value></data>
+  <data name="ClassHeatmap" xml:space="preserve"><value>Class mastery heatmap</value></data>
+  <data name="ClassHeatmapHelp" xml:space="preserve"><value>Learning-outcome mastery by class and subject.</value></data>
+  <data name="CriticalGaps" xml:space="preserve"><value>Critical gaps</value></data>
+  <data name="CriticalOutcomes" xml:space="preserve"><value>Critical outcome gaps</value></data>
+  <data name="Date" xml:space="preserve"><value>Date</value></data>
+  <data name="ErrorAccessDenied" xml:space="preserve"><value>You do not have permission to view these analytics.</value></data>
+  <data name="ErrorInvalidSourceData" xml:space="preserve"><value>Analytics could not be calculated because assessment evidence is inconsistent.</value></data>
+  <data name="ErrorPersistence" xml:space="preserve"><value>Analytics could not be saved. Please try again.</value></data>
+  <data name="ErrorRecalculateAdminOnly" xml:space="preserve"><value>Only a School Administrator can recalculate school analytics.</value></data>
+  <data name="ErrorSchoolNotActive" xml:space="preserve"><value>Analytics are unavailable because the school is not active.</value></data>
+  <data name="Evidence" xml:space="preserve"><value>Evidence</value></data>
+  <data name="EvidenceRule" xml:space="preserve"><value>Analytics use submitted evidence from open and closed assessments. Draft assessments are excluded.</value></data>
+  <data name="Filters" xml:space="preserve"><value>Filters</value></data>
+  <data name="GeneratedAt" xml:space="preserve"><value>Calculated at</value></data>
+  <data name="ManageAnalytics" xml:space="preserve"><value>Open analytics</value></data>
+  <data name="Mastery" xml:space="preserve"><value>Mastery</value></data>
+  <data name="MasteryCritical" xml:space="preserve"><value>Critical gap</value></data>
+  <data name="MasteryDeveloping" xml:space="preserve"><value>Developing</value></data>
+  <data name="MasteryLegend" xml:space="preserve"><value>Mastery scale</value></data>
+  <data name="MasterySecure" xml:space="preserve"><value>Secure</value></data>
+  <data name="MasteryStrong" xml:space="preserve"><value>Strong</value></data>
+  <data name="MasteryWeak" xml:space="preserve"><value>Weak</value></data>
+  <data name="NoAnalytics" xml:space="preserve"><value>No analytics are available for your current scope.</value></data>
+  <data name="NoAnalyticsHint" xml:space="preserve"><value>Enter assessment results and ask a School Administrator to recalculate analytics.</value></data>
+  <data name="NoOutcomes" xml:space="preserve"><value>No learning-outcome analytics match these filters.</value></data>
+  <data name="NoRisks" xml:space="preserve"><value>No students are currently below the risk threshold in this scope.</value></data>
+  <data name="NoTopics" xml:space="preserve"><value>No topic analytics match these filters.</value></data>
+  <data name="NoTrend" xml:space="preserve"><value>No assessment trend data match these filters.</value></data>
+  <data name="Outcome" xml:space="preserve"><value>Learning outcome</value></data>
+  <data name="Outcomes" xml:space="preserve"><value>Outcomes</value></data>
+  <data name="OverallMastery" xml:space="preserve"><value>Overall mastery</value></data>
+  <data name="Percent" xml:space="preserve"><value>Percent</value></data>
+  <data name="ProgressOverTime" xml:space="preserve"><value>Progress over time</value></data>
+  <data name="Recalculate" xml:space="preserve"><value>Recalculate analytics</value></data>
+  <data name="RecalculateHelp" xml:space="preserve"><value>Recalculation rebuilds calculated projections from assessment evidence without changing raw scores.</value></data>
+  <data name="RiskStudents" xml:space="preserve"><value>Students at risk</value></data>
+  <data name="StaleData" xml:space="preserve"><value>Newer assessment evidence is available</value></data>
+  <data name="StaleDataHelp" xml:space="preserve"><value>The displayed projections are older than the latest entered results. Recalculate to refresh them.</value></data>
+  <data name="Student" xml:space="preserve"><value>Student</value></data>
+  <data name="StudentNumber" xml:space="preserve"><value>Student number</value></data>
+  <data name="Students" xml:space="preserve"><value>Students</value></data>
+  <data name="StudentsWithEvidence" xml:space="preserve"><value>Students with evidence</value></data>
+  <data name="Subject" xml:space="preserve"><value>Subject</value></data>
+  <data name="SuccessRecalculated" xml:space="preserve"><value>Analytics projections were recalculated successfully.</value></data>
+  <data name="Topic" xml:space="preserve"><value>Topic</value></data>
+  <data name="TopicAnalysis" xml:space="preserve"><value>Topic weakness analysis</value></data>
+  <data name="UpToDate" xml:space="preserve"><value>Analytics are up to date</value></data>
+  <data name="WeakOutcomes" xml:space="preserve"><value>Weak outcomes</value></data>
+  <data name="WeakTopics" xml:space="preserve"><value>Weak topics</value></data>
+</root>

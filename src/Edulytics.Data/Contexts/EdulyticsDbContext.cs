@@ -29,6 +29,11 @@ public class EdulyticsDbContext : IdentityDbContext<ApplicationUser, Application
     public DbSet<QuestionLearningOutcome> QuestionLearningOutcomes => Set<QuestionLearningOutcome>();
     public DbSet<AssessmentResult> AssessmentResults => Set<AssessmentResult>();
     public DbSet<StudentAnswer> StudentAnswers => Set<StudentAnswer>();
+    public DbSet<StudentOutcomeMastery> StudentOutcomeMasteries => Set<StudentOutcomeMastery>();
+    public DbSet<ClassOutcomeSummary> ClassOutcomeSummaries => Set<ClassOutcomeSummary>();
+    public DbSet<ClassTopicSummary> ClassTopicSummaries => Set<ClassTopicSummary>();
+    public DbSet<ClassAssessmentTrend> ClassAssessmentTrends => Set<ClassAssessmentTrend>();
+    public DbSet<SchoolAnalyticsSnapshot> SchoolAnalyticsSnapshots => Set<SchoolAnalyticsSnapshot>();
     public DbSet<CurriculumFramework> CurriculumFrameworks => Set<CurriculumFramework>();
     public DbSet<CurriculumFrameworkVersion> CurriculumFrameworkVersions => Set<CurriculumFrameworkVersion>();
     public DbSet<SchoolCurriculumAdoption> SchoolCurriculumAdoptions => Set<SchoolCurriculumAdoption>();
@@ -54,6 +59,11 @@ public class EdulyticsDbContext : IdentityDbContext<ApplicationUser, Application
         builder.ApplyConfiguration(new QuestionLearningOutcomeConfiguration());
         builder.ApplyConfiguration(new AssessmentResultConfiguration());
         builder.ApplyConfiguration(new StudentAnswerConfiguration());
+        builder.ApplyConfiguration(new StudentOutcomeMasteryConfiguration());
+        builder.ApplyConfiguration(new ClassOutcomeSummaryConfiguration());
+        builder.ApplyConfiguration(new ClassTopicSummaryConfiguration());
+        builder.ApplyConfiguration(new ClassAssessmentTrendConfiguration());
+        builder.ApplyConfiguration(new SchoolAnalyticsSnapshotConfiguration());
         builder.ApplyConfiguration(new CurriculumFrameworkConfiguration());
         builder.ApplyConfiguration(new CurriculumFrameworkVersionConfiguration());
         builder.ApplyConfiguration(new SchoolCurriculumAdoptionConfiguration());

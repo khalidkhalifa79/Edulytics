@@ -54,4 +54,5 @@ public sealed class SchoolHomeViewModel
     public required string SchoolName { get; init; }
     public required string Role { get; init; }
     public bool CanManageUsers { get; init; }
+    public bool CanViewAnalytics { get; init; }
 }
