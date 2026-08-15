@@ -1,0 +1,132 @@
+@model Edulytics.Web.ViewModels.Assessments.AssessmentResultsViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.AssessmentResource> A
+@{
+    ViewData["Title"] = A["Results"];
+    var assessment = Model.Workspace.Assessment;
+    var editable = assessment.Status == Edulytics.Core.Enums.AssessmentStatus.Open;
+}
+<section class="assessment-page">
+    <header class="assessment-header">
+        <div>
+            <h1>@A["Results"] — @assessment.Title</h1>
+            <p>
+                @A["Status"]: @A[Model.StatusKey]
+                · @A["MaxScore"]: @assessment.MaxScore.ToString("0.##")
+            </p>
+        </div>
+        <a class="school-button"
+           asp-action="Details"
+           asp-route-id="@assessment.Id">@A["Details"]</a>
+    </header>
+
+    @if (TempData["Success"] is string success)
+    {
+        <div class="school-alert school-alert-success" role="status">@success</div>
+    }
+    @if (TempData["Error"] is string error)
+    {
+        <div class="school-alert school-alert-error" role="alert">@error</div>
+    }
+
+    @if (!editable)
+    {
+        <div class="assessment-info">@A["ResultsReadOnly"]</div>
+    }
+
+    @if (Model.Workspace.Students.Count == 0)
+    {
+        <div class="assessment-empty">@A["NoStudents"]</div>
+    }
+    else
+    {
+        <section class="assessment-results-grid">
+            @foreach (var student in Model.Workspace.Students)
+            {
+                <article class="assessment-result-card"
+                         data-student-id="@student.StudentProfileId">
+                    <header>
+                        <div>
+                            <h2>@student.DisplayName</h2>
+                            <p>@A["StudentNumber"]: @student.StudentNumber</p>
+                        </div>
+                        @if (student.ResultId.HasValue)
+                        {
+                            <div class="assessment-result-total">
+                                <strong>
+                                    @student.Score.ToString("0.##")
+                                    / @assessment.MaxScore.ToString("0.##")
+                                </strong>
+                                <span>@student.Percentage.ToString("0.##")%</span>
+                            </div>
+                        }
+                    </header>
+
+                    @if (editable)
+                    {
+                        <form asp-action="SaveResult"
+                              asp-route-id="@assessment.Id"
+                              asp-route-studentProfileId="@student.StudentProfileId"
+                              method="post"
+                              class="assessment-result-form">
+                            @Html.AntiForgeryToken()
+
+                            @if (student.RowVersion is not null)
+                            {
+                                <input type="hidden"
+                                       name="rowVersion"
+                                       value="@Convert.ToBase64String(student.RowVersion)" />
+                            }
+
+                            @foreach (var question in Model.Workspace.Questions)
+                            {
+                                var current = student.QuestionScores.TryGetValue(
+                                    question.Id,
+                                    out var value) ? value : 0m;
+
+                                <div class="assessment-score-row">
+                                    <input type="hidden"
+                                           name="questionIds"
+                                           value="@question.Id" />
+                                    <label for="score-@student.StudentProfileId-@question.Id">
+                                        @question.Order. @question.Prompt
+                                        <span>/ @question.MaxScore.ToString("0.##")</span>
+                                    </label>
+                                    <input id="score-@student.StudentProfileId-@question.Id"
+                                           name="scores"
+                                           type="number"
+                                           min="0"
+                                           max="@question.MaxScore.ToString(System.Globalization.CultureInfo.InvariantCulture)"
+                                           step="0.01"
+                                           value="@current.ToString(System.Globalization.CultureInfo.InvariantCulture)"
+                                           aria-label="@A["QuestionScoreLabel", question.Order]"
+                                           required />
+                                </div>
+                            }
+
+                            <button type="submit"
+                                    class="school-button school-button-primary">@A["SaveResult"]</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <div class="assessment-readonly-scores">
+                            @foreach (var question in Model.Workspace.Questions)
+                            {
+                                var current = student.QuestionScores.TryGetValue(
+                                    question.Id,
+                                    out var value) ? value : 0m;
+                                <div>
+                                    <span>@question.Order. @question.Prompt</span>
+                                    <strong>
+                                        @current.ToString("0.##")
+                                        / @question.MaxScore.ToString("0.##")
+                                    </strong>
+                                </div>
+                            }
+                        </div>
+                    }
+                </article>
+            }
+        </section>
+    }
+</section>

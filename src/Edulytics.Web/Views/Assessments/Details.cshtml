@@ -1,0 +1,209 @@
+@model Edulytics.Web.ViewModels.Assessments.AssessmentDetailsViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.AssessmentResource> A
+@{
+    ViewData["Title"] = A["Assessment"];
+    var assessment = Model.Details.Assessment;
+    var rowVersion = Convert.ToBase64String(assessment.RowVersion);
+}
+
+<section class="assessment-page">
+    <header class="assessment-header">
+        <div>
+            <span class="assessment-context">
+                @Model.SubjectName · @Model.ClassName · @Model.TermName
+            </span>
+            <h1>@assessment.Title</h1>
+            <p>
+                @assessment.AssessmentDate.ToString("yyyy-MM-dd")
+                · @A["MaxScore"]: @assessment.MaxScore.ToString("0.##")
+                · @A["Status"]: @A[Model.StatusKey]
+            </p>
+        </div>
+
+        <div class="assessment-actions">
+            <a class="school-button" asp-action="Index">@A["Assessments"]</a>
+            @if (assessment.Status == Edulytics.Core.Enums.AssessmentStatus.Draft)
+            {
+                <a class="school-button"
+                   asp-action="Edit"
+                   asp-route-id="@assessment.Id">@A["EditAssessment"]</a>
+            }
+            @if (assessment.Status != Edulytics.Core.Enums.AssessmentStatus.Draft)
+            {
+                <a class="school-button school-button-primary"
+                   asp-action="Results"
+                   asp-route-id="@assessment.Id">@A["Results"]</a>
+            }
+        </div>
+    </header>
+
+    @if (TempData["Success"] is string success)
+    {
+        <div class="school-alert school-alert-success" role="status">@success</div>
+    }
+    @if (TempData["Error"] is string error)
+    {
+        <div class="school-alert school-alert-error" role="alert">@error</div>
+    }
+
+    @if (assessment.Status == Edulytics.Core.Enums.AssessmentStatus.Draft)
+    {
+        <div class="assessment-info">@A["DraftHelp"]</div>
+        <div class="assessment-info">@A["DefinitionRule"]</div>
+
+        <section class="assessment-card">
+            <h2>@A["CreateQuestion"]</h2>
+            <form asp-action="CreateQuestion"
+                  asp-route-id="@assessment.Id"
+                  method="post"
+                  class="assessment-form assessment-question-create-form">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="rowVersion" value="@rowVersion" />
+
+                <label for="prompt">@A["QuestionPrompt"]</label>
+                <textarea id="prompt" name="prompt"
+                          maxlength="1000" rows="3" required></textarea>
+
+                <label for="questionMaxScore">@A["QuestionMaxScore"]</label>
+                <input id="questionMaxScore" name="maxScore"
+                       type="number" min="0.01" max="10000"
+                       step="0.01" required />
+
+                <label for="order">@A["Order"]</label>
+                <input id="order" name="order"
+                       type="number" min="1" required />
+
+                <button type="submit"
+                        class="school-button school-button-primary">@A["Create"]</button>
+            </form>
+        </section>
+    }
+    else if (assessment.Status == Edulytics.Core.Enums.AssessmentStatus.Open)
+    {
+        <div class="assessment-info">@A["OpenHelp"]</div>
+    }
+
+    <section class="assessment-question-list">
+        <h2>@A["Questions"]</h2>
+
+        @if (Model.Details.Questions.Count == 0)
+        {
+            <div class="assessment-empty">@A["NoQuestions"]</div>
+        }
+        else
+        {
+            @foreach (var question in Model.Details.Questions)
+            {
+                <article class="assessment-question-card">
+                    <header>
+                        <div>
+                            <h3>@question.Order. @question.Prompt</h3>
+                            <p>@A["QuestionMaxScore"]: @question.MaxScore.ToString("0.##")</p>
+                        </div>
+                        @if (assessment.Status == Edulytics.Core.Enums.AssessmentStatus.Draft)
+                        {
+                            <a class="school-button"
+                               asp-action="EditQuestion"
+                               asp-route-questionId="@question.Id"
+                               asp-route-assessmentId="@assessment.Id">@A["Edit"]</a>
+                        }
+                    </header>
+
+                    <div class="assessment-mappings">
+                        <h4>@A["OutcomeMappings"]</h4>
+
+                        @if (question.OutcomeIds.Count == 0)
+                        {
+                            <p>@A["NoMappings"]</p>
+                        }
+                        else
+                        {
+                            <div class="assessment-mapping-tags">
+                                @foreach (var outcomeId in question.OutcomeIds)
+                                {
+                                    var outcome = Model.Outcome(outcomeId);
+                                    if (outcome is not null)
+                                    {
+                                        <div class="assessment-mapping-tag">
+                                            <span>
+                                                <strong>@outcome.Code</strong>
+                                                — @outcome.Description
+                                            </span>
+                                            @if (assessment.Status == Edulytics.Core.Enums.AssessmentStatus.Draft)
+                                            {
+                                                <form asp-action="UnmapOutcome"
+                                                      asp-route-questionId="@question.Id"
+                                                      asp-route-outcomeId="@outcome.Id"
+                                                      method="post">
+                                                    @Html.AntiForgeryToken()
+                                                    <input type="hidden"
+                                                           name="assessmentId"
+                                                           value="@assessment.Id" />
+                                                    <input type="hidden"
+                                                           name="rowVersion"
+                                                           value="@rowVersion" />
+                                                    <button type="submit"
+                                                            class="assessment-link-button">@A["RemoveMapping"]</button>
+                                                </form>
+                                            }
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        }
+
+                        @if (assessment.Status == Edulytics.Core.Enums.AssessmentStatus.Draft &&
+                             Model.Details.EligibleOutcomes.Count > 0)
+                        {
+                            <form asp-action="MapOutcome"
+                                  asp-route-questionId="@question.Id"
+                                  method="post"
+                                  class="assessment-inline-form">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="assessmentId" value="@assessment.Id" />
+                                <input type="hidden" name="rowVersion" value="@rowVersion" />
+
+                                <select name="outcomeId" required>
+                                    <option value="">@A["SelectOutcome"]</option>
+                                    @foreach (var outcome in Model.Details.EligibleOutcomes)
+                                    {
+                                        <option value="@outcome.Id">
+                                            @outcome.Code — @outcome.Description
+                                        </option>
+                                    }
+                                </select>
+
+                                <button type="submit" class="school-button">@A["MapOutcome"]</button>
+                            </form>
+                        }
+                        else if (assessment.Status == Edulytics.Core.Enums.AssessmentStatus.Draft &&
+                                 Model.Details.EligibleOutcomes.Count == 0)
+                        {
+                            <p>@A["NoEligibleOutcomes"]</p>
+                        }
+                    </div>
+                </article>
+            }
+        }
+    </section>
+
+    <section class="assessment-lifecycle">
+        @if (assessment.Status == Edulytics.Core.Enums.AssessmentStatus.Draft)
+        {
+            <form asp-action="Open" asp-route-id="@assessment.Id" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="rowVersion" value="@rowVersion" />
+                <button type="submit"
+                        class="school-button school-button-primary">@A["OpenAssessment"]</button>
+            </form>
+        }
+        else if (assessment.Status == Edulytics.Core.Enums.AssessmentStatus.Open)
+        {
+            <form asp-action="Close" asp-route-id="@assessment.Id" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="rowVersion" value="@rowVersion" />
+                <button type="submit" class="school-button">@A["CloseAssessment"]</button>
+            </form>
+        }
+    </section>
+</section>

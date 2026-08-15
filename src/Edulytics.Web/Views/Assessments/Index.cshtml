@@ -1,0 +1,126 @@
+@model Edulytics.Web.ViewModels.Assessments.AssessmentIndexViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.AssessmentResource> A
+@{
+    ViewData["Title"] = A["AssessmentTitle"];
+}
+
+<section class="assessment-page">
+    <header class="assessment-header">
+        <div>
+            <h1>@A["AssessmentTitle"]</h1>
+            <p>@A["AssessmentSubtitle"]</p>
+        </div>
+        <a class="school-button"
+           asp-controller="SchoolHome"
+           asp-action="Dashboard">@A["BackToDashboard"]</a>
+    </header>
+
+    @if (TempData["Success"] is string success)
+    {
+        <div class="school-alert school-alert-success" role="status">@success</div>
+    }
+    @if (TempData["Error"] is string error)
+    {
+        <div class="school-alert school-alert-error" role="alert">@error</div>
+    }
+
+    <section class="assessment-card">
+        <h2>@A["CreateAssessment"]</h2>
+        <form asp-action="Create" method="post"
+              class="assessment-form assessment-create-form">
+            @Html.AntiForgeryToken()
+
+            <label for="classGroupId">@A["ClassGroup"]</label>
+            <select id="classGroupId" name="classGroupId" required>
+                <option value="">@A["SelectClass"]</option>
+                @foreach (var item in Model.Workspace.ClassGroups)
+                {
+                    <option value="@item.Id">@item.Name (@item.Code)</option>
+                }
+            </select>
+
+            <label for="subjectId">@A["Subject"]</label>
+            <select id="subjectId" name="subjectId" required>
+                <option value="">@A["SelectSubject"]</option>
+                @foreach (var item in Model.Workspace.Subjects)
+                {
+                    <option value="@item.Id">@item.Name (@item.Code)</option>
+                }
+            </select>
+
+            <label for="termId">@A["Term"]</label>
+            <select id="termId" name="termId" required>
+                <option value="">@A["SelectTerm"]</option>
+                @foreach (var item in Model.Workspace.Terms)
+                {
+                    <option value="@item.Id">@item.Name</option>
+                }
+            </select>
+
+            <label for="title">@A["Title"]</label>
+            <input id="title" name="title" maxlength="200" required />
+
+            <label for="assessmentDate">@A["AssessmentDate"]</label>
+            <input id="assessmentDate" name="assessmentDate"
+                   type="date" required />
+
+            <label for="maxScore">@A["MaxScore"]</label>
+            <input id="maxScore" name="maxScore"
+                   type="number" min="0.01" max="10000"
+                   step="0.01" required />
+
+            <button type="submit"
+                    class="school-button school-button-primary">
+                @A["Create"]
+            </button>
+        </form>
+    </section>
+
+    <section class="assessment-list">
+        <h2>@A["Assessments"]</h2>
+
+        @if (Model.Workspace.Assessments.Count == 0)
+        {
+            <div class="assessment-empty">@A["NoAssessments"]</div>
+        }
+        else
+        {
+            @foreach (var item in Model.Workspace.Assessments)
+            {
+                var statusKey = item.Status switch
+                {
+                    Edulytics.Core.Enums.AssessmentStatus.Draft => "StatusDraft",
+                    Edulytics.Core.Enums.AssessmentStatus.Open => "StatusOpen",
+                    _ => "StatusClosed"
+                };
+
+                <article class="assessment-list-card">
+                    <div>
+                        <span class="assessment-context">
+                            @Model.SubjectName(item.SubjectId) ·
+                            @Model.ClassName(item.ClassGroupId) ·
+                            @Model.TermName(item.TermId)
+                        </span>
+                        <h3>@item.Title</h3>
+                        <p>
+                            @item.AssessmentDate.ToString("yyyy-MM-dd")
+                            · @A["MaxScore"]: @item.MaxScore.ToString("0.##")
+                            · @A[statusKey]
+                        </p>
+                    </div>
+                    <div class="assessment-actions">
+                        <a class="school-button"
+                           asp-action="Details"
+                           asp-route-id="@item.Id">@A["Details"]</a>
+                        @if (item.Status != Edulytics.Core.Enums.AssessmentStatus.Draft)
+                        {
+                            <a class="school-button school-button-primary"
+                               asp-action="Results"
+                               asp-route-id="@item.Id">@A["Results"]</a>
+                        }
+                    </div>
+                </article>
+            }
+        }
+    </section>
+</section>

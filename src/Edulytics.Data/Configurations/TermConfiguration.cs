@@ -10,6 +10,7 @@ public sealed class TermConfiguration : IEntityTypeConfiguration<Term>
     {
         builder.ToTable("Terms");
         builder.HasKey(x => x.Id);
+        builder.HasAlternateKey(x => new { x.SchoolId, x.AcademicYearId, x.Id });
 
         builder.Property(x => x.Name).HasMaxLength(100).IsRequired();
         builder.Property(x => x.StartsOn).HasColumnType("date");

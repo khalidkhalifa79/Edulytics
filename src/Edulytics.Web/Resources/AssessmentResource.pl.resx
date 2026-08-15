@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+  <data name="AssessmentTitle" xml:space="preserve"><value>Sprawdziany i wyniki</value></data>
+  <data name="AssessmentSubtitle" xml:space="preserve"><value>Definiuj sprawdziany, mapuj pytania do efektów uczenia się i wprowadzaj zweryfikowane wyniki uczniów.</value></data>
+  <data name="ManageAssessments" xml:space="preserve"><value>Zarządzaj sprawdzianami</value></data>
+  <data name="BackToDashboard" xml:space="preserve"><value>Powrót do panelu szkoły</value></data>
+  <data name="CreateAssessment" xml:space="preserve"><value>Utwórz sprawdzian</value></data>
+  <data name="Assessment" xml:space="preserve"><value>Sprawdzian</value></data>
+  <data name="Assessments" xml:space="preserve"><value>Sprawdziany</value></data>
+  <data name="Title" xml:space="preserve"><value>Tytuł</value></data>
+  <data name="ClassGroup" xml:space="preserve"><value>Klasa</value></data>
+  <data name="Subject" xml:space="preserve"><value>Przedmiot</value></data>
+  <data name="Term" xml:space="preserve"><value>Semestr</value></data>
+  <data name="AssessmentDate" xml:space="preserve"><value>Data sprawdzianu</value></data>
+  <data name="MaxScore" xml:space="preserve"><value>Maksymalna liczba punktów</value></data>
+  <data name="Status" xml:space="preserve"><value>Status</value></data>
+  <data name="StatusDraft" xml:space="preserve"><value>Szkic</value></data>
+  <data name="StatusOpen" xml:space="preserve"><value>Otwarty</value></data>
+  <data name="StatusClosed" xml:space="preserve"><value>Zamknięty</value></data>
+  <data name="Create" xml:space="preserve"><value>Utwórz</value></data>
+  <data name="Edit" xml:space="preserve"><value>Edytuj</value></data>
+  <data name="EditAssessment" xml:space="preserve"><value>Edytuj sprawdzian</value></data>
+  <data name="SaveChanges" xml:space="preserve"><value>Zapisz zmiany</value></data>
+  <data name="Details" xml:space="preserve"><value>Szczegóły</value></data>
+  <data name="Questions" xml:space="preserve"><value>Pytania</value></data>
+  <data name="CreateQuestion" xml:space="preserve"><value>Utwórz pytanie</value></data>
+  <data name="EditQuestion" xml:space="preserve"><value>Edytuj pytanie</value></data>
+  <data name="QuestionPrompt" xml:space="preserve"><value>Pytanie</value></data>
+  <data name="QuestionMaxScore" xml:space="preserve"><value>Maksymalna liczba punktów za pytanie</value></data>
+  <data name="Order" xml:space="preserve"><value>Kolejność</value></data>
+  <data name="OutcomeMappings" xml:space="preserve"><value>Mapowanie efektów uczenia się</value></data>
+  <data name="MapOutcome" xml:space="preserve"><value>Mapuj efekt</value></data>
+  <data name="RemoveMapping" xml:space="preserve"><value>Usuń</value></data>
+  <data name="OpenAssessment" xml:space="preserve"><value>Otwórz wprowadzanie wyników</value></data>
+  <data name="CloseAssessment" xml:space="preserve"><value>Zamknij sprawdzian</value></data>
+  <data name="Results" xml:space="preserve"><value>Wyniki</value></data>
+  <data name="StudentNumber" xml:space="preserve"><value>Numer ucznia</value></data>
+  <data name="SaveResult" xml:space="preserve"><value>Zapisz wynik</value></data>
+  <data name="NoAssessments" xml:space="preserve"><value>Nie ma jeszcze dostępnych sprawdzianów.</value></data>
+  <data name="NoQuestions" xml:space="preserve"><value>Nie utworzono jeszcze pytań.</value></data>
+  <data name="NoMappings" xml:space="preserve"><value>Do tego pytania nie zmapowano efektów uczenia się.</value></data>
+  <data name="NoEligibleOutcomes" xml:space="preserve"><value>Brak pasujących efektów uczenia się dla tego przedmiotu i poziomu klasy.</value></data>
+  <data name="NoMappedOutcomes" xml:space="preserve"><value>Do tego pytania nie zmapowano jeszcze żadnych efektów uczenia się.</value></data>
+  <data name="NoStudents" xml:space="preserve"><value>Nie znaleziono aktywnych uczniów zapisanych do tej klasy.</value></data>
+  <data name="SelectClass" xml:space="preserve"><value>Wybierz klasę</value></data>
+  <data name="SelectSubject" xml:space="preserve"><value>Wybierz przedmiot</value></data>
+  <data name="SelectTerm" xml:space="preserve"><value>Wybierz semestr</value></data>
+  <data name="SelectOutcome" xml:space="preserve"><value>Wybierz efekt uczenia się</value></data>
+  <data name="DefinitionRule" xml:space="preserve"><value>Sprawdzian można otworzyć tylko wtedy, gdy suma maksymalnych punktów pytań jest równa maksymalnej liczbie punktów sprawdzianu, a każde pytanie ma co najmniej jedno mapowanie efektu.</value></data>
+  <data name="ResultsReadOnly" xml:space="preserve"><value>Sprawdzian jest zamknięty. Wyniki są tylko do odczytu.</value></data>
+  <data name="SuccessAssessmentCreated" xml:space="preserve"><value>Utworzono sprawdzian.</value></data>
+  <data name="SuccessAssessmentUpdated" xml:space="preserve"><value>Zaktualizowano sprawdzian.</value></data>
+  <data name="SuccessQuestionCreated" xml:space="preserve"><value>Utworzono pytanie.</value></data>
+  <data name="SuccessQuestionUpdated" xml:space="preserve"><value>Zaktualizowano pytanie.</value></data>
+  <data name="SuccessOutcomeMapped" xml:space="preserve"><value>Zmapowano efekt uczenia się.</value></data>
+  <data name="SuccessOutcomeUnmapped" xml:space="preserve"><value>Usunięto mapowanie efektu uczenia się.</value></data>
+  <data name="SuccessAssessmentOpened" xml:space="preserve"><value>Otwarto sprawdzian do wprowadzania wyników.</value></data>
+  <data name="SuccessAssessmentClosed" xml:space="preserve"><value>Zamknięto sprawdzian.</value></data>
+  <data name="SuccessResultSaved" xml:space="preserve"><value>Zapisano wynik ucznia.</value></data>
+  <data name="ErrorAccessDenied" xml:space="preserve"><value>Nie masz uprawnień do zarządzania tym sprawdzianem.</value></data>
+  <data name="ErrorSchoolNotActive" xml:space="preserve"><value>Nie można zmieniać sprawdzianów, gdy szkoła nie jest aktywna.</value></data>
+  <data name="ErrorRequired" xml:space="preserve"><value>To pole jest wymagane.</value></data>
+  <data name="ErrorInvalidText" xml:space="preserve"><value>Tytuł lub treść pytania jest nieprawidłowa albo zbyt długa.</value></data>
+  <data name="ErrorInvalidDate" xml:space="preserve"><value>Data sprawdzianu musi mieścić się w wybranym semestrze.</value></data>
+  <data name="ErrorInvalidMaxScore" xml:space="preserve"><value>Maksymalna liczba punktów musi być większa od 0.</value></data>
+  <data name="ErrorInvalidQuestionScore" xml:space="preserve"><value>Liczba punktów za pytanie wykracza poza dozwolony zakres.</value></data>
+  <data name="ErrorInvalidOrder" xml:space="preserve"><value>Kolejność musi być większa od zera.</value></data>
+  <data name="ErrorTermNotFound" xml:space="preserve"><value>Wybrany semestr jest nieprawidłowy dla tej klasy.</value></data>
+  <data name="ErrorClassGroupNotFound" xml:space="preserve"><value>Nie znaleziono wybranej klasy.</value></data>
+  <data name="ErrorSubjectNotFound" xml:space="preserve"><value>Nie znaleziono wybranego przedmiotu.</value></data>
+  <data name="ErrorAssessmentNotFound" xml:space="preserve"><value>Nie znaleziono sprawdzianu.</value></data>
+  <data name="ErrorQuestionNotFound" xml:space="preserve"><value>Nie znaleziono pytania sprawdzianu.</value></data>
+  <data name="ErrorOutcomeNotFound" xml:space="preserve"><value>Nie znaleziono efektu uczenia się.</value></data>
+  <data name="ErrorStudentNotFound" xml:space="preserve"><value>Nie znaleziono ucznia.</value></data>
+  <data name="ErrorStudentNotEnrolled" xml:space="preserve"><value>Uczeń nie jest zapisany do klasy tego sprawdzianu.</value></data>
+  <data name="ErrorTeacherNotAssigned" xml:space="preserve"><value>Nauczyciel nie jest przypisany do wybranej klasy i przedmiotu.</value></data>
+  <data name="ErrorDuplicateAssessment" xml:space="preserve"><value>Sprawdzian o tym tytule już istnieje dla wybranej klasy i semestru.</value></data>
+  <data name="ErrorDuplicateQuestionOrder" xml:space="preserve"><value>Ta kolejność pytania jest już używana w sprawdzianie.</value></data>
+  <data name="ErrorDuplicateOutcomeMapping" xml:space="preserve"><value>Ten efekt uczenia się jest już zmapowany do pytania.</value></data>
+  <data name="ErrorOutcomeDoesNotMatchAssessment" xml:space="preserve"><value>Efekt uczenia się nie należy do przedmiotu, poziomu klasy ani aktywnie przyjętego programu dla tego sprawdzianu.</value></data>
+  <data name="ErrorAssessmentNotDraft" xml:space="preserve"><value>Definicję można zmieniać tylko dla sprawdzianu w stanie szkicu.</value></data>
+  <data name="ErrorAssessmentNotOpen" xml:space="preserve"><value>Sprawdzian nie jest otwarty do wprowadzania wyników.</value></data>
+  <data name="ErrorAssessmentAlreadyClosed" xml:space="preserve"><value>Sprawdzian jest już zamknięty.</value></data>
+  <data name="ErrorAssessmentHasNoQuestions" xml:space="preserve"><value>Utwórz co najmniej jedno pytanie przed otwarciem sprawdzianu.</value></data>
+  <data name="ErrorAssessmentScoreMismatch" xml:space="preserve"><value>Suma maksymalnych punktów pytań musi być równa maksymalnej liczbie punktów sprawdzianu.</value></data>
+  <data name="ErrorQuestionMissingOutcome" xml:space="preserve"><value>Każde pytanie musi mieć co najmniej jedno mapowanie efektu uczenia się.</value></data>
+  <data name="ErrorResultQuestionMismatch" xml:space="preserve"><value>Przesłane pytania wyników nie odpowiadają definicji sprawdzianu.</value></data>
+  <data name="ErrorConcurrencyConflict" xml:space="preserve"><value>Ten rekord został zmieniony przez innego użytkownika. Odśwież stronę i spróbuj ponownie.</value></data>
+  <data name="ErrorPersistence" xml:space="preserve"><value>Nie udało się zapisać zmiany. Odśwież stronę i spróbuj ponownie.</value></data>
+  <data name="QuestionScoreLabel" xml:space="preserve"><value>Punkty za pytanie {0}</value></data>
+  <data name="DraftHelp" xml:space="preserve"><value>Pytania i mapowania efektów można edytować, gdy sprawdzian ma status szkicu.</value></data>
+  <data name="OpenHelp" xml:space="preserve"><value>Definicja sprawdzianu jest zablokowana podczas wprowadzania wyników.</value></data>
+</root>

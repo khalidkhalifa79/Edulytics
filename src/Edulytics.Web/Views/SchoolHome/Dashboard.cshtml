@@ -2,6 +2,7 @@
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.PlatformResource> T
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.AcademicResource> A
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.CurriculumResource> C
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.AssessmentResource> S
 
 @{
     ViewData["Title"] = T["SchoolDashboardTitle"].Value;
@@ -76,6 +77,19 @@
                asp-controller="Curriculum"
                asp-action="Index">
                 @C["ManageCurriculum"]
+            </a>
+        </section>
+
+        <section class="user-dashboard-action">
+            <div>
+                <h2>@S["AssessmentTitle"]</h2>
+                <p>@S["AssessmentSubtitle"]</p>
+            </div>
+
+            <a class="school-button school-button-primary"
+               asp-controller="Assessments"
+               asp-action="Index">
+                @S["ManageAssessments"]
             </a>
         </section>
     }

@@ -1,0 +1,50 @@
+@model Edulytics.Web.ViewModels.Assessments.AssessmentQuestionEditViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.AssessmentResource> A
+@{
+    ViewData["Title"] = A["EditQuestion"];
+}
+<section class="assessment-page assessment-edit-page">
+    <header class="assessment-header">
+        <div>
+            <h1>@A["EditQuestion"]</h1>
+            <p>@Model.Question.Prompt</p>
+        </div>
+        <a class="school-button"
+           asp-action="Details"
+           asp-route-id="@Model.AssessmentId">@A["Details"]</a>
+    </header>
+
+    @if (TempData["Error"] is string error)
+    {
+        <div class="school-alert school-alert-error" role="alert">@error</div>
+    }
+
+    <section class="assessment-card">
+        <form asp-action="EditQuestion"
+              asp-route-questionId="@Model.Question.Id"
+              method="post" class="assessment-form">
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="assessmentId" value="@Model.AssessmentId" />
+            <input type="hidden" name="rowVersion"
+                   value="@Convert.ToBase64String(Model.AssessmentRowVersion)" />
+
+            <label for="prompt">@A["QuestionPrompt"]</label>
+            <textarea id="prompt" name="prompt"
+                      maxlength="1000" rows="4" required>@Model.Question.Prompt</textarea>
+
+            <label for="maxScore">@A["QuestionMaxScore"]</label>
+            <input id="maxScore" name="maxScore"
+                   type="number" min="0.01" max="10000" step="0.01"
+                   value="@Model.Question.MaxScore.ToString(System.Globalization.CultureInfo.InvariantCulture)"
+                   required />
+
+            <label for="order">@A["Order"]</label>
+            <input id="order" name="order"
+                   type="number" min="1"
+                   value="@Model.Question.Order" required />
+
+            <button type="submit"
+                    class="school-button school-button-primary">@A["SaveChanges"]</button>
+        </form>
+    </section>
+</section>

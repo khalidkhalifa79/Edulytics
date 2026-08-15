@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+  <data name="AssessmentTitle" xml:space="preserve"><value>Assessments and results</value></data>
+  <data name="AssessmentSubtitle" xml:space="preserve"><value>Define assessments, map questions to learning outcomes, and enter validated student scores.</value></data>
+  <data name="ManageAssessments" xml:space="preserve"><value>Manage assessments</value></data>
+  <data name="BackToDashboard" xml:space="preserve"><value>Back to school dashboard</value></data>
+  <data name="CreateAssessment" xml:space="preserve"><value>Create assessment</value></data>
+  <data name="Assessment" xml:space="preserve"><value>Assessment</value></data>
+  <data name="Assessments" xml:space="preserve"><value>Assessments</value></data>
+  <data name="Title" xml:space="preserve"><value>Title</value></data>
+  <data name="ClassGroup" xml:space="preserve"><value>Class</value></data>
+  <data name="Subject" xml:space="preserve"><value>Subject</value></data>
+  <data name="Term" xml:space="preserve"><value>Term</value></data>
+  <data name="AssessmentDate" xml:space="preserve"><value>Assessment date</value></data>
+  <data name="MaxScore" xml:space="preserve"><value>Maximum score</value></data>
+  <data name="Status" xml:space="preserve"><value>Status</value></data>
+  <data name="StatusDraft" xml:space="preserve"><value>Draft</value></data>
+  <data name="StatusOpen" xml:space="preserve"><value>Open</value></data>
+  <data name="StatusClosed" xml:space="preserve"><value>Closed</value></data>
+  <data name="Create" xml:space="preserve"><value>Create</value></data>
+  <data name="Edit" xml:space="preserve"><value>Edit</value></data>
+  <data name="EditAssessment" xml:space="preserve"><value>Edit assessment</value></data>
+  <data name="SaveChanges" xml:space="preserve"><value>Save changes</value></data>
+  <data name="Details" xml:space="preserve"><value>Details</value></data>
+  <data name="Questions" xml:space="preserve"><value>Questions</value></data>
+  <data name="CreateQuestion" xml:space="preserve"><value>Create question</value></data>
+  <data name="EditQuestion" xml:space="preserve"><value>Edit question</value></data>
+  <data name="QuestionPrompt" xml:space="preserve"><value>Question</value></data>
+  <data name="QuestionMaxScore" xml:space="preserve"><value>Question maximum score</value></data>
+  <data name="Order" xml:space="preserve"><value>Order</value></data>
+  <data name="OutcomeMappings" xml:space="preserve"><value>Learning outcome mappings</value></data>
+  <data name="MapOutcome" xml:space="preserve"><value>Map outcome</value></data>
+  <data name="RemoveMapping" xml:space="preserve"><value>Remove</value></data>
+  <data name="OpenAssessment" xml:space="preserve"><value>Open for result entry</value></data>
+  <data name="CloseAssessment" xml:space="preserve"><value>Close assessment</value></data>
+  <data name="Results" xml:space="preserve"><value>Results</value></data>
+  <data name="StudentNumber" xml:space="preserve"><value>Student number</value></data>
+  <data name="SaveResult" xml:space="preserve"><value>Save result</value></data>
+  <data name="NoAssessments" xml:space="preserve"><value>No assessments are available yet.</value></data>
+  <data name="NoQuestions" xml:space="preserve"><value>No questions have been created yet.</value></data>
+  <data name="NoMappings" xml:space="preserve"><value>No learning outcomes are mapped to this question.</value></data>
+  <data name="NoEligibleOutcomes" xml:space="preserve"><value>No matching learning outcomes are available for this subject and grade.</value></data>
+  <data name="NoMappedOutcomes" xml:space="preserve"><value>No learning outcomes are mapped to this question yet.</value></data>
+  <data name="NoStudents" xml:space="preserve"><value>No enrolled active students were found for this class.</value></data>
+  <data name="SelectClass" xml:space="preserve"><value>Select class</value></data>
+  <data name="SelectSubject" xml:space="preserve"><value>Select subject</value></data>
+  <data name="SelectTerm" xml:space="preserve"><value>Select term</value></data>
+  <data name="SelectOutcome" xml:space="preserve"><value>Select learning outcome</value></data>
+  <data name="DefinitionRule" xml:space="preserve"><value>An assessment can open only when question maximum scores total the assessment maximum score and every question has at least one outcome mapping.</value></data>
+  <data name="ResultsReadOnly" xml:space="preserve"><value>This assessment is closed. Results are read-only.</value></data>
+  <data name="SuccessAssessmentCreated" xml:space="preserve"><value>Assessment created.</value></data>
+  <data name="SuccessAssessmentUpdated" xml:space="preserve"><value>Assessment updated.</value></data>
+  <data name="SuccessQuestionCreated" xml:space="preserve"><value>Question created.</value></data>
+  <data name="SuccessQuestionUpdated" xml:space="preserve"><value>Question updated.</value></data>
+  <data name="SuccessOutcomeMapped" xml:space="preserve"><value>Learning outcome mapped.</value></data>
+  <data name="SuccessOutcomeUnmapped" xml:space="preserve"><value>Learning outcome mapping removed.</value></data>
+  <data name="SuccessAssessmentOpened" xml:space="preserve"><value>Assessment opened for result entry.</value></data>
+  <data name="SuccessAssessmentClosed" xml:space="preserve"><value>Assessment closed.</value></data>
+  <data name="SuccessResultSaved" xml:space="preserve"><value>Student result saved.</value></data>
+  <data name="ErrorAccessDenied" xml:space="preserve"><value>You do not have permission to manage this assessment.</value></data>
+  <data name="ErrorSchoolNotActive" xml:space="preserve"><value>Assessments cannot be changed while the school is not active.</value></data>
+  <data name="ErrorRequired" xml:space="preserve"><value>This field is required.</value></data>
+  <data name="ErrorInvalidText" xml:space="preserve"><value>The title or question text is invalid or too long.</value></data>
+  <data name="ErrorInvalidDate" xml:space="preserve"><value>The assessment date must be inside the selected term.</value></data>
+  <data name="ErrorInvalidMaxScore" xml:space="preserve"><value>Maximum score must be greater than 0.</value></data>
+  <data name="ErrorInvalidQuestionScore" xml:space="preserve"><value>A question score is outside the allowed range.</value></data>
+  <data name="ErrorInvalidOrder" xml:space="preserve"><value>Order must be greater than zero.</value></data>
+  <data name="ErrorTermNotFound" xml:space="preserve"><value>The selected term is invalid for this class.</value></data>
+  <data name="ErrorClassGroupNotFound" xml:space="preserve"><value>The selected class was not found.</value></data>
+  <data name="ErrorSubjectNotFound" xml:space="preserve"><value>The selected subject was not found.</value></data>
+  <data name="ErrorAssessmentNotFound" xml:space="preserve"><value>The assessment was not found.</value></data>
+  <data name="ErrorQuestionNotFound" xml:space="preserve"><value>The assessment question was not found.</value></data>
+  <data name="ErrorOutcomeNotFound" xml:space="preserve"><value>The learning outcome was not found.</value></data>
+  <data name="ErrorStudentNotFound" xml:space="preserve"><value>The student was not found.</value></data>
+  <data name="ErrorStudentNotEnrolled" xml:space="preserve"><value>The student is not enrolled in this assessment class.</value></data>
+  <data name="ErrorTeacherNotAssigned" xml:space="preserve"><value>The teacher is not assigned to the selected class and subject.</value></data>
+  <data name="ErrorDuplicateAssessment" xml:space="preserve"><value>An assessment with this title already exists for the selected class and term.</value></data>
+  <data name="ErrorDuplicateQuestionOrder" xml:space="preserve"><value>This question order is already used in the assessment.</value></data>
+  <data name="ErrorDuplicateOutcomeMapping" xml:space="preserve"><value>This learning outcome is already mapped to the question.</value></data>
+  <data name="ErrorOutcomeDoesNotMatchAssessment" xml:space="preserve"><value>The learning outcome is outside the assessment subject, grade, or active curriculum adoption.</value></data>
+  <data name="ErrorAssessmentNotDraft" xml:space="preserve"><value>Only draft assessments can change their definition.</value></data>
+  <data name="ErrorAssessmentNotOpen" xml:space="preserve"><value>The assessment is not open for result entry.</value></data>
+  <data name="ErrorAssessmentAlreadyClosed" xml:space="preserve"><value>The assessment is already closed.</value></data>
+  <data name="ErrorAssessmentHasNoQuestions" xml:space="preserve"><value>Create at least one question before opening the assessment.</value></data>
+  <data name="ErrorAssessmentScoreMismatch" xml:space="preserve"><value>Question maximum scores must total the assessment maximum score.</value></data>
+  <data name="ErrorQuestionMissingOutcome" xml:space="preserve"><value>Every question must have at least one learning outcome mapping.</value></data>
+  <data name="ErrorResultQuestionMismatch" xml:space="preserve"><value>Submitted result questions do not match the assessment definition.</value></data>
+  <data name="ErrorConcurrencyConflict" xml:space="preserve"><value>This record was changed by another user. Reload the page and try again.</value></data>
+  <data name="ErrorPersistence" xml:space="preserve"><value>The change could not be saved. Reload and try again.</value></data>
+  <data name="QuestionScoreLabel" xml:space="preserve"><value>Score for question {0}</value></data>
+  <data name="DraftHelp" xml:space="preserve"><value>Questions and outcome mappings can be edited while the assessment is Draft.</value></data>
+  <data name="OpenHelp" xml:space="preserve"><value>The assessment definition is locked while results are being entered.</value></data>
+</root>

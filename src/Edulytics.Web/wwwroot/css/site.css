@@ -1770,3 +1770,208 @@ input:focus-visible {
         gap: .15rem;
     }
 }
+
+/* ===== Phase 08 — Assessments and Results ===== */
+.assessment-page {
+    width: min(100%, 1440px);
+    margin: 0 auto;
+    padding: 1.25rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.assessment-header,
+.assessment-list-card,
+.assessment-question-card > header,
+.assessment-result-card > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.assessment-header h1,
+.assessment-list-card h3,
+.assessment-question-card h3,
+.assessment-result-card h2 { margin-top: 0; }
+
+.assessment-context {
+    display: block;
+    margin-bottom: .3rem;
+    color: #5c6678;
+    font-size: .9rem;
+}
+
+.assessment-card,
+.assessment-list-card,
+.assessment-question-card,
+.assessment-result-card,
+.assessment-empty,
+.assessment-info {
+    min-width: 0;
+    padding: 1rem;
+    border: 1px solid #d8dee8;
+    border-radius: .9rem;
+    background: #fff;
+}
+
+.assessment-info { background: #f7f9fc; }
+
+.assessment-form,
+.assessment-result-form {
+    display: grid;
+    gap: .7rem;
+}
+
+.assessment-form input,
+.assessment-form select,
+.assessment-form textarea,
+.assessment-result-form input,
+.assessment-inline-form select {
+    width: 100%;
+    min-width: 0;
+}
+
+.assessment-create-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.assessment-list,
+.assessment-question-list,
+.assessment-results-grid,
+.assessment-mappings {
+    display: grid;
+    gap: 1rem;
+}
+
+.assessment-actions,
+.assessment-inline-form,
+.assessment-mapping-tag {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+    align-items: center;
+}
+
+.assessment-question-card {
+    display: grid;
+    gap: 1rem;
+}
+
+.assessment-mapping-tags {
+    display: grid;
+    gap: .5rem;
+}
+
+.assessment-mapping-tag {
+    justify-content: space-between;
+    padding: .6rem;
+    border-radius: .6rem;
+    background: #f6f8fb;
+}
+
+.assessment-inline-form { align-items: end; }
+.assessment-inline-form select { flex: 1 1 20rem; }
+
+.assessment-link-button {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    text-decoration: underline;
+    cursor: pointer;
+    font: inherit;
+}
+
+.assessment-lifecycle {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.assessment-results-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.assessment-result-card {
+    display: grid;
+    gap: 1rem;
+}
+
+.assessment-result-total {
+    display: grid;
+    justify-items: end;
+    gap: .2rem;
+    white-space: nowrap;
+}
+
+.assessment-score-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 7rem;
+    gap: .75rem;
+    align-items: center;
+}
+
+.assessment-score-row label { overflow-wrap: anywhere; }
+.assessment-score-row label span { color: #5c6678; }
+
+.assessment-readonly-scores {
+    display: grid;
+    gap: .5rem;
+}
+
+.assessment-readonly-scores > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #e6eaf0;
+}
+
+.assessment-edit-page { max-width: 850px; }
+
+@media (max-width: 900px) {
+    .assessment-results-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 767px) {
+    .assessment-page { padding: .85rem; }
+
+    .assessment-header,
+    .assessment-list-card,
+    .assessment-question-card > header,
+    .assessment-result-card > header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .assessment-create-form { grid-template-columns: 1fr; }
+    .assessment-result-total { justify-items: start; }
+
+    .assessment-score-row {
+        grid-template-columns: 1fr;
+        gap: .3rem;
+    }
+
+    .assessment-actions > *,
+    .assessment-inline-form > *,
+    .assessment-lifecycle form,
+    .assessment-lifecycle button { width: 100%; }
+
+    .assessment-readonly-scores > div {
+        flex-direction: column;
+        gap: .25rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .assessment-page { padding: .65rem; }
+
+    .assessment-card,
+    .assessment-list-card,
+    .assessment-question-card,
+    .assessment-result-card { padding: .8rem; }
+
+    .assessment-mapping-tag {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

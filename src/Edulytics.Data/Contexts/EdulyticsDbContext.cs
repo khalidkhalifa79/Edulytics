@@ -24,6 +24,11 @@ public class EdulyticsDbContext : IdentityDbContext<ApplicationUser, Application
     public DbSet<StudentEnrollment> StudentEnrollments => Set<StudentEnrollment>();
     public DbSet<CurriculumTopic> CurriculumTopics => Set<CurriculumTopic>();
     public DbSet<LearningOutcome> LearningOutcomes => Set<LearningOutcome>();
+    public DbSet<Assessment> Assessments => Set<Assessment>();
+    public DbSet<AssessmentQuestion> AssessmentQuestions => Set<AssessmentQuestion>();
+    public DbSet<QuestionLearningOutcome> QuestionLearningOutcomes => Set<QuestionLearningOutcome>();
+    public DbSet<AssessmentResult> AssessmentResults => Set<AssessmentResult>();
+    public DbSet<StudentAnswer> StudentAnswers => Set<StudentAnswer>();
     public DbSet<CurriculumFramework> CurriculumFrameworks => Set<CurriculumFramework>();
     public DbSet<CurriculumFrameworkVersion> CurriculumFrameworkVersions => Set<CurriculumFrameworkVersion>();
     public DbSet<SchoolCurriculumAdoption> SchoolCurriculumAdoptions => Set<SchoolCurriculumAdoption>();
@@ -44,6 +49,11 @@ public class EdulyticsDbContext : IdentityDbContext<ApplicationUser, Application
         builder.ApplyConfiguration(new StudentEnrollmentConfiguration());
         builder.ApplyConfiguration(new CurriculumTopicConfiguration());
         builder.ApplyConfiguration(new LearningOutcomeConfiguration());
+        builder.ApplyConfiguration(new AssessmentConfiguration());
+        builder.ApplyConfiguration(new AssessmentQuestionConfiguration());
+        builder.ApplyConfiguration(new QuestionLearningOutcomeConfiguration());
+        builder.ApplyConfiguration(new AssessmentResultConfiguration());
+        builder.ApplyConfiguration(new StudentAnswerConfiguration());
         builder.ApplyConfiguration(new CurriculumFrameworkConfiguration());
         builder.ApplyConfiguration(new CurriculumFrameworkVersionConfiguration());
         builder.ApplyConfiguration(new SchoolCurriculumAdoptionConfiguration());
