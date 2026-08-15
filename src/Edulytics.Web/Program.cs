@@ -1,3 +1,4 @@
+using Edulytics.Web.Hubs;
 using System.Threading.RateLimiting;
 using System.Security.Claims;
 using Microsoft.AspNetCore.RateLimiting;
@@ -68,6 +69,7 @@ builder.Services.AddAcademicStructurePhase06();
 builder.Services.AddCurriculumPhase07();
 builder.Services.AddAssessmentsPhase08();
 builder.Services.AddAnalyticsPhase09();
+builder.Services.AddRealtimeDashboardsPhase10();
 builder.Services.AddInvitationEmailDelivery(
     builder.Configuration);
 
@@ -228,6 +230,8 @@ app.MapControllerRoute(
         pattern:
             "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
+
+app.MapHub<AnalyticsHub>("/hubs/analytics");
 
 app.Run();
 

@@ -34,6 +34,7 @@ public class EdulyticsDbContext : IdentityDbContext<ApplicationUser, Application
     public DbSet<ClassTopicSummary> ClassTopicSummaries => Set<ClassTopicSummary>();
     public DbSet<ClassAssessmentTrend> ClassAssessmentTrends => Set<ClassAssessmentTrend>();
     public DbSet<SchoolAnalyticsSnapshot> SchoolAnalyticsSnapshots => Set<SchoolAnalyticsSnapshot>();
+    public DbSet<OutboxMessage> OutboxMessages => Set<OutboxMessage>();
     public DbSet<CurriculumFramework> CurriculumFrameworks => Set<CurriculumFramework>();
     public DbSet<CurriculumFrameworkVersion> CurriculumFrameworkVersions => Set<CurriculumFrameworkVersion>();
     public DbSet<SchoolCurriculumAdoption> SchoolCurriculumAdoptions => Set<SchoolCurriculumAdoption>();
@@ -64,6 +65,7 @@ public class EdulyticsDbContext : IdentityDbContext<ApplicationUser, Application
         builder.ApplyConfiguration(new ClassTopicSummaryConfiguration());
         builder.ApplyConfiguration(new ClassAssessmentTrendConfiguration());
         builder.ApplyConfiguration(new SchoolAnalyticsSnapshotConfiguration());
+        builder.ApplyConfiguration(new OutboxMessageConfiguration());
         builder.ApplyConfiguration(new CurriculumFrameworkConfiguration());
         builder.ApplyConfiguration(new CurriculumFrameworkVersionConfiguration());
         builder.ApplyConfiguration(new SchoolCurriculumAdoptionConfiguration());

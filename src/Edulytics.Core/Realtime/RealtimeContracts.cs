@@ -1,0 +1,39 @@
+namespace Edulytics.Core.Realtime;
+
+public static class RealtimeEventTypes
+{
+    public const string AssessmentResultEntered =
+        "AssessmentResultEntered";
+
+    public const string AssessmentResultUpdated =
+        "AssessmentResultUpdated";
+}
+
+public static class RealtimeGroupNames
+{
+    public static string SchoolAdmins(Guid schoolId) =>
+        $"school:{schoolId:N}:admins";
+
+    public static string Teachers(
+        Guid schoolId,
+        Guid classGroupId,
+        Guid subjectId) =>
+        $"school:{schoolId:N}:class:{classGroupId:N}:subject:{subjectId:N}:teachers";
+}
+
+public sealed record AssessmentResultChangedEvent(
+    Guid EventId,
+    Guid SchoolId,
+    Guid AssessmentId,
+    Guid AssessmentResultId,
+    Guid ClassGroupId,
+    Guid SubjectId,
+    Guid StudentProfileId,
+    DateTime OccurredAtUtc);
+
+public sealed record DashboardUpdatedMessage(
+    Guid EventId,
+    Guid AssessmentId,
+    Guid ClassGroupId,
+    Guid SubjectId,
+    DateTime UpdatedAtUtc);

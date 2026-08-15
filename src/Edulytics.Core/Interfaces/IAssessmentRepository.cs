@@ -107,6 +107,10 @@ public interface IAssessmentRepository
         CancellationToken cancellationToken = default)
         where T : class, ISchoolScoped;
 
+    Task AddOutboxAsync(
+        OutboxMessage message,
+        CancellationToken cancellationToken = default);
+
     void RemoveMapping(QuestionLearningOutcome mapping);
 
     Task<AssessmentPersistenceResult> SaveAsync(

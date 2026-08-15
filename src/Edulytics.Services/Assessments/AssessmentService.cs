@@ -1,8 +1,10 @@
+using System.Text.Json;
 using Edulytics.Core.Assessments;
 using Edulytics.Core.Constants;
 using Edulytics.Core.Entities;
 using Edulytics.Core.Enums;
 using Edulytics.Core.Interfaces;
+using Edulytics.Core.Realtime;
 using Edulytics.Core.Users;
 
 namespace Edulytics.Services.Assessments;
@@ -737,6 +739,37 @@ public sealed class AssessmentService : IAssessmentService
                 answer.UpdatedAtUtc = now;
             }
         }
+
+        var eventId = Guid.NewGuid();
+
+        var resultChanged =
+            new AssessmentResultChangedEvent(
+                eventId,
+                schoolId,
+                assessment.Id,
+                result!.Id,
+                assessment.ClassGroupId,
+                assessment.SubjectId,
+                student.Id,
+                now);
+
+        await _repo.AddOutboxAsync(
+            new OutboxMessage
+            {
+                Id = eventId,
+                SchoolId = schoolId,
+                EventType = isNew
+                    ? RealtimeEventTypes.AssessmentResultEntered
+                    : RealtimeEventTypes.AssessmentResultUpdated,
+                PayloadJson = JsonSerializer.Serialize(
+                    resultChanged),
+                OccurredAtUtc = now,
+                AvailableAtUtc = now,
+                ProcessingAttempts = 0,
+                CorrelationId =
+                    $"assessment-result:{eventId:N}"
+            },
+            cancellationToken);
 
         var saved = isNew
             ? await _repo.SaveAsync(cancellationToken)

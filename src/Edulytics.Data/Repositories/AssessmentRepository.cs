@@ -140,6 +140,13 @@ public sealed class AssessmentRepository : IAssessmentRepository
         where T : class, ISchoolScoped =>
         await _db.Set<T>().AddAsync(entity, cancellationToken);
 
+    public async Task AddOutboxAsync(
+        OutboxMessage message,
+        CancellationToken cancellationToken = default) =>
+        await _db.OutboxMessages.AddAsync(
+            message,
+            cancellationToken);
+
     public void RemoveMapping(QuestionLearningOutcome mapping) =>
         _db.QuestionLearningOutcomes.Remove(mapping);
 
