@@ -28,7 +28,7 @@ public class ApplicationUserConfiguration : IEntityTypeConfiguration<Application
 
         builder.HasIndex(x => x.NormalizedEmail)
             .IsUnique()
-            .HasFilter("[NormalizedEmail] IS NOT NULL");
+            .HasFilter("\"NormalizedEmail\" IS NOT NULL");
 
         builder.HasIndex(x => x.NormalizedUserName)
             .IsUnique();

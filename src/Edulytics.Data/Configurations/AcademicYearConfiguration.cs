@@ -18,7 +18,9 @@ public sealed class AcademicYearConfiguration : IEntityTypeConfiguration<Academi
         builder.Property(x => x.Status).HasConversion<int>();
         builder.Property(x => x.CreatedAtUtc).IsRequired();
         builder.Property(x => x.UpdatedAtUtc).IsRequired();
-        builder.Property(x => x.RowVersion).IsRowVersion();
+        builder.Property(x => x.RowVersion).IsRequired()
+            .IsConcurrencyToken()
+            .ValueGeneratedNever();
 
         builder.HasIndex(x => new { x.SchoolId, x.Name }).IsUnique();
 

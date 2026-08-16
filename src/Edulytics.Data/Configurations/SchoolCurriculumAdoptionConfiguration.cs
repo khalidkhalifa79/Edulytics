@@ -15,7 +15,9 @@ public sealed class SchoolCurriculumAdoptionConfiguration
 
         builder.Property(x => x.CreatedAtUtc).IsRequired();
         builder.Property(x => x.UpdatedAtUtc).IsRequired();
-        builder.Property(x => x.RowVersion).IsRowVersion();
+        builder.Property(x => x.RowVersion).IsRequired()
+            .IsConcurrencyToken()
+            .ValueGeneratedNever();
 
         builder.HasIndex(x => new
         {
@@ -24,7 +26,9 @@ public sealed class SchoolCurriculumAdoptionConfiguration
             x.GradeLevelId,
             x.SubjectId,
             x.FrameworkVersionId
-        }).IsUnique();
+        })
+        .IsUnique()
+        .AreNullsDistinct(false);
 
         builder.HasIndex(x => new
         {
@@ -34,7 +38,8 @@ public sealed class SchoolCurriculumAdoptionConfiguration
             x.SubjectId
         })
         .IsUnique()
-        .HasFilter("[IsPrimary] = CAST(1 AS bit)");
+        .AreNullsDistinct(false)
+        .HasFilter("\"IsPrimary\" = TRUE");
 
         builder.HasOne<School>()
             .WithMany()

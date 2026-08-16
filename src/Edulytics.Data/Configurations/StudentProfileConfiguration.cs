@@ -27,7 +27,7 @@ public sealed class StudentProfileConfiguration : IEntityTypeConfiguration<Stude
 
         builder.HasIndex(x => x.UserId)
             .IsUnique()
-            .HasFilter("[UserId] IS NOT NULL");
+            .HasFilter("\"UserId\" IS NOT NULL");
 
         builder.HasOne<School>()
             .WithMany()

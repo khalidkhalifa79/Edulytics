@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using Edulytics.Core.Entities;
 using Edulytics.Data.Configurations;
 using Edulytics.Data.Identity;
@@ -40,6 +41,55 @@ public class EdulyticsDbContext : IdentityDbContext<ApplicationUser, Application
     public DbSet<CurriculumFramework> CurriculumFrameworks => Set<CurriculumFramework>();
     public DbSet<CurriculumFrameworkVersion> CurriculumFrameworkVersions => Set<CurriculumFrameworkVersion>();
     public DbSet<SchoolCurriculumAdoption> SchoolCurriculumAdoptions => Set<SchoolCurriculumAdoption>();
+
+    public override int SaveChanges(
+        bool acceptAllChangesOnSuccess)
+    {
+        PrepareApplicationManagedConcurrencyTokens();
+
+        return base.SaveChanges(
+            acceptAllChangesOnSuccess);
+    }
+
+    public override Task<int> SaveChangesAsync(
+        bool acceptAllChangesOnSuccess,
+        CancellationToken cancellationToken = default)
+    {
+        PrepareApplicationManagedConcurrencyTokens();
+
+        return base.SaveChangesAsync(
+            acceptAllChangesOnSuccess,
+            cancellationToken);
+    }
+
+    private void PrepareApplicationManagedConcurrencyTokens()
+    {
+        foreach (var entry in ChangeTracker.Entries())
+        {
+            if (entry.State != EntityState.Added &&
+                entry.State != EntityState.Modified)
+            {
+                continue;
+            }
+
+            var property =
+                entry.Metadata.FindProperty(
+                    "RowVersion");
+
+            if (property is null ||
+                property.ClrType != typeof(byte[]) ||
+                !property.IsConcurrencyToken)
+            {
+                continue;
+            }
+
+            entry.Property(
+                    "RowVersion")
+                .CurrentValue =
+                RandomNumberGenerator.GetBytes(
+                    16);
+        }
+    }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

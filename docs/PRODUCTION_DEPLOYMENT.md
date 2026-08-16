@@ -1,101 +1,94 @@
 # Edulytics Production Deployment
 
-## Deployment model
+## Database architecture
 
-Deploy an immutable tested Release build.
+Edulytics uses .NET 10, ASP.NET Core, Entity Framework Core, Npgsql and PostgreSQL.
+Neon is the target managed PostgreSQL platform. SQL Server is not an active runtime provider.
 
-Do not modify source code directly on the production host.
+## Connection separation
 
-## Runtime requirements
+Runtime configuration:
 
-- .NET 10 ASP.NET Core runtime unless using self-contained publishing.
-- SQL Server compatible with the configured EF Core SQL Server provider.
-- HTTPS termination on the application host or trusted reverse proxy.
-- Persistent ASP.NET Core Data Protection key storage.
-- Central collection of structured JSON application logs.
-- Scheduled SQL Server backups.
-
-## Required production secret
-
-The database connection string must be supplied outside Git:
-
+```text
 ConnectionStrings__DefaultConnection
+```
 
-If SMTP invitation delivery is enabled, SMTP credentials must also come
-from the deployment secret mechanism.
+For Neon use the pooled runtime endpoint.
 
-Never place production passwords, tokens, connection strings, or SMTP
-credentials in appsettings.Production.json.
+Migration configuration:
+
+```text
+ConnectionStrings__MigrationConnection
+```
+
+For Neon use the direct/non-pooler endpoint. Do not run schema migrations through the pooled endpoint.
+Never commit either database connection string.
+
+## Migration
+
+Linux/macOS/Codespaces:
+
+```text
+EDULYTICS_MIGRATION_CONNECTION="<secure direct PostgreSQL connection>" ./scripts/update-database.sh
+```
+
+PowerShell:
+
+```text
+$env:EDULYTICS_MIGRATION_CONNECTION = "<secure direct PostgreSQL connection>"
+.\scripts\update-database.ps1
+```
 
 ## Build
 
-Run:
-
+```text
 dotnet restore Edulytics.sln
-
 dotnet build Edulytics.sln -c Release --no-restore
-
 dotnet test Edulytics.sln -c Release --no-build --no-restore
-
 dotnet publish src/Edulytics.Web/Edulytics.Web.csproj -c Release --no-restore
+```
 
-## Database migration
+## Health
 
-Production database migrations are an explicit deployment step.
+Verify:
 
-Apply reviewed migrations before routing traffic to the new version.
-
-The application readiness endpoint reports Unhealthy while EF Core
-detects pending migrations.
-
-## Health verification
-
-After application startup verify:
-
+```text
 GET /health/live
-
 GET /health/ready
+```
 
-Both must return HTTP 200 and Healthy.
+Readiness covers PostgreSQL connectivity, EF migration state and Outbox worker heartbeat.
 
-Readiness checks:
+## Identity and tenancy
 
-- SQL connectivity;
-- EF migration state;
-- Outbox worker heartbeat.
+ASP.NET Core Identity is persisted in PostgreSQL through EF Core/Npgsql.
+Public registration remains disabled. SuperAdmin is platform-scoped with `SchoolId = null`.
+School users remain scoped to one school.
 
-## HTTPS and reverse proxy
+## PostgreSQL concurrency
 
-Forward:
+Phase 13 keeps the existing `byte[] RowVersion` contracts but uses the accepted PostgreSQL-compatible application-managed optimistic-concurrency strategy. Stale writes must fail rather than silently overwrite newer state.
 
-- X-Forwarded-For
-- X-Forwarded-Proto
-- X-Forwarded-Host
+## Neon Phase 13 acceptance
 
-Only trusted proxies should be accepted in normal production hosting.
+Phase 13 validates a non-production Neon environment with:
 
-The Codespaces proxy relaxation is for Codespaces only.
+- direct migration connection;
+- pooled runtime connection;
+- Identity persistence and login;
+- real PostgreSQL concurrency;
+- all six import types;
+- analytics refresh/readback;
+- Outbox processing;
+- realtime notification dispatch path;
+- MVC runtime and health endpoints.
 
-Production external traffic must use HTTPS.
+Production HA, multi-instance behavior, CI/CD hard gates, backup/restore evidence and final go-live are handled by later Production Master Plan phases.
 
-HSTS is enabled outside Development.
+## Data Protection
 
-## Deployment sequence
-
-1. Verify a recent usable backup.
-2. Preserve the currently deployed release reference.
-3. Apply reviewed database migrations.
-4. Start the new release.
-5. Verify liveness.
-6. Verify readiness.
-7. Route traffic.
-8. Monitor HTTP failures, readiness, SQL connectivity and Outbox retries.
+Persistent shared ASP.NET Core Data Protection key storage is required before restart-sensitive or multi-instance production acceptance.
 
 ## Rollback
 
-Do not automatically reverse production database migrations.
-
-If the previous application release is schema-compatible, the
-application may be rolled back independently.
-
-If database recovery is required, use the tested backup/restore runbook.
+Do not automatically reverse production database migrations. Prefer backward-compatible application/schema releases and the later backup/restore runbook.

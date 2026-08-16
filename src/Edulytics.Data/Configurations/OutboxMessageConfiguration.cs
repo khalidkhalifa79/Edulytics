@@ -18,7 +18,7 @@ public sealed class OutboxMessageConfiguration
             .IsRequired();
 
         builder.Property(x => x.PayloadJson)
-            .HasColumnType("nvarchar(max)")
+            .HasColumnType("text")
             .IsRequired();
 
         builder.Property(x => x.OccurredAtUtc)
@@ -35,7 +35,9 @@ public sealed class OutboxMessageConfiguration
             .HasMaxLength(2000);
 
         builder.Property(x => x.RowVersion)
-            .IsRowVersion();
+            .IsRequired()
+            .IsConcurrencyToken()
+            .ValueGeneratedNever();
 
         builder.HasIndex(x => x.CorrelationId)
             .IsUnique();

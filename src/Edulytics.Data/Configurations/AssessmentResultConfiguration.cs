@@ -18,7 +18,9 @@ public sealed class AssessmentResultConfiguration
         builder.Property(x => x.Percentage).HasPrecision(5, 2).IsRequired();
         builder.Property(x => x.EnteredAtUtc).IsRequired();
         builder.Property(x => x.UpdatedAtUtc).IsRequired();
-        builder.Property(x => x.RowVersion).IsRowVersion();
+        builder.Property(x => x.RowVersion).IsRequired()
+            .IsConcurrencyToken()
+            .ValueGeneratedNever();
 
         builder.HasIndex(x => new
         {

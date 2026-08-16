@@ -50,10 +50,22 @@ if en != pl:
 print("PASS: assessment EN/PL parity.")
 PY
 
-grep -q 'Property(x => x.RowVersion).IsRowVersion();' \
+grep -q 'Property(x => x.RowVersion).IsRequired()' \
   src/Edulytics.Data/Configurations/AssessmentConfiguration.cs
 
-grep -q 'Property(x => x.RowVersion).IsRowVersion();' \
+grep -q 'IsConcurrencyToken()' \
+  src/Edulytics.Data/Configurations/AssessmentConfiguration.cs
+
+grep -q 'ValueGeneratedNever()' \
+  src/Edulytics.Data/Configurations/AssessmentConfiguration.cs
+
+grep -q 'Property(x => x.RowVersion).IsRequired()' \
+  src/Edulytics.Data/Configurations/AssessmentResultConfiguration.cs
+
+grep -q 'IsConcurrencyToken()' \
+  src/Edulytics.Data/Configurations/AssessmentResultConfiguration.cs
+
+grep -q 'ValueGeneratedNever()' \
   src/Edulytics.Data/Configurations/AssessmentResultConfiguration.cs
 
 grep -q 'ResolveEligibleFrameworkVersionIds' \

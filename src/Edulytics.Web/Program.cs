@@ -16,13 +16,6 @@ using Microsoft.AspNetCore.RateLimiting;
 var builder =
     WebApplication.CreateBuilder(args);
 
-if (builder.Environment.IsDevelopment())
-{
-    builder.Configuration
-        .AddUserSecrets<Program>(
-            optional: true);
-}
-
 if (builder.Environment.IsProduction())
 {
     builder.Logging.ClearProviders();

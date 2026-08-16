@@ -16,7 +16,9 @@ public sealed class SubjectConfiguration : IEntityTypeConfiguration<Subject>
         builder.Property(x => x.Code).HasMaxLength(50).IsRequired();
         builder.Property(x => x.NormalizedCode).HasMaxLength(50).IsRequired();
         builder.Property(x => x.Status).HasConversion<int>();
-        builder.Property(x => x.RowVersion).IsRowVersion();
+        builder.Property(x => x.RowVersion).IsRequired()
+            .IsConcurrencyToken()
+            .ValueGeneratedNever();
 
         builder.HasIndex(x => new { x.SchoolId, x.NormalizedCode }).IsUnique();
 

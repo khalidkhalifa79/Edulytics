@@ -31,7 +31,7 @@ public static class ServiceCollectionExtensions
                         "Connection string 'DefaultConnection' is missing.");
                 }
 
-                options.UseSqlServer(connectionString);
+                options.UseNpgsql(connectionString);
             });
 
         services.AddIdentity<ApplicationUser, ApplicationRole>(options =>

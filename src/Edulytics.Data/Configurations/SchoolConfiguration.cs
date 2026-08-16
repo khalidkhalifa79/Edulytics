@@ -51,6 +51,8 @@ public class SchoolConfiguration : IEntityTypeConfiguration<School>
             .IsRequired();
 
         builder.Property(x => x.RowVersion)
-            .IsRowVersion();
+            .IsRequired()
+            .IsConcurrencyToken()
+            .ValueGeneratedNever();
     }
 }
