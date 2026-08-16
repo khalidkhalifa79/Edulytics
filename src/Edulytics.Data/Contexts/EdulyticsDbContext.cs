@@ -41,6 +41,7 @@ public class EdulyticsDbContext : IdentityDbContext<ApplicationUser, Application
     public DbSet<CurriculumFramework> CurriculumFrameworks => Set<CurriculumFramework>();
     public DbSet<CurriculumFrameworkVersion> CurriculumFrameworkVersions => Set<CurriculumFrameworkVersion>();
     public DbSet<SchoolCurriculumAdoption> SchoolCurriculumAdoptions => Set<SchoolCurriculumAdoption>();
+    public DbSet<IdempotencyRecord> IdempotencyRecords => Set<IdempotencyRecord>();
 
     public override int SaveChanges(
         bool acceptAllChangesOnSuccess)
@@ -123,6 +124,7 @@ public class EdulyticsDbContext : IdentityDbContext<ApplicationUser, Application
         builder.ApplyConfiguration(new CurriculumFrameworkConfiguration());
         builder.ApplyConfiguration(new CurriculumFrameworkVersionConfiguration());
         builder.ApplyConfiguration(new SchoolCurriculumAdoptionConfiguration());
+        builder.ApplyConfiguration(new IdempotencyRecordConfiguration());
 
         builder.Entity<ApplicationRole>(entity =>
         {

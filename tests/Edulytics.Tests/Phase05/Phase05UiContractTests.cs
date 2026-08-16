@@ -157,6 +157,18 @@ public sealed class Phase05UiContractTests
                     root,
                     "src/Edulytics.Web/Program.cs"));
 
+        var resilienceRegistration =
+            File.ReadAllText(
+                Path.Combine(
+                    root,
+                    "src/Edulytics.Web/Extensions/"
+                    + "BackendResilienceRegistrationExtensions.cs"));
+
+        var rateLimitRegistration =
+            program
+            + Environment.NewLine
+            + resilienceRegistration;
+
         Assert.Contains(
             "CurrentUICulture",
             controller);
@@ -167,15 +179,15 @@ public sealed class Phase05UiContractTests
 
         Assert.Contains(
             "SchoolUserCreate",
-            program);
+            rateLimitRegistration);
 
         Assert.Contains(
             "InvitationResend",
-            program);
+            rateLimitRegistration);
 
         Assert.Contains(
             "PasswordSetup",
-            program);
+            rateLimitRegistration);
 
         Assert.Contains(
             "UseRateLimiter",

@@ -3,6 +3,9 @@ using Edulytics.Services.Assessments;
 using Edulytics.Web.ViewModels.Assessments;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http.Timeouts;
+using Microsoft.AspNetCore.RateLimiting;
+using Edulytics.Web.Resilience;
 using Microsoft.Extensions.Localization;
 
 namespace Edulytics.Web.Controllers;
@@ -35,6 +38,8 @@ public sealed class AssessmentsController : Controller
 
     [HttpPost("")]
     [ValidateAntiForgeryToken]
+    [RequestTimeout(BackendResiliencePolicyNames.InteractiveWrite)]
+    [EnableRateLimiting(BackendResiliencePolicyNames.HeavyWriteConcurrency)]
     public async Task<IActionResult> Create(
         Guid classGroupId,
         Guid subjectId,
@@ -88,6 +93,8 @@ public sealed class AssessmentsController : Controller
 
     [HttpPost("{id:guid}/edit")]
     [ValidateAntiForgeryToken]
+    [RequestTimeout(BackendResiliencePolicyNames.InteractiveWrite)]
+    [EnableRateLimiting(BackendResiliencePolicyNames.HeavyWriteConcurrency)]
     public async Task<IActionResult> Edit(
         Guid id,
         string title,
@@ -118,6 +125,8 @@ public sealed class AssessmentsController : Controller
 
     [HttpPost("{id:guid}/questions")]
     [ValidateAntiForgeryToken]
+    [RequestTimeout(BackendResiliencePolicyNames.InteractiveWrite)]
+    [EnableRateLimiting(BackendResiliencePolicyNames.HeavyWriteConcurrency)]
     public async Task<IActionResult> CreateQuestion(
         Guid id,
         string prompt,
@@ -165,6 +174,8 @@ public sealed class AssessmentsController : Controller
 
     [HttpPost("questions/{questionId:guid}/edit")]
     [ValidateAntiForgeryToken]
+    [RequestTimeout(BackendResiliencePolicyNames.InteractiveWrite)]
+    [EnableRateLimiting(BackendResiliencePolicyNames.HeavyWriteConcurrency)]
     public async Task<IActionResult> EditQuestion(
         Guid questionId,
         Guid assessmentId,
@@ -196,6 +207,8 @@ public sealed class AssessmentsController : Controller
 
     [HttpPost("questions/{questionId:guid}/outcomes")]
     [ValidateAntiForgeryToken]
+    [RequestTimeout(BackendResiliencePolicyNames.InteractiveWrite)]
+    [EnableRateLimiting(BackendResiliencePolicyNames.HeavyWriteConcurrency)]
     public async Task<IActionResult> MapOutcome(
         Guid questionId,
         Guid assessmentId,
@@ -222,6 +235,8 @@ public sealed class AssessmentsController : Controller
 
     [HttpPost("questions/{questionId:guid}/outcomes/{outcomeId:guid}/remove")]
     [ValidateAntiForgeryToken]
+    [RequestTimeout(BackendResiliencePolicyNames.InteractiveWrite)]
+    [EnableRateLimiting(BackendResiliencePolicyNames.HeavyWriteConcurrency)]
     public async Task<IActionResult> UnmapOutcome(
         Guid questionId,
         Guid outcomeId,
@@ -248,6 +263,8 @@ public sealed class AssessmentsController : Controller
 
     [HttpPost("{id:guid}/open")]
     [ValidateAntiForgeryToken]
+    [RequestTimeout(BackendResiliencePolicyNames.InteractiveWrite)]
+    [EnableRateLimiting(BackendResiliencePolicyNames.HeavyWriteConcurrency)]
     public async Task<IActionResult> Open(
         Guid id,
         string rowVersion,
@@ -268,6 +285,8 @@ public sealed class AssessmentsController : Controller
 
     [HttpPost("{id:guid}/close")]
     [ValidateAntiForgeryToken]
+    [RequestTimeout(BackendResiliencePolicyNames.InteractiveWrite)]
+    [EnableRateLimiting(BackendResiliencePolicyNames.HeavyWriteConcurrency)]
     public async Task<IActionResult> Close(
         Guid id,
         string rowVersion,
@@ -309,6 +328,8 @@ public sealed class AssessmentsController : Controller
 
     [HttpPost("{id:guid}/results/{studentProfileId:guid}")]
     [ValidateAntiForgeryToken]
+    [RequestTimeout(BackendResiliencePolicyNames.InteractiveWrite)]
+    [EnableRateLimiting(BackendResiliencePolicyNames.HeavyWriteConcurrency)]
     public async Task<IActionResult> SaveResult(
         Guid id,
         Guid studentProfileId,

@@ -3,8 +3,11 @@ using System.Text;
 using Edulytics.Core.Enums;
 using Edulytics.Services.Imports;
 using Edulytics.Web.ViewModels.Imports;
+using Edulytics.Web.Resilience;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http.Timeouts;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.Extensions.Localization;
 
 namespace Edulytics.Web.Controllers;
@@ -71,6 +74,8 @@ public sealed class ImportsController
     [ValidateAntiForgeryToken]
     [RequestSizeLimit(
         ImportFileParser.MaxBytes + 65536)]
+    [RequestTimeout(BackendResiliencePolicyNames.Import)]
+    [EnableRateLimiting(BackendResiliencePolicyNames.ImportConcurrency)]
     public async Task<IActionResult> Upload(
         ImportType importType,
         IFormFile? file,
@@ -149,6 +154,8 @@ public sealed class ImportsController
 
     [HttpPost("/school/imports/{batchId:guid}/confirm")]
     [ValidateAntiForgeryToken]
+    [RequestTimeout(BackendResiliencePolicyNames.Import)]
+    [EnableRateLimiting(BackendResiliencePolicyNames.ImportConcurrency)]
     public async Task<IActionResult> Confirm(
         Guid batchId,
         string? rowVersion,

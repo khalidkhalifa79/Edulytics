@@ -31,7 +31,32 @@ public static class ServiceCollectionExtensions
                         "Connection string 'DefaultConnection' is missing.");
                 }
 
-                options.UseNpgsql(connectionString);
+                var commandTimeoutSeconds =
+                    runtimeConfiguration.GetValue<int?>(
+                        "Edulytics:Resilience:DatabaseCommandTimeoutSeconds")
+                    ?? 15;
+
+                var maxPoolSize =
+                    runtimeConfiguration.GetValue<int?>(
+                        "Edulytics:Resilience:NpgsqlMaxPoolSize")
+                    ?? 40;
+
+                var connectionBuilder =
+                    new Npgsql.NpgsqlConnectionStringBuilder(
+                        connectionString);
+
+                if (!connectionBuilder.ContainsKey(
+                        "Maximum Pool Size"))
+                {
+                    connectionBuilder.MaxPoolSize =
+                        maxPoolSize;
+                }
+
+                options.UseNpgsql(
+                    connectionBuilder.ConnectionString,
+                    npgsql =>
+                        npgsql.CommandTimeout(
+                            commandTimeoutSeconds));
             });
 
         services.AddIdentity<ApplicationUser, ApplicationRole>(options =>

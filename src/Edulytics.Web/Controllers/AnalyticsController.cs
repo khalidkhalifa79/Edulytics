@@ -3,6 +3,9 @@ using Edulytics.Services.Analytics;
 using Edulytics.Web.ViewModels.Analytics;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http.Timeouts;
+using Microsoft.AspNetCore.RateLimiting;
+using Edulytics.Web.Resilience;
 using Microsoft.Extensions.Localization;
 
 namespace Edulytics.Web.Controllers;
@@ -50,6 +53,8 @@ public sealed class AnalyticsController : Controller
 
     [HttpPost("recalculate")]
     [ValidateAntiForgeryToken]
+    [RequestTimeout(BackendResiliencePolicyNames.Analytics)]
+    [EnableRateLimiting(BackendResiliencePolicyNames.AnalyticsConcurrency)]
     public async Task<IActionResult> Recalculate(
         CancellationToken cancellationToken)
     {

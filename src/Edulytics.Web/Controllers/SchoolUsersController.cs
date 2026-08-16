@@ -5,6 +5,8 @@ using Edulytics.Web.Email;
 using Edulytics.Web.ViewModels.SchoolUsers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http.Timeouts;
+using Edulytics.Web.Resilience;
 using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.Extensions.Localization;
 
@@ -106,6 +108,7 @@ public sealed class SchoolUsersController : Controller
     [HttpPost("Create")]
     [ValidateAntiForgeryToken]
     [EnableRateLimiting("SchoolUserCreate")]
+    [RequestTimeout(BackendResiliencePolicyNames.InteractiveWrite)]
     public async Task<IActionResult> Create(
         SchoolUserCreateViewModel model,
         CancellationToken cancellationToken)
@@ -371,6 +374,7 @@ public sealed class SchoolUsersController : Controller
     [HttpPost("{id:guid}/Password-Link")]
     [ValidateAntiForgeryToken]
     [EnableRateLimiting("InvitationResend")]
+    [RequestTimeout(BackendResiliencePolicyNames.InteractiveWrite)]
     public async Task<IActionResult> PasswordLink(
         Guid id,
         Guid schoolId,

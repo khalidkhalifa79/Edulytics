@@ -8,6 +8,7 @@ using Edulytics.Web.Health;
 using Edulytics.Web.Hubs;
 using Edulytics.Web.Localization;
 using Edulytics.Web.Middleware;
+using Edulytics.Web.Resilience;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Localization;
@@ -129,136 +130,7 @@ builder.Services
         builder.Configuration,
         builder.Environment);
 
-builder.Services.AddRateLimiter(
-    options =>
-    {
-        options.RejectionStatusCode =
-            StatusCodes
-                .Status429TooManyRequests;
-
-        options.AddPolicy(
-            "SchoolUserCreate",
-            context =>
-            {
-                var actor =
-                    context.User.FindFirst(
-                        ClaimTypes
-                            .NameIdentifier)
-                        ?.Value
-                    ?? context.Connection
-                        .RemoteIpAddress
-                        ?.ToString()
-                    ?? "anonymous";
-
-                return RateLimitPartition
-                    .GetFixedWindowLimiter(
-                        actor,
-                        _ =>
-                            new FixedWindowRateLimiterOptions
-                            {
-                                PermitLimit =
-                                    20,
-
-                                Window =
-                                    TimeSpan
-                                        .FromMinutes(
-                                            10),
-
-                                QueueLimit =
-                                    0,
-
-                                QueueProcessingOrder =
-                                    QueueProcessingOrder
-                                        .OldestFirst,
-
-                                AutoReplenishment =
-                                    true
-                            });
-            });
-
-        options.AddPolicy(
-            "InvitationResend",
-            context =>
-            {
-                var actor =
-                    context.User.FindFirst(
-                        ClaimTypes
-                            .NameIdentifier)
-                        ?.Value
-                    ?? context.Connection
-                        .RemoteIpAddress
-                        ?.ToString()
-                    ?? "anonymous";
-
-                var target =
-                    context.Request
-                        .RouteValues[
-                            "id"]
-                        ?.ToString()
-                    ?? "unknown";
-
-                return RateLimitPartition
-                    .GetFixedWindowLimiter(
-                        $"{actor}:{target}",
-                        _ =>
-                            new FixedWindowRateLimiterOptions
-                            {
-                                PermitLimit =
-                                    3,
-
-                                Window =
-                                    TimeSpan
-                                        .FromMinutes(
-                                            10),
-
-                                QueueLimit =
-                                    0,
-
-                                QueueProcessingOrder =
-                                    QueueProcessingOrder
-                                        .OldestFirst,
-
-                                AutoReplenishment =
-                                    true
-                            });
-            });
-
-        options.AddPolicy(
-            "PasswordSetup",
-            context =>
-            {
-                var ip =
-                    context.Connection
-                        .RemoteIpAddress
-                        ?.ToString()
-                    ?? "unknown";
-
-                return RateLimitPartition
-                    .GetFixedWindowLimiter(
-                        ip,
-                        _ =>
-                            new FixedWindowRateLimiterOptions
-                            {
-                                PermitLimit =
-                                    10,
-
-                                Window =
-                                    TimeSpan
-                                        .FromMinutes(
-                                            15),
-
-                                QueueLimit =
-                                    0,
-
-                                QueueProcessingOrder =
-                                    QueueProcessingOrder
-                                        .OldestFirst,
-
-                                AutoReplenishment =
-                                    true
-                            });
-            });
-    });
+builder.AddBackendResiliencePhase14();
 
 builder.Services
     .Configure<
@@ -332,11 +204,15 @@ if (!app.Environment.IsDevelopment())
 
 app.UseRouting();
 
+app.UseRequestTimeouts();
+
 app.UseAuthentication();
 
 app.UseRateLimiter();
 
 app.UseAuthorization();
+
+app.UseMiddleware<IdempotencyMiddleware>();
 
 app.MapHealthChecks(
         "/health/live",
