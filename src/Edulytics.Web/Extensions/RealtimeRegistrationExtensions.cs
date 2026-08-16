@@ -11,8 +11,15 @@ public static class RealtimeRegistrationExtensions
 {
     public static IServiceCollection
         AddRealtimeDashboardsPhase10(
-            this IServiceCollection services)
+            this IServiceCollection services,
+            IHostEnvironment environment)
     {
+        ArgumentNullException.ThrowIfNull(
+            services);
+
+        ArgumentNullException.ThrowIfNull(
+            environment);
+
         services.AddSignalR();
 
         services.AddOptions<
@@ -83,11 +90,23 @@ public static class RealtimeRegistrationExtensions
             IAnalyticsInvalidationNotifier,
             AnalyticsInvalidationNotifier>();
 
-        services.AddHostedService<
-            OutboxProcessorBackgroundService>();
+        // Phase 15 workers require PostgreSQL transactional
+        // semantics (FOR UPDATE / SKIP LOCKED). The integration
+        // test host deliberately uses EF InMemory for MVC/Identity
+        // tests, so starting these workers there would create false
+        // background failures unrelated to the request under test.
+        //
+        // Development and Production remain unchanged: both workers
+        // are registered and exercised against PostgreSQL.
+        if (!environment.IsEnvironment(
+                "Testing"))
+        {
+            services.AddHostedService<
+                OutboxProcessorBackgroundService>();
 
-        services.AddHostedService<
-            AnalyticsRefreshBackgroundService>();
+            services.AddHostedService<
+                AnalyticsRefreshBackgroundService>();
+        }
 
         return services;
     }

@@ -116,7 +116,8 @@ builder.Services
     .AddAnalyticsPhase09();
 
 builder.Services
-    .AddRealtimeDashboardsPhase10();
+    .AddRealtimeDashboardsPhase10(
+        builder.Environment);
 
 builder.Services
     .AddDataImportPhase11();

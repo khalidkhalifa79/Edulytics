@@ -57,25 +57,34 @@ public static class
         services.AddSingleton<
             OutboxWorkerHealthState>();
 
-        services
-            .AddHealthChecks()
-            .AddCheck(
-                "self",
-                () =>
-                    HealthCheckResult
-                        .Healthy(
-                            "Application process is alive."),
-                tags:
-                    ["live"])
-            .AddCheck<
-                DatabaseReadinessHealthCheck>(
-                    "database",
-                    failureStatus:
-                        HealthStatus
-                            .Unhealthy,
+        var healthChecks =
+            services
+                .AddHealthChecks()
+                .AddCheck(
+                    "self",
+                    () =>
+                        HealthCheckResult
+                            .Healthy(
+                                "Application process is alive."),
                     tags:
-                        ["ready"])
-            .AddCheck<
+                        ["live"])
+                .AddCheck<
+                    DatabaseReadinessHealthCheck>(
+                        "database",
+                        failureStatus:
+                            HealthStatus
+                                .Unhealthy,
+                        tags:
+                            ["ready"]);
+
+        // The Testing host intentionally does not run the
+        // PostgreSQL-only Phase 15 hosted workers. Do not
+        // report an intentionally disabled worker as an
+        // unhealthy test host.
+        if (!environment.IsEnvironment(
+                "Testing"))
+        {
+            healthChecks.AddCheck<
                 OutboxWorkerReadinessHealthCheck>(
                     "outbox-worker",
                     failureStatus:
@@ -83,6 +92,7 @@ public static class
                             .Unhealthy,
                     tags:
                         ["ready"]);
+        }
 
         if (!environment.IsDevelopment() &&
             !environment.IsEnvironment(

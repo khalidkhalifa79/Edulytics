@@ -82,3 +82,27 @@ The following are intentionally not falsely claimed by Phase 15:
 
 Those are handled by later phases before horizontal production scale is
 accepted.
+
+## Post-acceptance test-host isolation fix
+
+The initial Phase 15 acceptance exposed a test-harness-only defect: the MVC
+integration test host uses EF InMemory, while the Phase 15 queue workers
+correctly require PostgreSQL transaction and locking semantics. Starting those
+workers inside the `Testing` host produced background
+`TransactionIgnoredWarning` failures even though all request tests passed.
+
+The correction is explicit and narrow:
+
+- `Testing` does not register the PostgreSQL-only Outbox/analytics hosted
+  workers;
+- the `Testing` readiness contract does not require an intentionally disabled
+  worker;
+- Development and Production continue to register both workers;
+- a real PostgreSQL Production-mode readiness/shutdown smoke proves production
+  behavior was not weakened;
+- the full regression log is now gated against
+  `TransactionIgnoredWarning`, `Outbox v2 polling failed`, and
+  `Analytics coalescing loop failed`.
+
+This is test-host isolation, not a suppression of database warnings and not an
+InMemory emulation of PostgreSQL locking behavior.
