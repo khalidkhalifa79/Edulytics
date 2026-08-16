@@ -22,13 +22,15 @@ public sealed class RealtimeGroupService
         _access = access;
     }
 
-    public async Task<RealtimeGroupResolution> ResolveGroupsAsync(
-        Guid actorUserId,
-        CancellationToken cancellationToken = default)
+    public async Task<RealtimeGroupResolution>
+        ResolveGroupsAsync(
+            Guid actorUserId,
+            CancellationToken cancellationToken = default)
     {
-        var actor = await _users.GetActorAsync(
-            actorUserId,
-            cancellationToken);
+        var actor =
+            await _users.GetActorAsync(
+                actorUserId,
+                cancellationToken);
 
         if (actor is null ||
             !actor.IsActive ||
@@ -36,46 +38,73 @@ public sealed class RealtimeGroupService
             !actor.SchoolId.HasValue ||
             actor.Roles.Count != 1)
         {
-            return RealtimeGroupResolution.Denied();
+            return RealtimeGroupResolution
+                .Denied();
         }
 
-        var school = await _schools.GetByIdAsync(
-            actor.SchoolId.Value,
-            cancellationToken);
+        var school =
+            await _schools.GetByIdAsync(
+                actor.SchoolId.Value,
+                cancellationToken);
 
         if (school is null ||
             school.Status != SchoolStatus.Active)
         {
-            return RealtimeGroupResolution.Denied();
+            return RealtimeGroupResolution
+                .Denied();
         }
 
-        if (actor.Roles[0] == RoleNames.SchoolAdmin)
+        var schoolAnalytics =
+            RealtimeGroupNames
+                .SchoolAnalytics(
+                    school.Id);
+
+        if (actor.Roles[0] ==
+            RoleNames.SchoolAdmin)
         {
-            return RealtimeGroupResolution.Success(
-                [
-                    RealtimeGroupNames.SchoolAdmins(
-                        school.Id)
-                ]);
+            return RealtimeGroupResolution
+                .Success(
+                    [
+                        schoolAnalytics,
+                        RealtimeGroupNames
+                            .SchoolAdmins(
+                                school.Id)
+                    ]);
         }
 
-        if (actor.Roles[0] != RoleNames.Teacher)
-            return RealtimeGroupResolution.Denied();
+        if (actor.Roles[0] !=
+            RoleNames.Teacher)
+        {
+            return RealtimeGroupResolution
+                .Denied();
+        }
 
-        var assignments = await _access.GetTeacherAssignmentsAsync(
-            school.Id,
-            actorUserId,
-            cancellationToken);
-
-        var groups = assignments
-            .Select(x =>
-                RealtimeGroupNames.Teachers(
+        var assignments =
+            await _access
+                .GetTeacherAssignmentsAsync(
                     school.Id,
-                    x.ClassGroupId,
-                    x.SubjectId))
-            .Distinct(StringComparer.Ordinal)
-            .OrderBy(x => x, StringComparer.Ordinal)
-            .ToArray();
+                    actorUserId,
+                    cancellationToken);
 
-        return RealtimeGroupResolution.Success(groups);
+        var groups =
+            assignments
+                .Select(
+                    x =>
+                        RealtimeGroupNames
+                            .Teachers(
+                                school.Id,
+                                x.ClassGroupId,
+                                x.SubjectId))
+                .Append(
+                    schoolAnalytics)
+                .Distinct(
+                    StringComparer.Ordinal)
+                .OrderBy(
+                    x => x,
+                    StringComparer.Ordinal)
+                .ToArray();
+
+        return RealtimeGroupResolution
+            .Success(groups);
     }
 }

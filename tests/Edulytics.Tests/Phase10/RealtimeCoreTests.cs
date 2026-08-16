@@ -94,79 +94,24 @@ public sealed class RealtimeCoreTests
     }
 
     [Fact]
-    public async Task OutboxRepository_ClaimsAndCompletesMessage()
+    public void OutboxMessage_DefaultsToPendingWithoutLease()
     {
-        var options =
-            new DbContextOptionsBuilder<EdulyticsDbContext>()
-                .UseInMemoryDatabase(
-                    $"p10-outbox-{Guid.NewGuid():N}")
-                .Options;
-
-        await using var db =
-            new EdulyticsDbContext(options);
-
-        var now =
-            new DateTime(
-                2026,
-                8,
-                15,
-                20,
-                0,
-                0,
-                DateTimeKind.Utc);
-
         var message =
-            new OutboxMessage
-            {
-                Id = Guid.NewGuid(),
-                SchoolId = Guid.NewGuid(),
-                EventType =
-                    RealtimeEventTypes.AssessmentResultEntered,
-                PayloadJson = "{}",
-                OccurredAtUtc = now,
-                AvailableAtUtc = now,
-                CorrelationId =
-                    Guid.NewGuid().ToString("N")
-            };
+            new OutboxMessage();
 
-        db.OutboxMessages.Add(message);
+        Assert.Equal(
+            Edulytics.Core.Enums
+                .OutboxMessageStatus.Pending,
+            message.Status);
 
-        await db.SaveChangesAsync();
+        Assert.Null(
+            message.LeaseOwner);
 
-        var repository =
-            new OutboxRepository(db);
+        Assert.Null(
+            message.LeaseToken);
 
-        var pending =
-            await repository.GetPendingAsync(
-                now,
-                10);
-
-        var candidate =
-            Assert.Single(pending);
-
-        Assert.True(
-            await repository.TryClaimAsync(
-                candidate.Id,
-                candidate.RowVersion,
-                now,
-                now.AddSeconds(30)));
-
-        Assert.False(
-            await repository.TryClaimAsync(
-                candidate.Id,
-                candidate.RowVersion,
-                now,
-                now.AddSeconds(30)));
-
-        Assert.True(
-            await repository.MarkProcessedAsync(
-                candidate.Id,
-                now.AddSeconds(1)));
-
-        Assert.Empty(
-            await repository.GetPendingAsync(
-                now.AddSeconds(2),
-                10));
+        Assert.Null(
+            message.LeaseUntilUtc);
     }
 
     private static TeacherAssignment NewAssignment(

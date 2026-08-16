@@ -11,34 +11,40 @@
         return;
     }
 
-    const storageKey =
-        "edulytics.analytics.liveUpdate";
-
     const connection =
         new signalR.HubConnectionBuilder()
             .withUrl("/hubs/analytics")
             .withAutomaticReconnect()
             .build();
 
-    let refreshScheduled = false;
+    const refreshDebounceMs = 450;
+    let refreshTimer = null;
+
+    function scheduleAuthoritativeRefresh(reason) {
+        if (refreshTimer !== null) {
+            window.clearTimeout(refreshTimer);
+        }
+
+        document.documentElement.dataset
+            .analyticsRealtimeReason =
+            reason;
+
+        refreshTimer =
+            window.setTimeout(
+                () => {
+                    // SignalR is only an invalidation hint.
+                    // The MVC GET remains the authoritative state.
+                    window.location.reload();
+                },
+                refreshDebounceMs
+            );
+    }
 
     connection.on(
         "AnalyticsUpdated",
         () => {
-            if (refreshScheduled) {
-                return;
-            }
-
-            refreshScheduled = true;
-
-            sessionStorage.setItem(
-                storageKey,
-                "1"
-            );
-
-            window.setTimeout(
-                () => window.location.reload(),
-                120
+            scheduleAuthoritativeRefresh(
+                "event"
             );
         });
 
@@ -52,6 +58,11 @@
         document.documentElement.dataset
             .analyticsRealtime =
             "connected";
+
+        // Events can be missed during disconnect.
+        scheduleAuthoritativeRefresh(
+            "reconnect"
+        );
     });
 
     connection.onclose(() => {

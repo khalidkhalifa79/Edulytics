@@ -14,6 +14,9 @@ public static class RealtimeEventTypes
 
 public static class RealtimeGroupNames
 {
+    public static string SchoolAnalytics(Guid schoolId) =>
+        $"school:{schoolId:N}:analytics";
+
     public static string SchoolAdmins(Guid schoolId) =>
         $"school:{schoolId:N}:admins";
 
@@ -45,6 +48,11 @@ public sealed record ImportBatchCompletedEvent(
     string ImportType,
     IReadOnlyList<ImportDashboardScope> AffectedScopes,
     DateTime OccurredAtUtc);
+
+public sealed record AnalyticsInvalidationMessage(
+    Guid RefreshId,
+    Guid SchoolId,
+    DateTime UpdatedAtUtc);
 
 public sealed record DashboardUpdatedMessage(
     Guid EventId,

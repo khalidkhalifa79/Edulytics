@@ -1,4 +1,5 @@
 using Edulytics.Core.Entities;
+using Edulytics.Core.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -7,7 +8,8 @@ namespace Edulytics.Data.Configurations;
 public sealed class OutboxMessageConfiguration
     : IEntityTypeConfiguration<OutboxMessage>
 {
-    public void Configure(EntityTypeBuilder<OutboxMessage> builder)
+    public void Configure(
+        EntityTypeBuilder<OutboxMessage> builder)
     {
         builder.ToTable("OutboxMessages");
 
@@ -27,12 +29,21 @@ public sealed class OutboxMessageConfiguration
         builder.Property(x => x.AvailableAtUtc)
             .IsRequired();
 
+        builder.Property(x => x.Status)
+            .HasConversion<int>()
+            .HasDefaultValue(
+                OutboxMessageStatus.Pending)
+            .IsRequired();
+
         builder.Property(x => x.CorrelationId)
             .HasMaxLength(100)
             .IsRequired();
 
         builder.Property(x => x.LastError)
             .HasMaxLength(2000);
+
+        builder.Property(x => x.LeaseOwner)
+            .HasMaxLength(200);
 
         builder.Property(x => x.RowVersion)
             .IsRequired()
@@ -44,6 +55,16 @@ public sealed class OutboxMessageConfiguration
 
         builder.HasIndex(x => new
         {
+            x.Status,
+            x.AvailableAtUtc,
+            x.LeaseUntilUtc,
+            x.OccurredAtUtc
+        });
+
+        // Compatibility/readback index retained for accepted Phase 10
+        // contracts and operational processed-message queries.
+        builder.HasIndex(x => new
+        {
             x.ProcessedAtUtc,
             x.AvailableAtUtc,
             x.OccurredAtUtc
@@ -52,7 +73,8 @@ public sealed class OutboxMessageConfiguration
         builder.HasIndex(x => new
         {
             x.SchoolId,
-            x.ProcessedAtUtc
+            x.Status,
+            x.OccurredAtUtc
         });
 
         builder.HasOne<School>()
