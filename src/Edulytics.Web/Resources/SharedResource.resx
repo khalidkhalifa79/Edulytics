@@ -27,4 +27,37 @@
   <data name="BrandLogoPath" xml:space="preserve">
     <value>/images/brand/edulytics-en.png</value>
   </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Something went wrong</value>
+  </data>
+  <data name="ErrorHeading" xml:space="preserve">
+    <value>We could not complete this request.</value>
+  </data>
+  <data name="ErrorMessage" xml:space="preserve">
+    <value>Try again. If the problem continues, give support the correlation ID below.</value>
+  </data>
+  <data name="ErrorCorrelationLabel" xml:space="preserve">
+    <value>Correlation ID</value>
+  </data>
+  <data name="ErrorReturnHome" xml:space="preserve">
+    <value>Return to start</value>
+  </data>
+  <data name="NotFoundTitle" xml:space="preserve">
+    <value>Page not found</value>
+  </data>
+  <data name="NotFoundHeading" xml:space="preserve">
+    <value>We could not find that page.</value>
+  </data>
+  <data name="NotFoundMessage" xml:space="preserve">
+    <value>The address may be incorrect or the page may have moved.</value>
+  </data>
+  <data name="ServiceUnavailableTitle" xml:space="preserve">
+    <value>Service unavailable</value>
+  </data>
+  <data name="ServiceUnavailableHeading" xml:space="preserve">
+    <value>The service is temporarily unavailable.</value>
+  </data>
+  <data name="ServiceUnavailableMessage" xml:space="preserve">
+    <value>Try again shortly. If the problem continues, give support the correlation ID below.</value>
+  </data>
 </root>

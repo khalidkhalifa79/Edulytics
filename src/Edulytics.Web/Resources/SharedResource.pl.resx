@@ -27,4 +27,37 @@
   <data name="BrandLogoPath" xml:space="preserve">
     <value>/images/brand/edulityks-pl.png</value>
   </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Coś poszło nie tak</value>
+  </data>
+  <data name="ErrorHeading" xml:space="preserve">
+    <value>Nie udało się zrealizować tego żądania.</value>
+  </data>
+  <data name="ErrorMessage" xml:space="preserve">
+    <value>Spróbuj ponownie. Jeśli problem będzie się powtarzał, przekaż pomocy technicznej poniższy identyfikator korelacji.</value>
+  </data>
+  <data name="ErrorCorrelationLabel" xml:space="preserve">
+    <value>Identyfikator korelacji</value>
+  </data>
+  <data name="ErrorReturnHome" xml:space="preserve">
+    <value>Wróć na początek</value>
+  </data>
+  <data name="NotFoundTitle" xml:space="preserve">
+    <value>Nie znaleziono strony</value>
+  </data>
+  <data name="NotFoundHeading" xml:space="preserve">
+    <value>Nie udało się znaleźć tej strony.</value>
+  </data>
+  <data name="NotFoundMessage" xml:space="preserve">
+    <value>Adres może być nieprawidłowy albo strona została przeniesiona.</value>
+  </data>
+  <data name="ServiceUnavailableTitle" xml:space="preserve">
+    <value>Usługa jest niedostępna</value>
+  </data>
+  <data name="ServiceUnavailableHeading" xml:space="preserve">
+    <value>Usługa jest tymczasowo niedostępna.</value>
+  </data>
+  <data name="ServiceUnavailableMessage" xml:space="preserve">
+    <value>Spróbuj ponownie za chwilę. Jeśli problem będzie się powtarzał, przekaż pomocy technicznej poniższy identyfikator korelacji.</value>
+  </data>
 </root>

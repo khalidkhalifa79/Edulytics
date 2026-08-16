@@ -1,25 +1,68 @@
-﻿@model ErrorViewModel
+@model Edulytics.Web.Models.ErrorViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.SharedResource> T
 @{
-    ViewData["Title"] = "Error";
+    var isNotFound =
+        Model.StatusCode == 404;
+
+    var isUnavailable =
+        Model.StatusCode >= 500;
+
+    var title =
+        isNotFound
+            ? T["NotFoundTitle"].Value
+            : isUnavailable
+                ? T["ServiceUnavailableTitle"].Value
+                : T["ErrorTitle"].Value;
+
+    var heading =
+        isNotFound
+            ? T["NotFoundHeading"].Value
+            : isUnavailable
+                ? T["ServiceUnavailableHeading"].Value
+                : T["ErrorHeading"].Value;
+
+    var message =
+        isNotFound
+            ? T["NotFoundMessage"].Value
+            : isUnavailable
+                ? T["ServiceUnavailableMessage"].Value
+                : T["ErrorMessage"].Value;
+
+    ViewData["Title"] = title;
 }
 
-<h1 class="text-danger">Error.</h1>
-<h2 class="text-danger">An error occurred while processing your request.</h2>
+<main class="production-error-page">
+    <section class="production-error-card"
+             aria-labelledby="production-error-heading">
+        <p class="production-error-status">
+            @Model.StatusCode
+        </p>
 
-@if (Model.ShowRequestId)
-{
-    <p>
-        <strong>Request ID:</strong> <code>@Model.RequestId</code>
-    </p>
-}
+        <h1 id="production-error-heading">
+            @heading
+        </h1>
 
-<h3>Development Mode</h3>
-<p>
-    Swapping to <strong>Development</strong> environment will display more detailed information about the error that occurred.
-</p>
-<p>
-    <strong>The Development environment shouldn't be enabled for deployed applications.</strong>
-    It can result in displaying sensitive information from exceptions to end users.
-    For local debugging, enable the <strong>Development</strong> environment by setting the <strong>ASPNETCORE_ENVIRONMENT</strong> environment variable to <strong>Development</strong>
-    and restarting the app.
-</p>
+        <p class="production-error-message">
+            @message
+        </p>
+
+        @if (Model.ShowRequestId)
+        {
+            <div class="production-error-correlation">
+                <strong>
+                    @T["ErrorCorrelationLabel"]:
+                </strong>
+
+                <code>
+                    @Model.RequestId
+                </code>
+            </div>
+        }
+
+        <a class="production-error-link"
+           asp-controller="Home"
+           asp-action="Index">
+            @T["ErrorReturnHome"]
+        </a>
+    </section>
+</main>

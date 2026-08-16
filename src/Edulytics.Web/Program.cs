@@ -1,84 +1,147 @@
-using Edulytics.Web.Hubs;
-using System.Threading.RateLimiting;
-using System.Security.Claims;
-using Microsoft.AspNetCore.RateLimiting;
-using Edulytics.Web;
 using System.Globalization;
+using System.Security.Claims;
+using System.Threading.RateLimiting;
+using Edulytics.Web;
 using Edulytics.Web.Bootstrap;
 using Edulytics.Web.Extensions;
+using Edulytics.Web.Health;
+using Edulytics.Web.Hubs;
 using Edulytics.Web.Localization;
-using Microsoft.AspNetCore.Localization;
+using Edulytics.Web.Middleware;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.RateLimiting;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder =
+    WebApplication.CreateBuilder(args);
 
 if (builder.Environment.IsDevelopment())
 {
-    builder.Configuration.AddUserSecrets<Program>(
-        optional: true);
+    builder.Configuration
+        .AddUserSecrets<Program>(
+            optional: true);
 }
 
-builder.Services.AddLocalization(options =>
+if (builder.Environment.IsProduction())
 {
-    options.ResourcesPath = "Resources";
-});
+    builder.Logging.ClearProviders();
+
+    builder.Logging.AddJsonConsole(
+        options =>
+        {
+            options.IncludeScopes = true;
+            options.UseUtcTimestamp = true;
+
+            options.TimestampFormat =
+                "yyyy-MM-dd'T'HH:mm:ss.fff'Z'";
+        });
+}
+
+builder.Services.AddLocalization(
+    options =>
+    {
+        options.ResourcesPath =
+            "Resources";
+    });
 
 builder.Services
     .AddControllersWithViews()
     .AddViewLocalization()
-    .AddDataAnnotationsLocalization(options =>
-    {
-        options.DataAnnotationLocalizerProvider =
-            (_, factory) =>
-                factory.Create(
-                    typeof(ValidationResource));
-    });
+    .AddDataAnnotationsLocalization(
+        options =>
+        {
+            options
+                .DataAnnotationLocalizerProvider =
+                (_, factory) =>
+                    factory.Create(
+                        typeof(
+                            ValidationResource));
+        });
 
-builder.Services.AddEdulyticsIdentityAndData(
-    builder.Configuration);
+builder.Services
+    .AddEdulyticsIdentityAndData(
+        builder.Configuration);
 
 var supportedCultures =
-    CultureCookie.SupportedCultures
-        .Select(x => new CultureInfo(x))
+    CultureCookie
+        .SupportedCultures
+        .Select(
+            x =>
+                new CultureInfo(x))
         .ToArray();
 
-builder.Services.Configure<RequestLocalizationOptions>(
-    options =>
-    {
-        options.DefaultRequestCulture =
-            new RequestCulture("en");
+builder.Services
+    .Configure<
+        RequestLocalizationOptions>(
+        options =>
+        {
+            options
+                .DefaultRequestCulture =
+                new RequestCulture(
+                    "en");
 
-        options.SupportedCultures =
-            supportedCultures;
+            options
+                .SupportedCultures =
+                supportedCultures;
 
-        options.SupportedUICultures =
-            supportedCultures;
+            options
+                .SupportedUICultures =
+                supportedCultures;
 
-        options.RequestCultureProviders.Clear();
+            options
+                .RequestCultureProviders
+                .Clear();
 
-        options.RequestCultureProviders.Add(
-            new CookieRequestCultureProvider
-            {
-                CookieName = CultureCookie.Name
-            });
-    });
+            options
+                .RequestCultureProviders
+                .Add(
+                    new CookieRequestCultureProvider
+                    {
+                        CookieName =
+                            CultureCookie.Name
+                    });
+        });
 
-builder.Services.AddSchoolManagementPhase04();
-builder.Services.AddSchoolUserManagementPhase05();
-builder.Services.AddAcademicStructurePhase06();
-builder.Services.AddCurriculumPhase07();
-builder.Services.AddAssessmentsPhase08();
-builder.Services.AddAnalyticsPhase09();
-builder.Services.AddRealtimeDashboardsPhase10();
-builder.Services.AddDataImportPhase11();
-builder.Services.AddInvitationEmailDelivery(
-    builder.Configuration);
+builder.Services
+    .AddSchoolManagementPhase04();
+
+builder.Services
+    .AddSchoolUserManagementPhase05();
+
+builder.Services
+    .AddAcademicStructurePhase06();
+
+builder.Services
+    .AddCurriculumPhase07();
+
+builder.Services
+    .AddAssessmentsPhase08();
+
+builder.Services
+    .AddAnalyticsPhase09();
+
+builder.Services
+    .AddRealtimeDashboardsPhase10();
+
+builder.Services
+    .AddDataImportPhase11();
+
+builder.Services
+    .AddInvitationEmailDelivery(
+        builder.Configuration);
+
+builder.Services
+    .AddProductionHardeningPhase12(
+        builder.Configuration,
+        builder.Environment);
 
 builder.Services.AddRateLimiter(
     options =>
     {
         options.RejectionStatusCode =
-            StatusCodes.Status429TooManyRequests;
+            StatusCodes
+                .Status429TooManyRequests;
 
         options.AddPolicy(
             "SchoolUserCreate",
@@ -86,7 +149,8 @@ builder.Services.AddRateLimiter(
             {
                 var actor =
                     context.User.FindFirst(
-                        ClaimTypes.NameIdentifier)
+                        ClaimTypes
+                            .NameIdentifier)
                         ?.Value
                     ?? context.Connection
                         .RemoteIpAddress
@@ -99,14 +163,23 @@ builder.Services.AddRateLimiter(
                         _ =>
                             new FixedWindowRateLimiterOptions
                             {
-                                PermitLimit = 20,
+                                PermitLimit =
+                                    20,
+
                                 Window =
-                                    TimeSpan.FromMinutes(10),
-                                QueueLimit = 0,
+                                    TimeSpan
+                                        .FromMinutes(
+                                            10),
+
+                                QueueLimit =
+                                    0,
+
                                 QueueProcessingOrder =
                                     QueueProcessingOrder
                                         .OldestFirst,
-                                AutoReplenishment = true
+
+                                AutoReplenishment =
+                                    true
                             });
             });
 
@@ -116,7 +189,8 @@ builder.Services.AddRateLimiter(
             {
                 var actor =
                     context.User.FindFirst(
-                        ClaimTypes.NameIdentifier)
+                        ClaimTypes
+                            .NameIdentifier)
                         ?.Value
                     ?? context.Connection
                         .RemoteIpAddress
@@ -124,7 +198,9 @@ builder.Services.AddRateLimiter(
                     ?? "anonymous";
 
                 var target =
-                    context.Request.RouteValues["id"]
+                    context.Request
+                        .RouteValues[
+                            "id"]
                         ?.ToString()
                     ?? "unknown";
 
@@ -134,14 +210,23 @@ builder.Services.AddRateLimiter(
                         _ =>
                             new FixedWindowRateLimiterOptions
                             {
-                                PermitLimit = 3,
+                                PermitLimit =
+                                    3,
+
                                 Window =
-                                    TimeSpan.FromMinutes(10),
-                                QueueLimit = 0,
+                                    TimeSpan
+                                        .FromMinutes(
+                                            10),
+
+                                QueueLimit =
+                                    0,
+
                                 QueueProcessingOrder =
                                     QueueProcessingOrder
                                         .OldestFirst,
-                                AutoReplenishment = true
+
+                                AutoReplenishment =
+                                    true
                             });
             });
 
@@ -161,78 +246,166 @@ builder.Services.AddRateLimiter(
                         _ =>
                             new FixedWindowRateLimiterOptions
                             {
-                                PermitLimit = 10,
+                                PermitLimit =
+                                    10,
+
                                 Window =
-                                    TimeSpan.FromMinutes(15),
-                                QueueLimit = 0,
+                                    TimeSpan
+                                        .FromMinutes(
+                                            15),
+
+                                QueueLimit =
+                                    0,
+
                                 QueueProcessingOrder =
                                     QueueProcessingOrder
                                         .OldestFirst,
-                                AutoReplenishment = true
+
+                                AutoReplenishment =
+                                    true
                             });
             });
     });
 
-builder.Services.Configure<ForwardedHeadersOptions>(
-    options =>
-    {
-        options.ForwardedHeaders =
-            ForwardedHeaders.XForwardedFor |
-            ForwardedHeaders.XForwardedProto |
-            ForwardedHeaders.XForwardedHost;
-
-        if (string.Equals(
-                Environment.GetEnvironmentVariable("CODESPACES"),
-                "true",
-                StringComparison.OrdinalIgnoreCase))
+builder.Services
+    .Configure<
+        ForwardedHeadersOptions>(
+        options =>
         {
-            options.KnownIPNetworks.Clear();
-            options.KnownProxies.Clear();
-        }
-    });
+            options.ForwardedHeaders =
+                ForwardedHeaders
+                    .XForwardedFor |
+                ForwardedHeaders
+                    .XForwardedProto |
+                ForwardedHeaders
+                    .XForwardedHost;
 
-var app = builder.Build();
+            if (string.Equals(
+                    Environment
+                        .GetEnvironmentVariable(
+                            "CODESPACES"),
+                    "true",
+                    StringComparison
+                        .OrdinalIgnoreCase))
+            {
+                options.KnownIPNetworks
+                    .Clear();
 
-using (var scope = app.Services.CreateScope())
+                options.KnownProxies
+                    .Clear();
+            }
+        });
+
+var app =
+    builder.Build();
+
+using (var scope =
+       app.Services.CreateScope())
 {
     var bootstrapper =
         scope.ServiceProvider
             .GetRequiredService<
                 EdulyticsDatabaseBootstrapper>();
 
-    await bootstrapper.InitializeAsync();
-}
-
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Home/Error");
-    app.UseHsts();
+    await bootstrapper
+        .InitializeAsync();
 }
 
 app.UseForwardedHeaders();
+
+app.UseMiddleware<
+    CorrelationIdMiddleware>();
+
+app.UseMiddleware<
+    SecurityHeadersMiddleware>();
+
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler(
+        "/system/error");
+
+    app.UseHsts();
+}
 
 app.UseHttpsRedirection();
 
 app.UseRequestLocalization();
 
+if (!app.Environment.IsDevelopment())
+{
+    app.UseStatusCodePagesWithReExecute(
+        "/system/status/{0}");
+}
+
 app.UseRouting();
 
 app.UseAuthentication();
+
 app.UseRateLimiter();
+
 app.UseAuthorization();
 
+app.MapHealthChecks(
+        "/health/live",
+        new HealthCheckOptions
+        {
+            Predicate =
+                registration =>
+                    registration.Tags
+                        .Contains(
+                            "live"),
+
+            ResponseWriter =
+                HealthResponseWriter
+                    .WriteAsync
+        })
+    .AllowAnonymous();
+
+app.MapHealthChecks(
+        "/health/ready",
+        new HealthCheckOptions
+        {
+            Predicate =
+                registration =>
+                    registration.Tags
+                        .Contains(
+                            "ready"),
+
+            ResponseWriter =
+                HealthResponseWriter
+                    .WriteAsync
+        })
+    .AllowAnonymous();
+
 app.MapStaticAssets()
-    .Add(endpointBuilder =>
-        endpointBuilder.Metadata.Add(
-            new Microsoft.AspNetCore.Authorization.AllowAnonymousAttribute()));
+    .Add(
+        endpointBuilder =>
+            endpointBuilder.Metadata
+                .Add(
+                    new Microsoft
+                        .AspNetCore
+                        .Authorization
+                        .AllowAnonymousAttribute()));
 
 app.MapControllerRoute(
-        name: "default",
+        name:
+            "default",
         pattern:
             "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
 
-app.MapHub<AnalyticsHub>("/hubs/analytics");
+app.MapHub<AnalyticsHub>(
+    "/hubs/analytics");
+
+app.MapFallback(
+        context =>
+        {
+            context.Response.StatusCode =
+                StatusCodes.Status404NotFound;
+
+            return Task.CompletedTask;
+        })
+    .AllowAnonymous();
 
 app.Run();
 

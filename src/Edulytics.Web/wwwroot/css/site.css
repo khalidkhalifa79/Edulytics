@@ -2752,3 +2752,82 @@ input:focus-visible {
         gap: .15rem;
     }
 }
+
+/* Phase 12 - production error experience */
+.production-error-page {
+    width: min(100% - 2rem, 56rem);
+    margin-inline: auto;
+    padding-block: clamp(2rem, 8vw, 6rem);
+}
+
+.production-error-card {
+    display: grid;
+    gap: 1rem;
+    padding: clamp(1.25rem, 5vw, 2.5rem);
+    border: 1px solid #d8dee8;
+    border-radius: 1rem;
+    background: #fff;
+    overflow-wrap: anywhere;
+}
+
+.production-error-status,
+.production-error-card h1,
+.production-error-message,
+.production-error-correlation {
+    margin: 0;
+}
+
+.production-error-status {
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+}
+
+.production-error-correlation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+    align-items: baseline;
+}
+
+.production-error-correlation code {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+.production-error-link {
+    display: inline-flex;
+    width: fit-content;
+    max-width: 100%;
+    min-height: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    padding: .7rem 1rem;
+    border-radius: .65rem;
+    background: #111827;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.production-error-link:hover,
+.production-error-link:focus-visible {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 420px) {
+    .production-error-page {
+        width: min(100% - 1rem, 56rem);
+        padding-block: 1rem;
+    }
+
+    .production-error-card {
+        padding: 1rem;
+        border-radius: .75rem;
+    }
+
+    .production-error-link {
+        width: 100%;
+    }
+}

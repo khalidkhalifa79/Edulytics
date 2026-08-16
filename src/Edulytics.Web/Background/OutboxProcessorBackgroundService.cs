@@ -5,6 +5,7 @@ using Edulytics.Core.Realtime;
 using Edulytics.Services.Analytics;
 using Edulytics.Services.Imports;
 using Edulytics.Services.Realtime;
+using Edulytics.Web.Production;
 
 namespace Edulytics.Web.Background;
 
@@ -24,25 +25,52 @@ public sealed class OutboxProcessorBackgroundService
     private readonly ILogger<
         OutboxProcessorBackgroundService> _logger;
 
+    private readonly OutboxWorkerHealthState _health;
+
     public OutboxProcessorBackgroundService(
         IServiceScopeFactory scopeFactory,
         ILogger<
-            OutboxProcessorBackgroundService> logger)
+            OutboxProcessorBackgroundService> logger,
+        OutboxWorkerHealthState health)
     {
-        _scopeFactory = scopeFactory;
-        _logger = logger;
+        _scopeFactory =
+            scopeFactory ??
+            throw new ArgumentNullException(
+                nameof(scopeFactory));
+
+        _logger =
+            logger ??
+            throw new ArgumentNullException(
+                nameof(logger));
+
+        _health =
+            health ??
+            throw new ArgumentNullException(
+                nameof(health));
     }
 
     protected override async Task ExecuteAsync(
         CancellationToken stoppingToken)
     {
+        _health.MarkStarted(
+            DateTime.UtcNow);
+
+        _logger.LogInformation(
+            "Outbox processor started.");
+
         while (!stoppingToken.IsCancellationRequested)
         {
+            _health.RecordHeartbeat(
+                DateTime.UtcNow);
+
             try
             {
                 var found =
                     await ProcessBatchAsync(
                         stoppingToken);
+
+                _health.RecordHeartbeat(
+                    DateTime.UtcNow);
 
                 if (!found)
                 {
