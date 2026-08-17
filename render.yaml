@@ -1,0 +1,80 @@
+services:
+  - type: web
+    name: edulytics-staging
+    runtime: docker
+    plan: starter
+    region: frankfurt
+    branch: main
+
+    autoDeployTrigger: checksPass
+
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+
+    healthCheckPath: /health/ready
+    maxShutdownDelaySeconds: 60
+
+    preDeployCommand: >-
+      ConnectionStrings__DefaultConnection="$ConnectionStrings__MigrationConnection"
+      EDULYTICS_CONNECTION_STRING="$ConnectionStrings__MigrationConnection"
+      /app/efbundle
+      --connection "$ConnectionStrings__MigrationConnection"
+
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+
+      - key: Edulytics__Hosting__TrustForwardedHeaders
+        value: "true"
+
+      - key: Edulytics__Hosting__DataProtectionApplicationName
+        value: Edulytics-Staging
+
+      - key: Edulytics__Hosting__RequireDataProtectionCertificate
+        value: "true"
+
+      - key: Edulytics__Hosting__DataProtectionCertificateBase64
+        sync: false
+
+      - key: Edulytics__Hosting__DataProtectionCertificatePassword
+        sync: false
+
+      # Neon pooled runtime connection.
+      - key: ConnectionStrings__DefaultConnection
+        sync: false
+
+      # Neon DIRECT/non-pooler migration connection.
+      - key: ConnectionStrings__MigrationConnection
+        sync: false
+
+      # Optional after the first secure bootstrap.
+      - key: Edulytics__SuperAdmin__Email
+        sync: false
+
+      - key: Edulytics__SuperAdmin__Password
+        sync: false
+
+      # SMTP sandbox / staging provider.
+      - key: Email__Smtp__Enabled
+        sync: false
+
+      - key: Email__Smtp__Host
+        sync: false
+
+      - key: Email__Smtp__Port
+        sync: false
+
+      - key: Email__Smtp__Security
+        sync: false
+
+      - key: Email__Smtp__Username
+        sync: false
+
+      - key: Email__Smtp__Password
+        sync: false
+
+      - key: Email__Smtp__FromAddress
+        sync: false
+
+      - key: Email__Smtp__FromName
+        value: Edulytics

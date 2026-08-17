@@ -1,8 +1,10 @@
+using System.Security.Cryptography.X509Certificates;
 using Edulytics.Core.Constants;
 using Edulytics.Data.Contexts;
 using Edulytics.Data.Identity;
 using Edulytics.Web.Authorization;
 using Edulytics.Web.Bootstrap;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -58,6 +60,85 @@ public static class ServiceCollectionExtensions
                         npgsql.CommandTimeout(
                             commandTimeoutSeconds));
             });
+
+        var dataProtectionApplicationName =
+            configuration[
+                "Edulytics:Hosting:DataProtectionApplicationName"]
+            ?? "Edulytics";
+
+        var dataProtectionBuilder =
+            services
+                .AddDataProtection()
+                .SetApplicationName(
+                    dataProtectionApplicationName)
+                .PersistKeysToDbContext<
+                    EdulyticsDbContext>();
+
+        var requireDataProtectionCertificate =
+            configuration.GetValue<bool>(
+                "Edulytics:Hosting:RequireDataProtectionCertificate");
+
+        var dataProtectionCertificateBase64 =
+            configuration[
+                "Edulytics:Hosting:DataProtectionCertificateBase64"];
+
+        var dataProtectionCertificatePassword =
+            configuration[
+                "Edulytics:Hosting:DataProtectionCertificatePassword"];
+
+        if (string.IsNullOrWhiteSpace(
+                dataProtectionCertificateBase64))
+        {
+            if (requireDataProtectionCertificate)
+            {
+                throw new InvalidOperationException(
+                    "A Data Protection certificate is required "
+                    + "for this environment.");
+            }
+        }
+        else
+        {
+            if (string.IsNullOrWhiteSpace(
+                    dataProtectionCertificatePassword))
+            {
+                throw new InvalidOperationException(
+                    "The Data Protection certificate password "
+                    + "is required when a certificate is configured.");
+            }
+
+            byte[] certificateBytes;
+
+            try
+            {
+                certificateBytes =
+                    Convert.FromBase64String(
+                        dataProtectionCertificateBase64);
+            }
+            catch (FormatException exception)
+            {
+                throw new InvalidOperationException(
+                    "The configured Data Protection certificate "
+                    + "is not valid Base64.",
+                    exception);
+            }
+
+            var certificate =
+                X509CertificateLoader.LoadPkcs12(
+                    certificateBytes,
+                    dataProtectionCertificatePassword,
+                    X509KeyStorageFlags.EphemeralKeySet);
+
+            if (!certificate.HasPrivateKey)
+            {
+                throw new InvalidOperationException(
+                    "The configured Data Protection certificate "
+                    + "must contain a private key.");
+            }
+
+            dataProtectionBuilder
+                .ProtectKeysWithCertificate(
+                    certificate);
+        }
 
         services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
             {

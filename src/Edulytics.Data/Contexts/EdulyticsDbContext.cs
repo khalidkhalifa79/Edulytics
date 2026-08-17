@@ -2,12 +2,15 @@ using System.Security.Cryptography;
 using Edulytics.Core.Entities;
 using Edulytics.Data.Configurations;
 using Edulytics.Data.Identity;
+using Microsoft.AspNetCore.DataProtection.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Edulytics.Data.Contexts;
 
-public class EdulyticsDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, Guid>
+public class EdulyticsDbContext
+    : IdentityDbContext<ApplicationUser, ApplicationRole, Guid>,
+      IDataProtectionKeyContext
 {
     public EdulyticsDbContext(DbContextOptions<EdulyticsDbContext> options)
         : base(options)
@@ -44,6 +47,7 @@ public class EdulyticsDbContext : IdentityDbContext<ApplicationUser, Application
     public DbSet<CurriculumFrameworkVersion> CurriculumFrameworkVersions => Set<CurriculumFrameworkVersion>();
     public DbSet<SchoolCurriculumAdoption> SchoolCurriculumAdoptions => Set<SchoolCurriculumAdoption>();
     public DbSet<IdempotencyRecord> IdempotencyRecords => Set<IdempotencyRecord>();
+    public DbSet<DataProtectionKey> DataProtectionKeys => Set<DataProtectionKey>();
 
     public override int SaveChanges(
         bool acceptAllChangesOnSuccess)

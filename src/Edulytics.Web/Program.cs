@@ -146,19 +146,30 @@ builder.Services
                 ForwardedHeaders
                     .XForwardedHost;
 
-            if (string.Equals(
+            var trustForwardedHeaders =
+                builder.Configuration
+                    .GetValue<bool>(
+                        "Edulytics:Hosting:TrustForwardedHeaders");
+
+            var isCodespaces =
+                string.Equals(
                     Environment
                         .GetEnvironmentVariable(
                             "CODESPACES"),
                     "true",
                     StringComparison
-                        .OrdinalIgnoreCase))
+                        .OrdinalIgnoreCase);
+
+            if (trustForwardedHeaders ||
+                isCodespaces)
             {
                 options.KnownIPNetworks
                     .Clear();
 
                 options.KnownProxies
                     .Clear();
+
+                options.ForwardLimit = 1;
             }
         });
 
