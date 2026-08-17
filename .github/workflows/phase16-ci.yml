@@ -276,6 +276,10 @@ jobs:
       security-events: write
       actions: read
 
+    env:
+      CODEQL_BUNDLE_VERSION: "2.26.3"
+      CODEQL_BUNDLE_SHA256: "77e5be1b550d66662e600e795b6cf2ea1729e853e3dc79e02594f767039d2a29"
+
     steps:
       - name: Checkout
         uses: actions/checkout@v7.0.1
@@ -285,23 +289,125 @@ jobs:
         with:
           dotnet-version: "10.0.200"
 
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v4
-        with:
-          languages: csharp
-          build-mode: manual
-          queries: security-extended
+      # Run CodeQL itself directly instead of codeql-action/init.
+      # This keeps the required SAST gate independent from the
+      # GitHub feature-enablement API that returned repeated HTTP 503.
+      - name: Install pinned CodeQL CLI bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          ARCHIVE="$RUNNER_TEMP/codeql-bundle-linux64.tar.gz"
+          EXTRACT_ROOT="$RUNNER_TEMP/codeql-distribution"
+
+          URL="https://github.com/github/codeql-action/releases/download/codeql-bundle-v${CODEQL_BUNDLE_VERSION}/codeql-bundle-linux64.tar.gz"
+
+          rm -rf "$EXTRACT_ROOT" "$ARCHIVE"
+          mkdir -p "$EXTRACT_ROOT"
+
+          curl \
+            --fail \
+            --location \
+            --retry 5 \
+            --retry-delay 5 \
+            --retry-all-errors \
+            --connect-timeout 30 \
+            --max-time 1200 \
+            "$URL" \
+            --output "$ARCHIVE"
+
+          printf '%s  %s\n' \
+            "$CODEQL_BUNDLE_SHA256" \
+            "$ARCHIVE" |
+            sha256sum --check -
+
+          tar \
+            -xzf "$ARCHIVE" \
+            -C "$EXTRACT_ROOT"
+
+          rm -f "$ARCHIVE"
+
+          CODEQL_BIN="$EXTRACT_ROOT/codeql/codeql"
+
+          if [[ ! -x "$CODEQL_BIN" ]]; then
+            echo "Expected CodeQL binary was not found:"
+            echo "$CODEQL_BIN"
+            find "$EXTRACT_ROOT" \
+              -maxdepth 3 \
+              -type f \
+              -name codeql \
+              -print || true
+            exit 1
+          fi
+
+          echo "CODEQL_BIN=$CODEQL_BIN" >> "$GITHUB_ENV"
+          echo "CODEQL_DB=$RUNNER_TEMP/edulytics-codeql-db" >> "$GITHUB_ENV"
+
+          "$CODEQL_BIN" version --format=terse
+
+          echo "PASS: pinned CodeQL bundle installed and checksum verified."
 
       - name: Restore
         run: dotnet restore Edulytics.sln
 
-      - name: Build for CodeQL
-        run: dotnet build Edulytics.sln --no-restore
+      - name: Create CodeQL C# database
+        shell: bash
+        run: |
+          set -euo pipefail
 
-      - name: Analyze
-        uses: github/codeql-action/analyze@v4
-        with:
-          output: artifacts/codeql
+          rm -rf "$CODEQL_DB"
+          mkdir -p artifacts/codeql
+
+          "$CODEQL_BIN" database create \
+            "$CODEQL_DB" \
+            --language=csharp \
+            --source-root="$GITHUB_WORKSPACE" \
+            --command="dotnet build Edulytics.sln --no-restore"
+
+          echo "PASS: CodeQL C# database created."
+
+      - name: Analyze security-extended
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          "$CODEQL_BIN" database analyze \
+            "$CODEQL_DB" \
+            "codeql/csharp-queries:codeql-suites/csharp-security-extended.qls" \
+            --format=sarifv2.1.0 \
+            --output=artifacts/codeql/results.sarif
+
+          test -s artifacts/codeql/results.sarif
+
+          python3 <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("artifacts/codeql/results.sarif")
+          document = json.loads(path.read_text(encoding="utf-8"))
+
+          if document.get("version") != "2.1.0":
+              raise SystemExit(
+                  "FAIL: unexpected SARIF version."
+              )
+
+          runs = document.get("runs")
+
+          if not isinstance(runs, list) or not runs:
+              raise SystemExit(
+                  "FAIL: CodeQL SARIF contains no runs."
+              )
+
+          results = sum(
+              len(run.get("results", []))
+              for run in runs
+          )
+
+          print(
+              "PASS: CodeQL security-extended analysis completed; "
+              f"SARIF runs={len(runs)} results={results}"
+          )
+          PY
 
       - name: Preserve CodeQL SARIF
         if: always()
