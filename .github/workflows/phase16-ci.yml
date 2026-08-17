@@ -1,0 +1,313 @@
+name: Phase16 CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase16-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  DOTNET_CLI_TELEMETRY_OPTOUT: "1"
+  DOTNET_NOLOGO: "1"
+
+jobs:
+  quality:
+    name: phase16-quality
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1.0.1
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v6.0.0.0.0
+        with:
+          dotnet-version: "10.0.200"
+
+      - name: Deliberate failure sentinel
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -f .ci/force-ci-failure ]]; then
+            echo "Intentional Phase16 failure proof requested."
+            exit 91
+          fi
+
+      - name: Restore tools
+        run: dotnet tool restore
+
+      - name: Restore
+        run: dotnet restore Edulytics.sln
+
+      - name: Build
+        run: dotnet build Edulytics.sln --no-restore
+
+      - name: Full regression with coverage
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p artifacts/tests artifacts/coverage
+          set -o pipefail
+          dotnet test tests/Edulytics.Tests/Edulytics.Tests.csproj \
+            --no-build \
+            --no-restore \
+            --collect:"XPlat Code Coverage" \
+            --results-directory artifacts/coverage \
+            --logger "trx;LogFileName=full.trx" \
+            2>&1 | tee artifacts/tests/full-test.log
+          bash scripts/ci-test-log-gate.sh \
+            artifacts/tests/full-test.log
+          python3 scripts/ci-coverage-gate.py \
+            .ci/quality-baseline.json \
+            artifacts/coverage \
+            artifacts/coverage/full.trx
+
+      - name: Localization parity
+        run: python3 scripts/ci-localization-parity.py
+
+      - name: Architecture gate
+        run: python3 scripts/ci-architecture-gate.py
+
+      - name: Tenant and IDOR regression gate
+        run: bash scripts/ci-tenant-idor-gate.sh artifacts/tenant
+
+      - name: Dependency vulnerability gate
+        run: bash scripts/ci-dependency-gate.sh artifacts/security/nuget-vulnerabilities.txt
+
+      - name: Repository-history secret gate
+        run: bash scripts/ci-secret-gate.sh artifacts/security/gitleaks.log
+
+      - name: Diff whitespace gate
+        run: git diff --check
+
+      - name: Preserve quality artifacts
+        if: always()
+        uses: actions/upload-artifact@v7.0.1.0.1
+        with:
+          name: phase16-quality-${{ github.sha }}
+          path: |
+            artifacts/tests
+            artifacts/coverage
+            artifacts/tenant
+            artifacts/security
+            .ci/quality-baseline.json
+          retention-days: 14
+          if-no-files-found: warn
+
+  postgres:
+    name: phase16-postgres
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_DB: edulytics_ci
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd="pg_isready -U postgres -d edulytics_ci"
+          --health-interval=5s
+          --health-timeout=5s
+          --health-retries=20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1.0.1
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v6.0.0.0.0
+        with:
+          dotnet-version: "10.0.200"
+
+      - name: Configure CI PostgreSQL connection
+        shell: bash
+        run: |
+          set -euo pipefail
+          {
+            echo 'ConnectionStrings__DefaultConnection=Host=127.0.0.1;Port=5432;Database=edulytics_ci;Username=postgres;Password=postgres;SSL Mode=Disable;Include Error Detail=true'
+            echo 'EDULYTICS_CI_POSTGRES_CONNECTION=Host=127.0.0.1;Port=5432;Database=edulytics_ci;Username=postgres;Password=postgres;SSL Mode=Disable;Include Error Detail=true'
+          } >> "$GITHUB_ENV"
+
+      - name: Restore tools
+        run: dotnet tool restore
+
+      - name: Restore
+        run: dotnet restore Edulytics.sln
+
+      - name: Build
+        run: dotnet build Edulytics.sln --no-restore
+
+      - name: Apply migrations
+        run: |
+          dotnet ef database update \
+            --project src/Edulytics.Data/Edulytics.Data.csproj \
+            --startup-project src/Edulytics.Web/Edulytics.Web.csproj \
+            --context EdulyticsDbContext
+
+      - name: Validate model and migration
+        run: |
+          mkdir -p artifacts/postgres
+          dotnet ef migrations has-pending-model-changes \
+            --project src/Edulytics.Data/Edulytics.Data.csproj \
+            --startup-project src/Edulytics.Web/Edulytics.Web.csproj \
+            --context EdulyticsDbContext
+          dotnet ef migrations script \
+            --idempotent \
+            --project src/Edulytics.Data/Edulytics.Data.csproj \
+            --startup-project src/Edulytics.Web/Edulytics.Web.csproj \
+            --context EdulyticsDbContext \
+            --output artifacts/postgres/migration.sql
+
+      - name: Real PostgreSQL repository/concurrency gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          set -o pipefail
+          dotnet run \
+            --project tests/Edulytics.PostgresGate/Edulytics.PostgresGate.csproj \
+            -c Release \
+            2>&1 | tee artifacts/postgres/postgres-gate.log
+          grep -q 'PHASE16_POSTGRES_GATE_PASS' \
+            artifacts/postgres/postgres-gate.log
+
+      - name: Preserve PostgreSQL artifacts
+        if: always()
+        uses: actions/upload-artifact@v7.0.1.0.1
+        with:
+          name: phase16-postgres-${{ github.sha }}
+          path: artifacts/postgres
+          retention-days: 14
+          if-no-files-found: warn
+
+  container:
+    name: phase16-container
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    needs:
+      - quality
+
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1.0.1
+
+      - name: Build immutable SHA image
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p artifacts/container
+          IMAGE="ghcr.io/${GITHUB_REPOSITORY,,}:${GITHUB_SHA}"
+          echo "IMAGE=$IMAGE" >> "$GITHUB_ENV"
+          docker build \
+            -f .ci/Dockerfile \
+            -t "$IMAGE" \
+            .
+          {
+            echo "image=$IMAGE"
+            docker image inspect \
+              --format='image_id={{.Id}}' \
+              "$IMAGE"
+          } > artifacts/container/image-metadata.txt
+
+      - name: Trivy image vulnerability gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run \
+            --rm \
+            -v /var/run/docker.sock:/var/run/docker.sock \
+            -v "$PWD:/work" \
+            aquasec/trivy:0.72.0 \
+            image \
+            --exit-code 1 \
+            --ignore-unfixed \
+            --severity HIGH,CRITICAL \
+            --format json \
+            --output /work/artifacts/container/trivy-image.json \
+            "$IMAGE"
+
+      - name: Push exact-SHA image to GHCR
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "${{ secrets.GITHUB_TOKEN }}" |
+            docker login ghcr.io \
+              -u "${{ github.actor }}" \
+              --password-stdin
+          docker push "$IMAGE"
+
+      - name: Preserve container artifacts
+        if: always()
+        uses: actions/upload-artifact@v7.0.1.0.1
+        with:
+          name: phase16-container-${{ github.sha }}
+          path: artifacts/container
+          retention-days: 14
+          if-no-files-found: warn
+
+  sast:
+    name: phase16-sast
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    permissions:
+      contents: read
+      security-events: write
+      actions: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1.0.1
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v6.0.0.0.0
+        with:
+          dotnet-version: "10.0.200"
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v4
+        with:
+          languages: csharp
+          build-mode: manual
+          queries: security-extended
+
+      - name: Restore
+        run: dotnet restore Edulytics.sln
+
+      - name: Build for CodeQL
+        run: dotnet build Edulytics.sln --no-restore
+
+      - name: Analyze
+        uses: github/codeql-action/analyze@v4
+        with:
+          output: artifacts/codeql
+
+      - name: Preserve CodeQL SARIF
+        if: always()
+        uses: actions/upload-artifact@v7.0.1.0.1
+        with:
+          name: phase16-codeql-${{ github.sha }}
+          path: artifacts/codeql
+          retention-days: 14
+          if-no-files-found: warn
