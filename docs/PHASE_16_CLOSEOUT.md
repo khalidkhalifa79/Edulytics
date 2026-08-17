@@ -92,3 +92,18 @@ Phase 17 owns actual Render + Neon staging deployment, production-like Docker
 runtime acceptance, TLS/domain, persistent Data Protection, SMTP sandbox,
 restart/rollback and staging smoke. Phase 16 establishes the automated gates
 that Phase 17 must pass.
+
+
+## Remote CI setup repair
+
+The first pushed Phase 16 workflow reached GitHub Actions but failed during
+job setup before repository code executed. A non-idempotent local normalization
+step had compounded otherwise valid action tags into invalid refs such as
+`v7.0.1.0.1`.
+
+The repair normalizes action references by complete token pattern instead of
+prefix replacement, validates each referenced action definition against GitHub
+before push, and runs actionlint before the repair commit is created.
+
+No product, database, migration, authorization, coverage, Docker, or security
+gate behavior was weakened by this repair.
