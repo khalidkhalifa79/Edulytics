@@ -4,6 +4,7 @@
 }
 @using System.Globalization
 @inject IStringLocalizer<SharedResource> SharedText
+@inject IStringLocalizer<AuditResource> AuditText
 <!DOCTYPE html>
 <html lang="@CultureInfo.CurrentUICulture.TwoLetterISOLanguageName">
 <head>
@@ -28,6 +29,16 @@
 
             @if (User.Identity?.IsAuthenticated == true)
             {
+                @if (User.IsInRole("SchoolAdmin") ||
+                     User.IsInRole("SuperAdmin"))
+                {
+                    <a class="ed-signout-button text-decoration-none"
+                       asp-controller="Audit"
+                       asp-action="Index">
+                        @AuditText["AuditLog"]
+                    </a>
+                }
+
                 <form asp-controller="Account"
                       asp-action="Logout"
                       method="post"

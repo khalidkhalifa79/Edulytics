@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+  </resheader>
+  <data name="AuditLog" xml:space="preserve">
+    <value>Dziennik audytu</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Dziennik audytu</value>
+  </data>
+  <data name="Subtitle" xml:space="preserve">
+    <value>Przeglądaj trwałe zdarzenia zgodności i śledź zmiany według użytkownika, encji i identyfikatora korelacji.</value>
+  </data>
+  <data name="SchoolId" xml:space="preserve">
+    <value>ID szkoły</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>Akcja</value>
+  </data>
+  <data name="EntityType" xml:space="preserve">
+    <value>Typ encji</value>
+  </data>
+  <data name="CorrelationId" xml:space="preserve">
+    <value>ID korelacji</value>
+  </data>
+  <data name="ActorUserId" xml:space="preserve">
+    <value>ID użytkownika wykonującego</value>
+  </data>
+  <data name="FromUtc" xml:space="preserve">
+    <value>Od (UTC)</value>
+  </data>
+  <data name="ToUtc" xml:space="preserve">
+    <value>Do (UTC)</value>
+  </data>
+  <data name="PageSize" xml:space="preserve">
+    <value>Rozmiar strony</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Szukaj</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Wyczyść</value>
+  </data>
+  <data name="TotalEntries" xml:space="preserve">
+    <value>Łączna liczba wpisów</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>Strona</value>
+  </data>
+  <data name="Of" xml:space="preserve">
+    <value>z</value>
+  </data>
+  <data name="NoEntries" xml:space="preserve">
+    <value>Brak wpisów audytu pasujących do wybranych filtrów.</value>
+  </data>
+  <data name="Timestamp" xml:space="preserve">
+    <value>Znacznik czasu</value>
+  </data>
+  <data name="Actor" xml:space="preserve">
+    <value>Użytkownik</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Rola</value>
+  </data>
+  <data name="Entity" xml:space="preserve">
+    <value>Encja</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Wynik</value>
+  </data>
+  <data name="Changes" xml:space="preserve">
+    <value>Zmiany</value>
+  </data>
+  <data name="OldValues" xml:space="preserve">
+    <value>Poprzednie wartości</value>
+  </data>
+  <data name="NewValues" xml:space="preserve">
+    <value>Nowe wartości</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Poprzednia</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Następna</value>
+  </data>
+</root>

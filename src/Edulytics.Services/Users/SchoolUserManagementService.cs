@@ -4,6 +4,7 @@ using Edulytics.Core.Entities;
 using Edulytics.Core.Enums;
 using Edulytics.Core.Interfaces;
 using Edulytics.Core.Users;
+using Edulytics.Services.Auditing;
 
 namespace Edulytics.Services.Users;
 
@@ -24,13 +25,19 @@ public sealed class SchoolUserManagementService
 
     private readonly ISchoolUserRepository _users;
     private readonly ISchoolRepository _schools;
+    private readonly IAuditService? _audit;
+    private readonly IApplicationTransactionManager? _transactions;
 
     public SchoolUserManagementService(
         ISchoolUserRepository users,
-        ISchoolRepository schools)
+        ISchoolRepository schools,
+        IAuditService? audit = null,
+        IApplicationTransactionManager? transactions = null)
     {
         _users = users;
         _schools = schools;
+        _audit = audit;
+        _transactions = transactions;
     }
 
     public async Task<SchoolUserQueryResult<SchoolUserListData>>
@@ -200,6 +207,10 @@ public sealed class SchoolUserManagementService
                 SchoolUserErrorCode.UserInvalidRole);
         }
 
+        await using var auditTransaction =
+            await BeginAuditTransactionAsync(
+                cancellationToken);
+
         var write = await _users.CreateAsync(
             scope.School!.Id,
             email,
@@ -218,6 +229,45 @@ public sealed class SchoolUserManagementService
                     : string.Empty,
                 mapped);
         }
+
+        if (_audit is not null)
+        {
+            await _audit.RecordAsync(
+                new AuditEvent(
+                    SchoolId: scope.School.Id,
+                    Action: "SchoolUser.Created",
+                    EntityType: "ApplicationUser",
+                    EntityId:
+                        write.User.Id.ToString("D"),
+                    Feature: "UserManagement",
+                    NewValues:
+                        new Dictionary<string, object?>
+                        {
+                            ["email"] =
+                                write.User.Email,
+                            ["role"] =
+                                GetSingleRole(
+                                    write.User.Roles)
+                                ?? role,
+                            ["isActive"] =
+                                write.User.IsActive,
+                            ["isLocked"] =
+                                write.User.IsLocked
+                        },
+                    ResultSummary:
+                        "School user created.",
+                    ActorUserIdOverride:
+                        actorUserId,
+                    ActorRoleOverride:
+                        GetSingleRole(
+                            scope.Actor!.Roles)
+                        ?? string.Empty),
+                cancellationToken);
+        }
+
+        await CommitAuditTransactionAsync(
+            auditTransaction,
+            cancellationToken);
 
         return SchoolUserCreateResult.Success(
             write.User.Id,
@@ -241,6 +291,12 @@ public sealed class SchoolUserManagementService
                     userId,
                     isActive,
                     token),
+            isActive
+                ? "SchoolUser.Activated"
+                : "SchoolUser.Deactivated",
+            isActive
+                ? "School user activated."
+                : "School user deactivated.",
             cancellationToken);
 
     public Task<SchoolUserCommandResult> SetLockedAsync(
@@ -259,6 +315,12 @@ public sealed class SchoolUserManagementService
                     userId,
                     isLocked,
                     token),
+            isLocked
+                ? "SchoolUser.Locked"
+                : "SchoolUser.Unlocked",
+            isLocked
+                ? "School user locked."
+                : "School user unlocked.",
             cancellationToken);
 
     public async Task<SchoolUserCommandResult> ChangeRoleAsync(
@@ -287,6 +349,8 @@ public sealed class SchoolUserManagementService
                     userId,
                     role,
                     token),
+            "SchoolUser.RoleChanged",
+            "School user role changed.",
             cancellationToken);
     }
 
@@ -330,6 +394,10 @@ public sealed class SchoolUserManagementService
                 SchoolUserErrorCode.UserCannotManageSelf);
         }
 
+        await using var auditTransaction =
+            await BeginAuditTransactionAsync(
+                cancellationToken);
+
         var write =
             await _users.GeneratePasswordSetupAsync(
                 scope.School.Id,
@@ -344,6 +412,42 @@ public sealed class SchoolUserManagementService
                 string.Empty,
                 MapPersistenceError(write.Error));
         }
+
+        if (_audit is not null)
+        {
+            await _audit.RecordAsync(
+                new AuditEvent(
+                    SchoolId: scope.School.Id,
+                    Action:
+                        "SchoolUser.PasswordSetupIssued",
+                    EntityType:
+                        "ApplicationUser",
+                    EntityId:
+                        write.User.Id.ToString("D"),
+                    Feature:
+                        "UserManagement",
+                    NewValues:
+                        new Dictionary<string, object?>
+                        {
+                            ["email"] =
+                                write.User.Email,
+                            ["invitationGenerated"] =
+                                true
+                        },
+                    ResultSummary:
+                        "Password setup invitation generated.",
+                    ActorUserIdOverride:
+                        actorUserId,
+                    ActorRoleOverride:
+                        GetSingleRole(
+                            scope.Actor!.Roles)
+                        ?? string.Empty),
+                cancellationToken);
+        }
+
+        await CommitAuditTransactionAsync(
+            auditTransaction,
+            cancellationToken);
 
         return SchoolUserPasswordLinkResult.Success(
             write.User.Id,
@@ -373,6 +477,10 @@ public sealed class SchoolUserManagementService
                 SchoolUserErrorCode.UserPasswordPolicy);
         }
 
+        await using var auditTransaction =
+            await BeginAuditTransactionAsync(
+                cancellationToken);
+
         var write =
             await _users.CompletePasswordSetupAsync(
                 userId,
@@ -380,11 +488,51 @@ public sealed class SchoolUserManagementService
                 newPassword,
                 cancellationToken);
 
-        return write.Succeeded
-            ? SchoolUserCommandResult.Success()
-            : SchoolUserCommandResult.Failure(
+        if (!write.Succeeded)
+        {
+            return SchoolUserCommandResult.Failure(
                 string.Empty,
                 MapPersistenceError(write.Error));
+        }
+
+        if (_audit is not null &&
+            write.User is not null &&
+            write.User.SchoolId.HasValue)
+        {
+            await _audit.RecordAsync(
+                new AuditEvent(
+                    SchoolId:
+                        write.User.SchoolId.Value,
+                    Action:
+                        "SchoolUser.PasswordSetupCompleted",
+                    EntityType:
+                        "ApplicationUser",
+                    EntityId:
+                        write.User.Id.ToString("D"),
+                    Feature:
+                        "UserManagement",
+                    NewValues:
+                        new Dictionary<string, object?>
+                        {
+                            ["passwordSetupCompleted"] =
+                                true
+                        },
+                    ResultSummary:
+                        "Password setup completed.",
+                    ActorUserIdOverride:
+                        write.User.Id,
+                    ActorRoleOverride:
+                        GetSingleRole(
+                            write.User.Roles)
+                        ?? string.Empty),
+                cancellationToken);
+        }
+
+        await CommitAuditTransactionAsync(
+            auditTransaction,
+            cancellationToken);
+
+        return SchoolUserCommandResult.Success();
     }
 
     public async Task<SchoolUserSignInDecision>
@@ -514,6 +662,8 @@ public sealed class SchoolUserManagementService
             Guid targetUserId,
             Func<Guid, CancellationToken,
                 Task<SchoolUserPersistenceResult>> operation,
+            string auditAction,
+            string auditResultSummary,
             CancellationToken cancellationToken)
     {
         var scope = await ResolveScopeAsync(
@@ -549,16 +699,96 @@ public sealed class SchoolUserManagementService
                 SchoolUserErrorCode.UserCannotManageSelf);
         }
 
+        await using var auditTransaction =
+            await BeginAuditTransactionAsync(
+                cancellationToken);
+
         var write = await operation(
             scope.School.Id,
             cancellationToken);
 
-        return write.Succeeded
-            ? SchoolUserCommandResult.Success()
-            : SchoolUserCommandResult.Failure(
+        if (!write.Succeeded ||
+            write.User is null)
+        {
+            return SchoolUserCommandResult.Failure(
                 string.Empty,
                 MapPersistenceError(write.Error));
+        }
+
+        if (_audit is not null)
+        {
+            await _audit.RecordAsync(
+                new AuditEvent(
+                    SchoolId:
+                        scope.School.Id,
+                    Action:
+                        auditAction,
+                    EntityType:
+                        "ApplicationUser",
+                    EntityId:
+                        targetUserId.ToString("D"),
+                    Feature:
+                        "UserManagement",
+                    OldValues:
+                        new Dictionary<string, object?>
+                        {
+                            ["role"] =
+                                GetSingleRole(
+                                    target.Roles)
+                                ?? string.Empty,
+                            ["isActive"] =
+                                target.IsActive,
+                            ["isLocked"] =
+                                target.IsLocked
+                        },
+                    NewValues:
+                        new Dictionary<string, object?>
+                        {
+                            ["role"] =
+                                GetSingleRole(
+                                    write.User.Roles)
+                                ?? string.Empty,
+                            ["isActive"] =
+                                write.User.IsActive,
+                            ["isLocked"] =
+                                write.User.IsLocked
+                        },
+                    ResultSummary:
+                        auditResultSummary,
+                    ActorUserIdOverride:
+                        actorUserId,
+                    ActorRoleOverride:
+                        GetSingleRole(
+                            scope.Actor!.Roles)
+                        ?? string.Empty),
+                cancellationToken);
+        }
+
+        await CommitAuditTransactionAsync(
+            auditTransaction,
+            cancellationToken);
+
+        return SchoolUserCommandResult.Success();
     }
+
+    private async Task<IApplicationTransaction?>
+        BeginAuditTransactionAsync(
+            CancellationToken cancellationToken)
+    {
+        if (_transactions is null)
+            return null;
+
+        return await _transactions.BeginAsync(
+            cancellationToken);
+    }
+
+    private static Task CommitAuditTransactionAsync(
+        IApplicationTransaction? transaction,
+        CancellationToken cancellationToken) =>
+        transaction is null
+            ? Task.CompletedTask
+            : transaction.CommitAsync(
+                cancellationToken);
 
     private async Task<ScopeResult> ResolveScopeAsync(
         Guid actorUserId,

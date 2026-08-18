@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Edulytics.Core.Entities;
 using Edulytics.Core.Enums;
 using Edulytics.Core.Interfaces;
@@ -370,6 +371,50 @@ FOR UPDATE OF o SKIP LOCKED")
                 PreviousAttempts =
                     entity.ProcessingAttempts,
                 RequeuedAtUtc = utcNow
+            });
+
+        _db.AuditLogs.Add(
+            new AuditLog
+            {
+                Id = Guid.NewGuid(),
+                SchoolId = entity.SchoolId,
+                ActorUserId = actorUserId,
+                ActorRole = "SuperAdmin",
+                Action =
+                    "Outbox.DeadLetterRequeued",
+                EntityType =
+                    "OutboxMessage",
+                EntityId =
+                    entity.Id.ToString("D"),
+                OccurredAtUtc = utcNow,
+                CorrelationId =
+                    entity.CorrelationId ??
+                    $"outbox-requeue:{entity.Id:N}",
+                IpAddress = string.Empty,
+                UserAgent = string.Empty,
+                OldValuesJson =
+                    JsonSerializer.Serialize(
+                        new
+                        {
+                            status =
+                                "DeadLetter",
+                            processingAttempts =
+                                entity.ProcessingAttempts
+                        }),
+                NewValuesJson =
+                    JsonSerializer.Serialize(
+                        new
+                        {
+                            status =
+                                "Pending",
+                            processingAttempts = 0,
+                            reasonLength =
+                                reason.Length
+                        }),
+                ResultSummary =
+                    "Dead-letter outbox message requeued.",
+                Source = "Operator",
+                Feature = "Outbox"
             });
 
         entity.Status =

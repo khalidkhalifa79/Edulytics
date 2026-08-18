@@ -1,0 +1,285 @@
+@model Edulytics.Services.Auditing.AuditQueryPage
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.AuditResource> T
+
+@{
+    ViewData["Title"] = T["Title"];
+}
+
+<div class="container-fluid py-4">
+    <div class="mb-4">
+        <h1 class="h3">@T["Title"]</h1>
+        <p class="text-muted mb-0">
+            @T["Subtitle"]
+        </p>
+    </div>
+
+    <form method="get"
+          asp-controller="Audit"
+          asp-action="Index"
+          class="card card-body mb-4">
+        <div class="row g-3">
+
+            @if (Model.CanSelectSchool)
+            {
+                <div class="col-md-4">
+                    <label class="form-label"
+                           for="schoolId">
+                        @T["SchoolId"]
+                    </label>
+                    <input class="form-control"
+                           id="schoolId"
+                           name="schoolId"
+                           value="@Model.Query.SchoolId" />
+                </div>
+            }
+
+            <div class="col-md-4">
+                <label class="form-label"
+                       for="action">
+                    @T["Action"]
+                </label>
+                <input class="form-control"
+                       id="action"
+                       name="action"
+                       value="@Model.Query.Action" />
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label"
+                       for="entityType">
+                    @T["EntityType"]
+                </label>
+                <input class="form-control"
+                       id="entityType"
+                       name="entityType"
+                       value="@Model.Query.EntityType" />
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label"
+                       for="correlationId">
+                    @T["CorrelationId"]
+                </label>
+                <input class="form-control"
+                       id="correlationId"
+                       name="correlationId"
+                       value="@Model.Query.CorrelationId" />
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label"
+                       for="actorUserId">
+                    @T["ActorUserId"]
+                </label>
+                <input class="form-control"
+                       id="actorUserId"
+                       name="actorUserId"
+                       value="@Model.Query.ActorUserId" />
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label"
+                       for="fromUtc">
+                    @T["FromUtc"]
+                </label>
+                <input class="form-control"
+                       id="fromUtc"
+                       name="fromUtc"
+                       value="@Model.Query.FromUtc" />
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label"
+                       for="toUtc">
+                    @T["ToUtc"]
+                </label>
+                <input class="form-control"
+                       id="toUtc"
+                       name="toUtc"
+                       value="@Model.Query.ToUtc" />
+            </div>
+
+            <div class="col-md-2">
+                <label class="form-label"
+                       for="pageSize">
+                    @T["PageSize"]
+                </label>
+                <select class="form-select"
+                        id="pageSize"
+                        name="pageSize">
+                    @foreach (var size in new[] { 10, 25, 50, 100 })
+                    {
+                        if (Model.PageSize == size)
+                        {
+                            <option value="@size"
+                                    selected>
+                                @size
+                            </option>
+                        }
+                        else
+                        {
+                            <option value="@size">
+                                @size
+                            </option>
+                        }
+                    }
+                </select>
+            </div>
+
+            <div class="col-12 d-flex gap-2">
+                <button type="submit"
+                        class="btn btn-primary">
+                    @T["Search"]
+                </button>
+
+                <a asp-controller="Audit"
+                   asp-action="Index"
+                   class="btn btn-outline-secondary">
+                    @T["Clear"]
+                </a>
+            </div>
+        </div>
+    </form>
+
+    <div class="d-flex justify-content-between
+                align-items-center mb-3">
+        <strong>
+            @T["TotalEntries"]: @Model.TotalCount
+        </strong>
+
+        <span>
+            @T["Page"] @Model.Page
+            @T["Of"] @Model.TotalPages
+        </span>
+    </div>
+
+    @if (Model.Items.Count == 0)
+    {
+        <div class="alert alert-secondary">
+            @T["NoEntries"]
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-striped
+                          table-hover align-middle">
+                <thead>
+                    <tr>
+                        <th>@T["Timestamp"]</th>
+                        <th>@T["SchoolId"]</th>
+                        <th>@T["Actor"]</th>
+                        <th>@T["Role"]</th>
+                        <th>@T["Action"]</th>
+                        <th>@T["Entity"]</th>
+                        <th>@T["CorrelationId"]</th>
+                        <th>@T["Result"]</th>
+                        <th>@T["Changes"]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model.Items)
+                {
+                    <tr>
+                        <td class="text-nowrap">
+                            @item.OccurredAtUtc.ToString("u")
+                        </td>
+                        <td>
+                            @item.SchoolId
+                        </td>
+                        <td>
+                            @item.ActorUserId
+                        </td>
+                        <td>
+                            @item.ActorRole
+                        </td>
+                        <td>
+                            <code>@item.Action</code>
+                        </td>
+                        <td>
+                            <div>@item.EntityType</div>
+                            <small class="text-muted">
+                                @item.EntityId
+                            </small>
+                        </td>
+                        <td>
+                            <code>@item.CorrelationId</code>
+                        </td>
+                        <td>
+                            @item.ResultSummary
+                            <div class="small text-muted">
+                                @item.Feature / @item.Source
+                            </div>
+                        </td>
+                        <td>
+                            @if (!string.IsNullOrWhiteSpace(
+                                    item.OldValuesJson))
+                            {
+                                <details>
+                                    <summary>
+                                        @T["OldValues"]
+                                    </summary>
+                                    <pre class="small text-wrap">@item.OldValuesJson</pre>
+                                </details>
+                            }
+
+                            @if (!string.IsNullOrWhiteSpace(
+                                    item.NewValuesJson))
+                            {
+                                <details>
+                                    <summary>
+                                        @T["NewValues"]
+                                    </summary>
+                                    <pre class="small text-wrap">@item.NewValuesJson</pre>
+                                </details>
+                            }
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    }
+
+    <div class="d-flex justify-content-between mt-3">
+        @if (Model.Page > 1)
+        {
+            <a asp-controller="Audit"
+               asp-action="Index"
+               asp-route-schoolId="@Model.Query.SchoolId"
+               asp-route-action="@Model.Query.Action"
+               asp-route-entityType="@Model.Query.EntityType"
+               asp-route-correlationId="@Model.Query.CorrelationId"
+               asp-route-actorUserId="@Model.Query.ActorUserId"
+               asp-route-fromUtc="@Model.Query.FromUtc"
+               asp-route-toUtc="@Model.Query.ToUtc"
+               asp-route-page="@(Model.Page - 1)"
+               asp-route-pageSize="@Model.PageSize"
+               class="btn btn-outline-secondary">
+                @T["Previous"]
+            </a>
+        }
+        else
+        {
+            <span></span>
+        }
+
+        @if (Model.Page < Model.TotalPages)
+        {
+            <a asp-controller="Audit"
+               asp-action="Index"
+               asp-route-schoolId="@Model.Query.SchoolId"
+               asp-route-action="@Model.Query.Action"
+               asp-route-entityType="@Model.Query.EntityType"
+               asp-route-correlationId="@Model.Query.CorrelationId"
+               asp-route-actorUserId="@Model.Query.ActorUserId"
+               asp-route-fromUtc="@Model.Query.FromUtc"
+               asp-route-toUtc="@Model.Query.ToUtc"
+               asp-route-page="@(Model.Page + 1)"
+               asp-route-pageSize="@Model.PageSize"
+               class="btn btn-outline-secondary">
+                @T["Next"]
+            </a>
+        }
+    </div>
+</div>

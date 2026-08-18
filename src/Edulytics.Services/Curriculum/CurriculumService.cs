@@ -4,6 +4,7 @@ using Edulytics.Core.Entities;
 using Edulytics.Core.Enums;
 using Edulytics.Core.Interfaces;
 using Edulytics.Core.Users;
+using Edulytics.Services.Auditing;
 
 namespace Edulytics.Services.Curriculum;
 
@@ -16,15 +17,18 @@ public sealed class CurriculumService : ICurriculumService
     private readonly ICurriculumRepository _curriculum;
     private readonly ISchoolRepository _schools;
     private readonly ISchoolUserRepository _users;
+    private readonly IAuditService? _audit;
 
     public CurriculumService(
         ICurriculumRepository curriculum,
         ISchoolRepository schools,
-        ISchoolUserRepository users)
+        ISchoolUserRepository users,
+        IAuditService? audit = null)
     {
         _curriculum = curriculum;
         _schools = schools;
         _users = users;
+        _audit = audit;
     }
 
     public async Task<CurriculumQueryResult<CurriculumDashboard>>
@@ -199,7 +203,7 @@ public sealed class CurriculumService : ICurriculumService
 
         var frameworkVersionId =
             await ResolveOrCreateDefaultAdoptionAsync(
-                schoolId,
+                scope,
                 request.GradeLevelId,
                 request.SubjectId,
                 cancellationToken);
@@ -233,17 +237,43 @@ public sealed class CurriculumService : ICurriculumService
                 CurriculumErrorCode.DuplicateTopicOrder);
         }
 
+        var topic = new CurriculumTopic
+        {
+            Id = Guid.NewGuid(),
+            SchoolId = schoolId,
+            FrameworkVersionId =
+                frameworkVersionId.Value,
+            SubjectId = request.SubjectId,
+            GradeLevelId = request.GradeLevelId,
+            Name = name,
+            Order = request.Order
+        };
+
         await _curriculum.AddTopicAsync(
-            new CurriculumTopic
-            {
-                Id = Guid.NewGuid(),
-                SchoolId = schoolId,
-                FrameworkVersionId = frameworkVersionId.Value,
-                SubjectId = request.SubjectId,
-                GradeLevelId = request.GradeLevelId,
-                Name = name,
-                Order = request.Order
-            },
+            topic,
+            cancellationToken);
+
+        await QueueAuditAsync(
+            scope,
+            "CurriculumTopic.Created",
+            "CurriculumTopic",
+            topic.Id,
+            oldValues: null,
+            newValues:
+                new Dictionary<string, object?>
+                {
+                    ["frameworkVersionId"] =
+                        topic.FrameworkVersionId,
+                    ["subjectId"] =
+                        topic.SubjectId,
+                    ["gradeLevelId"] =
+                        topic.GradeLevelId,
+                    ["name"] =
+                        topic.Name,
+                    ["order"] =
+                        topic.Order
+                },
+            "Curriculum topic created.",
             cancellationToken);
 
         return await PersistAsync(cancellationToken);
@@ -306,8 +336,33 @@ public sealed class CurriculumService : ICurriculumService
                 CurriculumErrorCode.DuplicateTopicOrder);
         }
 
+        var oldValues =
+            new Dictionary<string, object?>
+            {
+                ["name"] =
+                    topic.Name,
+                ["order"] =
+                    topic.Order
+            };
+
         topic.Name = name;
         topic.Order = request.Order;
+
+        await QueueAuditAsync(
+            scope,
+            "CurriculumTopic.Updated",
+            "CurriculumTopic",
+            topic.Id,
+            oldValues,
+            new Dictionary<string, object?>
+            {
+                ["name"] =
+                    topic.Name,
+                ["order"] =
+                    topic.Order
+            },
+            "Curriculum topic updated.",
+            cancellationToken);
 
         return await PersistAsync(cancellationToken);
     }
@@ -379,20 +434,52 @@ public sealed class CurriculumService : ICurriculumService
                 CurriculumErrorCode.DuplicateOutcomeOrder);
         }
 
+        var outcome = new LearningOutcome
+        {
+            Id = Guid.NewGuid(),
+            SchoolId = schoolId,
+            FrameworkVersionId =
+                topic.FrameworkVersionId,
+            SubjectId = topic.SubjectId,
+            GradeLevelId = topic.GradeLevelId,
+            TopicId = request.TopicId,
+            Code = code,
+            Description = description,
+            Weight = request.Weight,
+            Order = request.Order
+        };
+
         await _curriculum.AddOutcomeAsync(
-            new LearningOutcome
-            {
-                Id = Guid.NewGuid(),
-                SchoolId = schoolId,
-                FrameworkVersionId = topic.FrameworkVersionId,
-                SubjectId = topic.SubjectId,
-                GradeLevelId = topic.GradeLevelId,
-                TopicId = request.TopicId,
-                Code = code,
-                Description = description,
-                Weight = request.Weight,
-                Order = request.Order
-            },
+            outcome,
+            cancellationToken);
+
+        await QueueAuditAsync(
+            scope,
+            "LearningOutcome.Created",
+            "LearningOutcome",
+            outcome.Id,
+            oldValues: null,
+            newValues:
+                new Dictionary<string, object?>
+                {
+                    ["frameworkVersionId"] =
+                        outcome.FrameworkVersionId,
+                    ["subjectId"] =
+                        outcome.SubjectId,
+                    ["gradeLevelId"] =
+                        outcome.GradeLevelId,
+                    ["topicId"] =
+                        outcome.TopicId,
+                    ["code"] =
+                        outcome.Code,
+                    ["descriptionLength"] =
+                        outcome.Description.Length,
+                    ["weight"] =
+                        outcome.Weight,
+                    ["order"] =
+                        outcome.Order
+                },
+            "Learning outcome created.",
             cancellationToken);
 
         return await PersistAsync(cancellationToken);
@@ -464,20 +551,58 @@ public sealed class CurriculumService : ICurriculumService
                 CurriculumErrorCode.DuplicateOutcomeOrder);
         }
 
+        var oldValues =
+            new Dictionary<string, object?>
+            {
+                ["code"] =
+                    outcome.Code,
+                ["descriptionLength"] =
+                    outcome.Description.Length,
+                ["weight"] =
+                    outcome.Weight,
+                ["order"] =
+                    outcome.Order
+            };
+
         outcome.Code = code;
         outcome.Description = description;
         outcome.Weight = request.Weight;
         outcome.Order = request.Order;
 
+        await QueueAuditAsync(
+            scope,
+            "LearningOutcome.Updated",
+            "LearningOutcome",
+            outcome.Id,
+            oldValues,
+            new Dictionary<string, object?>
+            {
+                ["code"] =
+                    outcome.Code,
+                ["descriptionLength"] =
+                    outcome.Description.Length,
+                ["weight"] =
+                    outcome.Weight,
+                ["order"] =
+                    outcome.Order
+            },
+            "Learning outcome updated.",
+            cancellationToken);
+
         return await PersistAsync(cancellationToken);
     }
 
     private async Task<Guid?> ResolveOrCreateDefaultAdoptionAsync(
-        Guid schoolId,
+        ScopeResult scope,
         Guid gradeLevelId,
         Guid subjectId,
         CancellationToken cancellationToken)
     {
+        if (scope.School is null)
+            return null;
+
+        var schoolId = scope.School.Id;
+
         var existing =
             await _curriculum.GetPrimaryDefaultFrameworkVersionIdAsync(
                 schoolId,
@@ -497,7 +622,7 @@ public sealed class CurriculumService : ICurriculumService
 
         var now = DateTime.UtcNow;
 
-        await _curriculum.AddDefaultAdoptionAsync(
+        var adoption =
             new SchoolCurriculumAdoption
             {
                 Id = Guid.NewGuid(),
@@ -505,15 +630,88 @@ public sealed class CurriculumService : ICurriculumService
                 AcademicYearId = null,
                 GradeLevelId = gradeLevelId,
                 SubjectId = subjectId,
-                FrameworkVersionId = platformDefault.Value,
+                FrameworkVersionId =
+                    platformDefault.Value,
                 IsPrimary = true,
                 IsActive = true,
                 CreatedAtUtc = now,
                 UpdatedAtUtc = now
-            },
+            };
+
+        await _curriculum.AddDefaultAdoptionAsync(
+            adoption,
+            cancellationToken);
+
+        await QueueAuditAsync(
+            scope,
+            "CurriculumAdoption.Created",
+            "SchoolCurriculumAdoption",
+            adoption.Id,
+            oldValues: null,
+            newValues:
+                new Dictionary<string, object?>
+                {
+                    ["academicYearId"] =
+                        adoption.AcademicYearId,
+                    ["gradeLevelId"] =
+                        adoption.GradeLevelId,
+                    ["subjectId"] =
+                        adoption.SubjectId,
+                    ["frameworkVersionId"] =
+                        adoption.FrameworkVersionId,
+                    ["isPrimary"] =
+                        adoption.IsPrimary,
+                    ["isActive"] =
+                        adoption.IsActive
+                },
+            "Default curriculum adoption created.",
             cancellationToken);
 
         return platformDefault.Value;
+    }
+
+    private async Task QueueAuditAsync(
+        ScopeResult scope,
+        string action,
+        string entityType,
+        Guid entityId,
+        IReadOnlyDictionary<string, object?>? oldValues,
+        IReadOnlyDictionary<string, object?>? newValues,
+        string resultSummary,
+        CancellationToken cancellationToken)
+    {
+        if (_audit is null ||
+            scope.School is null ||
+            scope.Actor is null)
+        {
+            return;
+        }
+
+        await _audit.QueueAsync(
+            new AuditEvent(
+                SchoolId:
+                    scope.School.Id,
+                Action:
+                    action,
+                EntityType:
+                    entityType,
+                EntityId:
+                    entityId.ToString("D"),
+                Feature:
+                    "Curriculum",
+                OldValues:
+                    oldValues,
+                NewValues:
+                    newValues,
+                ResultSummary:
+                    resultSummary,
+                ActorUserIdOverride:
+                    scope.Actor.Id,
+                ActorRoleOverride:
+                    SingleRole(
+                        scope.Actor.Roles)
+                    ?? string.Empty),
+            cancellationToken);
     }
 
     private async Task<ScopeResult> ResolveScopeAsync(

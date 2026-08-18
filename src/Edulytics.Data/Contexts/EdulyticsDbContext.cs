@@ -38,6 +38,7 @@ public class EdulyticsDbContext
     public DbSet<ClassTopicSummary> ClassTopicSummaries => Set<ClassTopicSummary>();
     public DbSet<ClassAssessmentTrend> ClassAssessmentTrends => Set<ClassAssessmentTrend>();
     public DbSet<SchoolAnalyticsSnapshot> SchoolAnalyticsSnapshots => Set<SchoolAnalyticsSnapshot>();
+    public DbSet<AuditLog> AuditLogs => Set<AuditLog>();
     public DbSet<OutboxMessage> OutboxMessages => Set<OutboxMessage>();
     public DbSet<OutboxRequeueAudit> OutboxRequeueAudits => Set<OutboxRequeueAudit>();
     public DbSet<AnalyticsRefreshState> AnalyticsRefreshStates => Set<AnalyticsRefreshState>();
@@ -53,6 +54,7 @@ public class EdulyticsDbContext
         bool acceptAllChangesOnSuccess)
     {
         PrepareApplicationManagedConcurrencyTokens();
+        EnforceAuditAppendOnly();
 
         return base.SaveChanges(
             acceptAllChangesOnSuccess);
@@ -63,10 +65,26 @@ public class EdulyticsDbContext
         CancellationToken cancellationToken = default)
     {
         PrepareApplicationManagedConcurrencyTokens();
+        EnforceAuditAppendOnly();
 
         return base.SaveChangesAsync(
             acceptAllChangesOnSuccess,
             cancellationToken);
+    }
+
+    private void EnforceAuditAppendOnly()
+    {
+        foreach (var entry in
+                 ChangeTracker.Entries<AuditLog>())
+        {
+            if (entry.State is
+                EntityState.Modified or
+                EntityState.Deleted)
+            {
+                throw new InvalidOperationException(
+                    "AuditLog entries are append-only.");
+            }
+        }
     }
 
     private void PrepareApplicationManagedConcurrencyTokens()
@@ -124,6 +142,7 @@ public class EdulyticsDbContext
         builder.ApplyConfiguration(new ClassTopicSummaryConfiguration());
         builder.ApplyConfiguration(new ClassAssessmentTrendConfiguration());
         builder.ApplyConfiguration(new SchoolAnalyticsSnapshotConfiguration());
+        builder.ApplyConfiguration(new AuditLogConfiguration());
         builder.ApplyConfiguration(new OutboxMessageConfiguration());
         builder.ApplyConfiguration(new OutboxRequeueAuditConfiguration());
         builder.ApplyConfiguration(new AnalyticsRefreshStateConfiguration());

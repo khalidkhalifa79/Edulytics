@@ -6,6 +6,7 @@ using Edulytics.Core.Enums;
 using Edulytics.Core.Interfaces;
 using Edulytics.Core.Realtime;
 using Edulytics.Core.Users;
+using Edulytics.Services.Auditing;
 
 namespace Edulytics.Services.Assessments;
 
@@ -14,15 +15,18 @@ public sealed class AssessmentService : IAssessmentService
     private readonly IAssessmentRepository _repo;
     private readonly ISchoolRepository _schools;
     private readonly ISchoolUserRepository _users;
+    private readonly IAuditService? _audit;
 
     public AssessmentService(
         IAssessmentRepository repo,
         ISchoolRepository schools,
-        ISchoolUserRepository users)
+        ISchoolUserRepository users,
+        IAuditService? audit = null)
     {
         _repo = repo;
         _schools = schools;
         _users = users;
+        _audit = audit;
     }
 
     public async Task<AssessmentQueryResult<AssessmentWorkspace>> GetWorkspaceAsync(
@@ -252,8 +256,42 @@ public sealed class AssessmentService : IAssessmentService
             UpdatedAtUtc = now
         };
 
-        await _repo.AddAsync(entity, cancellationToken);
-        var saved = await _repo.SaveAsync(cancellationToken);
+        await _repo.AddAsync(
+            entity,
+            cancellationToken);
+
+        await QueueAuditAsync(
+            scope,
+            "Assessment.Created",
+            "Assessment",
+            entity.Id,
+            oldValues: null,
+            newValues:
+                new Dictionary<string, object?>
+                {
+                    ["subjectId"] =
+                        entity.SubjectId,
+                    ["classGroupId"] =
+                        entity.ClassGroupId,
+                    ["academicYearId"] =
+                        entity.AcademicYearId,
+                    ["termId"] =
+                        entity.TermId,
+                    ["title"] =
+                        entity.Title,
+                    ["assessmentDate"] =
+                        entity.AssessmentDate,
+                    ["maxScore"] =
+                        entity.MaxScore,
+                    ["status"] =
+                        entity.Status.ToString()
+                },
+            "Assessment created.",
+            cancellationToken);
+
+        var saved =
+            await _repo.SaveAsync(
+                cancellationToken);
 
         return saved.Succeeded
             ? AssessmentCommandResult.Success(entity.Id)
@@ -305,10 +343,42 @@ public sealed class AssessmentService : IAssessmentService
                 cancellationToken))
             return Fail(nameof(request.Title), AssessmentErrorCode.DuplicateAssessment);
 
+        var oldValues =
+            new Dictionary<string, object?>
+            {
+                ["title"] =
+                    assessment.Title,
+                ["assessmentDate"] =
+                    assessment.AssessmentDate,
+                ["maxScore"] =
+                    assessment.MaxScore
+            };
+
         assessment.Title = title;
-        assessment.AssessmentDate = request.AssessmentDate;
-        assessment.MaxScore = Round(request.MaxScore);
-        assessment.UpdatedAtUtc = DateTime.UtcNow;
+        assessment.AssessmentDate =
+            request.AssessmentDate;
+        assessment.MaxScore =
+            Round(request.MaxScore);
+        assessment.UpdatedAtUtc =
+            DateTime.UtcNow;
+
+        await QueueAuditAsync(
+            scope,
+            "Assessment.Updated",
+            "Assessment",
+            assessment.Id,
+            oldValues,
+            new Dictionary<string, object?>
+            {
+                ["title"] =
+                    assessment.Title,
+                ["assessmentDate"] =
+                    assessment.AssessmentDate,
+                ["maxScore"] =
+                    assessment.MaxScore
+            },
+            "Assessment updated.",
+            cancellationToken);
 
         return MapPersistence(
             await _repo.SaveWithRowVersionAsync(
@@ -365,13 +435,39 @@ public sealed class AssessmentService : IAssessmentService
             Order = request.Order
         };
 
-        await _repo.AddAsync(question, cancellationToken);
-        assessment.UpdatedAtUtc = DateTime.UtcNow;
-
-        var saved = await _repo.SaveWithRowVersionAsync(
-            assessment,
-            request.AssessmentRowVersion,
+        await _repo.AddAsync(
+            question,
             cancellationToken);
+
+        assessment.UpdatedAtUtc =
+            DateTime.UtcNow;
+
+        await QueueAuditAsync(
+            scope,
+            "AssessmentQuestion.Created",
+            "AssessmentQuestion",
+            question.Id,
+            oldValues: null,
+            newValues:
+                new Dictionary<string, object?>
+                {
+                    ["assessmentId"] =
+                        question.AssessmentId,
+                    ["promptLength"] =
+                        question.Prompt.Length,
+                    ["maxScore"] =
+                        question.MaxScore,
+                    ["order"] =
+                        question.Order
+                },
+            "Assessment question created.",
+            cancellationToken);
+
+        var saved =
+            await _repo.SaveWithRowVersionAsync(
+                assessment,
+                request.AssessmentRowVersion,
+                cancellationToken);
 
         return saved.Succeeded
             ? AssessmentCommandResult.Success(question.Id)
@@ -414,10 +510,42 @@ public sealed class AssessmentService : IAssessmentService
         if (otherTotal + request.MaxScore > assessment.MaxScore)
             return Fail(nameof(request.MaxScore), AssessmentErrorCode.AssessmentScoreMismatch);
 
+        var oldValues =
+            new Dictionary<string, object?>
+            {
+                ["promptLength"] =
+                    question.Prompt.Length,
+                ["maxScore"] =
+                    question.MaxScore,
+                ["order"] =
+                    question.Order
+            };
+
         question.Prompt = prompt;
-        question.MaxScore = Round(request.MaxScore);
-        question.Order = request.Order;
-        assessment.UpdatedAtUtc = DateTime.UtcNow;
+        question.MaxScore =
+            Round(request.MaxScore);
+        question.Order =
+            request.Order;
+        assessment.UpdatedAtUtc =
+            DateTime.UtcNow;
+
+        await QueueAuditAsync(
+            context.Scope!,
+            "AssessmentQuestion.Updated",
+            "AssessmentQuestion",
+            question.Id,
+            oldValues,
+            new Dictionary<string, object?>
+            {
+                ["promptLength"] =
+                    question.Prompt.Length,
+                ["maxScore"] =
+                    question.MaxScore,
+                ["order"] =
+                    question.Order
+            },
+            "Assessment question updated.",
+            cancellationToken);
 
         return MapPersistence(
             await _repo.SaveWithRowVersionAsync(
@@ -466,17 +594,40 @@ public sealed class AssessmentService : IAssessmentService
         if (await _repo.MappingExistsAsync(schoolId, context.Question!.Id, outcome.Id, cancellationToken))
             return Fail(AssessmentErrorCode.DuplicateOutcomeMapping);
 
-        await _repo.AddAsync(
+        var mapping =
             new QuestionLearningOutcome
             {
                 Id = Guid.NewGuid(),
                 SchoolId = schoolId,
-                AssessmentQuestionId = context.Question.Id,
-                LearningOutcomeId = outcome.Id
-            },
+                AssessmentQuestionId =
+                    context.Question.Id,
+                LearningOutcomeId =
+                    outcome.Id
+            };
+
+        await _repo.AddAsync(
+            mapping,
             cancellationToken);
 
-        context.Assessment.UpdatedAtUtc = DateTime.UtcNow;
+        context.Assessment.UpdatedAtUtc =
+            DateTime.UtcNow;
+
+        await QueueAuditAsync(
+            context.Scope!,
+            "QuestionOutcome.Mapped",
+            "QuestionLearningOutcome",
+            mapping.Id,
+            oldValues: null,
+            newValues:
+                new Dictionary<string, object?>
+                {
+                    ["assessmentQuestionId"] =
+                        mapping.AssessmentQuestionId,
+                    ["learningOutcomeId"] =
+                        mapping.LearningOutcomeId
+                },
+            "Learning outcome mapped to question.",
+            cancellationToken);
 
         return MapPersistence(
             await _repo.SaveWithRowVersionAsync(
@@ -505,7 +656,26 @@ public sealed class AssessmentService : IAssessmentService
         if (mapping is null) return Fail(AssessmentErrorCode.OutcomeNotFound);
 
         _repo.RemoveMapping(mapping);
-        context.Assessment.UpdatedAtUtc = DateTime.UtcNow;
+
+        context.Assessment.UpdatedAtUtc =
+            DateTime.UtcNow;
+
+        await QueueAuditAsync(
+            context.Scope!,
+            "QuestionOutcome.Unmapped",
+            "QuestionLearningOutcome",
+            mapping.Id,
+            oldValues:
+                new Dictionary<string, object?>
+                {
+                    ["assessmentQuestionId"] =
+                        mapping.AssessmentQuestionId,
+                    ["learningOutcomeId"] =
+                        mapping.LearningOutcomeId
+                },
+            newValues: null,
+            "Learning outcome unmapped from question.",
+            cancellationToken);
 
         return MapPersistence(
             await _repo.SaveWithRowVersionAsync(
@@ -579,11 +749,39 @@ public sealed class AssessmentService : IAssessmentService
         if (!mappedOutcomeIds.SetEquals(eligibleMappedOutcomeIds))
             return Fail(AssessmentErrorCode.OutcomeDoesNotMatchAssessment);
 
-        assessment.Status = AssessmentStatus.Open;
-        assessment.UpdatedAtUtc = DateTime.UtcNow;
+        var previousStatus =
+            assessment.Status;
+
+        assessment.Status =
+            AssessmentStatus.Open;
+        assessment.UpdatedAtUtc =
+            DateTime.UtcNow;
+
+        await QueueAuditAsync(
+            scope,
+            "Assessment.Opened",
+            "Assessment",
+            assessment.Id,
+            oldValues:
+                new Dictionary<string, object?>
+                {
+                    ["status"] =
+                        previousStatus.ToString()
+                },
+            newValues:
+                new Dictionary<string, object?>
+                {
+                    ["status"] =
+                        assessment.Status.ToString()
+                },
+            "Assessment opened.",
+            cancellationToken);
 
         return MapPersistence(
-            await _repo.SaveWithRowVersionAsync(assessment, rowVersion, cancellationToken));
+            await _repo.SaveWithRowVersionAsync(
+                assessment,
+                rowVersion,
+                cancellationToken));
     }
 
     public async Task<AssessmentCommandResult> CloseAssessmentAsync(
@@ -607,11 +805,39 @@ public sealed class AssessmentService : IAssessmentService
         if (assessment.Status != AssessmentStatus.Open)
             return Fail(AssessmentErrorCode.AssessmentNotOpen);
 
-        assessment.Status = AssessmentStatus.Closed;
-        assessment.UpdatedAtUtc = DateTime.UtcNow;
+        var previousStatus =
+            assessment.Status;
+
+        assessment.Status =
+            AssessmentStatus.Closed;
+        assessment.UpdatedAtUtc =
+            DateTime.UtcNow;
+
+        await QueueAuditAsync(
+            scope,
+            "Assessment.Closed",
+            "Assessment",
+            assessment.Id,
+            oldValues:
+                new Dictionary<string, object?>
+                {
+                    ["status"] =
+                        previousStatus.ToString()
+                },
+            newValues:
+                new Dictionary<string, object?>
+                {
+                    ["status"] =
+                        assessment.Status.ToString()
+                },
+            "Assessment closed.",
+            cancellationToken);
 
         return MapPersistence(
-            await _repo.SaveWithRowVersionAsync(assessment, rowVersion, cancellationToken));
+            await _repo.SaveWithRowVersionAsync(
+                assessment,
+                rowVersion,
+                cancellationToken));
     }
 
     public async Task<AssessmentCommandResult> SaveStudentResultAsync(
@@ -771,16 +997,96 @@ public sealed class AssessmentService : IAssessmentService
             },
             cancellationToken);
 
+        await QueueAuditAsync(
+            scope,
+            isNew
+                ? "AssessmentResult.Created"
+                : "AssessmentResult.Updated",
+            "AssessmentResult",
+            result!.Id,
+            oldValues:
+                isNew
+                    ? null
+                    : new Dictionary<string, object?>
+                    {
+                        ["assessmentId"] =
+                            assessment.Id,
+                        ["studentProfileId"] =
+                            student.Id,
+                        ["resultExisted"] =
+                            true
+                    },
+            newValues:
+                new Dictionary<string, object?>
+                {
+                    ["assessmentId"] =
+                        assessment.Id,
+                    ["studentProfileId"] =
+                        student.Id,
+                    ["resultCreated"] =
+                        isNew,
+                    ["answerCount"] =
+                        request.QuestionIds.Count
+                },
+            isNew
+                ? "Assessment result entered."
+                : "Assessment result updated.",
+            cancellationToken);
+
         var saved = isNew
-            ? await _repo.SaveAsync(cancellationToken)
+            ? await _repo.SaveAsync(
+                cancellationToken)
             : await _repo.SaveWithRowVersionAsync(
                 result!,
                 request.ResultRowVersion!,
                 cancellationToken);
 
         return saved.Succeeded
-            ? AssessmentCommandResult.Success(result!.Id)
+            ? AssessmentCommandResult.Success(
+                result!.Id)
             : MapPersistence(saved);
+    }
+
+    private async Task QueueAuditAsync(
+        ScopeResult scope,
+        string action,
+        string entityType,
+        Guid entityId,
+        IReadOnlyDictionary<string, object?>? oldValues,
+        IReadOnlyDictionary<string, object?>? newValues,
+        string resultSummary,
+        CancellationToken cancellationToken)
+    {
+        if (_audit is null ||
+            scope.School is null ||
+            scope.Actor is null)
+        {
+            return;
+        }
+
+        await _audit.QueueAsync(
+            new AuditEvent(
+                SchoolId:
+                    scope.School.Id,
+                Action:
+                    action,
+                EntityType:
+                    entityType,
+                EntityId:
+                    entityId.ToString("D"),
+                Feature:
+                    "Assessments",
+                OldValues:
+                    oldValues,
+                NewValues:
+                    newValues,
+                ResultSummary:
+                    resultSummary,
+                ActorUserIdOverride:
+                    scope.Actor.Id,
+                ActorRoleOverride:
+                    scope.Role ?? string.Empty),
+            cancellationToken);
     }
 
     private static HashSet<Guid> ResolveEligibleFrameworkVersionIds(
