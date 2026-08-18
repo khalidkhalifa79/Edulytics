@@ -5,6 +5,7 @@ using Edulytics.Core.Entities;
 using Edulytics.Core.Enums;
 using Edulytics.Core.Interfaces;
 using Edulytics.Core.Users;
+using Edulytics.Services.Auditing;
 
 namespace Edulytics.Services.Academics;
 
@@ -17,15 +18,18 @@ public sealed class AcademicStructureService : IAcademicStructureService
     private readonly IAcademicStructureRepository _academic;
     private readonly ISchoolRepository _schools;
     private readonly ISchoolUserRepository _users;
+    private readonly IAuditService? _audit;
 
     public AcademicStructureService(
         IAcademicStructureRepository academic,
         ISchoolRepository schools,
-        ISchoolUserRepository users)
+        ISchoolUserRepository users,
+        IAuditService? audit = null)
     {
         _academic = academic;
         _schools = schools;
         _users = users;
+        _audit = audit;
     }
 
     public async Task<AcademicQueryResult<AcademicStructureDashboard>> GetDashboardAsync(
@@ -243,7 +247,7 @@ public sealed class AcademicStructureService : IAcademicStructureService
 
         var now = DateTime.UtcNow;
 
-        await _academic.AddAsync(new AcademicYear
+        var entity = new AcademicYear
         {
             Id = Guid.NewGuid(),
             SchoolId = schoolId,
@@ -253,7 +257,29 @@ public sealed class AcademicStructureService : IAcademicStructureService
             Status = request.Status,
             CreatedAtUtc = now,
             UpdatedAtUtc = now
-        }, cancellationToken);
+        };
+
+        await _academic.AddAsync(
+            entity,
+            cancellationToken);
+
+        await QueueAuditAsync(
+            scope,
+            "AcademicYear.Created",
+            "AcademicYear",
+            entity.Id,
+            oldValues: null,
+            newValues:
+                new Dictionary<string, object?>
+                {
+                    ["name"] = entity.Name,
+                    ["startsOn"] = entity.StartsOn,
+                    ["endsOn"] = entity.EndsOn,
+                    ["status"] =
+                        entity.Status.ToString()
+                },
+            "Academic year created.",
+            cancellationToken);
 
         return await PersistAsync(cancellationToken);
     }
@@ -295,14 +321,44 @@ public sealed class AcademicStructureService : IAcademicStructureService
             return Fail(nameof(request.StartsOn),
                 AcademicStructureErrorCode.TermOutsideAcademicYear);
 
+        var oldValues =
+            new Dictionary<string, object?>
+            {
+                ["name"] = entity.Name,
+                ["startsOn"] = entity.StartsOn,
+                ["endsOn"] = entity.EndsOn,
+                ["status"] =
+                    entity.Status.ToString()
+            };
+
         entity.Name = name;
         entity.StartsOn = request.StartsOn;
         entity.EndsOn = request.EndsOn;
         entity.Status = request.Status;
         entity.UpdatedAtUtc = DateTime.UtcNow;
 
-        return MapPersistence(await _academic.SaveWithRowVersionAsync(
-            entity, request.ExpectedRowVersion, cancellationToken));
+        await QueueAuditAsync(
+            scope,
+            "AcademicYear.Updated",
+            "AcademicYear",
+            entity.Id,
+            oldValues,
+            new Dictionary<string, object?>
+            {
+                ["name"] = entity.Name,
+                ["startsOn"] = entity.StartsOn,
+                ["endsOn"] = entity.EndsOn,
+                ["status"] =
+                    entity.Status.ToString()
+            },
+            "Academic year updated.",
+            cancellationToken);
+
+        return MapPersistence(
+            await _academic.SaveWithRowVersionAsync(
+                entity,
+                request.ExpectedRowVersion,
+                cancellationToken));
     }
 
     public async Task<AcademicCommandResult> CreateTermAsync(
@@ -336,7 +392,7 @@ public sealed class AcademicStructureService : IAcademicStructureService
                 schoolId, year.Id, Normalize(name), cancellationToken))
             return Fail(nameof(request.Name), AcademicStructureErrorCode.DuplicateTerm);
 
-        await _academic.AddAsync(new Term
+        var entity = new Term
         {
             Id = Guid.NewGuid(),
             SchoolId = schoolId,
@@ -345,7 +401,31 @@ public sealed class AcademicStructureService : IAcademicStructureService
             StartsOn = request.StartsOn,
             EndsOn = request.EndsOn,
             Status = request.Status
-        }, cancellationToken);
+        };
+
+        await _academic.AddAsync(
+            entity,
+            cancellationToken);
+
+        await QueueAuditAsync(
+            scope,
+            "Term.Created",
+            "Term",
+            entity.Id,
+            oldValues: null,
+            newValues:
+                new Dictionary<string, object?>
+                {
+                    ["academicYearId"] =
+                        entity.AcademicYearId,
+                    ["name"] = entity.Name,
+                    ["startsOn"] = entity.StartsOn,
+                    ["endsOn"] = entity.EndsOn,
+                    ["status"] =
+                        entity.Status.ToString()
+                },
+            "Academic term created.",
+            cancellationToken);
 
         return await PersistAsync(cancellationToken);
     }
@@ -377,13 +457,32 @@ public sealed class AcademicStructureService : IAcademicStructureService
             return Fail(nameof(request.Order),
                 AcademicStructureErrorCode.DuplicateGradeOrder);
 
-        await _academic.AddAsync(new GradeLevel
+        var entity = new GradeLevel
         {
             Id = Guid.NewGuid(),
             SchoolId = schoolId,
             Name = name,
             Order = request.Order
-        }, cancellationToken);
+        };
+
+        await _academic.AddAsync(
+            entity,
+            cancellationToken);
+
+        await QueueAuditAsync(
+            scope,
+            "GradeLevel.Created",
+            "GradeLevel",
+            entity.Id,
+            oldValues: null,
+            newValues:
+                new Dictionary<string, object?>
+                {
+                    ["name"] = entity.Name,
+                    ["order"] = entity.Order
+                },
+            "Grade level created.",
+            cancellationToken);
 
         return await PersistAsync(cancellationToken);
     }
@@ -424,7 +523,7 @@ public sealed class AcademicStructureService : IAcademicStructureService
             return Fail(nameof(request.Code),
                 AcademicStructureErrorCode.DuplicateClassCode);
 
-        await _academic.AddAsync(new ClassGroup
+        var entity = new ClassGroup
         {
             Id = Guid.NewGuid(),
             SchoolId = schoolId,
@@ -434,7 +533,32 @@ public sealed class AcademicStructureService : IAcademicStructureService
             Code = code,
             NormalizedCode = code,
             Status = request.Status
-        }, cancellationToken);
+        };
+
+        await _academic.AddAsync(
+            entity,
+            cancellationToken);
+
+        await QueueAuditAsync(
+            scope,
+            "ClassGroup.Created",
+            "ClassGroup",
+            entity.Id,
+            oldValues: null,
+            newValues:
+                new Dictionary<string, object?>
+                {
+                    ["academicYearId"] =
+                        entity.AcademicYearId,
+                    ["gradeLevelId"] =
+                        entity.GradeLevelId,
+                    ["name"] = entity.Name,
+                    ["code"] = entity.Code,
+                    ["status"] =
+                        entity.Status.ToString()
+                },
+            "Class group created.",
+            cancellationToken);
 
         return await PersistAsync(cancellationToken);
     }
@@ -478,14 +602,46 @@ public sealed class AcademicStructureService : IAcademicStructureService
             return Fail(nameof(request.Code),
                 AcademicStructureErrorCode.DuplicateClassCode);
 
+        var oldValues =
+            new Dictionary<string, object?>
+            {
+                ["gradeLevelId"] =
+                    entity.GradeLevelId,
+                ["name"] = entity.Name,
+                ["code"] = entity.Code,
+                ["status"] =
+                    entity.Status.ToString()
+            };
+
         entity.GradeLevelId = grade.Id;
         entity.Name = name;
         entity.Code = code;
         entity.NormalizedCode = code;
         entity.Status = request.Status;
 
-        return MapPersistence(await _academic.SaveWithRowVersionAsync(
-            entity, request.ExpectedRowVersion, cancellationToken));
+        await QueueAuditAsync(
+            scope,
+            "ClassGroup.Updated",
+            "ClassGroup",
+            entity.Id,
+            oldValues,
+            new Dictionary<string, object?>
+            {
+                ["gradeLevelId"] =
+                    entity.GradeLevelId,
+                ["name"] = entity.Name,
+                ["code"] = entity.Code,
+                ["status"] =
+                    entity.Status.ToString()
+            },
+            "Class group updated.",
+            cancellationToken);
+
+        return MapPersistence(
+            await _academic.SaveWithRowVersionAsync(
+                entity,
+                request.ExpectedRowVersion,
+                cancellationToken));
     }
 
     public async Task<AcademicCommandResult> CreateSubjectAsync(
@@ -511,7 +667,7 @@ public sealed class AcademicStructureService : IAcademicStructureService
             return Fail(nameof(request.Code),
                 AcademicStructureErrorCode.DuplicateSubjectCode);
 
-        await _academic.AddAsync(new Subject
+        var entity = new Subject
         {
             Id = Guid.NewGuid(),
             SchoolId = schoolId,
@@ -519,7 +675,28 @@ public sealed class AcademicStructureService : IAcademicStructureService
             Code = code,
             NormalizedCode = code,
             Status = request.Status
-        }, cancellationToken);
+        };
+
+        await _academic.AddAsync(
+            entity,
+            cancellationToken);
+
+        await QueueAuditAsync(
+            scope,
+            "Subject.Created",
+            "Subject",
+            entity.Id,
+            oldValues: null,
+            newValues:
+                new Dictionary<string, object?>
+                {
+                    ["name"] = entity.Name,
+                    ["code"] = entity.Code,
+                    ["status"] =
+                        entity.Status.ToString()
+                },
+            "Subject created.",
+            cancellationToken);
 
         return await PersistAsync(cancellationToken);
     }
@@ -555,13 +732,41 @@ public sealed class AcademicStructureService : IAcademicStructureService
             return Fail(nameof(request.Code),
                 AcademicStructureErrorCode.DuplicateSubjectCode);
 
+        var oldValues =
+            new Dictionary<string, object?>
+            {
+                ["name"] = entity.Name,
+                ["code"] = entity.Code,
+                ["status"] =
+                    entity.Status.ToString()
+            };
+
         entity.Name = name;
         entity.Code = code;
         entity.NormalizedCode = code;
         entity.Status = request.Status;
 
-        return MapPersistence(await _academic.SaveWithRowVersionAsync(
-            entity, request.ExpectedRowVersion, cancellationToken));
+        await QueueAuditAsync(
+            scope,
+            "Subject.Updated",
+            "Subject",
+            entity.Id,
+            oldValues,
+            new Dictionary<string, object?>
+            {
+                ["name"] = entity.Name,
+                ["code"] = entity.Code,
+                ["status"] =
+                    entity.Status.ToString()
+            },
+            "Subject updated.",
+            cancellationToken);
+
+        return MapPersistence(
+            await _academic.SaveWithRowVersionAsync(
+                entity,
+                request.ExpectedRowVersion,
+                cancellationToken));
     }
 
     public async Task<AcademicCommandResult> CreateTeacherAssignmentAsync(
@@ -601,16 +806,42 @@ public sealed class AcademicStructureService : IAcademicStructureService
                 schoolId, teacher.Id, classGroup.Id, subject.Id, cancellationToken))
             return Fail(AcademicStructureErrorCode.DuplicateTeacherAssignment);
 
-        await _academic.AddAsync(new TeacherAssignment
+        var entity = new TeacherAssignment
         {
             Id = Guid.NewGuid(),
             SchoolId = schoolId,
             TeacherUserId = teacher.Id,
             ClassGroupId = classGroup.Id,
             SubjectId = subject.Id,
-            AcademicYearId = classGroup.AcademicYearId,
+            AcademicYearId =
+                classGroup.AcademicYearId,
             CreatedAtUtc = DateTime.UtcNow
-        }, cancellationToken);
+        };
+
+        await _academic.AddAsync(
+            entity,
+            cancellationToken);
+
+        await QueueAuditAsync(
+            scope,
+            "TeacherAssignment.Created",
+            "TeacherAssignment",
+            entity.Id,
+            oldValues: null,
+            newValues:
+                new Dictionary<string, object?>
+                {
+                    ["teacherUserId"] =
+                        entity.TeacherUserId,
+                    ["classGroupId"] =
+                        entity.ClassGroupId,
+                    ["subjectId"] =
+                        entity.SubjectId,
+                    ["academicYearId"] =
+                        entity.AcademicYearId
+                },
+            "Teacher assignment created.",
+            cancellationToken);
 
         return await PersistAsync(cancellationToken);
     }
@@ -668,20 +899,44 @@ public sealed class AcademicStructureService : IAcademicStructureService
 
         var now = DateTime.UtcNow;
 
-        await _academic.AddAsync(new StudentProfile
+        var entity = new StudentProfile
         {
             Id = Guid.NewGuid(),
             SchoolId = schoolId,
             UserId = request.UserId,
             StudentNumber = studentNumber,
-            NormalizedStudentNumber = studentNumber,
+            NormalizedStudentNumber =
+                studentNumber,
             FirstName = firstName,
             LastName = lastName,
-            DisplayName = $"{firstName} {lastName}".Trim(),
+            DisplayName =
+                $"{firstName} {lastName}".Trim(),
             Status = request.Status,
             CreatedAtUtc = now,
             UpdatedAtUtc = now
-        }, cancellationToken);
+        };
+
+        await _academic.AddAsync(
+            entity,
+            cancellationToken);
+
+        await QueueAuditAsync(
+            scope,
+            "StudentProfile.Created",
+            "StudentProfile",
+            entity.Id,
+            oldValues: null,
+            newValues:
+                new Dictionary<string, object?>
+                {
+                    ["userId"] = entity.UserId,
+                    ["studentNumber"] =
+                        entity.StudentNumber,
+                    ["status"] =
+                        entity.Status.ToString()
+                },
+            "Student profile created.",
+            cancellationToken);
 
         return await PersistAsync(cancellationToken);
     }
@@ -713,17 +968,85 @@ public sealed class AcademicStructureService : IAcademicStructureService
                 schoolId, classGroup.AcademicYearId, profile.Id, cancellationToken))
             return Fail(AcademicStructureErrorCode.DuplicateEnrollment);
 
-        await _academic.AddAsync(new StudentEnrollment
+        var entity = new StudentEnrollment
         {
             Id = Guid.NewGuid(),
             SchoolId = schoolId,
             StudentProfileId = profile.Id,
             ClassGroupId = classGroup.Id,
-            AcademicYearId = classGroup.AcademicYearId,
+            AcademicYearId =
+                classGroup.AcademicYearId,
             EnrolledAtUtc = DateTime.UtcNow
-        }, cancellationToken);
+        };
+
+        await _academic.AddAsync(
+            entity,
+            cancellationToken);
+
+        await QueueAuditAsync(
+            scope,
+            "StudentEnrollment.Created",
+            "StudentEnrollment",
+            entity.Id,
+            oldValues: null,
+            newValues:
+                new Dictionary<string, object?>
+                {
+                    ["studentProfileId"] =
+                        entity.StudentProfileId,
+                    ["classGroupId"] =
+                        entity.ClassGroupId,
+                    ["academicYearId"] =
+                        entity.AcademicYearId
+                },
+            "Student enrollment created.",
+            cancellationToken);
 
         return await PersistAsync(cancellationToken);
+    }
+
+    private async Task QueueAuditAsync(
+        ScopeResult scope,
+        string action,
+        string entityType,
+        Guid entityId,
+        IReadOnlyDictionary<string, object?>? oldValues,
+        IReadOnlyDictionary<string, object?>? newValues,
+        string resultSummary,
+        CancellationToken cancellationToken)
+    {
+        if (_audit is null ||
+            scope.School is null ||
+            scope.Actor is null)
+        {
+            return;
+        }
+
+        await _audit.QueueAsync(
+            new AuditEvent(
+                SchoolId:
+                    scope.School.Id,
+                Action:
+                    action,
+                EntityType:
+                    entityType,
+                EntityId:
+                    entityId.ToString("D"),
+                Feature:
+                    "AcademicStructure",
+                OldValues:
+                    oldValues,
+                NewValues:
+                    newValues,
+                ResultSummary:
+                    resultSummary,
+                ActorUserIdOverride:
+                    scope.Actor.Id,
+                ActorRoleOverride:
+                    SingleRole(
+                        scope.Actor.Roles)
+                    ?? string.Empty),
+            cancellationToken);
     }
 
     private async Task<ScopeResult> ResolveScopeAsync(
