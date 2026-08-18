@@ -54,6 +54,7 @@ public class EdulyticsDbContext
         bool acceptAllChangesOnSuccess)
     {
         PrepareApplicationManagedConcurrencyTokens();
+        EnforceAuditAppendOnly();
 
         return base.SaveChanges(
             acceptAllChangesOnSuccess);
@@ -64,10 +65,26 @@ public class EdulyticsDbContext
         CancellationToken cancellationToken = default)
     {
         PrepareApplicationManagedConcurrencyTokens();
+        EnforceAuditAppendOnly();
 
         return base.SaveChangesAsync(
             acceptAllChangesOnSuccess,
             cancellationToken);
+    }
+
+    private void EnforceAuditAppendOnly()
+    {
+        foreach (var entry in
+                 ChangeTracker.Entries<AuditLog>())
+        {
+            if (entry.State is
+                EntityState.Modified or
+                EntityState.Deleted)
+            {
+                throw new InvalidOperationException(
+                    "AuditLog entries are append-only.");
+            }
+        }
     }
 
     private void PrepareApplicationManagedConcurrencyTokens()

@@ -5,6 +5,7 @@ using Edulytics.Core.Entities;
 using Edulytics.Core.Enums;
 using Edulytics.Core.Interfaces;
 using Edulytics.Core.Users;
+using Edulytics.Services.Auditing;
 
 namespace Edulytics.Services.Imports;
 
@@ -17,6 +18,7 @@ public sealed class DataImportService
     private readonly ImportFileParser _parser;
     private readonly ImportValidationEngine _validator;
     private readonly ImportPlanBuilder _planBuilder;
+    private readonly IAuditService? _audit;
 
     public DataImportService(
         IImportRepository imports,
@@ -24,7 +26,8 @@ public sealed class DataImportService
         ISchoolRepository schools,
         ImportFileParser parser,
         ImportValidationEngine validator,
-        ImportPlanBuilder planBuilder)
+        ImportPlanBuilder planBuilder,
+        IAuditService? audit = null)
     {
         _imports = imports;
         _users = users;
@@ -32,6 +35,7 @@ public sealed class DataImportService
         _parser = parser;
         _validator = validator;
         _planBuilder = planBuilder;
+        _audit = audit;
     }
 
     public static bool CanImportType(
@@ -280,6 +284,29 @@ public sealed class DataImportService
                 batchId,
                 issues);
 
+        await QueueAuditAsync(
+            scope,
+            "ImportBatch.Uploaded",
+            "ImportBatch",
+            batch.Id,
+            oldValues: null,
+            newValues:
+                new Dictionary<string, object?>
+                {
+                    ["importType"] =
+                        batch.ImportType.ToString(),
+                    ["status"] =
+                        batch.Status.ToString(),
+                    ["rowCount"] =
+                        batch.RowCount,
+                    ["validRowCount"] =
+                        batch.ValidRowCount,
+                    ["errorCount"] =
+                        batch.ErrorCount
+                },
+            "Import batch uploaded and validated.",
+            cancellationToken);
+
         var saved =
             await _imports.AddBatchAsync(
                 batch,
@@ -443,6 +470,36 @@ public sealed class DataImportService
                     batch.Id,
                     issues);
 
+            await QueueAuditAsync(
+                scope,
+                "ImportBatch.ValidationFailed",
+                "ImportBatch",
+                batch.Id,
+                oldValues:
+                    new Dictionary<string, object?>
+                    {
+                        ["status"] =
+                            batch.Status.ToString(),
+                        ["errorCount"] =
+                            batch.ErrorCount
+                    },
+                newValues:
+                    new Dictionary<string, object?>
+                    {
+                        ["status"] =
+                            ImportBatchStatus
+                                .ValidationFailed
+                                .ToString(),
+                        ["validRowCount"] =
+                            ValidRowCount(
+                                parsed.Rows.Count,
+                                issues),
+                        ["errorCount"] =
+                            issues.Count
+                    },
+                "Import batch failed revalidation.",
+                cancellationToken);
+
             var failed =
                 await _imports
                     .MarkValidationFailedAsync(
@@ -480,6 +537,46 @@ public sealed class DataImportService
                 snapshot,
                 schoolUsers,
                 now);
+
+        await QueueAuditAsync(
+            scope,
+            "ImportBatch.Completed",
+            "ImportBatch",
+            batch.Id,
+            oldValues:
+                new Dictionary<string, object?>
+                {
+                    ["status"] =
+                        batch.Status.ToString()
+                },
+            newValues:
+                new Dictionary<string, object?>
+                {
+                    ["status"] =
+                        ImportBatchStatus
+                            .Completed
+                            .ToString(),
+                    ["importType"] =
+                        batch.ImportType.ToString(),
+                    ["subjects"] =
+                        plan.Subjects.Count,
+                    ["classes"] =
+                        plan.Classes.Count,
+                    ["students"] =
+                        plan.Students.Count,
+                    ["enrollments"] =
+                        plan.Enrollments.Count,
+                    ["teacherAssignments"] =
+                        plan.TeacherAssignments.Count,
+                    ["assessmentResults"] =
+                        plan.AssessmentResults.Count,
+                    ["studentAnswers"] =
+                        plan.StudentAnswers.Count,
+                    ["curriculumMappings"] =
+                        plan.CurriculumMappings.Count
+                },
+            "Import batch applied successfully.",
+            cancellationToken);
 
         var applied =
             await _imports.ApplyAsync(
@@ -538,6 +635,48 @@ public sealed class DataImportService
             scope.Role!,
             actorUserId,
             completed,
+            cancellationToken);
+    }
+
+    private async Task QueueAuditAsync(
+        ScopeResult scope,
+        string action,
+        string entityType,
+        Guid entityId,
+        IReadOnlyDictionary<string, object?>? oldValues,
+        IReadOnlyDictionary<string, object?>? newValues,
+        string resultSummary,
+        CancellationToken cancellationToken)
+    {
+        if (_audit is null ||
+            scope.School is null ||
+            scope.Actor is null)
+        {
+            return;
+        }
+
+        await _audit.QueueAsync(
+            new AuditEvent(
+                SchoolId:
+                    scope.School.Id,
+                Action:
+                    action,
+                EntityType:
+                    entityType,
+                EntityId:
+                    entityId.ToString("D"),
+                Feature:
+                    "DataImport",
+                OldValues:
+                    oldValues,
+                NewValues:
+                    newValues,
+                ResultSummary:
+                    resultSummary,
+                ActorUserIdOverride:
+                    scope.Actor.Id,
+                ActorRoleOverride:
+                    scope.Role ?? string.Empty),
             cancellationToken);
     }
 

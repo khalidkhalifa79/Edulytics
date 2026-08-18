@@ -26,15 +26,18 @@ public sealed class SchoolUserManagementService
     private readonly ISchoolUserRepository _users;
     private readonly ISchoolRepository _schools;
     private readonly IAuditService? _audit;
+    private readonly IApplicationTransactionManager? _transactions;
 
     public SchoolUserManagementService(
         ISchoolUserRepository users,
         ISchoolRepository schools,
-        IAuditService? audit = null)
+        IAuditService? audit = null,
+        IApplicationTransactionManager? transactions = null)
     {
         _users = users;
         _schools = schools;
         _audit = audit;
+        _transactions = transactions;
     }
 
     public async Task<SchoolUserQueryResult<SchoolUserListData>>
@@ -204,6 +207,10 @@ public sealed class SchoolUserManagementService
                 SchoolUserErrorCode.UserInvalidRole);
         }
 
+        await using var auditTransaction =
+            await BeginAuditTransactionAsync(
+                cancellationToken);
+
         var write = await _users.CreateAsync(
             scope.School!.Id,
             email,
@@ -257,6 +264,10 @@ public sealed class SchoolUserManagementService
                         ?? string.Empty),
                 cancellationToken);
         }
+
+        await CommitAuditTransactionAsync(
+            auditTransaction,
+            cancellationToken);
 
         return SchoolUserCreateResult.Success(
             write.User.Id,
@@ -383,6 +394,10 @@ public sealed class SchoolUserManagementService
                 SchoolUserErrorCode.UserCannotManageSelf);
         }
 
+        await using var auditTransaction =
+            await BeginAuditTransactionAsync(
+                cancellationToken);
+
         var write =
             await _users.GeneratePasswordSetupAsync(
                 scope.School.Id,
@@ -430,6 +445,10 @@ public sealed class SchoolUserManagementService
                 cancellationToken);
         }
 
+        await CommitAuditTransactionAsync(
+            auditTransaction,
+            cancellationToken);
+
         return SchoolUserPasswordLinkResult.Success(
             write.User.Id,
             write.PasswordSetupToken,
@@ -457,6 +476,10 @@ public sealed class SchoolUserManagementService
                 nameof(newPassword),
                 SchoolUserErrorCode.UserPasswordPolicy);
         }
+
+        await using var auditTransaction =
+            await BeginAuditTransactionAsync(
+                cancellationToken);
 
         var write =
             await _users.CompletePasswordSetupAsync(
@@ -504,6 +527,10 @@ public sealed class SchoolUserManagementService
                         ?? string.Empty),
                 cancellationToken);
         }
+
+        await CommitAuditTransactionAsync(
+            auditTransaction,
+            cancellationToken);
 
         return SchoolUserCommandResult.Success();
     }
@@ -672,6 +699,10 @@ public sealed class SchoolUserManagementService
                 SchoolUserErrorCode.UserCannotManageSelf);
         }
 
+        await using var auditTransaction =
+            await BeginAuditTransactionAsync(
+                cancellationToken);
+
         var write = await operation(
             scope.School.Id,
             cancellationToken);
@@ -733,8 +764,31 @@ public sealed class SchoolUserManagementService
                 cancellationToken);
         }
 
+        await CommitAuditTransactionAsync(
+            auditTransaction,
+            cancellationToken);
+
         return SchoolUserCommandResult.Success();
     }
+
+    private async Task<IApplicationTransaction?>
+        BeginAuditTransactionAsync(
+            CancellationToken cancellationToken)
+    {
+        if (_transactions is null)
+            return null;
+
+        return await _transactions.BeginAsync(
+            cancellationToken);
+    }
+
+    private static Task CommitAuditTransactionAsync(
+        IApplicationTransaction? transaction,
+        CancellationToken cancellationToken) =>
+        transaction is null
+            ? Task.CompletedTask
+            : transaction.CommitAsync(
+                cancellationToken);
 
     private async Task<ScopeResult> ResolveScopeAsync(
         Guid actorUserId,

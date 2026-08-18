@@ -207,12 +207,16 @@ public sealed class ImportRepository : IImportRepository
 
             if (batch is null)
             {
+                _db.ChangeTracker.Clear();
+
                 return ImportPersistenceResult.Failure(
                     ImportPersistenceError.NotFound);
             }
 
             if (batch.Status == ImportBatchStatus.Completed)
             {
+                _db.ChangeTracker.Clear();
+
                 return ImportPersistenceResult.Success();
             }
 
@@ -295,6 +299,8 @@ public sealed class ImportRepository : IImportRepository
                 await transaction.RollbackAsync(
                     cancellationToken);
 
+                _db.ChangeTracker.Clear();
+
                 return ImportPersistenceResult.Failure(
                     ImportPersistenceError.NotFound);
             }
@@ -304,6 +310,8 @@ public sealed class ImportRepository : IImportRepository
                 await transaction.RollbackAsync(
                     cancellationToken);
 
+                _db.ChangeTracker.Clear();
+
                 return ImportPersistenceResult.Success();
             }
 
@@ -312,6 +320,8 @@ public sealed class ImportRepository : IImportRepository
             {
                 await transaction.RollbackAsync(
                     cancellationToken);
+
+                _db.ChangeTracker.Clear();
 
                 return ImportPersistenceResult.Failure(
                     ImportPersistenceError.InvalidState);

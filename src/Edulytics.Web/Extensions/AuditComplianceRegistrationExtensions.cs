@@ -25,6 +25,18 @@ public static class AuditComplianceRegistrationExtensions
             IAuditService,
             AuditService>();
 
+        services.AddScoped<
+            Edulytics.Core.Interfaces.IAuditQueryRepository,
+            Edulytics.Data.Repositories.AuditQueryRepository>();
+
+        services.AddScoped<
+            Edulytics.Services.Auditing.IAuditQueryService,
+            Edulytics.Services.Auditing.AuditQueryService>();
+
+        services.AddScoped<
+            Edulytics.Core.Interfaces.IApplicationTransactionManager,
+            Edulytics.Data.Transactions.EfApplicationTransactionManager>();
+
         return services;
     }
 }

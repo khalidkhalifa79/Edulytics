@@ -269,6 +269,330 @@ Console.WriteLine(
 Console.WriteLine(
     "PHASE16_POSTGRES_GATE_PASS");
 
+Console.WriteLine(
+    "===== PHASE 18 POSTGRES AUDIT GATE =====");
+
+var auditCorrelationPrefix =
+    $"phase18-audit-{Guid.NewGuid():N}";
+
+var auditAId = Guid.NewGuid();
+var auditBId = Guid.NewGuid();
+
+await using (var db =
+             await NewDbAsync())
+{
+    db.AuditLogs.AddRange(
+        new AuditLog
+        {
+            Id = auditAId,
+            SchoolId = schoolA,
+            ActorUserId = null,
+            ActorRole = "SuperAdmin",
+            Action = "Phase18.Postgres.A",
+            EntityType = "Phase18Gate",
+            EntityId = auditAId.ToString("D"),
+            OccurredAtUtc = now.AddMinutes(10),
+            CorrelationId =
+                auditCorrelationPrefix + "-A",
+            IpAddress = "127.0.0.1",
+            UserAgent = "Edulytics.PostgresGate",
+            OldValuesJson = null,
+            NewValuesJson = "{}",
+            ResultSummary =
+                "Phase 18 PostgreSQL audit A.",
+            Source = "CI",
+            Feature = "Phase18"
+        },
+        new AuditLog
+        {
+            Id = auditBId,
+            SchoolId = schoolB,
+            ActorUserId = null,
+            ActorRole = "SuperAdmin",
+            Action = "Phase18.Postgres.B",
+            EntityType = "Phase18Gate",
+            EntityId = auditBId.ToString("D"),
+            OccurredAtUtc = now.AddMinutes(11),
+            CorrelationId =
+                auditCorrelationPrefix + "-B",
+            IpAddress = "127.0.0.1",
+            UserAgent = "Edulytics.PostgresGate",
+            OldValuesJson = null,
+            NewValuesJson = "{}",
+            ResultSummary =
+                "Phase 18 PostgreSQL audit B.",
+            Source = "CI",
+            Feature = "Phase18"
+        });
+
+    await db.SaveChangesAsync();
+}
+
+await using (var db =
+             await NewDbAsync())
+{
+    var page =
+        await new AuditQueryRepository(db)
+            .QueryAsync(
+                new AuditLogQuerySpec(
+                    AllSchools: false,
+                    SchoolId: schoolA,
+                    Action: null,
+                    EntityType: "Phase18Gate",
+                    CorrelationId:
+                        auditCorrelationPrefix,
+                    ActorUserId: null,
+                    FromUtc: null,
+                    ToUtc: null,
+                    Skip: 0,
+                    Take: 100));
+
+    if (page.TotalCount < 1 ||
+        page.Items.Count < 1 ||
+        page.Items.Any(
+            x => x.SchoolId != schoolA) ||
+        page.Items.Any(
+            x => x.Id == auditBId))
+    {
+        throw new Exception(
+            "Phase 18 PostgreSQL audit tenant isolation failed.");
+    }
+}
+
+Console.WriteLine(
+    "PASS: PostgreSQL audit correlation search + tenant isolation");
+
+await using (var db =
+             await NewDbAsync())
+{
+    var audit =
+        await db.AuditLogs
+            .SingleAsync(
+                x => x.Id == auditAId);
+
+    audit.ResultSummary =
+        "Attempted mutation";
+
+    var blocked = false;
+
+    try
+    {
+        await db.SaveChangesAsync();
+    }
+    catch (InvalidOperationException)
+    {
+        blocked = true;
+    }
+
+    if (!blocked)
+    {
+        throw new Exception(
+            "AuditLog append-only enforcement did not block modification.");
+    }
+}
+
+Console.WriteLine(
+    "PASS: PostgreSQL AuditLog append-only enforcement");
+
+var rollbackAuditId =
+    Guid.NewGuid();
+
+await using (var db =
+             await NewDbAsync())
+{
+    await using var transaction =
+        await db.Database
+            .BeginTransactionAsync();
+
+    db.AuditLogs.Add(
+        new AuditLog
+        {
+            Id = rollbackAuditId,
+            SchoolId = schoolA,
+            ActorUserId = null,
+            ActorRole = "SuperAdmin",
+            Action = "Phase18.Rollback",
+            EntityType = "Phase18Gate",
+            EntityId =
+                rollbackAuditId.ToString("D"),
+            OccurredAtUtc = now.AddMinutes(12),
+            CorrelationId =
+                $"phase18-rollback-{rollbackAuditId:N}",
+            IpAddress = null,
+            UserAgent = "Edulytics.PostgresGate",
+            OldValuesJson = null,
+            NewValuesJson = "{}",
+            ResultSummary =
+                "Must be rolled back.",
+            Source = "CI",
+            Feature = "Phase18"
+        });
+
+    await db.SaveChangesAsync();
+
+    await transaction.RollbackAsync();
+}
+
+await using (var db =
+             await NewDbAsync())
+{
+    if (await db.AuditLogs
+            .AsNoTracking()
+            .AnyAsync(
+                x => x.Id == rollbackAuditId))
+    {
+        throw new Exception(
+            "Rolled-back PostgreSQL audit row persisted.");
+    }
+}
+
+Console.WriteLine(
+    "PASS: PostgreSQL rolled-back audit does not persist");
+
+var operatorUserId =
+    Guid.NewGuid();
+
+var deadLetterId =
+    Guid.NewGuid();
+
+await using (var db =
+             await NewDbAsync())
+{
+    var deadLetter =
+        NewMessage(
+            schoolA,
+            "phase18-requeue",
+            now.AddMinutes(20));
+
+    deadLetter.Id =
+        deadLetterId;
+
+    deadLetter.Status =
+        OutboxMessageStatus.DeadLetter;
+
+    deadLetter.ProcessingAttempts = 4;
+
+    deadLetter.DeadLetteredAtUtc =
+        now.AddMinutes(21);
+
+    deadLetter.LastError =
+        "Phase 18 CI dead letter";
+
+    db.OutboxMessages.Add(
+        deadLetter);
+
+    await db.SaveChangesAsync();
+}
+
+await using (var db =
+             await NewDbAsync())
+{
+    var requeued =
+        await new OutboxRepository(db)
+            .RequeueDeadLetterAsync(
+                deadLetterId,
+                operatorUserId,
+                "Phase 18 PostgreSQL gate",
+                now.AddMinutes(22));
+
+    if (!requeued)
+    {
+        throw new Exception(
+            "Phase 18 PostgreSQL Outbox requeue failed.");
+    }
+
+    var generalAudit =
+        await db.AuditLogs
+            .AsNoTracking()
+            .AnyAsync(
+                x =>
+                    x.EntityId ==
+                    deadLetterId.ToString("D") &&
+                    x.Action ==
+                    "Outbox.DeadLetterRequeued");
+
+    var legacyAudit =
+        await db.OutboxRequeueAudits
+            .AsNoTracking()
+            .AnyAsync(
+                x =>
+                    x.OutboxMessageId ==
+                    deadLetterId &&
+                    x.ActorUserId ==
+                    operatorUserId);
+
+    if (!generalAudit ||
+        !legacyAudit)
+    {
+        throw new Exception(
+            "Outbox requeue did not persist both audit contracts.");
+    }
+}
+
+Console.WriteLine(
+    "PASS: PostgreSQL Outbox requeue dual audit is atomic");
+
+var pendingId =
+    Guid.NewGuid();
+
+await using (var db =
+             await NewDbAsync())
+{
+    var pending =
+        NewMessage(
+            schoolA,
+            "phase18-no-false-success",
+            now.AddMinutes(30));
+
+    pending.Id =
+        pendingId;
+
+    db.OutboxMessages.Add(
+        pending);
+
+    await db.SaveChangesAsync();
+}
+
+await using (var db =
+             await NewDbAsync())
+{
+    var requeued =
+        await new OutboxRepository(db)
+            .RequeueDeadLetterAsync(
+                pendingId,
+                operatorUserId,
+                "Must not succeed",
+                now.AddMinutes(31));
+
+    if (requeued)
+    {
+        throw new Exception(
+            "Pending Outbox row was incorrectly requeued.");
+    }
+
+    var falseAudit =
+        await db.AuditLogs
+            .AsNoTracking()
+            .AnyAsync(
+                x =>
+                    x.EntityId ==
+                    pendingId.ToString("D") &&
+                    x.Action ==
+                    "Outbox.DeadLetterRequeued");
+
+    if (falseAudit)
+    {
+        throw new Exception(
+            "Failed Outbox mutation produced a false success audit.");
+    }
+}
+
+Console.WriteLine(
+    "PASS: failed mutation writes no false success audit");
+
+Console.WriteLine(
+    "PHASE18_POSTGRES_GATE_PASS");
+
 static School NewSchool(
     Guid id,
     string code,
