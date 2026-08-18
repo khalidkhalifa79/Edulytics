@@ -3,6 +3,7 @@ using System.Text.RegularExpressions;
 using Edulytics.Core.Entities;
 using Edulytics.Core.Enums;
 using Edulytics.Core.Interfaces;
+using Edulytics.Services.Auditing;
 
 namespace Edulytics.Services.Schools;
 
@@ -27,10 +28,14 @@ public sealed class SchoolManagementService : ISchoolManagementService
         };
 
     private readonly ISchoolRepository _repository;
+    private readonly IAuditService? _audit;
 
-    public SchoolManagementService(ISchoolRepository repository)
+    public SchoolManagementService(
+        ISchoolRepository repository,
+        IAuditService? audit = null)
     {
         _repository = repository;
+        _audit = audit;
     }
 
     public async Task<IReadOnlyList<SchoolListItem>> ListAsync(
@@ -97,6 +102,30 @@ public sealed class SchoolManagementService : ISchoolManagementService
 
         await _repository.AddAsync(school, cancellationToken);
 
+        if (_audit is not null)
+        {
+            await _audit.QueueAsync(
+                new AuditEvent(
+                    SchoolId: school.Id,
+                    Action: "School.Created",
+                    EntityType: "School",
+                    EntityId: school.Id.ToString("D"),
+                    Feature: "SchoolManagement",
+                    NewValues: new Dictionary<string, object?>
+                    {
+                        ["name"] = school.Name,
+                        ["schoolCode"] = school.SchoolCode,
+                        ["status"] = school.Status.ToString(),
+                        ["countryCode"] = school.CountryCode,
+                        ["city"] = school.City,
+                        ["contactEmail"] = school.ContactEmail,
+                        ["defaultCulture"] = school.DefaultCulture,
+                        ["timeZoneId"] = school.TimeZoneId
+                    },
+                    ResultSummary: "School created."),
+                cancellationToken);
+        }
+
         var saveResult = await _repository.SaveAsync(
             school,
             expectedRowVersion: null,
@@ -158,6 +187,16 @@ public sealed class SchoolManagementService : ISchoolManagementService
                     SchoolErrorCode.ArchivedCannotEdit));
         }
 
+        var oldValues = new Dictionary<string, object?>
+        {
+            ["name"] = school.Name,
+            ["countryCode"] = school.CountryCode,
+            ["city"] = school.City,
+            ["contactEmail"] = school.ContactEmail,
+            ["defaultCulture"] = school.DefaultCulture,
+            ["timeZoneId"] = school.TimeZoneId
+        };
+
         school.Name = request.Name.Trim();
         school.CountryCode = NormalizeCountryCode(request.CountryCode);
         school.City = request.City.Trim();
@@ -166,6 +205,29 @@ public sealed class SchoolManagementService : ISchoolManagementService
             request.DefaultCulture.Trim().ToLowerInvariant();
         school.TimeZoneId = request.TimeZoneId.Trim();
         school.UpdatedAtUtc = DateTime.UtcNow;
+
+        if (_audit is not null)
+        {
+            await _audit.QueueAsync(
+                new AuditEvent(
+                    SchoolId: school.Id,
+                    Action: "School.Updated",
+                    EntityType: "School",
+                    EntityId: school.Id.ToString("D"),
+                    Feature: "SchoolManagement",
+                    OldValues: oldValues,
+                    NewValues: new Dictionary<string, object?>
+                    {
+                        ["name"] = school.Name,
+                        ["countryCode"] = school.CountryCode,
+                        ["city"] = school.City,
+                        ["contactEmail"] = school.ContactEmail,
+                        ["defaultCulture"] = school.DefaultCulture,
+                        ["timeZoneId"] = school.TimeZoneId
+                    },
+                    ResultSummary: "School details updated."),
+                cancellationToken);
+        }
 
         var saveResult = await _repository.SaveAsync(
             school,
@@ -199,12 +261,36 @@ public sealed class SchoolManagementService : ISchoolManagementService
                     SchoolErrorCode.InvalidStatusTransition));
         }
 
+        var previousStatus = school.Status;
+
         school.Status = request.TargetStatus;
         school.UpdatedAtUtc = DateTime.UtcNow;
 
         if (request.TargetStatus == SchoolStatus.Archived)
         {
             school.ArchivedAtUtc = school.UpdatedAtUtc;
+        }
+
+        if (_audit is not null)
+        {
+            await _audit.QueueAsync(
+                new AuditEvent(
+                    SchoolId: school.Id,
+                    Action: "School.StatusChanged",
+                    EntityType: "School",
+                    EntityId: school.Id.ToString("D"),
+                    Feature: "SchoolManagement",
+                    OldValues: new Dictionary<string, object?>
+                    {
+                        ["status"] = previousStatus.ToString()
+                    },
+                    NewValues: new Dictionary<string, object?>
+                    {
+                        ["status"] = school.Status.ToString()
+                    },
+                    ResultSummary:
+                        $"School status changed from {previousStatus} to {school.Status}."),
+                cancellationToken);
         }
 
         var saveResult = await _repository.SaveAsync(
