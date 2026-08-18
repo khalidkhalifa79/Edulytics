@@ -390,8 +390,8 @@ FOR UPDATE OF o SKIP LOCKED")
                 CorrelationId =
                     entity.CorrelationId ??
                     $"outbox-requeue:{entity.Id:N}",
-                IpAddress = null,
-                UserAgent = null,
+                IpAddress = string.Empty,
+                UserAgent = string.Empty,
                 OldValuesJson =
                     JsonSerializer.Serialize(
                         new

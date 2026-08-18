@@ -39,7 +39,7 @@ Date: 2026-08-18
 - Full solution build: PASS
 - Full regression: PASS
 - Static audit/security acceptance: PASS
-- PostgreSQL local gate: CI_REQUIRED
+- PostgreSQL local gate: PASS (local PostgreSQL 17)
 
 The PostgreSQL gate is also part of the protected pull-request CI path and
 must pass before merge.

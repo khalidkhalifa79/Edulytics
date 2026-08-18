@@ -296,7 +296,7 @@ await using (var db =
                 auditCorrelationPrefix + "-A",
             IpAddress = "127.0.0.1",
             UserAgent = "Edulytics.PostgresGate",
-            OldValuesJson = null,
+            OldValuesJson = "{}",
             NewValuesJson = "{}",
             ResultSummary =
                 "Phase 18 PostgreSQL audit A.",
@@ -317,7 +317,7 @@ await using (var db =
                 auditCorrelationPrefix + "-B",
             IpAddress = "127.0.0.1",
             UserAgent = "Edulytics.PostgresGate",
-            OldValuesJson = null,
+            OldValuesJson = "{}",
             NewValuesJson = "{}",
             ResultSummary =
                 "Phase 18 PostgreSQL audit B.",
@@ -418,9 +418,9 @@ await using (var db =
             OccurredAtUtc = now.AddMinutes(12),
             CorrelationId =
                 $"phase18-rollback-{rollbackAuditId:N}",
-            IpAddress = null,
+            IpAddress = string.Empty,
             UserAgent = "Edulytics.PostgresGate",
-            OldValuesJson = null,
+            OldValuesJson = "{}",
             NewValuesJson = "{}",
             ResultSummary =
                 "Must be rolled back.",
