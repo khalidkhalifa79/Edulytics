@@ -38,6 +38,7 @@ public class EdulyticsDbContext
     public DbSet<ClassTopicSummary> ClassTopicSummaries => Set<ClassTopicSummary>();
     public DbSet<ClassAssessmentTrend> ClassAssessmentTrends => Set<ClassAssessmentTrend>();
     public DbSet<SchoolAnalyticsSnapshot> SchoolAnalyticsSnapshots => Set<SchoolAnalyticsSnapshot>();
+    public DbSet<AuditLog> AuditLogs => Set<AuditLog>();
     public DbSet<OutboxMessage> OutboxMessages => Set<OutboxMessage>();
     public DbSet<OutboxRequeueAudit> OutboxRequeueAudits => Set<OutboxRequeueAudit>();
     public DbSet<AnalyticsRefreshState> AnalyticsRefreshStates => Set<AnalyticsRefreshState>();
@@ -124,6 +125,7 @@ public class EdulyticsDbContext
         builder.ApplyConfiguration(new ClassTopicSummaryConfiguration());
         builder.ApplyConfiguration(new ClassAssessmentTrendConfiguration());
         builder.ApplyConfiguration(new SchoolAnalyticsSnapshotConfiguration());
+        builder.ApplyConfiguration(new AuditLogConfiguration());
         builder.ApplyConfiguration(new OutboxMessageConfiguration());
         builder.ApplyConfiguration(new OutboxRequeueAuditConfiguration());
         builder.ApplyConfiguration(new AnalyticsRefreshStateConfiguration());

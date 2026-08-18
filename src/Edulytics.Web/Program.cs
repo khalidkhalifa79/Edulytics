@@ -57,6 +57,9 @@ builder.Services
     .AddEdulyticsIdentityAndData(
         builder.Configuration);
 
+builder.Services
+    .AddAuditCompliancePhase18();
+
 var supportedCultures =
     CultureCookie
         .SupportedCultures
