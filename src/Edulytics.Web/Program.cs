@@ -107,6 +107,9 @@ builder.Services
     .AddSchoolUserManagementPhase05();
 
 builder.Services
+    .AddSubjectSupervisorCompletionPhase19();
+
+builder.Services
     .AddAcademicStructurePhase06();
 
 builder.Services

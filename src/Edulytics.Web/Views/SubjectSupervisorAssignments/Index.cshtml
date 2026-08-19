@@ -1,0 +1,184 @@
+@model Edulytics.Services.SubjectSupervisors.SubjectSupervisorManagementData
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.PlatformResource> T
+
+@{
+    ViewData["Title"] =
+        T["SubjectSupervisorAssignmentsTitle"].Value;
+}
+
+<section class="user-page">
+    <header class="user-page-header">
+        <div>
+            <a class="school-back-link"
+               asp-controller="SchoolHome"
+               asp-action="Dashboard">
+                ← @T["BackToDashboard"]
+            </a>
+
+            <div class="user-eyebrow">
+                @Model.SchoolName
+            </div>
+
+            <h1>@T["SubjectSupervisorAssignmentsTitle"]</h1>
+
+            <p class="user-page-subtitle">
+                @T["SubjectSupervisorAssignmentsSubtitle"]
+            </p>
+        </div>
+    </header>
+
+    @if (TempData["SubjectSupervisorSuccess"] is string success)
+    {
+        <div class="school-alert school-alert-success"
+             role="status">
+            @success
+        </div>
+    }
+
+    @if (TempData["SubjectSupervisorError"] is string error)
+    {
+        <div class="school-alert school-alert-error"
+             role="alert">
+            @error
+        </div>
+    }
+
+    <section class="school-detail-card">
+        <h2>@T["AssignSubjectSupervisor"]</h2>
+        <p>@T["SubjectSupervisorAssignmentHelp"]</p>
+
+        @if (Model.Supervisors.Count == 0)
+        {
+            <div class="school-alert school-alert-warning">
+                @T["SubjectSupervisorNoEligibleSupervisors"]
+            </div>
+        }
+
+        @if (Model.Subjects.Count == 0)
+        {
+            <div class="school-alert school-alert-warning">
+                @T["SubjectSupervisorNoActiveSubjects"]
+            </div>
+        }
+
+        @if (Model.Supervisors.Count > 0 &&
+             Model.Subjects.Count > 0)
+        {
+            <form asp-controller="SubjectSupervisorAssignments"
+                  asp-action="Assign"
+                  method="post">
+                @Html.AntiForgeryToken()
+
+                <div class="analytics-filter-grid">
+                    <div>
+                        <label for="supervisorUserId">
+                            @T["SubjectSupervisorSupervisor"]
+                        </label>
+
+                        <select id="supervisorUserId"
+                                name="supervisorUserId"
+                                required>
+                            @foreach (var supervisor in Model.Supervisors)
+                            {
+                                <option value="@supervisor.Id">
+                                    @supervisor.Email
+                                </option>
+                            }
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="subjectId">
+                            @T["SubjectSupervisorSubject"]
+                        </label>
+
+                        <select id="subjectId"
+                                name="subjectId"
+                                required>
+                            @foreach (var subject in Model.Subjects)
+                            {
+                                <option value="@subject.Id">
+                                    @subject.Name (@subject.Code)
+                                </option>
+                            }
+                        </select>
+                    </div>
+
+                    <button type="submit"
+                            class="school-button school-button-primary">
+                        @T["AssignSubjectSupervisor"]
+                    </button>
+                </div>
+            </form>
+        }
+    </section>
+
+    <section class="school-detail-card">
+        <h2>@T["SubjectSupervisorCurrentAssignments"]</h2>
+
+        @if (Model.Assignments.Count == 0)
+        {
+            <div class="user-empty">
+                <h3>@T["SubjectSupervisorNoAssignments"]</h3>
+                <p>@T["SubjectSupervisorNoAssignmentsHelp"]</p>
+            </div>
+        }
+        else
+        {
+            <div class="user-table-wrap">
+                <table class="user-table">
+                    <thead>
+                        <tr>
+                            <th>@T["SubjectSupervisorSupervisor"]</th>
+                            <th>@T["SubjectSupervisorSubject"]</th>
+                            <th>@T["CreatedAt"]</th>
+                            <th>@T["Actions"]</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var assignment in Model.Assignments)
+                    {
+                        <tr>
+                            <td data-label="@T["SubjectSupervisorSupervisor"]">
+                                <strong>
+                                    @assignment.SupervisorEmail
+                                </strong>
+                            </td>
+
+                            <td data-label="@T["SubjectSupervisorSubject"]">
+                                @assignment.SubjectName
+                                @if (!string.IsNullOrWhiteSpace(
+                                        assignment.SubjectCode))
+                                {
+                                    <span>
+                                        (@assignment.SubjectCode)
+                                    </span>
+                                }
+                            </td>
+
+                            <td data-label="@T["CreatedAt"]">
+                                @assignment.CreatedAtUtc.ToString("g")
+                                @T["UtcSuffix"]
+                            </td>
+
+                            <td data-label="@T["Actions"]">
+                                <form asp-controller="SubjectSupervisorAssignments"
+                                      asp-action="Remove"
+                                      asp-route-assignmentId="@assignment.Id"
+                                      method="post">
+                                    @Html.AntiForgeryToken()
+
+                                    <button type="submit"
+                                            class="school-button school-button-secondary school-button-small">
+                                        @T["SubjectSupervisorRemoveAssignment"]
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </section>
+</section>

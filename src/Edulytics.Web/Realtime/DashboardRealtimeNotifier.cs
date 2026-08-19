@@ -47,6 +47,16 @@ public sealed class DashboardRealtimeNotifier
                 .SendAsync(
                     "AnalyticsUpdated",
                     message,
+                    cancellationToken),
+
+            _hub.Clients
+                .Group(
+                    RealtimeGroupNames.SubjectSupervisors(
+                        change.SchoolId,
+                        change.SubjectId))
+                .SendAsync(
+                    "AnalyticsUpdated",
+                    message,
                     cancellationToken));
     }
 }

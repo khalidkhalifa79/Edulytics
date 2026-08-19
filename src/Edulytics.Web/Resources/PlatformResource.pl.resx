@@ -492,4 +492,73 @@
   <data name="InvitationDeliveryFailed" xml:space="preserve">
     <value>Konto użytkownika jest gotowe, ale nie udało się wysłać wiadomości z zaproszeniem. Sprawdź ustawienia poczty i spróbuj ponownie.</value>
   </data>
-  <data name="InvalidCredentials" xml:space="preserve">\n    <value>Adres e-mail lub hasło są nieprawidłowe.</value>\n  </data>\n</root>
+  <data name="InvalidCredentials" xml:space="preserve">\n    <value>Adres e-mail lub hasło są nieprawidłowe.</value>\n  </data>\n  <data name="SubjectSupervisorAssignmentsTitle" xml:space="preserve">
+    <value>Przypisania opiekunów przedmiotów</value>
+  </data>
+  <data name="SubjectSupervisorAssignmentsSubtitle" xml:space="preserve">
+    <value>Przypisuj opiekunów przedmiotów do przedmiotów, które mogą nadzorować w całej szkole.</value>
+  </data>
+  <data name="ManageSubjectSupervisorAssignments" xml:space="preserve">
+    <value>Zarządzaj opiekunami przedmiotów</value>
+  </data>
+  <data name="AssignSubjectSupervisor" xml:space="preserve">
+    <value>Przypisz opiekuna</value>
+  </data>
+  <data name="SubjectSupervisorAssignmentHelp" xml:space="preserve">
+    <value>Każde przypisanie daje aktywnemu opiekunowi dostęp do analityki jednego aktywnego przedmiotu w całej szkole.</value>
+  </data>
+  <data name="SubjectSupervisorSupervisor" xml:space="preserve">
+    <value>Opiekun przedmiotu</value>
+  </data>
+  <data name="SubjectSupervisorSubject" xml:space="preserve">
+    <value>Przedmiot</value>
+  </data>
+  <data name="SubjectSupervisorCurrentAssignments" xml:space="preserve">
+    <value>Aktualne przypisania</value>
+  </data>
+  <data name="SubjectSupervisorNoEligibleSupervisors" xml:space="preserve">
+    <value>Brak aktywnych i odblokowanych użytkowników z rolą Opiekun przedmiotu.</value>
+  </data>
+  <data name="SubjectSupervisorNoActiveSubjects" xml:space="preserve">
+    <value>Brak aktywnych przedmiotów dostępnych do przypisania.</value>
+  </data>
+  <data name="SubjectSupervisorNoAssignments" xml:space="preserve">
+    <value>Brak przypisań opiekunów przedmiotów</value>
+  </data>
+  <data name="SubjectSupervisorNoAssignmentsHelp" xml:space="preserve">
+    <value>Utwórz przypisanie, aby nadać opiekunowi ograniczony dostęp do analityki.</value>
+  </data>
+  <data name="SubjectSupervisorRemoveAssignment" xml:space="preserve">
+    <value>Usuń przypisanie</value>
+  </data>
+  <data name="SubjectSupervisorAssignmentCreated" xml:space="preserve">
+    <value>Przypisanie opiekuna przedmiotu zostało utworzone.</value>
+  </data>
+  <data name="SubjectSupervisorAssignmentRemoved" xml:space="preserve">
+    <value>Przypisanie opiekuna przedmiotu zostało usunięte.</value>
+  </data>
+  <data name="SubjectSupervisorErrorSupervisorNotEligible" xml:space="preserve">
+    <value>Wybrany użytkownik musi być aktywny, odblokowany i mieć wyłącznie rolę Opiekun przedmiotu.</value>
+  </data>
+  <data name="SubjectSupervisorErrorSubjectInactive" xml:space="preserve">
+    <value>Wybrany przedmiot nie jest aktywny.</value>
+  </data>
+  <data name="SubjectSupervisorErrorDuplicateAssignment" xml:space="preserve">
+    <value>Ten opiekun jest już przypisany do tego przedmiotu.</value>
+  </data>
+  <data name="SubjectSupervisorErrorPersistenceError" xml:space="preserve">
+    <value>Nie udało się zapisać przypisania. Spróbuj ponownie.</value>
+  </data>
+  <data name="SubjectSupervisorErrorAccessDenied" xml:space="preserve">
+    <value>Nie masz uprawnień do zarządzania przypisaniami opiekunów przedmiotów.</value>
+  </data>
+  <data name="SubjectSupervisorErrorSupervisorNotFound" xml:space="preserve">
+    <value>Nie znaleziono wybranego opiekuna przedmiotu.</value>
+  </data>
+  <data name="SubjectSupervisorErrorSubjectNotFound" xml:space="preserve">
+    <value>Nie znaleziono wybranego przedmiotu.</value>
+  </data>
+  <data name="SubjectSupervisorErrorAssignmentNotFound" xml:space="preserve">
+    <value>Nie znaleziono przypisania.</value>
+  </data>
+</root>

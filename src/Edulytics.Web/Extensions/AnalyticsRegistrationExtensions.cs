@@ -29,6 +29,7 @@ public static class AnalyticsRegistrationExtensions
                     policy =>
                         policy.RequireRole(
                             RoleNames.SchoolAdmin,
+                            RoleNames.SubjectSupervisor,
                             RoleNames.Teacher));
             });
 
