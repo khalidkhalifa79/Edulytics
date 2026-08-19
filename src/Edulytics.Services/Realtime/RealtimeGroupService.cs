@@ -12,14 +12,21 @@ public sealed class RealtimeGroupService
     private readonly ISchoolRepository _schools;
     private readonly IRealtimeAccessRepository _access;
 
+    private readonly
+        ISubjectSupervisorAssignmentRepository?
+        _subjectSupervisors;
+
     public RealtimeGroupService(
         ISchoolUserRepository users,
         ISchoolRepository schools,
-        IRealtimeAccessRepository access)
+        IRealtimeAccessRepository access,
+        ISubjectSupervisorAssignmentRepository?
+            subjectSupervisors = null)
     {
         _users = users;
         _schools = schools;
         _access = access;
+        _subjectSupervisors = subjectSupervisors;
     }
 
     public async Task<RealtimeGroupResolution>
@@ -54,13 +61,14 @@ public sealed class RealtimeGroupService
                 .Denied();
         }
 
+        var role = actor.Roles[0];
+
         var schoolAnalytics =
             RealtimeGroupNames
                 .SchoolAnalytics(
                     school.Id);
 
-        if (actor.Roles[0] ==
-            RoleNames.SchoolAdmin)
+        if (role == RoleNames.SchoolAdmin)
         {
             return RealtimeGroupResolution
                 .Success(
@@ -72,22 +80,63 @@ public sealed class RealtimeGroupService
                     ]);
         }
 
-        if (actor.Roles[0] !=
-            RoleNames.Teacher)
+        if (role == RoleNames.SubjectSupervisor)
+        {
+            if (_subjectSupervisors is null)
+            {
+                return RealtimeGroupResolution
+                    .Denied();
+            }
+
+            var assignments =
+                await _subjectSupervisors
+                    .ListActiveBySupervisorAsync(
+                        school.Id,
+                        actorUserId,
+                        cancellationToken);
+
+            if (assignments.Count == 0)
+            {
+                return RealtimeGroupResolution
+                    .Denied();
+            }
+
+            var groups =
+                assignments
+                    .Select(
+                        x =>
+                            RealtimeGroupNames
+                                .SubjectSupervisors(
+                                    school.Id,
+                                    x.SubjectId))
+                    .Append(
+                        schoolAnalytics)
+                    .Distinct(
+                        StringComparer.Ordinal)
+                    .OrderBy(
+                        x => x,
+                        StringComparer.Ordinal)
+                    .ToArray();
+
+            return RealtimeGroupResolution
+                .Success(groups);
+        }
+
+        if (role != RoleNames.Teacher)
         {
             return RealtimeGroupResolution
                 .Denied();
         }
 
-        var assignments =
+        var teacherAssignments =
             await _access
                 .GetTeacherAssignmentsAsync(
                     school.Id,
                     actorUserId,
                     cancellationToken);
 
-        var groups =
-            assignments
+        var teacherGroups =
+            teacherAssignments
                 .Select(
                     x =>
                         RealtimeGroupNames
@@ -105,6 +154,6 @@ public sealed class RealtimeGroupService
                 .ToArray();
 
         return RealtimeGroupResolution
-            .Success(groups);
+            .Success(teacherGroups);
     }
 }

@@ -58,6 +58,19 @@
 
         <section class="user-dashboard-action">
             <div>
+                <h2>@T["SubjectSupervisorAssignmentsTitle"]</h2>
+                <p>@T["SubjectSupervisorAssignmentsSubtitle"]</p>
+            </div>
+
+            <a class="school-button school-button-primary"
+               asp-controller="SubjectSupervisorAssignments"
+               asp-action="Index">
+                @T["ManageSubjectSupervisorAssignments"]
+            </a>
+        </section>
+
+        <section class="user-dashboard-action">
+            <div>
                 <h2>@A["AcademicStructureTitle"]</h2>
                 <p>@A["AcademicStructureSubtitle"]</p>
             </div>

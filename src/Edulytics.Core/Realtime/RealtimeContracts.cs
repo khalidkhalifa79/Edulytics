@@ -25,6 +25,11 @@ public static class RealtimeGroupNames
         Guid classGroupId,
         Guid subjectId) =>
         $"school:{schoolId:N}:class:{classGroupId:N}:subject:{subjectId:N}:teachers";
+
+    public static string SubjectSupervisors(
+        Guid schoolId,
+        Guid subjectId) =>
+        $"school:{schoolId:N}:subject:{subjectId:N}:supervisors";
 }
 
 public sealed record AssessmentResultChangedEvent(

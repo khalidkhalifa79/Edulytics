@@ -54,6 +54,7 @@ public sealed class SchoolHomeController : Controller
                     context.CanManageUsers,
                 CanViewAnalytics =
                     context.Role == RoleNames.SchoolAdmin ||
+                    context.Role == RoleNames.SubjectSupervisor ||
                     context.Role == RoleNames.Teacher
             });
     }

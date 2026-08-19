@@ -12,17 +12,22 @@ public sealed class AnalyticsService : IAnalyticsService
     private readonly ISchoolRepository _schools;
     private readonly ISchoolUserRepository _users;
     private readonly AnalyticsProjectionBuilder _builder;
+    private readonly ISubjectSupervisorAssignmentRepository?
+        _subjectSupervisors;
 
     public AnalyticsService(
         IAnalyticsRepository analytics,
         ISchoolRepository schools,
         ISchoolUserRepository users,
-        AnalyticsProjectionBuilder builder)
+        AnalyticsProjectionBuilder builder,
+        ISubjectSupervisorAssignmentRepository?
+            subjectSupervisors = null)
     {
         _analytics = analytics;
         _schools = schools;
         _users = users;
         _builder = builder;
+        _subjectSupervisors = subjectSupervisors;
     }
 
     public async Task<AnalyticsCommandResult> RecalculateAsync(
@@ -100,6 +105,9 @@ public sealed class AnalyticsService : IAnalyticsService
                 schoolId,
                 cancellationToken);
 
+        var supervisorSubjectIds =
+            scope.SupervisedSubjectIds;
+
         var pairSet = scope.Role == RoleNames.Teacher
             ? projection.TeacherAssignments
                 .Where(
@@ -124,6 +132,13 @@ public sealed class AnalyticsService : IAnalyticsService
             if (scope.Role == RoleNames.SchoolAdmin)
                 return true;
 
+            if (scope.Role ==
+                RoleNames.SubjectSupervisor)
+            {
+                return supervisorSubjectIds.Contains(
+                    subject);
+            }
+
             return pairSet.Contains(
                 (
                     yearId,
@@ -137,6 +152,7 @@ public sealed class AnalyticsService : IAnalyticsService
             .Where(
                 x =>
                     scope.Role == RoleNames.SchoolAdmin ||
+                    scope.Role == RoleNames.SubjectSupervisor ||
                     pairSet.Any(
                         pair =>
                             pair.ClassGroupId == x.Id &&
@@ -150,19 +166,25 @@ public sealed class AnalyticsService : IAnalyticsService
             .Where(
                 x =>
                     scope.Role == RoleNames.SchoolAdmin ||
-                    pairSet.Any(
+                    (scope.Role ==
+                        RoleNames.SubjectSupervisor &&
+                     supervisorSubjectIds.Contains(x.Id)) ||
+                    (scope.Role == RoleNames.Teacher &&
+                     pairSet.Any(
                         pair =>
-                            pair.SubjectId == x.Id))
+                            pair.SubjectId == x.Id)))
             .OrderBy(x => x.Name)
             .ToArray();
 
-        var visibleYearIds = scope.Role == RoleNames.SchoolAdmin
-            ? projection.AcademicYears
-                .Select(x => x.Id)
-                .ToHashSet()
-            : pairSet
-                .Select(x => x.AcademicYearId)
-                .ToHashSet();
+        var visibleYearIds =
+            scope.Role == RoleNames.SchoolAdmin ||
+            scope.Role == RoleNames.SubjectSupervisor
+                ? projection.AcademicYears
+                    .Select(x => x.Id)
+                    .ToHashSet()
+                : pairSet
+                    .Select(x => x.AcademicYearId)
+                    .ToHashSet();
 
         var visibleYears = projection.AcademicYears
             .Where(x => visibleYearIds.Contains(x.Id))
@@ -606,6 +628,7 @@ public sealed class AnalyticsService : IAnalyticsService
                 : null;
 
         if (role != RoleNames.SchoolAdmin &&
+            role != RoleNames.SubjectSupervisor &&
             role != RoleNames.Teacher)
         {
             return ScopeResult.Fail(
@@ -624,10 +647,40 @@ public sealed class AnalyticsService : IAnalyticsService
                 AnalyticsErrorCode.SchoolNotActive);
         }
 
+        IReadOnlySet<Guid> supervisedSubjectIds =
+            new HashSet<Guid>();
+
+        if (role == RoleNames.SubjectSupervisor)
+        {
+            if (_subjectSupervisors is null)
+            {
+                return ScopeResult.Fail(
+                    AnalyticsErrorCode.AccessDenied);
+            }
+
+            var assignments =
+                await _subjectSupervisors
+                    .ListActiveBySupervisorAsync(
+                        school.Id,
+                        actorUserId,
+                        cancellationToken);
+
+            supervisedSubjectIds = assignments
+                .Select(x => x.SubjectId)
+                .ToHashSet();
+
+            if (supervisedSubjectIds.Count == 0)
+            {
+                return ScopeResult.Fail(
+                    AnalyticsErrorCode.AccessDenied);
+            }
+        }
+
         return ScopeResult.Ok(
             actor,
             school,
-            role);
+            role,
+            supervisedSubjectIds);
     }
 
     private sealed record ScopeResult(
@@ -635,17 +688,20 @@ public sealed class AnalyticsService : IAnalyticsService
         SchoolUserRecord? Actor,
         School? School,
         string? Role,
+        IReadOnlySet<Guid> SupervisedSubjectIds,
         AnalyticsErrorCode? Error)
     {
         public static ScopeResult Ok(
             SchoolUserRecord actor,
             School school,
-            string role) =>
+            string role,
+            IReadOnlySet<Guid> supervisedSubjectIds) =>
             new(
                 true,
                 actor,
                 school,
                 role,
+                supervisedSubjectIds,
                 null);
 
         public static ScopeResult Fail(
@@ -655,6 +711,7 @@ public sealed class AnalyticsService : IAnalyticsService
                 null,
                 null,
                 null,
+                new HashSet<Guid>(),
                 error);
     }
 }
