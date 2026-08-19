@@ -2,6 +2,9 @@ using Edulytics.Core.Entities;
 using Edulytics.Core.Enums;
 using Edulytics.Core.Interfaces;
 using Edulytics.Core.Realtime;
+using Edulytics.Core.Reports;
+using Edulytics.Data.Identity;
+using System.Text.Json;
 using Edulytics.Data.Contexts;
 using Edulytics.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -592,6 +595,183 @@ Console.WriteLine(
 
 Console.WriteLine(
     "PHASE18_POSTGRES_GATE_PASS");
+
+Console.WriteLine(
+    "===== PHASE 20 POSTGRES REPORT GATE =====");
+
+var reportUserId =
+    Guid.NewGuid();
+
+var reportJobId =
+    Guid.NewGuid();
+
+var reportOutboxId =
+    Guid.NewGuid();
+
+await using (var db =
+             await NewDbAsync())
+{
+    db.Users.Add(
+        new ApplicationUser
+        {
+            Id = reportUserId,
+            SchoolId = schoolA,
+            UserName =
+                $"phase20-{reportUserId:N}@example.invalid",
+            NormalizedUserName =
+                $"PHASE20-{reportUserId:N}@EXAMPLE.INVALID",
+            Email =
+                $"phase20-{reportUserId:N}@example.invalid",
+            NormalizedEmail =
+                $"PHASE20-{reportUserId:N}@EXAMPLE.INVALID",
+            EmailConfirmed = true,
+            IsActive = true,
+            CreatedAtUtc =
+                now.AddMinutes(40),
+            UpdatedAtUtc =
+                now.AddMinutes(40),
+            SecurityStamp =
+                Guid.NewGuid().ToString("N")
+        });
+
+    var job =
+        new ReportExportJob
+        {
+            Id = reportJobId,
+            SchoolId = schoolA,
+            RequestedByUserId =
+                reportUserId,
+            ReportKind =
+                ReportKind.School,
+            ExportFormat =
+                ReportExportFormat.Csv,
+            Culture = "en",
+            Status =
+                ReportExportJobStatus.Pending,
+            CreatedAtUtc =
+                now.AddMinutes(40),
+            ExpiresAtUtc =
+                now.AddHours(24)
+        };
+
+    db.ReportExportJobs.Add(job);
+
+    db.OutboxMessages.Add(
+        new OutboxMessage
+        {
+            Id = reportOutboxId,
+            SchoolId = schoolA,
+            EventType =
+                ReportEventTypes.ExportRequested,
+            PayloadJson =
+                JsonSerializer.Serialize(
+                    new ReportExportRequestedEvent(
+                        schoolA,
+                        reportJobId)),
+            OccurredAtUtc =
+                now.AddMinutes(40),
+            AvailableAtUtc =
+                now.AddMinutes(40),
+            Status =
+                OutboxMessageStatus.Pending,
+            CorrelationId =
+                $"phase20-report-{reportJobId:N}"
+        });
+
+    db.AuditLogs.Add(
+        new AuditLog
+        {
+            Id = Guid.NewGuid(),
+            SchoolId = schoolA,
+            ActorUserId =
+                reportUserId,
+            ActorRole =
+                "SchoolAdmin",
+            Action =
+                "Report.ExportRequested",
+            EntityType =
+                "ReportExportJob",
+            EntityId =
+                reportJobId.ToString("D"),
+            OccurredAtUtc =
+                now.AddMinutes(40),
+            CorrelationId =
+                $"phase20-report-{reportJobId:N}",
+            IpAddress =
+                "127.0.0.1",
+            UserAgent =
+                "Edulytics.PostgresGate",
+            OldValuesJson =
+                "{}",
+            NewValuesJson =
+                "{\"ReportKind\":\"School\",\"Format\":\"Csv\"}",
+            ResultSummary =
+                "Phase20 atomic report export gate.",
+            Source =
+                "CI",
+            Feature =
+                "Reports"
+        });
+
+    await db.SaveChangesAsync();
+}
+
+await using (var db =
+             await NewDbAsync())
+{
+    var job =
+        await db.ReportExportJobs
+            .AsNoTracking()
+            .SingleAsync(
+                x =>
+                    x.Id ==
+                    reportJobId);
+
+    if (job.SchoolId != schoolA ||
+        job.RequestedByUserId !=
+            reportUserId ||
+        job.RowVersion.Length == 0)
+    {
+        throw new Exception(
+            "Phase20 PostgreSQL report job "
+            + "tenant/concurrency contract failed.");
+    }
+
+    var hasOutbox =
+        await db.OutboxMessages
+            .AsNoTracking()
+            .AnyAsync(
+                x =>
+                    x.Id ==
+                    reportOutboxId &&
+                    x.EventType ==
+                        ReportEventTypes
+                            .ExportRequested);
+
+    var hasAudit =
+        await db.AuditLogs
+            .AsNoTracking()
+            .AnyAsync(
+                x =>
+                    x.EntityId ==
+                        reportJobId
+                            .ToString("D") &&
+                    x.Action ==
+                        "Report.ExportRequested");
+
+    if (!hasOutbox || !hasAudit)
+    {
+        throw new Exception(
+            "Phase20 PostgreSQL atomic "
+            + "job/outbox/audit contract failed.");
+    }
+}
+
+Console.WriteLine(
+    "PASS: PostgreSQL report job + outbox + audit atomic persistence");
+
+Console.WriteLine(
+    "PHASE20_POSTGRES_GATE_PASS");
 
 static School NewSchool(
     Guid id,

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+  </resheader>
+  <data name="ReportsTitle" xml:space="preserve">
+    <value>Raporty i eksporty</value>
+  </data>
+  <data name="ReportsSubtitle" xml:space="preserve">
+    <value>Twórz raporty szkoły, klasy, przedmiotu, ucznia i efektów uczenia się zgodnie z zakresem roli.</value>
+  </data>
+  <data name="BackToDashboard" xml:space="preserve">
+    <value>Wróć do panelu</value>
+  </data>
+  <data name="ReportFilters" xml:space="preserve">
+    <value>Filtry raportu</value>
+  </data>
+  <data name="ReportType" xml:space="preserve">
+    <value>Typ raportu</value>
+  </data>
+  <data name="ReportKindSchool" xml:space="preserve">
+    <value>Przegląd szkoły</value>
+  </data>
+  <data name="ReportKindClass" xml:space="preserve">
+    <value>Opanowanie materiału w klasie</value>
+  </data>
+  <data name="ReportKindSubject" xml:space="preserve">
+    <value>Opanowanie przedmiotu</value>
+  </data>
+  <data name="ReportKindStudent" xml:space="preserve">
+    <value>Opanowanie materiału przez ucznia</value>
+  </data>
+  <data name="ReportKindLearningOutcome" xml:space="preserve">
+    <value>Opanowanie efektu uczenia się</value>
+  </data>
+  <data name="AcademicYear" xml:space="preserve">
+    <value>Rok szkolny</value>
+  </data>
+  <data name="Class" xml:space="preserve">
+    <value>Klasa</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Przedmiot</value>
+  </data>
+  <data name="Student" xml:space="preserve">
+    <value>Uczeń</value>
+  </data>
+  <data name="LearningOutcome" xml:space="preserve">
+    <value>Efekt uczenia się</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Wszystkie</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Wybierz</value>
+  </data>
+  <data name="GenerateReport" xml:space="preserve">
+    <value>Generuj raport</value>
+  </data>
+  <data name="SelectRequiredFilter" xml:space="preserve">
+    <value>Wybierz wymagany zakres raportu</value>
+  </data>
+  <data name="SelectRequiredFilterHelp" xml:space="preserve">
+    <value>Raport klasy, przedmiotu, ucznia i efektu uczenia się wymaga odpowiedniego wyboru zakresu.</value>
+  </data>
+  <data name="GeneratedAt" xml:space="preserve">
+    <value>Wygenerowano</value>
+  </data>
+  <data name="PrintReport" xml:space="preserve">
+    <value>Drukuj</value>
+  </data>
+  <data name="ExportCsv" xml:space="preserve">
+    <value>Eksportuj CSV</value>
+  </data>
+  <data name="ExportXlsx" xml:space="preserve">
+    <value>Eksportuj XLSX</value>
+  </data>
+  <data name="ReportPreviewTruncated" xml:space="preserve">
+    <value>Podgląd na ekranie jest skrócony. Eksport pliku używa większego, ograniczonego limitu wierszy.</value>
+  </data>
+  <data name="NoReportData" xml:space="preserve">
+    <value>Brak danych raportu dla wybranego zakresu.</value>
+  </data>
+  <data name="RecentExports" xml:space="preserve">
+    <value>Ostatnie eksporty</value>
+  </data>
+  <data name="RecentExportsHelp" xml:space="preserve">
+    <value>Eksporty są generowane przez trwałą kolejkę w tle i automatycznie wygasają.</value>
+  </data>
+  <data name="NoExports" xml:space="preserve">
+    <value>Nie zlecono jeszcze żadnego eksportu.</value>
+  </data>
+  <data name="Format" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Rows" xml:space="preserve">
+    <value>Wiersze</value>
+  </data>
+  <data name="CreatedAt" xml:space="preserve">
+    <value>Utworzono</value>
+  </data>
+  <data name="ExpiresAt" xml:space="preserve">
+    <value>Wygasa</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Akcje</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Pobierz</value>
+  </data>
+  <data name="ReportJobStatusPending" xml:space="preserve">
+    <value>Oczekuje</value>
+  </data>
+  <data name="ReportJobStatusCompleted" xml:space="preserve">
+    <value>Gotowy</value>
+  </data>
+  <data name="ReportJobStatusFailed" xml:space="preserve">
+    <value>Niepowodzenie</value>
+  </data>
+  <data name="ReportJobStatusExpired" xml:space="preserve">
+    <value>Wygasł</value>
+  </data>
+  <data name="ReportExportQueued" xml:space="preserve">
+    <value>Eksport raportu został pomyślnie dodany do kolejki.</value>
+  </data>
+  <data name="ReportErrorInvalidFilter" xml:space="preserve">
+    <value>Wybierz wymagany zakres raportu.</value>
+  </data>
+  <data name="ReportErrorTooLarge" xml:space="preserve">
+    <value>Raport przekracza bezpieczny limit eksportu.</value>
+  </data>
+  <data name="ReportErrorNotReady" xml:space="preserve">
+    <value>Eksport nie jest jeszcze gotowy.</value>
+  </data>
+  <data name="ReportErrorExpired" xml:space="preserve">
+    <value>Ten eksport wygasł.</value>
+  </data>
+  <data name="ReportErrorUnsupportedFormat" xml:space="preserve">
+    <value>Wybrany format eksportu nie jest obsługiwany.</value>
+  </data>
+  <data name="ReportErrorPersistence" xml:space="preserve">
+    <value>Nie udało się wykonać operacji raportu.</value>
+  </data>
+  <data name="ReportTitleSchool" xml:space="preserve">
+    <value>Raport ogólny szkoły</value>
+  </data>
+  <data name="ReportTitleClass" xml:space="preserve">
+    <value>Raport opanowania materiału w klasie</value>
+  </data>
+  <data name="ReportTitleSubject" xml:space="preserve">
+    <value>Raport opanowania przedmiotu</value>
+  </data>
+  <data name="ReportTitleStudent" xml:space="preserve">
+    <value>Raport opanowania materiału przez ucznia</value>
+  </data>
+  <data name="ReportTitleLearningOutcome" xml:space="preserve">
+    <value>Raport opanowania efektu uczenia się</value>
+  </data>
+  <data name="ColumnAcademicYear" xml:space="preserve">
+    <value>Rok szkolny</value>
+  </data>
+  <data name="ColumnClass" xml:space="preserve">
+    <value>Klasa</value>
+  </data>
+  <data name="ColumnSubject" xml:space="preserve">
+    <value>Przedmiot</value>
+  </data>
+  <data name="ColumnStudentNumber" xml:space="preserve">
+    <value>Numer ucznia</value>
+  </data>
+  <data name="ColumnStudentName" xml:space="preserve">
+    <value>Uczeń</value>
+  </data>
+  <data name="ColumnOutcomeCode" xml:space="preserve">
+    <value>Kod efektu</value>
+  </data>
+  <data name="ColumnOutcomeDescription" xml:space="preserve">
+    <value>Efekt uczenia się</value>
+  </data>
+  <data name="ColumnOverallMastery" xml:space="preserve">
+    <value>Ogólne opanowanie</value>
+  </data>
+  <data name="ColumnMastery" xml:space="preserve">
+    <value>Opanowanie</value>
+  </data>
+  <data name="ColumnStudentsWithEvidence" xml:space="preserve">
+    <value>Uczniowie z danymi</value>
+  </data>
+  <data name="ColumnStudents" xml:space="preserve">
+    <value>Uczniowie</value>
+  </data>
+  <data name="ColumnAtRiskStudents" xml:space="preserve">
+    <value>Uczniowie zagrożeni</value>
+  </data>
+  <data name="ColumnAtRisk" xml:space="preserve">
+    <value>Zagrożeni</value>
+  </data>
+  <data name="ColumnCriticalOutcomes" xml:space="preserve">
+    <value>Krytyczne efekty</value>
+  </data>
+  <data name="ColumnWeakTopics" xml:space="preserve">
+    <value>Słabe tematy</value>
+  </data>
+  <data name="ColumnEvidence" xml:space="preserve">
+    <value>Dowody</value>
+  </data>
+  <data name="ColumnEarned" xml:space="preserve">
+    <value>Zdobyte punkty</value>
+  </data>
+  <data name="ColumnPossible" xml:space="preserve">
+    <value>Możliwe punkty</value>
+  </data>
+  <data name="ColumnCalculatedAt" xml:space="preserve">
+    <value>Obliczono</value>
+  </data>
+  <data name="DashboardReportsTitle" xml:space="preserve">
+    <value>Raporty i eksporty</value>
+  </data>
+  <data name="DashboardReportsSubtitle" xml:space="preserve">
+    <value>Twórz bezpieczne raporty zgodne z rolą oraz eksporty CSV/XLSX.</value>
+  </data>
+  <data name="ManageReports" xml:space="preserve">
+    <value>Otwórz raporty</value>
+  </data>
+</root>

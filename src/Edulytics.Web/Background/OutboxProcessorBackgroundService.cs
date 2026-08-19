@@ -3,6 +3,8 @@ using Edulytics.Core.Interfaces;
 using Edulytics.Core.Realtime;
 using Edulytics.Core.Reliability;
 using Edulytics.Services.Imports;
+using Edulytics.Services.Reports;
+using Edulytics.Core.Reports;
 using Edulytics.Web.Production;
 using Microsoft.Extensions.Options;
 
@@ -156,15 +158,35 @@ public sealed class OutboxProcessorBackgroundService
             using var scope =
                 _scopeFactory.CreateScope();
 
-            var refreshQueue =
-                scope.ServiceProvider
-                    .GetRequiredService<
-                        IAnalyticsRefreshQueueRepository>();
+            if (lease.EventType ==
+                ReportEventTypes.ExportRequested)
+            {
+                var reportEvent =
+                    ResolveReportExportEvent(
+                        lease);
 
-            await QueueAnalyticsRefreshAsync(
-                lease,
-                refreshQueue,
-                timeout.Token);
+                var processor =
+                    scope.ServiceProvider
+                        .GetRequiredService<
+                            IReportExportProcessor>();
+
+                await processor.ProcessAsync(
+                    reportEvent.SchoolId,
+                    reportEvent.ExportJobId,
+                    timeout.Token);
+            }
+            else
+            {
+                var refreshQueue =
+                    scope.ServiceProvider
+                        .GetRequiredService<
+                            IAnalyticsRefreshQueueRepository>();
+
+                await QueueAnalyticsRefreshAsync(
+                    lease,
+                    refreshQueue,
+                    timeout.Token);
+            }
 
             var outbox =
                 scope.ServiceProvider
@@ -215,6 +237,33 @@ public sealed class OutboxProcessorBackgroundService
                 _options
                     .AnalyticsMaxCoalesceMilliseconds),
             cancellationToken);
+    }
+
+    private static ReportExportRequestedEvent
+        ResolveReportExportEvent(
+            OutboxLease lease)
+    {
+        if (!lease.SchoolId.HasValue)
+        {
+            throw new InvalidOperationException(
+                "Report export outbox message "
+                + "has no SchoolId.");
+        }
+
+        var reportEvent =
+            JsonSerializer.Deserialize<
+                ReportExportRequestedEvent>(
+                    lease.PayloadJson);
+
+        if (reportEvent is null ||
+            reportEvent.SchoolId !=
+                lease.SchoolId.Value)
+        {
+            throw new InvalidOperationException(
+                "Invalid report export outbox message.");
+        }
+
+        return reportEvent;
     }
 
     private static Guid ValidateAndResolveSchool(
@@ -276,6 +325,51 @@ public sealed class OutboxProcessorBackgroundService
             + $"{lease.EventType}");
     }
 
+    private async Task
+        MarkReportExportDeadLetteredAsync(
+            OutboxLease lease)
+    {
+        if (lease.EventType !=
+            ReportEventTypes.ExportRequested)
+        {
+            return;
+        }
+
+        try
+        {
+            var reportEvent =
+                ResolveReportExportEvent(
+                    lease);
+
+            using var scope =
+                _scopeFactory.CreateScope();
+
+            var processor =
+                scope.ServiceProvider
+                    .GetRequiredService<
+                        IReportExportProcessor>();
+
+            using var timeout =
+                new CancellationTokenSource(
+                    TimeSpan.FromSeconds(5));
+
+            await processor
+                .MarkDeadLetteredAsync(
+                    reportEvent.SchoolId,
+                    reportEvent.ExportJobId,
+                    timeout.Token);
+        }
+        catch (Exception exception)
+        {
+            _logger.LogError(
+                exception,
+                "Failed to mark report export "
+                + "job dead-lettered for "
+                + "Outbox {OutboxId}.",
+                lease.Id);
+        }
+    }
+
     private async Task RecordFailureAsync(
         OutboxLease lease,
         Exception exception)
@@ -325,6 +419,9 @@ public sealed class OutboxProcessorBackgroundService
                     + "attempts.",
                     lease.Id,
                     lease.ProcessingAttempts);
+
+                await MarkReportExportDeadLetteredAsync(
+                    lease);
             }
             else if (disposition ==
                 OutboxFailureDisposition

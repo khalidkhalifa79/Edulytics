@@ -26,6 +26,7 @@ public static class BackendResilienceRegistrationExtensions
                     x.InteractiveWriteTimeoutSeconds > 0 &&
                     x.ImportTimeoutSeconds > 0 &&
                     x.AnalyticsTimeoutSeconds > 0 &&
+                    x.ReportTimeoutSeconds > 0 &&
                     x.OperationalTimeoutSeconds > 0 &&
                     x.DatabaseCommandTimeoutSeconds > 0 &&
                     x.NpgsqlMaxPoolSize > 0 &&
@@ -35,6 +36,8 @@ public static class BackendResilienceRegistrationExtensions
                     x.ImportQueueLimit >= 0 &&
                     x.AnalyticsPermitLimit > 0 &&
                     x.AnalyticsQueueLimit >= 0 &&
+                    x.ReportPermitLimit > 0 &&
+                    x.ReportQueueLimit >= 0 &&
                     x.MaxRequestBodyBytes >= 6 * 1024 * 1024 &&
                     x.RequestHeadersTimeoutSeconds > 0 &&
                     x.KeepAliveTimeoutSeconds > 0,
@@ -85,6 +88,11 @@ public static class BackendResilienceRegistrationExtensions
                     BackendResiliencePolicyNames.Analytics,
                     TimeSpan.FromSeconds(
                         settings.AnalyticsTimeoutSeconds));
+
+                options.AddPolicy(
+                    BackendResiliencePolicyNames.Report,
+                    TimeSpan.FromSeconds(
+                        settings.ReportTimeoutSeconds));
 
                 options.AddPolicy(
                     BackendResiliencePolicyNames.Operational,
@@ -191,6 +199,28 @@ public static class BackendResilienceRegistrationExtensions
                                 });
                     });
 
+                options.AddPolicy(
+                    BackendResiliencePolicyNames
+                        .ReportExportRate,
+                    context =>
+                    {
+                        var actor = ActorPartition(context);
+
+                        return RateLimitPartition
+                            .GetFixedWindowLimiter(
+                                actor,
+                                _ => new FixedWindowRateLimiterOptions
+                                {
+                                    PermitLimit = 12,
+                                    Window =
+                                        TimeSpan.FromMinutes(10),
+                                    QueueLimit = 0,
+                                    QueueProcessingOrder =
+                                        QueueProcessingOrder.OldestFirst,
+                                    AutoReplenishment = true
+                                });
+                    });
+
                 options.AddConcurrencyLimiter(
                     BackendResiliencePolicyNames
                         .HeavyWriteConcurrency,
@@ -226,6 +256,19 @@ public static class BackendResilienceRegistrationExtensions
                             settings.AnalyticsPermitLimit;
                         limiter.QueueLimit =
                             settings.AnalyticsQueueLimit;
+                        limiter.QueueProcessingOrder =
+                            QueueProcessingOrder.OldestFirst;
+                    });
+
+                options.AddConcurrencyLimiter(
+                    BackendResiliencePolicyNames
+                        .ReportConcurrency,
+                    limiter =>
+                    {
+                        limiter.PermitLimit =
+                            settings.ReportPermitLimit;
+                        limiter.QueueLimit =
+                            settings.ReportQueueLimit;
                         limiter.QueueProcessingOrder =
                             QueueProcessingOrder.OldestFirst;
                     });
