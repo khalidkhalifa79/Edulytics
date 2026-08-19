@@ -46,4 +46,8 @@ run_gate \
     "subject-supervisor-tenant-authorization" \
     "FullyQualifiedName~Edulytics.Tests.Phase19"
 
+run_gate \
+    "report-export-tenant-authorization" \
+    "FullyQualifiedName~Edulytics.Tests.Phase20"
+
 echo "TENANT / IDOR CI GATE: PASS"

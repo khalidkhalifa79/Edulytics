@@ -122,6 +122,10 @@ builder.Services
     .AddAnalyticsPhase09();
 
 builder.Services
+    .AddReportsPhase20(
+        builder.Configuration);
+
+builder.Services
     .AddRealtimeDashboardsPhase10(
         builder.Environment);
 

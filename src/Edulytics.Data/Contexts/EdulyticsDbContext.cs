@@ -26,6 +26,7 @@ public class EdulyticsDbContext
     public DbSet<StudentProfile> StudentProfiles => Set<StudentProfile>();
     public DbSet<TeacherAssignment> TeacherAssignments => Set<TeacherAssignment>();
     public DbSet<SubjectSupervisorAssignment> SubjectSupervisorAssignments => Set<SubjectSupervisorAssignment>();
+    public DbSet<ReportExportJob> ReportExportJobs => Set<ReportExportJob>();
     public DbSet<StudentEnrollment> StudentEnrollments => Set<StudentEnrollment>();
     public DbSet<CurriculumTopic> CurriculumTopics => Set<CurriculumTopic>();
     public DbSet<LearningOutcome> LearningOutcomes => Set<LearningOutcome>();
@@ -131,6 +132,7 @@ public class EdulyticsDbContext
         builder.ApplyConfiguration(new StudentProfileConfiguration());
         builder.ApplyConfiguration(new TeacherAssignmentConfiguration());
         builder.ApplyConfiguration(new SubjectSupervisorAssignmentConfiguration());
+        builder.ApplyConfiguration(new ReportExportJobConfiguration());
         builder.ApplyConfiguration(new StudentEnrollmentConfiguration());
         builder.ApplyConfiguration(new CurriculumTopicConfiguration());
         builder.ApplyConfiguration(new LearningOutcomeConfiguration());
