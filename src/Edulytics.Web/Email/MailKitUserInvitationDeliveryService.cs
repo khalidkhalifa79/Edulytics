@@ -6,23 +6,36 @@ using MimeKit;
 namespace Edulytics.Web.Email;
 
 public sealed class MailKitUserInvitationDeliveryService
-    : IUserInvitationDeliveryService
+    : IUserInvitationDeliveryService,
+      IUserInvitationConnector
 {
     private readonly SmtpEmailOptions _options;
-    private readonly IInvitationEmailTemplateRenderer
+
+    private readonly
+        IInvitationEmailTemplateRenderer
         _templates;
+
     private readonly ILogger<
-        MailKitUserInvitationDeliveryService> _logger;
+        MailKitUserInvitationDeliveryService>
+        _logger;
+
+    private readonly
+        EmailConnectorCircuitBreaker
+        _circuit;
 
     public MailKitUserInvitationDeliveryService(
         IOptions<SmtpEmailOptions> options,
         IInvitationEmailTemplateRenderer templates,
         ILogger<
-            MailKitUserInvitationDeliveryService> logger)
+            MailKitUserInvitationDeliveryService> logger,
+        EmailConnectorCircuitBreaker? circuit = null)
     {
         _options = options.Value;
         _templates = templates;
         _logger = logger;
+        _circuit =
+            circuit
+            ?? new EmailConnectorCircuitBreaker();
     }
 
     public async Task<UserInvitationDeliveryResult>
@@ -42,6 +55,23 @@ public sealed class MailKitUserInvitationDeliveryService
                 UserInvitationDeliveryFailure
                     .InvalidConfiguration);
         }
+
+        if (!_circuit.CanExecute(
+                DateTime.UtcNow))
+        {
+            return UserInvitationDeliveryResult.Failed(
+                UserInvitationDeliveryFailure
+                    .CircuitOpen);
+        }
+
+        using var connectorTimeout =
+            CancellationTokenSource
+                .CreateLinkedTokenSource(
+                    cancellationToken);
+
+        connectorTimeout.CancelAfter(
+            TimeSpan.FromSeconds(
+                _options.TimeoutSeconds));
 
         try
         {
@@ -78,13 +108,20 @@ public sealed class MailKitUserInvitationDeliveryService
                 .ToMessageBody();
 
             using var client =
-                new SmtpClient();
+                new SmtpClient
+                {
+                    Timeout =
+                        checked(
+                            _options
+                                .TimeoutSeconds *
+                            1000)
+                };
 
             await client.ConnectAsync(
                 _options.Host,
                 _options.Port,
                 ResolveSecurity(),
-                cancellationToken);
+                connectorTimeout.Token);
 
             if (!string.IsNullOrWhiteSpace(
                     _options.Username))
@@ -92,16 +129,18 @@ public sealed class MailKitUserInvitationDeliveryService
                 await client.AuthenticateAsync(
                     _options.Username,
                     _options.Password,
-                    cancellationToken);
+                    connectorTimeout.Token);
             }
 
             await client.SendAsync(
                 message,
-                cancellationToken);
+                connectorTimeout.Token);
 
             await client.DisconnectAsync(
                 true,
-                cancellationToken);
+                connectorTimeout.Token);
+
+            _circuit.RecordSuccess();
 
             return
                 UserInvitationDeliveryResult
@@ -113,8 +152,33 @@ public sealed class MailKitUserInvitationDeliveryService
         {
             throw;
         }
+        catch (OperationCanceledException)
+        {
+            _circuit.RecordFailure(
+                DateTime.UtcNow,
+                _options
+                    .CircuitFailureThreshold,
+                _options
+                    .CircuitBreakSeconds);
+
+            _logger.LogWarning(
+                "Invitation email connector timed out.");
+
+            return UserInvitationDeliveryResult.Failed(
+                UserInvitationDeliveryFailure
+                    .TimedOut);
+        }
         catch (Exception exception)
         {
+            _circuit.RecordFailure(
+                DateTime.UtcNow,
+                _options
+                    .CircuitFailureThreshold,
+                _options
+                    .CircuitBreakSeconds);
+
+            // Intentionally log only the exception type:
+            // setup URLs contain short-lived security tokens.
             _logger.LogWarning(
                 "Invitation email delivery failed. Error type: {ErrorType}",
                 exception.GetType().Name);
@@ -131,7 +195,10 @@ public sealed class MailKitUserInvitationDeliveryService
                 _options.Host) ||
             _options.Port <= 0 ||
             string.IsNullOrWhiteSpace(
-                _options.FromAddress))
+                _options.FromAddress) ||
+            _options.TimeoutSeconds <= 0 ||
+            _options.CircuitFailureThreshold <= 0 ||
+            _options.CircuitBreakSeconds <= 0)
         {
             return false;
         }

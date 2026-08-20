@@ -5,6 +5,8 @@ using Edulytics.Core.Reliability;
 using Edulytics.Services.Imports;
 using Edulytics.Services.Reports;
 using Edulytics.Core.Reports;
+using Edulytics.Core.Notifications;
+using Edulytics.Web.Notifications;
 using Edulytics.Web.Production;
 using Microsoft.Extensions.Options;
 
@@ -159,6 +161,23 @@ public sealed class OutboxProcessorBackgroundService
                 _scopeFactory.CreateScope();
 
             if (lease.EventType ==
+                NotificationEventTypes.DeliveryRequested)
+            {
+                var notificationEvent =
+                    ResolveNotificationDeliveryEvent(
+                        lease);
+
+                var processor =
+                    scope.ServiceProvider
+                        .GetRequiredService<
+                            INotificationDeliveryProcessor>();
+
+                await processor.ProcessAsync(
+                    notificationEvent.SchoolId,
+                    notificationEvent.DeliveryJobId,
+                    timeout.Token);
+            }
+            else if (lease.EventType ==
                 ReportEventTypes.ExportRequested)
             {
                 var reportEvent =
@@ -237,6 +256,33 @@ public sealed class OutboxProcessorBackgroundService
                 _options
                     .AnalyticsMaxCoalesceMilliseconds),
             cancellationToken);
+    }
+
+    private static NotificationDeliveryRequestedEvent
+        ResolveNotificationDeliveryEvent(
+            OutboxLease lease)
+    {
+        if (!lease.SchoolId.HasValue)
+        {
+            throw new InvalidOperationException(
+                "Notification delivery outbox message "
+                + "has no SchoolId.");
+        }
+
+        var deliveryEvent =
+            JsonSerializer.Deserialize<
+                NotificationDeliveryRequestedEvent>(
+                    lease.PayloadJson);
+
+        if (deliveryEvent is null ||
+            deliveryEvent.SchoolId !=
+                lease.SchoolId.Value)
+        {
+            throw new InvalidOperationException(
+                "Invalid notification delivery outbox message.");
+        }
+
+        return deliveryEvent;
     }
 
     private static ReportExportRequestedEvent
@@ -370,6 +416,49 @@ public sealed class OutboxProcessorBackgroundService
         }
     }
 
+    private async Task
+        MarkNotificationDeliveryDeadLetteredAsync(
+            OutboxLease lease)
+    {
+        if (lease.EventType !=
+            NotificationEventTypes.DeliveryRequested)
+        {
+            return;
+        }
+
+        try
+        {
+            var deliveryEvent =
+                ResolveNotificationDeliveryEvent(
+                    lease);
+
+            using var scope =
+                _scopeFactory.CreateScope();
+
+            var processor =
+                scope.ServiceProvider
+                    .GetRequiredService<
+                        INotificationDeliveryProcessor>();
+
+            using var timeout =
+                new CancellationTokenSource(
+                    TimeSpan.FromSeconds(5));
+
+            await processor.MarkDeadLetteredAsync(
+                deliveryEvent.SchoolId,
+                deliveryEvent.DeliveryJobId,
+                timeout.Token);
+        }
+        catch (Exception exception)
+        {
+            _logger.LogError(
+                exception,
+                "Failed to mark notification delivery "
+                + "dead-lettered for Outbox {OutboxId}.",
+                lease.Id);
+        }
+    }
+
     private async Task RecordFailureAsync(
         OutboxLease lease,
         Exception exception)
@@ -421,6 +510,9 @@ public sealed class OutboxProcessorBackgroundService
                     lease.ProcessingAttempts);
 
                 await MarkReportExportDeadLetteredAsync(
+                    lease);
+
+                await MarkNotificationDeliveryDeadLetteredAsync(
                     lease);
             }
             else if (disposition ==

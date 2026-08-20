@@ -4,14 +4,19 @@ public sealed record UserInvitationDeliveryRequest(
     string RecipientEmail,
     string SchoolName,
     string Culture,
-    string SetupUrl);
+    string SetupUrl,
+    string DeliveryReason = "initial");
 
 public enum UserInvitationDeliveryFailure
 {
     None,
     Disabled,
     InvalidConfiguration,
-    DeliveryFailed
+    DeliveryFailed,
+    TimedOut,
+    CircuitOpen,
+    QueueFailed,
+    InvalidRequest
 }
 
 public sealed record UserInvitationDeliveryResult(
@@ -30,7 +35,16 @@ public sealed record UserInvitationDeliveryResult(
             failure);
 }
 
+// Durable request-facing service.
 public interface IUserInvitationDeliveryService
+{
+    Task<UserInvitationDeliveryResult> SendAsync(
+        UserInvitationDeliveryRequest request,
+        CancellationToken cancellationToken = default);
+}
+
+// External connector. Only background delivery should use it.
+public interface IUserInvitationConnector
 {
     Task<UserInvitationDeliveryResult> SendAsync(
         UserInvitationDeliveryRequest request,

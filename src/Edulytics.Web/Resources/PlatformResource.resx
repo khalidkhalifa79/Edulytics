@@ -478,7 +478,7 @@
     <value>If you did not expect this invitation, you can ignore this email.</value>
   </data>
   <data name="CreateUserInvitationSentSuccess" xml:space="preserve">
-    <value>User created successfully. Invitation email submitted for delivery to {0}.</value>
+    <value>User created. Invitation queued for delivery to {0}.</value>
   </data>
   <data name="ResendInvitation" xml:space="preserve">
     <value>Resend invitation</value>
@@ -487,10 +487,10 @@
     <value>Send a new password setup email to this user.</value>
   </data>
   <data name="InvitationResentSuccess" xml:space="preserve">
-    <value>Invitation email submitted for delivery.</value>
+    <value>Invitation queued for durable delivery.</value>
   </data>
   <data name="InvitationDeliveryFailed" xml:space="preserve">
-    <value>The user account is ready, but the invitation email could not be sent. Check the email delivery settings and try again.</value>
+    <value>Invitation could not be queued for delivery.</value>
   </data>
   <data name="InvalidCredentials" xml:space="preserve">\n    <value>The email address or password is incorrect.</value>\n  </data>\n  <data name="SubjectSupervisorAssignmentsTitle" xml:space="preserve">
     <value>Subject supervisor assignments</value>

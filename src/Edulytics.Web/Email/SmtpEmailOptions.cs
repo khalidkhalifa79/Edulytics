@@ -2,7 +2,8 @@ namespace Edulytics.Web.Email;
 
 public sealed class SmtpEmailOptions
 {
-    public const string SectionName = "Email:Smtp";
+    public const string SectionName =
+        "Email:Smtp";
 
     public bool Enabled { get; set; }
 
@@ -25,4 +26,13 @@ public sealed class SmtpEmailOptions
 
     public string FromName { get; set; } =
         "Edulytics";
+
+    public int TimeoutSeconds { get; set; } =
+        10;
+
+    public int CircuitFailureThreshold { get; set; } =
+        3;
+
+    public int CircuitBreakSeconds { get; set; } =
+        60;
 }

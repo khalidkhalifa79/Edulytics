@@ -2896,3 +2896,23 @@ input:focus-visible {
         text-decoration: none;
     }
 }
+
+
+/* PHASE 21 NOTIFICATIONS */
+.notification-unread {
+    font-weight: 500;
+}
+
+.notification-unread td:first-child {
+    border-inline-start: 0.25rem solid currentColor;
+}
+
+.notification-table form {
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+    .notification-table .school-button {
+        width: 100%;
+    }
+}

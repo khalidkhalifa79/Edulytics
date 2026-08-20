@@ -6,6 +6,7 @@
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.AnalyticsResource> N
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.ImportResource> D
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.ReportResource> R
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.NotificationResource> Q
 
 @{
     ViewData["Title"] = T["SchoolDashboardTitle"].Value;
@@ -155,5 +156,18 @@
             </a>
         </section>
     }
+
+    <section class="user-dashboard-action">
+        <div>
+            <h2>@Q["DashboardNotificationsTitle"]</h2>
+            <p>@Q["DashboardNotificationsSubtitle"]</p>
+        </div>
+
+        <a class="school-button school-button-primary"
+           asp-controller="Notifications"
+           asp-action="Index">
+            @Q["OpenNotifications"]
+        </a>
+    </section>
 
 </section>

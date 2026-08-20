@@ -175,7 +175,8 @@ public sealed class SchoolUsersController : Controller
                         recipientEmail,
                         context.Value.SchoolName,
                         invitationCulture,
-                        link),
+                        link,
+                        "initial"),
                     cancellationToken);
 
             delivered = delivery.Succeeded;
@@ -432,7 +433,8 @@ public sealed class SchoolUsersController : Controller
                         target.Value.Email,
                         target.Value.Context.SchoolName,
                         invitationCulture,
-                        link),
+                        link,
+                        "resend"),
                     cancellationToken);
         }
 
