@@ -427,3 +427,10 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Phase/browser evidence belongs in CI artifacts, not source control.
+phase*-screenshots*.zip
+phase*_screenshots*.zip
+*browser-artifacts*.zip
+phase*_browser_artifacts/
+phase*-browser-artifacts/

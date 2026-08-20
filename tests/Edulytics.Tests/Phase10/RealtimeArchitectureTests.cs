@@ -73,13 +73,24 @@ public sealed class RealtimeArchitectureTests
     {
         var root = FindRoot();
 
+        var serviceDirectory =
+            Path.Combine(
+                root,
+                "src/Edulytics.Services/"
+                + "Assessments");
+
         var text =
-            File.ReadAllText(
-                Path.Combine(
-                    root,
-                    "src/Edulytics.Services/"
-                    + "Assessments/"
-                    + "AssessmentService.cs"));
+            string.Join(
+                "\n",
+                Directory
+                    .GetFiles(
+                        serviceDirectory,
+                        "AssessmentService*.cs")
+                    .OrderBy(
+                        x => x,
+                        StringComparer.Ordinal)
+                    .Select(
+                        File.ReadAllText));
 
         Assert.Contains(
             "AddOutboxAsync",
