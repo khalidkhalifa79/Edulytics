@@ -1,6 +1,8 @@
+using System.Reflection;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using Edulytics.Web.Middleware;
+using Edulytics.Web.ViewModels.Schools;
 using Microsoft.AspNetCore.Http;
 
 namespace Edulytics.Tests.Phase23;
@@ -332,6 +334,74 @@ public sealed class
                     + match.Value);
             }
         }
+    }
+
+    [Theory]
+    [InlineData(nameof(SchoolFormViewModel.Name))]
+    [InlineData(nameof(SchoolFormViewModel.SchoolCode))]
+    [InlineData(nameof(SchoolFormViewModel.CountryCode))]
+    [InlineData(nameof(SchoolFormViewModel.City))]
+    [InlineData(nameof(SchoolFormViewModel.ContactEmail))]
+    [InlineData(nameof(SchoolFormViewModel.DefaultCulture))]
+    [InlineData(nameof(SchoolFormViewModel.TimeZoneId))]
+    [InlineData(nameof(SchoolFormViewModel.RowVersionBase64))]
+    public void
+        SchoolFormFields_AreNullableSoMvcDoesNotCreateImplicitRequiredErrors(
+            string propertyName)
+    {
+        var property =
+            typeof(SchoolFormViewModel)
+                .GetProperty(propertyName);
+
+        Assert.NotNull(property);
+
+        var nullability =
+            new NullabilityInfoContext()
+                .Create(property!);
+
+        Assert.Equal(
+            NullabilityState.Nullable,
+            nullability.ReadState);
+    }
+
+    [Fact]
+    public void
+        SchoolController_DelegatesMissingValuesToLocalizedServiceValidation()
+    {
+        var source =
+            ReadSource(
+                "src/Edulytics.Web/Controllers/"
+                + "SchoolsController.cs");
+
+        var requiredCoalesces =
+            new[]
+            {
+                "model.Name ?? string.Empty",
+                "model.SchoolCode ?? string.Empty",
+                "model.CountryCode ?? string.Empty",
+                "model.City ?? string.Empty",
+                "model.ContactEmail ?? string.Empty",
+                "model.DefaultCulture ?? string.Empty",
+                "model.TimeZoneId ?? string.Empty"
+            };
+
+        foreach (var contract in requiredCoalesces)
+        {
+            Assert.Contains(
+                contract,
+                source,
+                StringComparison.Ordinal);
+        }
+
+        Assert.DoesNotContain(
+            "The SchoolCode field is required.",
+            source,
+            StringComparison.Ordinal);
+
+        Assert.DoesNotContain(
+            "The ContactEmail field is required.",
+            source,
+            StringComparison.Ordinal);
     }
 
     private static string ReadSource(

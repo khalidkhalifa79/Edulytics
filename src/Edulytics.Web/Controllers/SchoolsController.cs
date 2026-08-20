@@ -66,13 +66,13 @@ public sealed class SchoolsController : Controller
     {
         var result = await _schoolService.CreateAsync(
             new CreateSchoolRequest(
-                model.Name,
-                model.SchoolCode,
-                model.CountryCode,
-                model.City,
-                model.ContactEmail,
-                model.DefaultCulture,
-                model.TimeZoneId),
+                model.Name ?? string.Empty,
+                model.SchoolCode ?? string.Empty,
+                model.CountryCode ?? string.Empty,
+                model.City ?? string.Empty,
+                model.ContactEmail ?? string.Empty,
+                model.DefaultCulture ?? string.Empty,
+                model.TimeZoneId ?? string.Empty),
             cancellationToken);
 
         if (!result.Succeeded)
@@ -169,12 +169,12 @@ public sealed class SchoolsController : Controller
         var result = await _schoolService.UpdateAsync(
             new UpdateSchoolRequest(
                 id,
-                model.Name,
-                model.CountryCode,
-                model.City,
-                model.ContactEmail,
-                model.DefaultCulture,
-                model.TimeZoneId,
+                model.Name ?? string.Empty,
+                model.CountryCode ?? string.Empty,
+                model.City ?? string.Empty,
+                model.ContactEmail ?? string.Empty,
+                model.DefaultCulture ?? string.Empty,
+                model.TimeZoneId ?? string.Empty,
                 rowVersion),
             cancellationToken);
 
