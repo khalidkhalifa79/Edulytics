@@ -87,6 +87,9 @@ jobs:
       - name: Dependency vulnerability gate
         run: bash scripts/ci-dependency-gate.sh artifacts/security/nuget-vulnerabilities.txt
 
+      - name: Phase23 security privacy accessibility gate
+        run: bash scripts/verify-phase23-security.sh
+
       - name: Repository-history secret gate
         run: bash scripts/ci-secret-gate.sh artifacts/security/gitleaks.log
 
@@ -185,6 +188,8 @@ jobs:
             -c Release \
             2>&1 | tee artifacts/postgres/postgres-gate.log
           grep -q 'PHASE16_POSTGRES_GATE_PASS' \
+            artifacts/postgres/postgres-gate.log
+          grep -q 'PHASE23_POSTGRES_GATE_PASS' \
             artifacts/postgres/postgres-gate.log
 
       - name: Preserve PostgreSQL artifacts

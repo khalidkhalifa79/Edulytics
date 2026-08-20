@@ -143,6 +143,11 @@ builder.Services
     .AddOperationalAdminPhase22();
 
 builder.Services
+    .AddSecurityPrivacyHardeningPhase23(
+        builder.Configuration,
+        builder.Environment);
+
+builder.Services
     .AddProductionHardeningPhase12(
         builder.Configuration,
         builder.Environment);

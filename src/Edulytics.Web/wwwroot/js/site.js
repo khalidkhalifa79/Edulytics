@@ -13,7 +13,31 @@
         return Array.from(bytes, x => x.toString(16).padStart(2, "0")).join("");
     }
 
+    function wireConfirmationForms() {
+        document.querySelectorAll("form[data-confirm]").forEach(form => {
+            form.addEventListener("submit", event => {
+                const message = form.dataset.confirm;
+
+                if (message && !globalThis.confirm(message)) {
+                    event.preventDefault();
+                }
+            });
+        });
+    }
+
+    function wirePrintButtons() {
+        document.querySelectorAll("[data-print-report]").forEach(button => {
+            button.addEventListener("click", () => {
+                globalThis.print();
+            });
+        });
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
+        wirePrintButtons();
+
+        wireConfirmationForms();
+
         document.querySelectorAll("form").forEach(form => {
             if ((form.method || "get").toLowerCase() !== "post") {
                 return;
