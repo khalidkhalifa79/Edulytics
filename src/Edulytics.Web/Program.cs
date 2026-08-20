@@ -133,6 +133,9 @@ builder.Services
     .AddDataImportPhase11();
 
 builder.Services
+    .AddNotificationsPhase21();
+
+builder.Services
     .AddInvitationEmailDelivery(
         builder.Configuration);
 

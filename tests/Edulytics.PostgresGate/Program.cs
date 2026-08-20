@@ -3,6 +3,7 @@ using Edulytics.Core.Enums;
 using Edulytics.Core.Interfaces;
 using Edulytics.Core.Realtime;
 using Edulytics.Core.Reports;
+using Edulytics.Core.Notifications;
 using Edulytics.Data.Identity;
 using System.Text.Json;
 using Edulytics.Data.Contexts;
@@ -772,6 +773,189 @@ Console.WriteLine(
 
 Console.WriteLine(
     "PHASE20_POSTGRES_GATE_PASS");
+
+Console.WriteLine(
+    "===== PHASE 21 POSTGRES NOTIFICATION GATE =====");
+
+var notificationId =
+    Guid.NewGuid();
+
+var deliveryJobId =
+    Guid.NewGuid();
+
+var notificationOutboxId =
+    Guid.NewGuid();
+
+await using (var db =
+             await NewDbAsync())
+{
+    db.UserNotifications.Add(
+        new UserNotification
+        {
+            Id = notificationId,
+            SchoolId = schoolA,
+            RecipientUserId =
+                reportUserId,
+            Kind =
+                NotificationKind.AccountInvitation,
+            TitleKey =
+                "NotificationAccountInvitationTitle",
+            MessageKey =
+                "NotificationAccountInvitationMessage",
+            DeduplicationKey =
+                $"phase21-notification-{notificationId:N}",
+            RelatedEntityType =
+                "ApplicationUser",
+            RelatedEntityId =
+                reportUserId,
+            CreatedAtUtc =
+                now.AddMinutes(50)
+        });
+
+    db.NotificationDeliveryJobs.Add(
+        new NotificationDeliveryJob
+        {
+            Id = deliveryJobId,
+            SchoolId = schoolA,
+            NotificationId =
+                notificationId,
+            RecipientUserId =
+                reportUserId,
+            Channel =
+                NotificationDeliveryChannel.Email,
+            Status =
+                NotificationDeliveryStatus.Pending,
+            Culture = "en",
+            BaseUrl =
+                "https://example.invalid",
+            DeduplicationKey =
+                $"phase21-delivery-{deliveryJobId:N}",
+            CreatedAtUtc =
+                now.AddMinutes(50)
+        });
+
+    db.OutboxMessages.Add(
+        new OutboxMessage
+        {
+            Id = notificationOutboxId,
+            SchoolId = schoolA,
+            EventType =
+                NotificationEventTypes
+                    .DeliveryRequested,
+            PayloadJson =
+                JsonSerializer.Serialize(
+                    new NotificationDeliveryRequestedEvent(
+                        schoolA,
+                        deliveryJobId)),
+            OccurredAtUtc =
+                now.AddMinutes(50),
+            AvailableAtUtc =
+                now.AddMinutes(50),
+            Status =
+                OutboxMessageStatus.Pending,
+            CorrelationId =
+                $"phase21-{deliveryJobId:N}"
+        });
+
+    db.AuditLogs.Add(
+        new AuditLog
+        {
+            Id = Guid.NewGuid(),
+            SchoolId = schoolA,
+            ActorUserId =
+                reportUserId,
+            ActorRole =
+                "SchoolAdmin",
+            Action =
+                "Notification.InvitationQueued",
+            EntityType =
+                "NotificationDeliveryJob",
+            EntityId =
+                deliveryJobId.ToString("D"),
+            OccurredAtUtc =
+                now.AddMinutes(50),
+            CorrelationId =
+                $"phase21-{deliveryJobId:N}",
+            IpAddress =
+                "127.0.0.1",
+            UserAgent =
+                "Edulytics.PostgresGate",
+            OldValuesJson =
+                "{}",
+            NewValuesJson =
+                "{\"channel\":\"Email\"}",
+            ResultSummary =
+                "Phase21 durable notification gate.",
+            Source = "CI",
+            Feature = "Notifications"
+        });
+
+    await db.SaveChangesAsync();
+}
+
+await using (var db =
+             await NewDbAsync())
+{
+    var notification =
+        await db.UserNotifications
+            .AsNoTracking()
+            .SingleAsync(
+                x => x.Id == notificationId);
+
+    var delivery =
+        await db.NotificationDeliveryJobs
+            .AsNoTracking()
+            .SingleAsync(
+                x => x.Id == deliveryJobId);
+
+    var outbox =
+        await db.OutboxMessages
+            .AsNoTracking()
+            .SingleAsync(
+                x => x.Id == notificationOutboxId);
+
+    if (notification.SchoolId != schoolA ||
+        notification.RecipientUserId !=
+            reportUserId ||
+        notification.RowVersion.Length == 0 ||
+        delivery.SchoolId != schoolA ||
+        delivery.RecipientUserId !=
+            reportUserId ||
+        delivery.RowVersion.Length == 0 ||
+        outbox.EventType !=
+            NotificationEventTypes
+                .DeliveryRequested)
+    {
+        throw new Exception(
+            "Phase21 notification tenant/durability contract failed.");
+    }
+
+    var payload =
+        outbox.PayloadJson;
+
+    if (payload.Contains(
+            "token",
+            StringComparison.OrdinalIgnoreCase) ||
+        payload.Contains(
+            "password",
+            StringComparison.OrdinalIgnoreCase) ||
+        payload.Contains(
+            "@",
+            StringComparison.Ordinal))
+    {
+        throw new Exception(
+            "Phase21 outbox payload contains sensitive invitation data.");
+    }
+}
+
+Console.WriteLine(
+    "PASS: PostgreSQL notification + delivery + outbox + audit persistence");
+
+Console.WriteLine(
+    "PASS: notification outbox payload contains no token/email");
+
+Console.WriteLine(
+    "PHASE21_POSTGRES_GATE_PASS");
 
 static School NewSchool(
     Guid id,

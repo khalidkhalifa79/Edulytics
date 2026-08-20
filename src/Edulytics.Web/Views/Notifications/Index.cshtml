@@ -1,0 +1,123 @@
+@model IReadOnlyList<Edulytics.Services.Notifications.NotificationInboxItem>
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.NotificationResource> Q
+@using Edulytics.Core.Notifications
+
+@{
+    ViewData["Title"] =
+        Q["NotificationsTitle"].Value;
+}
+
+<section class="user-page notification-page">
+    <header class="user-page-header">
+        <div>
+            <div class="user-eyebrow">
+                @Q["NotificationsEyebrow"]
+            </div>
+
+            <h1>@Q["NotificationsTitle"]</h1>
+
+            <p class="user-page-subtitle">
+                @Q["NotificationsSubtitle"]
+            </p>
+        </div>
+
+        <a class="school-button school-button-secondary"
+           asp-controller="SchoolHome"
+           asp-action="Dashboard">
+            @Q["BackToDashboard"]
+        </a>
+    </header>
+
+    <section class="school-detail-card">
+        @if (Model.Count == 0)
+        {
+            <p>@Q["NoNotifications"]</p>
+        }
+        else
+        {
+            <div class="analytics-table-wrap">
+                <table class="analytics-table notification-table">
+                    <thead>
+                        <tr>
+                            <th>@Q["Notification"]</th>
+                            <th>@Q["Created"]</th>
+                            <th>@Q["ReadStatus"]</th>
+                            <th>@Q["EmailDelivery"]</th>
+                            <th>@Q["Actions"]</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr class="@(item.ReadAtUtc.HasValue ? "" : "notification-unread")">
+                                <td data-label="@Q["Notification"]">
+                                    <strong>@Q[item.TitleKey]</strong>
+                                    <div>@Q[item.MessageKey]</div>
+                                </td>
+
+                                <td data-label="@Q["Created"]">
+                                    @item.CreatedAtUtc.ToString("yyyy-MM-dd HH:mm 'UTC'")
+                                </td>
+
+                                <td data-label="@Q["ReadStatus"]">
+                                    @(item.ReadAtUtc.HasValue
+                                        ? Q["Read"].Value
+                                        : Q["Unread"].Value)
+                                </td>
+
+                                <td data-label="@Q["EmailDelivery"]">
+                                    @if (item.EmailDeliveryStatus.HasValue)
+                                    {
+                                        @Q[$"Delivery{item.EmailDeliveryStatus.Value}"]
+                                    }
+                                    else
+                                    {
+                                        <span>—</span>
+                                    }
+                                </td>
+
+                                <td data-label="@Q["Actions"]">
+                                    @if (item.ReadAtUtc.HasValue)
+                                    {
+                                        <form asp-action="Unread"
+                                              asp-route-id="@item.Id"
+                                              method="post">
+                                            @Html.AntiForgeryToken()
+
+                                            <input type="hidden"
+                                                   name="_idempotencyKey"
+                                                   value="@Guid.NewGuid().ToString("N")" />
+
+                                            <button type="submit"
+                                                    class="school-button school-button-secondary school-button-small">
+                                                @Q["MarkUnread"]
+                                            </button>
+                                        </form>
+                                    }
+                                    else
+                                    {
+                                        <form asp-action="Read"
+                                              asp-route-id="@item.Id"
+                                              method="post">
+                                            @Html.AntiForgeryToken()
+
+                                            <input type="hidden"
+                                                   name="_idempotencyKey"
+                                                   value="@Guid.NewGuid().ToString("N")" />
+
+                                            <button type="submit"
+                                                    class="school-button school-button-primary school-button-small">
+                                                @Q["MarkRead"]
+                                            </button>
+                                        </form>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </section>
+</section>

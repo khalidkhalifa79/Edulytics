@@ -27,6 +27,8 @@ public class EdulyticsDbContext
     public DbSet<TeacherAssignment> TeacherAssignments => Set<TeacherAssignment>();
     public DbSet<SubjectSupervisorAssignment> SubjectSupervisorAssignments => Set<SubjectSupervisorAssignment>();
     public DbSet<ReportExportJob> ReportExportJobs => Set<ReportExportJob>();
+    public DbSet<UserNotification> UserNotifications => Set<UserNotification>();
+    public DbSet<NotificationDeliveryJob> NotificationDeliveryJobs => Set<NotificationDeliveryJob>();
     public DbSet<StudentEnrollment> StudentEnrollments => Set<StudentEnrollment>();
     public DbSet<CurriculumTopic> CurriculumTopics => Set<CurriculumTopic>();
     public DbSet<LearningOutcome> LearningOutcomes => Set<LearningOutcome>();
@@ -133,6 +135,8 @@ public class EdulyticsDbContext
         builder.ApplyConfiguration(new TeacherAssignmentConfiguration());
         builder.ApplyConfiguration(new SubjectSupervisorAssignmentConfiguration());
         builder.ApplyConfiguration(new ReportExportJobConfiguration());
+        builder.ApplyConfiguration(new UserNotificationConfiguration());
+        builder.ApplyConfiguration(new NotificationDeliveryJobConfiguration());
         builder.ApplyConfiguration(new StudentEnrollmentConfiguration());
         builder.ApplyConfiguration(new CurriculumTopicConfiguration());
         builder.ApplyConfiguration(new LearningOutcomeConfiguration());

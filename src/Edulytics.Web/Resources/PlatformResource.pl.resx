@@ -478,7 +478,7 @@
     <value>Jeśli nie oczekujesz tego zaproszenia, możesz zignorować tę wiadomość.</value>
   </data>
   <data name="CreateUserInvitationSentSuccess" xml:space="preserve">
-    <value>Użytkownik został utworzony. Zaproszenie przekazano do dostarczenia na adres {0}.</value>
+    <value>Użytkownik został utworzony. Zaproszenie do {0} dodano do kolejki wysyłki.</value>
   </data>
   <data name="ResendInvitation" xml:space="preserve">
     <value>Wyślij zaproszenie ponownie</value>
@@ -487,10 +487,10 @@
     <value>Wyślij temu użytkownikowi nową wiadomość e-mail umożliwiającą ustawienie hasła.</value>
   </data>
   <data name="InvitationResentSuccess" xml:space="preserve">
-    <value>Wiadomość z zaproszeniem została przekazana do dostarczenia.</value>
+    <value>Zaproszenie dodano do trwałej kolejki wysyłki.</value>
   </data>
   <data name="InvitationDeliveryFailed" xml:space="preserve">
-    <value>Konto użytkownika jest gotowe, ale nie udało się wysłać wiadomości z zaproszeniem. Sprawdź ustawienia poczty i spróbuj ponownie.</value>
+    <value>Nie udało się dodać zaproszenia do kolejki wysyłki.</value>
   </data>
   <data name="InvalidCredentials" xml:space="preserve">\n    <value>Adres e-mail lub hasło są nieprawidłowe.</value>\n  </data>\n  <data name="SubjectSupervisorAssignmentsTitle" xml:space="preserve">
     <value>Przypisania opiekunów przedmiotów</value>

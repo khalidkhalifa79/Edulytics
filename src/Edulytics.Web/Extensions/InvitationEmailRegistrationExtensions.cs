@@ -13,13 +13,28 @@ public static class InvitationEmailRegistrationExtensions
             configuration.GetSection(
                 SmtpEmailOptions.SectionName));
 
+        services.AddHttpContextAccessor();
+
+        services.AddSingleton<
+            EmailConnectorCircuitBreaker>();
+
         services.AddScoped<
             IInvitationEmailTemplateRenderer,
             InvitationEmailTemplateRenderer>();
 
         services.AddScoped<
-            IUserInvitationDeliveryService,
             MailKitUserInvitationDeliveryService>();
+
+        services.AddScoped<
+            IUserInvitationConnector>(
+                provider =>
+                    provider.GetRequiredService<
+                        MailKitUserInvitationDeliveryService>());
+
+        // Request path only queues durable delivery.
+        services.AddScoped<
+            IUserInvitationDeliveryService,
+            DurableUserInvitationDeliveryService>();
 
         return services;
     }
