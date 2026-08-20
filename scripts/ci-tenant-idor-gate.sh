@@ -54,4 +54,9 @@ run_gate \
     "notification-tenant-authorization" \
     "FullyQualifiedName~Edulytics.Tests.Phase21"
 
+
+run_gate \
+    "operational-admin-authorization" \
+    "FullyQualifiedName~Edulytics.Tests.Phase22"
+
 echo "TENANT / IDOR CI GATE: PASS"

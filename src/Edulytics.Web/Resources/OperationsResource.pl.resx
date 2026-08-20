@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root"
+      xmlns=""
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value"
+                    type="xsd:string"
+                    minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name"
+                  use="required"
+                  type="xsd:string" />
+              <xsd:attribute name="type"
+                  type="xsd:string" />
+              <xsd:attribute name="mimetype"
+                  type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias"
+                  type="xsd:string" />
+              <xsd:attribute name="name"
+                  type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value"
+                    type="xsd:string"
+                    minOccurs="0"
+                    msdata:Ordinal="1" />
+                <xsd:element name="comment"
+                    type="xsd:string"
+                    minOccurs="0"
+                    msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name"
+                  type="xsd:string"
+                  use="required"
+                  msdata:Ordinal="1" />
+              <xsd:attribute name="type"
+                  type="xsd:string"
+                  msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype"
+                  type="xsd:string"
+                  msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value"
+                    type="xsd:string"
+                    minOccurs="0"
+                    msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name"
+                  type="xsd:string"
+                  use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+  </resheader>
+  <data name="DashboardOperationsTitle" xml:space="preserve">
+    <value>Operacje</value>
+  </data>
+  <data name="DashboardOperationsDescription" xml:space="preserve">
+    <value>Monitoruj przetwarzanie w tle, błędy, stan konektorów i informacje o wydaniu.</value>
+  </data>
+  <data name="OpenOperations" xml:space="preserve">
+    <value>Otwórz operacje</value>
+  </data>
+  <data name="OperationsTitle" xml:space="preserve">
+    <value>Konsola administracji operacyjnej</value>
+  </data>
+  <data name="OperationsSubtitle" xml:space="preserve">
+    <value>Bezpieczny wgląd operacyjny i rutynowe odzyskiwanie dla Edulytiks.</value>
+  </data>
+  <data name="BackToPlatformDashboard" xml:space="preserve">
+    <value>Wróć do panelu platformy</value>
+  </data>
+  <data name="ReleaseSha" xml:space="preserve">
+    <value>SHA wydania</value>
+  </data>
+  <data name="MigrationVersion" xml:space="preserve">
+    <value>Wersja migracji</value>
+  </data>
+  <data name="WorkerState" xml:space="preserve">
+    <value>Worker Outbox</value>
+  </data>
+  <data name="WorkerStarted" xml:space="preserve">
+    <value>Uruchomiony</value>
+  </data>
+  <data name="WorkerNotStarted" xml:space="preserve">
+    <value>Nie uruchomiono</value>
+  </data>
+  <data name="StartedAt" xml:space="preserve">
+    <value>Uruchomiono o</value>
+  </data>
+  <data name="LastHeartbeat" xml:space="preserve">
+    <value>Ostatni heartbeat</value>
+  </data>
+  <data name="HeartbeatAge" xml:space="preserve">
+    <value>Wiek heartbeat</value>
+  </data>
+  <data name="Seconds" xml:space="preserve">
+    <value>sekund</value>
+  </data>
+  <data name="EmailConnector" xml:space="preserve">
+    <value>Konektor e-mail</value>
+  </data>
+  <data name="ConnectorStatus" xml:space="preserve">
+    <value>Stan</value>
+  </data>
+  <data name="ConsecutiveFailures" xml:space="preserve">
+    <value>Kolejne błędy</value>
+  </data>
+  <data name="CircuitOpenUntil" xml:space="preserve">
+    <value>Circuit otwarty do</value>
+  </data>
+  <data name="ConnectorStatusHealthy" xml:space="preserve">
+    <value>Zdrowy</value>
+  </data>
+  <data name="ConnectorStatusDegraded" xml:space="preserve">
+    <value>Zdegradowany</value>
+  </data>
+  <data name="ConnectorStatusCircuitOpen" xml:space="preserve">
+    <value>Circuit otwarty</value>
+  </data>
+  <data name="ConnectorStatusDisabled" xml:space="preserve">
+    <value>Wyłączony</value>
+  </data>
+  <data name="ConnectorStatusInvalidConfiguration" xml:space="preserve">
+    <value>Nieprawidłowa konfiguracja</value>
+  </data>
+  <data name="OutboxSummary" xml:space="preserve">
+    <value>Podsumowanie Outbox</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>Oczekujące</value>
+  </data>
+  <data name="Processing" xml:space="preserve">
+    <value>Przetwarzane</value>
+  </data>
+  <data name="DeadLetters" xml:space="preserve">
+    <value>Dead letters</value>
+  </data>
+  <data name="OldestPending" xml:space="preserve">
+    <value>Najstarsze oczekujące</value>
+  </data>
+  <data name="OldestProcessing" xml:space="preserve">
+    <value>Najstarsze przetwarzane</value>
+  </data>
+  <data name="OutboxBacklog" xml:space="preserve">
+    <value>Kolejka Outbox</value>
+  </data>
+  <data name="NoBacklog" xml:space="preserve">
+    <value>Brak oczekujących lub przetwarzanych wiadomości.</value>
+  </data>
+  <data name="NoDeadLetters" xml:space="preserve">
+    <value>Brak dead letters.</value>
+  </data>
+  <data name="MessageId" xml:space="preserve">
+    <value>ID wiadomości</value>
+  </data>
+  <data name="SchoolId" xml:space="preserve">
+    <value>ID szkoły</value>
+  </data>
+  <data name="EventType" xml:space="preserve">
+    <value>Typ zdarzenia</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Stan</value>
+  </data>
+  <data name="Attempts" xml:space="preserve">
+    <value>Próby</value>
+  </data>
+  <data name="OccurredAt" xml:space="preserve">
+    <value>Czas zdarzenia</value>
+  </data>
+  <data name="AvailableAt" xml:space="preserve">
+    <value>Dostępne od</value>
+  </data>
+  <data name="DeadLetteredAt" xml:space="preserve">
+    <value>Dead-lettered o</value>
+  </data>
+  <data name="LastError" xml:space="preserve">
+    <value>Ostatni błąd</value>
+  </data>
+  <data name="CorrelationId" xml:space="preserve">
+    <value>ID korelacji</value>
+  </data>
+  <data name="Requeue" xml:space="preserve">
+    <value>Ponów</value>
+  </data>
+  <data name="RequeueReason" xml:space="preserve">
+    <value>Powód operatora</value>
+  </data>
+  <data name="RequeueReasonPlaceholder" xml:space="preserve">
+    <value>Opisz, dlaczego wiadomość można bezpiecznie ponowić</value>
+  </data>
+  <data name="RequeueReasonValidation" xml:space="preserve">
+    <value>Wymagany jest powód ponowienia od 1 do 500 znaków.</value>
+  </data>
+  <data name="RequeueSucceeded" xml:space="preserve">
+    <value>Wiadomość dead-letter została bezpiecznie ponowiona.</value>
+  </data>
+  <data name="RequeueRejected" xml:space="preserve">
+    <value>Ponowienie odrzucono, ponieważ stan wiadomości się zmienił lub zależne zadanie nie może być bezpiecznie ponowione.</value>
+  </data>
+  <data name="AnalyticsFreshness" xml:space="preserve">
+    <value>Aktualność analityki</value>
+  </data>
+  <data name="NoAnalyticsState" xml:space="preserve">
+    <value>Brak zarejestrowanego stanu odświeżania analityki.</value>
+  </data>
+  <data name="RequestedVersion" xml:space="preserve">
+    <value>Żądana wersja</value>
+  </data>
+  <data name="CompletedVersion" xml:space="preserve">
+    <value>Ukończona wersja</value>
+  </data>
+  <data name="Freshness" xml:space="preserve">
+    <value>Aktualność</value>
+  </data>
+  <data name="Fresh" xml:space="preserve">
+    <value>Aktualne</value>
+  </data>
+  <data name="Behind" xml:space="preserve">
+    <value>Opóźnione</value>
+  </data>
+  <data name="LastRequested" xml:space="preserve">
+    <value>Ostatnie żądanie</value>
+  </data>
+  <data name="LatestCalculated" xml:space="preserve">
+    <value>Ostatnie obliczenie</value>
+  </data>
+  <data name="ImportFailures" xml:space="preserve">
+    <value>Błędy importu</value>
+  </data>
+  <data name="NoImportFailures" xml:space="preserve">
+    <value>Brak ostatnich błędów walidacji importu.</value>
+  </data>
+  <data name="ImportType" xml:space="preserve">
+    <value>Typ importu</value>
+  </data>
+  <data name="Rows" xml:space="preserve">
+    <value>Wiersze</value>
+  </data>
+  <data name="Errors" xml:space="preserve">
+    <value>Błędy</value>
+  </data>
+  <data name="CreatedAt" xml:space="preserve">
+    <value>Utworzono</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>Brak</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Nieznane</value>
+  </data>
+  <data name="StatusPending" xml:space="preserve">
+    <value>Oczekujące</value>
+  </data>
+  <data name="StatusProcessing" xml:space="preserve">
+    <value>Przetwarzane</value>
+  </data>
+</root>

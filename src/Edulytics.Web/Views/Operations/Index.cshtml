@@ -1,0 +1,373 @@
+@model Edulytics.Web.ViewModels.Operations.OperationalConsoleViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.OperationsResource> T
+
+@{
+    ViewData["Title"] = T["OperationsTitle"].Value;
+}
+
+<section class="operations-page">
+    <header class="operations-header">
+        <div>
+            <div class="user-eyebrow">
+                Edulytics
+            </div>
+
+            <h1>@T["OperationsTitle"]</h1>
+
+            <p class="user-page-subtitle">
+                @T["OperationsSubtitle"]
+            </p>
+        </div>
+
+        <a class="school-button"
+           asp-controller="Platform"
+           asp-action="Dashboard">
+            @T["BackToPlatformDashboard"]
+        </a>
+    </header>
+
+    @if (TempData["OperationsMessage"] is string message)
+    {
+        <div class="operations-message"
+             role="status">
+            @message
+        </div>
+    }
+
+    <section class="operations-grid"
+             aria-label="@T["OperationsTitle"]">
+        <article class="school-detail-card">
+            <h2>@T["ReleaseSha"]</h2>
+            <p class="operations-code">
+                @Model.ReleaseSha
+            </p>
+
+            <h3>@T["MigrationVersion"]</h3>
+            <p class="operations-code">
+                @Model.MigrationVersion
+            </p>
+        </article>
+
+        <article class="school-detail-card">
+            <h2>@T["WorkerState"]</h2>
+
+            <dl class="school-detail-grid">
+                <div>
+                    <dt>@T["Status"]</dt>
+                    <dd>
+                        @(Model.Worker.Started
+                            ? T["WorkerStarted"]
+                            : T["WorkerNotStarted"])
+                    </dd>
+                </div>
+
+                <div>
+                    <dt>@T["StartedAt"]</dt>
+                    <dd>
+                        @(Model.Worker.StartedAtUtc?.ToString("u")
+                            ?? T["Unknown"].Value)
+                    </dd>
+                </div>
+
+                <div>
+                    <dt>@T["LastHeartbeat"]</dt>
+                    <dd>
+                        @(Model.Worker.LastHeartbeatUtc?.ToString("u")
+                            ?? T["Unknown"].Value)
+                    </dd>
+                </div>
+
+                <div>
+                    <dt>@T["HeartbeatAge"]</dt>
+                    <dd>
+                        @(Model.Worker.HeartbeatAgeSeconds.HasValue
+                            ? $"{Model.Worker.HeartbeatAgeSeconds.Value:F1} {T["Seconds"]}"
+                            : T["Unknown"].Value)
+                    </dd>
+                </div>
+            </dl>
+        </article>
+
+        <article class="school-detail-card">
+            <h2>@T["EmailConnector"]</h2>
+
+            <dl class="school-detail-grid">
+                <div>
+                    <dt>@T["ConnectorStatus"]</dt>
+                    <dd>
+                        @T[$"ConnectorStatus{Model.EmailConnector.Status}"]
+                    </dd>
+                </div>
+
+                <div>
+                    <dt>@T["ConsecutiveFailures"]</dt>
+                    <dd>
+                        @Model.EmailConnector.ConsecutiveFailures
+                    </dd>
+                </div>
+
+                <div>
+                    <dt>@T["CircuitOpenUntil"]</dt>
+                    <dd>
+                        @(Model.EmailConnector.CircuitOpenUntilUtc?.ToString("u")
+                            ?? T["None"].Value)
+                    </dd>
+                </div>
+            </dl>
+        </article>
+    </section>
+
+    <section class="school-detail-card">
+        <h2>@T["OutboxSummary"]</h2>
+
+        <dl class="school-detail-grid">
+            <div>
+                <dt>@T["Pending"]</dt>
+                <dd>@Model.OutboxSummary.PendingCount</dd>
+            </div>
+
+            <div>
+                <dt>@T["Processing"]</dt>
+                <dd>@Model.OutboxSummary.ProcessingCount</dd>
+            </div>
+
+            <div>
+                <dt>@T["DeadLetters"]</dt>
+                <dd>@Model.OutboxSummary.DeadLetterCount</dd>
+            </div>
+
+            <div>
+                <dt>@T["OldestPending"]</dt>
+                <dd>
+                    @(Model.OutboxSummary.OldestPendingAtUtc?.ToString("u")
+                        ?? T["None"].Value)
+                </dd>
+            </div>
+
+            <div>
+                <dt>@T["OldestProcessing"]</dt>
+                <dd>
+                    @(Model.OutboxSummary.OldestProcessingAtUtc?.ToString("u")
+                        ?? T["None"].Value)
+                </dd>
+            </div>
+        </dl>
+    </section>
+
+    <section class="operations-section">
+        <h2>@T["OutboxBacklog"]</h2>
+
+        @if (Model.OutboxBacklog.Count == 0)
+        {
+            <p>@T["NoBacklog"]</p>
+        }
+        else
+        {
+            <div class="operations-table-wrap">
+                <table class="operations-table">
+                    <thead>
+                        <tr>
+                            <th>@T["MessageId"]</th>
+                            <th>@T["SchoolId"]</th>
+                            <th>@T["EventType"]</th>
+                            <th>@T["Status"]</th>
+                            <th>@T["Attempts"]</th>
+                            <th>@T["OccurredAt"]</th>
+                            <th>@T["AvailableAt"]</th>
+                            <th>@T["CorrelationId"]</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var item in Model.OutboxBacklog)
+                    {
+                        <tr>
+                            <td class="operations-code">@item.Id</td>
+                            <td class="operations-code">
+                                @(item.SchoolId?.ToString()
+                                    ?? T["None"].Value)
+                            </td>
+                            <td>@item.EventType</td>
+                            <td>@T[$"Status{item.Status}"]</td>
+                            <td>@item.ProcessingAttempts</td>
+                            <td>@item.OccurredAtUtc.ToString("u")</td>
+                            <td>@item.AvailableAtUtc.ToString("u")</td>
+                            <td class="operations-code">
+                                @item.CorrelationId
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </section>
+
+    <section class="operations-section">
+        <h2>@T["DeadLetters"]</h2>
+
+        @if (Model.DeadLetters.Count == 0)
+        {
+            <p>@T["NoDeadLetters"]</p>
+        }
+        else
+        {
+            <div class="operations-table-wrap">
+                <table class="operations-table">
+                    <thead>
+                        <tr>
+                            <th>@T["MessageId"]</th>
+                            <th>@T["SchoolId"]</th>
+                            <th>@T["EventType"]</th>
+                            <th>@T["Attempts"]</th>
+                            <th>@T["DeadLetteredAt"]</th>
+                            <th>@T["LastError"]</th>
+                            <th>@T["Requeue"]</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var item in Model.DeadLetters)
+                    {
+                        <tr>
+                            <td class="operations-code">@item.Id</td>
+                            <td class="operations-code">
+                                @(item.SchoolId?.ToString()
+                                    ?? T["None"].Value)
+                            </td>
+                            <td>@item.EventType</td>
+                            <td>@item.ProcessingAttempts</td>
+                            <td>
+                                @(item.DeadLetteredAtUtc?.ToString("u")
+                                    ?? T["Unknown"].Value)
+                            </td>
+                            <td class="operations-error">
+                                @(item.LastError
+                                    ?? T["Unknown"].Value)
+                            </td>
+                            <td>
+                                <form method="post"
+                                      asp-controller="Operations"
+                                      asp-action="Requeue"
+                                      asp-route-id="@item.Id"
+                                      class="operations-requeue-form">
+                                    @Html.AntiForgeryToken()
+
+                                    <label for="reason-@item.Id">
+                                        @T["RequeueReason"]
+                                    </label>
+
+                                    <input id="reason-@item.Id"
+                                           name="reason"
+                                           type="text"
+                                           required
+                                           minlength="1"
+                                           maxlength="500"
+                                           placeholder="@T["RequeueReasonPlaceholder"]" />
+
+                                    <button type="submit"
+                                            class="school-button school-button-primary">
+                                        @T["Requeue"]
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </section>
+
+    <section class="operations-section">
+        <h2>@T["AnalyticsFreshness"]</h2>
+
+        @if (Model.AnalyticsFreshness.Count == 0)
+        {
+            <p>@T["NoAnalyticsState"]</p>
+        }
+        else
+        {
+            <div class="operations-table-wrap">
+                <table class="operations-table">
+                    <thead>
+                        <tr>
+                            <th>@T["SchoolId"]</th>
+                            <th>@T["RequestedVersion"]</th>
+                            <th>@T["CompletedVersion"]</th>
+                            <th>@T["Freshness"]</th>
+                            <th>@T["LastRequested"]</th>
+                            <th>@T["LatestCalculated"]</th>
+                            <th>@T["Attempts"]</th>
+                            <th>@T["LastError"]</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var item in Model.AnalyticsFreshness)
+                    {
+                        <tr>
+                            <td class="operations-code">
+                                @item.SchoolId
+                            </td>
+                            <td>@item.RequestedVersion</td>
+                            <td>@item.CompletedVersion</td>
+                            <td>
+                                @(item.IsBehind
+                                    ? T["Behind"]
+                                    : T["Fresh"])
+                            </td>
+                            <td>@item.LastRequestedAtUtc.ToString("u")</td>
+                            <td>
+                                @(item.LatestSnapshotCalculatedAtUtc?.ToString("u")
+                                    ?? T["None"].Value)
+                            </td>
+                            <td>@item.ProcessingAttempts</td>
+                            <td>
+                                @(item.LastError
+                                    ?? T["None"].Value)
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </section>
+
+    <section class="operations-section">
+        <h2>@T["ImportFailures"]</h2>
+
+        @if (Model.ImportFailures.Count == 0)
+        {
+            <p>@T["NoImportFailures"]</p>
+        }
+        else
+        {
+            <div class="operations-table-wrap">
+                <table class="operations-table">
+                    <thead>
+                        <tr>
+                            <th>@T["MessageId"]</th>
+                            <th>@T["SchoolId"]</th>
+                            <th>@T["ImportType"]</th>
+                            <th>@T["Rows"]</th>
+                            <th>@T["Errors"]</th>
+                            <th>@T["CreatedAt"]</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var item in Model.ImportFailures)
+                    {
+                        <tr>
+                            <td class="operations-code">@item.Id</td>
+                            <td class="operations-code">@item.SchoolId</td>
+                            <td>@item.ImportType</td>
+                            <td>@item.RowCount</td>
+                            <td>@item.ErrorCount</td>
+                            <td>@item.CreatedAtUtc.ToString("u")</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </section>
+</section>

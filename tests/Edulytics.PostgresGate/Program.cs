@@ -957,6 +957,356 @@ Console.WriteLine(
 Console.WriteLine(
     "PHASE21_POSTGRES_GATE_PASS");
 
+
+// ============================================================
+// PHASE 22 — OPERATIONAL CONSOLE POSTGRESQL GATE
+// ============================================================
+
+var phase22Now =
+    DateTime.UtcNow;
+
+var phase22NotificationId =
+    Guid.NewGuid();
+
+var phase22DeliveryId =
+    Guid.NewGuid();
+
+var phase22NotificationOutboxId =
+    Guid.NewGuid();
+
+await using (var db =
+             await NewDbAsync())
+{
+    db.UserNotifications.Add(
+        new UserNotification
+        {
+            Id = phase22NotificationId,
+            SchoolId = schoolA,
+            RecipientUserId =
+                reportUserId,
+            Kind =
+                NotificationKind
+                    .AccountInvitation,
+            TitleKey =
+                "NotificationAccountInvitationTitle",
+            MessageKey =
+                "NotificationAccountInvitationMessage",
+            DeduplicationKey =
+                "phase22-notification-"
+                + Guid.NewGuid().ToString("N"),
+            RelatedEntityType =
+                "ApplicationUser",
+            RelatedEntityId =
+                reportUserId,
+            CreatedAtUtc =
+                phase22Now
+        });
+
+    db.NotificationDeliveryJobs.Add(
+        new NotificationDeliveryJob
+        {
+            Id = phase22DeliveryId,
+            SchoolId = schoolA,
+            NotificationId =
+                phase22NotificationId,
+            RecipientUserId =
+                reportUserId,
+            Channel =
+                NotificationDeliveryChannel
+                    .Email,
+            Status =
+                NotificationDeliveryStatus
+                    .Failed,
+            Culture = "en",
+            BaseUrl =
+                "https://staging.edulytiks.com",
+            DeduplicationKey =
+                "phase22-delivery-"
+                + Guid.NewGuid().ToString("N"),
+            AttemptCount = 5,
+            LastAttemptAtUtc =
+                phase22Now,
+            LastErrorCode =
+                "OutboxDeadLettered",
+            CreatedAtUtc =
+                phase22Now
+        });
+
+    db.OutboxMessages.Add(
+        new OutboxMessage
+        {
+            Id =
+                phase22NotificationOutboxId,
+            SchoolId = schoolA,
+            EventType =
+                NotificationEventTypes
+                    .DeliveryRequested,
+            PayloadJson =
+                JsonSerializer.Serialize(
+                    new NotificationDeliveryRequestedEvent(
+                        schoolA,
+                        phase22DeliveryId)),
+            OccurredAtUtc =
+                phase22Now,
+            AvailableAtUtc =
+                phase22Now,
+            Status =
+                OutboxMessageStatus
+                    .DeadLetter,
+            ProcessingAttempts = 5,
+            LastError =
+                "phase22-safe-test",
+            DeadLetteredAtUtc =
+                phase22Now,
+            CorrelationId =
+                "phase22-notification-"
+                + Guid.NewGuid().ToString("N")
+        });
+
+    await db.SaveChangesAsync();
+}
+
+await using (var db =
+             await NewDbAsync())
+{
+    var requeued =
+        await new OutboxRepository(db)
+            .RequeueDeadLetterAsync(
+                phase22NotificationOutboxId,
+                reportUserId,
+                "Phase22 safe notification requeue gate.",
+                phase22Now.AddSeconds(1));
+
+    if (!requeued)
+    {
+        throw new Exception(
+            "Phase22 notification dead-letter requeue was rejected.");
+    }
+}
+
+await using (var db =
+             await NewDbAsync())
+{
+    var outbox =
+        await db.OutboxMessages
+            .AsNoTracking()
+            .SingleAsync(
+                x =>
+                    x.Id ==
+                    phase22NotificationOutboxId);
+
+    var job =
+        await db.NotificationDeliveryJobs
+            .AsNoTracking()
+            .SingleAsync(
+                x =>
+                    x.Id ==
+                    phase22DeliveryId);
+
+    var audit =
+        await db.AuditLogs
+            .AsNoTracking()
+            .AnyAsync(
+                x =>
+                    x.Action ==
+                        "Outbox.DeadLetterRequeued" &&
+                    x.EntityId ==
+                        phase22NotificationOutboxId
+                            .ToString("D"));
+
+    if (outbox.Status !=
+            OutboxMessageStatus.Pending ||
+        outbox.ProcessingAttempts != 0 ||
+        outbox.DeadLetteredAtUtc.HasValue ||
+        outbox.LeaseOwner is not null ||
+        outbox.LeaseToken.HasValue ||
+        job.Status !=
+            NotificationDeliveryStatus.Pending ||
+        job.LastErrorCode is not null ||
+        !audit)
+    {
+        throw new Exception(
+            "Phase22 atomic notification requeue contract failed.");
+    }
+}
+
+var phase22ReportJobId =
+    Guid.NewGuid();
+
+var phase22ReportOutboxId =
+    Guid.NewGuid();
+
+await using (var db =
+             await NewDbAsync())
+{
+    db.ReportExportJobs.Add(
+        new ReportExportJob
+        {
+            Id = phase22ReportJobId,
+            SchoolId = schoolA,
+            RequestedByUserId =
+                reportUserId,
+            ReportKind =
+                (ReportKind)1,
+            ExportFormat =
+                (ReportExportFormat)1,
+            Culture = "en",
+            Status =
+                ReportExportJobStatus.Failed,
+            LastError =
+                "BackgroundDeliveryDeadLettered",
+            CreatedAtUtc =
+                phase22Now,
+            ExpiresAtUtc =
+                phase22Now.AddHours(24),
+            CompletedAtUtc =
+                phase22Now
+        });
+
+    db.OutboxMessages.Add(
+        new OutboxMessage
+        {
+            Id =
+                phase22ReportOutboxId,
+            SchoolId = schoolA,
+            EventType =
+                ReportEventTypes
+                    .ExportRequested,
+            PayloadJson =
+                JsonSerializer.Serialize(
+                    new ReportExportRequestedEvent(
+                        schoolA,
+                        phase22ReportJobId)),
+            OccurredAtUtc =
+                phase22Now,
+            AvailableAtUtc =
+                phase22Now,
+            Status =
+                OutboxMessageStatus
+                    .DeadLetter,
+            ProcessingAttempts = 5,
+            LastError =
+                "phase22-safe-report-test",
+            DeadLetteredAtUtc =
+                phase22Now,
+            CorrelationId =
+                "phase22-report-"
+                + Guid.NewGuid().ToString("N")
+        });
+
+    await db.SaveChangesAsync();
+}
+
+await using (var db =
+             await NewDbAsync())
+{
+    var requeued =
+        await new OutboxRepository(db)
+            .RequeueDeadLetterAsync(
+                phase22ReportOutboxId,
+                reportUserId,
+                "Phase22 safe report requeue gate.",
+                phase22Now.AddSeconds(2));
+
+    if (!requeued)
+    {
+        throw new Exception(
+            "Phase22 report dead-letter requeue was rejected.");
+    }
+}
+
+await using (var db =
+             await NewDbAsync())
+{
+    var outbox =
+        await db.OutboxMessages
+            .AsNoTracking()
+            .SingleAsync(
+                x =>
+                    x.Id ==
+                    phase22ReportOutboxId);
+
+    var job =
+        await db.ReportExportJobs
+            .AsNoTracking()
+            .SingleAsync(
+                x =>
+                    x.Id ==
+                    phase22ReportJobId);
+
+    if (outbox.Status !=
+            OutboxMessageStatus.Pending ||
+        job.Status !=
+            ReportExportJobStatus.Pending ||
+        job.LastError is not null ||
+        job.CompletedAtUtc.HasValue)
+    {
+        throw new Exception(
+            "Phase22 atomic report requeue contract failed.");
+    }
+}
+
+await using (var db =
+             await NewDbAsync())
+{
+    var operations =
+        new OperationsRepository(db);
+
+    var summary =
+        await operations
+            .GetOutboxSummaryAsync();
+
+    var backlog =
+        await operations
+            .GetOutboxBacklogAsync(100);
+
+    var analytics =
+        await operations
+            .GetAnalyticsFreshnessAsync(100);
+
+    var importFailures =
+        await operations
+            .GetImportFailuresAsync(100);
+
+    var migration =
+        await operations
+            .GetLatestMigrationAsync();
+
+    if (summary.PendingCount < 2 ||
+        !backlog.Any(
+            x =>
+                x.Id ==
+                    phase22NotificationOutboxId) ||
+        !backlog.Any(
+            x =>
+                x.Id ==
+                    phase22ReportOutboxId) ||
+        string.IsNullOrWhiteSpace(
+            migration))
+    {
+        throw new Exception(
+            "Phase22 operational read model contract failed.");
+    }
+
+    _ = analytics.Count;
+    _ = importFailures.Count;
+}
+
+Console.WriteLine(
+    "PASS: Phase22 operational read models");
+
+Console.WriteLine(
+    "PASS: Phase22 notification dead-letter atomic requeue");
+
+Console.WriteLine(
+    "PASS: Phase22 report dead-letter atomic requeue");
+
+Console.WriteLine(
+    "PASS: Phase22 operator requeue audit");
+
+Console.WriteLine(
+    "PHASE22_POSTGRES_GATE_PASS");
+
 static School NewSchool(
     Guid id,
     string code,

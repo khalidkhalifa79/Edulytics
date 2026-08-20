@@ -140,6 +140,9 @@ builder.Services
         builder.Configuration);
 
 builder.Services
+    .AddOperationalAdminPhase22();
+
+builder.Services
     .AddProductionHardeningPhase12(
         builder.Configuration,
         builder.Environment);
