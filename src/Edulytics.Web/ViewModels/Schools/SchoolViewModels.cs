@@ -53,23 +53,26 @@ public sealed class SchoolListRowViewModel
 
 public sealed class SchoolFormViewModel
 {
+    // Nullable by design. Required-field validation belongs to the
+    // school service so user-facing errors come from localized resources
+    // instead of MVC's implicit non-localized RequiredAttribute messages.
     public Guid? Id { get; set; }
 
-    public string Name { get; set; } = string.Empty;
+    public string? Name { get; set; } = string.Empty;
 
-    public string SchoolCode { get; set; } = string.Empty;
+    public string? SchoolCode { get; set; } = string.Empty;
 
-    public string CountryCode { get; set; } = string.Empty;
+    public string? CountryCode { get; set; } = string.Empty;
 
-    public string City { get; set; } = string.Empty;
+    public string? City { get; set; } = string.Empty;
 
-    public string ContactEmail { get; set; } = string.Empty;
+    public string? ContactEmail { get; set; } = string.Empty;
 
-    public string DefaultCulture { get; set; } = string.Empty;
+    public string? DefaultCulture { get; set; } = string.Empty;
 
-    public string TimeZoneId { get; set; } = string.Empty;
+    public string? TimeZoneId { get; set; } = string.Empty;
 
-    public string RowVersionBase64 { get; set; } = string.Empty;
+    public string? RowVersionBase64 { get; set; } = string.Empty;
 }
 
 public sealed class SchoolDetailsViewModel
