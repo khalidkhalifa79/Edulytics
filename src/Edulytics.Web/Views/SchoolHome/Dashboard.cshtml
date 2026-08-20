@@ -126,18 +126,21 @@
             </a>
         </section>
 
-        <section class="user-dashboard-action">
-            <div>
-                <h2>@R["DashboardReportsTitle"]</h2>
-                <p>@R["DashboardReportsSubtitle"]</p>
-            </div>
+        @if (Model.CanViewReports)
+        {
+            <section class="user-dashboard-action">
+                <div>
+                    <h2>@R["DashboardReportsTitle"]</h2>
+                    <p>@R["DashboardReportsSubtitle"]</p>
+                </div>
 
-            <a class="school-button school-button-primary"
-               asp-controller="Reports"
-               asp-action="Index">
-                @R["ManageReports"]
-            </a>
-        </section>
+                <a class="school-button school-button-primary"
+                   asp-controller="Reports"
+                   asp-action="Index">
+                    @R["ManageReports"]
+                </a>
+            </section>
+        }
     }
 
     @if (Model.Role == Edulytics.Core.Constants.RoleNames.SchoolAdmin ||

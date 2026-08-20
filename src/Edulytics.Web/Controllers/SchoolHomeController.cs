@@ -1,6 +1,7 @@
 using Edulytics.Core.Constants;
 using System.Security.Claims;
 using Edulytics.Services.Users;
+using Edulytics.Services.Reports;
 using Edulytics.Web.ViewModels.SchoolUsers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -11,11 +12,14 @@ namespace Edulytics.Web.Controllers;
 public sealed class SchoolHomeController : Controller
 {
     private readonly ISchoolUserManagementService _users;
+    private readonly IReportQueryService _reports;
 
     public SchoolHomeController(
-        ISchoolUserManagementService users)
+        ISchoolUserManagementService users,
+        IReportQueryService reports)
     {
         _users = users;
+        _reports = reports;
     }
 
     [HttpGet("/school/dashboard")]
@@ -43,6 +47,11 @@ public sealed class SchoolHomeController : Controller
             return Forbid();
         }
 
+        var reportCatalog =
+            await _reports.GetCatalogAsync(
+                userId,
+                cancellationToken);
+
         return View(
             new SchoolHomeViewModel
             {
@@ -52,6 +61,8 @@ public sealed class SchoolHomeController : Controller
                     context.Role,
                 CanManageUsers =
                     context.CanManageUsers,
+                CanViewReports =
+                    reportCatalog.Value is not null,
                 CanViewAnalytics =
                     context.Role == RoleNames.SchoolAdmin ||
                     context.Role == RoleNames.SubjectSupervisor ||
