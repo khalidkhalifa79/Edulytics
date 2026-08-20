@@ -2916,3 +2916,92 @@ input:focus-visible {
         width: 100%;
     }
 }
+
+
+/* PHASE22_OPERATIONAL_CONSOLE */
+
+.operations-page {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.operations-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.operations-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(min(100%, 18rem), 1fr)
+        );
+    gap: 1rem;
+}
+
+.operations-section {
+    display: grid;
+    gap: 1rem;
+}
+
+.operations-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.operations-table {
+    width: 100%;
+    min-width: 52rem;
+    border-collapse: collapse;
+}
+
+.operations-table th,
+.operations-table td {
+    padding: 0.75rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid
+        var(--border-primary, #d7dbe2);
+}
+
+.operations-code {
+    font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+    overflow-wrap: anywhere;
+}
+
+.operations-error {
+    max-width: 28rem;
+    overflow-wrap: anywhere;
+}
+
+.operations-requeue-form {
+    display: grid;
+    gap: 0.5rem;
+    min-width: 16rem;
+}
+
+.operations-requeue-form input {
+    width: 100%;
+}
+
+.operations-message {
+    padding: 0.875rem 1rem;
+    border: 1px solid
+        var(--border-primary, #d7dbe2);
+    border-radius: 0.5rem;
+}
+
+@media (max-width: 48rem) {
+    .operations-header {
+        flex-direction: column;
+    }
+}

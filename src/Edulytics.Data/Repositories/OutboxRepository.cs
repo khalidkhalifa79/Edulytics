@@ -2,6 +2,9 @@ using System.Text.Json;
 using Edulytics.Core.Entities;
 using Edulytics.Core.Enums;
 using Edulytics.Core.Interfaces;
+using Edulytics.Core.Notifications;
+using Edulytics.Core.Realtime;
+using Edulytics.Core.Reports;
 using Edulytics.Data.Contexts;
 using Microsoft.EntityFrameworkCore;
 
@@ -361,6 +364,17 @@ FOR UPDATE OF o SKIP LOCKED")
             return false;
         }
 
+        if (!await PrepareDependentStateForRequeueAsync(
+                entity,
+                utcNow,
+                cancellationToken))
+        {
+            await transaction.CommitAsync(
+                cancellationToken);
+
+            return false;
+        }
+
         _db.OutboxRequeueAudits.Add(
             new OutboxRequeueAudit
             {
@@ -436,6 +450,150 @@ FOR UPDATE OF o SKIP LOCKED")
             cancellationToken);
 
         return true;
+    }
+
+    private async Task<bool>
+        PrepareDependentStateForRequeueAsync(
+            OutboxMessage entity,
+            DateTime utcNow,
+            CancellationToken cancellationToken)
+    {
+        if (entity.EventType ==
+            NotificationEventTypes
+                .DeliveryRequested)
+        {
+            if (!entity.SchoolId.HasValue)
+            {
+                return false;
+            }
+
+            NotificationDeliveryRequestedEvent?
+                delivery;
+
+            try
+            {
+                delivery =
+                    JsonSerializer.Deserialize<
+                        NotificationDeliveryRequestedEvent>(
+                            entity.PayloadJson);
+            }
+            catch (JsonException)
+            {
+                return false;
+            }
+
+            if (delivery is null ||
+                delivery.SchoolId !=
+                    entity.SchoolId.Value)
+            {
+                return false;
+            }
+
+            var job =
+                await _db.NotificationDeliveryJobs
+                    .SingleOrDefaultAsync(
+                        x =>
+                            x.SchoolId ==
+                                delivery.SchoolId &&
+                            x.Id ==
+                                delivery.DeliveryJobId,
+                        cancellationToken);
+
+            if (job is null ||
+                job.Status !=
+                    NotificationDeliveryStatus.Failed ||
+                !string.Equals(
+                    job.LastErrorCode,
+                    "OutboxDeadLettered",
+                    StringComparison.Ordinal))
+            {
+                return false;
+            }
+
+            job.Status =
+                NotificationDeliveryStatus.Pending;
+
+            job.LastErrorCode = null;
+            job.SentAtUtc = null;
+
+            return true;
+        }
+
+        if (entity.EventType ==
+            ReportEventTypes.ExportRequested)
+        {
+            if (!entity.SchoolId.HasValue)
+            {
+                return false;
+            }
+
+            ReportExportRequestedEvent? export;
+
+            try
+            {
+                export =
+                    JsonSerializer.Deserialize<
+                        ReportExportRequestedEvent>(
+                            entity.PayloadJson);
+            }
+            catch (JsonException)
+            {
+                return false;
+            }
+
+            if (export is null ||
+                export.SchoolId !=
+                    entity.SchoolId.Value)
+            {
+                return false;
+            }
+
+            var job =
+                await _db.ReportExportJobs
+                    .SingleOrDefaultAsync(
+                        x =>
+                            x.SchoolId ==
+                                export.SchoolId &&
+                            x.Id ==
+                                export.ExportJobId,
+                        cancellationToken);
+
+            if (job is null ||
+                job.Status !=
+                    ReportExportJobStatus.Failed ||
+                !string.Equals(
+                    job.LastError,
+                    "BackgroundDeliveryDeadLettered",
+                    StringComparison.Ordinal) ||
+                job.ExpiresAtUtc <= utcNow)
+            {
+                return false;
+            }
+
+            job.Status =
+                ReportExportJobStatus.Pending;
+
+            job.LastError = null;
+            job.CompletedAtUtc = null;
+            job.RowCount = null;
+            job.FileName = null;
+            job.ContentType = null;
+            job.FileContent = null;
+
+            return true;
+        }
+
+        // Only event families that the current worker
+        // understands may be routinely requeued.
+        return entity.EventType ==
+                   RealtimeEventTypes
+                       .AssessmentResultEntered ||
+               entity.EventType ==
+                   RealtimeEventTypes
+                       .AssessmentResultUpdated ||
+               entity.EventType ==
+                   RealtimeEventTypes
+                       .ImportBatchCompleted;
     }
 
     private async Task<OutboxMessage?>

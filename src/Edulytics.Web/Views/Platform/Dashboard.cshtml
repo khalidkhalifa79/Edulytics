@@ -1,6 +1,7 @@
 @* PHASE04_SCHOOL_MANAGEMENT *@
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.PlatformResource> SchoolText
 @inject IStringLocalizer<Edulytics.Web.PlatformResource> Text
+@inject IStringLocalizer<Edulytics.Web.OperationsResource> OperationsText
 
 @{
     ViewData["Title"] = Text["DashboardTitle"];
@@ -40,5 +41,20 @@
        asp-controller="Schools"
        asp-action="Index">
         @SchoolText["ManageSchools"]
+    </a>
+</section>
+
+
+<section class="school-dashboard-card">
+    <div>
+        <p class="school-eyebrow">Edulytics</p>
+        <h2>@OperationsText["DashboardOperationsTitle"]</h2>
+        <p>@OperationsText["DashboardOperationsDescription"]</p>
+    </div>
+
+    <a class="school-button school-button-primary"
+       asp-controller="Operations"
+       asp-action="Index">
+        @OperationsText["OpenOperations"]
     </a>
 </section>
