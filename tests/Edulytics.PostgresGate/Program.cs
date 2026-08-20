@@ -1307,6 +1307,256 @@ Console.WriteLine(
 Console.WriteLine(
     "PHASE22_POSTGRES_GATE_PASS");
 
+
+// ============================================================
+// PHASE 23 — PRIVACY / RETENTION POSTGRESQL GATE
+// ============================================================
+
+var phase23Now =
+    DateTime.UtcNow;
+
+var phase23ImportId =
+    Guid.NewGuid();
+
+var phase23ReportId =
+    Guid.NewGuid();
+
+var phase23NotificationId =
+    Guid.NewGuid();
+
+var phase23DeliveryId =
+    Guid.NewGuid();
+
+await using (var db =
+             await NewDbAsync())
+{
+    db.ImportBatches.Add(
+        new ImportBatch
+        {
+            Id = phase23ImportId,
+            SchoolId = schoolA,
+            ImportType =
+                ImportType.Students,
+            Status =
+                ImportBatchStatus.Completed,
+            OriginalFileName =
+                "sensitive-students.xlsx",
+            FileHash =
+                Guid.NewGuid().ToString("N")
+                + Guid.NewGuid().ToString("N"),
+            RowsJson =
+                "[{\"student\":\"sensitive-test\"}]",
+            RowCount = 1,
+            ValidRowCount = 1,
+            ErrorCount = 0,
+            UploadedByUserId =
+                reportUserId,
+            CompletedByUserId =
+                reportUserId,
+            CreatedAtUtc =
+                phase23Now.AddDays(-3),
+            CompletedAtUtc =
+                phase23Now.AddDays(-3)
+        });
+
+    db.ReportExportJobs.Add(
+        new ReportExportJob
+        {
+            Id = phase23ReportId,
+            SchoolId = schoolA,
+            RequestedByUserId =
+                reportUserId,
+            ReportKind =
+                ReportKind.School,
+            ExportFormat =
+                ReportExportFormat.Csv,
+            Culture = "en",
+            Status =
+                ReportExportJobStatus.Completed,
+            RowCount = 1,
+            FileName =
+                "phase23-sensitive.csv",
+            ContentType =
+                "text/csv",
+            FileContent =
+                [1, 2, 3, 4],
+            CreatedAtUtc =
+                phase23Now.AddDays(-2),
+            ExpiresAtUtc =
+                phase23Now.AddHours(-1),
+            CompletedAtUtc =
+                phase23Now.AddDays(-2)
+        });
+
+    db.UserNotifications.Add(
+        new UserNotification
+        {
+            Id =
+                phase23NotificationId,
+            SchoolId =
+                schoolA,
+            RecipientUserId =
+                reportUserId,
+            Kind =
+                NotificationKind
+                    .AccountInvitation,
+            TitleKey =
+                "NotificationAccountInvitationTitle",
+            MessageKey =
+                "NotificationAccountInvitationMessage",
+            DeduplicationKey =
+                "phase23-retention-"
+                + Guid.NewGuid().ToString("N"),
+            RelatedEntityType =
+                "ApplicationUser",
+            RelatedEntityId =
+                reportUserId,
+            CreatedAtUtc =
+                phase23Now.AddDays(-210),
+            ReadAtUtc =
+                phase23Now.AddDays(-200)
+        });
+
+    db.NotificationDeliveryJobs.Add(
+        new NotificationDeliveryJob
+        {
+            Id =
+                phase23DeliveryId,
+            SchoolId =
+                schoolA,
+            NotificationId =
+                phase23NotificationId,
+            RecipientUserId =
+                reportUserId,
+            Channel =
+                NotificationDeliveryChannel
+                    .Email,
+            Status =
+                NotificationDeliveryStatus
+                    .Sent,
+            Culture =
+                "en",
+            BaseUrl =
+                "https://staging.edulytiks.com",
+            DeduplicationKey =
+                "phase23-delivery-"
+                + Guid.NewGuid().ToString("N"),
+            AttemptCount =
+                1,
+            LastAttemptAtUtc =
+                phase23Now.AddDays(-210),
+            SentAtUtc =
+                phase23Now.AddDays(-210),
+            CreatedAtUtc =
+                phase23Now.AddDays(-210)
+        });
+
+    await db.SaveChangesAsync();
+}
+
+SensitiveDataRetentionResult
+    phase23RetentionResult;
+
+await using (var db =
+             await NewDbAsync())
+{
+    phase23RetentionResult =
+        await new SensitiveDataRetentionRepository(
+                db)
+            .ApplyAsync(
+                phase23Now,
+                TimeSpan.FromHours(24),
+                TimeSpan.FromDays(180));
+}
+
+if (phase23RetentionResult
+        .ImportPayloadsScrubbed < 1 ||
+    phase23RetentionResult
+        .ExportArtifactsPurged < 1 ||
+    phase23RetentionResult
+        .NotificationDeliveriesDeleted < 1 ||
+    phase23RetentionResult
+        .NotificationsDeleted < 1)
+{
+    throw new Exception(
+        "Phase23 retention counters did not record all expected operations.");
+}
+
+await using (var db =
+             await NewDbAsync())
+{
+    var import =
+        await db.ImportBatches
+            .AsNoTracking()
+            .SingleAsync(
+                x =>
+                    x.Id ==
+                    phase23ImportId);
+
+    var report =
+        await db.ReportExportJobs
+            .AsNoTracking()
+            .SingleAsync(
+                x =>
+                    x.Id ==
+                    phase23ReportId);
+
+    var notificationExists =
+        await db.UserNotifications
+            .AsNoTracking()
+            .AnyAsync(
+                x =>
+                    x.Id ==
+                    phase23NotificationId);
+
+    var deliveryExists =
+        await db.NotificationDeliveryJobs
+            .AsNoTracking()
+            .AnyAsync(
+                x =>
+                    x.Id ==
+                    phase23DeliveryId);
+
+    if (import.RowsJson !=
+            string.Empty ||
+        import.OriginalFileName !=
+            string.Empty ||
+        import.FileHash.Length != 64)
+    {
+        throw new Exception(
+            "Phase23 import payload retention contract failed.");
+    }
+
+    if (report.Status !=
+            ReportExportJobStatus.Expired ||
+        report.FileContent is not null ||
+        report.FileName is not null ||
+        report.ContentType is not null)
+    {
+        throw new Exception(
+            "Phase23 export physical-retention contract failed.");
+    }
+
+    if (notificationExists ||
+        deliveryExists)
+    {
+        throw new Exception(
+            "Phase23 read-notification retention contract failed.");
+    }
+}
+
+Console.WriteLine(
+    "PASS: Phase23 terminal import payload physically scrubbed");
+
+Console.WriteLine(
+    "PASS: Phase23 expired report binary physically purged");
+
+Console.WriteLine(
+    "PASS: Phase23 old read notification/delivery retention");
+
+Console.WriteLine(
+    "PHASE23_POSTGRES_GATE_PASS");
+
 static School NewSchool(
     Guid id,
     string code,

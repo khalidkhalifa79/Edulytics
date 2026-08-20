@@ -59,4 +59,9 @@ run_gate \
     "operational-admin-authorization" \
     "FullyQualifiedName~Edulytics.Tests.Phase22"
 
+
+run_gate \
+    "phase23-security-tenant-hardening" \
+    "FullyQualifiedName~Edulytics.Tests.Phase23"
+
 echo "TENANT / IDOR CI GATE: PASS"

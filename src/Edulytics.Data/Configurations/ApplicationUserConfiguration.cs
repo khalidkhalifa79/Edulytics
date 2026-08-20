@@ -24,6 +24,14 @@ public class ApplicationUserConfiguration : IEntityTypeConfiguration<Application
         builder.Property(x => x.UpdatedAtUtc)
             .IsRequired();
 
+        // ASP.NET Identity's ConcurrencyStamp is the
+        // authoritative optimistic-concurrency token for
+        // ApplicationUser. User mutations go through
+        // UserManager so Identity can return a concurrency
+        // failure instead of silently overwriting state.
+        builder.Property(x => x.ConcurrencyStamp)
+            .IsConcurrencyToken();
+
         builder.HasIndex(x => x.SchoolId);
 
         builder.HasIndex(x => x.NormalizedEmail)

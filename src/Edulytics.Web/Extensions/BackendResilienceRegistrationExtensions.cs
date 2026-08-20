@@ -133,6 +133,50 @@ public static class BackendResilienceRegistrationExtensions
                     };
 
                 options.AddPolicy(
+                    "Login",
+                    context =>
+                    {
+                        var ip =
+                            context.Connection.RemoteIpAddress
+                                ?.ToString()
+                            ?? "unknown";
+
+                        return RateLimitPartition
+                            .GetFixedWindowLimiter(
+                                ip,
+                                _ => new FixedWindowRateLimiterOptions
+                                {
+                                    PermitLimit = 20,
+                                    Window = TimeSpan.FromMinutes(5),
+                                    QueueLimit = 0,
+                                    QueueProcessingOrder =
+                                        QueueProcessingOrder.OldestFirst,
+                                    AutoReplenishment = true
+                                });
+                    });
+
+                options.AddPolicy(
+                    "OperationalMutation",
+                    context =>
+                    {
+                        var actor =
+                            ActorPartition(context);
+
+                        return RateLimitPartition
+                            .GetFixedWindowLimiter(
+                                actor,
+                                _ => new FixedWindowRateLimiterOptions
+                                {
+                                    PermitLimit = 30,
+                                    Window = TimeSpan.FromMinutes(10),
+                                    QueueLimit = 0,
+                                    QueueProcessingOrder =
+                                        QueueProcessingOrder.OldestFirst,
+                                    AutoReplenishment = true
+                                });
+                    });
+
+                options.AddPolicy(
                     "SchoolUserCreate",
                     context =>
                     {

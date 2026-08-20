@@ -69,6 +69,7 @@ public sealed class AccountController : Controller
 
     [AllowAnonymous]
     [HttpPost("/account/login")]
+    [EnableRateLimiting("Login")]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Login(
         LoginViewModel model,

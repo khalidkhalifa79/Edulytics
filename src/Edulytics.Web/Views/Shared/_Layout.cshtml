@@ -1,9 +1,11 @@
+@using System.Globalization
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.SharedResource> Brand
 @{
     var localizedProductName = Brand["ProductName"].Value;
+    var pageLanguage = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
 }
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="@pageLanguage">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

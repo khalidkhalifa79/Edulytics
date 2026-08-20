@@ -503,8 +503,31 @@ public sealed class Phase20ReportTests
             view);
 
         Assert.Contains(
-            "window.print()",
+            "data-print-report",
             view);
+
+        Assert.DoesNotContain(
+            "onclick=",
+            view,
+            StringComparison.OrdinalIgnoreCase);
+
+        var siteJs =
+            File.ReadAllText(
+                Path.Combine(
+                    root,
+                    "src",
+                    "Edulytics.Web",
+                    "wwwroot",
+                    "js",
+                    "site.js"));
+
+        Assert.Contains(
+            "wirePrintButtons",
+            siteJs);
+
+        Assert.Contains(
+            "globalThis.print()",
+            siteJs);
 
         Assert.Contains(
             "data-label",

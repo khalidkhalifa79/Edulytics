@@ -3,6 +3,7 @@ using Edulytics.Core.Interfaces;
 using Edulytics.Web.Operations;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.Extensions.Localization;
 
 namespace Edulytics.Web.Controllers;
@@ -45,6 +46,7 @@ public sealed class OperationsController
     [HttpPost(
         "/platform/operations/outbox/{id:guid}/requeue")]
     [ValidateAntiForgeryToken]
+    [EnableRateLimiting("OperationalMutation")]
     public async Task<IActionResult> Requeue(
         Guid id,
         string reason,

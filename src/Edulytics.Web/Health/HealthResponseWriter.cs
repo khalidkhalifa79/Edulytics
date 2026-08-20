@@ -18,57 +18,29 @@ public static class HealthResponseWriter
         context.Response.ContentType =
             "application/json; charset=utf-8";
 
+        context.Response.Headers.CacheControl =
+            "no-store, no-cache";
+
+        context.Response.Headers.Pragma =
+            "no-cache";
+
+        // Anonymous health endpoints expose only the
+        // minimum state required by infrastructure.
+        //
+        // Component names, descriptions, timings and
+        // health-data dictionaries remain server-side.
         var payload =
             new
             {
                 status =
-                    report.Status
-                        .ToString(),
+                    report.Status.ToString(),
 
                 correlationId =
-                    context.TraceIdentifier,
-
-                totalDurationMs =
-                    Math.Round(
-                        report.TotalDuration
-                            .TotalMilliseconds,
-                        2),
-
-                checks =
-                    report.Entries
-                        .OrderBy(
-                            x => x.Key)
-                        .Select(
-                            x =>
-                                new
-                                {
-                                    name =
-                                        x.Key,
-
-                                    status =
-                                        x.Value.Status
-                                            .ToString(),
-
-                                    description =
-                                        x.Value.Description,
-
-                                    durationMs =
-                                        Math.Round(
-                                            x.Value.Duration
-                                                .TotalMilliseconds,
-                                            2),
-
-                                    data =
-                                        x.Value.Data
-                                })
+                    context.TraceIdentifier
             };
 
-        var json =
+        return context.Response.WriteAsync(
             JsonSerializer.Serialize(
-                payload);
-
-        return context.Response
-            .WriteAsync(
-                json);
+                payload));
     }
 }

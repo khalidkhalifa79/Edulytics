@@ -143,7 +143,7 @@
                       asp-controller="Schools"
                       asp-action="Suspend"
                       asp-route-id="@Model.Id"
-                      onsubmit="return confirm('@T["ConfirmSuspend"]');">
+                      data-confirm="@T["ConfirmSuspend"]">
                     <input type="hidden"
                            name="rowVersion"
                            value="@Model.RowVersionBase64" />
@@ -161,7 +161,7 @@
                       asp-controller="Schools"
                       asp-action="Reactivate"
                       asp-route-id="@Model.Id"
-                      onsubmit="return confirm('@T["ConfirmReactivate"]');">
+                      data-confirm="@T["ConfirmReactivate"]">
                     <input type="hidden"
                            name="rowVersion"
                            value="@Model.RowVersionBase64" />
@@ -179,7 +179,7 @@
                       asp-controller="Schools"
                       asp-action="Archive"
                       asp-route-id="@Model.Id"
-                      onsubmit="return confirm('@T["ConfirmArchive"]');">
+                      data-confirm="@T["ConfirmArchive"]">
                     <input type="hidden"
                            name="rowVersion"
                            value="@Model.RowVersionBase64" />
