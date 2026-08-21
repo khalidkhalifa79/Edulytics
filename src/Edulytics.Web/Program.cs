@@ -113,6 +113,9 @@ builder.Services
     .AddSchoolUserManagementPhase05();
 
 builder.Services
+    .AddCustomerOnboardingPhase25B();
+
+builder.Services
     .AddSubjectSupervisorCompletionPhase19();
 
 builder.Services

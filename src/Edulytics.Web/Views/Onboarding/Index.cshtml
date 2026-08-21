@@ -1,0 +1,30 @@
+@model Edulytics.Web.ViewModels.Onboarding.RequestDemoViewModel
+@inject IStringLocalizer<Edulytics.Web.OnboardingResource> T
+@{
+    Layout = "_PublicLayout";
+    ViewData["Title"] = T["RequestDemoTitle"];
+}
+
+<section class="onboarding-public-shell">
+    <div class="onboarding-card">
+        <p class="onboarding-eyebrow">@T["Eyebrow"]</p>
+        <h1>@T["RequestDemoTitle"]</h1>
+        <p>@T["RequestDemoIntro"]</p>
+        <p class="onboarding-hint">@T["MinimumSeatsHint"]</p>
+
+        <form method="post" asp-action="Index" class="onboarding-form">
+            <div asp-validation-summary="ModelOnly" class="text-danger onboarding-full"></div>
+            <label><span>@T["SchoolName"]</span><input asp-for="SchoolName" autocomplete="organization" /><span asp-validation-for="SchoolName" class="text-danger"></span></label>
+            <label><span>@T["ContactName"]</span><input asp-for="ContactName" autocomplete="name" /><span asp-validation-for="ContactName" class="text-danger"></span></label>
+            <label><span>@T["WorkEmail"]</span><input asp-for="WorkEmail" type="email" autocomplete="email" /><span asp-validation-for="WorkEmail" class="text-danger"></span></label>
+            <label><span>@T["Phone"]</span><input asp-for="Phone" type="tel" autocomplete="tel" /><span asp-validation-for="Phone" class="text-danger"></span></label>
+            <label><span>@T["CountryCode"]</span><input asp-for="CountryCode" maxlength="10" autocomplete="country" /><span asp-validation-for="CountryCode" class="text-danger"></span></label>
+            <label><span>@T["City"]</span><input asp-for="City" autocomplete="address-level2" /><span asp-validation-for="City" class="text-danger"></span></label>
+            <label><span>@T["EstimatedStudentCount"]</span><input asp-for="EstimatedStudentCount" type="number" min="500" step="1" /><span asp-validation-for="EstimatedStudentCount" class="text-danger"></span></label>
+            <label class="onboarding-full"><span>@T["Message"]</span><textarea asp-for="Message" rows="5"></textarea><span asp-validation-for="Message" class="text-danger"></span></label>
+            <label class="onboarding-consent onboarding-full"><input asp-for="PrivacyAccepted" type="checkbox" /><span>@T["PrivacyAccepted"]</span></label>
+            <span asp-validation-for="PrivacyAccepted" class="text-danger onboarding-full"></span>
+            <div class="onboarding-full"><button type="submit" class="school-button school-button-primary">@T["SubmitDemoRequest"]</button></div>
+        </form>
+    </div>
+</section>

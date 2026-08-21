@@ -1,0 +1,36 @@
+@model Edulytics.Web.ViewModels.Onboarding.DemoLeadListViewModel
+@inject IStringLocalizer<Edulytics.Web.OnboardingResource> T
+@{ ViewData["Title"] = T["LeadsTitle"]; }
+<section class="onboarding-admin-shell">
+    <header class="onboarding-header">
+        <a class="school-back-link" asp-controller="Platform" asp-action="Dashboard">← @T["BackHome"]</a>
+        <p class="onboarding-eyebrow">@T["Eyebrow"]</p>
+        <h1>@T["LeadsTitle"]</h1>
+        <p>@T["DashboardDescription"]</p>
+    </header>
+
+    @if (TempData["OnboardingSuccess"] is string success) { <div class="alert alert-success">@success</div> }
+    @if (TempData["OnboardingError"] is string error) { <div class="alert alert-danger">@error</div> }
+
+    @if (Model.Items.Count == 0)
+    {
+        <div class="onboarding-card">@T["NoLeads"]</div>
+    }
+    else
+    {
+        <div class="onboarding-table-wrap">
+            <table class="table onboarding-table">
+                <thead><tr><th>@T["SchoolName"]</th><th>@T["ContactName"]</th><th>@T["Status"]</th><th>@T["Students"]</th><th>@T["Created"]</th><th></th></tr></thead>
+                <tbody>
+                @foreach (var item in Model.Items)
+                {
+                    <tr>
+                        <td>@item.SchoolName</td><td>@item.ContactName</td><td>@T[$"Status_{item.Status}"]</td><td>@item.EstimatedStudentCount</td><td>@item.CreatedAtUtc.ToString("u")</td>
+                        <td><a asp-action="Details" asp-route-id="@item.Id">@T["Open"]</a></td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    }
+</section>

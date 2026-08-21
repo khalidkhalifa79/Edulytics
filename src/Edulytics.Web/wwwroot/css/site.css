@@ -3005,3 +3005,67 @@ input:focus-visible {
         flex-direction: column;
     }
 }
+
+/* Phase 25B — customer onboarding */
+.onboarding-public-shell,
+.onboarding-admin-shell {
+    width: min(100%, 1180px);
+    margin: 0 auto;
+    padding: 1.25rem;
+}
+.onboarding-public-shell { width: min(100%, 920px); }
+.onboarding-card,
+.onboarding-table-wrap {
+    background: var(--bs-body-bg);
+    border: 1px solid var(--bs-border-color);
+    border-radius: 1rem;
+    padding: 1.25rem;
+}
+.onboarding-eyebrow {
+    margin: 0 0 .35rem;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.onboarding-hint { font-weight: 600; }
+.onboarding-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+.onboarding-form label,
+.onboarding-stack label { display: grid; gap: .4rem; }
+.onboarding-form input,
+.onboarding-form textarea,
+.onboarding-stack input,
+.onboarding-stack textarea,
+.onboarding-stack select { width: 100%; }
+.onboarding-full { grid-column: 1 / -1; }
+.onboarding-consent { display: flex !important; align-items: flex-start; gap: .5rem; }
+.onboarding-consent input { width: auto; margin-top: .25rem; }
+.onboarding-header { margin-bottom: 1rem; }
+.onboarding-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.onboarding-stack { display: grid; gap: .85rem; }
+.onboarding-inline-form { display: inline-block; margin: .35rem .35rem .35rem 0; }
+.onboarding-dl { display: grid; grid-template-columns: minmax(7rem, .6fr) 1.4fr; gap: .45rem .8rem; margin: 0; }
+.onboarding-dl dt { font-weight: 700; }
+.onboarding-dl dd { margin: 0; overflow-wrap: anywhere; }
+.onboarding-table-wrap { overflow-x: auto; }
+.onboarding-table { min-width: 760px; margin-bottom: 0; }
+@media (max-width: 767px) {
+    .onboarding-public-shell,
+    .onboarding-admin-shell { padding: .8rem; }
+    .onboarding-form,
+    .onboarding-grid { grid-template-columns: 1fr; }
+    .onboarding-full { grid-column: auto; }
+    .onboarding-dl { grid-template-columns: 1fr; }
+    .onboarding-stack .school-button,
+    .onboarding-inline-form,
+    .onboarding-inline-form .school-button { width: 100%; }
+}
+@media (max-width: 420px) {
+    .onboarding-card,
+    .onboarding-table-wrap { padding: .85rem; border-radius: .75rem; }
+}
