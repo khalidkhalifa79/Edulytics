@@ -8,6 +8,12 @@
 <section class="school-page">
     <header class="school-page-header">
         <div>
+            <a class="school-back-link"
+               asp-controller="Platform"
+               asp-action="Dashboard">
+                ← @T["BackToDashboard"]
+            </a>
+
             <p class="school-eyebrow">Edulytics</p>
             <h1>@T["SchoolsTitle"]</h1>
             <p class="school-page-subtitle">@T["SchoolsSubtitle"]</p>
