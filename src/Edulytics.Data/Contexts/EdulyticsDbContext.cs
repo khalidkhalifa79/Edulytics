@@ -52,6 +52,8 @@ public class EdulyticsDbContext
     public DbSet<CurriculumFrameworkVersion> CurriculumFrameworkVersions => Set<CurriculumFrameworkVersion>();
     public DbSet<SchoolCurriculumAdoption> SchoolCurriculumAdoptions => Set<SchoolCurriculumAdoption>();
     public DbSet<IdempotencyRecord> IdempotencyRecords => Set<IdempotencyRecord>();
+    public DbSet<DemoRequest> DemoRequests => Set<DemoRequest>();
+    public DbSet<DemoAccess> DemoAccesses => Set<DemoAccess>();
     public DbSet<DataProtectionKey> DataProtectionKeys => Set<DataProtectionKey>();
 
     public override int SaveChanges(
@@ -160,6 +162,8 @@ public class EdulyticsDbContext
         builder.ApplyConfiguration(new CurriculumFrameworkVersionConfiguration());
         builder.ApplyConfiguration(new SchoolCurriculumAdoptionConfiguration());
         builder.ApplyConfiguration(new IdempotencyRecordConfiguration());
+        builder.ApplyConfiguration(new DemoRequestConfiguration());
+        builder.ApplyConfiguration(new DemoAccessConfiguration());
 
         builder.Entity<ApplicationRole>(entity =>
         {

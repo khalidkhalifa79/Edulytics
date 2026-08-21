@@ -27,17 +27,20 @@ public sealed class SchoolUserManagementService
     private readonly ISchoolRepository _schools;
     private readonly IAuditService? _audit;
     private readonly IApplicationTransactionManager? _transactions;
+    private readonly ICustomerOnboardingRepository? _onboarding;
 
     public SchoolUserManagementService(
         ISchoolUserRepository users,
         ISchoolRepository schools,
         IAuditService? audit = null,
-        IApplicationTransactionManager? transactions = null)
+        IApplicationTransactionManager? transactions = null,
+        ICustomerOnboardingRepository? onboarding = null)
     {
         _users = users;
         _schools = schools;
         _audit = audit;
         _transactions = transactions;
+        _onboarding = onboarding;
     }
 
     public async Task<SchoolUserQueryResult<SchoolUserListData>>
@@ -578,6 +581,22 @@ public sealed class SchoolUserManagementService
             school.Status != SchoolStatus.Active)
         {
             return Denied();
+        }
+
+        if (_onboarding is not null)
+        {
+            var demo = await _onboarding.GetDemoAccessBySchoolAsync(
+                school.Id,
+                cancellationToken);
+
+            if (demo is not null &&
+                demo.ConvertedAtUtc is null &&
+                (demo.RevokedAtUtc.HasValue ||
+                 demo.StartsAtUtc > DateTime.UtcNow ||
+                 demo.ExpiresAtUtc <= DateTime.UtcNow))
+            {
+                return Denied();
+            }
         }
 
         return new SchoolUserSignInDecision(

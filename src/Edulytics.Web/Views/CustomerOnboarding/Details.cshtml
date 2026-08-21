@@ -1,0 +1,80 @@
+@model Edulytics.Web.ViewModels.Onboarding.DemoLeadDetailsViewModel
+@inject IStringLocalizer<Edulytics.Web.OnboardingResource> T
+@{ ViewData["Title"] = T["LeadDetails"]; var lead = Model.Lead; }
+<section class="onboarding-admin-shell">
+    <header class="onboarding-header">
+        <a class="school-back-link" asp-action="Index">← @T["BackToOnboarding"]</a>
+        <p class="onboarding-eyebrow">@T["Eyebrow"]</p>
+        <h1>@lead.SchoolName</h1><p>@T["Status"]: <strong>@T[$"Status_{lead.Status}"]</strong></p>
+    </header>
+    @if (TempData["OnboardingSuccess"] is string success) { <div class="alert alert-success">@success</div> }
+    @if (TempData["OnboardingWarning"] is string warning) { <div class="alert alert-info">@warning</div> }
+    @if (TempData["OnboardingError"] is string error) { <div class="alert alert-danger">@error</div> }
+
+    <div class="onboarding-grid">
+        <article class="onboarding-card">
+            <h2>@T["LeadDetails"]</h2>
+            <dl class="onboarding-dl">
+                <dt>@T["ContactName"]</dt><dd>@lead.ContactName</dd>
+                <dt>@T["WorkEmail"]</dt><dd>@lead.WorkEmail</dd>
+                <dt>@T["Phone"]</dt><dd>@(lead.Phone ?? "—")</dd>
+                <dt>@T["CountryCode"]</dt><dd>@lead.CountryCode</dd>
+                <dt>@T["City"]</dt><dd>@lead.City</dd>
+                <dt>@T["Students"]</dt><dd>@lead.EstimatedStudentCount</dd>
+                <dt>@T["Message"]</dt><dd>@(lead.Message ?? "—")</dd>
+            </dl>
+        </article>
+
+        @if (Model.AllowedNextStatuses.Count > 0)
+        {
+            <article class="onboarding-card">
+                <h2>@T["UpdateStatus"]</h2>
+                <form method="post" asp-action="UpdateStatus" asp-route-id="@lead.Id" class="onboarding-stack">
+                    <input type="hidden" name="rowVersion" value="@Model.RequestRowVersionBase64" />
+                    <label><span>@T["NextStatus"]</span><select name="targetStatus">@foreach (var status in Model.AllowedNextStatuses) { <option value="@status">@T[$"Status_{status}"]</option> }</select></label>
+                    <label><span>@T["DemoSchedule"]</span><input type="datetime-local" name="demoScheduledAtUtc" /></label>
+                    <label><span>@T["InternalNote"]</span><textarea name="internalNote" rows="4">@lead.InternalNote</textarea></label>
+                    <button type="submit" class="school-button school-button-primary">@T["UpdateStatus"]</button>
+                </form>
+            </article>
+        }
+
+        <article class="onboarding-card">
+            <h2>@T["TemporaryDemo"]</h2>
+            @if (lead.DemoAccess is null)
+            {
+                @if (lead.CanGrantDemo)
+                {
+                    <form method="post" asp-action="GrantDemo" asp-route-id="@lead.Id">
+                        <input type="hidden" name="rowVersion" value="@Model.RequestRowVersionBase64" />
+                        <button type="submit" class="school-button school-button-primary">@T["GrantDemo"]</button>
+                    </form>
+                }
+                else { <p>@T["Error_DemoNotQualified"]</p> }
+            }
+            else
+            {
+                <dl class="onboarding-dl"><dt>@T["DemoStarts"]</dt><dd>@lead.DemoAccess.StartsAtUtc.ToString("u")</dd><dt>@T["DemoExpires"]</dt><dd>@lead.DemoAccess.ExpiresAtUtc.ToString("u")</dd><dt>@T["DemoUsable"]</dt><dd>@(lead.DemoAccess.IsCurrentlyUsable ? T["Yes"] : T["No"])</dd></dl>
+                @if (lead.CanExtendDemo) { <form method="post" asp-action="ExtendDemo" asp-route-id="@lead.Id" class="onboarding-inline-form"><input type="hidden" name="rowVersion" value="@Model.AccessRowVersionBase64" /><button type="submit" class="school-button school-button-secondary">@T["ExtendDemo"]</button></form> }
+                @if (lead.CanExpireDemo) { <form method="post" asp-action="ExpireDemo" asp-route-id="@lead.Id" class="onboarding-inline-form"><input type="hidden" name="rowVersion" value="@Model.AccessRowVersionBase64" /><button type="submit" class="school-button school-button-secondary">@T["ExpireDemo"]</button></form> }
+                @if (lead.CanRevokeDemo) { <form method="post" asp-action="RevokeDemo" asp-route-id="@lead.Id" class="onboarding-stack"><input type="hidden" name="rowVersion" value="@Model.AccessRowVersionBase64" /><label><span>@T["RevokeReason"]</span><input type="text" name="reason" /></label><button type="submit" class="school-button school-button-secondary">@T["RevokeDemo"]</button></form> }
+            }
+        </article>
+
+        <article class="onboarding-card">
+            <h2>@T["CustomerProvisioning"]</h2><p>@T["ProvisioningExplanation"]</p>
+            @if (lead.ProvisionedSchoolId.HasValue)
+            { <p>@T["ProvisionedSchool"]: <strong>@lead.ProvisionedSchoolId</strong></p> }
+            else if (lead.CanProvision)
+            {
+                <form method="post" asp-action="Provision" asp-route-id="@lead.Id" class="onboarding-stack">
+                    <input type="hidden" name="rowVersion" value="@Model.RequestRowVersionBase64" />
+                    <label><span>@T["SchoolCode"]</span><input type="text" name="schoolCode" value="@Model.SuggestedSchoolCode" /></label>
+                    <label><span>@T["DefaultCulture"]</span><select name="defaultCulture">@if (Model.SuggestedCulture == "pl") { <option value="pl">Polski</option><option value="en">English</option> } else { <option value="en">English</option><option value="pl">Polski</option> }</select></label>
+                    <label><span>@T["TimeZone"]</span><input type="text" name="timeZoneId" value="@Model.SuggestedTimeZone" /></label>
+                    <button type="submit" class="school-button school-button-primary">@T["ProvisionCustomer"]</button>
+                </form>
+            }
+        </article>
+    </div>
+</section>

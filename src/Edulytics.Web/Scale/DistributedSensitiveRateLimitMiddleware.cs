@@ -86,6 +86,13 @@ public sealed class
         policy =
             policyName switch
             {
+                "RequestDemo" =>
+                    new SensitivePolicy(
+                        "RequestDemo",
+                        5,
+                        TimeSpan.FromHours(1),
+                        PartitionKind.Ip),
+
                 "Login" =>
                     new SensitivePolicy(
                         "Login",

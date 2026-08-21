@@ -177,6 +177,29 @@ public static class BackendResilienceRegistrationExtensions
                     });
 
                 options.AddPolicy(
+                    "RequestDemo",
+                    context =>
+                    {
+                        var ip =
+                            context.Connection.RemoteIpAddress
+                                ?.ToString()
+                            ?? "unknown";
+
+                        return RateLimitPartition
+                            .GetFixedWindowLimiter(
+                                ip,
+                                _ => new FixedWindowRateLimiterOptions
+                                {
+                                    PermitLimit = 5,
+                                    Window = TimeSpan.FromHours(1),
+                                    QueueLimit = 0,
+                                    QueueProcessingOrder =
+                                        QueueProcessingOrder.OldestFirst,
+                                    AutoReplenishment = true
+                                });
+                    });
+
+                options.AddPolicy(
                     "SchoolUserCreate",
                     context =>
                     {
