@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edulytics.Tests", "tests\Ed
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edulytics.PostgresGate", "tests\Edulytics.PostgresGate\Edulytics.PostgresGate.csproj", "{93BF253B-D3DD-4CE8-B450-D955736A7BB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edulytics.ScaleGate", "tests\Edulytics.ScaleGate\Edulytics.ScaleGate.csproj", "{87C05C64-F133-4566-89AB-851FC5CF7D2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +103,18 @@ Global
 		{93BF253B-D3DD-4CE8-B450-D955736A7BB7}.Release|x64.Build.0 = Release|Any CPU
 		{93BF253B-D3DD-4CE8-B450-D955736A7BB7}.Release|x86.ActiveCfg = Release|Any CPU
 		{93BF253B-D3DD-4CE8-B450-D955736A7BB7}.Release|x86.Build.0 = Release|Any CPU
+		{87C05C64-F133-4566-89AB-851FC5CF7D2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87C05C64-F133-4566-89AB-851FC5CF7D2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87C05C64-F133-4566-89AB-851FC5CF7D2D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{87C05C64-F133-4566-89AB-851FC5CF7D2D}.Debug|x64.Build.0 = Debug|Any CPU
+		{87C05C64-F133-4566-89AB-851FC5CF7D2D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{87C05C64-F133-4566-89AB-851FC5CF7D2D}.Debug|x86.Build.0 = Debug|Any CPU
+		{87C05C64-F133-4566-89AB-851FC5CF7D2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87C05C64-F133-4566-89AB-851FC5CF7D2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87C05C64-F133-4566-89AB-851FC5CF7D2D}.Release|x64.ActiveCfg = Release|Any CPU
+		{87C05C64-F133-4566-89AB-851FC5CF7D2D}.Release|x64.Build.0 = Release|Any CPU
+		{87C05C64-F133-4566-89AB-851FC5CF7D2D}.Release|x86.ActiveCfg = Release|Any CPU
+		{87C05C64-F133-4566-89AB-851FC5CF7D2D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -112,5 +126,6 @@ Global
 		{DA2995A4-71B2-414E-8F6C-D1922E8D527F} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{12E71E4E-6C2D-4405-BEE0-17E9B112575C} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 		{93BF253B-D3DD-4CE8-B450-D955736A7BB7} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+		{87C05C64-F133-4566-89AB-851FC5CF7D2D} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 	EndGlobalSection
 EndGlobal

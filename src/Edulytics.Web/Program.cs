@@ -9,6 +9,7 @@ using Edulytics.Web.Hubs;
 using Edulytics.Web.Localization;
 using Edulytics.Web.Middleware;
 using Edulytics.Web.Resilience;
+using Edulytics.Web.Scale;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Localization;
@@ -56,6 +57,11 @@ builder.Services
 builder.Services
     .AddEdulyticsIdentityAndData(
         builder.Configuration);
+
+builder.Services
+    .AddMultiInstanceScalePhase25(
+        builder.Configuration,
+        builder.Environment);
 
 builder.Services
     .AddAuditCompliancePhase18();
@@ -127,6 +133,7 @@ builder.Services
 
 builder.Services
     .AddRealtimeDashboardsPhase10(
+        builder.Configuration,
         builder.Environment);
 
 builder.Services
@@ -240,6 +247,9 @@ app.UseRouting();
 app.UseRequestTimeouts();
 
 app.UseAuthentication();
+
+app.UseMiddleware<
+    DistributedSensitiveRateLimitMiddleware>();
 
 app.UseRateLimiter();
 

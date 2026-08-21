@@ -4,6 +4,7 @@ using Edulytics.Services.Analytics;
 using Edulytics.Services.Realtime;
 using Edulytics.Web.Background;
 using Edulytics.Web.Realtime;
+using Edulytics.Web.Scale;
 
 namespace Edulytics.Web.Extensions;
 
@@ -12,15 +13,50 @@ public static class RealtimeRegistrationExtensions
     public static IServiceCollection
         AddRealtimeDashboardsPhase10(
             this IServiceCollection services,
+            IConfiguration configuration,
             IHostEnvironment environment)
     {
         ArgumentNullException.ThrowIfNull(
             services);
 
         ArgumentNullException.ThrowIfNull(
+            configuration);
+
+        ArgumentNullException.ThrowIfNull(
             environment);
 
-        services.AddSignalR();
+        var scale =
+            MultiInstanceScaleOptions.Read(
+                configuration);
+
+        var signalR =
+            services.AddSignalR();
+
+        if (scale.Enabled &&
+            scale.RequireRedis)
+        {
+            var redisConnection =
+                RedisConnectionConfiguration
+                    .ReadRequired(
+                        configuration);
+
+            signalR.AddStackExchangeRedis(
+                options =>
+                {
+                    options.Configuration =
+                        RedisConnectionConfiguration
+                            .Parse(
+                                redisConnection);
+
+                    options.Configuration
+                        .ChannelPrefix =
+                        StackExchange.Redis
+                            .RedisChannel
+                            .Literal(
+                                scale
+                                    .RedisChannelPrefix);
+                });
+        }
 
         services.AddOptions<
                 OutboxV2Options>()
@@ -99,7 +135,8 @@ public static class RealtimeRegistrationExtensions
         // Development and Production remain unchanged: both workers
         // are registered and exercised against PostgreSQL.
         if (!environment.IsEnvironment(
-                "Testing"))
+                "Testing") &&
+            scale.RunsBackgroundWorkers)
         {
             services.AddHostedService<
                 OutboxProcessorBackgroundService>();
