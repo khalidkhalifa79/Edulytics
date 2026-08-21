@@ -1,0 +1,89 @@
+name: edulytics-phase25-local
+
+x-common: &common
+  image: edulytics-phase25-local:dev
+  environment: &common-env
+    ASPNETCORE_ENVIRONMENT: Development
+    PORT: "10000"
+    ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=edulytics_phase25;Username=edulytics;Password=phase25-local-only;Maximum Pool Size=20;Timeout=5;Command Timeout=15"
+    ConnectionStrings__Redis: "redis:6379"
+    Edulytics__Hosting__DataProtectionApplicationName: "Edulytics-Phase25-Local"
+    Edulytics__Hosting__RequireDataProtectionCertificate: "false"
+    Edulytics__SuperAdmin__Email: "phase25-superadmin@example.test"
+    Edulytics__SuperAdmin__Password: "Phase25!SuperAdmin#2026"
+    Edulytics__Scale__Enabled: "true"
+    Edulytics__Scale__RequireRedis: "true"
+    Edulytics__Scale__DistributedSensitiveRateLimitsEnabled: "true"
+    Edulytics__Scale__ExpectedWebInstances: "2"
+    Edulytics__Scale__ExpectedWorkerInstances: "2"
+    Edulytics__Scale__DatabaseConnectionBudget: "80"
+    Edulytics__Scale__RedisChannelPrefix: "edulytics-phase25-local"
+    Edulytics__Resilience__NpgsqlMaxPoolSize: "20"
+  depends_on:
+    postgres:
+      condition: service_healthy
+    redis:
+      condition: service_healthy
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: "edulytics_phase25"
+      POSTGRES_USER: "edulytics"
+      POSTGRES_PASSWORD: "phase25-local-only"
+    ports:
+      - "15432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U edulytics -d edulytics_phase25"]
+      interval: 2s
+      timeout: 2s
+      retries: 30
+
+  redis:
+    image: redis:7.4-alpine
+    ports:
+      - "16379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 2s
+      retries: 30
+
+  web1:
+    <<: *common
+    environment:
+      <<: *common-env
+      Edulytics__Scale__RuntimeRole: "Web"
+    ports:
+      - "18081:10000"
+
+  web2:
+    <<: *common
+    environment:
+      <<: *common-env
+      Edulytics__Scale__RuntimeRole: "Web"
+    ports:
+      - "18082:10000"
+
+  worker1:
+    <<: *common
+    environment:
+      <<: *common-env
+      Edulytics__Scale__RuntimeRole: "Worker"
+
+  worker2:
+    <<: *common
+    environment:
+      <<: *common-env
+      Edulytics__Scale__RuntimeRole: "Worker"
+
+  gateway:
+    image: nginx:1.27-alpine
+    depends_on:
+      - web1
+      - web2
+    volumes:
+      - "./nginx.conf:/etc/nginx/conf.d/default.conf:ro"
+    ports:
+      - "18080:80"

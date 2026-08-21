@@ -17,24 +17,73 @@ public sealed class EdulyticsDatabaseBootstrapper
         RoleNames.Student
     ];
 
+    private const long BootstrapAdvisoryLockKey =
+        25000025L;
+
     private readonly RoleManager<ApplicationRole> _roleManager;
     private readonly UserManager<ApplicationUser> _userManager;
     private readonly IConfiguration _configuration;
+    private readonly EdulyticsDbContext _db;
 
     public EdulyticsDatabaseBootstrapper(
         RoleManager<ApplicationRole> roleManager,
         UserManager<ApplicationUser> userManager,
-        IConfiguration configuration)
+        IConfiguration configuration,
+        EdulyticsDbContext db)
     {
         _roleManager = roleManager ?? throw new ArgumentNullException(nameof(roleManager));
         _userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
         _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
+        _db = db ?? throw new ArgumentNullException(nameof(db));
     }
 
     public async Task InitializeAsync()
     {
-        await EnsureRolesExistAsync();
-        await EnsureSuperAdminAsync();
+        if (!_db.Database.IsNpgsql())
+        {
+            await EnsureRolesExistAsync();
+            await EnsureSuperAdminAsync();
+            return;
+        }
+
+        await _db.Database.OpenConnectionAsync();
+
+        try
+        {
+            await ExecuteAdvisoryLockAsync(
+                acquire: true);
+
+            try
+            {
+                await EnsureRolesExistAsync();
+                await EnsureSuperAdminAsync();
+            }
+            finally
+            {
+                await ExecuteAdvisoryLockAsync(
+                    acquire: false);
+            }
+        }
+        finally
+        {
+            await _db.Database.CloseConnectionAsync();
+        }
+    }
+
+    private async Task ExecuteAdvisoryLockAsync(
+        bool acquire)
+    {
+        await using var command =
+            _db.Database
+                .GetDbConnection()
+                .CreateCommand();
+
+        command.CommandText =
+            acquire
+                ? $"SELECT pg_advisory_lock({BootstrapAdvisoryLockKey});"
+                : $"SELECT pg_advisory_unlock({BootstrapAdvisoryLockKey});";
+
+        _ = await command.ExecuteScalarAsync();
     }
 
     private async Task EnsureRolesExistAsync()

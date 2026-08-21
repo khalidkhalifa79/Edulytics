@@ -1,6 +1,7 @@
 using Edulytics.Core.Interfaces;
 using Edulytics.Data.Repositories;
 using Edulytics.Web.Privacy;
+using Edulytics.Web.Scale;
 
 namespace Edulytics.Web.Extensions;
 
@@ -40,11 +41,16 @@ public static class
             ISensitiveDataRetentionRepository,
             SensitiveDataRetentionRepository>();
 
+        var scale =
+            MultiInstanceScaleOptions.Read(
+                configuration);
+
         // Integration tests call the retention repository
         // explicitly. Do not start a nondeterministic timer
         // inside the Testing host.
         if (!environment.IsEnvironment(
-                "Testing"))
+                "Testing") &&
+            scale.RunsBackgroundWorkers)
         {
             services.AddHostedService<
                 SensitiveDataRetentionBackgroundService>();

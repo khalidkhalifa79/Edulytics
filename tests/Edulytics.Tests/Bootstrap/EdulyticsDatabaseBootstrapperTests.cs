@@ -153,7 +153,12 @@ public class EdulyticsDatabaseBootstrapperTests
 
         var roleManager = services.GetRequiredService<RoleManager<ApplicationRole>>();
         var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
+        var db = services.GetRequiredService<EdulyticsDbContext>();
 
-        return new EdulyticsDatabaseBootstrapper(roleManager, userManager, configuration);
+        return new EdulyticsDatabaseBootstrapper(
+            roleManager,
+            userManager,
+            configuration,
+            db);
     }
 }

@@ -1,5 +1,6 @@
 using Edulytics.Web.Health;
 using Edulytics.Web.Production;
+using Edulytics.Web.Scale;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 
@@ -26,6 +27,10 @@ public static class
         var skipConnectionValidation =
             environment.IsEnvironment(
                 "Testing");
+
+        var scale =
+            MultiInstanceScaleOptions.Read(
+                configuration);
 
         services
             .AddOptions<
@@ -82,7 +87,8 @@ public static class
         // report an intentionally disabled worker as an
         // unhealthy test host.
         if (!environment.IsEnvironment(
-                "Testing"))
+                "Testing") &&
+            scale.RunsBackgroundWorkers)
         {
             healthChecks.AddCheck<
                 OutboxWorkerReadinessHealthCheck>(
