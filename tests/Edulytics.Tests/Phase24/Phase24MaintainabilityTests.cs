@@ -183,6 +183,34 @@ public sealed class Phase24MaintainabilityTests
             StringComparison.Ordinal);
     }
 
+    [Fact]
+    public void SchoolsIndex_HasPlatformDashboardBackNavigation()
+    {
+        var view =
+            ReadSource(
+                "src/Edulytics.Web/Views/Schools/Index.cshtml");
+
+        Assert.Contains(
+            "school-back-link",
+            view,
+            StringComparison.Ordinal);
+
+        Assert.Contains(
+            "asp-controller=\"Platform\"",
+            view,
+            StringComparison.Ordinal);
+
+        Assert.Contains(
+            "asp-action=\"Dashboard\"",
+            view,
+            StringComparison.Ordinal);
+
+        Assert.Contains(
+            "@T[\"BackToDashboard\"]",
+            view,
+            StringComparison.Ordinal);
+    }
+
     private static string ReadSource(
         string relativePath) =>
         File.ReadAllText(

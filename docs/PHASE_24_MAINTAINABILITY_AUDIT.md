@@ -203,3 +203,23 @@ deterministic ordinal order before checking for:
 
 This changes no production behavior. It preserves the original architectural
 assertion while allowing the behavior-preserving partial-class refactor.
+
+## Staging acceptance correction — Schools navigation
+
+During Phase 24 staging acceptance, the platform Schools index exposed school
+management actions but did not provide an in-application path back to the
+Platform dashboard.
+
+The browser Back button was therefore the only obvious return path.
+
+The corrective change reuses existing contracts:
+
+- `PlatformController.Dashboard`;
+- `PlatformResource.BackToDashboard`;
+- `PlatformResource.pl.BackToDashboard`;
+- `.school-back-link`.
+
+No new localization key or CSS rule is introduced.
+
+A Phase 24 source regression test now requires the Schools index to target
+`Platform/Dashboard` with the localized `BackToDashboard` label.
