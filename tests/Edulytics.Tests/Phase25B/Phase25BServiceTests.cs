@@ -50,6 +50,47 @@ public sealed class Phase25BServiceTests
     }
 
     [Fact]
+    public async Task DemoSchedule_NormalizesBrowserUnspecifiedDateTimeToUtc()
+    {
+        var repo = new FakeRepository();
+        var lead = NewRequest(DemoRequestStatus.Contacted);
+        repo.Requests.Add(lead);
+
+        var service = new CustomerOnboardingService(repo);
+
+        var browserValue = DateTime.SpecifyKind(
+            new DateTime(2026, 8, 22, 11, 31, 0),
+            DateTimeKind.Unspecified);
+
+        var result = await service.UpdateLeadAsync(
+            lead.Id,
+            DemoRequestStatus.DemoScheduled,
+            browserValue,
+            "UTC browser binding regression",
+            lead.RowVersion.ToArray());
+
+        Assert.True(result.Succeeded);
+        Assert.Equal(
+            DemoRequestStatus.DemoScheduled,
+            lead.Status);
+        Assert.True(
+            lead.DemoScheduledAtUtc.HasValue);
+        Assert.Equal(
+            DateTimeKind.Utc,
+            lead.DemoScheduledAtUtc.Value.Kind);
+        Assert.Equal(
+            new DateTime(
+                2026,
+                8,
+                22,
+                11,
+                31,
+                0,
+                DateTimeKind.Utc),
+            lead.DemoScheduledAtUtc.Value);
+    }
+
+    [Fact]
     public async Task QualifiedLead_GrantDemo_IsSevenDays()
     {
         var repo = new FakeRepository();

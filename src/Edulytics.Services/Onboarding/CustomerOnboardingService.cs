@@ -157,7 +157,13 @@ public sealed class CustomerOnboardingService : ICustomerOnboardingService
         var oldStatus = request.Status;
         request.Status = targetStatus;
         if (targetStatus == DemoRequestStatus.DemoScheduled)
-            request.DemoScheduledAtUtc = demoScheduledAtUtc;
+        {
+            request.DemoScheduledAtUtc =
+                DateTime.SpecifyKind(
+                    demoScheduledAtUtc!.Value,
+                    DateTimeKind.Utc);
+        }
+
         request.InternalNote = NullIfWhiteSpace(internalNote);
         request.UpdatedAtUtc = DateTime.UtcNow;
 
