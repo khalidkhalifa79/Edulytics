@@ -18,7 +18,7 @@ public sealed class HomeController : Controller
     [AllowAnonymous]
     [HttpPost("/set-culture")]
     [ValidateAntiForgeryToken]
-    public IActionResult SetCulture(string? culture)
+    public IActionResult SetCulture(string? culture, string? returnUrl)
     {
         if (!CultureCookie.IsSupported(culture))
         {
@@ -37,6 +37,12 @@ public sealed class HomeController : Controller
                 SameSite = SameSiteMode.Strict,
                 Secure = Request.IsHttps
             });
+
+        if (!string.IsNullOrWhiteSpace(returnUrl) &&
+            Url.IsLocalUrl(returnUrl))
+        {
+            return LocalRedirect(returnUrl);
+        }
 
         return RedirectToAction("Login", "Account");
     }

@@ -74,3 +74,21 @@ Delivery must use:
 
 Phase 25B is not considered fully closed until protected delivery and staging
 browser acceptance are complete.
+
+## Staging corrective — public language switching
+
+Staging browser acceptance identified that `/request-demo` correctly rendered
+the persisted culture, but the public layout did not expose an in-page language
+control.
+
+The corrective adds:
+
+- visible English / Polish controls to `_PublicLayout`;
+- POST-only culture switching through the existing anti-forgery-protected
+  `/set-culture` endpoint;
+- safe same-page return through a validated local `returnUrl`;
+- explicit open-redirect protection via `Url.IsLocalUrl`;
+- responsive and keyboard-visible controls.
+
+Phase 25B remains open until this corrective is delivered through protected CI
+and verified on staging.
