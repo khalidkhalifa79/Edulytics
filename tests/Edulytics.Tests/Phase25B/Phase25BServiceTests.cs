@@ -12,7 +12,7 @@ public sealed class Phase25BServiceTests
     public async Task PublicRequest_RequiresMinimum500AndConsent()
     {
         var repo = new FakeRepository();
-        var service = new CustomerOnboardingService(repo);
+        var service = new CustomerOnboardingService(repo, new Phase25BTestAuditService());
         var result = await service.SubmitDemoRequestAsync(new DemoRequestSubmission(
             "School", "Contact", "contact@example.com", null, "PL", "Warsaw", 499, null, false));
         Assert.False(result.Succeeded);
@@ -26,7 +26,7 @@ public sealed class Phase25BServiceTests
     {
         var repo = new FakeRepository();
         repo.Requests.Add(NewRequest(DemoRequestStatus.New));
-        var service = new CustomerOnboardingService(repo);
+        var service = new CustomerOnboardingService(repo, new Phase25BTestAuditService());
         var result = await service.SubmitDemoRequestAsync(ValidSubmission());
         Assert.True(result.Succeeded);
         Assert.Single(repo.Requests);
@@ -38,7 +38,7 @@ public sealed class Phase25BServiceTests
         var repo = new FakeRepository();
         var lead = NewRequest(DemoRequestStatus.New);
         repo.Requests.Add(lead);
-        var service = new CustomerOnboardingService(repo);
+        var service = new CustomerOnboardingService(repo, new Phase25BTestAuditService());
         var result = await service.UpdateLeadAsync(
             lead.Id,
             DemoRequestStatus.Qualified,
@@ -56,7 +56,7 @@ public sealed class Phase25BServiceTests
         var lead = NewRequest(DemoRequestStatus.Contacted);
         repo.Requests.Add(lead);
 
-        var service = new CustomerOnboardingService(repo);
+        var service = new CustomerOnboardingService(repo, new Phase25BTestAuditService());
 
         var browserValue = DateTime.SpecifyKind(
             new DateTime(2026, 8, 22, 11, 31, 0),
@@ -89,6 +89,55 @@ public sealed class Phase25BServiceTests
                 DateTimeKind.Utc),
             lead.DemoScheduledAtUtc.Value);
     }
+    [Fact]
+    public async Task GrantDemo_RecordsRequiredAuditEvent()
+    {
+        var repo = new FakeRepository();
+        var lead = NewRequest(DemoRequestStatus.Qualified);
+        repo.Requests.Add(lead);
+
+        var audit = new Phase25BTestAuditService();
+        var service =
+            new CustomerOnboardingService(
+                repo,
+                audit);
+
+        var result =
+            await service.GrantDemoAsync(
+                lead.Id,
+                lead.RowVersion.ToArray());
+
+        Assert.True(result.Succeeded);
+
+        var recorded =
+            Assert.Single(
+                audit.Recorded,
+                item =>
+                    item.Action ==
+                    "DemoAccess.Granted");
+
+        Assert.Equal(
+            "CustomerOnboarding",
+            recorded.Feature);
+
+        Assert.Equal(
+            "DemoAccess",
+            recorded.EntityType);
+
+        Assert.Equal(
+            lead.Id.ToString("D"),
+            recorded.EntityId);
+
+        Assert.NotNull(recorded.NewValues);
+
+        Assert.Equal(
+            7,
+            Assert.IsType<int>(
+                recorded.NewValues![
+                    "durationDays"]));
+    }
+
+
 
     [Fact]
     public async Task QualifiedLead_GrantDemo_IsSevenDays()
@@ -96,7 +145,7 @@ public sealed class Phase25BServiceTests
         var repo = new FakeRepository();
         var lead = NewRequest(DemoRequestStatus.Qualified);
         repo.Requests.Add(lead);
-        var service = new CustomerOnboardingService(repo);
+        var service = new CustomerOnboardingService(repo, new Phase25BTestAuditService());
         var result = await service.GrantDemoAsync(lead.Id, lead.RowVersion.ToArray());
         Assert.True(result.Succeeded);
         Assert.NotNull(result.Invitation);
@@ -109,7 +158,7 @@ public sealed class Phase25BServiceTests
         var repo = new FakeRepository();
         var lead = NewRequest(DemoRequestStatus.Qualified);
         repo.Requests.Add(lead);
-        var service = new CustomerOnboardingService(repo);
+        var service = new CustomerOnboardingService(repo, new Phase25BTestAuditService());
         var result = await service.ProvisionCustomerAsync(
             lead.Id,
             "SCH-001",

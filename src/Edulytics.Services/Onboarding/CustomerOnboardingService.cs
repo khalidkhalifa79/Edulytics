@@ -27,11 +27,11 @@ public sealed class CustomerOnboardingService : ICustomerOnboardingService
         RegexOptions.Compiled | RegexOptions.CultureInvariant);
 
     private readonly ICustomerOnboardingRepository _repository;
-    private readonly IAuditService? _audit;
+    private readonly IAuditService _audit;
 
     public CustomerOnboardingService(
         ICustomerOnboardingRepository repository,
-        IAuditService? audit = null)
+        IAuditService audit)
     {
         _repository = repository;
         _audit = audit;
@@ -634,10 +634,7 @@ public sealed class CustomerOnboardingService : ICustomerOnboardingService
         IReadOnlyDictionary<string, object?>? newValues,
         CancellationToken cancellationToken)
     {
-        if (_audit is null)
-            return;
-
-        await _audit.RecordAsync(
+await _audit.RecordAsync(
             new AuditEvent(
                 SchoolId: schoolId,
                 Action: action,
