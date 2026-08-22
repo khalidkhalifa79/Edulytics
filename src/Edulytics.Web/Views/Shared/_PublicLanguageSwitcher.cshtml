@@ -1,0 +1,48 @@
+@{
+    var currentCulture =
+        System.Globalization.CultureInfo
+            .CurrentUICulture
+            .TwoLetterISOLanguageName;
+
+    var returnUrl =
+        $"{Context.Request.PathBase}" +
+        $"{Context.Request.Path}" +
+        $"{Context.Request.QueryString}";
+}
+
+<nav class="public-language-switcher"
+     aria-label="Language">
+    <form method="post"
+          asp-controller="Home"
+          asp-action="SetCulture">
+        <input type="hidden"
+               name="culture"
+               value="en" />
+        <input type="hidden"
+               name="returnUrl"
+               value="@returnUrl" />
+
+        <button type="submit"
+                class="public-language-option @(currentCulture == "en" ? "is-active" : null)"
+                aria-pressed="@(currentCulture == "en" ? "true" : "false")">
+            English
+        </button>
+    </form>
+
+    <form method="post"
+          asp-controller="Home"
+          asp-action="SetCulture">
+        <input type="hidden"
+               name="culture"
+               value="pl" />
+        <input type="hidden"
+               name="returnUrl"
+               value="@returnUrl" />
+
+        <button type="submit"
+                class="public-language-option @(currentCulture == "pl" ? "is-active" : null)"
+                aria-pressed="@(currentCulture == "pl" ? "true" : "false")">
+            Polski
+        </button>
+    </form>
+</nav>

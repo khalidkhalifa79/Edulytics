@@ -3069,3 +3069,57 @@ input:focus-visible {
     .onboarding-card,
     .onboarding-table-wrap { padding: .85rem; border-radius: .75rem; }
 }
+
+/* Phase 25B staging corrective — public language switcher */
+.public-language-switcher {
+    width: min(100%, 920px);
+    margin: 1rem auto 0;
+    padding: 0 1.25rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: .5rem;
+}
+
+.public-language-switcher form {
+    margin: 0;
+}
+
+.public-language-option {
+    min-height: 2.5rem;
+    padding: .45rem .8rem;
+    border: 1px solid var(--bs-border-color);
+    border-radius: .6rem;
+    background: var(--bs-body-bg);
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+.public-language-option:hover,
+.public-language-option:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: .2em;
+}
+
+.public-language-option.is-active {
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: .2em;
+}
+
+@media (max-width: 420px) {
+    .public-language-switcher {
+        padding: 0 .8rem;
+        justify-content: center;
+    }
+
+    .public-language-switcher form,
+    .public-language-option {
+        flex: 1 1 0;
+    }
+
+    .public-language-option {
+        width: 100%;
+    }
+}
