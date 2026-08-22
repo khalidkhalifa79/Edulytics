@@ -3070,15 +3070,52 @@ input:focus-visible {
     .onboarding-table-wrap { padding: .85rem; border-radius: .75rem; }
 }
 
-/* Phase 25B staging corrective — public language switcher */
-.public-language-switcher {
-    width: min(100%, 920px);
-    margin: 1rem auto 0;
-    padding: 0 1.25rem;
+/* Phase 25B staging visual corrective — polished public onboarding */
+.onboarding-request-demo {
+    width: min(100%, 1040px);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.onboarding-request-demo .onboarding-public-card {
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid rgba(15, 23, 42, .1);
+    border-radius: 1.25rem;
+    box-shadow: 0 24px 70px rgba(15, 23, 42, .09);
+}
+
+.onboarding-public-header {
+    min-height: 5.25rem;
+    padding: 1.1rem 1.4rem;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    gap: .5rem;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(15, 23, 42, .08);
+    background: rgba(255, 255, 255, .72);
+}
+
+.onboarding-brand-wrap {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+}
+
+.onboarding-brand-wrap .localized-brand-logo {
+    height: 2.55rem;
+    max-width: min(48vw, 15rem);
+}
+
+.public-language-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: .2rem;
+    flex: 0 0 auto;
+    padding: .2rem;
+    border: 1px solid rgba(15, 23, 42, .12);
+    border-radius: .75rem;
+    background: rgba(248, 250, 252, .95);
 }
 
 .public-language-switcher form {
@@ -3086,40 +3123,228 @@ input:focus-visible {
 }
 
 .public-language-option {
-    min-height: 2.5rem;
-    padding: .45rem .8rem;
-    border: 1px solid var(--bs-border-color);
-    border-radius: .6rem;
-    background: var(--bs-body-bg);
-    color: inherit;
+    min-width: 4.4rem;
+    min-height: 2.2rem;
+    padding: .35rem .7rem;
+    border: 0;
+    border-radius: .55rem;
+    background: transparent;
+    color: #475569;
     font: inherit;
+    font-size: .88rem;
+    font-weight: 600;
     cursor: pointer;
+    transition:
+        background-color .16s ease,
+        color .16s ease,
+        box-shadow .16s ease;
 }
 
-.public-language-option:hover,
+.public-language-option:hover {
+    background: rgba(15, 23, 42, .06);
+    color: #0f172a;
+}
+
 .public-language-option:focus-visible {
-    text-decoration: underline;
-    text-underline-offset: .2em;
+    outline: 3px solid rgba(59, 130, 246, .35);
+    outline-offset: 2px;
 }
 
 .public-language-option.is-active {
+    background: #0f172a;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, .18);
+}
+
+.onboarding-public-copy {
+    padding: 2rem 2rem .5rem;
+}
+
+.onboarding-public-copy h1,
+.onboarding-thanks-content h1 {
+    margin: .2rem 0 .65rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.05;
+    letter-spacing: -.035em;
+}
+
+.onboarding-intro {
+    max-width: 46rem;
+    margin: 0;
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.onboarding-seat-note {
+    width: fit-content;
+    margin-top: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: .65rem;
+    padding: .55rem .75rem;
+    border: 1px solid rgba(15, 23, 42, .08);
+    border-radius: .75rem;
+    background: #f8fafc;
+    color: #334155;
+    font-size: .92rem;
+}
+
+.onboarding-seat-note-icon {
+    display: inline-grid;
+    place-items: center;
+    min-width: 3rem;
+    min-height: 1.9rem;
+    padding: 0 .45rem;
+    border-radius: .5rem;
+    background: #e2e8f0;
+    color: #0f172a;
+    font-weight: 800;
+    letter-spacing: -.02em;
+}
+
+.onboarding-request-form {
+    padding: 1.25rem 2rem 2rem;
+    gap: 1.05rem 1.1rem;
+}
+
+.onboarding-field {
+    gap: .45rem !important;
+}
+
+.onboarding-field > span:first-child {
+    color: #334155;
+    font-size: .9rem;
+    font-weight: 650;
+}
+
+.onboarding-request-form input:not([type="checkbox"]),
+.onboarding-request-form textarea {
+    min-height: 2.85rem;
+    padding: .72rem .8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: .65rem;
+    background: #fff;
+    color: #0f172a;
+    transition:
+        border-color .16s ease,
+        box-shadow .16s ease;
+}
+
+.onboarding-request-form textarea {
+    min-height: 8rem;
+    resize: vertical;
+}
+
+.onboarding-request-form input:not([type="checkbox"]):focus,
+.onboarding-request-form textarea:focus {
+    border-color: #64748b;
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba(100, 116, 139, .14);
+}
+
+.onboarding-student-count {
+    grid-column: 1 / 2;
+}
+
+.onboarding-consent {
+    padding: .85rem 1rem;
+    border: 1px solid rgba(15, 23, 42, .08);
+    border-radius: .75rem;
+    background: #f8fafc;
+    color: #475569;
+    line-height: 1.45;
+}
+
+.onboarding-submit-row {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: .15rem;
+}
+
+.onboarding-submit {
+    min-height: 2.8rem;
+    padding-inline: 1.25rem;
+    border-radius: .7rem;
     font-weight: 700;
-    text-decoration: underline;
-    text-underline-offset: .2em;
+}
+
+.onboarding-thanks-card {
+    min-height: 26rem;
+}
+
+.onboarding-thanks-content {
+    padding: 3rem 2rem 3.25rem;
+}
+
+.onboarding-thanks-content .school-button {
+    margin-top: 1.3rem;
+}
+
+@media (max-width: 767px) {
+    .onboarding-request-demo {
+        padding: .9rem;
+    }
+
+    .onboarding-public-header {
+        min-height: auto;
+        padding: .9rem 1rem;
+    }
+
+    .onboarding-brand-wrap .localized-brand-logo {
+        height: 2.2rem;
+        max-width: 48vw;
+    }
+
+    .public-language-option {
+        min-width: 3.9rem;
+        padding-inline: .55rem;
+    }
+
+    .onboarding-public-copy,
+    .onboarding-thanks-content {
+        padding-left: 1.15rem;
+        padding-right: 1.15rem;
+    }
+
+    .onboarding-public-copy {
+        padding-top: 1.45rem;
+    }
+
+    .onboarding-request-form {
+        padding: 1rem 1.15rem 1.35rem;
+    }
+
+    .onboarding-student-count {
+        grid-column: auto;
+    }
+
+    .onboarding-submit,
+    .onboarding-submit-row {
+        width: 100%;
+    }
 }
 
 @media (max-width: 420px) {
-    .public-language-switcher {
-        padding: 0 .8rem;
-        justify-content: center;
+    .onboarding-public-header {
+        align-items: flex-start;
+        flex-direction: column;
     }
 
-    .public-language-switcher form,
-    .public-language-option {
+    .public-language-switcher {
+        width: 100%;
+    }
+
+    .public-language-switcher form {
         flex: 1 1 0;
     }
 
     .public-language-option {
         width: 100%;
+    }
+
+    .onboarding-seat-note {
+        width: 100%;
+        align-items: flex-start;
     }
 }

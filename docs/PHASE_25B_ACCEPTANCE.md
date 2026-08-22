@@ -92,3 +92,22 @@ The corrective adds:
 
 Phase 25B remains open until this corrective is delivered through protected CI
 and verified on staging.
+
+## Staging visual corrective — Request Demo composition
+
+The first public-language corrective was functionally correct but staging
+browser review showed that the switcher floated outside the Request Demo card,
+which was not an acceptable public-facing composition.
+
+The visual corrective:
+
+- removes the language control from the global body-level public layout;
+- places localized branding and the EN/PL segmented control inside the Request
+  Demo card header;
+- applies the same header treatment to the thank-you page;
+- improves form field spacing, borders, focus states, consent treatment and CTA;
+- preserves the existing server-side onboarding behavior, localization,
+  anti-forgery and safe return URL contract;
+- remains responsive at tablet and 320–420px mobile widths.
+
+No database, billing, subscription or tenant behavior changes are included.

@@ -1,13 +1,30 @@
 @inject IStringLocalizer<Edulytics.Web.OnboardingResource> T
+
 @{
     Layout = "_PublicLayout";
     ViewData["Title"] = T["ThanksTitle"];
 }
-<section class="onboarding-public-shell">
-    <div class="onboarding-card">
-        <p class="onboarding-eyebrow">@T["Eyebrow"]</p>
-        <h1>@T["ThanksTitle"]</h1>
-        <p>@T["ThanksMessage"]</p>
-        <a asp-controller="Home" asp-action="Index" class="school-button school-button-secondary">@T["BackHome"]</a>
+
+<section class="onboarding-public-shell onboarding-request-demo">
+    <div class="onboarding-public-card onboarding-thanks-card">
+        <header class="onboarding-public-header">
+            <div class="onboarding-brand-wrap">
+                <partial name="_LocalizedBrand" />
+            </div>
+
+            <partial name="_PublicLanguageSwitcher" />
+        </header>
+
+        <div class="onboarding-thanks-content">
+            <p class="onboarding-eyebrow">@T["Eyebrow"]</p>
+            <h1>@T["ThanksTitle"]</h1>
+            <p class="onboarding-intro">@T["ThanksMessage"]</p>
+
+            <a asp-controller="Home"
+               asp-action="Index"
+               class="school-button school-button-secondary">
+                @T["BackHome"]
+            </a>
+        </div>
     </div>
 </section>
