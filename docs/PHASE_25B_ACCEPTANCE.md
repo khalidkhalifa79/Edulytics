@@ -111,3 +111,24 @@ The visual corrective:
 - remains responsive at tablet and 320–420px mobile widths.
 
 No database, billing, subscription or tenant behavior changes are included.
+
+## Staging corrective — supported country selector
+
+Browser acceptance showed that free-text `Country code` could be mistaken for a
+phone/area code (`06` was entered during staging).
+
+Launch v1 currently supports two commercial markets only:
+
+- Poland (`PL`)
+- United Arab Emirates (`AE`)
+
+The corrective:
+
+- replaces free-text country entry with a localized dropdown;
+- persists ISO 3166-1 alpha-2 codes (`PL` / `AE`);
+- enforces the same allow-list server-side;
+- prevents arbitrary values such as `06`;
+- keeps phone entry separate.
+
+New markets must be enabled explicitly together with their commercial, billing
+and tax rules.

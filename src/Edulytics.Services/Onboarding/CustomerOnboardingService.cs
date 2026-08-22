@@ -453,6 +453,16 @@ public sealed class CustomerOnboardingService : ICustomerOnboardingService
             OnboardingErrorCode.RequiredCountry,
             OnboardingErrorCode.CountryTooLong,
             errors);
+
+        if (!string.IsNullOrWhiteSpace(request.CountryCode) &&
+            request.CountryCode.Trim().Length <= CountryMax &&
+            !SupportedCustomerCountries.IsSupported(request.CountryCode))
+        {
+            errors.Add(new(
+                nameof(request.CountryCode),
+                OnboardingErrorCode.UnsupportedCountry));
+        }
+
         ValidateRequired(request.City, nameof(request.City), CityMax,
             OnboardingErrorCode.RequiredCity,
             OnboardingErrorCode.CityTooLong,
