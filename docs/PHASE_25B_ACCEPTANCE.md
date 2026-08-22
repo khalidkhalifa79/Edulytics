@@ -146,3 +146,33 @@ administrator-entered value as `DateTimeKind.Utc` before assigning
 A regression test covers `DateTimeKind.Unspecified -> DateTimeKind.Utc`.
 
 No migration or Data-layer change is required.
+
+## Staging corrective — mandatory Phase 25B audit composition
+
+Staging acceptance found that the completed Phase 25B onboarding operations
+were not visible in the Audit log.
+
+A semantic source inspection confirmed that the Phase 18 audit subsystem is
+registered and that `AuditService.RecordAsync` persists through
+`IAuditRepository.SaveChangesAsync`. It also found a Phase 25B-specific
+fail-open contract: `CustomerOnboardingService` accepted `IAuditService` as an
+optional dependency, `AuditAsync` silently returned when it was absent, and the
+direct Phase 25B service tests intentionally constructed the service without an
+audit dependency.
+
+The corrective removes that silent path. `IAuditService` is now mandatory and
+the Phase 25B production composition explicitly resolves it through
+`GetRequiredService<IAuditService>()`. Regression coverage now verifies:
+
+- Grant Demo emits `DemoAccess.Granted`;
+- the Audit writer persists a real `AuditLog` through the repository;
+- the production onboarding registration resolves with a mandatory audit
+  dependency;
+- Phase 25B direct service tests no longer bypass audit composition.
+
+This corrective does not change the database schema, migrations, Render
+topology, Phase 25 scale topology, pricing, subscription, or payment boundaries.
+
+Historical staging operations executed before this corrective are not
+fabricated or backfilled. Staging must generate one new Phase 25B auditable
+operation after deployment to close the acceptance gate.
