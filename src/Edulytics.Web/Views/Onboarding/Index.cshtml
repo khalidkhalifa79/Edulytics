@@ -70,10 +70,14 @@
             </label>
 
             <label class="onboarding-field">
-                <span>@T["CountryCode"]</span>
-                <input asp-for="CountryCode"
-                       maxlength="10"
-                       autocomplete="country" />
+                <span>@T["Country"]</span>
+                <select asp-for="CountryCode"
+                        class="onboarding-country-select"
+                        autocomplete="country">
+                    <option value="">@T["SelectCountry"]</option>
+                    <option value="PL">@T["Country_PL"]</option>
+                    <option value="AE">@T["Country_AE"]</option>
+                </select>
                 <span asp-validation-for="CountryCode"
                       class="text-danger"></span>
             </label>

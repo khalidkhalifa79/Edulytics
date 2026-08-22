@@ -1,104 +1,321 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
-  <resheader name="version"><value>2.0</value></resheader>
-  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
-  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
-  <data name="Eyebrow" xml:space="preserve"><value>Schools</value></data>
-  <data name="RequestDemoTitle" xml:space="preserve"><value>Request a demo</value></data>
-  <data name="RequestDemoIntro" xml:space="preserve"><value>Tell us about your school. A demo request does not create an account or activate a subscription.</value></data>
-  <data name="SchoolName" xml:space="preserve"><value>School name</value></data>
-  <data name="ContactName" xml:space="preserve"><value>Contact name</value></data>
-  <data name="WorkEmail" xml:space="preserve"><value>Work email</value></data>
-  <data name="Phone" xml:space="preserve"><value>Phone (optional)</value></data>
-  <data name="CountryCode" xml:space="preserve"><value>Country code</value></data>
-  <data name="City" xml:space="preserve"><value>City</value></data>
-  <data name="EstimatedStudentCount" xml:space="preserve"><value>Estimated student count</value></data>
-  <data name="Message" xml:space="preserve"><value>Message (optional)</value></data>
-  <data name="PrivacyAccepted" xml:space="preserve"><value>I agree that my contact details may be used to respond to this demo request.</value></data>
-  <data name="SubmitDemoRequest" xml:space="preserve"><value>Send demo request</value></data>
-  <data name="MinimumSeatsHint" xml:space="preserve"><value>Launch plans start at 500 licensed student seats.</value></data>
-  <data name="ThanksTitle" xml:space="preserve"><value>Demo request received</value></data>
-  <data name="ThanksMessage" xml:space="preserve"><value>Thank you. The request has been recorded for follow-up.</value></data>
-  <data name="BackHome" xml:space="preserve"><value>Back to home</value></data>
-  <data name="DashboardTitle" xml:space="preserve"><value>Customer onboarding</value></data>
-  <data name="DashboardDescription" xml:space="preserve"><value>Review demo leads, temporary demos and controlled school provisioning.</value></data>
-  <data name="ManageOnboarding" xml:space="preserve"><value>Manage onboarding</value></data>
-  <data name="LeadsTitle" xml:space="preserve"><value>Demo leads</value></data>
-  <data name="NoLeads" xml:space="preserve"><value>No demo leads have been recorded.</value></data>
-  <data name="Status" xml:space="preserve"><value>Status</value></data>
-  <data name="Students" xml:space="preserve"><value>Students</value></data>
-  <data name="Created" xml:space="preserve"><value>Created</value></data>
-  <data name="Open" xml:space="preserve"><value>Open</value></data>
-  <data name="BackToOnboarding" xml:space="preserve"><value>Back to onboarding</value></data>
-  <data name="LeadDetails" xml:space="preserve"><value>Lead details</value></data>
-  <data name="DemoSchedule" xml:space="preserve"><value>Demo scheduled at (UTC)</value></data>
-  <data name="InternalNote" xml:space="preserve"><value>Internal note</value></data>
-  <data name="NextStatus" xml:space="preserve"><value>Next status</value></data>
-  <data name="UpdateStatus" xml:space="preserve"><value>Update status</value></data>
-  <data name="TemporaryDemo" xml:space="preserve"><value>Temporary demo</value></data>
-  <data name="GrantDemo" xml:space="preserve"><value>Grant 7-day demo</value></data>
-  <data name="DemoStarts" xml:space="preserve"><value>Starts</value></data>
-  <data name="DemoExpires" xml:space="preserve"><value>Expires</value></data>
-  <data name="DemoUsable" xml:space="preserve"><value>Currently usable</value></data>
-  <data name="Yes" xml:space="preserve"><value>Yes</value></data>
-  <data name="No" xml:space="preserve"><value>No</value></data>
-  <data name="ExtendDemo" xml:space="preserve"><value>Extend 7 days</value></data>
-  <data name="ExpireDemo" xml:space="preserve"><value>Expire now</value></data>
-  <data name="RevokeDemo" xml:space="preserve"><value>Revoke demo</value></data>
-  <data name="RevokeReason" xml:space="preserve"><value>Revocation reason</value></data>
-  <data name="CustomerProvisioning" xml:space="preserve"><value>Customer provisioning</value></data>
-  <data name="ProvisioningExplanation" xml:space="preserve"><value>Provisioning creates the real school as suspended. Commercial activation remains blocked until the later payment-confirmation phase.</value></data>
-  <data name="SchoolCode" xml:space="preserve"><value>School code</value></data>
-  <data name="DefaultCulture" xml:space="preserve"><value>Default language</value></data>
-  <data name="TimeZone" xml:space="preserve"><value>Time zone</value></data>
-  <data name="ProvisionCustomer" xml:space="preserve"><value>Provision customer</value></data>
-  <data name="ProvisionedSchool" xml:space="preserve"><value>Provisioned school</value></data>
-  <data name="InvitationSent" xml:space="preserve"><value>The SchoolAdmin invitation was queued successfully.</value></data>
-  <data name="InvitationFailed" xml:space="preserve"><value>The school/user was created, but invitation delivery was not confirmed. The setup link can be resent later.</value></data>
-  <data name="ActionSucceeded" xml:space="preserve"><value>The onboarding action was completed.</value></data>
-  <data name="Status_New" xml:space="preserve"><value>New</value></data>
-  <data name="Status_Contacted" xml:space="preserve"><value>Contacted</value></data>
-  <data name="Status_DemoScheduled" xml:space="preserve"><value>Demo scheduled</value></data>
-  <data name="Status_DemoCompleted" xml:space="preserve"><value>Demo completed</value></data>
-  <data name="Status_Qualified" xml:space="preserve"><value>Qualified</value></data>
-  <data name="Status_Won" xml:space="preserve"><value>Won</value></data>
-  <data name="Status_Lost" xml:space="preserve"><value>Lost</value></data>
-  <data name="Error_RequiredSchoolName" xml:space="preserve"><value>School name is required.</value></data>
-  <data name="Error_SchoolNameTooLong" xml:space="preserve"><value>School name is too long.</value></data>
-  <data name="Error_RequiredContactName" xml:space="preserve"><value>Contact name is required.</value></data>
-  <data name="Error_ContactNameTooLong" xml:space="preserve"><value>Contact name is too long.</value></data>
-  <data name="Error_RequiredEmail" xml:space="preserve"><value>Work email is required.</value></data>
-  <data name="Error_InvalidEmail" xml:space="preserve"><value>Enter a valid work email.</value></data>
-  <data name="Error_EmailTooLong" xml:space="preserve"><value>Work email is too long.</value></data>
-  <data name="Error_PhoneTooLong" xml:space="preserve"><value>Phone number is too long.</value></data>
-  <data name="Error_RequiredCountry" xml:space="preserve"><value>Country code is required.</value></data>
-  <data name="Error_CountryTooLong" xml:space="preserve"><value>Country code is too long.</value></data>
-  <data name="Error_RequiredCity" xml:space="preserve"><value>City is required.</value></data>
-  <data name="Error_CityTooLong" xml:space="preserve"><value>City is too long.</value></data>
-  <data name="Error_MinimumStudentCount" xml:space="preserve"><value>At least 500 students are required for the launch school plans.</value></data>
-  <data name="Error_MessageTooLong" xml:space="preserve"><value>Message is too long.</value></data>
-  <data name="Error_PrivacyConsentRequired" xml:space="preserve"><value>Consent is required before submitting the request.</value></data>
-  <data name="Error_NotFound" xml:space="preserve"><value>The onboarding record was not found.</value></data>
-  <data name="Error_InvalidTransition" xml:space="preserve"><value>This lead status transition is not allowed.</value></data>
-  <data name="Error_DemoScheduleRequired" xml:space="preserve"><value>A demo schedule is required.</value></data>
-  <data name="Error_DemoNotQualified" xml:space="preserve"><value>The lead must be qualified before temporary demo access can be granted.</value></data>
-  <data name="Error_DemoAlreadyExists" xml:space="preserve"><value>Temporary demo access already exists.</value></data>
-  <data name="Error_DemoNotFound" xml:space="preserve"><value>Temporary demo access was not found.</value></data>
-  <data name="Error_DemoAlreadyRevoked" xml:space="preserve"><value>The demo has already been revoked.</value></data>
-  <data name="Error_DemoAlreadyConverted" xml:space="preserve"><value>The demo was already converted to a customer school.</value></data>
-  <data name="Error_RevokeReasonRequired" xml:space="preserve"><value>A revocation reason is required.</value></data>
-  <data name="Error_RevokeReasonTooLong" xml:space="preserve"><value>The revocation reason is too long.</value></data>
-  <data name="Error_InternalNoteTooLong" xml:space="preserve"><value>The internal note is too long.</value></data>
-  <data name="Error_ProvisionRequiresWon" xml:space="preserve"><value>The lead must be Won before customer provisioning.</value></data>
-  <data name="Error_RequiredSchoolCode" xml:space="preserve"><value>School code is required.</value></data>
-  <data name="Error_InvalidSchoolCode" xml:space="preserve"><value>School code may contain only A-Z, 0-9 and hyphen.</value></data>
-  <data name="Error_SchoolCodeTooLong" xml:space="preserve"><value>School code is too long.</value></data>
-  <data name="Error_DuplicateSchoolCode" xml:space="preserve"><value>That school code is already in use.</value></data>
-  <data name="Error_InvalidCulture" xml:space="preserve"><value>Choose English or Polish.</value></data>
-  <data name="Error_RequiredTimeZone" xml:space="preserve"><value>Time zone is required.</value></data>
-  <data name="Error_TimeZoneTooLong" xml:space="preserve"><value>Time zone is too long.</value></data>
-  <data name="Error_DuplicateEmail" xml:space="preserve"><value>This email is already assigned to an application user.</value></data>
-  <data name="Error_ConcurrencyConflict" xml:space="preserve"><value>The record changed in another session. Reload and try again.</value></data>
-  <data name="Error_PersistenceError" xml:space="preserve"><value>The action could not be saved.</value></data>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+  </resheader>
+  <data name="Eyebrow" xml:space="preserve">
+    <value>Schools</value>
+  </data>
+  <data name="RequestDemoTitle" xml:space="preserve">
+    <value>Request a demo</value>
+  </data>
+  <data name="RequestDemoIntro" xml:space="preserve">
+    <value>Tell us about your school. A demo request does not create an account or activate a subscription.</value>
+  </data>
+  <data name="SchoolName" xml:space="preserve">
+    <value>School name</value>
+  </data>
+  <data name="ContactName" xml:space="preserve">
+    <value>Contact name</value>
+  </data>
+  <data name="WorkEmail" xml:space="preserve">
+    <value>Work email</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Phone (optional)</value>
+  </data>
+  <data name="CountryCode" xml:space="preserve">
+    <value>Country code</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="EstimatedStudentCount" xml:space="preserve">
+    <value>Estimated student count</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Message (optional)</value>
+  </data>
+  <data name="PrivacyAccepted" xml:space="preserve">
+    <value>I agree that my contact details may be used to respond to this demo request.</value>
+  </data>
+  <data name="SubmitDemoRequest" xml:space="preserve">
+    <value>Send demo request</value>
+  </data>
+  <data name="MinimumSeatsHint" xml:space="preserve">
+    <value>Launch plans start at 500 licensed student seats.</value>
+  </data>
+  <data name="ThanksTitle" xml:space="preserve">
+    <value>Demo request received</value>
+  </data>
+  <data name="ThanksMessage" xml:space="preserve">
+    <value>Thank you. The request has been recorded for follow-up.</value>
+  </data>
+  <data name="BackHome" xml:space="preserve">
+    <value>Back to home</value>
+  </data>
+  <data name="DashboardTitle" xml:space="preserve">
+    <value>Customer onboarding</value>
+  </data>
+  <data name="DashboardDescription" xml:space="preserve">
+    <value>Review demo leads, temporary demos and controlled school provisioning.</value>
+  </data>
+  <data name="ManageOnboarding" xml:space="preserve">
+    <value>Manage onboarding</value>
+  </data>
+  <data name="LeadsTitle" xml:space="preserve">
+    <value>Demo leads</value>
+  </data>
+  <data name="NoLeads" xml:space="preserve">
+    <value>No demo leads have been recorded.</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Students" xml:space="preserve">
+    <value>Students</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Created</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="BackToOnboarding" xml:space="preserve">
+    <value>Back to onboarding</value>
+  </data>
+  <data name="LeadDetails" xml:space="preserve">
+    <value>Lead details</value>
+  </data>
+  <data name="DemoSchedule" xml:space="preserve">
+    <value>Demo scheduled at (UTC)</value>
+  </data>
+  <data name="InternalNote" xml:space="preserve">
+    <value>Internal note</value>
+  </data>
+  <data name="NextStatus" xml:space="preserve">
+    <value>Next status</value>
+  </data>
+  <data name="UpdateStatus" xml:space="preserve">
+    <value>Update status</value>
+  </data>
+  <data name="TemporaryDemo" xml:space="preserve">
+    <value>Temporary demo</value>
+  </data>
+  <data name="GrantDemo" xml:space="preserve">
+    <value>Grant 7-day demo</value>
+  </data>
+  <data name="DemoStarts" xml:space="preserve">
+    <value>Starts</value>
+  </data>
+  <data name="DemoExpires" xml:space="preserve">
+    <value>Expires</value>
+  </data>
+  <data name="DemoUsable" xml:space="preserve">
+    <value>Currently usable</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="ExtendDemo" xml:space="preserve">
+    <value>Extend 7 days</value>
+  </data>
+  <data name="ExpireDemo" xml:space="preserve">
+    <value>Expire now</value>
+  </data>
+  <data name="RevokeDemo" xml:space="preserve">
+    <value>Revoke demo</value>
+  </data>
+  <data name="RevokeReason" xml:space="preserve">
+    <value>Revocation reason</value>
+  </data>
+  <data name="CustomerProvisioning" xml:space="preserve">
+    <value>Customer provisioning</value>
+  </data>
+  <data name="ProvisioningExplanation" xml:space="preserve">
+    <value>Provisioning creates the real school as suspended. Commercial activation remains blocked until the later payment-confirmation phase.</value>
+  </data>
+  <data name="SchoolCode" xml:space="preserve">
+    <value>School code</value>
+  </data>
+  <data name="DefaultCulture" xml:space="preserve">
+    <value>Default language</value>
+  </data>
+  <data name="TimeZone" xml:space="preserve">
+    <value>Time zone</value>
+  </data>
+  <data name="ProvisionCustomer" xml:space="preserve">
+    <value>Provision customer</value>
+  </data>
+  <data name="ProvisionedSchool" xml:space="preserve">
+    <value>Provisioned school</value>
+  </data>
+  <data name="InvitationSent" xml:space="preserve">
+    <value>The SchoolAdmin invitation was queued successfully.</value>
+  </data>
+  <data name="InvitationFailed" xml:space="preserve">
+    <value>The school/user was created, but invitation delivery was not confirmed. The setup link can be resent later.</value>
+  </data>
+  <data name="ActionSucceeded" xml:space="preserve">
+    <value>The onboarding action was completed.</value>
+  </data>
+  <data name="Status_New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="Status_Contacted" xml:space="preserve">
+    <value>Contacted</value>
+  </data>
+  <data name="Status_DemoScheduled" xml:space="preserve">
+    <value>Demo scheduled</value>
+  </data>
+  <data name="Status_DemoCompleted" xml:space="preserve">
+    <value>Demo completed</value>
+  </data>
+  <data name="Status_Qualified" xml:space="preserve">
+    <value>Qualified</value>
+  </data>
+  <data name="Status_Won" xml:space="preserve">
+    <value>Won</value>
+  </data>
+  <data name="Status_Lost" xml:space="preserve">
+    <value>Lost</value>
+  </data>
+  <data name="Error_RequiredSchoolName" xml:space="preserve">
+    <value>School name is required.</value>
+  </data>
+  <data name="Error_SchoolNameTooLong" xml:space="preserve">
+    <value>School name is too long.</value>
+  </data>
+  <data name="Error_RequiredContactName" xml:space="preserve">
+    <value>Contact name is required.</value>
+  </data>
+  <data name="Error_ContactNameTooLong" xml:space="preserve">
+    <value>Contact name is too long.</value>
+  </data>
+  <data name="Error_RequiredEmail" xml:space="preserve">
+    <value>Work email is required.</value>
+  </data>
+  <data name="Error_InvalidEmail" xml:space="preserve">
+    <value>Enter a valid work email.</value>
+  </data>
+  <data name="Error_EmailTooLong" xml:space="preserve">
+    <value>Work email is too long.</value>
+  </data>
+  <data name="Error_PhoneTooLong" xml:space="preserve">
+    <value>Phone number is too long.</value>
+  </data>
+  <data name="Error_RequiredCountry" xml:space="preserve">
+    <value>Country code is required.</value>
+  </data>
+  <data name="Error_CountryTooLong" xml:space="preserve">
+    <value>Country code is too long.</value>
+  </data>
+  <data name="Error_RequiredCity" xml:space="preserve">
+    <value>City is required.</value>
+  </data>
+  <data name="Error_CityTooLong" xml:space="preserve">
+    <value>City is too long.</value>
+  </data>
+  <data name="Error_MinimumStudentCount" xml:space="preserve">
+    <value>At least 500 students are required for the launch school plans.</value>
+  </data>
+  <data name="Error_MessageTooLong" xml:space="preserve">
+    <value>Message is too long.</value>
+  </data>
+  <data name="Error_PrivacyConsentRequired" xml:space="preserve">
+    <value>Consent is required before submitting the request.</value>
+  </data>
+  <data name="Error_NotFound" xml:space="preserve">
+    <value>The onboarding record was not found.</value>
+  </data>
+  <data name="Error_InvalidTransition" xml:space="preserve">
+    <value>This lead status transition is not allowed.</value>
+  </data>
+  <data name="Error_DemoScheduleRequired" xml:space="preserve">
+    <value>A demo schedule is required.</value>
+  </data>
+  <data name="Error_DemoNotQualified" xml:space="preserve">
+    <value>The lead must be qualified before temporary demo access can be granted.</value>
+  </data>
+  <data name="Error_DemoAlreadyExists" xml:space="preserve">
+    <value>Temporary demo access already exists.</value>
+  </data>
+  <data name="Error_DemoNotFound" xml:space="preserve">
+    <value>Temporary demo access was not found.</value>
+  </data>
+  <data name="Error_DemoAlreadyRevoked" xml:space="preserve">
+    <value>The demo has already been revoked.</value>
+  </data>
+  <data name="Error_DemoAlreadyConverted" xml:space="preserve">
+    <value>The demo was already converted to a customer school.</value>
+  </data>
+  <data name="Error_RevokeReasonRequired" xml:space="preserve">
+    <value>A revocation reason is required.</value>
+  </data>
+  <data name="Error_RevokeReasonTooLong" xml:space="preserve">
+    <value>The revocation reason is too long.</value>
+  </data>
+  <data name="Error_InternalNoteTooLong" xml:space="preserve">
+    <value>The internal note is too long.</value>
+  </data>
+  <data name="Error_ProvisionRequiresWon" xml:space="preserve">
+    <value>The lead must be Won before customer provisioning.</value>
+  </data>
+  <data name="Error_RequiredSchoolCode" xml:space="preserve">
+    <value>School code is required.</value>
+  </data>
+  <data name="Error_InvalidSchoolCode" xml:space="preserve">
+    <value>School code may contain only A-Z, 0-9 and hyphen.</value>
+  </data>
+  <data name="Error_SchoolCodeTooLong" xml:space="preserve">
+    <value>School code is too long.</value>
+  </data>
+  <data name="Error_DuplicateSchoolCode" xml:space="preserve">
+    <value>That school code is already in use.</value>
+  </data>
+  <data name="Error_InvalidCulture" xml:space="preserve">
+    <value>Choose English or Polish.</value>
+  </data>
+  <data name="Error_RequiredTimeZone" xml:space="preserve">
+    <value>Time zone is required.</value>
+  </data>
+  <data name="Error_TimeZoneTooLong" xml:space="preserve">
+    <value>Time zone is too long.</value>
+  </data>
+  <data name="Error_DuplicateEmail" xml:space="preserve">
+    <value>This email is already assigned to an application user.</value>
+  </data>
+  <data name="Error_ConcurrencyConflict" xml:space="preserve">
+    <value>The record changed in another session. Reload and try again.</value>
+  </data>
+  <data name="Error_PersistenceError" xml:space="preserve">
+    <value>The action could not be saved.</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="SelectCountry" xml:space="preserve">
+    <value>Select a country</value>
+  </data>
+  <data name="Country_PL" xml:space="preserve">
+    <value>Poland</value>
+  </data>
+  <data name="Country_AE" xml:space="preserve">
+    <value>United Arab Emirates</value>
+  </data>
+  <data name="Error_UnsupportedCountry" xml:space="preserve">
+    <value>Choose one of the currently supported countries.</value>
+  </data>
 </root>

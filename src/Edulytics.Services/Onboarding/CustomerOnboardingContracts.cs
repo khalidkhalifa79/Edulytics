@@ -40,7 +40,8 @@ public enum OnboardingErrorCode
     TimeZoneTooLong = 34,
     DuplicateEmail = 35,
     ConcurrencyConflict = 36,
-    PersistenceError = 37
+    PersistenceError = 37,
+    UnsupportedCountry = 38
 }
 
 public sealed record OnboardingError(string Field, OnboardingErrorCode Code);
