@@ -21,7 +21,7 @@ public sealed class AuditController
     [HttpGet("")]
     public async Task<IActionResult> Index(
         Guid? schoolId,
-        string? action,
+        string? auditAction,
         string? entityType,
         string? correlationId,
         Guid? actorUserId,
@@ -47,7 +47,7 @@ public sealed class AuditController
                 actorUserIdValue,
                 new AuditQueryRequest(
                     schoolId,
-                    action,
+                    auditAction,
                     entityType,
                     correlationId,
                     actorUserId,

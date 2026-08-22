@@ -35,12 +35,12 @@
 
             <div class="col-md-4">
                 <label class="form-label"
-                       for="action">
+                       for="auditAction">
                     @T["Action"]
                 </label>
                 <input class="form-control"
-                       id="action"
-                       name="action"
+                       id="auditAction"
+                       name="auditAction"
                        value="@Model.Query.Action" />
             </div>
 
@@ -247,7 +247,7 @@
             <a asp-controller="Audit"
                asp-action="Index"
                asp-route-schoolId="@Model.Query.SchoolId"
-               asp-route-action="@Model.Query.Action"
+               asp-route-auditAction="@Model.Query.Action"
                asp-route-entityType="@Model.Query.EntityType"
                asp-route-correlationId="@Model.Query.CorrelationId"
                asp-route-actorUserId="@Model.Query.ActorUserId"
@@ -269,7 +269,7 @@
             <a asp-controller="Audit"
                asp-action="Index"
                asp-route-schoolId="@Model.Query.SchoolId"
-               asp-route-action="@Model.Query.Action"
+               asp-route-auditAction="@Model.Query.Action"
                asp-route-entityType="@Model.Query.EntityType"
                asp-route-correlationId="@Model.Query.CorrelationId"
                asp-route-actorUserId="@Model.Query.ActorUserId"
