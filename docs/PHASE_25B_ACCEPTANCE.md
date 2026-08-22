@@ -132,3 +132,17 @@ The corrective:
 
 New markets must be enabled explicitly together with their commercial, billing
 and tax rules.
+
+## Staging corrective — DemoScheduled UTC persistence
+
+Staging browser acceptance found that `Contacted -> DemoScheduled` failed with
+the generic persistence error after a valid `datetime-local` value was entered.
+
+Browser `datetime-local` values are timezone-less. The onboarding field is
+explicitly defined as UTC, so the service now explicitly marks the
+administrator-entered value as `DateTimeKind.Utc` before assigning
+`DemoScheduledAtUtc`.
+
+A regression test covers `DateTimeKind.Unspecified -> DateTimeKind.Utc`.
+
+No migration or Data-layer change is required.
