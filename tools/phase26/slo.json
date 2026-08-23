@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "environment": "current-approved-staging",
+  "normal": {
+    "concurrency": 8,
+    "duration_seconds": 120,
+    "p95_ms_max": 2000,
+    "p99_ms_max": 4000,
+    "unexpected_error_rate_max": 0.01
+  },
+  "stress": {
+    "concurrency_stages": [8, 16, 24, 32, 48, 64],
+    "stage_seconds": 20,
+    "allowed_controlled_shed_statuses": [429, 503],
+    "unexpected_5xx_allowed": 0,
+    "recovery_seconds_max": 60
+  },
+  "spike": {
+    "concurrency": 64,
+    "waves": 5,
+    "wave_pause_seconds": 2,
+    "recovery_seconds_max": 60
+  },
+  "signalr": {
+    "connections_per_hub": 10,
+    "hold_seconds": 30,
+    "success_ratio_min": 0.90
+  },
+  "soak": {
+    "minimum_minutes": 360,
+    "target_rps": 2.0,
+    "p95_ms_max": 2500,
+    "p99_ms_max": 5000,
+    "unexpected_error_rate_max": 0.01
+  }
+}
