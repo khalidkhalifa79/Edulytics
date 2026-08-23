@@ -2,7 +2,7 @@ services:
   - type: web
     name: edulytics-staging
     runtime: docker
-    plan: starter
+    plan: free
     region: frankfurt
     branch: main
 
@@ -14,12 +14,9 @@ services:
     healthCheckPath: /health/ready
     maxShutdownDelaySeconds: 60
 
-    preDeployCommand: >-
-      ConnectionStrings__DefaultConnection="$ConnectionStrings__MigrationConnection"
-      EDULYTICS_CONNECTION_STRING="$ConnectionStrings__MigrationConnection"
-      /app/efbundle
-      --connection "$ConnectionStrings__MigrationConnection"
-
+    # Temporary free staging applies migrations in
+    # docker/render-entrypoint.sh before the web process starts.
+    # Production will use its own release/migration phase.
     envVars:
       - key: ASPNETCORE_ENVIRONMENT
         value: Production
