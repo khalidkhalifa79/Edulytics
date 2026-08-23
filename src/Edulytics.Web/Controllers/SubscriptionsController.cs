@@ -117,20 +117,14 @@ public sealed class SubscriptionsController : Controller
 
     [HttpPost("{schoolId:guid}/Activate")]
     [ValidateAntiForgeryToken]
-    public Task<IActionResult> Activate(
+    public IActionResult Activate(
         Guid schoolId,
         string rowVersion,
-        CancellationToken cancellationToken) =>
-        ExecuteAsync(
-            rowVersion,
-            (actor, version) =>
-                _subscriptions.ActivateAsync(
-                    actor,
-                    schoolId,
-                    agreedActivationAtUtc: null,
-                    version,
-                    cancellationToken),
-            "SuccessActivated");
+        CancellationToken cancellationToken)
+    {
+        TempData["SubscriptionError"] = _text["Phase25DBillingRequired"].Value;
+        return RedirectToAction(nameof(Index));
+    }
 
     [HttpPost("{schoolId:guid}/IncreaseSeats")]
     [ValidateAntiForgeryToken]
@@ -189,19 +183,14 @@ public sealed class SubscriptionsController : Controller
 
     [HttpPost("{schoolId:guid}/Renew")]
     [ValidateAntiForgeryToken]
-    public Task<IActionResult> Renew(
+    public IActionResult Renew(
         Guid schoolId,
         string rowVersion,
-        CancellationToken cancellationToken) =>
-        ExecuteAsync(
-            rowVersion,
-            (actor, version) =>
-                _subscriptions.RenewAsync(
-                    actor,
-                    schoolId,
-                    version,
-                    cancellationToken),
-            "SuccessRenewed");
+        CancellationToken cancellationToken)
+    {
+        TempData["SubscriptionError"] = _text["Phase25DBillingRequired"].Value;
+        return RedirectToAction(nameof(Index));
+    }
 
     [HttpPost("{schoolId:guid}/Suspend")]
     [ValidateAntiForgeryToken]

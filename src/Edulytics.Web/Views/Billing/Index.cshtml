@@ -1,0 +1,216 @@
+@using Edulytics.Core.Enums
+@using Edulytics.Services.Billing
+@model Edulytics.Web.ViewModels.Billing.BillingIndexViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.BillingResource> B
+
+@{
+    ViewData["Title"] = B["Title"];
+}
+
+<section class="school-page billing-page">
+    <header class="school-page-header">
+        <div>
+            <p class="school-eyebrow">@B["Eyebrow"]</p>
+            <h1>@B["Title"]</h1>
+            <p>@B["Subtitle"]</p>
+        </div>
+        <a class="school-button" asp-controller="Platform" asp-action="Dashboard">@B["BackToPlatform"]</a>
+    </header>
+
+    @if (TempData["BillingSuccess"] is string success)
+    {
+        <div class="school-alert school-alert-success" role="status">@success</div>
+    }
+    @if (TempData["BillingError"] is string error)
+    {
+        <div class="school-alert school-alert-error" role="alert">@error</div>
+    }
+
+    @if (Model.Schools.Count == 0)
+    {
+        <section class="school-card"><p>@B["NoSubscriptions"]</p></section>
+    }
+
+    @foreach (var school in Model.Schools)
+    {
+        var subscriptionVersion = Convert.ToBase64String(school.SubscriptionRowVersion);
+        var profileVersion = school.Profile is null
+            ? string.Empty
+            : Convert.ToBase64String(school.Profile.RowVersion);
+
+        <article class="school-card billing-school"
+                 data-billing-school-id="@school.SchoolId"
+                 data-subscription-status="@school.SubscriptionStatus">
+            <header class="billing-school-header">
+                <div>
+                    <p class="school-eyebrow">@school.SchoolCode · @school.CountryCode</p>
+                    <h2>@school.SchoolName</h2>
+                </div>
+                <dl class="billing-summary">
+                    <div><dt>@B["SubscriptionStatus"]</dt><dd>@school.SubscriptionStatus</dd></div>
+                    <div><dt>@B["CommittedSeats"]</dt><dd>@school.CommittedSeats</dd></div>
+                    <div><dt>@B["InvoiceCurrency"]</dt><dd>@school.CommercialCurrency</dd></div>
+                    <div><dt>@B["UnitPrice"]</dt><dd>@school.PricePerStudentPerMonth.ToString("0.00")</dd></div>
+                </dl>
+            </header>
+
+            <details class="billing-panel">
+                <summary>@B["BillingProfile"]</summary>
+                <form method="post" asp-action="Profile" asp-route-schoolId="@school.SchoolId" class="billing-grid-form">
+                    <input type="hidden" name="rowVersion" value="@profileVersion" />
+                    <label>@B["LegalName"]<input name="legalName" value="@(school.Profile?.LegalName ?? school.SchoolName)" required /></label>
+                    <label>@B["BillingAddress"]<input name="billingAddress" value="@(school.Profile?.BillingAddress ?? string.Empty)" required /></label>
+                    <label>@B["CountryCode"]<input name="countryCode" value="@(school.Profile?.CountryCode ?? school.CountryCode)" maxlength="2" required /></label>
+                    <label>@B["TaxIdentifier"]<input name="taxIdentifier" value="@(school.Profile?.TaxIdentifier ?? string.Empty)" /></label>
+                    <label>@B["InvoiceEmail"]<input name="invoiceEmail" type="email" value="@(school.Profile?.InvoiceEmail ?? string.Empty)" required /></label>
+                    <label>@B["TaxTreatment"]<input name="taxTreatmentCode" value="@(school.Profile?.TaxTreatmentCode ?? string.Empty)" /></label>
+                    <label>@B["SettlementCurrency"]<input name="defaultSettlementCurrencyCode" maxlength="3" value="@(school.Profile?.DefaultSettlementCurrencyCode ?? (school.CommercialCurrency == CommercialCurrency.AED ? "EUR" : "PLN"))" /></label>
+                    <label class="billing-span-2">@B["PaymentInstructions"]<textarea name="paymentInstructions" rows="3" required>@(school.Profile?.PaymentInstructions ?? string.Empty)</textarea></label>
+                    <button type="submit" class="school-button school-button-primary">@B["SaveProfile"]</button>
+                </form>
+            </details>
+
+            @if (school.Profile is not null)
+            {
+                <section class="billing-actions">
+                    <h3>@B["GenerateInvoice"]</h3>
+                    <form method="post" asp-action="InitialInvoice" asp-route-schoolId="@school.SchoolId" class="billing-inline-form">
+                        <input name="taxAmount" type="number" min="0" step="0.01" value="0" required />
+                        <input name="settlementEquivalentAmount" type="number" min="0" step="0.01" placeholder="@B["SettlementEquivalent"]" />
+                        <button type="submit" class="school-button">@B["InitialInvoice"]</button>
+                    </form>
+                    <form method="post" asp-action="InstallmentInvoice" asp-route-schoolId="@school.SchoolId" class="billing-inline-form">
+                        <input name="taxAmount" type="number" min="0" step="0.01" value="0" required />
+                        <input name="settlementEquivalentAmount" type="number" min="0" step="0.01" placeholder="@B["SettlementEquivalent"]" />
+                        <button type="submit" class="school-button">@B["NextInstallment"]</button>
+                    </form>
+                    <form method="post" asp-action="ProrationInvoice" asp-route-schoolId="@school.SchoolId" class="billing-inline-form">
+                        <input name="taxAmount" type="number" min="0" step="0.01" value="0" required />
+                        <input name="settlementEquivalentAmount" type="number" min="0" step="0.01" placeholder="@B["SettlementEquivalent"]" />
+                        <button type="submit" class="school-button">@B["SeatProration"]</button>
+                    </form>
+                    <form method="post" asp-action="RenewalInvoice" asp-route-schoolId="@school.SchoolId" class="billing-inline-form">
+                        <input name="taxAmount" type="number" min="0" step="0.01" value="0" required />
+                        <input name="settlementEquivalentAmount" type="number" min="0" step="0.01" placeholder="@B["SettlementEquivalent"]" />
+                        <button type="submit" class="school-button">@B["RenewalInvoice"]</button>
+                    </form>
+                </section>
+
+                @if (school.SubscriptionStatus == SubscriptionStatus.PendingActivation)
+                {
+                    <details class="billing-panel">
+                        <summary>@B["AgreementOverride"]</summary>
+                        <form method="post" asp-action="ActivateByAgreement" asp-route-schoolId="@school.SchoolId" class="billing-inline-form">
+                            <input type="hidden" name="rowVersion" value="@subscriptionVersion" />
+                            <input type="datetime-local" name="agreedActivationAtUtc" value="@DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm")" required />
+                            <input name="reason" placeholder="@B["Reason"]" required />
+                            <button type="submit" class="school-button school-button-warning">@B["ActivateByAgreement"]</button>
+                        </form>
+                    </details>
+                }
+
+                <form method="post" asp-action="ApplyPaidRenewal" asp-route-schoolId="@school.SchoolId" class="billing-inline-form">
+                    <input type="hidden" name="rowVersion" value="@subscriptionVersion" />
+                    <button type="submit" class="school-button">@B["ApplyPaidRenewal"]</button>
+                </form>
+            }
+
+            <section class="billing-invoices">
+                <h3>@B["Invoices"]</h3>
+                @if (school.Invoices.Count == 0)
+                {
+                    <p>@B["NoInvoices"]</p>
+                }
+
+                @foreach (var invoice in school.Invoices)
+                {
+                    var invoiceVersion = Convert.ToBase64String(invoice.RowVersion);
+                    <article class="billing-invoice"
+                             data-invoice-id="@invoice.Id"
+                             data-invoice-number="@invoice.InvoiceNumber"
+                             data-invoice-kind="@invoice.Kind"
+                             data-invoice-status="@invoice.EffectiveStatus"
+                             data-total="@invoice.TotalAmount.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture)"
+                             data-outstanding="@invoice.OutstandingAmount.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture)">
+                        <header>
+                            <div><strong>@invoice.InvoiceNumber</strong><span>@invoice.Kind · @invoice.EffectiveStatus</span></div>
+                            <div><strong>@invoice.TotalAmount.ToString("0.00") @invoice.InvoiceCurrency</strong><span>@B["Outstanding"]: @invoice.OutstandingAmount.ToString("0.00")</span></div>
+                        </header>
+
+                        <dl class="billing-summary">
+                            <div><dt>@B["IssueDate"]</dt><dd>@invoice.IssueDateUtc.ToString("u")</dd></div>
+                            <div><dt>@B["DueDate"]</dt><dd>@invoice.DueDateUtc.ToString("u")</dd></div>
+                            <div><dt>@B["GraceEnds"]</dt><dd>@invoice.GraceEndsAtUtc.ToString("u")</dd></div>
+                            <div><dt>@B["Paid"]</dt><dd>@invoice.PaidAmount.ToString("0.00")</dd></div>
+                            <div><dt>@B["Refunded"]</dt><dd>@invoice.RefundedAmount.ToString("0.00")</dd></div>
+                            <div><dt>@B["SuspensionEligible"]</dt><dd>@(invoice.SuspensionEligible ? B["Yes"].Value : B["No"].Value)</dd></div>
+                        </dl>
+
+                        @if (invoice.Lines.Count > 0)
+                        {
+                            <ul class="billing-lines">
+                                @foreach (var line in invoice.Lines)
+                                {
+                                    <li data-seat-change-id="@line.SubscriptionSeatChangeId">
+                                        <span>@line.Description</span><strong>@line.NetAmount.ToString("0.00")</strong>
+                                        @if (line.ProrationNumeratorDays.HasValue)
+                                        {
+                                            <small>@B["Proration"]: @line.ProrationNumeratorDays/@line.ProrationDenominatorDays @if (line.QuantityMonths.HasValue) { <text> + @line.QuantityMonths @B["FullMonths"]</text> }</small>
+                                        }
+                                    </li>
+                                }
+                            </ul>
+                        }
+
+                        @if (invoice.OutstandingAmount > 0m)
+                        {
+                            <form method="post" asp-action="RecordPayment" asp-route-schoolId="@school.SchoolId" asp-route-invoiceId="@invoice.Id" class="billing-grid-form billing-payment-form">
+                                <label>@B["PaymentReference"]<input name="paymentReference" required /></label>
+                                <label>@B["EvidenceNote"]<input name="evidenceNote" /></label>
+                                <label>@B["ReceivedAmount"]<input name="receivedAmount" type="number" min="0.01" step="0.01" value="@invoice.OutstandingAmount.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture)" required /></label>
+                                <label>@B["ReceivedCurrency"]<input name="receivedCurrencyCode" maxlength="3" value="@invoice.InvoiceCurrency" required /></label>
+                                <label>@B["AppliedAmount"]<input name="appliedAmount" type="number" min="0.01" step="0.01" value="@invoice.OutstandingAmount.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture)" required /></label>
+                                <label>@B["ReceivedAt"]<input name="receivedAtUtc" type="datetime-local" value="@DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm")" required /></label>
+                                <button type="submit" class="school-button school-button-primary">@B["RecordPayment"]</button>
+                            </form>
+                        }
+
+                        @foreach (var payment in invoice.Payments)
+                        {
+                            var paymentVersion = Convert.ToBase64String(payment.RowVersion);
+                            <div class="billing-payment" data-payment-id="@payment.Id" data-payment-status="@payment.VerificationStatus">
+                                <span>@payment.PaymentReference · @payment.AppliedAmount.ToString("0.00") · @payment.VerificationStatus</span>
+                                @if (payment.VerificationStatus == BankTransferVerificationStatus.Pending)
+                                {
+                                    <form method="post" asp-action="ConfirmPayment" asp-route-schoolId="@school.SchoolId" asp-route-paymentId="@payment.Id">
+                                        <input type="hidden" name="rowVersion" value="@paymentVersion" />
+                                        <button type="submit" class="school-button school-button-primary">@B["Confirm"]</button>
+                                    </form>
+                                    <form method="post" asp-action="RejectPayment" asp-route-schoolId="@school.SchoolId" asp-route-paymentId="@payment.Id" class="billing-inline-form">
+                                        <input type="hidden" name="rowVersion" value="@paymentVersion" />
+                                        <input name="reason" placeholder="@B["Reason"]" required />
+                                        <button type="submit" class="school-button school-button-warning">@B["Reject"]</button>
+                                    </form>
+                                }
+                            </div>
+                        }
+
+                        @if (invoice.PaidAmount - invoice.RefundedAmount > 0m)
+                        {
+                            <details class="billing-panel">
+                                <summary>@B["RecordRefund"]</summary>
+                                <form method="post" asp-action="Refund" asp-route-schoolId="@school.SchoolId" asp-route-invoiceId="@invoice.Id" class="billing-inline-form">
+                                    <input type="hidden" name="rowVersion" value="@invoiceVersion" />
+                                    <input name="amount" type="number" min="0.01" step="0.01" required />
+                                    <input name="currencyCode" maxlength="3" value="@invoice.InvoiceCurrency" required />
+                                    <input name="reason" placeholder="@B["Reason"]" required />
+                                    <button type="submit" class="school-button">@B["RecordRefund"]</button>
+                                </form>
+                            </details>
+                        }
+                    </article>
+                }
+            </section>
+        </article>
+    }
+</section>

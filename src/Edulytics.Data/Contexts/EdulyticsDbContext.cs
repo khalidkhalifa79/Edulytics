@@ -56,6 +56,11 @@ public class EdulyticsDbContext
     public DbSet<DemoAccess> DemoAccesses => Set<DemoAccess>();
     public DbSet<SchoolSubscription> SchoolSubscriptions => Set<SchoolSubscription>();
     public DbSet<SubscriptionSeatChange> SubscriptionSeatChanges => Set<SubscriptionSeatChange>();
+    public DbSet<SchoolBillingProfile> SchoolBillingProfiles => Set<SchoolBillingProfile>();
+    public DbSet<BillingInvoice> BillingInvoices => Set<BillingInvoice>();
+    public DbSet<BillingInvoiceLine> BillingInvoiceLines => Set<BillingInvoiceLine>();
+    public DbSet<BankTransferPayment> BankTransferPayments => Set<BankTransferPayment>();
+    public DbSet<BillingRefund> BillingRefunds => Set<BillingRefund>();
     public DbSet<DataProtectionKey> DataProtectionKeys => Set<DataProtectionKey>();
 
     public override int SaveChanges(
@@ -168,6 +173,11 @@ public class EdulyticsDbContext
         builder.ApplyConfiguration(new DemoAccessConfiguration());
         builder.ApplyConfiguration(new SchoolSubscriptionConfiguration());
         builder.ApplyConfiguration(new SubscriptionSeatChangeConfiguration());
+        builder.ApplyConfiguration(new SchoolBillingProfileConfiguration());
+        builder.ApplyConfiguration(new BillingInvoiceConfiguration());
+        builder.ApplyConfiguration(new BillingInvoiceLineConfiguration());
+        builder.ApplyConfiguration(new BankTransferPaymentConfiguration());
+        builder.ApplyConfiguration(new BillingRefundConfiguration());
 
         builder.Entity<ApplicationRole>(entity =>
         {
