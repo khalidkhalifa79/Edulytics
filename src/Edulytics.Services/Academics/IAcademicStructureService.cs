@@ -71,6 +71,18 @@ public interface IAcademicStructureService
         CreateStudentProfileRequest request,
         CancellationToken cancellationToken = default);
 
+    Task<AcademicCommandResult> ArchiveStudentProfileAsync(
+        Guid actorUserId,
+        Guid studentProfileId,
+        byte[] expectedRowVersion,
+        CancellationToken cancellationToken = default);
+
+    Task<AcademicCommandResult> RestoreStudentProfileAsync(
+        Guid actorUserId,
+        Guid studentProfileId,
+        byte[] expectedRowVersion,
+        CancellationToken cancellationToken = default);
+
     Task<AcademicCommandResult> CreateStudentEnrollmentAsync(
         Guid actorUserId,
         CreateStudentEnrollmentRequest request,

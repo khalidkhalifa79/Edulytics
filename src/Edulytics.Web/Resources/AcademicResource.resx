@@ -92,4 +92,34 @@
   <data name="TeacherAssignments" xml:space="preserve"><value>Teacher assignments</value></data>
   <data name="Terms" xml:space="preserve"><value>Terms</value></data>
   <data name="YearDates" xml:space="preserve"><value>Dates</value></data>
+  <data name="StudentCommercialState" xml:space="preserve">
+    <value>Commercial seat</value>
+  </data>
+  <data name="StudentArchived" xml:space="preserve">
+    <value>Archived — no active seat</value>
+  </data>
+  <data name="StudentAvailable" xml:space="preserve">
+    <value>Current — seat rules apply</value>
+  </data>
+  <data name="ArchiveStudent" xml:space="preserve">
+    <value>Archive</value>
+  </data>
+  <data name="RestoreStudent" xml:space="preserve">
+    <value>Restore</value>
+  </data>
+  <data name="SuccessStudentArchived" xml:space="preserve">
+    <value>Student profile archived and its active seat was released.</value>
+  </data>
+  <data name="SuccessStudentRestored" xml:space="preserve">
+    <value>Student profile restored.</value>
+  </data>
+  <data name="ErrorStudentSeatLimitReached" xml:space="preserve">
+    <value>The committed student-seat limit has been reached.</value>
+  </data>
+  <data name="ErrorStudentAlreadyArchived" xml:space="preserve">
+    <value>This student profile is already archived.</value>
+  </data>
+  <data name="ErrorStudentNotArchived" xml:space="preserve">
+    <value>This student profile is not archived.</value>
+  </data>
 </root>

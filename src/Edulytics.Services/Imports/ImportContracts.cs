@@ -17,7 +17,8 @@ public enum ImportErrorCode
     BatchHasErrors = 11,
     BatchStateChanged = 12,
     ConcurrencyConflict = 13,
-    Persistence = 14
+    Persistence = 14,
+    SeatLimitReached = 15
 }
 
 public sealed record ImportResult<T>(

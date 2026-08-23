@@ -28,19 +28,22 @@ public sealed class SchoolUserManagementService
     private readonly IAuditService? _audit;
     private readonly IApplicationTransactionManager? _transactions;
     private readonly ICustomerOnboardingRepository? _onboarding;
+    private readonly ISchoolSubscriptionRepository? _subscriptions;
 
     public SchoolUserManagementService(
         ISchoolUserRepository users,
         ISchoolRepository schools,
         IAuditService? audit = null,
         IApplicationTransactionManager? transactions = null,
-        ICustomerOnboardingRepository? onboarding = null)
+        ICustomerOnboardingRepository? onboarding = null,
+        ISchoolSubscriptionRepository? subscriptions = null)
     {
         _users = users;
         _schools = schools;
         _audit = audit;
         _transactions = transactions;
         _onboarding = onboarding;
+        _subscriptions = subscriptions;
     }
 
     public async Task<SchoolUserQueryResult<SchoolUserListData>>
@@ -599,6 +602,15 @@ public sealed class SchoolUserManagementService
             }
         }
 
+        if (!await HasCommercialOperationalAccessAsync(
+                school.Id,
+                user.Id,
+                role,
+                cancellationToken))
+        {
+            return Denied();
+        }
+
         return new SchoolUserSignInDecision(
             true,
             false,
@@ -610,34 +622,17 @@ public sealed class SchoolUserManagementService
         Guid actorUserId,
         CancellationToken cancellationToken = default)
     {
-        var actor = await _users.GetActorAsync(
+        var decision = await EvaluateSignInAsync(
             actorUserId,
             cancellationToken);
 
-        if (actor is null ||
-            !actor.IsActive ||
-            actor.IsLocked)
-        {
+        if (!decision.Allowed)
             return false;
-        }
 
-        var role = GetSingleRole(actor.Roles);
+        if (decision.IsPlatformAdministrator)
+            return true;
 
-        if (actor.SchoolId is null)
-        {
-            return role == RoleNames.SuperAdmin;
-        }
-
-        if (role != RoleNames.SchoolAdmin)
-        {
-            return false;
-        }
-
-        var school = await _schools.GetByIdAsync(
-            actor.SchoolId.Value,
-            cancellationToken);
-
-        return school?.Status == SchoolStatus.Active;
+        return decision.Role == RoleNames.SchoolAdmin;
     }
 
     public async Task<SchoolUserActorContext?>
@@ -885,6 +880,17 @@ public sealed class SchoolUserManagementService
                 SchoolUserErrorCode.UserAccessDenied);
         }
 
+        if (!isPlatformActor &&
+            !await HasCommercialOperationalAccessAsync(
+                school.Id,
+                actor.Id,
+                actorRole!,
+                cancellationToken))
+        {
+            return ScopeResult.Fail(
+                SchoolUserErrorCode.UserAccessDenied);
+        }
+
         if (forMutation &&
             school.Status == SchoolStatus.Archived)
         {
@@ -928,6 +934,46 @@ public sealed class SchoolUserManagementService
         {
             return false;
         }
+    }
+
+    private async Task<bool> HasCommercialOperationalAccessAsync(
+        Guid schoolId,
+        Guid userId,
+        string role,
+        CancellationToken cancellationToken)
+    {
+        if (_subscriptions is null)
+            return true;
+
+        var subscription =
+            await _subscriptions.GetBySchoolAsync(
+                schoolId,
+                cancellationToken);
+
+        if (subscription is null)
+            return true;
+
+        var now = DateTime.UtcNow;
+
+        var operational =
+            subscription.Status ==
+                SubscriptionStatus.Active &&
+            subscription.CurrentTermStartsAtUtc.HasValue &&
+            subscription.CurrentTermEndsAtUtc.HasValue &&
+            subscription.CurrentTermStartsAtUtc.Value <= now &&
+            now < subscription.CurrentTermEndsAtUtc.Value;
+
+        if (!operational)
+            return false;
+
+        if (role != RoleNames.Student)
+            return true;
+
+        return await _subscriptions
+            .HasActiveStudentProfileForUserAsync(
+                schoolId,
+                userId,
+                cancellationToken);
     }
 
     private static SchoolUserErrorCode MapPersistenceError(

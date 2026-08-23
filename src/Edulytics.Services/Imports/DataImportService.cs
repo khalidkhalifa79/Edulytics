@@ -612,6 +612,12 @@ public sealed class DataImportService
                             ImportErrorCode
                                 .BatchNotFound,
 
+                        Edulytics.Core.Imports
+                            .ImportPersistenceError
+                            .SeatLimit =>
+                            ImportErrorCode
+                                .SeatLimitReached,
+
                         _ =>
                             ImportErrorCode
                                 .Persistence

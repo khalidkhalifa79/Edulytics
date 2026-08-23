@@ -124,7 +124,10 @@ public sealed class AcademicStructureService : IAcademicStructureService
                 x.UserId.HasValue
                     ? userMap.GetValueOrDefault(x.UserId.Value)?.Email
                     : null,
-                x.Status)).ToArray(),
+                x.Status,
+                x.IsArchived,
+                x.ArchivedAtUtc,
+                x.RowVersion.ToArray())).ToArray(),
             snapshot.StudentEnrollments.Select(x =>
             {
                 var classGroup = classes.GetValueOrDefault(x.ClassGroupId);
@@ -855,18 +858,16 @@ public sealed class AcademicStructureService : IAcademicStructureService
         if (!scope.Succeeded) return Fail(scope.Error!.Value);
 
         var studentNumber = NormalizeCode(request.StudentNumber);
-
         if (!ValidCode(studentNumber))
-            return Fail(nameof(request.StudentNumber),
-                AcademicStructureErrorCode.InvalidCode);
+            return Fail(nameof(request.StudentNumber), AcademicStructureErrorCode.InvalidCode);
 
         var firstName = Clean(request.FirstName);
         var lastName = Clean(request.LastName);
 
-        if (firstName.Length == 0)
+        if (string.IsNullOrWhiteSpace(firstName))
             return Fail(nameof(request.FirstName), AcademicStructureErrorCode.Required);
 
-        if (lastName.Length == 0)
+        if (string.IsNullOrWhiteSpace(lastName))
             return Fail(nameof(request.LastName), AcademicStructureErrorCode.Required);
 
         if (firstName.Length > 100 || lastName.Length > 100)
@@ -875,50 +876,61 @@ public sealed class AcademicStructureService : IAcademicStructureService
         var schoolId = scope.School!.Id;
 
         if (await _academic.StudentNumberExistsAsync(
-                schoolId, studentNumber, cancellationToken))
-            return Fail(nameof(request.StudentNumber),
+                schoolId,
+                studentNumber,
+                cancellationToken))
+        {
+            return Fail(
+                nameof(request.StudentNumber),
                 AcademicStructureErrorCode.DuplicateStudentNumber);
+        }
 
         if (request.UserId.HasValue)
         {
             var user = await _users.GetBySchoolAndIdAsync(
-                schoolId, request.UserId.Value, cancellationToken);
+                schoolId,
+                request.UserId.Value,
+                cancellationToken);
 
             if (user is null ||
                 !user.IsActive ||
                 user.IsLocked ||
                 SingleRole(user.Roles) != RoleNames.Student)
-                return Fail(nameof(request.UserId),
+            {
+                return Fail(
+                    nameof(request.UserId),
                     AcademicStructureErrorCode.InvalidStudentAccount);
+            }
 
             if (await _academic.StudentUserLinkExistsAsync(
-                    schoolId, user.Id, cancellationToken))
-                return Fail(nameof(request.UserId),
+                    schoolId,
+                    user.Id,
+                    cancellationToken))
+            {
+                return Fail(
+                    nameof(request.UserId),
                     AcademicStructureErrorCode.DuplicateStudentUserLink);
+            }
         }
 
         var now = DateTime.UtcNow;
-
         var entity = new StudentProfile
         {
             Id = Guid.NewGuid(),
             SchoolId = schoolId,
             UserId = request.UserId,
             StudentNumber = studentNumber,
-            NormalizedStudentNumber =
-                studentNumber,
+            NormalizedStudentNumber = studentNumber,
             FirstName = firstName,
             LastName = lastName,
-            DisplayName =
-                $"{firstName} {lastName}".Trim(),
+            DisplayName = $"{firstName} {lastName}".Trim(),
             Status = request.Status,
+            IsArchived = false,
+            ArchivedAtUtc = null,
             CreatedAtUtc = now,
-            UpdatedAtUtc = now
+            UpdatedAtUtc = now,
+            RowVersion = []
         };
-
-        await _academic.AddAsync(
-            entity,
-            cancellationToken);
 
         await QueueAuditAsync(
             scope,
@@ -926,19 +938,115 @@ public sealed class AcademicStructureService : IAcademicStructureService
             "StudentProfile",
             entity.Id,
             oldValues: null,
-            newValues:
-                new Dictionary<string, object?>
-                {
-                    ["userId"] = entity.UserId,
-                    ["studentNumber"] =
-                        entity.StudentNumber,
-                    ["status"] =
-                        entity.Status.ToString()
-                },
+            new Dictionary<string, object?>
+            {
+                ["studentNumber"] = entity.StudentNumber,
+                ["displayName"] = entity.DisplayName,
+                ["status"] = entity.Status.ToString(),
+                ["isArchived"] = false
+            },
             "Student profile created.",
             cancellationToken);
 
-        return await PersistAsync(cancellationToken);
+        return MapPersistence(
+            await _academic.AddStudentProfileWithSeatGuardAsync(
+                entity,
+                cancellationToken));
+    }
+
+    public async Task<AcademicCommandResult> ArchiveStudentProfileAsync(
+        Guid actorUserId,
+        Guid studentProfileId,
+        byte[] expectedRowVersion,
+        CancellationToken cancellationToken = default)
+    {
+        var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
+        if (!scope.Succeeded) return Fail(scope.Error!.Value);
+
+        if (expectedRowVersion.Length == 0)
+            return Fail(AcademicStructureErrorCode.ConcurrencyConflict);
+
+        var entity = await _academic.GetStudentProfileAsync(
+            scope.School!.Id,
+            studentProfileId,
+            cancellationToken);
+
+        if (entity is null)
+            return Fail(AcademicStructureErrorCode.StudentProfileNotFound);
+
+        if (entity.IsArchived)
+            return Fail(AcademicStructureErrorCode.StudentAlreadyArchived);
+
+        var now = DateTime.UtcNow;
+        entity.IsArchived = true;
+        entity.ArchivedAtUtc = now;
+        entity.UpdatedAtUtc = now;
+
+        await QueueAuditAsync(
+            scope,
+            "StudentProfile.Archived",
+            "StudentProfile",
+            entity.Id,
+            new Dictionary<string, object?> { ["isArchived"] = false },
+            new Dictionary<string, object?>
+            {
+                ["isArchived"] = true,
+                ["archivedAtUtc"] = entity.ArchivedAtUtc
+            },
+            "Student profile archived; active commercial seat released.",
+            cancellationToken);
+
+        return MapPersistence(
+            await _academic.SaveStudentArchiveStateWithSeatGuardAsync(
+                entity,
+                expectedRowVersion,
+                restoring: false,
+                cancellationToken));
+    }
+
+    public async Task<AcademicCommandResult> RestoreStudentProfileAsync(
+        Guid actorUserId,
+        Guid studentProfileId,
+        byte[] expectedRowVersion,
+        CancellationToken cancellationToken = default)
+    {
+        var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
+        if (!scope.Succeeded) return Fail(scope.Error!.Value);
+
+        if (expectedRowVersion.Length == 0)
+            return Fail(AcademicStructureErrorCode.ConcurrencyConflict);
+
+        var entity = await _academic.GetStudentProfileAsync(
+            scope.School!.Id,
+            studentProfileId,
+            cancellationToken);
+
+        if (entity is null)
+            return Fail(AcademicStructureErrorCode.StudentProfileNotFound);
+
+        if (!entity.IsArchived)
+            return Fail(AcademicStructureErrorCode.StudentNotArchived);
+
+        entity.IsArchived = false;
+        entity.ArchivedAtUtc = null;
+        entity.UpdatedAtUtc = DateTime.UtcNow;
+
+        await QueueAuditAsync(
+            scope,
+            "StudentProfile.Restored",
+            "StudentProfile",
+            entity.Id,
+            new Dictionary<string, object?> { ["isArchived"] = true },
+            new Dictionary<string, object?> { ["isArchived"] = false },
+            "Student profile restored; active commercial seat re-evaluated.",
+            cancellationToken);
+
+        return MapPersistence(
+            await _academic.SaveStudentArchiveStateWithSeatGuardAsync(
+                entity,
+                expectedRowVersion,
+                restoring: true,
+                cancellationToken));
     }
 
     public async Task<AcademicCommandResult> CreateStudentEnrollmentAsync(
@@ -956,6 +1064,10 @@ public sealed class AcademicStructureService : IAcademicStructureService
         if (profile is null)
             return Fail(nameof(request.StudentProfileId),
                 AcademicStructureErrorCode.StudentProfileNotFound);
+
+        if (profile.IsArchived)
+            return Fail(nameof(request.StudentProfileId),
+                AcademicStructureErrorCode.StudentAlreadyArchived);
 
         var classGroup = await _academic.GetClassGroupAsync(
             schoolId, request.ClassGroupId, cancellationToken);
@@ -1081,9 +1193,17 @@ public sealed class AcademicStructureService : IAcademicStructureService
         if (result.Succeeded)
             return AcademicCommandResult.Success();
 
-        return result.Error == AcademicPersistenceError.Conflict
-            ? Fail(AcademicStructureErrorCode.ConcurrencyConflict)
-            : Fail(AcademicStructureErrorCode.PersistenceError);
+        return result.Error switch
+        {
+            AcademicPersistenceError.Conflict =>
+                Fail(AcademicStructureErrorCode.ConcurrencyConflict),
+
+            AcademicPersistenceError.SeatLimit =>
+                Fail(AcademicStructureErrorCode.StudentSeatLimitReached),
+
+            _ =>
+                Fail(AcademicStructureErrorCode.PersistenceError)
+        };
     }
 
     private static AcademicCommandResult? ValidateName(string value)

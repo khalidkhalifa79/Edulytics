@@ -54,6 +54,8 @@ public class EdulyticsDbContext
     public DbSet<IdempotencyRecord> IdempotencyRecords => Set<IdempotencyRecord>();
     public DbSet<DemoRequest> DemoRequests => Set<DemoRequest>();
     public DbSet<DemoAccess> DemoAccesses => Set<DemoAccess>();
+    public DbSet<SchoolSubscription> SchoolSubscriptions => Set<SchoolSubscription>();
+    public DbSet<SubscriptionSeatChange> SubscriptionSeatChanges => Set<SubscriptionSeatChange>();
     public DbSet<DataProtectionKey> DataProtectionKeys => Set<DataProtectionKey>();
 
     public override int SaveChanges(
@@ -164,6 +166,8 @@ public class EdulyticsDbContext
         builder.ApplyConfiguration(new IdempotencyRecordConfiguration());
         builder.ApplyConfiguration(new DemoRequestConfiguration());
         builder.ApplyConfiguration(new DemoAccessConfiguration());
+        builder.ApplyConfiguration(new SchoolSubscriptionConfiguration());
+        builder.ApplyConfiguration(new SubscriptionSeatChangeConfiguration());
 
         builder.Entity<ApplicationRole>(entity =>
         {

@@ -233,6 +233,44 @@ public sealed class AcademicStructureController : Controller
                 cancellationToken),
             "SuccessStudentCreated");
 
+    [HttpPost("students/{id:guid}/archive")]
+    [ValidateAntiForgeryToken]
+    public Task<IActionResult> ArchiveStudentProfile(
+        Guid id,
+        string rowVersion,
+        CancellationToken cancellationToken)
+    {
+        if (!TryDecodeRowVersion(rowVersion, out var expected))
+            return Task.FromResult(RedirectWithError("ErrorConcurrencyConflict"));
+
+        return ExecuteAsync(
+            actorId => _academic.ArchiveStudentProfileAsync(
+                actorId,
+                id,
+                expected,
+                cancellationToken),
+            "SuccessStudentArchived");
+    }
+
+    [HttpPost("students/{id:guid}/restore")]
+    [ValidateAntiForgeryToken]
+    public Task<IActionResult> RestoreStudentProfile(
+        Guid id,
+        string rowVersion,
+        CancellationToken cancellationToken)
+    {
+        if (!TryDecodeRowVersion(rowVersion, out var expected))
+            return Task.FromResult(RedirectWithError("ErrorConcurrencyConflict"));
+
+        return ExecuteAsync(
+            actorId => _academic.RestoreStudentProfileAsync(
+                actorId,
+                id,
+                expected,
+                cancellationToken),
+            "SuccessStudentRestored");
+    }
+
     [HttpPost("student-enrollments")]
     [ValidateAntiForgeryToken]
     public Task<IActionResult> CreateStudentEnrollment(

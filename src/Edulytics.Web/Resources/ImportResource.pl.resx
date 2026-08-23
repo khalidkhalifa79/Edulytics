@@ -78,4 +78,7 @@
   <data name="ValidationCrossSchoolReference" xml:space="preserve"><value>Uczeń nie jest zapisany do wymaganej klasy i roku szkolnego.</value></data>
   <data name="ValidationAccessDenied" xml:space="preserve"><value>Nauczyciel nie jest przypisany do klasy i przedmiotu tego sprawdzianu.</value></data>
   <data name="ValidationIncompleteResult" xml:space="preserve"><value>Każde pytanie sprawdzianu musi wystąpić dokładnie jeden raz dla wyniku ucznia.</value></data>
+  <data name="ErrorSeatLimitReached" xml:space="preserve">
+    <value>Import uczniów przekroczyłby limit zakontraktowanych miejsc.</value>
+  </data>
 </root>

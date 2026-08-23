@@ -92,6 +92,18 @@ public interface IAcademicStructureRepository
         Guid studentProfileId,
         CancellationToken cancellationToken = default);
 
+    Task<AcademicPersistenceResult>
+        AddStudentProfileWithSeatGuardAsync(
+            StudentProfile student,
+            CancellationToken cancellationToken = default);
+
+    Task<AcademicPersistenceResult>
+        SaveStudentArchiveStateWithSeatGuardAsync(
+            StudentProfile student,
+            byte[] expectedRowVersion,
+            bool restoring,
+            CancellationToken cancellationToken = default);
+
     Task AddAsync<T>(
         T entity,
         CancellationToken cancellationToken = default)

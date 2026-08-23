@@ -3366,3 +3366,96 @@ input:focus-visible {
     outline: 0;
     box-shadow: 0 0 0 3px rgba(100, 116, 139, .14);
 }
+
+
+/* PHASE25C_SUBSCRIPTIONS */
+.subscription-page {
+    display: grid;
+    gap: 1.25rem;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 1.25rem;
+}
+
+.subscription-hero,
+.subscription-create-card,
+.subscription-card,
+.subscription-empty {
+    border: 1px solid var(--border-color, #d9dde5);
+    border-radius: 1rem;
+    padding: 1.25rem;
+    background: var(--surface-color, #fff);
+}
+
+.subscription-hero,
+.subscription-card-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.subscription-create-grid,
+.subscription-metrics,
+.subscription-actions {
+    display: grid;
+    gap: 0.9rem;
+}
+
+.subscription-create-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.subscription-create-grid input,
+.subscription-create-grid select,
+.subscription-inline-form input {
+    width: 100%;
+}
+
+.subscription-metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 1rem 0;
+}
+
+.subscription-metrics div {
+    min-width: 0;
+}
+
+.subscription-metrics dt {
+    font-size: 0.82rem;
+    opacity: 0.75;
+}
+
+.subscription-metrics dd {
+    margin: 0.2rem 0 0;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.subscription-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: end;
+}
+
+.subscription-actions form,
+.subscription-inline-form label {
+    display: grid;
+    gap: 0.4rem;
+}
+
+@media (max-width: 720px) {
+    .subscription-page {
+        padding: 0.75rem;
+    }
+
+    .subscription-hero,
+    .subscription-card-head {
+        display: grid;
+    }
+
+    .subscription-create-grid,
+    .subscription-metrics,
+    .subscription-actions {
+        grid-template-columns: 1fr;
+    }
+}

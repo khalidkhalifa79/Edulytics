@@ -78,4 +78,7 @@
   <data name="ValidationCrossSchoolReference" xml:space="preserve"><value>The referenced student is not enrolled in the required class and academic year.</value></data>
   <data name="ValidationAccessDenied" xml:space="preserve"><value>The teacher is not assigned to the assessment class and subject.</value></data>
   <data name="ValidationIncompleteResult" xml:space="preserve"><value>Every assessment question must occur exactly once for this student result.</value></data>
+  <data name="ErrorSeatLimitReached" xml:space="preserve">
+    <value>The student import would exceed the committed student-seat limit.</value>
+  </data>
 </root>
