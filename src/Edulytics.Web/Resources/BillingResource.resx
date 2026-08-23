@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Eyebrow" xml:space="preserve">
+    <value>Commercial finance</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Billing, invoices &amp; bank transfers</value>
+  </data>
+  <data name="Subtitle" xml:space="preserve">
+    <value>Issue invoices, record and verify bank transfers, apply exact seat proration, and enforce payment-driven commercial transitions.</value>
+  </data>
+  <data name="DashboardTitle" xml:space="preserve">
+    <value>Billing</value>
+  </data>
+  <data name="DashboardDescription" xml:space="preserve">
+    <value>Manage invoices, bank-transfer verification and commercial payment state.</value>
+  </data>
+  <data name="OpenBilling" xml:space="preserve">
+    <value>Manage billing</value>
+  </data>
+  <data name="BackToPlatform" xml:space="preserve">
+    <value>Back to platform</value>
+  </data>
+  <data name="NoSubscriptions" xml:space="preserve">
+    <value>No commercial subscriptions are available.</value>
+  </data>
+  <data name="SubscriptionStatus" xml:space="preserve">
+    <value>Subscription status</value>
+  </data>
+  <data name="CommittedSeats" xml:space="preserve">
+    <value>Committed seats</value>
+  </data>
+  <data name="InvoiceCurrency" xml:space="preserve">
+    <value>Invoice currency</value>
+  </data>
+  <data name="UnitPrice" xml:space="preserve">
+    <value>Price / student / month</value>
+  </data>
+  <data name="BillingProfile" xml:space="preserve">
+    <value>Billing profile</value>
+  </data>
+  <data name="LegalName" xml:space="preserve">
+    <value>Legal name</value>
+  </data>
+  <data name="BillingAddress" xml:space="preserve">
+    <value>Billing address</value>
+  </data>
+  <data name="CountryCode" xml:space="preserve">
+    <value>Country code</value>
+  </data>
+  <data name="TaxIdentifier" xml:space="preserve">
+    <value>Tax identifier</value>
+  </data>
+  <data name="InvoiceEmail" xml:space="preserve">
+    <value>Invoice email</value>
+  </data>
+  <data name="TaxTreatment" xml:space="preserve">
+    <value>Tax treatment code</value>
+  </data>
+  <data name="SettlementCurrency" xml:space="preserve">
+    <value>Settlement currency</value>
+  </data>
+  <data name="PaymentInstructions" xml:space="preserve">
+    <value>Bank-transfer instructions</value>
+  </data>
+  <data name="SaveProfile" xml:space="preserve">
+    <value>Save billing profile</value>
+  </data>
+  <data name="GenerateInvoice" xml:space="preserve">
+    <value>Invoice generation</value>
+  </data>
+  <data name="SettlementEquivalent" xml:space="preserve">
+    <value>Settlement equivalent</value>
+  </data>
+  <data name="InitialInvoice" xml:space="preserve">
+    <value>Initial invoice</value>
+  </data>
+  <data name="NextInstallment" xml:space="preserve">
+    <value>Next monthly instalment</value>
+  </data>
+  <data name="SeatProration" xml:space="preserve">
+    <value>Seat-increase proration</value>
+  </data>
+  <data name="RenewalInvoice" xml:space="preserve">
+    <value>Renewal invoice</value>
+  </data>
+  <data name="AgreementOverride" xml:space="preserve">
+    <value>Agreed activation-date override</value>
+  </data>
+  <data name="Reason" xml:space="preserve">
+    <value>Reason</value>
+  </data>
+  <data name="ActivateByAgreement" xml:space="preserve">
+    <value>Activate by agreement</value>
+  </data>
+  <data name="ApplyPaidRenewal" xml:space="preserve">
+    <value>Apply paid renewal</value>
+  </data>
+  <data name="Invoices" xml:space="preserve">
+    <value>Invoices</value>
+  </data>
+  <data name="NoInvoices" xml:space="preserve">
+    <value>No invoices yet.</value>
+  </data>
+  <data name="Outstanding" xml:space="preserve">
+    <value>Outstanding</value>
+  </data>
+  <data name="IssueDate" xml:space="preserve">
+    <value>Issue date</value>
+  </data>
+  <data name="DueDate" xml:space="preserve">
+    <value>Due date</value>
+  </data>
+  <data name="GraceEnds" xml:space="preserve">
+    <value>Grace ends</value>
+  </data>
+  <data name="Paid" xml:space="preserve">
+    <value>Paid</value>
+  </data>
+  <data name="Refunded" xml:space="preserve">
+    <value>Refunded</value>
+  </data>
+  <data name="SuspensionEligible" xml:space="preserve">
+    <value>Suspension eligible</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Proration" xml:space="preserve">
+    <value>Proration</value>
+  </data>
+  <data name="FullMonths" xml:space="preserve">
+    <value>full months</value>
+  </data>
+  <data name="PaymentReference" xml:space="preserve">
+    <value>Payment reference</value>
+  </data>
+  <data name="EvidenceNote" xml:space="preserve">
+    <value>Evidence / note</value>
+  </data>
+  <data name="ReceivedAmount" xml:space="preserve">
+    <value>Amount received</value>
+  </data>
+  <data name="ReceivedCurrency" xml:space="preserve">
+    <value>Currency received</value>
+  </data>
+  <data name="AppliedAmount" xml:space="preserve">
+    <value>Amount applied to invoice</value>
+  </data>
+  <data name="ReceivedAt" xml:space="preserve">
+    <value>Received at (UTC)</value>
+  </data>
+  <data name="RecordPayment" xml:space="preserve">
+    <value>Record bank transfer</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="Reject" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="RecordRefund" xml:space="preserve">
+    <value>Record external refund / credit</value>
+  </data>
+  <data name="SuccessProfile" xml:space="preserve">
+    <value>Billing profile saved.</value>
+  </data>
+  <data name="SuccessInitialInvoice" xml:space="preserve">
+    <value>Initial invoice issued.</value>
+  </data>
+  <data name="SuccessInstallmentInvoice" xml:space="preserve">
+    <value>Monthly instalment invoice issued.</value>
+  </data>
+  <data name="SuccessProrationInvoice" xml:space="preserve">
+    <value>Seat-proration invoice issued.</value>
+  </data>
+  <data name="SuccessRenewalInvoice" xml:space="preserve">
+    <value>Renewal invoice issued.</value>
+  </data>
+  <data name="SuccessPaymentRecorded" xml:space="preserve">
+    <value>Bank transfer recorded pending verification.</value>
+  </data>
+  <data name="SuccessPaymentConfirmed" xml:space="preserve">
+    <value>Bank transfer confirmed and applied.</value>
+  </data>
+  <data name="SuccessPaymentRejected" xml:space="preserve">
+    <value>Bank transfer rejected.</value>
+  </data>
+  <data name="SuccessRefund" xml:space="preserve">
+    <value>External refund / credit recorded.</value>
+  </data>
+  <data name="SuccessAgreementActivation" xml:space="preserve">
+    <value>Agreed activation date recorded and school activated.</value>
+  </data>
+  <data name="SuccessRenewalApplied" xml:space="preserve">
+    <value>Paid renewal applied.</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>No error.</value>
+  </data>
+  <data name="AccessDenied" xml:space="preserve">
+    <value>Access denied.</value>
+  </data>
+  <data name="SchoolNotFound" xml:space="preserve">
+    <value>School not found.</value>
+  </data>
+  <data name="SubscriptionNotFound" xml:space="preserve">
+    <value>Subscription not found.</value>
+  </data>
+  <data name="ProfileNotFound" xml:space="preserve">
+    <value>Complete the billing profile first.</value>
+  </data>
+  <data name="InvoiceNotFound" xml:space="preserve">
+    <value>Invoice not found.</value>
+  </data>
+  <data name="PaymentNotFound" xml:space="preserve">
+    <value>Bank-transfer record not found.</value>
+  </data>
+  <data name="InvalidInput" xml:space="preserve">
+    <value>Invalid billing input.</value>
+  </data>
+  <data name="InvalidState" xml:space="preserve">
+    <value>This action is not valid in the current commercial state.</value>
+  </data>
+  <data name="DuplicateInvoice" xml:space="preserve">
+    <value>This invoice has already been generated.</value>
+  </data>
+  <data name="NoUnbilledSeatIncrease" xml:space="preserve">
+    <value>There is no unbilled current-term seat increase.</value>
+  </data>
+  <data name="AmountExceedsOutstanding" xml:space="preserve">
+    <value>The applied amount exceeds the invoice outstanding balance.</value>
+  </data>
+  <data name="ConcurrencyConflict" xml:space="preserve">
+    <value>The billing record changed in another request. Reload and try again.</value>
+  </data>
+  <data name="PersistenceError" xml:space="preserve">
+    <value>The billing change could not be saved.</value>
+  </data>
+  <data name="UnsupportedMarket" xml:space="preserve">
+    <value>The school's market is not enabled for launch billing.</value>
+  </data>
+</root>

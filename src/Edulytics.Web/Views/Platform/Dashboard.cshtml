@@ -4,6 +4,7 @@
 @inject IStringLocalizer<Edulytics.Web.OperationsResource> OperationsText
 @inject IStringLocalizer<Edulytics.Web.OnboardingResource> OnboardingText
 @inject IStringLocalizer<Edulytics.Web.SubscriptionResource> SubscriptionText
+@inject IStringLocalizer<Edulytics.Web.BillingResource> BillingText
 
 @{
     ViewData["Title"] = Text["DashboardTitle"];
@@ -54,6 +55,21 @@
         <p>@OnboardingText["DashboardDescription"]</p>
     </div>
     <a class="school-button school-button-primary" asp-controller="CustomerOnboarding" asp-action="Index">@OnboardingText["ManageOnboarding"]</a>
+</section>
+
+
+<section class="school-dashboard-card">
+    <div>
+        <p class="school-eyebrow">@BillingText["Eyebrow"]</p>
+        <h2>@BillingText["DashboardTitle"]</h2>
+        <p>@BillingText["DashboardDescription"]</p>
+    </div>
+
+    <a class="school-button school-button-primary"
+       asp-controller="Billing"
+       asp-action="Index">
+        @BillingText["OpenBilling"]
+    </a>
 </section>
 
 

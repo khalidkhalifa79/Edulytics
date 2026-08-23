@@ -139,14 +139,6 @@
                     </dl>
 
                     <div class="subscription-actions">
-                        @if (item.Status == SubscriptionStatus.PendingActivation)
-                        {
-                            <form asp-action="Activate" asp-route-schoolId="@item.SchoolId" method="post">
-                                <input type="hidden" name="rowVersion" value="@row.RowVersionBase64" />
-                                <button class="school-button school-button-primary" type="submit">@S["Activate"]</button>
-                            </form>
-                        }
-
                         @if (item.Status is SubscriptionStatus.Active or SubscriptionStatus.Suspended)
                         {
                             <form asp-action="IncreaseSeats"
@@ -212,11 +204,6 @@
 
                         @if (expired && (item.Status is SubscriptionStatus.Active or SubscriptionStatus.Suspended))
                         {
-                            <form asp-action="Renew" asp-route-schoolId="@item.SchoolId" method="post">
-                                <input type="hidden" name="rowVersion" value="@row.RowVersionBase64" />
-                                <button class="school-button school-button-primary" type="submit">@S["Renew"]</button>
-                            </form>
-
                             <form asp-action="EndExpired" asp-route-schoolId="@item.SchoolId" method="post">
                                 <input type="hidden" name="rowVersion" value="@row.RowVersionBase64" />
                                 <button class="school-button school-button-warning" type="submit">@S["EndExpired"]</button>

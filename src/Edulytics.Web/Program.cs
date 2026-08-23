@@ -119,6 +119,9 @@ builder.Services
     .AddSubscriptionsPhase25C();
 
 builder.Services
+    .AddBillingPhase25D();
+
+builder.Services
     .AddSubjectSupervisorCompletionPhase19();
 
 builder.Services
