@@ -344,6 +344,9 @@ public sealed class ImportsController
             ImportErrorCode.ConcurrencyConflict =>
                 "ErrorConcurrencyConflict",
 
+            ImportErrorCode.SeatLimitReached =>
+                "ErrorSeatLimitReached",
+
             _ =>
                 "ErrorPersistence"
         };

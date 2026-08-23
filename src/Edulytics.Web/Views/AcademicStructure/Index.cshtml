@@ -414,7 +414,7 @@
                 <label for="enroll-student">@A["Student"]</label>
                 <select id="enroll-student" name="studentProfileId" required>
                     <option value="">@A["SelectOption"]</option>
-                    @foreach (var student in Model.StudentProfiles)
+                    @foreach (var student in Model.StudentProfiles.Where(x => !x.IsArchived))
                     {
                         <option value="@student.Id">@student.StudentNumber — @student.DisplayName</option>
                     }
@@ -441,7 +441,7 @@
                 else
                 {
                     <table class="academic-table">
-                        <thead><tr><th>@A["StudentNumber"]</th><th>@A["Name"]</th><th>@A["LinkedUser"]</th><th>@A["Status"]</th></tr></thead>
+                        <thead><tr><th>@A["StudentNumber"]</th><th>@A["Name"]</th><th>@A["LinkedUser"]</th><th>@A["Status"]</th><th>@A["StudentCommercialState"]</th><th></th></tr></thead>
                         <tbody>
                         @foreach (var item in Model.StudentProfiles)
                         {
@@ -450,6 +450,40 @@
                                 <td data-label="@A["Name"]">@item.DisplayName</td>
                                 <td data-label="@A["LinkedUser"]">@(item.UserEmail ?? A["NoLinkedAccount"].Value)</td>
                                 <td data-label="@A["Status"]">@A[$"Status{item.Status}"]</td>
+                                <td data-label="@A["StudentCommercialState"]">
+                                    @(item.IsArchived
+                                        ? A["StudentArchived"].Value
+                                        : A["StudentAvailable"].Value)
+                                </td>
+                                <td>
+                                    @if (item.RowVersion is { Length: > 0 })
+                                    {
+                                        if (item.IsArchived)
+                                        {
+                                            <form asp-action="RestoreStudentProfile"
+                                                  asp-route-id="@item.Id"
+                                                  method="post">
+                                                <input type="hidden" name="rowVersion"
+                                                       value="@Convert.ToBase64String(item.RowVersion)" />
+                                                <button class="school-button" type="submit">
+                                                    @A["RestoreStudent"]
+                                                </button>
+                                            </form>
+                                        }
+                                        else
+                                        {
+                                            <form asp-action="ArchiveStudentProfile"
+                                                  asp-route-id="@item.Id"
+                                                  method="post">
+                                                <input type="hidden" name="rowVersion"
+                                                       value="@Convert.ToBase64String(item.RowVersion)" />
+                                                <button class="school-button school-button-warning" type="submit">
+                                                    @A["ArchiveStudent"]
+                                                </button>
+                                            </form>
+                                        }
+                                    }
+                                </td>
                             </tr>
                         }
                         </tbody>

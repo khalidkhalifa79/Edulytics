@@ -1,0 +1,230 @@
+@model Edulytics.Web.ViewModels.Subscriptions.SubscriptionIndexViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.SubscriptionResource> S
+@using Edulytics.Core.Enums
+
+@{
+    ViewData["Title"] = S["Title"].Value;
+}
+
+<section class="subscription-page">
+    <header class="subscription-hero">
+        <div>
+            <div class="user-eyebrow">@S["Eyebrow"]</div>
+            <h1>@S["Title"]</h1>
+            <p>@S["Subtitle"]</p>
+        </div>
+        <a class="school-button"
+           asp-controller="Platform"
+           asp-action="Dashboard">
+            @S["BackToPlatform"]
+        </a>
+    </header>
+
+    @if (TempData["SubscriptionSuccess"] is string success)
+    {
+        <div class="academic-alert academic-alert-success" role="status">@success</div>
+    }
+
+    @if (TempData["SubscriptionError"] is string error)
+    {
+        <div class="academic-alert academic-alert-error" role="alert">@error</div>
+    }
+
+    <section class="subscription-create-card">
+        <h2>@S["CreateTitle"]</h2>
+
+        @if (Model.EligibleSchools.Count == 0)
+        {
+            <p>@S["NoEligibleSchools"]</p>
+        }
+        else
+        {
+            <form asp-action="Create"
+                  method="post"
+                  class="subscription-create-grid">
+                <div>
+                    <label for="subscription-school">@S["School"]</label>
+                    <select id="subscription-school" name="schoolId" required>
+                        @foreach (var school in Model.EligibleSchools)
+                        {
+                            <option value="@school.Id">
+                                @school.Name (@school.SchoolCode) — @school.CountryCode
+                            </option>
+                        }
+                    </select>
+                </div>
+
+                <div>
+                    <label for="subscription-term">@S["Term"]</label>
+                    <select id="subscription-term" name="term">
+                        <option value="@((int)SubscriptionTerm.ThreeMonths)">@S["ThreeMonths"]</option>
+                        <option value="@((int)SubscriptionTerm.SixMonths)">@S["SixMonths"]</option>
+                        <option value="@((int)SubscriptionTerm.SchoolYearTenMonths)">@S["TenMonths"]</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="subscription-cadence">@S["BillingCadence"]</label>
+                    <select id="subscription-cadence" name="billingCadence">
+                        <option value="@((int)SubscriptionBillingCadence.MonthlyInstallments)">@S["MonthlyInstallments"]</option>
+                        <option value="@((int)SubscriptionBillingCadence.FullTermUpfront)">@S["FullTermUpfront"]</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="subscription-seats">@S["CommittedSeats"]</label>
+                    <input id="subscription-seats"
+                           name="committedSeats"
+                           type="number"
+                           min="500"
+                           value="500"
+                           required />
+                </div>
+
+                <label class="subscription-check">
+                    <input name="autoRenew"
+                           type="checkbox"
+                           value="true"
+                           checked />
+                    @S["AutoRenew"]
+                </label>
+
+                <button type="submit"
+                        class="school-button school-button-primary">
+                    @S["Create"]
+                </button>
+            </form>
+        }
+    </section>
+
+    <section class="subscription-list">
+        <h2>@S["CurrentSubscriptions"]</h2>
+
+        @if (Model.Subscriptions.Count == 0)
+        {
+            <div class="subscription-empty">@S["NoSubscriptions"]</div>
+        }
+        else
+        {
+            @foreach (var row in Model.Subscriptions)
+            {
+                var item = row.Subscription;
+                var expired =
+                    item.CurrentTermEndsAtUtc.HasValue &&
+                    item.CurrentTermEndsAtUtc.Value <= DateTime.UtcNow;
+
+                <article class="subscription-card"
+                         data-school-id="@item.SchoolId"
+                         data-subscription-id="@item.Id">
+                    <div class="subscription-card-head">
+                        <div>
+                            <h3>@row.SchoolName</h3>
+                            <p>@row.SchoolCode — @row.CountryCode</p>
+                        </div>
+                        <strong class="subscription-status">
+                            @S[$"Status{item.Status}"]
+                        </strong>
+                    </div>
+
+                    <dl class="subscription-metrics">
+                        <div><dt>@S["Plan"]</dt><dd>@S[$"Term{item.Term}"]</dd></div>
+                        <div><dt>@S["Currency"]</dt><dd>@item.CommercialCurrency</dd></div>
+                        <div><dt>@S["UnitPrice"]</dt><dd>@item.PricePerStudentPerMonth.ToString("0.00")</dd></div>
+                        <div><dt>@S["CommittedSeats"]</dt><dd>@item.CommittedSeats</dd></div>
+                        <div><dt>@S["ActiveStudents"]</dt><dd>@item.ActiveStudents</dd></div>
+                        <div><dt>@S["AvailableSeats"]</dt><dd>@item.AvailableSeats</dd></div>
+                        <div><dt>@S["PendingRenewalSeats"]</dt><dd>@(item.PendingRenewalSeats?.ToString() ?? "—")</dd></div>
+                        <div><dt>@S["AutoRenew"]</dt><dd>@(item.AutoRenew ? S["Yes"].Value : S["No"].Value)</dd></div>
+                        <div><dt>@S["TermEnds"]</dt><dd>@(item.CurrentTermEndsAtUtc?.ToString("u") ?? "—")</dd></div>
+                    </dl>
+
+                    <div class="subscription-actions">
+                        @if (item.Status == SubscriptionStatus.PendingActivation)
+                        {
+                            <form asp-action="Activate" asp-route-schoolId="@item.SchoolId" method="post">
+                                <input type="hidden" name="rowVersion" value="@row.RowVersionBase64" />
+                                <button class="school-button school-button-primary" type="submit">@S["Activate"]</button>
+                            </form>
+                        }
+
+                        @if (item.Status is SubscriptionStatus.Active or SubscriptionStatus.Suspended)
+                        {
+                            <form asp-action="IncreaseSeats"
+                                  asp-route-schoolId="@item.SchoolId"
+                                  method="post"
+                                  class="subscription-inline-form">
+                                <input type="hidden" name="rowVersion" value="@row.RowVersionBase64" />
+                                <label>
+                                    @S["IncreaseTo"]
+                                    <input name="committedSeats"
+                                           type="number"
+                                           min="@(item.CommittedSeats + 1)"
+                                           value="@(item.CommittedSeats + 50)"
+                                           required />
+                                </label>
+                                <button class="school-button" type="submit">@S["Increase"]</button>
+                            </form>
+
+                            @if (item.CommittedSeats > 500)
+                            {
+                                <form asp-action="ScheduleReduction"
+                                      asp-route-schoolId="@item.SchoolId"
+                                      method="post"
+                                      class="subscription-inline-form">
+                                    <input type="hidden" name="rowVersion" value="@row.RowVersionBase64" />
+                                    <label>
+                                        @S["RenewalSeats"]
+                                        <input name="renewalSeats"
+                                               type="number"
+                                               min="500"
+                                               max="@(item.CommittedSeats - 1)"
+                                               value="500"
+                                               required />
+                                    </label>
+                                    <button class="school-button" type="submit">@S["ScheduleReduction"]</button>
+                                </form>
+                            }
+
+                            <form asp-action="AutoRenew" asp-route-schoolId="@item.SchoolId" method="post">
+                                <input type="hidden" name="rowVersion" value="@row.RowVersionBase64" />
+                                <input type="hidden" name="autoRenew" value="@(!item.AutoRenew ? "true" : "false")" />
+                                <button class="school-button" type="submit">
+                                    @(item.AutoRenew ? S["DisableAutoRenew"].Value : S["EnableAutoRenew"].Value)
+                                </button>
+                            </form>
+                        }
+
+                        @if (item.Status == SubscriptionStatus.Active)
+                        {
+                            <form asp-action="Suspend" asp-route-schoolId="@item.SchoolId" method="post">
+                                <input type="hidden" name="rowVersion" value="@row.RowVersionBase64" />
+                                <button class="school-button school-button-warning" type="submit">@S["Suspend"]</button>
+                            </form>
+                        }
+
+                        @if (item.Status == SubscriptionStatus.Suspended && !expired)
+                        {
+                            <form asp-action="Reactivate" asp-route-schoolId="@item.SchoolId" method="post">
+                                <input type="hidden" name="rowVersion" value="@row.RowVersionBase64" />
+                                <button class="school-button school-button-primary" type="submit">@S["Reactivate"]</button>
+                            </form>
+                        }
+
+                        @if (expired && (item.Status is SubscriptionStatus.Active or SubscriptionStatus.Suspended))
+                        {
+                            <form asp-action="Renew" asp-route-schoolId="@item.SchoolId" method="post">
+                                <input type="hidden" name="rowVersion" value="@row.RowVersionBase64" />
+                                <button class="school-button school-button-primary" type="submit">@S["Renew"]</button>
+                            </form>
+
+                            <form asp-action="EndExpired" asp-route-schoolId="@item.SchoolId" method="post">
+                                <input type="hidden" name="rowVersion" value="@row.RowVersionBase64" />
+                                <button class="school-button school-button-warning" type="submit">@S["EndExpired"]</button>
+                            </form>
+                        }
+                    </div>
+                </article>
+            }
+        }
+    </section>
+</section>

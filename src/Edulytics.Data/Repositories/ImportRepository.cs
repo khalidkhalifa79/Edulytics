@@ -332,6 +332,73 @@ public sealed class ImportRepository : IImportRepository
                 .OriginalValue =
                     expectedBatchRowVersion;
 
+            var incomingActiveSeats =
+                plan.Students.Count(
+                    x =>
+                        !x.IsArchived &&
+                        x.Status == AcademicStructureStatus.Active);
+
+            if (incomingActiveSeats > 0)
+            {
+                SchoolSubscription? subscription;
+
+                if (_db.Database.IsRelational())
+                {
+                    subscription =
+                        await _db.SchoolSubscriptions
+                            .FromSqlInterpolated(
+                                $@"SELECT *
+FROM ""SchoolSubscriptions""
+WHERE ""SchoolId"" = {schoolId}
+FOR UPDATE")
+                            .SingleOrDefaultAsync(cancellationToken);
+                }
+                else
+                {
+                    subscription =
+                        await _db.SchoolSubscriptions
+                            .SingleOrDefaultAsync(
+                                x => x.SchoolId == schoolId,
+                                cancellationToken);
+                }
+
+                if (subscription is not null)
+                {
+                    var now = DateTime.UtcNow;
+
+                    if (subscription.Status != SubscriptionStatus.Active ||
+                        !subscription.CurrentTermStartsAtUtc.HasValue ||
+                        !subscription.CurrentTermEndsAtUtc.HasValue ||
+                        subscription.CurrentTermStartsAtUtc.Value > now ||
+                        subscription.CurrentTermEndsAtUtc.Value <= now)
+                    {
+                        await transaction.RollbackAsync(cancellationToken);
+                        _db.ChangeTracker.Clear();
+                        return ImportPersistenceResult.Failure(
+                            ImportPersistenceError.InvalidState);
+                    }
+
+                    var currentActiveSeats =
+                        await _db.StudentProfiles
+                            .AsNoTracking()
+                            .CountAsync(
+                                x =>
+                                    x.SchoolId == schoolId &&
+                                    !x.IsArchived &&
+                                    x.Status == AcademicStructureStatus.Active,
+                                cancellationToken);
+
+                    if (currentActiveSeats + incomingActiveSeats >
+                        subscription.CommittedSeats)
+                    {
+                        await transaction.RollbackAsync(cancellationToken);
+                        _db.ChangeTracker.Clear();
+                        return ImportPersistenceResult.Failure(
+                            ImportPersistenceError.SeatLimit);
+                    }
+                }
+            }
+
             foreach (var guard in
                      plan.AcademicYearGuards
                          .DistinctBy(x => x.Id))
@@ -460,6 +527,7 @@ public sealed class ImportRepository : IImportRepository
                                 x.SchoolId == schoolId &&
                                 x.Id ==
                                     result.StudentProfileId &&
+                                !x.IsArchived &&
                                 x.Status ==
                                     AcademicStructureStatus.Active,
                             cancellationToken);

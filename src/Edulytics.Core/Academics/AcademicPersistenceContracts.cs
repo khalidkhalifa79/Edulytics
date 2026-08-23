@@ -16,7 +16,8 @@ public enum AcademicPersistenceError
 {
     None = 0,
     Conflict = 1,
-    Constraint = 2
+    Constraint = 2,
+    SeatLimit = 3
 }
 
 public sealed record AcademicPersistenceResult(

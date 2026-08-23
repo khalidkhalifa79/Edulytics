@@ -65,7 +65,8 @@ public enum ImportPersistenceError
     InvalidState = 2,
     Concurrency = 3,
     Constraint = 4,
-    Unknown = 5
+    Unknown = 5,
+    SeatLimit = 6
 }
 
 public sealed record ImportPersistenceResult(

@@ -19,11 +19,24 @@ public sealed class StudentProfileConfiguration : IEntityTypeConfiguration<Stude
         builder.Property(x => x.LastName).HasMaxLength(100).IsRequired();
         builder.Property(x => x.DisplayName).HasMaxLength(205).IsRequired();
         builder.Property(x => x.Status).HasConversion<int>();
+        builder.Property(x => x.IsArchived).IsRequired();
+        builder.Property(x => x.ArchivedAtUtc);
         builder.Property(x => x.CreatedAtUtc).IsRequired();
         builder.Property(x => x.UpdatedAtUtc).IsRequired();
+        builder.Property(x => x.RowVersion)
+            .IsRequired()
+            .IsConcurrencyToken()
+            .ValueGeneratedNever();
 
         builder.HasIndex(x => new { x.SchoolId, x.NormalizedStudentNumber })
             .IsUnique();
+
+        builder.HasIndex(x => new
+        {
+            x.SchoolId,
+            x.IsArchived,
+            x.Status
+        });
 
         builder.HasIndex(x => x.UserId)
             .IsUnique()

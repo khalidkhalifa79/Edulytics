@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Eyebrow" xml:space="preserve">
+    <value>Operacje komercyjne</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Subskrypcje i uprawnienia</value>
+  </data>
+  <data name="Subtitle" xml:space="preserve">
+    <value>Zarządzaj zakontraktowanymi miejscami uczniów, aktywacją, odnowieniem i dostępem operacyjnym. Rozliczenia i płatności pozostają w fazie 25D.</value>
+  </data>
+  <data name="BackToPlatform" xml:space="preserve">
+    <value>Wróć do platformy</value>
+  </data>
+  <data name="DashboardTitle" xml:space="preserve">
+    <value>Subskrypcje</value>
+  </data>
+  <data name="DashboardDescription" xml:space="preserve">
+    <value>Zarządzaj warunkami komercyjnymi, miejscami uczniów, aktywacją i odnowieniami.</value>
+  </data>
+  <data name="OpenSubscriptions" xml:space="preserve">
+    <value>Zarządzaj subskrypcjami</value>
+  </data>
+  <data name="CreateTitle" xml:space="preserve">
+    <value>Utwórz subskrypcję komercyjną</value>
+  </data>
+  <data name="NoEligibleSchools" xml:space="preserve">
+    <value>Brak obsługiwanej zawieszonej szkoły kwalifikującej się do nowej subskrypcji.</value>
+  </data>
+  <data name="School" xml:space="preserve">
+    <value>Szkoła</value>
+  </data>
+  <data name="Term" xml:space="preserve">
+    <value>Okres umowy</value>
+  </data>
+  <data name="BillingCadence" xml:space="preserve">
+    <value>Harmonogram rozliczeń</value>
+  </data>
+  <data name="ThreeMonths" xml:space="preserve">
+    <value>3 miesiące — 20 za ucznia/miesiąc</value>
+  </data>
+  <data name="SixMonths" xml:space="preserve">
+    <value>6 miesięcy — 15 za ucznia/miesiąc</value>
+  </data>
+  <data name="TenMonths" xml:space="preserve">
+    <value>10 miesięcy — 10 za ucznia/miesiąc</value>
+  </data>
+  <data name="MonthlyInstallments" xml:space="preserve">
+    <value>Raty miesięczne</value>
+  </data>
+  <data name="FullTermUpfront" xml:space="preserve">
+    <value>Cały okres z góry</value>
+  </data>
+  <data name="CommittedSeats" xml:space="preserve">
+    <value>Zakontraktowane miejsca</value>
+  </data>
+  <data name="AutoRenew" xml:space="preserve">
+    <value>Automatyczne odnowienie</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Utwórz subskrypcję</value>
+  </data>
+  <data name="CurrentSubscriptions" xml:space="preserve">
+    <value>Bieżące subskrypcje</value>
+  </data>
+  <data name="NoSubscriptions" xml:space="preserve">
+    <value>Brak subskrypcji.</value>
+  </data>
+  <data name="Plan" xml:space="preserve">
+    <value>Plan</value>
+  </data>
+  <data name="Currency" xml:space="preserve">
+    <value>Waluta</value>
+  </data>
+  <data name="UnitPrice" xml:space="preserve">
+    <value>Cena / uczeń / miesiąc</value>
+  </data>
+  <data name="ActiveStudents" xml:space="preserve">
+    <value>Aktywni uczniowie</value>
+  </data>
+  <data name="AvailableSeats" xml:space="preserve">
+    <value>Dostępne miejsca</value>
+  </data>
+  <data name="PendingRenewalSeats" xml:space="preserve">
+    <value>Docelowe miejsca przy odnowieniu</value>
+  </data>
+  <data name="TermEnds" xml:space="preserve">
+    <value>Koniec bieżącego okresu</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Tak</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nie</value>
+  </data>
+  <data name="Activate" xml:space="preserve">
+    <value>Aktywuj</value>
+  </data>
+  <data name="IncreaseTo" xml:space="preserve">
+    <value>Zwiększ liczbę miejsc do</value>
+  </data>
+  <data name="Increase" xml:space="preserve">
+    <value>Zwiększ teraz</value>
+  </data>
+  <data name="RenewalSeats" xml:space="preserve">
+    <value>Miejsca przy odnowieniu</value>
+  </data>
+  <data name="ScheduleReduction" xml:space="preserve">
+    <value>Zaplanuj zmniejszenie</value>
+  </data>
+  <data name="DisableAutoRenew" xml:space="preserve">
+    <value>Wyłącz automatyczne odnowienie</value>
+  </data>
+  <data name="EnableAutoRenew" xml:space="preserve">
+    <value>Włącz automatyczne odnowienie</value>
+  </data>
+  <data name="Suspend" xml:space="preserve">
+    <value>Zawieś</value>
+  </data>
+  <data name="Reactivate" xml:space="preserve">
+    <value>Reaktywuj</value>
+  </data>
+  <data name="Renew" xml:space="preserve">
+    <value>Odnów</value>
+  </data>
+  <data name="EndExpired" xml:space="preserve">
+    <value>Zakończ wygasłą subskrypcję</value>
+  </data>
+  <data name="StatusPendingActivation" xml:space="preserve">
+    <value>Oczekuje na aktywację</value>
+  </data>
+  <data name="StatusActive" xml:space="preserve">
+    <value>Aktywna</value>
+  </data>
+  <data name="StatusSuspended" xml:space="preserve">
+    <value>Zawieszona</value>
+  </data>
+  <data name="StatusEnded" xml:space="preserve">
+    <value>Zakończona</value>
+  </data>
+  <data name="TermThreeMonths" xml:space="preserve">
+    <value>3 miesiące</value>
+  </data>
+  <data name="TermSixMonths" xml:space="preserve">
+    <value>6 miesięcy</value>
+  </data>
+  <data name="TermSchoolYearTenMonths" xml:space="preserve">
+    <value>10 miesięcy</value>
+  </data>
+  <data name="SuccessCreated" xml:space="preserve">
+    <value>Subskrypcję utworzono i oczekuje na aktywację.</value>
+  </data>
+  <data name="SuccessActivated" xml:space="preserve">
+    <value>Subskrypcję aktywowano i włączono dostęp szkoły.</value>
+  </data>
+  <data name="SuccessSeatsIncreased" xml:space="preserve">
+    <value>Liczbę zakontraktowanych miejsc zwiększono natychmiast.</value>
+  </data>
+  <data name="SuccessReductionScheduled" xml:space="preserve">
+    <value>Zmniejszenie miejsc zaplanowano na odnowienie.</value>
+  </data>
+  <data name="SuccessAutoRenewChanged" xml:space="preserve">
+    <value>Zaktualizowano automatyczne odnowienie.</value>
+  </data>
+  <data name="SuccessRenewed" xml:space="preserve">
+    <value>Subskrypcję odnowiono.</value>
+  </data>
+  <data name="SuccessSuspended" xml:space="preserve">
+    <value>Subskrypcję i dostęp szkoły zawieszono.</value>
+  </data>
+  <data name="SuccessReactivated" xml:space="preserve">
+    <value>Subskrypcję i dostęp szkoły reaktywowano.</value>
+  </data>
+  <data name="SuccessEnded" xml:space="preserve">
+    <value>Wygasłą subskrypcję zakończono.</value>
+  </data>
+  <data name="AccessDenied" xml:space="preserve">
+    <value>Brak dostępu.</value>
+  </data>
+  <data name="SchoolNotFound" xml:space="preserve">
+    <value>Nie znaleziono szkoły.</value>
+  </data>
+  <data name="SchoolMustBeSuspended" xml:space="preserve">
+    <value>Szkoła musi być zawieszona przed utworzeniem lub aktywacją subskrypcji.</value>
+  </data>
+  <data name="UnsupportedMarket" xml:space="preserve">
+    <value>Na start obsługiwane są tylko Polska (PLN) i ZEA (AED).</value>
+  </data>
+  <data name="InvalidTerm" xml:space="preserve">
+    <value>Nieprawidłowy okres subskrypcji.</value>
+  </data>
+  <data name="InvalidBillingCadence" xml:space="preserve">
+    <value>Nieprawidłowy harmonogram rozliczeń.</value>
+  </data>
+  <data name="InvalidCommittedSeats" xml:space="preserve">
+    <value>Liczba miejsc musi wynosić co najmniej 500 i nie może być niższa od liczby aktywnych uczniów.</value>
+  </data>
+  <data name="SubscriptionAlreadyExists" xml:space="preserve">
+    <value>Ta szkoła ma już subskrypcję.</value>
+  </data>
+  <data name="SubscriptionNotFound" xml:space="preserve">
+    <value>Nie znaleziono subskrypcji.</value>
+  </data>
+  <data name="InvalidState" xml:space="preserve">
+    <value>Ta operacja jest niedozwolona w bieżącym stanie subskrypcji.</value>
+  </data>
+  <data name="InvalidActivationDate" xml:space="preserve">
+    <value>Nieprawidłowa data aktywacji.</value>
+  </data>
+  <data name="SeatIncreaseMustExceedCurrent" xml:space="preserve">
+    <value>Nowa liczba miejsc musi być większa od bieżącej.</value>
+  </data>
+  <data name="SeatReductionMustBeLower" xml:space="preserve">
+    <value>Docelowa liczba miejsc przy odnowieniu musi być niższa od bieżącej.</value>
+  </data>
+  <data name="RenewalSeatFloor" xml:space="preserve">
+    <value>Liczba miejsc przy odnowieniu nie może być niższa niż 500.</value>
+  </data>
+  <data name="RenewalBelowActiveStudents" xml:space="preserve">
+    <value>Liczba miejsc przy odnowieniu nie może być niższa od liczby aktywnych uczniów.</value>
+  </data>
+  <data name="AutoRenewNoticeTooLate" xml:space="preserve">
+    <value>Automatycznego odnowienia nie można wyłączyć w 30-dniowym okresie wypowiedzenia.</value>
+  </data>
+  <data name="SubscriptionExpired" xml:space="preserve">
+    <value>Okres subskrypcji wygasł; przed reaktywacją wymagane jest odnowienie.</value>
+  </data>
+  <data name="ConcurrencyConflict" xml:space="preserve">
+    <value>Subskrypcja została zmieniona w innym żądaniu. Odśwież stronę i spróbuj ponownie.</value>
+  </data>
+  <data name="PersistenceError" xml:space="preserve">
+    <value>Nie udało się zapisać zmiany subskrypcji.</value>
+  </data>
+</root>

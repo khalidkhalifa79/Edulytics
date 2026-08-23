@@ -675,7 +675,9 @@ public sealed partial class AssessmentService
             return Fail(AssessmentErrorCode.AssessmentNotOpen);
 
         var student = await _repo.GetStudentProfileAsync(schoolId, request.StudentProfileId, cancellationToken);
-        if (student is null || student.Status != AcademicStructureStatus.Active)
+        if (student is null ||
+            student.IsArchived ||
+            student.Status != AcademicStructureStatus.Active)
             return Fail(AssessmentErrorCode.StudentNotFound);
 
         if (!await _repo.IsStudentEnrolledAsync(

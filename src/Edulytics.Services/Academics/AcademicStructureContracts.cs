@@ -29,6 +29,9 @@ public enum AcademicStructureErrorCode
     StudentProfileNotFound,
     InvalidTeacher,
     InvalidStudentAccount,
+    StudentSeatLimitReached,
+    StudentAlreadyArchived,
+    StudentNotArchived,
     ConcurrencyConflict,
     PersistenceError
 }
@@ -111,7 +114,10 @@ public sealed record StudentProfileItem(
     string LastName,
     string DisplayName,
     string? UserEmail,
-    AcademicStructureStatus Status);
+    AcademicStructureStatus Status,
+    bool IsArchived = false,
+    DateTime? ArchivedAtUtc = null,
+    byte[]? RowVersion = null);
 
 public sealed record StudentEnrollmentItem(
     Guid Id,

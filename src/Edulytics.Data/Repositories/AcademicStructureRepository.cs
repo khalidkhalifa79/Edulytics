@@ -1,5 +1,7 @@
+using System.Data;
 using Edulytics.Core.Academics;
 using Edulytics.Core.Entities;
+using Edulytics.Core.Enums;
 using Edulytics.Core.Interfaces;
 using Edulytics.Data.Contexts;
 using Microsoft.EntityFrameworkCore;
@@ -177,6 +179,214 @@ public sealed class AcademicStructureRepository : IAcademicStructureRepository
                  x.AcademicYearId == academicYearId &&
                  x.StudentProfileId == studentProfileId,
             cancellationToken);
+
+    public async Task<AcademicPersistenceResult>
+        AddStudentProfileWithSeatGuardAsync(
+            StudentProfile student,
+            CancellationToken cancellationToken = default)
+    {
+        if (!_db.Database.IsRelational())
+        {
+            if (!await HasSeatCapacityAsync(
+                    student.SchoolId,
+                    student,
+                    additionalSeats: 1,
+                    lockSubscription: false,
+                    cancellationToken))
+            {
+                _db.ChangeTracker.Clear();
+                return AcademicPersistenceResult.Failure(
+                    AcademicPersistenceError.SeatLimit);
+            }
+
+            _db.StudentProfiles.Add(student);
+            return await SaveAsync(cancellationToken);
+        }
+
+        await using var transaction =
+            await _db.Database.BeginTransactionAsync(
+                IsolationLevel.Serializable,
+                cancellationToken);
+
+        try
+        {
+            if (!await HasSeatCapacityAsync(
+                    student.SchoolId,
+                    student,
+                    additionalSeats: 1,
+                    lockSubscription: true,
+                    cancellationToken))
+            {
+                await transaction.RollbackAsync(cancellationToken);
+                _db.ChangeTracker.Clear();
+                return AcademicPersistenceResult.Failure(
+                    AcademicPersistenceError.SeatLimit);
+            }
+
+            _db.StudentProfiles.Add(student);
+            await _db.SaveChangesAsync(cancellationToken);
+            await transaction.CommitAsync(cancellationToken);
+            return AcademicPersistenceResult.Success();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            await transaction.RollbackAsync(cancellationToken);
+            _db.ChangeTracker.Clear();
+            return AcademicPersistenceResult.Failure(
+                AcademicPersistenceError.Conflict);
+        }
+        catch (DbUpdateException)
+        {
+            await transaction.RollbackAsync(cancellationToken);
+            _db.ChangeTracker.Clear();
+            return AcademicPersistenceResult.Failure(
+                AcademicPersistenceError.Constraint);
+        }
+    }
+
+    public async Task<AcademicPersistenceResult>
+        SaveStudentArchiveStateWithSeatGuardAsync(
+            StudentProfile student,
+            byte[] expectedRowVersion,
+            bool restoring,
+            CancellationToken cancellationToken = default)
+    {
+        if (expectedRowVersion.Length == 0)
+        {
+            _db.ChangeTracker.Clear();
+            return AcademicPersistenceResult.Failure(
+                AcademicPersistenceError.Conflict);
+        }
+
+        if (!_db.Database.IsRelational())
+        {
+            if (restoring &&
+                !await HasSeatCapacityAsync(
+                    student.SchoolId,
+                    student,
+                    additionalSeats: 1,
+                    lockSubscription: false,
+                    cancellationToken))
+            {
+                _db.ChangeTracker.Clear();
+                return AcademicPersistenceResult.Failure(
+                    AcademicPersistenceError.SeatLimit);
+            }
+
+            _db.Entry(student)
+                .Property(x => x.RowVersion)
+                .OriginalValue = expectedRowVersion;
+
+            return await SaveAsync(cancellationToken);
+        }
+
+        await using var transaction =
+            await _db.Database.BeginTransactionAsync(
+                IsolationLevel.Serializable,
+                cancellationToken);
+
+        try
+        {
+            if (restoring &&
+                !await HasSeatCapacityAsync(
+                    student.SchoolId,
+                    student,
+                    additionalSeats: 1,
+                    lockSubscription: true,
+                    cancellationToken))
+            {
+                await transaction.RollbackAsync(cancellationToken);
+                _db.ChangeTracker.Clear();
+                return AcademicPersistenceResult.Failure(
+                    AcademicPersistenceError.SeatLimit);
+            }
+
+            _db.Entry(student)
+                .Property(x => x.RowVersion)
+                .OriginalValue = expectedRowVersion;
+
+            await _db.SaveChangesAsync(cancellationToken);
+            await transaction.CommitAsync(cancellationToken);
+            return AcademicPersistenceResult.Success();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            await transaction.RollbackAsync(cancellationToken);
+            _db.ChangeTracker.Clear();
+            return AcademicPersistenceResult.Failure(
+                AcademicPersistenceError.Conflict);
+        }
+        catch (DbUpdateException)
+        {
+            await transaction.RollbackAsync(cancellationToken);
+            _db.ChangeTracker.Clear();
+            return AcademicPersistenceResult.Failure(
+                AcademicPersistenceError.Constraint);
+        }
+    }
+
+    private async Task<bool> HasSeatCapacityAsync(
+        Guid schoolId,
+        StudentProfile student,
+        int additionalSeats,
+        bool lockSubscription,
+        CancellationToken cancellationToken)
+    {
+        if (student.Status != AcademicStructureStatus.Active ||
+            student.IsArchived)
+        {
+            return true;
+        }
+
+        SchoolSubscription? subscription;
+
+        if (lockSubscription)
+        {
+            subscription =
+                await _db.SchoolSubscriptions
+                    .FromSqlInterpolated(
+                        $@"SELECT *
+FROM ""SchoolSubscriptions""
+WHERE ""SchoolId"" = {schoolId}
+FOR UPDATE")
+                    .SingleOrDefaultAsync(cancellationToken);
+        }
+        else
+        {
+            subscription =
+                await _db.SchoolSubscriptions
+                    .SingleOrDefaultAsync(
+                        x => x.SchoolId == schoolId,
+                        cancellationToken);
+        }
+
+        if (subscription is null)
+            return true;
+
+        var now = DateTime.UtcNow;
+
+        if (subscription.Status != SubscriptionStatus.Active ||
+            !subscription.CurrentTermStartsAtUtc.HasValue ||
+            !subscription.CurrentTermEndsAtUtc.HasValue ||
+            subscription.CurrentTermStartsAtUtc.Value > now ||
+            subscription.CurrentTermEndsAtUtc.Value <= now)
+        {
+            return false;
+        }
+
+        var activeSeats =
+            await _db.StudentProfiles
+                .AsNoTracking()
+                .CountAsync(
+                    x =>
+                        x.SchoolId == schoolId &&
+                        !x.IsArchived &&
+                        x.Status == AcademicStructureStatus.Active,
+                    cancellationToken);
+
+        return activeSeats + additionalSeats <=
+            subscription.CommittedSeats;
+    }
 
     public async Task AddAsync<T>(
         T entity, CancellationToken cancellationToken = default)
