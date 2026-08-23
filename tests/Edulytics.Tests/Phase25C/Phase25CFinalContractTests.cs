@@ -89,6 +89,34 @@ public sealed class Phase25CFinalContractTests
         Assert.DoesNotContain("PaymentProvider", text, StringComparison.Ordinal);
     }
 
+    [Fact]
+    public void RenderFreeStaging_AppliesMigrationsBeforeWebStartup()
+    {
+        var blueprint = Read("render.yaml");
+        var entrypoint = Read("docker/render-entrypoint.sh");
+
+        Assert.Contains("plan: free", blueprint);
+        Assert.DoesNotContain("preDeployCommand:", blueprint);
+
+        Assert.Contains(
+            "ConnectionStrings__MigrationConnection",
+            entrypoint);
+        Assert.Contains("/app/efbundle", entrypoint);
+        Assert.Contains(
+            "exec dotnet Edulytics.Web.dll",
+            entrypoint);
+
+        var migrationIndex = entrypoint.IndexOf(
+            "/app/efbundle",
+            StringComparison.Ordinal);
+        var webIndex = entrypoint.IndexOf(
+            "exec dotnet Edulytics.Web.dll",
+            StringComparison.Ordinal);
+
+        Assert.True(migrationIndex >= 0);
+        Assert.True(webIndex > migrationIndex);
+    }
+
     private static string Read(string relative) =>
         File.ReadAllText(
             Path.Combine(
