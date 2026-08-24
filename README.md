@@ -188,15 +188,16 @@ https://staging.edulytiks.com
 
 ## Current engineering status
 
-Phases through **Phase 26** are accepted and closed.
+Phases through **Phase 27** are accepted and closed for application
+production-readiness scope.
 
-**Phase 27 — Application Production Readiness** is active under the approved
-no-cost validation plan.
+Phase 27 was qualified on the approved no-cost environment: Render Free staging
+plus the existing Neon environment. The final application domain is
+`https://edulytiks.com`.
 
-Current acceptance remains on Render Free staging plus the existing Neon
-environment. A paid Render production service is not required. The final
-application domain is `https://edulytiks.com`.
+Actual paid production provisioning/cutover is intentionally deferred until the
+program and all required tests are complete. At that point, follow
+`docs/ORACLE_PRODUCTION_HANDOFF.md`.
 
-After the program and all required tests are accepted, production
-subscription/provisioning moves to a separate Oracle go-live plan. Phase 28
-post-launch review does not start until that real Oracle production cutover.
+**Phase 28 is not started.** It is a post-real-go-live DR/security/capacity
+review and begins only after the future Oracle production cutover.
