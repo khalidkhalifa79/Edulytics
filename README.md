@@ -190,11 +190,13 @@ https://staging.edulytiks.com
 
 Phases through **Phase 26** are accepted and closed.
 
-**Phase 27 — Production Go-Live** is the active phase.
+**Phase 27 — Application Production Readiness** is active under the approved
+no-cost validation plan.
 
-The production release must promote the exact protected-CI artifact, use a
-direct PostgreSQL pre-deploy migration, keep normal startup migrations disabled,
-and pass live production health, auth, tenant, SignalR, Outbox, audit, report,
-email, monitoring and backup/recovery gates before it can close.
+Current acceptance remains on Render Free staging plus the existing Neon
+environment. A paid Render production service is not required. The final
+application domain is `https://edulytiks.com`.
 
-Phase 28 is the post-launch DR/security/capacity review.
+After the program and all required tests are accepted, production
+subscription/provisioning moves to a separate Oracle go-live plan. Phase 28
+post-launch review does not start until that real Oracle production cutover.
