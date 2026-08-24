@@ -5,23 +5,39 @@ if [ "$#" -gt 0 ]; then
     exec "$@"
 fi
 
-# Render Free web services do not support pre-deploy commands.
-# For the temporary staging environment, apply any pending EF Core
-# migrations before ASP.NET Core starts. The direct/non-pooler Neon
-# connection is used only for the migration bundle. The connection
-# string itself is never written to logs.
-if [ -n "${ConnectionStrings__MigrationConnection:-}" ]; then
-    echo "Applying pending database migrations before web startup..."
+# Startup migrations are an explicit staging-only compatibility path.
+# Production must run migrations in the host's pre-deploy phase using
+# /app/phase27-predeploy.sh, then start the web process with this flag false.
+RUN_STARTUP_MIGRATIONS="$(
+    printf '%s' \
+        "${Edulytics__Deployment__RunStartupMigrations:-false}" |
+        tr '[:upper:]' '[:lower:]'
+)"
 
-    ConnectionStrings__DefaultConnection="$ConnectionStrings__MigrationConnection" \
-    EDULYTICS_CONNECTION_STRING="$ConnectionStrings__MigrationConnection" \
-    /app/efbundle \
-        --connection "$ConnectionStrings__MigrationConnection"
+case "$RUN_STARTUP_MIGRATIONS" in
+    true)
+        if [ -z "${ConnectionStrings__MigrationConnection:-}" ]; then
+            echo "Startup migrations requested but migration connection is missing."
+            exit 1
+        fi
 
-    echo "Database migration check completed."
-else
-    echo "Migration connection is not configured; skipping startup migrations."
-fi
+        echo "Applying pending database migrations before web startup..."
+
+        ConnectionStrings__DefaultConnection="$ConnectionStrings__MigrationConnection" \
+        EDULYTICS_CONNECTION_STRING="$ConnectionStrings__MigrationConnection" \
+        /app/efbundle \
+            --connection "$ConnectionStrings__MigrationConnection"
+
+        echo "Database migration check completed."
+        ;;
+    false)
+        echo "Startup migrations disabled; expecting controlled pre-deploy migration."
+        ;;
+    *)
+        echo "Invalid Edulytics__Deployment__RunStartupMigrations value."
+        exit 1
+        ;;
+esac
 
 exec dotnet Edulytics.Web.dll \
     --urls "http://0.0.0.0:${PORT:-10000}"

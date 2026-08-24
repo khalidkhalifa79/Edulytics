@@ -46,10 +46,12 @@ WORKDIR /app
 COPY --from=build /app/publish ./
 COPY --from=build /app/efbundle /app/efbundle
 COPY docker/render-entrypoint.sh /app/render-entrypoint.sh
+COPY docker/phase27-predeploy.sh /app/phase27-predeploy.sh
 
 RUN chmod 0555 \
     /app/efbundle \
-    /app/render-entrypoint.sh
+    /app/render-entrypoint.sh \
+    /app/phase27-predeploy.sh
 
 ENV ASPNETCORE_ENVIRONMENT=Production
 ENV DOTNET_EnableDiagnostics=0

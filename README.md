@@ -188,10 +188,13 @@ https://staging.edulytiks.com
 
 ## Current engineering status
 
-Phases through Phase 23 are accepted.
+Phases through **Phase 26** are accepted and closed.
 
-Phase 24 is the current maintainability and repository-hygiene phase. It is
-behavior-preserving: large refactors are not accepted without a green
-behavioral baseline and explicit regression evidence.
+**Phase 27 — Production Go-Live** is the active phase.
 
-Phase 25 is reserved for multi-instance scale qualification.
+The production release must promote the exact protected-CI artifact, use a
+direct PostgreSQL pre-deploy migration, keep normal startup migrations disabled,
+and pass live production health, auth, tenant, SignalR, Outbox, audit, report,
+email, monitoring and backup/recovery gates before it can close.
+
+Phase 28 is the post-launch DR/security/capacity review.

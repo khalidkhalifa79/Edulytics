@@ -44,6 +44,11 @@ services:
       - key: ConnectionStrings__MigrationConnection
         sync: false
 
+      # Temporary staging compatibility only. Production MUST keep
+      # this false and use /app/phase27-predeploy.sh as pre-deploy.
+      - key: Edulytics__Deployment__RunStartupMigrations
+        value: "true"
+
       # Optional after the first secure bootstrap.
       - key: Edulytics__SuperAdmin__Email
         sync: false

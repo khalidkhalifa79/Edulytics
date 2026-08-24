@@ -1,79 +1,91 @@
-# Edulytics Monitoring Runbook
+# Edulytics Production Monitoring Runbook
 
 ## Primary signals
 
 Monitor:
 
-- /health/live;
-- /health/ready;
+- `/health/live`;
+- `/health/ready`;
 - HTTP 5xx responses;
-- HTTP 429 responses;
-- request duration;
-- unhandled exception events;
-- database readiness failures;
-- Outbox retry warnings;
-- Outbox polling failures;
-- application restarts;
-- SQL Server availability;
-- backup success;
-- restore rehearsal success.
+- HTTP 429 / controlled shedding;
+- request p50/p95/p99 latency;
+- request timeout/cancellation counts;
+- application/container restarts;
+- PostgreSQL/Neon connectivity and latency;
+- Npgsql pool pressure / connection utilization;
+- Outbox pending, processing and dead-letter counts;
+- oldest pending Outbox age;
+- Outbox lease/retry failures;
+- SignalR connection/publish failures;
+- SMTP connector failures, timeouts and circuit state;
+- backup/recovery evidence;
+- release SHA and migration version.
 
 ## Liveness failure
 
-If /health/live is not HTTP 200:
+If `/health/live` is not HTTP 200:
 
-1. Check the application process.
-2. Check host/container state.
-3. Preserve relevant logs.
-4. Restart only after useful incident evidence is retained.
+1. Check the Render service/container state.
+2. Preserve logs before destructive restart actions.
+3. Record the active release SHA.
+4. Check recent deploy/restart events.
+5. Restore service only after useful incident evidence is retained.
 
 ## Readiness failure
 
-If liveness is Healthy but readiness is Unhealthy, investigate:
+If liveness is healthy but readiness is unhealthy, investigate:
 
-- SQL connectivity;
-- pending EF migrations;
-- Outbox worker startup;
-- stale Outbox heartbeat.
+- Neon/PostgreSQL reachability;
+- pending or incompatible EF migrations;
+- Outbox worker heartbeat/state for a Combined runtime;
+- required production configuration;
+- DB saturation or repeated timeouts.
 
-An Unhealthy instance should not receive normal production traffic.
+An unhealthy instance must not receive normal production traffic.
 
-## Correlation IDs
+## Correlation and release evidence
 
-Production error pages provide a correlation ID.
+Search structured logs with:
 
-Support should use that identifier when searching structured logs.
+- correlation ID;
+- release SHA;
+- SchoolId where safe;
+- actor identifier where safe;
+- route/operation;
+- Outbox/job identifier when applicable.
 
-Do not request passwords, authentication cookies, invitation tokens,
-database credentials, or SMTP credentials from users.
+Never request or log passwords, authentication cookies, invitation tokens,
+database credentials, SMTP credentials, or Data Protection certificate secrets.
 
-## Alert baseline
+## Minimum production alerts
 
-Initial operational alerting should include:
+Before Phase 27 can close, alerts must exist and be testable for at least:
 
-- liveness failure;
-- readiness failure lasting more than two minutes;
-- repeated HTTP 5xx responses;
-- repeated Outbox processing failures;
-- SQL Server unavailability;
-- failed scheduled backup;
-- missing expected backup;
-- failed restore rehearsal.
+- sustained readiness failure;
+- repeated/unexpected HTTP 5xx responses;
+- repeated Outbox processing failure or dead-letter growth;
+- PostgreSQL/Neon unavailability;
+- material DB latency/connection pressure;
+- repeated SMTP connector failure;
+- unexpected application restart/deploy failure;
+- missing backup/recovery capability.
 
-Thresholds must later be tuned using real production traffic.
+Tune thresholds after observing real production traffic; do not remove the
+baseline alert classes.
 
 ## Incident response
 
-1. Record UTC incident start time.
-2. Record deployed application version.
+1. Record UTC incident start.
+2. Record release SHA and migration version.
 3. Capture correlation IDs.
-4. Preserve structured logs.
-5. Check liveness.
-6. Check readiness.
-7. Check SQL Server.
-8. Check migration state.
-9. Check Outbox processing.
+4. Preserve structured logs and platform deploy events.
+5. Check liveness/readiness.
+6. Check Neon/PostgreSQL.
+7. Check migration state.
+8. Check Outbox/dead letters.
+9. Check SignalR and connector degradation.
 10. Contain impact.
-11. Restore service.
-12. Validate data integrity.
-13. Document root cause and corrective action.
+11. Roll back the application only when schema compatibility permits it.
+12. Use the backup/restore runbook for data recovery.
+13. Verify tenant isolation and data integrity.
+14. Document root cause and corrective action.
