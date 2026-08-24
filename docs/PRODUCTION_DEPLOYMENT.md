@@ -1,112 +1,111 @@
-# Edulytics Production Deployment
+# Edulytics Deployment and Future Production Handoff
 
-## Phase 27 release rule
+## Current approved deployment policy
 
-Production Go-Live promotes the exact application artifact accepted by the
-protected GitHub pipeline. Build once, identify the exact commit SHA/image, and
-deploy that immutable image to production.
-
-Do not treat a successful staging homepage as production acceptance.
-
-## Target initial production topology
-
-The controlled first release uses:
+During application development and final pre-production qualification:
 
 ```text
-1 paid always-on Render Web Service
-  ASP.NET Core MVC/Razor
-  SignalR
-  Combined runtime role / durable Outbox worker
-
-1 Neon production PostgreSQL branch/database
+Render Free staging
++
+current Neon Edulytics environment
 ```
 
-Phase 25 already qualified multi-instance correctness. Initial production may
-remain one paid always-on application instance to minimize moving parts. Do not
-scale above one web instance unless the accepted shared Data Protection,
-SignalR backplane and distributed-limit configuration are enabled as required.
+No paid Render production service is required or approved at this stage.
 
-## Database connections
+The existing staging URL remains:
 
-Runtime:
+```text
+https://staging.edulytiks.com
+```
+
+The final production domain is reserved as:
+
+```text
+https://edulytiks.com
+```
+
+Do not perform the final DNS/application cutover until the later Oracle
+production plan is explicitly started.
+
+## Immutable delivery
+
+Protected GitHub CI builds/tests the exact release SHA. Immutable SHA-tagged
+container artifacts remain the promotion unit.
+
+This rule is retained even though the actual paid production host is deferred.
+
+## Database connection contract
+
+Application runtime configuration:
 
 ```text
 ConnectionStrings__DefaultConnection
 ```
 
-Use the approved Neon pooled runtime endpoint.
-
-Migration:
+Migration/admin configuration:
 
 ```text
 ConnectionStrings__MigrationConnection
 ```
 
-Use a separate Neon direct/non-pooler endpoint.
+Keep runtime and migration credentials separate.
 
-Never commit either connection string.
+The current PostgreSQL/Neon implementation remains the accepted application
+baseline. The final database placement during Oracle go-live must be explicitly
+decided and revalidated; this document does not silently assume a future move or
+non-move.
 
-## Migration ordering
+## Migration ordering contract
 
-Production must set:
+Normal production-style startup defaults to **no automatic migration**.
 
-```text
-Edulytics__Deployment__RunStartupMigrations=false
-```
-
-Run this as the Render pre-deploy command:
+A controlled release must run the migration bundle separately before serving
+traffic. The existing container helper remains:
 
 ```text
 /app/phase27-predeploy.sh
 ```
 
-Only after the pre-deploy migration succeeds may the new web process become
-ready.
-
-The normal production runtime must not apply migrations merely because the
-migration connection variable exists.
-
-## Render production service
-
-Production must be a paid always-on service with:
-
-- HTTPS/custom production domain;
-- `/health/ready` health check;
-- graceful shutdown delay;
-- production secrets outside Git;
-- exact approved image SHA/digest;
-- pre-deploy command `/app/phase27-predeploy.sh`;
-- startup migration flag false;
-- `ASPNETCORE_ENVIRONMENT=Production`;
-- forwarded headers enabled;
-- persistent PostgreSQL Data Protection key storage;
-- required Data Protection certificate configured;
-- pooled runtime DB connection;
-- direct migration DB connection;
-- SMTP production/test-delivery configuration;
-- AllowedHosts overridden to the production host(s).
-
-An image-backed Render service is preferred for explicit promotion of the exact
-prebuilt CI image instead of rebuilding an arbitrary branch state during
-go-live.
-
-## Health
-
-Verify publicly:
+The Render Free staging compatibility flag may remain enabled only for the
+temporary staging topology:
 
 ```text
-GET /health/live
-GET /health/ready
+Edulytics__Deployment__RunStartupMigrations=true
 ```
 
-Readiness covers the core serving contract, including PostgreSQL and accepted
-worker/migration state.
+The future real production topology must keep startup migration disabled and use
+a controlled migration/release step.
 
-## Rollback
+## Current acceptance surface
 
-Application rollback must target a previously accepted immutable image.
+Free-environment qualification verifies:
 
-Do not automatically reverse a production migration. Roll back the application
-only when the deployed schema remains backward-compatible with that image.
+```text
+GET https://staging.edulytiks.com/health/live
+GET https://staging.edulytiks.com/health/ready
+```
 
-If data/schema recovery is required, use `docs/BACKUP_RESTORE_RUNBOOK.md`.
+It also verifies security headers and EN/PL entry flow.
+
+Authenticated tenant, concurrency, SignalR, Outbox and long-duration performance
+evidence is inherited from the accepted test suites and Phase 26 qualification
+unless a material runtime change invalidates that evidence.
+
+## Future Oracle production
+
+Actual production provisioning/cutover is governed by:
+
+`docs/ORACLE_PRODUCTION_HANDOFF.md`
+
+That later plan must revalidate capacity and performance on Oracle before
+customer production acceptance.
+
+## Explicit non-goals now
+
+Current Phase 27 work does not:
+
+- create or upgrade a paid Render service;
+- purchase Oracle resources;
+- perform final `edulytiks.com` DNS cutover;
+- claim production customer traffic is live;
+- start Phase 28.

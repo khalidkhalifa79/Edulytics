@@ -6,33 +6,124 @@ public sealed class Phase27ProductionGoLiveContractTests
         FindRepositoryRoot();
 
     [Fact]
-    public void Phase27_ProductionArtifactsExist()
+    public void Phase27_ProductionReadinessAssetsExist()
     {
-        Assert.True(File.Exists(Path.Combine(
-            Root,
-            "docker",
-            "phase27-predeploy.sh")));
-
-        Assert.True(File.Exists(Path.Combine(
-            Root,
-            "tools",
-            "phase27",
-            "phase27_preflight.py")));
-
-        Assert.True(File.Exists(Path.Combine(
-            Root,
-            "tools",
-            "phase27",
-            "phase27_public_smoke.py")));
-
         Assert.True(File.Exists(Path.Combine(
             Root,
             "docs",
             "PHASE_27_PRODUCTION_GO_LIVE.md")));
+
+        Assert.True(File.Exists(Path.Combine(
+            Root,
+            "docs",
+            "ORACLE_PRODUCTION_HANDOFF.md")));
+
+        Assert.True(File.Exists(Path.Combine(
+            Root,
+            "tools",
+            "phase27",
+            "phase27_free_readiness.py")));
+
+        Assert.True(File.Exists(Path.Combine(
+            Root,
+            "docker",
+            "phase27-predeploy.sh")));
     }
 
     [Fact]
-    public void Phase27_StartupMigrationIsExplicitOptIn()
+    public void Phase27_CurrentPlanDoesNotRequirePaidRender()
+    {
+        var phase27 = File.ReadAllText(Path.Combine(
+            Root,
+            "docs",
+            "PHASE_27_PRODUCTION_GO_LIVE.md"));
+
+        Assert.Contains(
+            "Render Free",
+            phase27,
+            StringComparison.Ordinal);
+
+        Assert.Contains(
+            "do not create a paid Render production service",
+            phase27,
+            StringComparison.OrdinalIgnoreCase);
+
+        Assert.DoesNotContain(
+            "one paid always-on Render web service",
+            phase27,
+            StringComparison.OrdinalIgnoreCase);
+    }
+
+    [Fact]
+    public void Phase27_FinalDomainIsRootEdulytiksDomain()
+    {
+        var phase27 = File.ReadAllText(Path.Combine(
+            Root,
+            "docs",
+            "PHASE_27_PRODUCTION_GO_LIVE.md"));
+
+        Assert.Contains(
+            "https://edulytiks.com",
+            phase27,
+            StringComparison.Ordinal);
+
+        Assert.DoesNotContain(
+            "app.edulytiks.com` is the approved",
+            phase27,
+            StringComparison.OrdinalIgnoreCase);
+    }
+
+    [Fact]
+    public void Phase27_OracleGoLiveIsExplicitlyDeferred()
+    {
+        var phase27 = File.ReadAllText(Path.Combine(
+            Root,
+            "docs",
+            "PHASE_27_PRODUCTION_GO_LIVE.md"));
+
+        var oracle = File.ReadAllText(Path.Combine(
+            Root,
+            "docs",
+            "ORACLE_PRODUCTION_HANDOFF.md"));
+
+        Assert.Contains(
+            "Oracle",
+            phase27,
+            StringComparison.Ordinal);
+
+        Assert.Contains(
+            "Do not begin Oracle production provisioning until",
+            oracle,
+            StringComparison.Ordinal);
+
+        Assert.Contains(
+            "all required regression/security/performance/acceptance tests are green",
+            oracle,
+            StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void Phase27_FreeReadinessIsLockedToStaging()
+    {
+        var tool = File.ReadAllText(Path.Combine(
+            Root,
+            "tools",
+            "phase27",
+            "phase27_free_readiness.py"));
+
+        Assert.Contains(
+            "LOCKED_HOST = \"staging.edulytiks.com\"",
+            tool,
+            StringComparison.Ordinal);
+
+        Assert.Contains(
+            "PHASE27_FREE_ENVIRONMENT_READINESS_PASS",
+            tool,
+            StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void Phase27_StartupMigrationRemainsExplicitOptIn()
     {
         var text = File.ReadAllText(Path.Combine(
             Root,
@@ -56,7 +147,7 @@ public sealed class Phase27ProductionGoLiveContractTests
     }
 
     [Fact]
-    public void Phase27_StagingExplicitlyKeepsTemporaryStartupMigrationCompatibility()
+    public void Phase27_StagingKeepsTemporaryMigrationCompatibility()
     {
         var text = File.ReadAllText(Path.Combine(
             Root,
@@ -74,44 +165,22 @@ public sealed class Phase27ProductionGoLiveContractTests
     }
 
     [Fact]
-    public void Phase27_ImageContainsDedicatedPreDeployMigrationScript()
-    {
-        var dockerfile = File.ReadAllText(Path.Combine(
-            Root,
-            "Dockerfile"));
-
-        Assert.Contains(
-            "COPY docker/phase27-predeploy.sh /app/phase27-predeploy.sh",
-            dockerfile,
-            StringComparison.Ordinal);
-
-        Assert.Contains(
-            "/app/phase27-predeploy.sh",
-            dockerfile,
-            StringComparison.Ordinal);
-    }
-
-    [Fact]
-    public void Phase27_PreDeployRejectsPooledMigrationEndpoint()
+    public void Phase27_ProductionSmokeStillRejectsStaging()
     {
         var text = File.ReadAllText(Path.Combine(
             Root,
-            "docker",
-            "phase27-predeploy.sh"));
+            "tools",
+            "phase27",
+            "phase27_public_smoke.py"));
 
         Assert.Contains(
-            "*-pooler.*",
-            text,
-            StringComparison.Ordinal);
-
-        Assert.Contains(
-            "rejected a pooled migration endpoint",
+            "production smoke is hard-blocked from staging",
             text,
             StringComparison.Ordinal);
     }
 
     [Fact]
-    public void Phase27_OperationsDocsDoNotClaimSqlServerIsActive()
+    public void Phase27_OperationsDocsRemainPostgreSqlNeonAware()
     {
         var backup = File.ReadAllText(Path.Combine(
             Root,
@@ -122,16 +191,6 @@ public sealed class Phase27ProductionGoLiveContractTests
             Root,
             "docs",
             "MONITORING_RUNBOOK.md"));
-
-        Assert.DoesNotContain(
-            "SQL Server availability",
-            backup,
-            StringComparison.OrdinalIgnoreCase);
-
-        Assert.DoesNotContain(
-            "SQL Server availability",
-            monitoring,
-            StringComparison.OrdinalIgnoreCase);
 
         Assert.Contains(
             "PostgreSQL",
@@ -144,29 +203,10 @@ public sealed class Phase27ProductionGoLiveContractTests
             StringComparison.Ordinal);
     }
 
-    [Fact]
-    public void Phase27_ProductionSmokeHardBlocksStaging()
-    {
-        var text = File.ReadAllText(Path.Combine(
-            Root,
-            "tools",
-            "phase27",
-            "phase27_public_smoke.py"));
-
-        Assert.Contains(
-            "staging.edulytiks.com",
-            text,
-            StringComparison.Ordinal);
-
-        Assert.Contains(
-            "production smoke is hard-blocked from staging",
-            text,
-            StringComparison.Ordinal);
-    }
-
     private static string FindRepositoryRoot()
     {
-        var current = new DirectoryInfo(AppContext.BaseDirectory);
+        var current = new DirectoryInfo(
+            AppContext.BaseDirectory);
 
         while (current is not null)
         {

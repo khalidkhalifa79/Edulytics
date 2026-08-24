@@ -1,132 +1,120 @@
-# Edulytics — Phase 27 Production Go-Live
+# Edulytics — Phase 27 Production Readiness / Deferred Oracle Go-Live
 
-## Authoritative baseline
+## Status and scope
 
-Phase 27 starts from accepted Phase 26 main:
+Phase 27 validates that the Edulytics application is **production-ready at the
+application level** using the approved no-cost validation environment.
 
-`4ca72a359f83ab007732d080dcf89bf09670d282`
+The actual paid production infrastructure cutover is intentionally deferred.
 
-Repository:
+This is an explicit project decision that supersedes the earlier Phase 27
+assumption of creating a paid Render production service during application
+development.
 
-`khalidkhalifa79/Edulytics`
+## Approved current environment
 
-## Hard preconditions
+Until the program and all acceptance phases are complete:
 
-Production cannot be accepted until all are evidenced:
+```text
+GitHub protected main
+  -> immutable GHCR image
+  -> Render Free staging
+  -> Neon current project / staging validation branch
+```
 
-- production-readiness score >= 85/100;
-- zero open P0 blockers;
-- accepted/documented P1 list;
-- production migration rehearsed;
-- rollback path documented;
-- backup/recovery capability configured;
-- monitoring alerts live and tested;
-- on-call/incident owner defined;
-- production secrets loaded outside Git;
-- production DNS/TLS ready.
+Rules:
 
-## Initial release topology
+- keep the existing Render Free staging service;
+- do not create a paid Render production service;
+- do not upgrade Render merely to close Phase 27;
+- do not subscribe to or provision Oracle production resources yet;
+- reuse accepted Phase 26 performance/soak evidence unless a material runtime
+  change invalidates it;
+- continue using the current free environment for remaining application
+  acceptance work.
 
-The initial controlled production release is deliberately simple:
+## Final production destination
 
-- one paid always-on Render web service;
-- runtime role `Combined`;
-- ASP.NET Core MVC/Razor + SignalR;
-- durable Outbox worker in the same process;
-- one isolated Neon production database/branch;
-- pooled Neon runtime connection;
-- separate direct/non-pooler migration connection.
+The final production host/domain is:
 
-Phase 25 already proves scale-out correctness. Production does not need to start
-with multiple web instances. If production later scales above one web instance,
-the accepted Redis/backplane, shared Data Protection and distributed-sensitive
-rate-limit requirements apply.
+```text
+https://edulytiks.com
+```
 
-## Immutable release
+`app.edulytiks.com` is not the approved final application domain.
 
-The protected GitHub CI builds and pushes the exact main SHA image.
+No DNS cutover to the final application host is performed during this Phase 27
+readiness closure.
 
-Production must deploy the exact accepted SHA/digest. Do not rebuild a mutable
-branch and call it the promoted artifact.
+After the entire program and all required tests are accepted, begin a separate
+Oracle production migration/go-live plan. That plan must determine the actual
+Oracle topology, cost, capacity, network, database connectivity, backup,
+monitoring and rollback design before any subscription/provisioning action.
 
-## Migration order
+## Current Neon state
 
-1. Render obtains the candidate immutable image.
-2. `/app/phase27-predeploy.sh` runs on a pre-deploy instance.
-3. The script uses only `ConnectionStrings__MigrationConnection`.
-4. The migration connection must be direct/non-pooler.
-5. A migration failure aborts the deploy.
-6. Production startup migrations remain disabled.
-7. The new web process starts only after migration succeeds.
-8. `/health/ready` must become HTTP 200 before traffic acceptance.
+The existing Edulytics Neon project already contains both staging and production
+branches. Phase 27 does not create or mutate a paid production host merely
+because the production database branch exists.
 
-## Production environment contract
+Runtime and migration credential separation remains the required application
+contract:
 
-Required categories include:
+```text
+ConnectionStrings__DefaultConnection
+ConnectionStrings__MigrationConnection
+```
 
-- `ASPNETCORE_ENVIRONMENT=Production`;
-- `AllowedHosts` set to real production host(s);
-- forwarded headers enabled;
-- persistent Data Protection application name/certificate configuration;
-- `ConnectionStrings__DefaultConnection` = pooled Neon runtime;
-- `ConnectionStrings__MigrationConnection` = direct Neon migration;
-- `Edulytics__Deployment__RunStartupMigrations=false`;
-- production SMTP connector configuration;
-- release SHA/version metadata;
-- runtime role configuration appropriate to the chosen topology.
+The actual Oracle-era production database placement/connection plan must be
+revalidated during the Oracle handoff rather than guessed now.
 
-Secrets are never stored in Git.
+## Application-level readiness gates
 
-## Go-live verification
+Phase 27 readiness requires:
 
-After deployment, verify:
-
-- `/health/live`;
-- `/health/ready`;
+- accepted Phase 26 load/stress/spike/SignalR/360-minute soak evidence;
+- Release build green;
+- full regression green;
+- protected GitHub CI green;
+- immutable SHA-tagged container image;
+- staging `/health/live` green;
+- staging `/health/ready` green;
 - public security headers;
-- English UI;
-- Polish UI;
-- SuperAdmin login/operations;
-- SchoolAdmin login and tenant-scoped dashboard;
-- SignalR connection and reconciliation path;
-- durable Outbox processing;
-- audit persistence/readback;
-- report/export;
-- designated external email delivery;
-- worker state/heartbeat;
-- dead-letter operational access;
-- release SHA;
-- migration version;
-- logs/correlation search;
-- alert delivery.
+- EN/PL public localization entry flow;
+- migration bundle/pre-deploy contract retained;
+- startup migration remains explicit opt-in for temporary free staging only;
+- production startup migration default remains disabled;
+- tenant/concurrency/security contracts remain covered by the accepted suites;
+- repository secret-history gate green.
 
-## Hard rejection rules
+## What Phase 27 does NOT claim
 
-Do not close Phase 27 if any of these is true:
+Closing Phase 27 under this approved plan does **not** mean:
 
-- homepage works but worker is dead;
-- a migration is pending or failed;
-- SignalR is broken;
-- backup/recovery capability is absent;
-- alerting is unavailable;
-- authentication cookie fails after restart;
-- cross-tenant isolation fails;
-- concurrency behavior regresses;
-- dead-letter handling is unavailable;
-- production release cannot be tied to an exact immutable image.
+- Oracle is provisioned;
+- `edulytiks.com` has been cut over to the final application host;
+- production customer traffic is live;
+- final Oracle sizing has been measured;
+- final production RPO/RTO has been measured;
+- Phase 28 post-launch review has started.
 
-## Rollback
+Those claims are prohibited until the later Oracle go-live.
 
-Application rollback uses a previously accepted immutable image only.
+## Oracle handoff
 
-Do not automatically reverse the production database migration. If the current
-schema is not backward-compatible with the rollback image, stop and use the
-documented recovery path instead of forcing the rollback.
+The future Oracle production work is specified in:
 
-## Current Phase 27 state
+`docs/ORACLE_PRODUCTION_HANDOFF.md`
 
-This document and the local Phase 27 code establish the production deployment
-contract and eliminate known pre-go-live gaps.
+## Closure rule
 
-Phase 27 remains OPEN until real production infrastructure and live acceptance
-evidence pass. Local success must never be relabeled as production success.
+Phase 27 can close when the free-environment application-readiness gates above
+are green through protected `main`.
+
+The final document will explicitly record:
+
+```text
+PHASE 27 = CLOSED — APPLICATION PRODUCTION READINESS
+ORACLE GO-LIVE = DEFERRED UNTIL PROGRAM COMPLETION
+PHASE 28 = NOT STARTED
+```
