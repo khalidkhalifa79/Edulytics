@@ -106,15 +106,19 @@ The future Oracle production work is specified in:
 
 `docs/ORACLE_PRODUCTION_HANDOFF.md`
 
-## Closure rule
+## Closure
 
-Phase 27 can close when the free-environment application-readiness gates above
-are green through protected `main`.
+The approved free-environment application-readiness gates passed through
+protected `main`.
 
-The final document will explicitly record:
+Durable acceptance evidence:
 
-```text
-PHASE 27 = CLOSED — APPLICATION PRODUCTION READINESS
-ORACLE GO-LIVE = DEFERRED UNTIL PROGRAM COMPLETION
-PHASE 28 = NOT STARTED
-```
+`docs/PHASE_27_READINESS_ACCEPTANCE.md`
+
+**PHASE 27 = CLOSED — APPLICATION PRODUCTION READINESS**
+
+**ORACLE GO-LIVE = DEFERRED UNTIL PROGRAM COMPLETION**
+
+**FINAL PRODUCTION DOMAIN = edulytiks.com**
+
+**PHASE 28 = NOT STARTED**
