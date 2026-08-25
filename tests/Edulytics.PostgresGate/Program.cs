@@ -8,6 +8,7 @@ using Edulytics.Data.Identity;
 using System.Text.Json;
 using Edulytics.Data.Contexts;
 using Edulytics.Data.Repositories;
+using Edulytics.Data.Seeding;
 using Microsoft.EntityFrameworkCore;
 
 var connection =
@@ -1556,6 +1557,52 @@ Console.WriteLine(
 
 Console.WriteLine(
     "PHASE23_POSTGRES_GATE_PASS");
+
+
+Console.WriteLine(
+    "===== PHASE 27.5 VERIFIED CURRICULUM POSTGRES GATE =====");
+
+await using (var db = await NewDbAsync())
+{
+    var seeder = new MathematicsCurriculumPackSeeder(db);
+    await seeder.SeedAsync();
+    await seeder.SeedAsync();
+
+    var states = await db.CurriculumPackImportStates
+        .AsNoTracking()
+        .ToListAsync();
+
+    if (states.Count != 4)
+        throw new Exception("Phase27.5 PostgreSQL pack-state count failed.");
+
+    var uae = states.Single(x => x.FrameworkCode == "UAE-MOE-MATH");
+    if (uae.VersionCode != "MOE-2026-2027-T1" ||
+        uae.OfficialNodeCount != 22 ||
+        uae.UnitCount != 6 ||
+        uae.LessonCount != 42 ||
+        uae.LinkCount != 48)
+        throw new Exception("Phase27.5 PostgreSQL UAE verified-count contract failed.");
+
+    var lessons = await db.CurriculumPackContentNodes
+        .AsNoTracking()
+        .Where(x => x.FrameworkVersionId == uae.FrameworkVersionId && x.NodeKind == "Lesson")
+        .Select(x => x.Id)
+        .ToListAsync();
+
+    var linked = await db.CurriculumPackNodeLinks
+        .AsNoTracking()
+        .Where(x => x.FrameworkVersionId == uae.FrameworkVersionId && x.LinkKind == "LessonStandardAlignment")
+        .Select(x => x.FromNodeId)
+        .Distinct()
+        .ToListAsync();
+
+    if (lessons.Count != 42 ||
+        !lessons.OrderBy(x => x).SequenceEqual(linked.OrderBy(x => x)))
+        throw new Exception("Phase27.5 PostgreSQL lesson-standard linkage failed.");
+}
+
+Console.WriteLine(
+    "PHASE275_VERIFIED_CURRICULUM_POSTGRES_GATE_PASS");
 
 static School NewSchool(
     Guid id,
