@@ -61,7 +61,7 @@
     <value>Status</value>
   </data>
   <data name="CountryCode" xml:space="preserve">
-    <value>Kod kraju</value>
+    <value>Kraj</value>
   </data>
   <data name="City" xml:space="preserve">
     <value>Miasto</value>
@@ -560,5 +560,17 @@
   </data>
   <data name="SubjectSupervisorErrorAssignmentNotFound" xml:space="preserve">
     <value>Nie znaleziono przypisania.</value>
+  </data>
+  <data name="CountryPoland" xml:space="preserve">
+    <value>Polska (PL)</value>
+  </data>
+  <data name="CountryUnitedArabEmirates" xml:space="preserve">
+    <value>Zjednoczone Emiraty Arabskie (UAE)</value>
+  </data>
+  <data name="TimeZoneAutoHelp" xml:space="preserve">
+    <value>Ustawiana automatycznie na podstawie wybranego kraju.</value>
+  </data>
+  <data name="InvalidCountryCode" xml:space="preserve">
+    <value>Wybierz Polskę lub Zjednoczone Emiraty Arabskie.</value>
   </data>
 </root>

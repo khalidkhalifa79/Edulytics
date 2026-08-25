@@ -69,6 +69,74 @@ public sealed class SchoolManagementServiceTests
         Assert.Equal("WAW-001", school.SchoolCode);
         Assert.Equal("WAW-001", school.NormalizedSchoolCode);
         Assert.Equal("PL", school.CountryCode);
+        Assert.Equal("Europe/Warsaw", school.TimeZoneId);
+    }
+
+    [Fact]
+    public async Task CreateAsync_Uae_DerivesDubaiTimeZone()
+    {
+        var repository = new FakeSchoolRepository();
+        var service = new SchoolManagementService(repository);
+
+        var result = await service.CreateAsync(
+            ValidCreate() with
+            {
+                CountryCode = "ae",
+                TimeZoneId = "Europe/Warsaw"
+            });
+
+        Assert.True(result.Succeeded);
+
+        var school = Assert.Single(repository.Schools);
+
+        Assert.Equal("AE", school.CountryCode);
+        Assert.Equal("Asia/Dubai", school.TimeZoneId);
+    }
+
+    [Fact]
+    public async Task CreateAsync_RejectsUnsupportedCountry()
+    {
+        var repository = new FakeSchoolRepository();
+        var service = new SchoolManagementService(repository);
+
+        var result = await service.CreateAsync(
+            ValidCreate() with { CountryCode = "US" });
+
+        Assert.False(result.Succeeded);
+        Assert.Contains(
+            result.Errors,
+            error =>
+                error.Code == SchoolErrorCode.InvalidCountryCode);
+        Assert.Empty(repository.Schools);
+    }
+
+    [Fact]
+    public async Task UpdateAsync_ChangingCountry_DerivesTimeZone()
+    {
+        var repository = new FakeSchoolRepository();
+        var school = NewSchool(
+            "School",
+            "WAW-001",
+            SchoolStatus.Active);
+
+        repository.Seed(school);
+
+        var service = new SchoolManagementService(repository);
+
+        var result = await service.UpdateAsync(
+            new UpdateSchoolRequest(
+                school.Id,
+                "School",
+                "AE",
+                "Dubai",
+                "school@example.com",
+                "en",
+                "Europe/Warsaw",
+                school.RowVersion.ToArray()));
+
+        Assert.True(result.Succeeded);
+        Assert.Equal("AE", school.CountryCode);
+        Assert.Equal("Asia/Dubai", school.TimeZoneId);
     }
 
     [Fact]
