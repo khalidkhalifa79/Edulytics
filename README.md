@@ -201,3 +201,17 @@ program and all required tests are complete. At that point, follow
 
 **Phase 28 is not started.** It is a post-real-go-live DR/security/capacity
 review and begins only after the future Oracle production cutover.
+
+## Phase 27.5 — Mathematics Curriculum Packs
+
+Phase 27 remains closed. Phase 27.5 implements the Mathematics curriculum-pack layer for exactly four framework families: England/British, American/Common Core, UAE Ministry of Education, and Polish National Curriculum.
+
+The phase records official-source provenance, native academic-level/pathway mappings, reuse/attribution contracts, runtime official-source verification, and the standards-linked unit/lesson blueprint layer.
+
+Common Core commercial-use evidence is recorded as product-owner confirmed without inventing a licence number or effective date.
+
+See:
+- `docs/PHASE_27_5_MATHEMATICS_CURRICULUM_PACKS.md`
+- `docs/curriculum/OFFICIAL_SOURCE_REGISTRY.md`
+
+No Oracle provisioning, paid Render production, DNS cutover or Phase 28 work is performed by Phase 27.5.
