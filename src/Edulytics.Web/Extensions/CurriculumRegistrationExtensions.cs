@@ -1,5 +1,6 @@
 using Edulytics.Core.Interfaces;
 using Edulytics.Data.Repositories;
+using Edulytics.Data.Seeding;
 using Edulytics.Services.Curriculum;
 
 namespace Edulytics.Web.Extensions;
@@ -11,6 +12,7 @@ public static class CurriculumRegistrationExtensions
     {
         services.AddScoped<ICurriculumRepository, CurriculumRepository>();
         services.AddScoped<ICurriculumService, CurriculumService>();
+        services.AddScoped<MathematicsCurriculumPackSeeder>();
         return services;
     }
 }

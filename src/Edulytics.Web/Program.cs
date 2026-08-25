@@ -223,6 +223,14 @@ using (var scope =
 
     await bootstrapper
         .InitializeAsync();
+
+    var mathematicsCurriculumPackSeeder =
+        scope.ServiceProvider
+            .GetRequiredService<
+                Edulytics.Data.Seeding.MathematicsCurriculumPackSeeder>();
+
+    await mathematicsCurriculumPackSeeder
+        .SeedAsync();
 }
 
 app.UseForwardedHeaders();

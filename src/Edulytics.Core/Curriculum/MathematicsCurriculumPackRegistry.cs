@@ -175,7 +175,7 @@ public static class MathematicsCurriculumPackRegistry
             MathematicsSubjectCode,
             CurriculumReuseBasis.OfficialGovernmentSourceReference,
             CurriculumTextMode.OfficialSourceLinked,
-            "Edulytics registers the UAE Ministry of Education as the authority and preserves the Mathematics Curriculum Standards Framework 2017 reference as a versioned source. Current assessment/policy material is used only for current scope/pathway metadata and is not substituted for curriculum outcomes.",
+            "Edulytics uses UAE MoE Mathematics 2026-2027 as the user-facing curriculum version. Current Term 1 source-catalog evidence establishes Grade/track scope. Historical UAE MoE standard codes are internal provenance and may align to current lessons only under the Product Owner EXACT historical-outcome rule; codes are never invented.",
             "Source: UAE Ministry of Education. Preserve source/version metadata on every imported official item.",
             [
                 new(
@@ -183,6 +183,12 @@ public static class MathematicsCurriculumPackRegistry
                     "UAE Ministry of Education",
                     "https://www.moe.gov.ae/",
                     "Current official Ministry portal",
+                    true),
+                new(
+                    "Current Mathematics ebook/source platform",
+                    "UAE Ministry of Education",
+                    "https://minhaji.moe.gov.ae/",
+                    "Academic year 2026-2027 / Term 1 current source catalog",
                     true),
                 new(
                     "Current assessment/scope metadata only",

@@ -32,6 +32,9 @@ public class EdulyticsDbContext
     public DbSet<StudentEnrollment> StudentEnrollments => Set<StudentEnrollment>();
     public DbSet<CurriculumTopic> CurriculumTopics => Set<CurriculumTopic>();
     public DbSet<LearningOutcome> LearningOutcomes => Set<LearningOutcome>();
+    public DbSet<CurriculumPackContentNode> CurriculumPackContentNodes => Set<CurriculumPackContentNode>();
+    public DbSet<CurriculumPackNodeLink> CurriculumPackNodeLinks => Set<CurriculumPackNodeLink>();
+    public DbSet<CurriculumPackImportState> CurriculumPackImportStates => Set<CurriculumPackImportState>();
     public DbSet<Assessment> Assessments => Set<Assessment>();
     public DbSet<AssessmentQuestion> AssessmentQuestions => Set<AssessmentQuestion>();
     public DbSet<QuestionLearningOutcome> QuestionLearningOutcomes => Set<QuestionLearningOutcome>();
@@ -149,6 +152,9 @@ public class EdulyticsDbContext
         builder.ApplyConfiguration(new StudentEnrollmentConfiguration());
         builder.ApplyConfiguration(new CurriculumTopicConfiguration());
         builder.ApplyConfiguration(new LearningOutcomeConfiguration());
+        builder.ApplyConfiguration(new CurriculumPackContentNodeConfiguration());
+        builder.ApplyConfiguration(new CurriculumPackNodeLinkConfiguration());
+        builder.ApplyConfiguration(new CurriculumPackImportStateConfiguration());
         builder.ApplyConfiguration(new AssessmentConfiguration());
         builder.ApplyConfiguration(new AssessmentQuestionConfiguration());
         builder.ApplyConfiguration(new QuestionLearningOutcomeConfiguration());
