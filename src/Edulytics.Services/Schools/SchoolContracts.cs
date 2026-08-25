@@ -12,6 +12,7 @@ public enum SchoolErrorCode
     DuplicateSchoolCode,
     RequiredCountryCode,
     CountryCodeTooLong,
+    InvalidCountryCode,
     RequiredCity,
     CityTooLong,
     RequiredContactEmail,

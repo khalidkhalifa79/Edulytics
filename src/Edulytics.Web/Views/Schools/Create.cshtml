@@ -50,8 +50,18 @@
 
             <div class="school-field">
                 <label asp-for="CountryCode">@T["CountryCode"]</label>
-                <input asp-for="CountryCode"
-                       autocomplete="country" />
+                <select asp-for="CountryCode"
+                        autocomplete="country"
+                        data-school-country>
+                    <option value="PL"
+                            data-time-zone="Europe/Warsaw">
+                        @T["CountryPoland"]
+                    </option>
+                    <option value="AE"
+                            data-time-zone="Asia/Dubai">
+                        @T["CountryUnitedArabEmirates"]
+                    </option>
+                </select>
                 <span asp-validation-for="CountryCode"
                       class="school-field-error"></span>
             </div>
@@ -86,7 +96,11 @@
             <div class="school-field">
                 <label asp-for="TimeZoneId">@T["TimeZoneId"]</label>
                 <input asp-for="TimeZoneId"
-                       autocomplete="off" />
+                       readonly
+                       aria-readonly="true"
+                       autocomplete="off"
+                       data-school-time-zone />
+                <small>@T["TimeZoneAutoHelp"]</small>
                 <span asp-validation-for="TimeZoneId"
                       class="school-field-error"></span>
             </div>

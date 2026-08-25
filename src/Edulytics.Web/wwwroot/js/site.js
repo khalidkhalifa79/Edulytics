@@ -33,10 +33,32 @@
         });
     }
 
+    function wireSchoolCountryTimeZones() {
+        document.querySelectorAll("[data-school-country]").forEach(country => {
+            const form = country.closest("form");
+            const timeZone = form?.querySelector(
+                "[data-school-time-zone]");
+
+            if (!timeZone) {
+                return;
+            }
+
+            const sync = () => {
+                const option = country.selectedOptions?.[0];
+                timeZone.value = option?.dataset.timeZone ?? "";
+            };
+
+            country.addEventListener("change", sync);
+            sync();
+        });
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
         wirePrintButtons();
 
         wireConfirmationForms();
+
+        wireSchoolCountryTimeZones();
 
         document.querySelectorAll("form").forEach(form => {
             if ((form.method || "get").toLowerCase() !== "post") {

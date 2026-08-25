@@ -27,6 +27,15 @@ public sealed class SchoolManagementService : ISchoolManagementService
             "pl"
         };
 
+    private static readonly IReadOnlyDictionary<string, string>
+        SupportedCountryTimeZones =
+            new Dictionary<string, string>(
+                StringComparer.OrdinalIgnoreCase)
+            {
+                ["PL"] = "Europe/Warsaw",
+                ["AE"] = "Asia/Dubai"
+            };
+
     private readonly ISchoolRepository _repository;
     private readonly IAuditService? _audit;
 
@@ -81,6 +90,10 @@ public sealed class SchoolManagementService : ISchoolManagementService
         }
 
         var now = DateTime.UtcNow;
+        var normalizedCountryCode =
+            NormalizeCountryCode(request.CountryCode);
+        var timeZoneId =
+            ResolveTimeZoneId(normalizedCountryCode)!;
 
         var school = new School
         {
@@ -89,11 +102,11 @@ public sealed class SchoolManagementService : ISchoolManagementService
             SchoolCode = normalizedCode,
             NormalizedSchoolCode = normalizedCode,
             Status = SchoolStatus.Active,
-            CountryCode = NormalizeCountryCode(request.CountryCode),
+            CountryCode = normalizedCountryCode,
             City = request.City.Trim(),
             ContactEmail = request.ContactEmail.Trim(),
             DefaultCulture = request.DefaultCulture.Trim().ToLowerInvariant(),
-            TimeZoneId = request.TimeZoneId.Trim(),
+            TimeZoneId = timeZoneId,
             CreatedAtUtc = now,
             UpdatedAtUtc = now,
             ArchivedAtUtc = null,
@@ -187,6 +200,11 @@ public sealed class SchoolManagementService : ISchoolManagementService
                     SchoolErrorCode.ArchivedCannotEdit));
         }
 
+        var normalizedCountryCode =
+            NormalizeCountryCode(request.CountryCode);
+        var timeZoneId =
+            ResolveTimeZoneId(normalizedCountryCode)!;
+
         var oldValues = new Dictionary<string, object?>
         {
             ["name"] = school.Name,
@@ -198,12 +216,12 @@ public sealed class SchoolManagementService : ISchoolManagementService
         };
 
         school.Name = request.Name.Trim();
-        school.CountryCode = NormalizeCountryCode(request.CountryCode);
+        school.CountryCode = normalizedCountryCode;
         school.City = request.City.Trim();
         school.ContactEmail = request.ContactEmail.Trim();
         school.DefaultCulture =
             request.DefaultCulture.Trim().ToLowerInvariant();
-        school.TimeZoneId = request.TimeZoneId.Trim();
+        school.TimeZoneId = timeZoneId;
         school.UpdatedAtUtc = DateTime.UtcNow;
 
         if (_audit is not null)
@@ -307,6 +325,18 @@ public sealed class SchoolManagementService : ISchoolManagementService
     private static string NormalizeCountryCode(string value) =>
         (value ?? string.Empty).Trim().ToUpperInvariant();
 
+    public static string? ResolveTimeZoneId(string countryCode)
+    {
+        var normalizedCountryCode =
+            NormalizeCountryCode(countryCode);
+
+        return SupportedCountryTimeZones.TryGetValue(
+            normalizedCountryCode,
+            out var timeZoneId)
+                ? timeZoneId
+                : null;
+    }
+
     private static bool IsAllowedTransition(
         SchoolStatus current,
         SchoolStatus target) =>
@@ -327,8 +357,7 @@ public sealed class SchoolManagementService : ISchoolManagementService
             request.CountryCode,
             request.City,
             request.ContactEmail,
-            request.DefaultCulture,
-            request.TimeZoneId);
+            request.DefaultCulture);
 
         var code = NormalizeSchoolCode(request.SchoolCode);
 
@@ -366,8 +395,7 @@ public sealed class SchoolManagementService : ISchoolManagementService
             request.CountryCode,
             request.City,
             request.ContactEmail,
-            request.DefaultCulture,
-            request.TimeZoneId);
+            request.DefaultCulture);
 
         if (request.RowVersion is not { Length: > 0 })
         {
@@ -384,8 +412,7 @@ public sealed class SchoolManagementService : ISchoolManagementService
         string countryCode,
         string city,
         string contactEmail,
-        string defaultCulture,
-        string timeZoneId)
+        string defaultCulture)
     {
         var errors = new List<SchoolValidationError>();
 
@@ -408,11 +435,24 @@ public sealed class SchoolManagementService : ISchoolManagementService
                 "CountryCode",
                 SchoolErrorCode.RequiredCountryCode));
         }
-        else if (countryCode.Trim().Length > CountryCodeMaxLength)
+        else
         {
-            errors.Add(new(
-                "CountryCode",
-                SchoolErrorCode.CountryCodeTooLong));
+            var normalizedCountryCode =
+                NormalizeCountryCode(countryCode);
+
+            if (normalizedCountryCode.Length > CountryCodeMaxLength)
+            {
+                errors.Add(new(
+                    "CountryCode",
+                    SchoolErrorCode.CountryCodeTooLong));
+            }
+            else if (!SupportedCountryTimeZones.ContainsKey(
+                         normalizedCountryCode))
+            {
+                errors.Add(new(
+                    "CountryCode",
+                    SchoolErrorCode.InvalidCountryCode));
+            }
         }
 
         if (string.IsNullOrWhiteSpace(city))
@@ -463,19 +503,6 @@ public sealed class SchoolManagementService : ISchoolManagementService
             errors.Add(new(
                 "DefaultCulture",
                 SchoolErrorCode.InvalidDefaultCulture));
-        }
-
-        if (string.IsNullOrWhiteSpace(timeZoneId))
-        {
-            errors.Add(new(
-                "TimeZoneId",
-                SchoolErrorCode.RequiredTimeZoneId));
-        }
-        else if (timeZoneId.Trim().Length > TimeZoneIdMaxLength)
-        {
-            errors.Add(new(
-                "TimeZoneId",
-                SchoolErrorCode.TimeZoneIdTooLong));
         }
 
         return errors;

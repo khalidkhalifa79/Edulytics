@@ -61,7 +61,7 @@
     <value>Status</value>
   </data>
   <data name="CountryCode" xml:space="preserve">
-    <value>Country code</value>
+    <value>Country</value>
   </data>
   <data name="City" xml:space="preserve">
     <value>City</value>
@@ -560,5 +560,17 @@
   </data>
   <data name="SubjectSupervisorErrorAssignmentNotFound" xml:space="preserve">
     <value>The assignment could not be found.</value>
+  </data>
+  <data name="CountryPoland" xml:space="preserve">
+    <value>Poland (PL)</value>
+  </data>
+  <data name="CountryUnitedArabEmirates" xml:space="preserve">
+    <value>United Arab Emirates (UAE)</value>
+  </data>
+  <data name="TimeZoneAutoHelp" xml:space="preserve">
+    <value>Set automatically from the selected country.</value>
+  </data>
+  <data name="InvalidCountryCode" xml:space="preserve">
+    <value>Select Poland or the United Arab Emirates.</value>
   </data>
 </root>
