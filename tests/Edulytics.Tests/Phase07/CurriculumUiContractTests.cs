@@ -15,7 +15,7 @@ public sealed class CurriculumUiContractTests
             .Single();
 
         Assert.Equal(
-            "AcademicStructureAdministration",
+            "SchoolAccess",
             attribute.Policy);
     }
 
@@ -31,10 +31,21 @@ public sealed class CurriculumUiContractTests
 
         Assert.All(
             posts,
-            method => Assert.True(
-                method.GetCustomAttributes<
-                    ValidateAntiForgeryTokenAttribute>().Any(),
-                method.Name));
+            method =>
+            {
+                Assert.True(
+                    method.GetCustomAttributes<
+                        ValidateAntiForgeryTokenAttribute>().Any(),
+                    method.Name);
+
+                var authorization = method
+                    .GetCustomAttributes<AuthorizeAttribute>()
+                    .Single();
+
+                Assert.Equal(
+                    "SubjectSupervisor",
+                    authorization.Roles);
+            });
     }
 
 

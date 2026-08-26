@@ -1,7 +1,12 @@
+@using Edulytics.Core.Constants
 @model Edulytics.Web.ViewModels.Reports.ReportIndexViewModel
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.ReportResource> R
 @using Edulytics.Core.Reports
 @using Edulytics.Web.ViewModels.Reports
+
+@{
+    var canRequestReportExport = User.IsInRole(RoleNames.SubjectSupervisor) || User.IsInRole(RoleNames.Teacher);
+}
 
 @{
     ViewData["Title"] =
@@ -208,93 +213,99 @@
                         @R["PrintReport"]
                     </button>
 
-                    <form asp-controller="Reports"
-                          asp-action="RequestExport"
-                          method="post"
-                          class="report-inline-form">
-                        @Html.AntiForgeryToken()
+                    @if (canRequestReportExport)
+                    {
+                        <form asp-controller="Reports"
+                                                  asp-action="RequestExport"
+                                                  method="post"
+                                                  class="report-inline-form">
+                                                @Html.AntiForgeryToken()
 
-                        <input type="hidden"
-                               name="_idempotencyKey"
-                               value="@Model.CsvIdempotencyKey" />
+                                                <input type="hidden"
+                                                       name="_idempotencyKey"
+                                                       value="@Model.CsvIdempotencyKey" />
 
-                        <input type="hidden"
-                               name="kind"
-                               value="@Model.Request.Kind" />
+                                                <input type="hidden"
+                                                       name="kind"
+                                                       value="@Model.Request.Kind" />
 
-                        <input type="hidden"
-                               name="format"
-                               value="@ReportExportFormat.Csv" />
+                                                <input type="hidden"
+                                                       name="format"
+                                                       value="@ReportExportFormat.Csv" />
 
-                        <input type="hidden"
-                               name="academicYearId"
-                               value="@Model.Request.AcademicYearId" />
+                                                <input type="hidden"
+                                                       name="academicYearId"
+                                                       value="@Model.Request.AcademicYearId" />
 
-                        <input type="hidden"
-                               name="classGroupId"
-                               value="@Model.Request.ClassGroupId" />
+                                                <input type="hidden"
+                                                       name="classGroupId"
+                                                       value="@Model.Request.ClassGroupId" />
 
-                        <input type="hidden"
-                               name="subjectId"
-                               value="@Model.Request.SubjectId" />
+                                                <input type="hidden"
+                                                       name="subjectId"
+                                                       value="@Model.Request.SubjectId" />
 
-                        <input type="hidden"
-                               name="studentProfileId"
-                               value="@Model.Request.StudentProfileId" />
+                                                <input type="hidden"
+                                                       name="studentProfileId"
+                                                       value="@Model.Request.StudentProfileId" />
 
-                        <input type="hidden"
-                               name="learningOutcomeId"
-                               value="@Model.Request.LearningOutcomeId" />
+                                                <input type="hidden"
+                                                       name="learningOutcomeId"
+                                                       value="@Model.Request.LearningOutcomeId" />
 
-                        <button type="submit"
-                                class="school-button school-button-primary">
-                            @R["ExportCsv"]
-                        </button>
-                    </form>
+                                                <button type="submit"
+                                                        class="school-button school-button-primary">
+                                                    @R["ExportCsv"]
+                                                </button>
+                                            </form>
+                    }
 
-                    <form asp-controller="Reports"
-                          asp-action="RequestExport"
-                          method="post"
-                          class="report-inline-form">
-                        @Html.AntiForgeryToken()
+                    @if (canRequestReportExport)
+                    {
+                        <form asp-controller="Reports"
+                                                  asp-action="RequestExport"
+                                                  method="post"
+                                                  class="report-inline-form">
+                                                @Html.AntiForgeryToken()
 
-                        <input type="hidden"
-                               name="_idempotencyKey"
-                               value="@Model.XlsxIdempotencyKey" />
+                                                <input type="hidden"
+                                                       name="_idempotencyKey"
+                                                       value="@Model.XlsxIdempotencyKey" />
 
-                        <input type="hidden"
-                               name="kind"
-                               value="@Model.Request.Kind" />
+                                                <input type="hidden"
+                                                       name="kind"
+                                                       value="@Model.Request.Kind" />
 
-                        <input type="hidden"
-                               name="format"
-                               value="@ReportExportFormat.Xlsx" />
+                                                <input type="hidden"
+                                                       name="format"
+                                                       value="@ReportExportFormat.Xlsx" />
 
-                        <input type="hidden"
-                               name="academicYearId"
-                               value="@Model.Request.AcademicYearId" />
+                                                <input type="hidden"
+                                                       name="academicYearId"
+                                                       value="@Model.Request.AcademicYearId" />
 
-                        <input type="hidden"
-                               name="classGroupId"
-                               value="@Model.Request.ClassGroupId" />
+                                                <input type="hidden"
+                                                       name="classGroupId"
+                                                       value="@Model.Request.ClassGroupId" />
 
-                        <input type="hidden"
-                               name="subjectId"
-                               value="@Model.Request.SubjectId" />
+                                                <input type="hidden"
+                                                       name="subjectId"
+                                                       value="@Model.Request.SubjectId" />
 
-                        <input type="hidden"
-                               name="studentProfileId"
-                               value="@Model.Request.StudentProfileId" />
+                                                <input type="hidden"
+                                                       name="studentProfileId"
+                                                       value="@Model.Request.StudentProfileId" />
 
-                        <input type="hidden"
-                               name="learningOutcomeId"
-                               value="@Model.Request.LearningOutcomeId" />
+                                                <input type="hidden"
+                                                       name="learningOutcomeId"
+                                                       value="@Model.Request.LearningOutcomeId" />
 
-                        <button type="submit"
-                                class="school-button school-button-primary">
-                            @R["ExportXlsx"]
-                        </button>
-                    </form>
+                                                <button type="submit"
+                                                        class="school-button school-button-primary">
+                                                    @R["ExportXlsx"]
+                                                </button>
+                                            </form>
+                    }
                 </div>
             </header>
 

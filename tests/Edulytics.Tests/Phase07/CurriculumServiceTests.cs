@@ -21,7 +21,7 @@ public sealed class CurriculumServiceTests
         var option = Assert.Single(topic.OfficialOutcomes);
 
         var result = await f.Service.CreateOfficialOutcomeAsync(
-            f.Admin.Id,
+            f.Supervisor.Id,
             new CreateOfficialLearningOutcomeRequest(
                 topic.Id,
                 option.ContentNodeId,
@@ -38,7 +38,7 @@ public sealed class CurriculumServiceTests
         Assert.Equal("PL:VI:ADDITION:001", saved.Code);
         Assert.Equal("Add whole numbers accurately.", saved.Description);
 
-        var dashboard = await f.Service.GetDashboardAsync(f.Admin.Id);
+        var dashboard = await f.Service.GetDashboardAsync(f.Supervisor.Id);
         var savedTopic = Assert.Single(dashboard.Value!.Topics);
         Assert.Equal(
             "Polish National Curriculum Mathematics",
@@ -54,7 +54,7 @@ public sealed class CurriculumServiceTests
         var option = Assert.Single(topic.OfficialOutcomes);
 
         Assert.True((await f.Service.CreateOfficialOutcomeAsync(
-            f.Admin.Id,
+            f.Supervisor.Id,
             new CreateOfficialLearningOutcomeRequest(
                 topic.Id,
                 option.ContentNodeId,
@@ -64,7 +64,7 @@ public sealed class CurriculumServiceTests
 
         var outcome = Assert.Single(await f.Db.LearningOutcomes.ToListAsync());
         var update = await f.Service.UpdateOutcomeAsync(
-            f.Admin.Id,
+            f.Supervisor.Id,
             new UpdateLearningOutcomeRequest(
                 outcome.Id,
                 "FAKE.CODE",
@@ -80,12 +80,12 @@ public sealed class CurriculumServiceTests
 
 
     [Fact]
-    public async Task SchoolAdmin_CanSelectVerifiedFramework_ThenCreateTopic()
+    public async Task SubjectSupervisor_CanSelectVerifiedFramework_ThenCreateTopic()
     {
         using var f = CreateFixture(withAdoption: false);
 
         var selected = await f.Service.SelectFrameworkAsync(
-            f.Admin.Id,
+            f.Supervisor.Id,
             new SelectCurriculumFrameworkRequest(
                 f.Subject.Id,
                 f.Grade.Id,
@@ -94,7 +94,7 @@ public sealed class CurriculumServiceTests
         Assert.True(selected.Succeeded);
 
         var created = await f.Service.CreateTopicAsync(
-            f.Admin.Id,
+            f.Supervisor.Id,
             new CreateCurriculumTopicRequest(
                 f.Subject.Id,
                 f.Grade.Id,
@@ -119,7 +119,7 @@ public sealed class CurriculumServiceTests
         using var f = CreateFixture(withAdoption: false);
 
         var result = await f.Service.CreateTopicAsync(
-            f.Admin.Id,
+            f.Supervisor.Id,
             new CreateCurriculumTopicRequest(
                 f.Subject.Id,
                 f.Grade.Id,
@@ -138,7 +138,7 @@ public sealed class CurriculumServiceTests
         using var f = CreateFixture(withAdoption: false);
 
         var result = await f.Service.SelectFrameworkAsync(
-            f.Admin.Id,
+            f.Supervisor.Id,
             new SelectCurriculumFrameworkRequest(
                 f.Subject.Id,
                 f.Grade.Id,
@@ -151,17 +151,39 @@ public sealed class CurriculumServiceTests
     }
 
     [Fact]
-    public async Task Teacher_CannotManageCurriculum()
+    public async Task TeacherAndSchoolAdmin_CanRead_ButCannotManageCurriculum()
     {
         using var f = CreateFixture();
 
-        var teacher = NewUser(f.School.Id, RoleNames.Teacher);
+        var teacher =
+            NewUser(
+                f.School.Id,
+                RoleNames.Teacher);
+
         f.Users.Seed(teacher);
 
-        var result = await f.Service.GetDashboardAsync(teacher.Id);
+        Assert.NotNull(
+            (await f.Service.GetDashboardAsync(teacher.Id)).Value);
 
-        Assert.Null(result.Value);
-        Assert.Equal(CurriculumErrorCode.AccessDenied, result.Error);
+        Assert.NotNull(
+            (await f.Service.GetDashboardAsync(f.Admin.Id)).Value);
+
+        foreach (var actorId in new[] { teacher.Id, f.Admin.Id })
+        {
+            var denied =
+                await f.Service.CreateTopicAsync(
+                    actorId,
+                    new CreateCurriculumTopicRequest(
+                        f.Subject.Id,
+                        f.Grade.Id,
+                        "Blocked",
+                        99));
+
+            Assert.False(denied.Succeeded);
+            Assert.Equal(
+                CurriculumErrorCode.AccessDenied,
+                denied.Error);
+        }
     }
 
     [Fact]
@@ -179,7 +201,7 @@ public sealed class CurriculumServiceTests
         await f.Db.SaveChangesAsync();
 
         var result = await f.Service.CreateTopicAsync(
-            f.Admin.Id,
+            f.Supervisor.Id,
             new CreateCurriculumTopicRequest(
                 otherSubject.Id,
                 otherGrade.Id,
@@ -202,7 +224,7 @@ public sealed class CurriculumServiceTests
         await f.Db.SaveChangesAsync();
 
         var result = await f.Service.CreateTopicAsync(
-            f.Admin.Id,
+            f.Supervisor.Id,
             new CreateCurriculumTopicRequest(
                 f.Subject.Id,
                 f.Grade.Id,
@@ -219,7 +241,7 @@ public sealed class CurriculumServiceTests
         using var f = CreateFixture();
 
         Assert.True((await f.Service.CreateTopicAsync(
-            f.Admin.Id,
+            f.Supervisor.Id,
             new CreateCurriculumTopicRequest(
                 f.Subject.Id,
                 f.Grade.Id,
@@ -227,7 +249,7 @@ public sealed class CurriculumServiceTests
                 1))).Succeeded);
 
         var duplicate = await f.Service.CreateTopicAsync(
-            f.Admin.Id,
+            f.Supervisor.Id,
             new CreateCurriculumTopicRequest(
                 f.Subject.Id,
                 f.Grade.Id,
@@ -243,7 +265,7 @@ public sealed class CurriculumServiceTests
     private static async Task<CurriculumTopicItem> CreateTopic(Fixture f)
     {
         var result = await f.Service.CreateTopicAsync(
-            f.Admin.Id,
+            f.Supervisor.Id,
             new CreateCurriculumTopicRequest(
                 f.Subject.Id,
                 f.Grade.Id,
@@ -252,7 +274,7 @@ public sealed class CurriculumServiceTests
 
         Assert.True(result.Succeeded);
 
-        var dashboard = await f.Service.GetDashboardAsync(f.Admin.Id);
+        var dashboard = await f.Service.GetDashboardAsync(f.Supervisor.Id);
         return Assert.Single(dashboard.Value!.Topics);
     }
 
@@ -355,7 +377,12 @@ public sealed class CurriculumServiceTests
 
         var users = new FakeUserRepository();
         var admin = NewUser(school.Id, RoleNames.SchoolAdmin);
+        var supervisor = NewUser(
+            school.Id,
+            RoleNames.SubjectSupervisor);
+
         users.Seed(admin);
+        users.Seed(supervisor);
 
         var service = new CurriculumService(
             new CurriculumRepository(db),
@@ -368,6 +395,7 @@ public sealed class CurriculumServiceTests
             subject,
             grade,
             admin,
+            supervisor,
             schools,
             users,
             service,
@@ -438,6 +466,7 @@ public sealed class CurriculumServiceTests
         Subject Subject,
         GradeLevel Grade,
         SchoolUserRecord Admin,
+        SchoolUserRecord Supervisor,
         FakeSchoolRepository Schools,
         FakeUserRepository Users,
         CurriculumService Service,

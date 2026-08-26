@@ -1,4 +1,5 @@
 using System.Security.Claims;
+using Edulytics.Core.Constants;
 using Edulytics.Services.Analytics;
 using Edulytics.Web.ViewModels.Analytics;
 using Microsoft.AspNetCore.Authorization;
@@ -51,6 +52,7 @@ public sealed class AnalyticsController : Controller
                 result.Value));
     }
 
+    [Authorize(Roles = RoleNames.SubjectSupervisor)]
     [HttpPost("recalculate")]
     [ValidateAntiForgeryToken]
     [RequestTimeout(BackendResiliencePolicyNames.Analytics)]

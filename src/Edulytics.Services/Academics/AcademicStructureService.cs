@@ -233,9 +233,12 @@ public sealed class AcademicStructureService : IAcademicStructureService
         CancellationToken cancellationToken = default)
     {
         var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
-        if (!scope.Succeeded) return Fail(scope.Error!.Value);
+        if (!scope.Succeeded)
+            return Fail(scope.Error!.Value);
 
-        var name = Clean(request.Name);
+        if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
+            return Fail(AcademicStructureErrorCode.AccessDenied);
+var name = Clean(request.Name);
         var validation = ValidateName(name);
         if (validation is not null) return validation;
 
@@ -293,9 +296,12 @@ public sealed class AcademicStructureService : IAcademicStructureService
         CancellationToken cancellationToken = default)
     {
         var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
-        if (!scope.Succeeded) return Fail(scope.Error!.Value);
+        if (!scope.Succeeded)
+            return Fail(scope.Error!.Value);
 
-        if (request.ExpectedRowVersion.Length == 0)
+        if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
+            return Fail(AcademicStructureErrorCode.AccessDenied);
+if (request.ExpectedRowVersion.Length == 0)
             return Fail(AcademicStructureErrorCode.ConcurrencyConflict);
 
         var name = Clean(request.Name);
@@ -370,9 +376,12 @@ public sealed class AcademicStructureService : IAcademicStructureService
         CancellationToken cancellationToken = default)
     {
         var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
-        if (!scope.Succeeded) return Fail(scope.Error!.Value);
+        if (!scope.Succeeded)
+            return Fail(scope.Error!.Value);
 
-        var name = Clean(request.Name);
+        if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
+            return Fail(AcademicStructureErrorCode.AccessDenied);
+var name = Clean(request.Name);
         var validation = ValidateName(name);
         if (validation is not null) return validation;
 
@@ -439,9 +448,12 @@ public sealed class AcademicStructureService : IAcademicStructureService
         CancellationToken cancellationToken = default)
     {
         var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
-        if (!scope.Succeeded) return Fail(scope.Error!.Value);
+        if (!scope.Succeeded)
+            return Fail(scope.Error!.Value);
 
-        var name = Clean(request.Name);
+        if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
+            return Fail(AcademicStructureErrorCode.AccessDenied);
+var name = Clean(request.Name);
         var validation = ValidateName(name);
         if (validation is not null) return validation;
 
@@ -496,9 +508,12 @@ public sealed class AcademicStructureService : IAcademicStructureService
         CancellationToken cancellationToken = default)
     {
         var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
-        if (!scope.Succeeded) return Fail(scope.Error!.Value);
+        if (!scope.Succeeded)
+            return Fail(scope.Error!.Value);
 
-        var name = Clean(request.Name);
+        if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
+            return Fail(AcademicStructureErrorCode.AccessDenied);
+var name = Clean(request.Name);
         var code = NormalizeCode(request.Code);
         var validation = ValidateName(name);
         if (validation is not null) return validation;
@@ -572,9 +587,12 @@ public sealed class AcademicStructureService : IAcademicStructureService
         CancellationToken cancellationToken = default)
     {
         var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
-        if (!scope.Succeeded) return Fail(scope.Error!.Value);
+        if (!scope.Succeeded)
+            return Fail(scope.Error!.Value);
 
-        if (request.ExpectedRowVersion.Length == 0)
+        if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
+            return Fail(AcademicStructureErrorCode.AccessDenied);
+if (request.ExpectedRowVersion.Length == 0)
             return Fail(AcademicStructureErrorCode.ConcurrencyConflict);
 
         var name = Clean(request.Name);
@@ -653,9 +671,12 @@ public sealed class AcademicStructureService : IAcademicStructureService
         CancellationToken cancellationToken = default)
     {
         var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
-        if (!scope.Succeeded) return Fail(scope.Error!.Value);
+        if (!scope.Succeeded)
+            return Fail(scope.Error!.Value);
 
-        var name = Clean(request.Name);
+        if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
+            return Fail(AcademicStructureErrorCode.AccessDenied);
+var name = Clean(request.Name);
         var code = NormalizeCode(request.Code);
         var validation = ValidateName(name);
         if (validation is not null) return validation;
@@ -710,9 +731,12 @@ public sealed class AcademicStructureService : IAcademicStructureService
         CancellationToken cancellationToken = default)
     {
         var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
-        if (!scope.Succeeded) return Fail(scope.Error!.Value);
+        if (!scope.Succeeded)
+            return Fail(scope.Error!.Value);
 
-        if (request.ExpectedRowVersion.Length == 0)
+        if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
+            return Fail(AcademicStructureErrorCode.AccessDenied);
+if (request.ExpectedRowVersion.Length == 0)
             return Fail(AcademicStructureErrorCode.ConcurrencyConflict);
 
         var name = Clean(request.Name);
@@ -778,9 +802,12 @@ public sealed class AcademicStructureService : IAcademicStructureService
         CancellationToken cancellationToken = default)
     {
         var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
-        if (!scope.Succeeded) return Fail(scope.Error!.Value);
+        if (!scope.Succeeded)
+            return Fail(scope.Error!.Value);
 
-        var schoolId = scope.School!.Id;
+        if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
+            return Fail(AcademicStructureErrorCode.AccessDenied);
+var schoolId = scope.School!.Id;
         var teacher = await _users.GetBySchoolAndIdAsync(
             schoolId, request.TeacherUserId, cancellationToken);
 
@@ -855,9 +882,12 @@ public sealed class AcademicStructureService : IAcademicStructureService
         CancellationToken cancellationToken = default)
     {
         var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
-        if (!scope.Succeeded) return Fail(scope.Error!.Value);
+        if (!scope.Succeeded)
+            return Fail(scope.Error!.Value);
 
-        var studentNumber = NormalizeCode(request.StudentNumber);
+        if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
+            return Fail(AcademicStructureErrorCode.AccessDenied);
+var studentNumber = NormalizeCode(request.StudentNumber);
         if (!ValidCode(studentNumber))
             return Fail(nameof(request.StudentNumber), AcademicStructureErrorCode.InvalidCode);
 
@@ -961,7 +991,11 @@ public sealed class AcademicStructureService : IAcademicStructureService
         CancellationToken cancellationToken = default)
     {
         var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
-        if (!scope.Succeeded) return Fail(scope.Error!.Value);
+        if (!scope.Succeeded)
+            return Fail(scope.Error!.Value);
+
+        if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
+            return Fail(AcademicStructureErrorCode.AccessDenied);
 
         if (expectedRowVersion.Length == 0)
             return Fail(AcademicStructureErrorCode.ConcurrencyConflict);
@@ -1011,7 +1045,11 @@ public sealed class AcademicStructureService : IAcademicStructureService
         CancellationToken cancellationToken = default)
     {
         var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
-        if (!scope.Succeeded) return Fail(scope.Error!.Value);
+        if (!scope.Succeeded)
+            return Fail(scope.Error!.Value);
+
+        if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
+            return Fail(AcademicStructureErrorCode.AccessDenied);
 
         if (expectedRowVersion.Length == 0)
             return Fail(AcademicStructureErrorCode.ConcurrencyConflict);
@@ -1055,9 +1093,12 @@ public sealed class AcademicStructureService : IAcademicStructureService
         CancellationToken cancellationToken = default)
     {
         var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
-        if (!scope.Succeeded) return Fail(scope.Error!.Value);
+        if (!scope.Succeeded)
+            return Fail(scope.Error!.Value);
 
-        var schoolId = scope.School!.Id;
+        if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
+            return Fail(AcademicStructureErrorCode.AccessDenied);
+var schoolId = scope.School!.Id;
         var profile = await _academic.GetStudentProfileAsync(
             schoolId, request.StudentProfileId, cancellationToken);
 
@@ -1170,9 +1211,18 @@ public sealed class AcademicStructureService : IAcademicStructureService
         if (actor is null ||
             !actor.IsActive ||
             actor.IsLocked ||
-            !actor.SchoolId.HasValue ||
-            SingleRole(actor.Roles) != RoleNames.SchoolAdmin)
+            !actor.SchoolId.HasValue)
             return ScopeResult.Fail(AcademicStructureErrorCode.AccessDenied);
+
+        var role = SingleRole(actor.Roles);
+
+        if (role != RoleNames.SchoolAdmin &&
+            role != RoleNames.SubjectSupervisor &&
+            role != RoleNames.Teacher)
+        {
+            return ScopeResult.Fail(
+                AcademicStructureErrorCode.AccessDenied);
+        }
 
         var school = await _schools.GetByIdAsync(
             actor.SchoolId.Value, cancellationToken);

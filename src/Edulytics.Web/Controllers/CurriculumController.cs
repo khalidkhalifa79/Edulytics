@@ -1,4 +1,5 @@
 using System.Security.Claims;
+using Edulytics.Core.Constants;
 using Edulytics.Services.Curriculum;
 using Edulytics.Web.ViewModels.Curriculum;
 using Microsoft.AspNetCore.Authorization;
@@ -7,7 +8,7 @@ using Microsoft.Extensions.Localization;
 
 namespace Edulytics.Web.Controllers;
 
-[Authorize(Policy = "AcademicStructureAdministration")]
+[Authorize(Policy = "SchoolAccess")]
 [Route("school/curriculum")]
 public sealed class CurriculumController : Controller
 {
@@ -48,6 +49,7 @@ public sealed class CurriculumController : Controller
     }
 
 
+    [Authorize(Roles = RoleNames.SubjectSupervisor)]
     [HttpPost("framework")]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> SelectFramework(
@@ -71,6 +73,7 @@ public sealed class CurriculumController : Controller
         return RedirectToAction(nameof(Index));
     }
 
+    [Authorize(Roles = RoleNames.SubjectSupervisor)]
     [HttpPost("topics")]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> CreateTopic(
@@ -96,6 +99,7 @@ public sealed class CurriculumController : Controller
         return RedirectToAction(nameof(Index));
     }
 
+    [Authorize(Roles = RoleNames.SubjectSupervisor)]
     [HttpGet("topics/{id:guid}/edit")]
     public async Task<IActionResult> EditTopic(
         Guid id,
@@ -116,6 +120,7 @@ public sealed class CurriculumController : Controller
             new CurriculumTopicEditViewModel(result.Value));
     }
 
+    [Authorize(Roles = RoleNames.SubjectSupervisor)]
     [HttpPost("topics/{id:guid}/edit")]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> EditTopic(
@@ -139,6 +144,7 @@ public sealed class CurriculumController : Controller
             : RedirectToAction(nameof(EditTopic), new { id });
     }
 
+    [Authorize(Roles = RoleNames.SubjectSupervisor)]
     [HttpPost("outcomes/official")]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> CreateOfficialOutcome(
@@ -169,6 +175,7 @@ public sealed class CurriculumController : Controller
         return RedirectToAction(nameof(Index));
     }
 
+    [Authorize(Roles = RoleNames.SubjectSupervisor)]
     [HttpGet("outcomes/{id:guid}/edit")]
     public async Task<IActionResult> EditOutcome(
         Guid id,
@@ -189,6 +196,7 @@ public sealed class CurriculumController : Controller
             new LearningOutcomeEditViewModel(result.Value));
     }
 
+    [Authorize(Roles = RoleNames.SubjectSupervisor)]
     [HttpPost("outcomes/{id:guid}/edit")]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> EditOutcome(

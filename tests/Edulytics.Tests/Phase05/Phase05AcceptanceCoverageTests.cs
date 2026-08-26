@@ -44,7 +44,6 @@ public sealed class Phase05AcceptanceCoverageTests
     }
 
     [Theory]
-    [InlineData(RoleNames.SubjectSupervisor)]
     [InlineData(RoleNames.Teacher)]
     [InlineData(RoleNames.Student)]
     public async Task NonAdminSchoolRoles_CannotManageUsers(
@@ -357,7 +356,7 @@ public sealed class Phase05AcceptanceCoverageTests
             result.Errors,
             x =>
                 x.Code ==
-                SchoolUserErrorCode.UserCannotManageSelf);
+                SchoolUserErrorCode.UserAccessDenied);
     }
 
     [Fact]
@@ -379,7 +378,7 @@ public sealed class Phase05AcceptanceCoverageTests
             result.Errors,
             x =>
                 x.Code ==
-                SchoolUserErrorCode.UserCannotManageSelf);
+                SchoolUserErrorCode.UserAccessDenied);
     }
 
     [Fact]
@@ -401,7 +400,7 @@ public sealed class Phase05AcceptanceCoverageTests
             result.Errors,
             x =>
                 x.Code ==
-                SchoolUserErrorCode.UserCannotManageSelf);
+                SchoolUserErrorCode.UserAccessDenied);
     }
 
     [Fact]
@@ -464,6 +463,110 @@ public sealed class Phase05AcceptanceCoverageTests
             x =>
                 x.Code ==
                 SchoolUserErrorCode.UserInvalidRole);
+    }
+
+
+    [Fact]
+    public async Task SchoolAdmin_CanViewUsers_ButCannotMutateThem()
+    {
+        var school = NewSchool(SchoolStatus.Active);
+        var users = new FakeUserRepository();
+        var admin = NewUser(school.Id, RoleNames.SchoolAdmin);
+        var teacher = NewUser(school.Id, RoleNames.Teacher);
+        users.Seed(admin);
+        users.Seed(teacher);
+        var schools = new FakeSchoolRepository();
+        schools.Seed(school);
+        var service = new SchoolUserManagementService(users, schools);
+
+        var list = await service.ListAsync(admin.Id, school.Id);
+        Assert.NotNull(list.Value);
+        Assert.False(list.Value!.Context.CanMutate);
+
+        var mutation = await service.SetLockedAsync(
+            admin.Id,
+            school.Id,
+            teacher.Id,
+            true);
+
+        Assert.False(mutation.Succeeded);
+        Assert.Contains(
+            mutation.Errors,
+            x => x.Code == SchoolUserErrorCode.UserAccessDenied);
+    }
+
+    [Fact]
+    public async Task SubjectSupervisor_ManagesOnlyTeacherAndStudentUsers()
+    {
+        var school = NewSchool(SchoolStatus.Active);
+        var users = new FakeUserRepository();
+        var supervisor = NewUser(
+            school.Id,
+            RoleNames.SubjectSupervisor);
+        var admin = NewUser(school.Id, RoleNames.SchoolAdmin);
+        users.Seed(supervisor);
+        users.Seed(admin);
+        var schools = new FakeSchoolRepository();
+        schools.Seed(school);
+        var service = new SchoolUserManagementService(users, schools);
+
+        Assert.True((await service.CreateAsync(
+            supervisor.Id,
+            school.Id,
+            new CreateSchoolUserRequest(
+                "new-teacher@example.com",
+                RoleNames.Teacher))).Succeeded);
+
+        Assert.True((await service.CreateAsync(
+            supervisor.Id,
+            school.Id,
+            new CreateSchoolUserRequest(
+                "new-student@example.com",
+                RoleNames.Student))).Succeeded);
+
+        foreach (var privilegedRole in new[]
+                 {
+                     RoleNames.SchoolAdmin,
+                     RoleNames.SubjectSupervisor
+                 })
+        {
+            var denied = await service.CreateAsync(
+                supervisor.Id,
+                school.Id,
+                new CreateSchoolUserRequest(
+                    $"blocked-{Guid.NewGuid():N}@example.com",
+                    privilegedRole));
+
+            Assert.False(denied.Succeeded);
+            Assert.Contains(
+                denied.Errors,
+                x => x.Code == SchoolUserErrorCode.UserAccessDenied);
+        }
+
+        var privilegedTarget = await service.SetLockedAsync(
+            supervisor.Id,
+            school.Id,
+            admin.Id,
+            true);
+
+        Assert.False(privilegedTarget.Succeeded);
+        Assert.Contains(
+            privilegedTarget.Errors,
+            x => x.Code == SchoolUserErrorCode.UserAccessDenied);
+
+        var teacher = users.Users.Values.Single(
+            x => x.Email == "new-teacher@example.com");
+
+        var elevate = await service.ChangeRoleAsync(
+            supervisor.Id,
+            school.Id,
+            teacher.Id,
+            RoleNames.SubjectSupervisor);
+
+        Assert.False(elevate.Succeeded);
+        Assert.Contains(
+            elevate.Errors,
+            x => x.Code == SchoolUserErrorCode.UserAccessDenied);
     }
 
     private static Fixture CreateFixture()

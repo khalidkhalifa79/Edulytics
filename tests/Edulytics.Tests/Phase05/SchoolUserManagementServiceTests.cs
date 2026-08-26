@@ -180,7 +180,7 @@ public sealed class SchoolUserManagementServiceTests
             result.Errors,
             x =>
                 x.Code ==
-                SchoolUserErrorCode.UserCannotManageSelf);
+                SchoolUserErrorCode.UserAccessDenied);
     }
 
     [Fact]

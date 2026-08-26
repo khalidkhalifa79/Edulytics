@@ -1,5 +1,6 @@
 using System.Security.Claims;
 using System.Text;
+using Edulytics.Core.Constants;
 using Edulytics.Core.Enums;
 using Edulytics.Services.Imports;
 using Edulytics.Web.ViewModels.Imports;
@@ -70,6 +71,7 @@ public sealed class ImportsController
                 result.Value!));
     }
 
+    [Authorize(Roles = RoleNames.SubjectSupervisor)]
     [HttpPost("/school/imports/upload")]
     [ValidateAntiForgeryToken]
     [RequestSizeLimit(
@@ -152,6 +154,7 @@ public sealed class ImportsController
             });
     }
 
+    [Authorize(Roles = RoleNames.SubjectSupervisor)]
     [HttpPost("/school/imports/{batchId:guid}/confirm")]
     [ValidateAntiForgeryToken]
     [RequestTimeout(BackendResiliencePolicyNames.Import)]

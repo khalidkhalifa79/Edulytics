@@ -1,5 +1,10 @@
+@using Edulytics.Core.Constants
 @model Edulytics.Web.ViewModels.Assessments.AssessmentDetailsViewModel
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.AssessmentResource> A
+@{
+    var canManageAssessment = User.IsInRole(RoleNames.Teacher);
+}
+
 @{
     ViewData["Title"] = A["Assessment"];
     var assessment = Model.Details.Assessment;
@@ -26,26 +31,32 @@
 
             @if (assessment.Status == Edulytics.Core.Enums.AssessmentStatus.Draft)
             {
-                <a class="school-button"
-                   asp-action="Edit"
-                   asp-route-id="@assessment.Id">
-                    @A["EditAssessment"]
-                </a>
+                @if (canManageAssessment)
+                {
+                    <a class="school-button"
+                                       asp-action="Edit"
+                                       asp-route-id="@assessment.Id">
+                                        @A["EditAssessment"]
+                                    </a>
+                }
 
-                <form asp-action="DeleteAssessment"
-                      asp-route-id="@assessment.Id"
-                      method="post">
-                    @Html.AntiForgeryToken()
+                @if (canManageAssessment)
+                {
+                    <form asp-action="DeleteAssessment"
+                                          asp-route-id="@assessment.Id"
+                                          method="post">
+                                        @Html.AntiForgeryToken()
 
-                    <input type="hidden"
-                           name="rowVersion"
-                           value="@rowVersion" />
+                                        <input type="hidden"
+                                               name="rowVersion"
+                                               value="@rowVersion" />
 
-                    <button type="submit"
-                            class="school-button">
-                        @A["DeleteAssessment"]
-                    </button>
-                </form>
+                                        <button type="submit"
+                                                class="school-button">
+                                            @A["DeleteAssessment"]
+                                        </button>
+                                    </form>
+                }
             }
 
             @if (assessment.Status != Edulytics.Core.Enums.AssessmentStatus.Draft)
@@ -79,88 +90,91 @@
         <section class="assessment-card">
             <h2>@A["CreateQuestion"]</h2>
 
-            <form asp-action="CreateQuestion"
-                  asp-route-id="@assessment.Id"
-                  method="post"
-                  class="assessment-form assessment-question-create-form">
+            @if (canManageAssessment)
+            {
+                <form asp-action="CreateQuestion"
+                                  asp-route-id="@assessment.Id"
+                                  method="post"
+                                  class="assessment-form assessment-question-create-form">
 
-                @Html.AntiForgeryToken()
+                                @Html.AntiForgeryToken()
 
-                <input type="hidden"
-                       name="rowVersion"
-                       value="@rowVersion" />
+                                <input type="hidden"
+                                       name="rowVersion"
+                                       value="@rowVersion" />
 
-                <label for="prompt">
-                    @A["QuestionPrompt"]
-                </label>
+                                <label for="prompt">
+                                    @A["QuestionPrompt"]
+                                </label>
 
-                <textarea id="prompt"
-                          name="prompt"
-                          maxlength="1000"
-                          rows="3"
-                          required></textarea>
+                                <textarea id="prompt"
+                                          name="prompt"
+                                          maxlength="1000"
+                                          rows="3"
+                                          required></textarea>
 
-                <label for="questionMaxScore">
-                    @A["QuestionMaxScore"]
-                </label>
+                                <label for="questionMaxScore">
+                                    @A["QuestionMaxScore"]
+                                </label>
 
-                <input id="questionMaxScore"
-                       name="maxScore"
-                       type="number"
-                       min="0.01"
-                       max="10000"
-                       step="0.01"
-                       required />
+                                <input id="questionMaxScore"
+                                       name="maxScore"
+                                       type="number"
+                                       min="0.01"
+                                       max="10000"
+                                       step="0.01"
+                                       required />
 
-                <label for="order">
-                    @A["Order"]
-                </label>
+                                <label for="order">
+                                    @A["Order"]
+                                </label>
 
-                <input id="order"
-                       name="order"
-                       type="number"
-                       min="1"
-                       required />
+                                <input id="order"
+                                       name="order"
+                                       type="number"
+                                       min="1"
+                                       required />
 
-                <fieldset>
-                    <legend>
-                        @A["LearningOutcomes"]
-                    </legend>
+                                <fieldset>
+                                    <legend>
+                                        @A["LearningOutcomes"]
+                                    </legend>
 
-                    <p>
-                        @A["SelectOneOrMoreOutcomes"]
-                    </p>
+                                    <p>
+                                        @A["SelectOneOrMoreOutcomes"]
+                                    </p>
 
-                    @if (Model.Details.EligibleOutcomes.Count == 0)
-                    {
-                        <p>@A["NoEligibleOutcomes"]</p>
-                    }
-                    else
-                    {
-                        @foreach (var outcome in Model.Details.EligibleOutcomes)
-                        {
-                            <label>
-                                <input type="checkbox"
-                                       name="outcomeIds"
-                                       value="@outcome.Id" />
+                                    @if (Model.Details.EligibleOutcomes.Count == 0)
+                                    {
+                                        <p>@A["NoEligibleOutcomes"]</p>
+                                    }
+                                    else
+                                    {
+                                        @foreach (var outcome in Model.Details.EligibleOutcomes)
+                                        {
+                                            <label>
+                                                <input type="checkbox"
+                                                       name="outcomeIds"
+                                                       value="@outcome.Id" />
 
-                                <strong>
-                                    @outcome.Code
-                                </strong>
-                                — @outcome.Description
-                            </label>
-                        }
-                    }
-                </fieldset>
+                                                <strong>
+                                                    @outcome.Code
+                                                </strong>
+                                                — @outcome.Description
+                                            </label>
+                                        }
+                                    }
+                                </fieldset>
 
-                @if (Model.Details.EligibleOutcomes.Count > 0)
-                {
-                    <button type="submit"
-                            class="school-button school-button-primary">
-                        @A["Create"]
-                    </button>
-                }
-            </form>
+                                @if (Model.Details.EligibleOutcomes.Count > 0)
+                                {
+                                    <button type="submit"
+                                            class="school-button school-button-primary">
+                                        @A["Create"]
+                                    </button>
+                                }
+                            </form>
+            }
         </section>
     }
     else if (assessment.Status == Edulytics.Core.Enums.AssessmentStatus.Open)
@@ -199,32 +213,38 @@
                         @if (assessment.Status == Edulytics.Core.Enums.AssessmentStatus.Draft)
                         {
                             <div class="assessment-actions">
-                                <a class="school-button"
-                                   asp-action="EditQuestion"
-                                   asp-route-questionId="@question.Id"
-                                   asp-route-assessmentId="@assessment.Id">
-                                    @A["Edit"]
-                                </a>
+                                @if (canManageAssessment)
+                                {
+                                    <a class="school-button"
+                                                                       asp-action="EditQuestion"
+                                                                       asp-route-questionId="@question.Id"
+                                                                       asp-route-assessmentId="@assessment.Id">
+                                                                        @A["Edit"]
+                                                                    </a>
+                                }
 
-                                <form asp-action="DeleteQuestion"
-                                      asp-route-questionId="@question.Id"
-                                      method="post">
+                                @if (canManageAssessment)
+                                {
+                                    <form asp-action="DeleteQuestion"
+                                                                          asp-route-questionId="@question.Id"
+                                                                          method="post">
 
-                                    @Html.AntiForgeryToken()
+                                                                        @Html.AntiForgeryToken()
 
-                                    <input type="hidden"
-                                           name="assessmentId"
-                                           value="@assessment.Id" />
+                                                                        <input type="hidden"
+                                                                               name="assessmentId"
+                                                                               value="@assessment.Id" />
 
-                                    <input type="hidden"
-                                           name="rowVersion"
-                                           value="@rowVersion" />
+                                                                        <input type="hidden"
+                                                                               name="rowVersion"
+                                                                               value="@rowVersion" />
 
-                                    <button type="submit"
-                                            class="school-button">
-                                        @A["DeleteQuestion"]
-                                    </button>
-                                </form>
+                                                                        <button type="submit"
+                                                                                class="school-button">
+                                                                            @A["DeleteQuestion"]
+                                                                        </button>
+                                                                    </form>
+                                }
                             </div>
                         }
                     </header>
@@ -271,39 +291,45 @@
     <section class="assessment-lifecycle">
         @if (assessment.Status == Edulytics.Core.Enums.AssessmentStatus.Draft)
         {
-            <form asp-action="Open"
-                  asp-route-id="@assessment.Id"
-                  method="post">
+            @if (canManageAssessment)
+            {
+                <form asp-action="Open"
+                                  asp-route-id="@assessment.Id"
+                                  method="post">
 
-                @Html.AntiForgeryToken()
+                                @Html.AntiForgeryToken()
 
-                <input type="hidden"
-                       name="rowVersion"
-                       value="@rowVersion" />
+                                <input type="hidden"
+                                       name="rowVersion"
+                                       value="@rowVersion" />
 
-                <button type="submit"
-                        class="school-button school-button-primary">
-                    @A["OpenAssessment"]
-                </button>
-            </form>
+                                <button type="submit"
+                                        class="school-button school-button-primary">
+                                    @A["OpenAssessment"]
+                                </button>
+                            </form>
+            }
         }
         else if (assessment.Status == Edulytics.Core.Enums.AssessmentStatus.Open)
         {
-            <form asp-action="Close"
-                  asp-route-id="@assessment.Id"
-                  method="post">
+            @if (canManageAssessment)
+            {
+                <form asp-action="Close"
+                                  asp-route-id="@assessment.Id"
+                                  method="post">
 
-                @Html.AntiForgeryToken()
+                                @Html.AntiForgeryToken()
 
-                <input type="hidden"
-                       name="rowVersion"
-                       value="@rowVersion" />
+                                <input type="hidden"
+                                       name="rowVersion"
+                                       value="@rowVersion" />
 
-                <button type="submit"
-                        class="school-button">
-                    @A["CloseAssessment"]
-                </button>
-            </form>
+                                <button type="submit"
+                                        class="school-button">
+                                    @A["CloseAssessment"]
+                                </button>
+                            </form>
+            }
         }
     </section>
 </section>

@@ -1,5 +1,18 @@
+@using Edulytics.Core.Constants
 @model Edulytics.Web.ViewModels.SchoolUsers.SchoolUserDetailsViewModel
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.PlatformResource> T
+
+@{
+    var canManageSchoolUsers = User.IsInRole(RoleNames.SubjectSupervisor) || User.IsInRole(RoleNames.SuperAdmin);
+    var operationalRoleOptions =
+        User.IsInRole(RoleNames.SuperAdmin)
+            ? Model.RoleOptions
+            : Model.RoleOptions
+                .Where(x =>
+                    x.Value == RoleNames.Teacher ||
+                    x.Value == RoleNames.Student)
+                .ToArray();
+}
 
 @{
     ViewData["Title"] = T["UserDetails"].Value;
@@ -116,87 +129,96 @@
             <div class="user-action-card">
                 <h2>@T["ChangeRole"]</h2>
 
-                <form method="post"
-                      asp-controller="SchoolUsers"
-                      asp-action="ChangeRole"
-                      asp-route-id="@user.Id">
-                    <input type="hidden"
-                           name="schoolId"
-                           value="@user.Context.SchoolId" />
+                @if (canManageSchoolUsers)
+                {
+                    <form method="post"
+                                          asp-controller="SchoolUsers"
+                                          asp-action="ChangeRole"
+                                          asp-route-id="@user.Id">
+                                        <input type="hidden"
+                                               name="schoolId"
+                                               value="@user.Context.SchoolId" />
 
-                    <select name="role"
-                            aria-label="@T["UserRole"]">
-                        @foreach (var option in Model.RoleOptions)
-                        {
-                            if (option.Value == user.Role)
-                            {
-                                <option value="@option.Value"
-                                        selected>
-                                    @T[option.ResourceKey]
-                                </option>
-                            }
-                            else
-                            {
-                                <option value="@option.Value">
-                                    @T[option.ResourceKey]
-                                </option>
-                            }
-                        }
-                    </select>
+                                        <select name="role"
+                                                aria-label="@T["UserRole"]">
+                                            @foreach (var option in operationalRoleOptions)
+                                            {
+                                                if (option.Value == user.Role)
+                                                {
+                                                    <option value="@option.Value"
+                                                            selected>
+                                                        @T[option.ResourceKey]
+                                                    </option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@option.Value">
+                                                        @T[option.ResourceKey]
+                                                    </option>
+                                                }
+                                            }
+                                        </select>
 
-                    <button type="submit"
-                            class="school-button school-button-primary">
-                        @T["SaveChanges"]
-                    </button>
-                </form>
+                                        <button type="submit"
+                                                class="school-button school-button-primary">
+                                            @T["SaveChanges"]
+                                        </button>
+                                    </form>
+                }
             </div>
 
             <div class="user-action-card">
                 <h2>@T["AccountStatus"]</h2>
 
-                <form method="post"
-                      asp-controller="SchoolUsers"
-                      asp-action="SetActive"
-                      asp-route-id="@user.Id">
-                    <input type="hidden"
-                           name="schoolId"
-                           value="@user.Context.SchoolId" />
+                @if (canManageSchoolUsers)
+                {
+                    <form method="post"
+                                          asp-controller="SchoolUsers"
+                                          asp-action="SetActive"
+                                          asp-route-id="@user.Id">
+                                        <input type="hidden"
+                                               name="schoolId"
+                                               value="@user.Context.SchoolId" />
 
-                    <input type="hidden"
-                           name="isActive"
-                           value="@(!user.IsActive ? "true" : "false")" />
+                                        <input type="hidden"
+                                               name="isActive"
+                                               value="@(!user.IsActive ? "true" : "false")" />
 
-                    <button type="submit"
-                            class="school-button @(user.IsActive ? "school-button-warning" : "school-button-primary")">
-                        @(user.IsActive
-                            ? T["DeactivateUser"]
-                            : T["ActivateUser"])
-                    </button>
-                </form>
+                                        <button type="submit"
+                                                class="school-button @(user.IsActive ? "school-button-warning" : "school-button-primary")">
+                                            @(user.IsActive
+                                                ? T["DeactivateUser"]
+                                                : T["ActivateUser"])
+                                        </button>
+                                    </form>
+                }
             </div>
 
             <div class="user-action-card">
                 <h2>@T["LockState"]</h2>
 
-                <form method="post"
-                      asp-controller="SchoolUsers"
-                      asp-action="SetLocked"
-                      asp-route-id="@user.Id">
-                    <input type="hidden"
-                           name="schoolId"
-                           value="@user.Context.SchoolId" />
+                @if (canManageSchoolUsers)
+                {
+                    <form method="post"
+                                          asp-controller="SchoolUsers"
+                                          asp-action="SetLocked"
+                                          asp-route-id="@user.Id">
+                                        <input type="hidden"
+                                               name="schoolId"
+                                               value="@user.Context.SchoolId" />
 
-                    <input type="hidden"
-                           name="isLocked"
-                           value="@(!user.IsLocked ? "true" : "false")" />
+                                        <input type="hidden"
+                                               name="isLocked"
+                                               value="@(!user.IsLocked ? "true" : "false")" />
 
-                    <button type="submit"
-                            class="school-button @(user.IsLocked ? "school-button-primary" : "school-button-warning")">
-                        @(user.IsLocked
-                            ? T["UnlockUser"]
-                            : T["LockUser"])
-                    </button>
-                </form>
+                                        <button type="submit"
+                                                class="school-button @(user.IsLocked ? "school-button-primary" : "school-button-warning")">
+                                            @(user.IsLocked
+                                                ? T["UnlockUser"]
+                                                : T["LockUser"])
+                                        </button>
+                                    </form>
+                }
             </div>
 
             <div class="user-action-card">
@@ -204,19 +226,22 @@
 
                 <p>@T["ResendInvitationDescription"]</p>
 
-                <form method="post"
-                      asp-controller="SchoolUsers"
-                      asp-action="PasswordLink"
-                      asp-route-id="@user.Id">
-                    <input type="hidden"
-                           name="schoolId"
-                           value="@user.Context.SchoolId" />
+                @if (canManageSchoolUsers)
+                {
+                    <form method="post"
+                                          asp-controller="SchoolUsers"
+                                          asp-action="PasswordLink"
+                                          asp-route-id="@user.Id">
+                                        <input type="hidden"
+                                               name="schoolId"
+                                               value="@user.Context.SchoolId" />
 
-                    <button type="submit"
-                            class="school-button school-button-primary">
-                        @T["ResendInvitation"]
-                    </button>
-                </form>
+                                        <button type="submit"
+                                                class="school-button school-button-primary">
+                                            @T["ResendInvitation"]
+                                        </button>
+                                    </form>
+                }
             </div>
         </section>
     }

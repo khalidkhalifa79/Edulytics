@@ -41,12 +41,7 @@ public sealed class DataImportService
     public static bool CanImportType(
         string role,
         ImportType type) =>
-        role == RoleNames.SchoolAdmin ||
-        (
-            role == RoleNames.Teacher &&
-            type ==
-                ImportType.AssessmentResults
-        );
+        role == RoleNames.SubjectSupervisor;
 
     public IReadOnlyList<string> GetTemplateHeaders(
         ImportType type) =>
@@ -75,8 +70,8 @@ public sealed class DataImportService
                 cancellationToken);
 
         var visible =
-            scope.Role ==
-                RoleNames.SchoolAdmin
+            scope.Role == RoleNames.SchoolAdmin ||
+            scope.Role == RoleNames.SubjectSupervisor
                 ? batches
                 : batches
                     .Where(x =>
@@ -756,7 +751,7 @@ public sealed class DataImportService
                         batch.ImportType) &&
                     (
                         actorRole ==
-                            RoleNames.SchoolAdmin ||
+                            RoleNames.SubjectSupervisor ||
                         batch.UploadedByUserId ==
                             actorUserId
                     )));
@@ -787,7 +782,7 @@ public sealed class DataImportService
         if (role !=
                 RoleNames.SchoolAdmin &&
             role !=
-                RoleNames.Teacher)
+                RoleNames.SubjectSupervisor)
         {
             return ScopeResult.Fail(
                 ImportErrorCode.AccessDenied);
@@ -822,13 +817,7 @@ public sealed class DataImportService
         Guid actorUserId,
         ImportBatch batch) =>
         role == RoleNames.SchoolAdmin ||
-        (
-            role == RoleNames.Teacher &&
-            batch.ImportType ==
-                ImportType.AssessmentResults &&
-            batch.UploadedByUserId ==
-                actorUserId
-        );
+        role == RoleNames.SubjectSupervisor;
 
     private static int ValidRowCount(
         int total,

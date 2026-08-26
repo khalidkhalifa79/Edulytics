@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Http.Timeouts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.Extensions.Localization;
+using Edulytics.Core.Constants;
 
 namespace Edulytics.Web.Controllers;
 
@@ -140,6 +141,7 @@ public sealed class ReportsController
             });
     }
 
+    [Authorize(Roles = RoleNames.SubjectSupervisor + "," + RoleNames.Teacher)]
     [HttpPost("export")]
     [ValidateAntiForgeryToken]
     [RequestTimeout(

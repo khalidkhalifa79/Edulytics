@@ -1,5 +1,10 @@
+@using Edulytics.Core.Constants
 @model Edulytics.Web.ViewModels.Imports.ImportDetailsViewModel
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.ImportResource> I
+
+@{
+    var canManageImports = User.IsInRole(RoleNames.SubjectSupervisor);
+}
 
 @{
     ViewData["Title"] = I["Batch"].Value;
@@ -146,19 +151,22 @@
             <h2>@I["ConfirmImport"]</h2>
             <p>@I["ConfirmHelp"]</p>
 
-            <form asp-action="Confirm"
-                  asp-route-batchId="@Model.Batch.Id"
-                  method="post">
+            @if (canManageImports)
+            {
+                <form asp-action="Confirm"
+                                  asp-route-batchId="@Model.Batch.Id"
+                                  method="post">
 
-                <input type="hidden"
-                       name="rowVersion"
-                       value="@Model.RowVersionBase64" />
+                                <input type="hidden"
+                                       name="rowVersion"
+                                       value="@Model.RowVersionBase64" />
 
-                <button type="submit"
-                        class="school-button school-button-primary">
-                    @I["ConfirmImport"]
-                </button>
-            </form>
+                                <button type="submit"
+                                        class="school-button school-button-primary">
+                                    @I["ConfirmImport"]
+                                </button>
+                            </form>
+            }
         }
         else
         {

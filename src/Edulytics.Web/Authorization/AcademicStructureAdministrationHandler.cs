@@ -1,4 +1,5 @@
 using System.Security.Claims;
+using Edulytics.Core.Constants;
 using Edulytics.Services.Users;
 using Microsoft.AspNetCore.Authorization;
 
@@ -26,7 +27,7 @@ public sealed class AcademicStructureAdministrationHandler
 
         var actor = await _users.GetActorContextAsync(userId);
 
-        if (actor?.CanManageUsers == true)
+        if (actor?.Role == RoleNames.SubjectSupervisor)
             context.Succeed(requirement);
     }
 }
