@@ -234,67 +234,7 @@
         </article>
     </section>
 
-    <section class="curriculum-create-grid">
-        <article class="curriculum-card">
-            <h2>@C["AddCustomOutcome"]</h2>
-            <p class="curriculum-help">@C["CustomOutcomeHelp"]</p>
-            <form asp-action="CreateOutcome"
-                  method="post"
-                  class="curriculum-form">
-                @Html.AntiForgeryToken()
 
-                <label for="customTopicId">@C["SchoolTopic"]</label>
-                <select id="customTopicId" name="topicId" required>
-                    <option value="">@C["SelectTopic"]</option>
-                    @foreach (var topic in Model.Topics)
-                    {
-                        <option value="@topic.Id">
-                            @topic.FrameworkDisplayName →
-                            @Model.SubjectName(topic.SubjectId) /
-                            @Model.GradeName(topic.GradeLevelId) /
-                            @topic.Name
-                        </option>
-                    }
-                </select>
-
-                <label for="customCode">@C["SchoolOutcomeCode"]</label>
-                <input id="customCode"
-                       name="code"
-                       maxlength="50"
-                       pattern="[A-Za-z0-9._-]+"
-                       required />
-
-                <label for="customDescription">@C["Description"]</label>
-                <textarea id="customDescription"
-                          name="description"
-                          maxlength="1000"
-                          rows="4"
-                          required></textarea>
-
-                <label for="customWeight">@C["Weight"]</label>
-                <input id="customWeight"
-                       name="weight"
-                       type="number"
-                       min="0.001"
-                       max="100"
-                       step="0.001"
-                       required />
-                <p class="curriculum-help">@C["WeightHelp"]</p>
-
-                <label for="customOutcomeOrder">@C["Order"]</label>
-                <input id="customOutcomeOrder"
-                       name="order"
-                       type="number"
-                       min="1"
-                       required />
-
-                <button type="submit"
-                        class="school-button school-button-primary">
-                    @C["AddCustomOutcome"]
-                </button>
-            </form>
-        </article>
-    </section>
 
     <section class="curriculum-list">
         <div class="curriculum-section-heading">

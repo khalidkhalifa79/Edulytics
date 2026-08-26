@@ -31,7 +31,6 @@
   <data name="OutcomeMappingReady" xml:space="preserve"><value>Stable outcome IDs and codes are ready for Phase 08 question mapping.</value></data>
   <data name="SuccessTopicCreated" xml:space="preserve"><value>Curriculum topic created.</value></data>
   <data name="SuccessTopicUpdated" xml:space="preserve"><value>Curriculum topic updated.</value></data>
-  <data name="SuccessOutcomeCreated" xml:space="preserve"><value>Learning outcome created.</value></data>
   <data name="SuccessOutcomeUpdated" xml:space="preserve"><value>Learning outcome updated.</value></data>
   <data name="ErrorAccessDenied" xml:space="preserve"><value>You do not have permission to manage curriculum.</value></data>
   <data name="ErrorSchoolNotActive" xml:space="preserve"><value>Curriculum cannot be changed while the school is not active.</value></data>
@@ -74,9 +73,6 @@
   <data name="NoOfficialItemsForTopic" xml:space="preserve"><value>No verified official outcomes are available for this curriculum and grade.</value></data>
   <data name="OfficialOutcomeCode" xml:space="preserve"><value>Official outcome code (automatic)</value></data>
   <data name="OfficialDescription" xml:space="preserve"><value>Official description (automatic)</value></data>
-  <data name="AddCustomOutcome" xml:space="preserve"><value>Add custom school outcome</value></data>
-  <data name="CustomOutcomeHelp" xml:space="preserve"><value>Use this only for a local outcome created by the school, not for an official curriculum outcome.</value></data>
-  <data name="SchoolOutcomeCode" xml:space="preserve"><value>School outcome code</value></data>
   <data name="Official" xml:space="preserve"><value>Official</value></data>
   <data name="SuccessOfficialOutcomeAdded" xml:space="preserve"><value>Official curriculum outcome added to the school topic.</value></data>
   <data name="ErrorOfficialOutcomeNotFound" xml:space="preserve"><value>The selected item is not an official outcome for this curriculum and grade.</value></data>

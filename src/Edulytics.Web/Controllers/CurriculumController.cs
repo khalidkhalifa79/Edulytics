@@ -139,33 +139,6 @@ public sealed class CurriculumController : Controller
             : RedirectToAction(nameof(EditTopic), new { id });
     }
 
-    [HttpPost("outcomes")]
-    [ValidateAntiForgeryToken]
-    public async Task<IActionResult> CreateOutcome(
-        Guid topicId,
-        string code,
-        string description,
-        decimal weight,
-        int order,
-        CancellationToken cancellationToken)
-    {
-        if (!TryActor(out var actorId))
-            return Forbid();
-
-        var result = await _curriculum.CreateOutcomeAsync(
-            actorId,
-            new CreateLearningOutcomeRequest(
-                topicId,
-                code,
-                description,
-                weight,
-                order),
-            cancellationToken);
-
-        SetFeedback(result, "SuccessOutcomeCreated");
-        return RedirectToAction(nameof(Index));
-    }
-
     [HttpPost("outcomes/official")]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> CreateOfficialOutcome(

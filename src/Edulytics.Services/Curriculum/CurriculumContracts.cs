@@ -143,12 +143,6 @@ public sealed record UpdateCurriculumTopicRequest(
     string Name,
     int Order);
 
-public sealed record CreateLearningOutcomeRequest(
-    Guid TopicId,
-    string Code,
-    string Description,
-    decimal Weight,
-    int Order);
 
 public sealed record CreateOfficialLearningOutcomeRequest(
     Guid TopicId,
