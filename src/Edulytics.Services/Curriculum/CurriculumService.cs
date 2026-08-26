@@ -278,6 +278,9 @@ public sealed class CurriculumService : ICurriculumService
         if (!scope.Succeeded)
             return Fail(scope.Error!.Value);
 
+        if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
+            return Fail(CurriculumErrorCode.AccessDenied);
+
         var schoolId = scope.School!.Id;
 
         if (await _curriculum.GetSubjectAsync(
@@ -432,6 +435,9 @@ public sealed class CurriculumService : ICurriculumService
         if (!scope.Succeeded)
             return Fail(scope.Error!.Value);
 
+        if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
+            return Fail(CurriculumErrorCode.AccessDenied);
+
         var name = Clean(request.Name);
         var nameError = ValidateName(name);
         if (nameError is not null)
@@ -556,6 +562,9 @@ public sealed class CurriculumService : ICurriculumService
         if (!scope.Succeeded)
             return Fail(scope.Error!.Value);
 
+        if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
+            return Fail(CurriculumErrorCode.AccessDenied);
+
         var schoolId = scope.School!.Id;
         var topic = await _curriculum.GetTopicAsync(
             schoolId,
@@ -643,6 +652,9 @@ public sealed class CurriculumService : ICurriculumService
 
         if (!scope.Succeeded)
             return Fail(scope.Error!.Value);
+
+        if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
+            return Fail(CurriculumErrorCode.AccessDenied);
 
 if (request.Order <= 0)
             return Fail("Order", CurriculumErrorCode.InvalidOrder);
@@ -775,6 +787,9 @@ if (request.Order <= 0)
 
         if (!scope.Succeeded)
             return Fail(scope.Error!.Value);
+
+        if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
+            return Fail(CurriculumErrorCode.AccessDenied);
 
         var schoolId = scope.School!.Id;
         var outcome = await _curriculum.GetOutcomeAsync(
@@ -927,8 +942,17 @@ outcome.Order = request.Order;
         if (actor is null ||
             !actor.IsActive ||
             actor.IsLocked ||
-            actor.SchoolId is null ||
-            SingleRole(actor.Roles) != RoleNames.SchoolAdmin)
+            actor.SchoolId is null)
+        {
+            return ScopeResult.Fail(
+                CurriculumErrorCode.AccessDenied);
+        }
+
+        var role = SingleRole(actor.Roles);
+
+        if (role != RoleNames.SchoolAdmin &&
+            role != RoleNames.SubjectSupervisor &&
+            role != RoleNames.Teacher)
         {
             return ScopeResult.Fail(
                 CurriculumErrorCode.AccessDenied);

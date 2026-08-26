@@ -13,12 +13,12 @@ namespace Edulytics.Tests.Phase06;
 public sealed class AcademicStructureServiceTests
 {
     [Fact]
-    public async Task SchoolAdmin_CanCreateAcademicYear()
+    public async Task SubjectSupervisor_CanCreateAcademicYear()
     {
         using var f = CreateFixture();
 
         var result = await f.Service.CreateAcademicYearAsync(
-            f.Admin.Id,
+            f.Supervisor.Id,
             new CreateAcademicYearRequest(
                 "2026/2027",
                 new DateOnly(2026, 9, 1),
@@ -27,22 +27,43 @@ public sealed class AcademicStructureServiceTests
 
         Assert.True(result.Succeeded);
 
-        var dashboard = await f.Service.GetDashboardAsync(f.Admin.Id);
+        var dashboard = await f.Service.GetDashboardAsync(f.Supervisor.Id);
         Assert.Single(dashboard.Value!.AcademicYears);
     }
 
     [Fact]
-    public async Task Teacher_CannotAdministerAcademicStructure()
+    public async Task TeacherAndSchoolAdmin_CanRead_ButCannotAdministerAcademicStructure()
     {
         using var f = CreateFixture();
 
         var teacher = NewUser(f.School.Id, RoleNames.Teacher);
         f.Users.Seed(teacher);
 
-        var result = await f.Service.GetDashboardAsync(teacher.Id);
+        Assert.NotNull(
+            (await f.Service.GetDashboardAsync(teacher.Id)).Value);
 
-        Assert.Null(result.Value);
-        Assert.Equal(AcademicStructureErrorCode.AccessDenied, result.Error);
+        Assert.NotNull(
+            (await f.Service.GetDashboardAsync(f.Admin.Id)).Value);
+
+        foreach (var actorId in new[] { teacher.Id, f.Admin.Id })
+        {
+            var denied =
+                await f.Service.CreateAcademicYearAsync(
+                    actorId,
+                    new CreateAcademicYearRequest(
+                        "Blocked",
+                        new DateOnly(2026, 9, 1),
+                        new DateOnly(2027, 6, 30),
+                        AcademicStructureStatus.Active));
+
+            Assert.False(denied.Succeeded);
+
+            Assert.Contains(
+                denied.Errors,
+                x =>
+                    x.Code ==
+                    AcademicStructureErrorCode.AccessDenied);
+        }
     }
 
     [Fact]
@@ -53,7 +74,7 @@ public sealed class AcademicStructureServiceTests
         var year = await CreateYear(f);
 
         var result = await f.Service.CreateTermAsync(
-            f.Admin.Id,
+            f.Supervisor.Id,
             new CreateTermRequest(
                 year.Id,
                 "Bad term",
@@ -81,7 +102,7 @@ public sealed class AcademicStructureServiceTests
         f.Users.Seed(supervisor);
 
         var result = await f.Service.CreateTeacherAssignmentAsync(
-            f.Admin.Id,
+            f.Supervisor.Id,
             new CreateTeacherAssignmentRequest(
                 supervisor.Id,
                 classGroup.Id,
@@ -99,7 +120,7 @@ public sealed class AcademicStructureServiceTests
         using var f = CreateFixture();
 
         var result = await f.Service.CreateStudentProfileAsync(
-            f.Admin.Id,
+            f.Supervisor.Id,
             new CreateStudentProfileRequest(
                 "ST-001",
                 "Jan",
@@ -109,7 +130,7 @@ public sealed class AcademicStructureServiceTests
 
         Assert.True(result.Succeeded);
 
-        var dashboard = await f.Service.GetDashboardAsync(f.Admin.Id);
+        var dashboard = await f.Service.GetDashboardAsync(f.Supervisor.Id);
         var student = Assert.Single(dashboard.Value!.StudentProfiles);
         Assert.Null(student.UserEmail);
     }
@@ -124,7 +145,7 @@ public sealed class AcademicStructureServiceTests
         var classGroup = await CreateClass(f, year.Id, grade.Id);
 
         Assert.True((await f.Service.CreateStudentProfileAsync(
-            f.Admin.Id,
+            f.Supervisor.Id,
             new CreateStudentProfileRequest(
                 "ST-002",
                 "Anna",
@@ -132,17 +153,17 @@ public sealed class AcademicStructureServiceTests
                 null,
                 AcademicStructureStatus.Active))).Succeeded);
 
-        var dashboard = await f.Service.GetDashboardAsync(f.Admin.Id);
+        var dashboard = await f.Service.GetDashboardAsync(f.Supervisor.Id);
         var student = Assert.Single(dashboard.Value!.StudentProfiles);
 
         var first = await f.Service.CreateStudentEnrollmentAsync(
-            f.Admin.Id,
+            f.Supervisor.Id,
             new CreateStudentEnrollmentRequest(student.Id, classGroup.Id));
 
         Assert.True(first.Succeeded);
 
         var second = await f.Service.CreateStudentEnrollmentAsync(
-            f.Admin.Id,
+            f.Supervisor.Id,
             new CreateStudentEnrollmentRequest(student.Id, classGroup.Id));
 
         Assert.False(second.Succeeded);
@@ -172,7 +193,7 @@ public sealed class AcademicStructureServiceTests
         Assert.True((await f.Academic.SaveAsync()).Succeeded);
 
         var result = await f.Service.CreateClassGroupAsync(
-            f.Admin.Id,
+            f.Supervisor.Id,
             new CreateClassGroupRequest(
                 year.Id,
                 foreignGrade.Id,
@@ -189,24 +210,24 @@ public sealed class AcademicStructureServiceTests
     private static async Task<AcademicYearItem> CreateYear(Fixture f)
     {
         Assert.True((await f.Service.CreateAcademicYearAsync(
-            f.Admin.Id,
+            f.Supervisor.Id,
             new CreateAcademicYearRequest(
                 "2026/2027",
                 new DateOnly(2026, 9, 1),
                 new DateOnly(2027, 6, 30),
                 AcademicStructureStatus.Active))).Succeeded);
 
-        var dashboard = await f.Service.GetDashboardAsync(f.Admin.Id);
+        var dashboard = await f.Service.GetDashboardAsync(f.Supervisor.Id);
         return Assert.Single(dashboard.Value!.AcademicYears);
     }
 
     private static async Task<GradeLevelItem> CreateGrade(Fixture f)
     {
         Assert.True((await f.Service.CreateGradeLevelAsync(
-            f.Admin.Id,
+            f.Supervisor.Id,
             new CreateGradeLevelRequest("Grade 6", 6))).Succeeded);
 
-        var dashboard = await f.Service.GetDashboardAsync(f.Admin.Id);
+        var dashboard = await f.Service.GetDashboardAsync(f.Supervisor.Id);
         return Assert.Single(dashboard.Value!.GradeLevels);
     }
 
@@ -216,7 +237,7 @@ public sealed class AcademicStructureServiceTests
         Guid gradeId)
     {
         Assert.True((await f.Service.CreateClassGroupAsync(
-            f.Admin.Id,
+            f.Supervisor.Id,
             new CreateClassGroupRequest(
                 yearId,
                 gradeId,
@@ -224,20 +245,20 @@ public sealed class AcademicStructureServiceTests
                 "6A",
                 AcademicStructureStatus.Active))).Succeeded);
 
-        var dashboard = await f.Service.GetDashboardAsync(f.Admin.Id);
+        var dashboard = await f.Service.GetDashboardAsync(f.Supervisor.Id);
         return Assert.Single(dashboard.Value!.ClassGroups);
     }
 
     private static async Task<SubjectItem> CreateSubject(Fixture f)
     {
         Assert.True((await f.Service.CreateSubjectAsync(
-            f.Admin.Id,
+            f.Supervisor.Id,
             new CreateSubjectRequest(
                 "Mathematics",
                 "MATH",
                 AcademicStructureStatus.Active))).Succeeded);
 
-        var dashboard = await f.Service.GetDashboardAsync(f.Admin.Id);
+        var dashboard = await f.Service.GetDashboardAsync(f.Supervisor.Id);
         return Assert.Single(dashboard.Value!.Subjects);
     }
 
@@ -259,12 +280,25 @@ public sealed class AcademicStructureServiceTests
 
         var users = new FakeUserRepository();
         var admin = NewUser(school.Id, RoleNames.SchoolAdmin);
+        var supervisor = NewUser(
+            school.Id,
+            RoleNames.SubjectSupervisor);
+
         users.Seed(admin);
+        users.Seed(supervisor);
 
         var academic = new AcademicStructureRepository(db);
         var service = new AcademicStructureService(academic, schools, users);
 
-        return new Fixture(db, school, admin, schools, users, academic, service);
+        return new Fixture(
+            db,
+            school,
+            admin,
+            supervisor,
+            schools,
+            users,
+            academic,
+            service);
     }
 
     private static School NewSchool()
@@ -304,6 +338,7 @@ public sealed class AcademicStructureServiceTests
         EdulyticsDbContext Db,
         School School,
         SchoolUserRecord Admin,
+        SchoolUserRecord Supervisor,
         FakeSchoolRepository Schools,
         FakeUserRepository Users,
         AcademicStructureRepository Academic,

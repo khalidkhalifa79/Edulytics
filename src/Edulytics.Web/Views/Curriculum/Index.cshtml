@@ -1,5 +1,10 @@
+@using Edulytics.Core.Constants
 @model Edulytics.Web.ViewModels.Curriculum.CurriculumIndexViewModel
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.CurriculumResource> C
+@{
+    var canManageCurriculum = User.IsInRole(RoleNames.SubjectSupervisor);
+}
+
 @{
     ViewData["Title"] = C["CurriculumTitle"];
 }
@@ -32,55 +37,58 @@
             <h2>@C["FrameworkTitle"]</h2>
             <p>@C["FrameworkSubtitle"]</p>
 
-            <form asp-action="SelectFramework"
-                  method="post"
-                  class="curriculum-form">
-                @Html.AntiForgeryToken()
+            @if (canManageCurriculum)
+            {
+                <form asp-action="SelectFramework"
+                                  method="post"
+                                  class="curriculum-form">
+                                @Html.AntiForgeryToken()
 
-                <label for="frameworkSubjectId">@C["Subject"]</label>
-                <select id="frameworkSubjectId"
-                        name="subjectId"
-                        required>
-                    <option value="">@C["SelectSubject"]</option>
-                    @foreach (var subject in Model.Subjects)
-                    {
-                        <option value="@subject.Id">
-                            @subject.Name (@subject.Code)
-                        </option>
-                    }
-                </select>
+                                <label for="frameworkSubjectId">@C["Subject"]</label>
+                                <select id="frameworkSubjectId"
+                                        name="subjectId"
+                                        required>
+                                    <option value="">@C["SelectSubject"]</option>
+                                    @foreach (var subject in Model.Subjects)
+                                    {
+                                        <option value="@subject.Id">
+                                            @subject.Name (@subject.Code)
+                                        </option>
+                                    }
+                                </select>
 
-                <label for="frameworkGradeLevelId">@C["GradeLevel"]</label>
-                <select id="frameworkGradeLevelId"
-                        name="gradeLevelId"
-                        required>
-                    <option value="">@C["SelectGrade"]</option>
-                    @foreach (var grade in Model.GradeLevels)
-                    {
-                        <option value="@grade.Id">@grade.Name</option>
-                    }
-                </select>
+                                <label for="frameworkGradeLevelId">@C["GradeLevel"]</label>
+                                <select id="frameworkGradeLevelId"
+                                        name="gradeLevelId"
+                                        required>
+                                    <option value="">@C["SelectGrade"]</option>
+                                    @foreach (var grade in Model.GradeLevels)
+                                    {
+                                        <option value="@grade.Id">@grade.Name</option>
+                                    }
+                                </select>
 
-                <label for="frameworkCode">@C["CurriculumFramework"]</label>
-                <select id="frameworkCode"
-                        name="frameworkCode"
-                        required>
-                    <option value="">@C["SelectFramework"]</option>
-                    @foreach (var framework in Model.Frameworks)
-                    {
-                        <option value="@framework.Code">
-                            @framework.DisplayName
-                        </option>
-                    }
-                </select>
+                                <label for="frameworkCode">@C["CurriculumFramework"]</label>
+                                <select id="frameworkCode"
+                                        name="frameworkCode"
+                                        required>
+                                    <option value="">@C["SelectFramework"]</option>
+                                    @foreach (var framework in Model.Frameworks)
+                                    {
+                                        <option value="@framework.Code">
+                                            @framework.DisplayName
+                                        </option>
+                                    }
+                                </select>
 
-                <p class="curriculum-help">@C["FrameworkHelp"]</p>
+                                <p class="curriculum-help">@C["FrameworkHelp"]</p>
 
-                <button type="submit"
-                        class="school-button school-button-primary">
-                    @C["UseFramework"]
-                </button>
-            </form>
+                                <button type="submit"
+                                        class="school-button school-button-primary">
+                                    @C["UseFramework"]
+                                </button>
+                            </form>
+            }
 
             @if (Model.Adoptions.Count > 0)
             {
@@ -105,122 +113,128 @@
         <article class="curriculum-card">
             <h2>@C["CreateSchoolTopic"]</h2>
             <p class="curriculum-help">@C["TopicRequiresFramework"]</p>
-            <form asp-action="CreateTopic"
-                  method="post"
-                  class="curriculum-form">
-                @Html.AntiForgeryToken()
+            @if (canManageCurriculum)
+            {
+                <form asp-action="CreateTopic"
+                                  method="post"
+                                  class="curriculum-form">
+                                @Html.AntiForgeryToken()
 
-                <label for="subjectId">@C["Subject"]</label>
-                <select id="subjectId" name="subjectId" required>
-                    <option value="">@C["SelectSubject"]</option>
-                    @foreach (var subject in Model.Subjects)
-                    {
-                        <option value="@subject.Id">@subject.Name (@subject.Code)</option>
-                    }
-                </select>
+                                <label for="subjectId">@C["Subject"]</label>
+                                <select id="subjectId" name="subjectId" required>
+                                    <option value="">@C["SelectSubject"]</option>
+                                    @foreach (var subject in Model.Subjects)
+                                    {
+                                        <option value="@subject.Id">@subject.Name (@subject.Code)</option>
+                                    }
+                                </select>
 
-                <label for="gradeLevelId">@C["GradeLevel"]</label>
-                <select id="gradeLevelId" name="gradeLevelId" required>
-                    <option value="">@C["SelectGrade"]</option>
-                    @foreach (var grade in Model.GradeLevels)
-                    {
-                        <option value="@grade.Id">@grade.Name</option>
-                    }
-                </select>
+                                <label for="gradeLevelId">@C["GradeLevel"]</label>
+                                <select id="gradeLevelId" name="gradeLevelId" required>
+                                    <option value="">@C["SelectGrade"]</option>
+                                    @foreach (var grade in Model.GradeLevels)
+                                    {
+                                        <option value="@grade.Id">@grade.Name</option>
+                                    }
+                                </select>
 
-                <label for="topicName">@C["Name"]</label>
-                <input id="topicName"
-                       name="name"
-                       maxlength="200"
-                       required />
+                                <label for="topicName">@C["Name"]</label>
+                                <input id="topicName"
+                                       name="name"
+                                       maxlength="200"
+                                       required />
 
-                <label for="topicOrder">@C["Order"]</label>
-                <input id="topicOrder"
-                       name="order"
-                       type="number"
-                       min="1"
-                       required />
+                                <label for="topicOrder">@C["Order"]</label>
+                                <input id="topicOrder"
+                                       name="order"
+                                       type="number"
+                                       min="1"
+                                       required />
 
-                <button type="submit"
-                        class="school-button school-button-primary">
-                    @C["Create"]
-                </button>
-            </form>
+                                <button type="submit"
+                                        class="school-button school-button-primary">
+                                    @C["Create"]
+                                </button>
+                            </form>
+            }
         </article>
 
         <article class="curriculum-card">
             <h2>@C["AddOfficialOutcome"]</h2>
             <p class="curriculum-help">@C["OfficialOutcomeHelp"]</p>
-            <form asp-action="CreateOfficialOutcome"
-                  method="post"
-                  class="curriculum-form"
-                  id="officialOutcomeForm">
-                @Html.AntiForgeryToken()
+            @if (canManageCurriculum)
+            {
+                <form asp-action="CreateOfficialOutcome"
+                                  method="post"
+                                  class="curriculum-form"
+                                  id="officialOutcomeForm">
+                                @Html.AntiForgeryToken()
 
-                <label for="officialTopicId">@C["SchoolTopic"]</label>
-                <select id="officialTopicId" name="topicId" required>
-                    <option value="">@C["SelectTopic"]</option>
-                    @foreach (var topic in Model.Topics)
-                    {
-                        <option value="@topic.Id">
-                            @topic.FrameworkDisplayName →
-                            @Model.SubjectName(topic.SubjectId) /
-                            @Model.GradeName(topic.GradeLevelId) /
-                            @topic.Name
-                        </option>
-                    }
-                </select>
+                                <label for="officialTopicId">@C["SchoolTopic"]</label>
+                                <select id="officialTopicId" name="topicId" required>
+                                    <option value="">@C["SelectTopic"]</option>
+                                    @foreach (var topic in Model.Topics)
+                                    {
+                                        <option value="@topic.Id">
+                                            @topic.FrameworkDisplayName →
+                                            @Model.SubjectName(topic.SubjectId) /
+                                            @Model.GradeName(topic.GradeLevelId) /
+                                            @topic.Name
+                                        </option>
+                                    }
+                                </select>
 
-                <label for="officialCurriculumItem">@C["OfficialCurriculumItem"]</label>
-                <select id="officialCurriculumItem"
-                        name="selectionKey"
-                        required
-                        disabled>
-                    <option value="">@C["SelectOfficialItem"]</option>
-                    @foreach (var topic in Model.Topics)
-                    {
-                        @foreach (var outcome in topic.OfficialOutcomes)
-                        {
-                            <option value="@Model.OfficialSelectionValue(outcome)"
-                                    data-topic-id="@topic.Id"
-                                    data-code="@outcome.Code"
-                                    data-description="@outcome.Description"
-                                    hidden
-                                    disabled>
-                                @if (!string.IsNullOrWhiteSpace(outcome.GroupLabel))
-                                {
-                                    @($"{outcome.GroupLabel} — ")
-                                }
-                                @outcome.SelectionLabel
-                            </option>
-                        }
-                    }
-                </select>
-                <p id="officialOutcomeEmpty"
-                   class="curriculum-help"
-                   hidden>@C["NoOfficialItemsForTopic"]</p>
+                                <label for="officialCurriculumItem">@C["OfficialCurriculumItem"]</label>
+                                <select id="officialCurriculumItem"
+                                        name="selectionKey"
+                                        required
+                                        disabled>
+                                    <option value="">@C["SelectOfficialItem"]</option>
+                                    @foreach (var topic in Model.Topics)
+                                    {
+                                        @foreach (var outcome in topic.OfficialOutcomes)
+                                        {
+                                            <option value="@Model.OfficialSelectionValue(outcome)"
+                                                    data-topic-id="@topic.Id"
+                                                    data-code="@outcome.Code"
+                                                    data-description="@outcome.Description"
+                                                    hidden
+                                                    disabled>
+                                                @if (!string.IsNullOrWhiteSpace(outcome.GroupLabel))
+                                                {
+                                                    @($"{outcome.GroupLabel} — ")
+                                                }
+                                                @outcome.SelectionLabel
+                                            </option>
+                                        }
+                                    }
+                                </select>
+                                <p id="officialOutcomeEmpty"
+                                   class="curriculum-help"
+                                   hidden>@C["NoOfficialItemsForTopic"]</p>
 
-                <label for="officialCode">@C["OfficialOutcomeCode"]</label>
-                <input id="officialCode" readonly />
+                                <label for="officialCode">@C["OfficialOutcomeCode"]</label>
+                                <input id="officialCode" readonly />
 
-                <label for="officialDescription">@C["OfficialDescription"]</label>
-                <textarea id="officialDescription"
-                          maxlength="1000"
-                          rows="4"
-                          readonly></textarea>
+                                <label for="officialDescription">@C["OfficialDescription"]</label>
+                                <textarea id="officialDescription"
+                                          maxlength="1000"
+                                          rows="4"
+                                          readonly></textarea>
 
-                <label for="officialOutcomeOrder">@C["Order"]</label>
-                <input id="officialOutcomeOrder"
-                       name="order"
-                       type="number"
-                       min="1"
-                       required />
+                                <label for="officialOutcomeOrder">@C["Order"]</label>
+                                <input id="officialOutcomeOrder"
+                                       name="order"
+                                       type="number"
+                                       min="1"
+                                       required />
 
-                <button type="submit"
-                        class="school-button school-button-primary">
-                    @C["AddOfficialOutcome"]
-                </button>
-            </form>
+                                <button type="submit"
+                                        class="school-button school-button-primary">
+                                    @C["AddOfficialOutcome"]
+                                </button>
+                            </form>
+            }
         </article>
     </section>
 
@@ -250,9 +264,12 @@
                             </span>
                             <h3>@topic.Order. @topic.Name</h3>
                         </div>
-                        <a class="school-button"
-                           asp-action="EditTopic"
-                           asp-route-id="@topic.Id">@C["EditTopic"]</a>
+                        @if (canManageCurriculum)
+                        {
+                            <a class="school-button"
+                                                       asp-action="EditTopic"
+                                                       asp-route-id="@topic.Id">@C["EditTopic"]</a>
+                        }
                     </header>
 
                     <div class="curriculum-outcomes">
@@ -290,9 +307,12 @@
                                             <td>
                                                 @if (!outcome.IsOfficial)
                                                 {
-                                                    <a class="school-button"
-                                                       asp-action="EditOutcome"
-                                                       asp-route-id="@outcome.Id">@C["Edit"]</a>
+                                                    @if (canManageCurriculum)
+                                                    {
+                                                        <a class="school-button"
+                                                                                                               asp-action="EditOutcome"
+                                                                                                               asp-route-id="@outcome.Id">@C["Edit"]</a>
+                                                    }
                                                 }
                                             </td>
                                         </tr>

@@ -44,7 +44,7 @@ public sealed class AnalyticsService : IAnalyticsService
                 scope.Error!.Value);
         }
 
-        if (scope.Role != RoleNames.SchoolAdmin)
+        if (scope.Role != RoleNames.SubjectSupervisor)
         {
             return AnalyticsCommandResult.Failure(
                 AnalyticsErrorCode
@@ -548,7 +548,7 @@ public sealed class AnalyticsService : IAnalyticsService
                 masteries.Length > 0,
                 isStale,
                 scope.Role ==
-                RoleNames.SchoolAdmin,
+                RoleNames.SubjectSupervisor,
                 generatedAt,
                 overall,
                 masteries

@@ -60,6 +60,10 @@ public sealed class Phase06EndToEndAcceptanceTests
 
         await EnsureRoleAsync(
             roleManager,
+            RoleNames.SubjectSupervisor);
+
+        await EnsureRoleAsync(
+            roleManager,
             RoleNames.Teacher);
 
         await EnsureRoleAsync(
@@ -85,6 +89,13 @@ public sealed class Phase06EndToEndAcceptanceTests
                 RoleNames.SchoolAdmin,
                 "admin-a");
 
+        var supervisorA =
+            await CreateUserAsync(
+                userManager,
+                schoolA.Id,
+                RoleNames.SubjectSupervisor,
+                "supervisor-a");
+
         var teacherA =
             await CreateUserAsync(
                 userManager,
@@ -105,6 +116,14 @@ public sealed class Phase06EndToEndAcceptanceTests
                 schoolB.Id,
                 RoleNames.SchoolAdmin,
                 "admin-b");
+
+
+        var supervisorB =
+            await CreateUserAsync(
+                userManager,
+                schoolB.Id,
+                RoleNames.SubjectSupervisor,
+                "supervisor-b");
 
         var schools =
             new SchoolRepository(db);
@@ -143,12 +162,18 @@ public sealed class Phase06EndToEndAcceptanceTests
             await service.GetDashboardAsync(
                 teacherA.Id);
 
-        Assert.Null(
+        Assert.NotNull(
             teacherDashboard.Value);
 
         Assert.Equal(
-            AcademicStructureErrorCode.AccessDenied,
-            teacherDashboard.Error);
+            schoolA.Id,
+            teacherDashboard.Value!.SchoolId);
+
+        var supervisorDashboard =
+            await service.GetDashboardAsync(
+                supervisorA.Id);
+
+        Assert.NotNull(supervisorDashboard.Value);
 
         var studentDashboard =
             await service.GetDashboardAsync(
@@ -167,7 +192,7 @@ public sealed class Phase06EndToEndAcceptanceTests
 
         var createYear =
             await service.CreateAcademicYearAsync(
-                adminA.Id,
+                supervisorA.Id,
                 new CreateAcademicYearRequest(
                     "2026/2027",
                     new DateOnly(2026, 9, 1),
@@ -195,7 +220,7 @@ public sealed class Phase06EndToEndAcceptanceTests
 
         var createTerm =
             await service.CreateTermAsync(
-                adminA.Id,
+                supervisorA.Id,
                 new CreateTermRequest(
                     year.Id,
                     "Term 1",
@@ -212,7 +237,7 @@ public sealed class Phase06EndToEndAcceptanceTests
 
         var createGrade =
             await service.CreateGradeLevelAsync(
-                adminA.Id,
+                supervisorA.Id,
                 new CreateGradeLevelRequest(
                     "Grade 6",
                     6));
@@ -238,7 +263,7 @@ public sealed class Phase06EndToEndAcceptanceTests
 
         var createClass =
             await service.CreateClassGroupAsync(
-                adminA.Id,
+                supervisorA.Id,
                 new CreateClassGroupRequest(
                     year.Id,
                     grade.Id,
@@ -267,7 +292,7 @@ public sealed class Phase06EndToEndAcceptanceTests
 
         var createSubject =
             await service.CreateSubjectAsync(
-                adminA.Id,
+                supervisorA.Id,
                 new CreateSubjectRequest(
                     "Mathematics",
                     "MATH",
@@ -294,7 +319,7 @@ public sealed class Phase06EndToEndAcceptanceTests
 
         var teacherAssignment =
             await service.CreateTeacherAssignmentAsync(
-                adminA.Id,
+                supervisorA.Id,
                 new CreateTeacherAssignmentRequest(
                     teacherA.Id,
                     classGroup.Id,
@@ -305,7 +330,7 @@ public sealed class Phase06EndToEndAcceptanceTests
 
         var duplicateTeacherAssignment =
             await service.CreateTeacherAssignmentAsync(
-                adminA.Id,
+                supervisorA.Id,
                 new CreateTeacherAssignmentRequest(
                     teacherA.Id,
                     classGroup.Id,
@@ -327,7 +352,7 @@ public sealed class Phase06EndToEndAcceptanceTests
 
         var createStudent =
             await service.CreateStudentProfileAsync(
-                adminA.Id,
+                supervisorA.Id,
                 new CreateStudentProfileRequest(
                     "ST-001",
                     "Jan",
@@ -360,7 +385,7 @@ public sealed class Phase06EndToEndAcceptanceTests
 
         var enrollment =
             await service.CreateStudentEnrollmentAsync(
-                adminA.Id,
+                supervisorA.Id,
                 new CreateStudentEnrollmentRequest(
                     studentProfile.Id,
                     classGroup.Id));
@@ -370,7 +395,7 @@ public sealed class Phase06EndToEndAcceptanceTests
 
         var duplicateEnrollment =
             await service.CreateStudentEnrollmentAsync(
-                adminA.Id,
+                supervisorA.Id,
                 new CreateStudentEnrollmentRequest(
                     studentProfile.Id,
                     classGroup.Id));
@@ -502,7 +527,7 @@ public sealed class Phase06EndToEndAcceptanceTests
 
         var crossTenantTerm =
             await service.CreateTermAsync(
-                adminB.Id,
+                supervisorB.Id,
                 new CreateTermRequest(
                     year.Id,
                     "Illegal cross-tenant term",

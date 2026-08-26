@@ -272,7 +272,7 @@ public sealed class Phase19SubjectSupervisorTests
     }
 
     [Fact]
-    public async Task Supervisor_SeesOnlyAssignedSubject_AndCannotRecalculate()
+    public async Task Supervisor_SeesOnlyAssignedSubject_AndCanRecalculate()
     {
         var fixture = NewFixture();
 
@@ -302,13 +302,14 @@ public sealed class Phase19SubjectSupervisorTests
                 result.Value);
 
         var subject =
-            Assert.Single(dashboard.Subjects);
+            Assert.Single(
+                dashboard.Subjects);
 
         Assert.Equal(
             fixture.SubjectA.Id,
             subject.Id);
 
-        Assert.False(
+        Assert.True(
             dashboard.CanRecalculate);
 
         var denied =
@@ -325,12 +326,8 @@ public sealed class Phase19SubjectSupervisorTests
             await analytics.RecalculateAsync(
                 fixture.Supervisor.Id);
 
-        Assert.False(recalculate.Succeeded);
-
-        Assert.Equal(
-            AnalyticsErrorCode
-                .RecalculationRequiresSchoolAdmin,
-            recalculate.Error);
+        Assert.True(
+            recalculate.Succeeded);
     }
 
     [Fact]

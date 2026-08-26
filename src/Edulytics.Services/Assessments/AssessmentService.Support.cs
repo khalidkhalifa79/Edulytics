@@ -189,7 +189,9 @@ public sealed partial class AssessmentService
             return ScopeResult.Fail(AssessmentErrorCode.AccessDenied);
 
         var role = actor.Roles.Count == 1 ? actor.Roles[0] : null;
-        if (role != RoleNames.SchoolAdmin && role != RoleNames.Teacher)
+        if (role != RoleNames.SchoolAdmin &&
+            role != RoleNames.SubjectSupervisor &&
+            role != RoleNames.Teacher)
             return ScopeResult.Fail(AssessmentErrorCode.AccessDenied);
 
         var school = await _schools.GetByIdAsync(actor.SchoolId.Value, cancellationToken);
@@ -205,8 +207,8 @@ public sealed partial class AssessmentService
         Guid subjectId,
         CancellationToken cancellationToken)
     {
-        if (scope.Role == RoleNames.SchoolAdmin)
-            return true;
+        if (scope.Role != RoleNames.Teacher)
+            return false;
 
         return await _repo.IsTeacherAssignedAsync(
             scope.School!.Id,
@@ -231,8 +233,11 @@ public sealed partial class AssessmentService
         AssessmentSnapshot snapshot,
         Assessment assessment)
     {
-        if (scope.Role == RoleNames.SchoolAdmin)
+        if (scope.Role == RoleNames.SchoolAdmin ||
+            scope.Role == RoleNames.SubjectSupervisor)
+        {
             return true;
+        }
 
         return snapshot.TeacherAssignments.Any(
             x => x.TeacherUserId == scope.Actor!.Id &&

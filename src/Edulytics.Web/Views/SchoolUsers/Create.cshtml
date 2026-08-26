@@ -1,5 +1,18 @@
+@using Edulytics.Core.Constants
 @model Edulytics.Web.ViewModels.SchoolUsers.SchoolUserCreateViewModel
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.PlatformResource> T
+
+@{
+    var canManageSchoolUsers = User.IsInRole(RoleNames.SubjectSupervisor) || User.IsInRole(RoleNames.SuperAdmin);
+    var operationalRoleOptions =
+        User.IsInRole(RoleNames.SuperAdmin)
+            ? Model.RoleOptions
+            : Model.RoleOptions
+                .Where(x =>
+                    x.Value == RoleNames.Teacher ||
+                    x.Value == RoleNames.Student)
+                .ToArray();
+}
 
 @{
     ViewData["Title"] = T["CreateSchoolUser"].Value;
@@ -23,70 +36,73 @@
         </div>
     </header>
 
-    <form method="post"
-          asp-controller="SchoolUsers"
-          asp-action="Create"
-          class="user-form-card">
+    @if (canManageSchoolUsers)
+    {
+        <form method="post"
+                  asp-controller="SchoolUsers"
+                  asp-action="Create"
+                  class="user-form-card">
 
-        <input asp-for="SchoolId"
-               type="hidden" />
+                <input asp-for="SchoolId"
+                       type="hidden" />
 
-        <div asp-validation-summary="ModelOnly"
-             class="user-validation-summary"
-             role="alert">
-        </div>
+                <div asp-validation-summary="ModelOnly"
+                     class="user-validation-summary"
+                     role="alert">
+                </div>
 
-        <div class="user-field">
-            <label asp-for="Email">
-                @T["UserEmail"]
-            </label>
+                <div class="user-field">
+                    <label asp-for="Email">
+                        @T["UserEmail"]
+                    </label>
 
-            <input asp-for="Email"
-                   type="email"
-                   autocomplete="off"
-                   maxlength="256" />
+                    <input asp-for="Email"
+                           type="email"
+                           autocomplete="off"
+                           maxlength="256" />
 
-            <span asp-validation-for="Email"
-                  class="user-field-error">
-            </span>
-        </div>
+                    <span asp-validation-for="Email"
+                          class="user-field-error">
+                    </span>
+                </div>
 
-        <div class="user-field">
-            <label asp-for="Role">
-                @T["UserRole"]
-            </label>
+                <div class="user-field">
+                    <label asp-for="Role">
+                        @T["UserRole"]
+                    </label>
 
-            <select asp-for="Role">
-                @foreach (var option in Model.RoleOptions)
-                {
-                    <option value="@option.Value">
-                        @T[option.ResourceKey]
-                    </option>
-                }
-            </select>
+                    <select asp-for="Role">
+                        @foreach (var option in operationalRoleOptions)
+                        {
+                            <option value="@option.Value">
+                                @T[option.ResourceKey]
+                            </option>
+                        }
+                    </select>
 
-            <span asp-validation-for="Role"
-                  class="user-field-error">
-            </span>
-        </div>
+                    <span asp-validation-for="Role"
+                          class="user-field-error">
+                    </span>
+                </div>
 
-        <div class="user-info-box">
-            <strong>@T["PasswordSetupTitle"]</strong>
-            <p>@T["InitialSetupExplanation"]</p>
-        </div>
+                <div class="user-info-box">
+                    <strong>@T["PasswordSetupTitle"]</strong>
+                    <p>@T["InitialSetupExplanation"]</p>
+                </div>
 
-        <div class="user-form-actions">
-            <button type="submit"
-                    class="school-button school-button-primary">
-                @T["CreateSchoolUser"]
-            </button>
+                <div class="user-form-actions">
+                    <button type="submit"
+                            class="school-button school-button-primary">
+                        @T["CreateSchoolUser"]
+                    </button>
 
-            <a class="school-button school-button-secondary"
-               asp-controller="SchoolUsers"
-               asp-action="Index"
-               asp-route-schoolId="@Model.SchoolId">
-                @T["Cancel"]
-            </a>
-        </div>
-    </form>
+                    <a class="school-button school-button-secondary"
+                       asp-controller="SchoolUsers"
+                       asp-action="Index"
+                       asp-route-schoolId="@Model.SchoolId">
+                        @T["Cancel"]
+                    </a>
+                </div>
+            </form>
+    }
 </section>

@@ -19,6 +19,7 @@ public static class AssessmentRegistrationExtensions
                 "AssessmentManagement",
                 policy => policy.RequireRole(
                     RoleNames.SchoolAdmin,
+                    RoleNames.SubjectSupervisor,
                     RoleNames.Teacher));
         });
 

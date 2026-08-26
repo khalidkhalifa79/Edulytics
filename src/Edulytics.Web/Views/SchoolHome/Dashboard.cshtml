@@ -1,3 +1,4 @@
+@using Edulytics.Core.Constants
 @model Edulytics.Web.ViewModels.SchoolUsers.SchoolHomeViewModel
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.PlatformResource> T
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.AcademicResource> A
@@ -43,7 +44,8 @@
         </dl>
     </section>
 
-    @if (Model.CanManageUsers)
+    @if (Model.Role == RoleNames.SchoolAdmin ||
+         Model.Role == RoleNames.SubjectSupervisor)
     {
         <section class="user-dashboard-action">
             <div>
@@ -54,10 +56,13 @@
             <a class="school-button school-button-primary"
                asp-controller="SchoolUsers"
                asp-action="Index">
-                @T["ManageUsers"]
+                @T["SchoolUsersTitle"]
             </a>
         </section>
+    }
 
+    @if (Model.Role == RoleNames.SchoolAdmin)
+    {
         <section class="user-dashboard-action">
             <div>
                 <h2>@T["SubjectSupervisorAssignmentsTitle"]</h2>
@@ -70,7 +75,12 @@
                 @T["ManageSubjectSupervisorAssignments"]
             </a>
         </section>
+    }
 
+    @if (Model.Role == RoleNames.SchoolAdmin ||
+         Model.Role == RoleNames.SubjectSupervisor ||
+         Model.Role == RoleNames.Teacher)
+    {
         <section class="user-dashboard-action">
             <div>
                 <h2>@A["AcademicStructureTitle"]</h2>
@@ -80,7 +90,7 @@
             <a class="school-button school-button-primary"
                asp-controller="AcademicStructure"
                asp-action="Index">
-                @A["ManageAcademicStructure"]
+                @A["AcademicStructureTitle"]
             </a>
         </section>
 
@@ -93,14 +103,10 @@
             <a class="school-button school-button-primary"
                asp-controller="Curriculum"
                asp-action="Index">
-                @C["ManageCurriculum"]
+                @C["CurriculumTitle"]
             </a>
         </section>
 
-    }
-
-    @if (Model.CanManageAssessments)
-    {
         <section class="user-dashboard-action">
             <div>
                 <h2>@S["AssessmentTitle"]</h2>
@@ -110,10 +116,11 @@
             <a class="school-button school-button-primary"
                asp-controller="Assessments"
                asp-action="Index">
-                @S["ManageAssessments"]
+                @S["AssessmentTitle"]
             </a>
         </section>
     }
+
 
     @if (Model.CanViewAnalytics)
     {
@@ -147,8 +154,8 @@
         }
     }
 
-    @if (Model.Role == Edulytics.Core.Constants.RoleNames.SchoolAdmin ||
-         Model.Role == Edulytics.Core.Constants.RoleNames.Teacher)
+    @if (Model.Role == RoleNames.SchoolAdmin ||
+         Model.Role == RoleNames.SubjectSupervisor)
     {
         <section class="user-dashboard-action">
             <div>

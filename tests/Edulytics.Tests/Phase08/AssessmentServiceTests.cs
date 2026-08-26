@@ -42,12 +42,12 @@ public sealed class AssessmentServiceTests
 
         var details =
             await f.Service.GetDetailsAsync(
-                f.Admin.Id,
+                f.Teacher.Id,
                 assessmentId);
 
         var noOutcome =
             await f.Service.CreateQuestionAsync(
-                f.Admin.Id,
+                f.Teacher.Id,
                 new CreateAssessmentQuestionRequest(
                     assessmentId,
                     "Only question",
@@ -64,12 +64,12 @@ public sealed class AssessmentServiceTests
 
         details =
             await f.Service.GetDetailsAsync(
-                f.Admin.Id,
+                f.Teacher.Id,
                 assessmentId);
 
         var question =
             await f.Service.CreateQuestionAsync(
-                f.Admin.Id,
+                f.Teacher.Id,
                 new CreateAssessmentQuestionRequest(
                     assessmentId,
                     "Only question",
@@ -82,7 +82,7 @@ public sealed class AssessmentServiceTests
 
         details =
             await f.Service.GetDetailsAsync(
-                f.Admin.Id,
+                f.Teacher.Id,
                 assessmentId);
 
         var createdQuestion =
@@ -95,7 +95,7 @@ public sealed class AssessmentServiceTests
 
         var opened =
             await f.Service.OpenAssessmentAsync(
-                f.Admin.Id,
+                f.Teacher.Id,
                 assessmentId,
                 details.Value.Assessment.RowVersion);
 
@@ -110,7 +110,7 @@ public sealed class AssessmentServiceTests
         var assessmentId = await f.BuildOpenAssessmentAsync();
 
         var save = await f.Service.SaveStudentResultAsync(
-            f.Admin.Id,
+            f.Teacher.Id,
             new SaveStudentAssessmentResultRequest(
                 assessmentId,
                 f.Student.Id,
@@ -120,7 +120,7 @@ public sealed class AssessmentServiceTests
 
         Assert.True(save.Succeeded);
 
-        var results = await f.Service.GetResultsAsync(f.Admin.Id, assessmentId);
+        var results = await f.Service.GetResultsAsync(f.Teacher.Id, assessmentId);
         var student = Assert.Single(results.Value!.Students);
 
         Assert.Equal(9m, student.Score);
@@ -135,7 +135,7 @@ public sealed class AssessmentServiceTests
         var assessmentId = await f.BuildOpenAssessmentAsync();
 
         var save = await f.Service.SaveStudentResultAsync(
-            f.Admin.Id,
+            f.Teacher.Id,
             new SaveStudentAssessmentResultRequest(
                 assessmentId,
                 f.Student.Id,
@@ -201,12 +201,12 @@ public sealed class AssessmentServiceTests
 
         var details =
             await f.Service.GetDetailsAsync(
-                f.Admin.Id,
+                f.Teacher.Id,
                 assessmentId);
 
         var result =
             await f.Service.CreateQuestionAsync(
-                f.Admin.Id,
+                f.Teacher.Id,
                 new CreateAssessmentQuestionRequest(
                     assessmentId,
                     "Year-specific precedence question",
@@ -244,12 +244,12 @@ public sealed class AssessmentServiceTests
 
         var details =
             await f.Service.GetDetailsAsync(
-                f.Admin.Id,
+                f.Teacher.Id,
                 assessmentId);
 
         var deleted =
             await f.Service.DeleteQuestionAsync(
-                f.Admin.Id,
+                f.Teacher.Id,
                 new DeleteAssessmentQuestionRequest(
                     questionId,
                     details.Value!.Assessment.RowVersion));
@@ -282,12 +282,12 @@ public sealed class AssessmentServiceTests
 
         var details =
             await f.Service.GetDetailsAsync(
-                f.Admin.Id,
+                f.Teacher.Id,
                 assessmentId);
 
         var deleted =
             await f.Service.DeleteAssessmentAsync(
-                f.Admin.Id,
+                f.Teacher.Id,
                 new DeleteAssessmentRequest(
                     assessmentId,
                     details.Value!.Assessment.RowVersion));
@@ -317,12 +317,12 @@ public sealed class AssessmentServiceTests
 
         var details =
             await f.Service.GetDetailsAsync(
-                f.Admin.Id,
+                f.Teacher.Id,
                 assessmentId);
 
         var deleted =
             await f.Service.DeleteAssessmentAsync(
-                f.Admin.Id,
+                f.Teacher.Id,
                 new DeleteAssessmentRequest(
                     assessmentId,
                     details.Value!.Assessment.RowVersion));
@@ -344,12 +344,12 @@ public sealed class AssessmentServiceTests
 
         var details =
             await f.Service.GetDetailsAsync(
-                f.Admin.Id,
+                f.Teacher.Id,
                 assessmentId);
 
         var deleted =
             await f.Service.DeleteQuestionAsync(
-                f.Admin.Id,
+                f.Teacher.Id,
                 new DeleteAssessmentQuestionRequest(
                     f.Question1,
                     details.Value!.Assessment.RowVersion));
@@ -399,12 +399,12 @@ public sealed class AssessmentServiceTests
 
         var details =
             await f.Service.GetDetailsAsync(
-                f.Admin.Id,
+                f.Teacher.Id,
                 assessmentId);
 
         var updated =
             await f.Service.UpdateQuestionAsync(
-                f.Admin.Id,
+                f.Teacher.Id,
                 new UpdateAssessmentQuestionRequest(
                     questionId,
                     "Updated question",
@@ -417,7 +417,7 @@ public sealed class AssessmentServiceTests
 
         details =
             await f.Service.GetDetailsAsync(
-                f.Admin.Id,
+                f.Teacher.Id,
                 assessmentId);
 
         var question =
@@ -430,6 +430,38 @@ public sealed class AssessmentServiceTests
         Assert.Equal(
             secondOutcome.Id,
             question.OutcomeIds[0]);
+    }
+
+
+    [Fact]
+    public async Task AdminAndSupervisor_CanInspect_ButCannotMutateAssessment()
+    {
+        using var f = Fixture.Create();
+        var assessmentId = await f.CreateAssessmentAsync();
+
+        var teacherDetails = await f.Service.GetDetailsAsync(
+            f.Teacher.Id,
+            assessmentId);
+
+        Assert.NotNull((await f.Service.GetDetailsAsync(
+            f.Admin.Id,
+            assessmentId)).Value);
+
+        Assert.NotNull((await f.Service.GetDetailsAsync(
+            f.Supervisor.Id,
+            assessmentId)).Value);
+
+        foreach (var actorId in new[] { f.Admin.Id, f.Supervisor.Id })
+        {
+            var denied = await f.Service.DeleteAssessmentAsync(
+                actorId,
+                new DeleteAssessmentRequest(
+                    assessmentId,
+                    teacherDetails.Value!.Assessment.RowVersion));
+
+            Assert.False(denied.Succeeded);
+            Assert.Equal(AssessmentErrorCode.AccessDenied, denied.Error);
+        }
     }
 
     private sealed class Fixture : IDisposable
@@ -445,6 +477,7 @@ public sealed class AssessmentServiceTests
             StudentProfile student,
             LearningOutcome outcome,
             SchoolUserRecord admin,
+            SchoolUserRecord supervisor,
             SchoolUserRecord teacher,
             AssessmentService service)
         {
@@ -458,6 +491,7 @@ public sealed class AssessmentServiceTests
             Student = student;
             Outcome = outcome;
             Admin = admin;
+            Supervisor = supervisor;
             Teacher = teacher;
             Service = service;
         }
@@ -472,6 +506,7 @@ public sealed class AssessmentServiceTests
         public StudentProfile Student { get; }
         public LearningOutcome Outcome { get; }
         public SchoolUserRecord Admin { get; }
+        public SchoolUserRecord Supervisor { get; }
         public SchoolUserRecord Teacher { get; }
         public AssessmentService Service { get; }
         public Guid Question1 { get; private set; }
@@ -488,7 +523,7 @@ public sealed class AssessmentServiceTests
 
         public async Task<Guid> CreateAssessmentAsync()
         {
-            var result = await Service.CreateAssessmentAsync(Admin.Id, Request());
+            var result = await Service.CreateAssessmentAsync(Teacher.Id, Request());
             Assert.True(result.Succeeded);
             return result.EntityId!.Value;
         }
@@ -499,9 +534,9 @@ public sealed class AssessmentServiceTests
             Question1 = await CreateQuestionAsync(assessmentId, "Q1", 4m, 1);
             Question2 = await CreateQuestionAsync(assessmentId, "Q2", 6m, 2);
 
-            var details = await Service.GetDetailsAsync(Admin.Id, assessmentId);
+            var details = await Service.GetDetailsAsync(Teacher.Id, assessmentId);
             var open = await Service.OpenAssessmentAsync(
-                Admin.Id,
+                Teacher.Id,
                 assessmentId,
                 details.Value!.Assessment.RowVersion);
 
@@ -515,10 +550,10 @@ public sealed class AssessmentServiceTests
             decimal maxScore,
             int order)
         {
-            var details = await Service.GetDetailsAsync(Admin.Id, assessmentId);
+            var details = await Service.GetDetailsAsync(Teacher.Id, assessmentId);
 
             var result = await Service.CreateQuestionAsync(
-                Admin.Id,
+                Teacher.Id,
                 new CreateAssessmentQuestionRequest(
                     assessmentId,
                     prompt,
@@ -613,6 +648,9 @@ public sealed class AssessmentServiceTests
             };
 
             var admin = NewUser(school.Id, RoleNames.SchoolAdmin);
+            var supervisor = NewUser(
+                school.Id,
+                RoleNames.SubjectSupervisor);
             var teacher = NewUser(school.Id, RoleNames.Teacher);
 
             db.Schools.Add(school);
@@ -659,6 +697,7 @@ public sealed class AssessmentServiceTests
 
             var users = new FakeUserRepository();
             users.Seed(admin);
+            users.Seed(supervisor);
             users.Seed(teacher);
 
             var service = new AssessmentService(
@@ -677,6 +716,7 @@ public sealed class AssessmentServiceTests
                 student,
                 outcome,
                 admin,
+                supervisor,
                 teacher,
                 service);
         }

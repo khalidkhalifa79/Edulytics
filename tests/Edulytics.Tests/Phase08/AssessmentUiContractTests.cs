@@ -14,48 +14,84 @@ public sealed class AssessmentUiContractTests
             .GetCustomAttributes<AuthorizeAttribute>()
             .Single();
 
-        Assert.Equal("AssessmentManagement", auth.Policy);
+        Assert.Equal(
+            "AssessmentManagement",
+            auth.Policy);
 
         var posts = typeof(AssessmentsController)
-            .GetMethods(BindingFlags.Instance | BindingFlags.Public)
-            .Where(x => x.GetCustomAttributes<HttpPostAttribute>().Any())
+            .GetMethods(
+                BindingFlags.Instance |
+                BindingFlags.Public)
+            .Where(
+                x =>
+                    x.GetCustomAttributes<HttpPostAttribute>()
+                        .Any())
             .ToArray();
 
         Assert.NotEmpty(posts);
 
         Assert.All(
             posts,
-            method => Assert.True(
-                method.GetCustomAttributes<ValidateAntiForgeryTokenAttribute>().Any(),
-                method.Name));
+            method =>
+            {
+                Assert.True(
+                    method
+                        .GetCustomAttributes<
+                            ValidateAntiForgeryTokenAttribute>()
+                        .Any(),
+                    method.Name);
+
+                var mutationAuthorization =
+                    method
+                        .GetCustomAttributes<AuthorizeAttribute>()
+                        .Single();
+
+                Assert.Equal(
+                    "Teacher",
+                    mutationAuthorization.Roles);
+            });
     }
 
     [Fact]
-    public void SchoolDashboard_ExposesAssessments_ToSchoolAdminAndTeacher()
+    public void SchoolDashboard_ExposesAssessmentMonitoring_ToAllAcademicRoles()
     {
         var root = FindRoot();
 
-        var controller = File.ReadAllText(
-            Path.Combine(
-                root,
-                "src/Edulytics.Web/Controllers/SchoolHomeController.cs"));
+        var controller =
+            File.ReadAllText(
+                Path.Combine(
+                    root,
+                    "src/Edulytics.Web/Controllers/SchoolHomeController.cs"));
 
-        var viewModel = File.ReadAllText(
-            Path.Combine(
-                root,
-                "src/Edulytics.Web/ViewModels/SchoolUsers/SchoolUserViewModels.cs"));
+        var dashboard =
+            File.ReadAllText(
+                Path.Combine(
+                    root,
+                    "src/Edulytics.Web/Views/SchoolHome/Dashboard.cshtml"));
 
-        var dashboard = File.ReadAllText(
-            Path.Combine(
-                root,
-                "src/Edulytics.Web/Views/SchoolHome/Dashboard.cshtml"));
+        Assert.Contains(
+            "CanManageAssessments =",
+            controller);
 
-        Assert.Contains("public bool CanManageAssessments", viewModel);
-        Assert.Contains("CanManageAssessments =", controller);
-        Assert.Contains("context.Role == RoleNames.SchoolAdmin ||", controller);
-        Assert.Contains("context.Role == RoleNames.Teacher", controller);
-        Assert.Contains("@if (Model.CanManageAssessments)", dashboard);
-        Assert.Contains("asp-controller=\"Assessments\"", dashboard);
+        Assert.Contains(
+            "context.Role == RoleNames.Teacher",
+            controller);
+
+        Assert.Contains(
+            "RoleNames.SchoolAdmin",
+            dashboard);
+
+        Assert.Contains(
+            "RoleNames.SubjectSupervisor",
+            dashboard);
+
+        Assert.Contains(
+            "RoleNames.Teacher",
+            dashboard);
+
+        Assert.Contains(
+            "asp-controller=\"Assessments\"",
+            dashboard);
     }
 
 

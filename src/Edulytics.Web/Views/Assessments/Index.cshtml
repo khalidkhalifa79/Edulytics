@@ -1,5 +1,10 @@
+@using Edulytics.Core.Constants
 @model Edulytics.Web.ViewModels.Assessments.AssessmentIndexViewModel
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.AssessmentResource> A
+@{
+    var canManageAssessment = User.IsInRole(RoleNames.Teacher);
+}
+
 @{
     ViewData["Title"] = A["AssessmentTitle"];
 }
@@ -26,54 +31,57 @@
 
     <section class="assessment-card">
         <h2>@A["CreateAssessment"]</h2>
-        <form asp-action="Create" method="post"
-              class="assessment-form assessment-create-form">
-            @Html.AntiForgeryToken()
+        @if (canManageAssessment)
+        {
+            <form asp-action="Create" method="post"
+                          class="assessment-form assessment-create-form">
+                        @Html.AntiForgeryToken()
 
-            <label for="classGroupId">@A["ClassGroup"]</label>
-            <select id="classGroupId" name="classGroupId" required>
-                <option value="">@A["SelectClass"]</option>
-                @foreach (var item in Model.Workspace.ClassGroups)
-                {
-                    <option value="@item.Id">@item.Name (@item.Code)</option>
-                }
-            </select>
+                        <label for="classGroupId">@A["ClassGroup"]</label>
+                        <select id="classGroupId" name="classGroupId" required>
+                            <option value="">@A["SelectClass"]</option>
+                            @foreach (var item in Model.Workspace.ClassGroups)
+                            {
+                                <option value="@item.Id">@item.Name (@item.Code)</option>
+                            }
+                        </select>
 
-            <label for="subjectId">@A["Subject"]</label>
-            <select id="subjectId" name="subjectId" required>
-                <option value="">@A["SelectSubject"]</option>
-                @foreach (var item in Model.Workspace.Subjects)
-                {
-                    <option value="@item.Id">@item.Name (@item.Code)</option>
-                }
-            </select>
+                        <label for="subjectId">@A["Subject"]</label>
+                        <select id="subjectId" name="subjectId" required>
+                            <option value="">@A["SelectSubject"]</option>
+                            @foreach (var item in Model.Workspace.Subjects)
+                            {
+                                <option value="@item.Id">@item.Name (@item.Code)</option>
+                            }
+                        </select>
 
-            <label for="termId">@A["Term"]</label>
-            <select id="termId" name="termId" required>
-                <option value="">@A["SelectTerm"]</option>
-                @foreach (var item in Model.Workspace.Terms)
-                {
-                    <option value="@item.Id">@item.Name</option>
-                }
-            </select>
+                        <label for="termId">@A["Term"]</label>
+                        <select id="termId" name="termId" required>
+                            <option value="">@A["SelectTerm"]</option>
+                            @foreach (var item in Model.Workspace.Terms)
+                            {
+                                <option value="@item.Id">@item.Name</option>
+                            }
+                        </select>
 
-            <label for="title">@A["Title"]</label>
-            <input id="title" name="title" maxlength="200" required />
+                        <label for="title">@A["Title"]</label>
+                        <input id="title" name="title" maxlength="200" required />
 
-            <label for="assessmentDate">@A["AssessmentDate"]</label>
-            <input id="assessmentDate" name="assessmentDate"
-                   type="date" required />
+                        <label for="assessmentDate">@A["AssessmentDate"]</label>
+                        <input id="assessmentDate" name="assessmentDate"
+                               type="date" required />
 
-            <label for="maxScore">@A["MaxScore"]</label>
-            <input id="maxScore" name="maxScore"
-                   type="number" min="0.01" max="10000"
-                   step="0.01" required />
+                        <label for="maxScore">@A["MaxScore"]</label>
+                        <input id="maxScore" name="maxScore"
+                               type="number" min="0.01" max="10000"
+                               step="0.01" required />
 
-            <button type="submit"
-                    class="school-button school-button-primary">
-                @A["Create"]
-            </button>
-        </form>
+                        <button type="submit"
+                                class="school-button school-button-primary">
+                            @A["Create"]
+                        </button>
+                    </form>
+        }
     </section>
 
     <section class="assessment-list">

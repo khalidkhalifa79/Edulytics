@@ -105,6 +105,7 @@ public sealed class SchoolUsersController : Controller
             });
     }
 
+    [Authorize(Roles = RoleNames.SubjectSupervisor + "," + RoleNames.SuperAdmin)]
     [HttpPost("Create")]
     [ValidateAntiForgeryToken]
     [EnableRateLimiting("SchoolUserCreate")]
@@ -241,6 +242,7 @@ public sealed class SchoolUsersController : Controller
             });
     }
 
+    [Authorize(Roles = RoleNames.SubjectSupervisor + "," + RoleNames.SuperAdmin)]
     [HttpPost("{id:guid}/Active")]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> SetActive(
@@ -286,6 +288,7 @@ public sealed class SchoolUsersController : Controller
             });
     }
 
+    [Authorize(Roles = RoleNames.SubjectSupervisor + "," + RoleNames.SuperAdmin)]
     [HttpPost("{id:guid}/Lock")]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> SetLocked(
@@ -331,6 +334,7 @@ public sealed class SchoolUsersController : Controller
             });
     }
 
+    [Authorize(Roles = RoleNames.SubjectSupervisor + "," + RoleNames.SuperAdmin)]
     [HttpPost("{id:guid}/Role")]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> ChangeRole(
@@ -372,6 +376,7 @@ public sealed class SchoolUsersController : Controller
             });
     }
 
+    [Authorize(Roles = RoleNames.SubjectSupervisor + "," + RoleNames.SuperAdmin)]
     [HttpPost("{id:guid}/Password-Link")]
     [ValidateAntiForgeryToken]
     [EnableRateLimiting("InvitationResend")]

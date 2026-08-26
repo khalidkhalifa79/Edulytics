@@ -1,5 +1,10 @@
+@using Edulytics.Core.Constants
 @model Edulytics.Web.ViewModels.Assessments.AssessmentResultsViewModel
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.AssessmentResource> A
+@{
+    var canManageAssessment = User.IsInRole(RoleNames.Teacher);
+}
+
 @{
     ViewData["Title"] = A["Results"];
     var assessment = Model.Workspace.Assessment;
@@ -63,49 +68,52 @@
 
                     @if (editable)
                     {
-                        <form asp-action="SaveResult"
-                              asp-route-id="@assessment.Id"
-                              asp-route-studentProfileId="@student.StudentProfileId"
-                              method="post"
-                              class="assessment-result-form">
-                            @Html.AntiForgeryToken()
+                        @if (canManageAssessment)
+                        {
+                            <form asp-action="SaveResult"
+                                                          asp-route-id="@assessment.Id"
+                                                          asp-route-studentProfileId="@student.StudentProfileId"
+                                                          method="post"
+                                                          class="assessment-result-form">
+                                                        @Html.AntiForgeryToken()
 
-                            @if (student.RowVersion is not null)
-                            {
-                                <input type="hidden"
-                                       name="rowVersion"
-                                       value="@Convert.ToBase64String(student.RowVersion)" />
-                            }
+                                                        @if (student.RowVersion is not null)
+                                                        {
+                                                            <input type="hidden"
+                                                                   name="rowVersion"
+                                                                   value="@Convert.ToBase64String(student.RowVersion)" />
+                                                        }
 
-                            @foreach (var question in Model.Workspace.Questions)
-                            {
-                                var current = student.QuestionScores.TryGetValue(
-                                    question.Id,
-                                    out var value) ? value : 0m;
+                                                        @foreach (var question in Model.Workspace.Questions)
+                                                        {
+                                                            var current = student.QuestionScores.TryGetValue(
+                                                                question.Id,
+                                                                out var value) ? value : 0m;
 
-                                <div class="assessment-score-row">
-                                    <input type="hidden"
-                                           name="questionIds"
-                                           value="@question.Id" />
-                                    <label for="score-@student.StudentProfileId-@question.Id">
-                                        @question.Order. @question.Prompt
-                                        <span>/ @question.MaxScore.ToString("0.##")</span>
-                                    </label>
-                                    <input id="score-@student.StudentProfileId-@question.Id"
-                                           name="scores"
-                                           type="number"
-                                           min="0"
-                                           max="@question.MaxScore.ToString(System.Globalization.CultureInfo.InvariantCulture)"
-                                           step="0.01"
-                                           value="@current.ToString(System.Globalization.CultureInfo.InvariantCulture)"
-                                           aria-label="@A["QuestionScoreLabel", question.Order]"
-                                           required />
-                                </div>
-                            }
+                                                            <div class="assessment-score-row">
+                                                                <input type="hidden"
+                                                                       name="questionIds"
+                                                                       value="@question.Id" />
+                                                                <label for="score-@student.StudentProfileId-@question.Id">
+                                                                    @question.Order. @question.Prompt
+                                                                    <span>/ @question.MaxScore.ToString("0.##")</span>
+                                                                </label>
+                                                                <input id="score-@student.StudentProfileId-@question.Id"
+                                                                       name="scores"
+                                                                       type="number"
+                                                                       min="0"
+                                                                       max="@question.MaxScore.ToString(System.Globalization.CultureInfo.InvariantCulture)"
+                                                                       step="0.01"
+                                                                       value="@current.ToString(System.Globalization.CultureInfo.InvariantCulture)"
+                                                                       aria-label="@A["QuestionScoreLabel", question.Order]"
+                                                                       required />
+                                                            </div>
+                                                        }
 
-                            <button type="submit"
-                                    class="school-button school-button-primary">@A["SaveResult"]</button>
-                        </form>
+                                                        <button type="submit"
+                                                                class="school-button school-button-primary">@A["SaveResult"]</button>
+                                                    </form>
+                        }
                     }
                     else
                     {

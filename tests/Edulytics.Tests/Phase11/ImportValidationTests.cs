@@ -162,37 +162,25 @@ public sealed class ImportValidationTests
     }
 
     [Fact]
-    public void Teacher_CanImportAssessmentResultsOnly()
+    public void SubjectSupervisor_OwnsAllSupportedImportTypes()
     {
-        Assert.True(
-            DataImportService.CanImportType(
-                RoleNames.Teacher,
-                ImportType.AssessmentResults));
+        foreach (var type in Enum.GetValues<ImportType>())
+        {
+            Assert.True(
+                DataImportService.CanImportType(
+                    RoleNames.SubjectSupervisor,
+                    type));
 
-        Assert.False(
-            DataImportService.CanImportType(
-                RoleNames.Teacher,
-                ImportType.Students));
+            Assert.False(
+                DataImportService.CanImportType(
+                    RoleNames.SchoolAdmin,
+                    type));
 
-        Assert.False(
-            DataImportService.CanImportType(
-                RoleNames.Teacher,
-                ImportType.Teachers));
-
-        Assert.False(
-            DataImportService.CanImportType(
-                RoleNames.Teacher,
-                ImportType.Classes));
-
-        Assert.False(
-            DataImportService.CanImportType(
-                RoleNames.Teacher,
-                ImportType.Subjects));
-
-        Assert.False(
-            DataImportService.CanImportType(
-                RoleNames.Teacher,
-                ImportType.CurriculumMappings));
+            Assert.False(
+                DataImportService.CanImportType(
+                    RoleNames.Teacher,
+                    type));
+        }
     }
 
     private static ImportFileRow Row(
