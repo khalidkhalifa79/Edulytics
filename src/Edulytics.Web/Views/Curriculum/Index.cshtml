@@ -209,16 +209,6 @@
                           rows="4"
                           readonly></textarea>
 
-                <label for="officialWeight">@C["Weight"]</label>
-                <input id="officialWeight"
-                       name="weight"
-                       type="number"
-                       min="0.001"
-                       max="100"
-                       step="0.001"
-                       required />
-                <p class="curriculum-help">@C["WeightHelp"]</p>
-
                 <label for="officialOutcomeOrder">@C["Order"]</label>
                 <input id="officialOutcomeOrder"
                        name="order"
@@ -281,7 +271,6 @@
                                             <th>@C["Order"]</th>
                                             <th>@C["OutcomeCode"]</th>
                                             <th>@C["Description"]</th>
-                                            <th>@C["Weight"]</th>
                                             <th><span class="visually-hidden">@C["Edit"]</span></th>
                                         </tr>
                                     </thead>
@@ -298,7 +287,6 @@
                                                 }
                                             </td>
                                             <td data-label="@C["Description"]">@outcome.Description</td>
-                                            <td data-label="@C["Weight"]">@outcome.Weight.ToString("0.###")%</td>
                                             <td>
                                                 @if (!outcome.IsOfficial)
                                                 {

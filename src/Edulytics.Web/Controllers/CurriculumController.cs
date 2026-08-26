@@ -144,7 +144,6 @@ public sealed class CurriculumController : Controller
     public async Task<IActionResult> CreateOfficialOutcome(
         Guid topicId,
         string selectionKey,
-        decimal weight,
         int order,
         CancellationToken cancellationToken)
     {
@@ -162,8 +161,8 @@ public sealed class CurriculumController : Controller
                     topicId,
                     selection.Value.ContentNodeId,
                     selection.Value.LessonNodeId,
-                    weight,
-                    order),
+                    order
+),
                 cancellationToken);
 
         SetFeedback(result, "SuccessOfficialOutcomeAdded");
@@ -196,7 +195,6 @@ public sealed class CurriculumController : Controller
         Guid id,
         string code,
         string description,
-        decimal weight,
         int order,
         CancellationToken cancellationToken)
     {
@@ -209,7 +207,6 @@ public sealed class CurriculumController : Controller
                 id,
                 code,
                 description,
-                weight,
                 order),
             cancellationToken);
 

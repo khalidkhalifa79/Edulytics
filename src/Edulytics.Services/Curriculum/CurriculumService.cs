@@ -644,10 +644,7 @@ public sealed class CurriculumService : ICurriculumService
         if (!scope.Succeeded)
             return Fail(scope.Error!.Value);
 
-        if (request.Weight <= 0 || request.Weight > 100)
-            return Fail("Weight", CurriculumErrorCode.InvalidWeight);
-
-        if (request.Order <= 0)
+if (request.Order <= 0)
             return Fail("Order", CurriculumErrorCode.InvalidOrder);
 
         var schoolId = scope.School!.Id;
@@ -732,7 +729,8 @@ public sealed class CurriculumService : ICurriculumService
             OfficialContentNodeId = source.ContentNodeId,
             Code = source.Code,
             Description = source.Description,
-            Weight = request.Weight,
+            // Legacy schema compatibility only; official outcomes are unweighted.
+            Weight = 1m,
             Order = request.Order
         };
 
@@ -805,11 +803,7 @@ public sealed class CurriculumService : ICurriculumService
             return Fail(
                 "Description",
                 CurriculumErrorCode.InvalidName);
-
-        if (request.Weight <= 0 || request.Weight > 100)
-            return Fail("Weight", CurriculumErrorCode.InvalidWeight);
-
-        if (request.Order <= 0)
+if (request.Order <= 0)
             return Fail("Order", CurriculumErrorCode.InvalidOrder);
 
         if (await _curriculum.OutcomeCodeExistsAsync(
@@ -853,8 +847,7 @@ public sealed class CurriculumService : ICurriculumService
 
         outcome.Code = code;
         outcome.Description = description;
-        outcome.Weight = request.Weight;
-        outcome.Order = request.Order;
+outcome.Order = request.Order;
 
         await QueueAuditAsync(
             scope,
