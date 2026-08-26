@@ -147,6 +147,73 @@ public sealed class AssessmentRepository : IAssessmentRepository
             message,
             cancellationToken);
 
+    public async Task RemoveAssessmentAsync(
+        Guid schoolId,
+        Assessment assessment,
+        CancellationToken cancellationToken = default)
+    {
+        var questions = await _db.AssessmentQuestions
+            .Where(x =>
+                x.SchoolId == schoolId &&
+                x.AssessmentId == assessment.Id)
+            .ToListAsync(cancellationToken);
+
+        var questionIds = questions
+            .Select(x => x.Id)
+            .ToArray();
+
+        var mappings = await _db.QuestionLearningOutcomes
+            .Where(x =>
+                x.SchoolId == schoolId &&
+                questionIds.Contains(x.AssessmentQuestionId))
+            .ToListAsync(cancellationToken);
+
+        var results = await _db.AssessmentResults
+            .Where(x =>
+                x.SchoolId == schoolId &&
+                x.AssessmentId == assessment.Id)
+            .ToListAsync(cancellationToken);
+
+        var resultIds = results
+            .Select(x => x.Id)
+            .ToArray();
+
+        var answers = await _db.StudentAnswers
+            .Where(x =>
+                x.SchoolId == schoolId &&
+                (questionIds.Contains(x.AssessmentQuestionId) ||
+                 resultIds.Contains(x.AssessmentResultId)))
+            .ToListAsync(cancellationToken);
+
+        _db.StudentAnswers.RemoveRange(answers);
+        _db.QuestionLearningOutcomes.RemoveRange(mappings);
+        _db.AssessmentResults.RemoveRange(results);
+        _db.AssessmentQuestions.RemoveRange(questions);
+        _db.Assessments.Remove(assessment);
+    }
+
+    public async Task RemoveQuestionAsync(
+        Guid schoolId,
+        AssessmentQuestion question,
+        CancellationToken cancellationToken = default)
+    {
+        var mappings = await _db.QuestionLearningOutcomes
+            .Where(x =>
+                x.SchoolId == schoolId &&
+                x.AssessmentQuestionId == question.Id)
+            .ToListAsync(cancellationToken);
+
+        var answers = await _db.StudentAnswers
+            .Where(x =>
+                x.SchoolId == schoolId &&
+                x.AssessmentQuestionId == question.Id)
+            .ToListAsync(cancellationToken);
+
+        _db.StudentAnswers.RemoveRange(answers);
+        _db.QuestionLearningOutcomes.RemoveRange(mappings);
+        _db.AssessmentQuestions.Remove(question);
+    }
+
     public void RemoveMapping(QuestionLearningOutcome mapping) =>
         _db.QuestionLearningOutcomes.Remove(mapping);
 

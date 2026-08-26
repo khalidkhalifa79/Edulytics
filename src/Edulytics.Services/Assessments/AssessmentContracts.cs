@@ -129,6 +129,7 @@ public sealed record CreateAssessmentQuestionRequest(
     string Prompt,
     decimal MaxScore,
     int Order,
+    IReadOnlyList<Guid> OutcomeIds,
     byte[] AssessmentRowVersion);
 
 public sealed record UpdateAssessmentQuestionRequest(
@@ -136,6 +137,15 @@ public sealed record UpdateAssessmentQuestionRequest(
     string Prompt,
     decimal MaxScore,
     int Order,
+    IReadOnlyList<Guid> OutcomeIds,
+    byte[] AssessmentRowVersion);
+
+public sealed record DeleteAssessmentRequest(
+    Guid AssessmentId,
+    byte[] RowVersion);
+
+public sealed record DeleteAssessmentQuestionRequest(
+    Guid QuestionId,
     byte[] AssessmentRowVersion);
 
 public sealed record MapQuestionOutcomeRequest(Guid QuestionId, Guid OutcomeId, byte[] AssessmentRowVersion);

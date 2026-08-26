@@ -260,6 +260,60 @@ public sealed partial class AssessmentService
         return QuestionContext.Ok(scope, assessment, question);
     }
 
+
+    private static Guid[] NormalizeOutcomeIds(
+        IReadOnlyList<Guid>? outcomeIds) =>
+        (outcomeIds ?? [])
+            .Where(x => x != Guid.Empty)
+            .Distinct()
+            .OrderBy(x => x)
+            .ToArray();
+
+    private static AssessmentErrorCode? ValidateOutcomeSelection(
+        AssessmentSnapshot snapshot,
+        Assessment assessment,
+        Guid gradeLevelId,
+        IReadOnlyCollection<Guid> outcomeIds)
+    {
+        if (outcomeIds.Count == 0)
+            return AssessmentErrorCode.Required;
+
+        var eligibleFrameworkVersionIds =
+            ResolveEligibleFrameworkVersionIds(
+                snapshot,
+                assessment.AcademicYearId,
+                gradeLevelId,
+                assessment.SubjectId);
+
+        foreach (var outcomeId in outcomeIds)
+        {
+            var outcome = snapshot.LearningOutcomes
+                .FirstOrDefault(x => x.Id == outcomeId);
+
+            if (outcome is null)
+                return AssessmentErrorCode.OutcomeNotFound;
+
+            var topic = snapshot.CurriculumTopics
+                .FirstOrDefault(x => x.Id == outcome.TopicId);
+
+            if (topic is null)
+                return AssessmentErrorCode.OutcomeNotFound;
+
+            if (outcome.SubjectId != assessment.SubjectId ||
+                outcome.GradeLevelId != gradeLevelId ||
+                topic.SubjectId != assessment.SubjectId ||
+                topic.GradeLevelId != gradeLevelId ||
+                topic.FrameworkVersionId != outcome.FrameworkVersionId ||
+                !eligibleFrameworkVersionIds.Contains(
+                    outcome.FrameworkVersionId))
+            {
+                return AssessmentErrorCode.OutcomeDoesNotMatchAssessment;
+            }
+        }
+
+        return null;
+    }
+
     private static bool ValidMax(decimal value) => value > 0m && value <= 10000m;
     private static decimal Round(decimal value) =>
         decimal.Round(value, 2, MidpointRounding.AwayFromZero);

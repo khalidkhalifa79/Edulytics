@@ -58,6 +58,47 @@ public sealed class AssessmentUiContractTests
         Assert.Contains("asp-controller=\"Assessments\"", dashboard);
     }
 
+
+    [Fact]
+    public void DraftAssessmentUi_IntegratesOutcomesAndExposesDeleteActions()
+    {
+        var root = FindRoot();
+
+        var details = File.ReadAllText(
+            Path.Combine(
+                root,
+                "src/Edulytics.Web/Views/Assessments/Details.cshtml"));
+
+        var editQuestion = File.ReadAllText(
+            Path.Combine(
+                root,
+                "src/Edulytics.Web/Views/Assessments/EditQuestion.cshtml"));
+
+        Assert.Contains(
+            "asp-action=\"DeleteAssessment\"",
+            details);
+
+        Assert.Contains(
+            "asp-action=\"DeleteQuestion\"",
+            details);
+
+        Assert.Contains(
+            "name=\"outcomeIds\"",
+            details);
+
+        Assert.Contains(
+            "name=\"outcomeIds\"",
+            editQuestion);
+
+        Assert.DoesNotContain(
+            "asp-action=\"MapOutcome\"",
+            details);
+
+        Assert.DoesNotContain(
+            "asp-action=\"UnmapOutcome\"",
+            details);
+    }
+
     [Fact]
     public void ResponsiveCssContractExists()
     {
