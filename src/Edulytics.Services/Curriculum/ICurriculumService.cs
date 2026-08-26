@@ -36,6 +36,11 @@ public interface ICurriculumService
         CreateLearningOutcomeRequest request,
         CancellationToken cancellationToken = default);
 
+    Task<CurriculumCommandResult> CreateOfficialOutcomeAsync(
+        Guid actorUserId,
+        CreateOfficialLearningOutcomeRequest request,
+        CancellationToken cancellationToken = default);
+
     Task<CurriculumCommandResult> UpdateOutcomeAsync(
         Guid actorUserId,
         UpdateLearningOutcomeRequest request,

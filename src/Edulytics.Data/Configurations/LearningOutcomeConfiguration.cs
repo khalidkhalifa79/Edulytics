@@ -14,7 +14,7 @@ public sealed class LearningOutcomeConfiguration
         builder.HasAlternateKey(x => new { x.SchoolId, x.Id });
 
         builder.Property(x => x.Code)
-            .HasMaxLength(50)
+            .HasMaxLength(300)
             .IsRequired();
 
         builder.Property(x => x.Description)
@@ -35,6 +35,13 @@ public sealed class LearningOutcomeConfiguration
             x.SubjectId,
             x.GradeLevelId,
             x.Code
+        }).IsUnique();
+
+        builder.HasIndex(x => new
+        {
+            x.SchoolId,
+            x.TopicId,
+            x.OfficialContentNodeId
         }).IsUnique();
 
         builder.HasIndex(x => new
@@ -67,6 +74,11 @@ public sealed class LearningOutcomeConfiguration
                 x.GradeLevelId,
                 x.Id
             })
+            .OnDelete(DeleteBehavior.Restrict);
+
+        builder.HasOne<CurriculumPackContentNode>()
+            .WithMany()
+            .HasForeignKey(x => x.OfficialContentNodeId)
             .OnDelete(DeleteBehavior.Restrict);
     }
 }

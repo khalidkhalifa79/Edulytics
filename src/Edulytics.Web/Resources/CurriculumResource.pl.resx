@@ -58,10 +58,27 @@
   <data name="CurriculumFramework" xml:space="preserve"><value>Pakiet programu</value></data>
   <data name="SelectFramework" xml:space="preserve"><value>Wybierz pakiet programu</value></data>
   <data name="UseFramework" xml:space="preserve"><value>Użyj programu</value></data>
-  <data name="FrameworkHelp" xml:space="preserve"><value>Dostępne pakiety matematyki to cztery zweryfikowane pakiety Edulityks. Oficjalna zawartość pakietu pozostaje niezmienna; tematy i efekty uczenia się tworzone poniżej są dodatkami szkoły w ramach wybranego pakietu.</value></data>
+  <data name="FrameworkHelp" xml:space="preserve"><value>Dostępne pakiety matematyki to cztery zweryfikowane pakiety Edulityks. Oficjalna zawartość pozostaje niezmienna i jest wybierana poniżej; dodatki szkoły są przechowywane oddzielnie.</value></data>
   <data name="TopicRequiresFramework" xml:space="preserve"><value>Najpierw wybierz i zapisz pakiet programu dla tego przedmiotu i poziomu klasy.</value></data>
   <data name="SuccessFrameworkSelected" xml:space="preserve"><value>Wybrano program bazowy dla tego przedmiotu i poziomu klasy.</value></data>
   <data name="ErrorFrameworkNotFound" xml:space="preserve"><value>Wybrany zweryfikowany pakiet programu jest niedostępny.</value></data>
   <data name="ErrorCurriculumNotSelected" xml:space="preserve"><value>Przed utworzeniem tematu wybierz pakiet programu dla tego przedmiotu i poziomu klasy.</value></data>
   <data name="ErrorCurriculumFrameworkInUse" xml:space="preserve"><value>Ten przedmiot i poziom klasy zawierają już tematy w innym pakiecie programu, dlatego programu nie można tutaj zmienić.</value></data>
+  <data name="ActiveCurricula" xml:space="preserve"><value>Aktywne wybory programu</value></data>
+  <data name="CreateSchoolTopic" xml:space="preserve"><value>Dodaj temat szkolny</value></data>
+  <data name="SchoolTopic" xml:space="preserve"><value>Temat szkolny</value></data>
+  <data name="AddOfficialOutcome" xml:space="preserve"><value>Dodaj oficjalny efekt programu</value></data>
+  <data name="OfficialOutcomeHelp" xml:space="preserve"><value>Wybierz oficjalną pozycję z aktywnego programu. Oficjalny kod i opis zostaną uzupełnione automatycznie i nie można ich edytować.</value></data>
+  <data name="OfficialCurriculumItem" xml:space="preserve"><value>Oficjalna lekcja / standard / efekt uczenia się</value></data>
+  <data name="SelectOfficialItem" xml:space="preserve"><value>Wybierz oficjalną pozycję programu</value></data>
+  <data name="NoOfficialItemsForTopic" xml:space="preserve"><value>Brak zweryfikowanych oficjalnych efektów dla tego programu i klasy.</value></data>
+  <data name="OfficialOutcomeCode" xml:space="preserve"><value>Oficjalny kod efektu (automatycznie)</value></data>
+  <data name="OfficialDescription" xml:space="preserve"><value>Oficjalny opis (automatycznie)</value></data>
+  <data name="AddCustomOutcome" xml:space="preserve"><value>Dodaj własny efekt szkoły</value></data>
+  <data name="CustomOutcomeHelp" xml:space="preserve"><value>Użyj tej opcji tylko dla lokalnego efektu utworzonego przez szkołę, a nie dla oficjalnego efektu programu.</value></data>
+  <data name="SchoolOutcomeCode" xml:space="preserve"><value>Kod efektu szkoły</value></data>
+  <data name="Official" xml:space="preserve"><value>Oficjalny</value></data>
+  <data name="SuccessOfficialOutcomeAdded" xml:space="preserve"><value>Dodano oficjalny efekt programu do tematu szkolnego.</value></data>
+  <data name="ErrorOfficialOutcomeNotFound" xml:space="preserve"><value>Wybrana pozycja nie jest oficjalnym efektem dla tego programu i klasy.</value></data>
+  <data name="ErrorOfficialOutcomeReadOnly" xml:space="preserve"><value>Oficjalne kody i opisy programu są tylko do odczytu.</value></data>
 </root>

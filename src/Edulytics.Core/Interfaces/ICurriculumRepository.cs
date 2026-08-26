@@ -47,6 +47,28 @@ public interface ICurriculumRepository
         Guid subjectId,
         CancellationToken cancellationToken = default);
 
+    Task<IReadOnlyList<AdoptedCurriculumContext>>
+        GetAdoptedCurriculumContextsAsync(
+            Guid schoolId,
+            CancellationToken cancellationToken = default) =>
+        Task.FromResult<IReadOnlyList<AdoptedCurriculumContext>>([]);
+
+    Task<IReadOnlyList<OfficialCurriculumOutcomeSource>>
+        GetOfficialOutcomeSourcesAsync(
+            Guid frameworkVersionId,
+            int logicalLevel,
+            CancellationToken cancellationToken = default) =>
+        Task.FromResult<IReadOnlyList<OfficialCurriculumOutcomeSource>>([]);
+
+    Task<OfficialCurriculumOutcomeSource?>
+        GetOfficialOutcomeSourceAsync(
+            Guid frameworkVersionId,
+            int logicalLevel,
+            Guid contentNodeId,
+            Guid? lessonNodeId,
+            CancellationToken cancellationToken = default) =>
+        Task.FromResult<OfficialCurriculumOutcomeSource?>(null);
+
     Task<Guid?> GetPlatformDefaultFrameworkVersionIdAsync(
         CancellationToken cancellationToken = default);
 

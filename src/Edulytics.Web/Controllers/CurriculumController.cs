@@ -42,7 +42,8 @@ public sealed class CurriculumController : Controller
                 result.Value.Subjects,
                 result.Value.Topics)
             {
-                Frameworks = result.Value.Frameworks
+                Frameworks = result.Value.Frameworks,
+                Adoptions = result.Value.Adoptions
             });
     }
 
@@ -165,6 +166,37 @@ public sealed class CurriculumController : Controller
         return RedirectToAction(nameof(Index));
     }
 
+    [HttpPost("outcomes/official")]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> CreateOfficialOutcome(
+        Guid topicId,
+        string selectionKey,
+        decimal weight,
+        int order,
+        CancellationToken cancellationToken)
+    {
+        if (!TryActor(out var actorId))
+            return Forbid();
+
+        var selection = ParseOfficialSelection(selectionKey);
+        var result = selection is null
+            ? CurriculumCommandResult.Failure(
+                "ContentNodeId",
+                CurriculumErrorCode.OfficialOutcomeNotFound)
+            : await _curriculum.CreateOfficialOutcomeAsync(
+                actorId,
+                new CreateOfficialLearningOutcomeRequest(
+                    topicId,
+                    selection.Value.ContentNodeId,
+                    selection.Value.LessonNodeId,
+                    weight,
+                    order),
+                cancellationToken);
+
+        SetFeedback(result, "SuccessOfficialOutcomeAdded");
+        return RedirectToAction(nameof(Index));
+    }
+
     [HttpGet("outcomes/{id:guid}/edit")]
     public async Task<IActionResult> EditOutcome(
         Guid id,
@@ -260,6 +292,26 @@ public sealed class CurriculumController : Controller
             CurriculumErrorCode.FrameworkNotFound => "ErrorFrameworkNotFound",
             CurriculumErrorCode.CurriculumNotSelected => "ErrorCurriculumNotSelected",
             CurriculumErrorCode.CurriculumFrameworkInUse => "ErrorCurriculumFrameworkInUse",
+            CurriculumErrorCode.OfficialOutcomeNotFound => "ErrorOfficialOutcomeNotFound",
+            CurriculumErrorCode.OfficialOutcomeReadOnly => "ErrorOfficialOutcomeReadOnly",
             _ => "ErrorPersistence"
         };
+
+    private static (Guid ContentNodeId, Guid? LessonNodeId)?
+        ParseOfficialSelection(string? value)
+    {
+        var parts = (value ?? string.Empty).Split('|');
+        if (parts.Length is < 1 or > 2 ||
+            !Guid.TryParse(parts[0], out var contentNodeId))
+        {
+            return null;
+        }
+
+        if (parts.Length == 1 || string.IsNullOrWhiteSpace(parts[1]))
+            return (contentNodeId, null);
+
+        return Guid.TryParse(parts[1], out var lessonNodeId)
+            ? (contentNodeId, lessonNodeId)
+            : null;
+    }
 }

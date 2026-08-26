@@ -1623,8 +1623,8 @@ namespace Edulytics.Data.Migrations
 
                     b.Property<string>("Code")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)");
+                        .HasMaxLength(300)
+                        .HasColumnType("character varying(300)");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -1639,6 +1639,9 @@ namespace Edulytics.Data.Migrations
 
                     b.Property<int>("Order")
                         .HasColumnType("integer");
+
+                    b.Property<Guid?>("OfficialContentNodeId")
+                        .HasColumnType("uuid");
 
                     b.Property<Guid>("SchoolId")
                         .HasColumnType("uuid");
@@ -1656,6 +1659,11 @@ namespace Edulytics.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("SchoolId", "TopicId", "Order")
+                        .IsUnique();
+
+                    b.HasIndex("OfficialContentNodeId");
+
+                    b.HasIndex("SchoolId", "TopicId", "OfficialContentNodeId")
                         .IsUnique();
 
                     b.HasIndex("SchoolId", "FrameworkVersionId", "SubjectId", "GradeLevelId", "Code")
@@ -3412,6 +3420,11 @@ namespace Edulytics.Data.Migrations
 
             modelBuilder.Entity("Edulytics.Core.Entities.LearningOutcome", b =>
                 {
+                    b.HasOne("Edulytics.Core.Entities.CurriculumPackContentNode", null)
+                        .WithMany()
+                        .HasForeignKey("OfficialContentNodeId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
                     b.HasOne("Edulytics.Core.Entities.School", null)
                         .WithMany()
                         .HasForeignKey("SchoolId")

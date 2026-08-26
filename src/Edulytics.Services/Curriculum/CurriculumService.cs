@@ -49,6 +49,40 @@ public sealed class CurriculumService : ICurriculumService
             scope.School!.Id,
             cancellationToken);
 
+        var adoptedContexts =
+            await _curriculum.GetAdoptedCurriculumContextsAsync(
+                scope.School.Id,
+                cancellationToken);
+        var adoptedByScope = adoptedContexts.ToDictionary(
+            x => (x.GradeLevelId, x.SubjectId));
+        var gradesById = snapshot.GradeLevels.ToDictionary(x => x.Id);
+        var officialByScope = new Dictionary<
+            (Guid FrameworkVersionId, int LogicalLevel),
+            IReadOnlyList<OfficialCurriculumOutcomeSource>>();
+
+        foreach (var adoption in adoptedContexts)
+        {
+            if (!gradesById.TryGetValue(
+                    adoption.GradeLevelId,
+                    out var grade))
+            {
+                continue;
+            }
+
+            var logicalLevel = ResolveLogicalLevel(
+                adoption.FrameworkCode,
+                grade);
+            var key = (adoption.FrameworkVersionId, logicalLevel);
+            if (!officialByScope.ContainsKey(key))
+            {
+                officialByScope[key] =
+                    await _curriculum.GetOfficialOutcomeSourcesAsync(
+                        adoption.FrameworkVersionId,
+                        logicalLevel,
+                        cancellationToken);
+            }
+        }
+
         var outcomesByTopic = snapshot.Outcomes
             .GroupBy(x => x.TopicId)
             .ToDictionary(
@@ -62,15 +96,45 @@ public sealed class CurriculumService : ICurriculumService
             .OrderBy(x => x.SubjectId)
             .ThenBy(x => x.GradeLevelId)
             .ThenBy(x => x.Order)
-            .Select(x => new CurriculumTopicItem(
-                x.Id,
-                x.SubjectId,
-                x.GradeLevelId,
-                x.Name,
-                x.Order,
-                outcomesByTopic.GetValueOrDefault(
+            .Select(x =>
+            {
+                adoptedByScope.TryGetValue(
+                    (x.GradeLevelId, x.SubjectId),
+                    out var adoption);
+                var official = Array.Empty<OfficialCurriculumOutcomeOption>();
+
+                if (adoption is not null &&
+                    gradesById.TryGetValue(x.GradeLevelId, out var grade))
+                {
+                    var logicalLevel = ResolveLogicalLevel(
+                        adoption.FrameworkCode,
+                        grade);
+                    var sources = officialByScope.TryGetValue(
+                        (adoption.FrameworkVersionId, logicalLevel),
+                        out var matchedSources)
+                        ? matchedSources
+                        : Array.Empty<OfficialCurriculumOutcomeSource>();
+                    official = sources
+                        .Select(MapOfficialOutcome)
+                        .ToArray();
+                }
+
+                return new CurriculumTopicItem(
                     x.Id,
-                    Array.Empty<LearningOutcomeItem>())))
+                    x.SubjectId,
+                    x.GradeLevelId,
+                    x.Name,
+                    x.Order,
+                    outcomesByTopic.GetValueOrDefault(
+                        x.Id,
+                        Array.Empty<LearningOutcomeItem>()))
+                {
+                    FrameworkCode = adoption?.FrameworkCode ?? string.Empty,
+                    FrameworkDisplayName =
+                        adoption?.FrameworkName ?? string.Empty,
+                    OfficialOutcomes = official
+                };
+            })
             .ToArray();
 
         return CurriculumQueryResult<CurriculumDashboard>.Success(
@@ -97,6 +161,13 @@ public sealed class CurriculumService : ICurriculumService
                         x.Code,
                         x.DisplayName))
                     .OrderBy(x => x.DisplayName)
+                    .ToArray(),
+                Adoptions = adoptedContexts
+                    .Select(x => new CurriculumAdoptionItem(
+                        x.GradeLevelId,
+                        x.SubjectId,
+                        x.FrameworkCode,
+                        x.FrameworkName))
                     .ToArray()
             });
     }
@@ -128,6 +199,26 @@ public sealed class CurriculumService : ICurriculumService
             scope.School.Id,
             cancellationToken);
 
+        var adoption =
+            (await _curriculum.GetAdoptedCurriculumContextsAsync(
+                scope.School.Id,
+                cancellationToken))
+            .SingleOrDefault(x =>
+                x.GradeLevelId == topic.GradeLevelId &&
+                x.SubjectId == topic.SubjectId &&
+                x.FrameworkVersionId == topic.FrameworkVersionId);
+        var grade = snapshot.GradeLevels.Single(
+            x => x.Id == topic.GradeLevelId);
+        IReadOnlyList<OfficialCurriculumOutcomeOption> official =
+            adoption is null
+            ? Array.Empty<OfficialCurriculumOutcomeOption>()
+            : (await _curriculum.GetOfficialOutcomeSourcesAsync(
+                    topic.FrameworkVersionId,
+                    ResolveLogicalLevel(adoption.FrameworkCode, grade),
+                    cancellationToken))
+                .Select(MapOfficialOutcome)
+                .ToArray();
+
         return CurriculumQueryResult<CurriculumTopicItem>.Success(
             new CurriculumTopicItem(
                 topic.Id,
@@ -139,7 +230,13 @@ public sealed class CurriculumService : ICurriculumService
                     .Where(x => x.TopicId == topic.Id)
                     .OrderBy(x => x.Order)
                     .Select(MapOutcome)
-                    .ToArray()));
+                    .ToArray())
+            {
+                FrameworkCode = adoption?.FrameworkCode ?? string.Empty,
+                FrameworkDisplayName =
+                    adoption?.FrameworkName ?? string.Empty,
+                OfficialOutcomes = official
+            });
     }
 
     public async Task<CurriculumQueryResult<LearningOutcomeItem>>
@@ -653,6 +750,140 @@ public sealed class CurriculumService : ICurriculumService
         return await PersistAsync(cancellationToken);
     }
 
+    public async Task<CurriculumCommandResult> CreateOfficialOutcomeAsync(
+        Guid actorUserId,
+        CreateOfficialLearningOutcomeRequest request,
+        CancellationToken cancellationToken = default)
+    {
+        var scope = await ResolveScopeAsync(
+            actorUserId,
+            cancellationToken);
+
+        if (!scope.Succeeded)
+            return Fail(scope.Error!.Value);
+
+        if (request.Weight <= 0 || request.Weight > 100)
+            return Fail("Weight", CurriculumErrorCode.InvalidWeight);
+
+        if (request.Order <= 0)
+            return Fail("Order", CurriculumErrorCode.InvalidOrder);
+
+        var schoolId = scope.School!.Id;
+        var topic = await _curriculum.GetTopicAsync(
+            schoolId,
+            request.TopicId,
+            cancellationToken);
+
+        if (topic is null)
+        {
+            return Fail(
+                "TopicId",
+                CurriculumErrorCode.TopicNotFound);
+        }
+
+        var grade = await _curriculum.GetGradeLevelAsync(
+            schoolId,
+            topic.GradeLevelId,
+            cancellationToken);
+        var adoption =
+            (await _curriculum.GetAdoptedCurriculumContextsAsync(
+                schoolId,
+                cancellationToken))
+            .SingleOrDefault(x =>
+                x.GradeLevelId == topic.GradeLevelId &&
+                x.SubjectId == topic.SubjectId &&
+                x.FrameworkVersionId == topic.FrameworkVersionId);
+
+        if (grade is null || adoption is null)
+        {
+            return Fail(
+                "ContentNodeId",
+                CurriculumErrorCode.OfficialOutcomeNotFound);
+        }
+
+        var source = await _curriculum.GetOfficialOutcomeSourceAsync(
+            topic.FrameworkVersionId,
+            ResolveLogicalLevel(adoption.FrameworkCode, grade),
+            request.ContentNodeId,
+            request.LessonNodeId,
+            cancellationToken);
+
+        if (source is null)
+        {
+            return Fail(
+                "ContentNodeId",
+                CurriculumErrorCode.OfficialOutcomeNotFound);
+        }
+
+        if (await _curriculum.OutcomeCodeExistsAsync(
+                schoolId,
+                topic.FrameworkVersionId,
+                topic.SubjectId,
+                topic.GradeLevelId,
+                source.Code,
+                cancellationToken: cancellationToken))
+        {
+            return Fail(
+                "ContentNodeId",
+                CurriculumErrorCode.DuplicateOutcomeCode);
+        }
+
+        if (await _curriculum.OutcomeOrderExistsAsync(
+                schoolId,
+                request.TopicId,
+                request.Order,
+                cancellationToken: cancellationToken))
+        {
+            return Fail(
+                "Order",
+                CurriculumErrorCode.DuplicateOutcomeOrder);
+        }
+
+        var outcome = new LearningOutcome
+        {
+            Id = Guid.NewGuid(),
+            SchoolId = schoolId,
+            FrameworkVersionId = topic.FrameworkVersionId,
+            SubjectId = topic.SubjectId,
+            GradeLevelId = topic.GradeLevelId,
+            TopicId = topic.Id,
+            OfficialContentNodeId = source.ContentNodeId,
+            Code = source.Code,
+            Description = source.Description,
+            Weight = request.Weight,
+            Order = request.Order
+        };
+
+        await _curriculum.AddOutcomeAsync(
+            outcome,
+            cancellationToken);
+
+        await QueueAuditAsync(
+            scope,
+            "LearningOutcome.OfficialSelected",
+            "LearningOutcome",
+            outcome.Id,
+            oldValues: null,
+            newValues:
+                new Dictionary<string, object?>
+                {
+                    ["frameworkVersionId"] =
+                        outcome.FrameworkVersionId,
+                    ["topicId"] = outcome.TopicId,
+                    ["officialContentNodeId"] =
+                        outcome.OfficialContentNodeId,
+                    ["officialLessonNodeId"] =
+                        request.LessonNodeId,
+                    ["code"] = outcome.Code,
+                    ["weight"] = outcome.Weight,
+                    ["order"] = outcome.Order
+                },
+            "Official curriculum outcome selected.",
+            cancellationToken);
+
+        return await PersistAsync(cancellationToken);
+    }
+
     public async Task<CurriculumCommandResult> UpdateOutcomeAsync(
         Guid actorUserId,
         UpdateLearningOutcomeRequest request,
@@ -673,6 +904,12 @@ public sealed class CurriculumService : ICurriculumService
 
         if (outcome is null)
             return Fail(CurriculumErrorCode.OutcomeNotFound);
+
+        if (outcome.OfficialContentNodeId.HasValue)
+        {
+            return Fail(
+                CurriculumErrorCode.OfficialOutcomeReadOnly);
+        }
 
         var code = NormalizeCode(request.Code);
         if (!ValidCode(code))
@@ -878,7 +1115,72 @@ public sealed class CurriculumService : ICurriculumService
             x.Code,
             x.Description,
             x.Weight,
-            x.Order);
+            x.Order)
+        {
+            IsOfficial = x.OfficialContentNodeId.HasValue
+        };
+
+    private static OfficialCurriculumOutcomeOption MapOfficialOutcome(
+        OfficialCurriculumOutcomeSource x) =>
+        new(
+            x.ContentNodeId,
+            x.LessonNodeId,
+            x.Code,
+            x.Description,
+            x.SelectionLabel,
+            x.GroupLabel,
+            x.SortOrder);
+
+    private static int ResolveLogicalLevel(
+        string frameworkCode,
+        CurriculumGradeItem grade) =>
+        ResolveLogicalLevel(
+            frameworkCode,
+            new GradeLevel
+            {
+                Id = grade.Id,
+                Name = grade.Name,
+                Order = grade.Order
+            });
+
+    private static int ResolveLogicalLevel(
+        string frameworkCode,
+        GradeLevel grade)
+    {
+        var pack = MathematicsCurriculumPackRegistry.All
+            .Single(x => string.Equals(
+                x.Code,
+                frameworkCode,
+                StringComparison.Ordinal));
+        var exact = pack.Levels.FirstOrDefault(x =>
+            string.Equals(
+                x.NativeLabel,
+                grade.Name,
+                StringComparison.OrdinalIgnoreCase));
+
+        if (exact is not null)
+            return exact.LogicalLevel;
+
+        var gradeNumberMatch = Regex.Match(grade.Name, "[0-9]+");
+        if (gradeNumberMatch.Success &&
+            int.TryParse(gradeNumberMatch.Value, out var gradeNumber))
+        {
+            var native = pack.Levels.FirstOrDefault(x =>
+                string.Equals(
+                    x.NativeLabel,
+                    $"Grade {gradeNumber}",
+                    StringComparison.OrdinalIgnoreCase) ||
+                string.Equals(
+                    x.NativeLabel,
+                    $"Year {gradeNumber}",
+                    StringComparison.OrdinalIgnoreCase));
+
+            if (native is not null)
+                return native.LogicalLevel;
+        }
+
+        return grade.Order;
+    }
 
     private static CurriculumCommandResult Fail(
         CurriculumErrorCode error) =>

@@ -20,7 +20,9 @@ public enum CurriculumErrorCode
     PersistenceError = 16,
     FrameworkNotFound = 17,
     CurriculumNotSelected = 18,
-    CurriculumFrameworkInUse = 19
+    CurriculumFrameworkInUse = 19,
+    OfficialOutcomeNotFound = 20,
+    OfficialOutcomeReadOnly = 21
 }
 
 public sealed record CurriculumCommandResult(
@@ -69,7 +71,25 @@ public sealed record LearningOutcomeItem(
     string Code,
     string Description,
     decimal Weight,
-    int Order);
+    int Order)
+{
+    public bool IsOfficial { get; init; }
+}
+
+public sealed record OfficialCurriculumOutcomeOption(
+    Guid ContentNodeId,
+    Guid? LessonNodeId,
+    string Code,
+    string Description,
+    string SelectionLabel,
+    string? GroupLabel,
+    int SortOrder);
+
+public sealed record CurriculumAdoptionItem(
+    Guid GradeLevelId,
+    Guid SubjectId,
+    string FrameworkCode,
+    string FrameworkDisplayName);
 
 public sealed record CurriculumTopicItem(
     Guid Id,
@@ -77,7 +97,16 @@ public sealed record CurriculumTopicItem(
     Guid GradeLevelId,
     string Name,
     int Order,
-    IReadOnlyList<LearningOutcomeItem> Outcomes);
+    IReadOnlyList<LearningOutcomeItem> Outcomes)
+{
+    public string FrameworkCode { get; init; } = string.Empty;
+    public string FrameworkDisplayName { get; init; } = string.Empty;
+    public IReadOnlyList<OfficialCurriculumOutcomeOption> OfficialOutcomes
+    {
+        get;
+        init;
+    } = [];
+}
 
 public sealed record CurriculumDashboard(
     Guid SchoolId,
@@ -86,6 +115,12 @@ public sealed record CurriculumDashboard(
     IReadOnlyList<CurriculumTopicItem> Topics)
 {
     public IReadOnlyList<CurriculumFrameworkItem> Frameworks
+    {
+        get;
+        init;
+    } = [];
+
+    public IReadOnlyList<CurriculumAdoptionItem> Adoptions
     {
         get;
         init;
@@ -112,6 +147,13 @@ public sealed record CreateLearningOutcomeRequest(
     Guid TopicId,
     string Code,
     string Description,
+    decimal Weight,
+    int Order);
+
+public sealed record CreateOfficialLearningOutcomeRequest(
+    Guid TopicId,
+    Guid ContentNodeId,
+    Guid? LessonNodeId,
     decimal Weight,
     int Order);
 

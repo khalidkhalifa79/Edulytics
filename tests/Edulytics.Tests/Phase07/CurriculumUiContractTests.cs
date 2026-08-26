@@ -61,6 +61,37 @@ public sealed class CurriculumUiContractTests
     }
 
     [Fact]
+    public void OfficialOutcome_IsSelected_AndOfficialFieldsAreReadOnly()
+    {
+        var root = FindRepositoryRoot();
+        var view = File.ReadAllText(Path.Combine(
+            root,
+            "src/Edulytics.Web/Views/Curriculum/Index.cshtml"));
+
+        Assert.Contains(
+            "asp-action=\"CreateOfficialOutcome\"",
+            view);
+        Assert.Contains(
+            "name=\"selectionKey\"",
+            view);
+        Assert.Contains(
+            "data-code=\"@outcome.Code\"",
+            view);
+        Assert.Contains(
+            "id=\"officialCode\" readonly",
+            view);
+        Assert.Contains(
+            "id=\"officialDescription\"",
+            view);
+        Assert.Contains(
+            "@topic.FrameworkDisplayName",
+            view);
+        Assert.Contains(
+            "SchoolOutcomeCode",
+            view);
+    }
+
+    [Fact]
     public void ResponsiveCssContractExists()
     {
         var root = FindRepositoryRoot();
