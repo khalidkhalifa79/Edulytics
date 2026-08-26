@@ -61,6 +61,9 @@ public sealed class SchoolHomeController : Controller
                     context.Role,
                 CanManageUsers =
                     context.CanManageUsers,
+                CanManageAssessments =
+                    context.Role == RoleNames.SchoolAdmin ||
+                    context.Role == RoleNames.Teacher,
                 CanViewReports =
                     reportCatalog.Value is not null,
                 CanViewAnalytics =

@@ -97,6 +97,10 @@
             </a>
         </section>
 
+    }
+
+    @if (Model.CanManageAssessments)
+    {
         <section class="user-dashboard-action">
             <div>
                 <h2>@S["AssessmentTitle"]</h2>
