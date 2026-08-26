@@ -58,10 +58,27 @@
   <data name="CurriculumFramework" xml:space="preserve"><value>Curriculum pack</value></data>
   <data name="SelectFramework" xml:space="preserve"><value>Select curriculum pack</value></data>
   <data name="UseFramework" xml:space="preserve"><value>Use curriculum</value></data>
-  <data name="FrameworkHelp" xml:space="preserve"><value>Available Mathematics packs are the four verified Edulytics packs. Official pack content remains immutable; topics and learning outcomes created below are school-authored additions under the selected pack.</value></data>
+  <data name="FrameworkHelp" xml:space="preserve"><value>Available Mathematics packs are the four verified Edulytics packs. Official content remains immutable and is selected below; school-authored additions stay separate.</value></data>
   <data name="TopicRequiresFramework" xml:space="preserve"><value>First select and save a curriculum pack for this subject and grade.</value></data>
   <data name="SuccessFrameworkSelected" xml:space="preserve"><value>Curriculum framework selected for this subject and grade.</value></data>
   <data name="ErrorFrameworkNotFound" xml:space="preserve"><value>The selected verified curriculum pack is unavailable.</value></data>
   <data name="ErrorCurriculumNotSelected" xml:space="preserve"><value>Select a curriculum pack for this subject and grade before creating a topic.</value></data>
   <data name="ErrorCurriculumFrameworkInUse" xml:space="preserve"><value>This subject and grade already contain topics under another curriculum pack, so the curriculum cannot be changed here.</value></data>
+  <data name="ActiveCurricula" xml:space="preserve"><value>Active curriculum selections</value></data>
+  <data name="CreateSchoolTopic" xml:space="preserve"><value>Add school topic</value></data>
+  <data name="SchoolTopic" xml:space="preserve"><value>School topic</value></data>
+  <data name="AddOfficialOutcome" xml:space="preserve"><value>Add official curriculum outcome</value></data>
+  <data name="OfficialOutcomeHelp" xml:space="preserve"><value>Select an official item from the active curriculum. Its official code and description are filled automatically and cannot be edited.</value></data>
+  <data name="OfficialCurriculumItem" xml:space="preserve"><value>Official lesson / standard / learning outcome</value></data>
+  <data name="SelectOfficialItem" xml:space="preserve"><value>Select official curriculum item</value></data>
+  <data name="NoOfficialItemsForTopic" xml:space="preserve"><value>No verified official outcomes are available for this curriculum and grade.</value></data>
+  <data name="OfficialOutcomeCode" xml:space="preserve"><value>Official outcome code (automatic)</value></data>
+  <data name="OfficialDescription" xml:space="preserve"><value>Official description (automatic)</value></data>
+  <data name="AddCustomOutcome" xml:space="preserve"><value>Add custom school outcome</value></data>
+  <data name="CustomOutcomeHelp" xml:space="preserve"><value>Use this only for a local outcome created by the school, not for an official curriculum outcome.</value></data>
+  <data name="SchoolOutcomeCode" xml:space="preserve"><value>School outcome code</value></data>
+  <data name="Official" xml:space="preserve"><value>Official</value></data>
+  <data name="SuccessOfficialOutcomeAdded" xml:space="preserve"><value>Official curriculum outcome added to the school topic.</value></data>
+  <data name="ErrorOfficialOutcomeNotFound" xml:space="preserve"><value>The selected item is not an official outcome for this curriculum and grade.</value></data>
+  <data name="ErrorOfficialOutcomeReadOnly" xml:space="preserve"><value>Official curriculum codes and descriptions are read-only.</value></data>
 </root>

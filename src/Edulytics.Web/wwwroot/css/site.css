@@ -1647,6 +1647,39 @@ input:focus-visible {
     min-width: 0;
 }
 
+.curriculum-form input[readonly],
+.curriculum-form textarea[readonly] {
+    background: #f5f7fa;
+    color: #344054;
+}
+
+.curriculum-active-frameworks {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e6eaf0;
+}
+
+.curriculum-active-frameworks h3 {
+    margin: 0 0 .5rem;
+}
+
+.curriculum-active-frameworks ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.curriculum-official-badge {
+    display: inline-flex;
+    margin-left: .4rem;
+    padding: .15rem .45rem;
+    border-radius: 999px;
+    background: #e8f3ff;
+    color: #175cd3;
+    font-size: .72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
 .curriculum-list,
 .curriculum-outcomes {
     display: grid;

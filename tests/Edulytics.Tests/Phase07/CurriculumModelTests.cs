@@ -83,6 +83,29 @@ public sealed class CurriculumModelTests
         Assert.Equal(3, property.GetScale());
     }
 
+    [Fact]
+    public void OfficialOutcome_ReferencesImmutablePackContent()
+    {
+        using var db = CreateDb();
+        var type = db.Model.FindEntityType(typeof(LearningOutcome));
+
+        Assert.NotNull(type);
+        Assert.Contains(
+            type!.GetForeignKeys(),
+            fk =>
+                fk.PrincipalEntityType.ClrType ==
+                    typeof(CurriculumPackContentNode) &&
+                fk.Properties.Select(x => x.Name).SequenceEqual(
+                    new[]
+                    {
+                        nameof(LearningOutcome.OfficialContentNodeId)
+                    }));
+        Assert.Equal(
+            300,
+            type.FindProperty(nameof(LearningOutcome.Code))!
+                .GetMaxLength());
+    }
+
     private static EdulyticsDbContext CreateDb()
     {
         var options =

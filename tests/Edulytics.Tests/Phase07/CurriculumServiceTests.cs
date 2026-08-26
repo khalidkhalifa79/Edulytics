@@ -39,6 +39,71 @@ public sealed class CurriculumServiceTests
         Assert.Equal(25m, outcome.Weight);
     }
 
+    [Fact]
+    public async Task OfficialOutcome_IsSelectedFromActivePack_AndCodeIsAutomatic()
+    {
+        using var f = CreateFixture();
+        var topic = await CreateTopic(f);
+        var option = Assert.Single(topic.OfficialOutcomes);
+
+        var result = await f.Service.CreateOfficialOutcomeAsync(
+            f.Admin.Id,
+            new CreateOfficialLearningOutcomeRequest(
+                topic.Id,
+                option.ContentNodeId,
+                option.LessonNodeId,
+                25m,
+                1));
+
+        Assert.True(result.Succeeded);
+
+        var saved = Assert.Single(await f.Db.LearningOutcomes
+            .AsNoTracking()
+            .ToListAsync());
+        Assert.Equal(f.OfficialNode.Id, saved.OfficialContentNodeId);
+        Assert.Equal("PL:VI:ADDITION:001", saved.Code);
+        Assert.Equal("Add whole numbers accurately.", saved.Description);
+
+        var dashboard = await f.Service.GetDashboardAsync(f.Admin.Id);
+        var savedTopic = Assert.Single(dashboard.Value!.Topics);
+        Assert.Equal(
+            "Polish National Curriculum Mathematics",
+            savedTopic.FrameworkDisplayName);
+        Assert.True(Assert.Single(savedTopic.Outcomes).IsOfficial);
+    }
+
+    [Fact]
+    public async Task OfficialOutcome_CodeAndDescriptionCannotBeEdited()
+    {
+        using var f = CreateFixture();
+        var topic = await CreateTopic(f);
+        var option = Assert.Single(topic.OfficialOutcomes);
+
+        Assert.True((await f.Service.CreateOfficialOutcomeAsync(
+            f.Admin.Id,
+            new CreateOfficialLearningOutcomeRequest(
+                topic.Id,
+                option.ContentNodeId,
+                option.LessonNodeId,
+                25m,
+                1))).Succeeded);
+
+        var outcome = Assert.Single(await f.Db.LearningOutcomes.ToListAsync());
+        var update = await f.Service.UpdateOutcomeAsync(
+            f.Admin.Id,
+            new UpdateLearningOutcomeRequest(
+                outcome.Id,
+                "FAKE.CODE",
+                "Changed",
+                30m,
+                2));
+
+        Assert.False(update.Succeeded);
+        Assert.Equal(
+            CurriculumErrorCode.OfficialOutcomeReadOnly,
+            update.Error);
+    }
+
 
     [Fact]
     public async Task SchoolAdmin_CanSelectVerifiedFramework_ThenCreateTopic()
@@ -340,6 +405,33 @@ public sealed class CurriculumServiceTests
         db.CurriculumFrameworks.Add(framework);
         db.CurriculumFrameworkVersions.Add(version);
 
+        var officialNode = new CurriculumPackContentNode
+        {
+            Id = Guid.Parse("07500000-0000-0000-0000-000000000003"),
+            FrameworkVersionId = version.Id,
+            FrameworkCode = MathematicsCurriculumPackRegistry.PolandCode,
+            VersionCode = "V1",
+            NodeKind = "Outcome",
+            Code = "PL:REQ:PL:VI:ADDITION:001",
+            LogicalLevelFrom = 6,
+            LogicalLevelTo = 6,
+            NativeLevel = "Klasa VI",
+            Title = "PL:VI:ADDITION:001",
+            OfficialText = "Add whole numbers accurately.",
+            SourceAuthority = "Official test authority",
+            SourceUrl = "https://example.com/official",
+            SourceLocator = "PL:VI:ADDITION:001",
+            Attribution = "Official test content.",
+            IsOfficial = true,
+            IsActive = true,
+            SortOrder = 1,
+            ContentHash = new string('a', 64),
+            CreatedAtUtc = DateTime.UtcNow,
+            UpdatedAtUtc = DateTime.UtcNow,
+            RowVersion = BitConverter.GetBytes(1L)
+        };
+        db.CurriculumPackContentNodes.Add(officialNode);
+
         if (withAdoption)
         {
             db.SchoolCurriculumAdoptions.Add(
@@ -382,7 +474,8 @@ public sealed class CurriculumServiceTests
             schools,
             users,
             service,
-            version);
+            version,
+            officialNode);
     }
 
     private static School NewSchool()
@@ -451,7 +544,8 @@ public sealed class CurriculumServiceTests
         FakeSchoolRepository Schools,
         FakeUserRepository Users,
         CurriculumService Service,
-        CurriculumFrameworkVersion FrameworkVersion)
+        CurriculumFrameworkVersion FrameworkVersion,
+        CurriculumPackContentNode OfficialNode)
         : IDisposable
     {
         public void Dispose() => Db.Dispose();

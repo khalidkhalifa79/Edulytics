@@ -8,6 +8,22 @@ public sealed record CurriculumSnapshot(
     IReadOnlyList<CurriculumTopic> Topics,
     IReadOnlyList<LearningOutcome> Outcomes);
 
+public sealed record AdoptedCurriculumContext(
+    Guid GradeLevelId,
+    Guid SubjectId,
+    Guid FrameworkVersionId,
+    string FrameworkCode,
+    string FrameworkName);
+
+public sealed record OfficialCurriculumOutcomeSource(
+    Guid ContentNodeId,
+    Guid? LessonNodeId,
+    string Code,
+    string Description,
+    string SelectionLabel,
+    string? GroupLabel,
+    int SortOrder);
+
 public enum CurriculumPersistenceError
 {
     None = 0,
