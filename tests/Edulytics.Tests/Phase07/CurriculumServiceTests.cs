@@ -14,32 +14,6 @@ namespace Edulytics.Tests.Phase07;
 public sealed class CurriculumServiceTests
 {
     [Fact]
-    public async Task SchoolAdmin_CanCreateTopicAndOutcome()
-    {
-        using var f = CreateFixture();
-
-        var topic = await CreateTopic(f);
-
-        var result = await f.Service.CreateOutcomeAsync(
-            f.Admin.Id,
-            new CreateLearningOutcomeRequest(
-                topic.Id,
-                "G6.N.1",
-                "Uses place value to reason about whole numbers.",
-                25m,
-                1));
-
-        Assert.True(result.Succeeded);
-
-        var dashboard = await f.Service.GetDashboardAsync(f.Admin.Id);
-        var savedTopic = Assert.Single(dashboard.Value!.Topics);
-        var outcome = Assert.Single(savedTopic.Outcomes);
-
-        Assert.Equal("G6.N.1", outcome.Code);
-        Assert.Equal(25m, outcome.Weight);
-    }
-
-    [Fact]
     public async Task OfficialOutcome_IsSelectedFromActivePack_AndCodeIsAutomatic()
     {
         using var f = CreateFixture();
@@ -214,83 +188,6 @@ public sealed class CurriculumServiceTests
 
         Assert.False(result.Succeeded);
         Assert.Equal(CurriculumErrorCode.SubjectNotFound, result.Error);
-    }
-
-    [Fact]
-    public async Task DuplicateOutcomeCode_IsCaseInsensitive()
-    {
-        using var f = CreateFixture();
-        var topic = await CreateTopic(f);
-
-        Assert.True((await f.Service.CreateOutcomeAsync(
-            f.Admin.Id,
-            new CreateLearningOutcomeRequest(
-                topic.Id,
-                "G6.A.1",
-                "First",
-                20m,
-                1))).Succeeded);
-
-        var duplicate = await f.Service.CreateOutcomeAsync(
-            f.Admin.Id,
-            new CreateLearningOutcomeRequest(
-                topic.Id,
-                "g6.a.1",
-                "Duplicate",
-                20m,
-                2));
-
-        Assert.False(duplicate.Succeeded);
-        Assert.Equal(
-            CurriculumErrorCode.DuplicateOutcomeCode,
-            duplicate.Error);
-    }
-
-    [Theory]
-    [InlineData(0)]
-    [InlineData(-1)]
-    [InlineData(100.001)]
-    public async Task InvalidWeight_IsRejected(decimal weight)
-    {
-        using var f = CreateFixture();
-        var topic = await CreateTopic(f);
-
-        var result = await f.Service.CreateOutcomeAsync(
-            f.Admin.Id,
-            new CreateLearningOutcomeRequest(
-                topic.Id,
-                $"W{Guid.NewGuid():N}"[..12],
-                "Weight test",
-                weight,
-                1));
-
-        Assert.False(result.Succeeded);
-        Assert.Equal(CurriculumErrorCode.InvalidWeight, result.Error);
-    }
-
-    [Fact]
-    public async Task Service_DoesNotInventSumToHundredRule()
-    {
-        using var f = CreateFixture();
-        var topic = await CreateTopic(f);
-
-        Assert.True((await f.Service.CreateOutcomeAsync(
-            f.Admin.Id,
-            new CreateLearningOutcomeRequest(
-                topic.Id,
-                "SUM.A",
-                "Outcome A",
-                80m,
-                1))).Succeeded);
-
-        Assert.True((await f.Service.CreateOutcomeAsync(
-            f.Admin.Id,
-            new CreateLearningOutcomeRequest(
-                topic.Id,
-                "SUM.B",
-                "Outcome B",
-                80m,
-                2))).Succeeded);
     }
 
     [Theory]

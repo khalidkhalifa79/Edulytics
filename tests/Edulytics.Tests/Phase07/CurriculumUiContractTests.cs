@@ -86,7 +86,13 @@ public sealed class CurriculumUiContractTests
         Assert.Contains(
             "@topic.FrameworkDisplayName",
             view);
-        Assert.Contains(
+        Assert.DoesNotContain(
+            "AddCustomOutcome",
+            view);
+        Assert.DoesNotContain(
+            "asp-action=\"CreateOutcome\"",
+            view);
+        Assert.DoesNotContain(
             "SchoolOutcomeCode",
             view);
     }
