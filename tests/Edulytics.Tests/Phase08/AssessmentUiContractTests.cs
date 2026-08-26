@@ -31,6 +31,34 @@ public sealed class AssessmentUiContractTests
     }
 
     [Fact]
+    public void SchoolDashboard_ExposesAssessments_ToSchoolAdminAndTeacher()
+    {
+        var root = FindRoot();
+
+        var controller = File.ReadAllText(
+            Path.Combine(
+                root,
+                "src/Edulytics.Web/Controllers/SchoolHomeController.cs"));
+
+        var viewModel = File.ReadAllText(
+            Path.Combine(
+                root,
+                "src/Edulytics.Web/ViewModels/SchoolUsers/SchoolUserViewModels.cs"));
+
+        var dashboard = File.ReadAllText(
+            Path.Combine(
+                root,
+                "src/Edulytics.Web/Views/SchoolHome/Dashboard.cshtml"));
+
+        Assert.Contains("public bool CanManageAssessments", viewModel);
+        Assert.Contains("CanManageAssessments =", controller);
+        Assert.Contains("context.Role == RoleNames.SchoolAdmin ||", controller);
+        Assert.Contains("context.Role == RoleNames.Teacher", controller);
+        Assert.Contains("@if (Model.CanManageAssessments)", dashboard);
+        Assert.Contains("asp-controller=\"Assessments\"", dashboard);
+    }
+
+    [Fact]
     public void ResponsiveCssContractExists()
     {
         var root = FindRoot();
