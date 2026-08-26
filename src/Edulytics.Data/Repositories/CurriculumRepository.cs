@@ -85,6 +85,37 @@ public sealed class CurriculumRepository : ICurriculumRepository
             x => x.SchoolId == schoolId && x.Id == id,
             cancellationToken);
 
+    public Task<SchoolCurriculumAdoption?> GetPrimaryDefaultAdoptionAsync(
+        Guid schoolId,
+        Guid gradeLevelId,
+        Guid subjectId,
+        CancellationToken cancellationToken = default) =>
+        _db.SchoolCurriculumAdoptions
+            .FirstOrDefaultAsync(
+                x =>
+                    x.SchoolId == schoolId &&
+                    x.AcademicYearId == null &&
+                    x.GradeLevelId == gradeLevelId &&
+                    x.SubjectId == subjectId &&
+                    x.IsPrimary &&
+                    x.IsActive,
+                cancellationToken);
+
+    public Task<Guid?> GetActivePlatformFrameworkVersionIdAsync(
+        string normalizedFrameworkCode,
+        CancellationToken cancellationToken = default) =>
+        (
+            from version in _db.CurriculumFrameworkVersions
+            join framework in _db.CurriculumFrameworks
+                on version.FrameworkId equals framework.Id
+            where framework.OwnerSchoolId == null &&
+                  framework.NormalizedCode == normalizedFrameworkCode &&
+                  framework.IsActive &&
+                  version.IsActive
+            orderby version.CreatedAtUtc descending
+            select (Guid?)version.Id
+        ).FirstOrDefaultAsync(cancellationToken);
+
     public Task<Guid?> GetPrimaryDefaultFrameworkVersionIdAsync(
         Guid schoolId,
         Guid gradeLevelId,

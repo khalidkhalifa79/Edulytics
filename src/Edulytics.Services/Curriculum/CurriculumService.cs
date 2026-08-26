@@ -1,5 +1,6 @@
 using System.Text.RegularExpressions;
 using Edulytics.Core.Constants;
+using Edulytics.Core.Curriculum;
 using Edulytics.Core.Entities;
 using Edulytics.Core.Enums;
 using Edulytics.Core.Interfaces;
@@ -89,7 +90,15 @@ public sealed class CurriculumService : ICurriculumService
                         x.Name,
                         x.Code))
                     .ToArray(),
-                topics));
+                topics)
+            {
+                Frameworks = MathematicsCurriculumPackRegistry.All
+                    .Select(x => new CurriculumFrameworkItem(
+                        x.Code,
+                        x.DisplayName))
+                    .OrderBy(x => x.DisplayName)
+                    .ToArray()
+            });
     }
 
     public async Task<CurriculumQueryResult<CurriculumTopicItem>>
@@ -159,6 +168,161 @@ public sealed class CurriculumService : ICurriculumService
                 .Success(MapOutcome(outcome));
     }
 
+
+    public async Task<CurriculumCommandResult> SelectFrameworkAsync(
+        Guid actorUserId,
+        SelectCurriculumFrameworkRequest request,
+        CancellationToken cancellationToken = default)
+    {
+        var scope = await ResolveScopeAsync(
+            actorUserId,
+            cancellationToken);
+
+        if (!scope.Succeeded)
+            return Fail(scope.Error!.Value);
+
+        var schoolId = scope.School!.Id;
+
+        if (await _curriculum.GetSubjectAsync(
+                schoolId,
+                request.SubjectId,
+                cancellationToken) is null)
+        {
+            return Fail(
+                "SubjectId",
+                CurriculumErrorCode.SubjectNotFound);
+        }
+
+        if (await _curriculum.GetGradeLevelAsync(
+                schoolId,
+                request.GradeLevelId,
+                cancellationToken) is null)
+        {
+            return Fail(
+                "GradeLevelId",
+                CurriculumErrorCode.GradeLevelNotFound);
+        }
+
+        var frameworkCode = Clean(request.FrameworkCode)
+            .ToUpperInvariant();
+
+        if (!MathematicsCurriculumPackRegistry.All.Any(
+                x => string.Equals(
+                    x.Code,
+                    frameworkCode,
+                    StringComparison.Ordinal)))
+        {
+            return Fail(
+                "FrameworkCode",
+                CurriculumErrorCode.FrameworkNotFound);
+        }
+
+        var frameworkVersionId =
+            await _curriculum.GetActivePlatformFrameworkVersionIdAsync(
+                frameworkCode,
+                cancellationToken);
+
+        if (!frameworkVersionId.HasValue)
+        {
+            return Fail(
+                "FrameworkCode",
+                CurriculumErrorCode.FrameworkNotFound);
+        }
+
+        var adoption =
+            await _curriculum.GetPrimaryDefaultAdoptionAsync(
+                schoolId,
+                request.GradeLevelId,
+                request.SubjectId,
+                cancellationToken);
+
+        if (adoption is not null &&
+            adoption.FrameworkVersionId == frameworkVersionId.Value)
+        {
+            return CurriculumCommandResult.Success();
+        }
+
+        if (adoption is not null)
+        {
+            var snapshot = await _curriculum.GetSnapshotAsync(
+                schoolId,
+                cancellationToken);
+
+            if (snapshot.Topics.Any(
+                    x =>
+                        x.SubjectId == request.SubjectId &&
+                        x.GradeLevelId == request.GradeLevelId))
+            {
+                return Fail(
+                    "FrameworkCode",
+                    CurriculumErrorCode.CurriculumFrameworkInUse);
+            }
+        }
+
+        var now = DateTime.UtcNow;
+        IReadOnlyDictionary<string, object?>? oldValues = null;
+
+        if (adoption is null)
+        {
+            adoption = new SchoolCurriculumAdoption
+            {
+                Id = Guid.NewGuid(),
+                SchoolId = schoolId,
+                AcademicYearId = null,
+                GradeLevelId = request.GradeLevelId,
+                SubjectId = request.SubjectId,
+                FrameworkVersionId = frameworkVersionId.Value,
+                IsPrimary = true,
+                IsActive = true,
+                CreatedAtUtc = now,
+                UpdatedAtUtc = now
+            };
+
+            await _curriculum.AddDefaultAdoptionAsync(
+                adoption,
+                cancellationToken);
+        }
+        else
+        {
+            oldValues =
+                new Dictionary<string, object?>
+                {
+                    ["frameworkVersionId"] =
+                        adoption.FrameworkVersionId
+                };
+
+            adoption.FrameworkVersionId =
+                frameworkVersionId.Value;
+            adoption.UpdatedAtUtc = now;
+        }
+
+        await QueueAuditAsync(
+            scope,
+            "CurriculumAdoption.Selected",
+            "SchoolCurriculumAdoption",
+            adoption.Id,
+            oldValues,
+            new Dictionary<string, object?>
+            {
+                ["gradeLevelId"] =
+                    adoption.GradeLevelId,
+                ["subjectId"] =
+                    adoption.SubjectId,
+                ["frameworkCode"] =
+                    frameworkCode,
+                ["frameworkVersionId"] =
+                    adoption.FrameworkVersionId,
+                ["isPrimary"] =
+                    adoption.IsPrimary,
+                ["isActive"] =
+                    adoption.IsActive
+            },
+            "Verified curriculum framework selected.",
+            cancellationToken);
+
+        return await PersistAsync(cancellationToken);
+    }
+
     public async Task<CurriculumCommandResult> CreateTopicAsync(
         Guid actorUserId,
         CreateCurriculumTopicRequest request,
@@ -202,14 +366,18 @@ public sealed class CurriculumService : ICurriculumService
         }
 
         var frameworkVersionId =
-            await ResolveOrCreateDefaultAdoptionAsync(
-                scope,
+            await _curriculum.GetPrimaryDefaultFrameworkVersionIdAsync(
+                schoolId,
                 request.GradeLevelId,
                 request.SubjectId,
                 cancellationToken);
 
         if (!frameworkVersionId.HasValue)
-            return Fail(CurriculumErrorCode.PersistenceError);
+        {
+            return Fail(
+                "FrameworkCode",
+                CurriculumErrorCode.CurriculumNotSelected);
+        }
 
         if (await _curriculum.TopicNameExistsAsync(
                 schoolId,
@@ -590,84 +758,6 @@ public sealed class CurriculumService : ICurriculumService
             cancellationToken);
 
         return await PersistAsync(cancellationToken);
-    }
-
-    private async Task<Guid?> ResolveOrCreateDefaultAdoptionAsync(
-        ScopeResult scope,
-        Guid gradeLevelId,
-        Guid subjectId,
-        CancellationToken cancellationToken)
-    {
-        if (scope.School is null)
-            return null;
-
-        var schoolId = scope.School.Id;
-
-        var existing =
-            await _curriculum.GetPrimaryDefaultFrameworkVersionIdAsync(
-                schoolId,
-                gradeLevelId,
-                subjectId,
-                cancellationToken);
-
-        if (existing.HasValue)
-            return existing.Value;
-
-        var platformDefault =
-            await _curriculum.GetPlatformDefaultFrameworkVersionIdAsync(
-                cancellationToken);
-
-        if (!platformDefault.HasValue)
-            return null;
-
-        var now = DateTime.UtcNow;
-
-        var adoption =
-            new SchoolCurriculumAdoption
-            {
-                Id = Guid.NewGuid(),
-                SchoolId = schoolId,
-                AcademicYearId = null,
-                GradeLevelId = gradeLevelId,
-                SubjectId = subjectId,
-                FrameworkVersionId =
-                    platformDefault.Value,
-                IsPrimary = true,
-                IsActive = true,
-                CreatedAtUtc = now,
-                UpdatedAtUtc = now
-            };
-
-        await _curriculum.AddDefaultAdoptionAsync(
-            adoption,
-            cancellationToken);
-
-        await QueueAuditAsync(
-            scope,
-            "CurriculumAdoption.Created",
-            "SchoolCurriculumAdoption",
-            adoption.Id,
-            oldValues: null,
-            newValues:
-                new Dictionary<string, object?>
-                {
-                    ["academicYearId"] =
-                        adoption.AcademicYearId,
-                    ["gradeLevelId"] =
-                        adoption.GradeLevelId,
-                    ["subjectId"] =
-                        adoption.SubjectId,
-                    ["frameworkVersionId"] =
-                        adoption.FrameworkVersionId,
-                    ["isPrimary"] =
-                        adoption.IsPrimary,
-                    ["isActive"] =
-                        adoption.IsActive
-                },
-            "Default curriculum adoption created.",
-            cancellationToken);
-
-        return platformDefault.Value;
     }
 
     private async Task QueueAuditAsync(

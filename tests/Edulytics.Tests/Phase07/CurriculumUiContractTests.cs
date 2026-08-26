@@ -37,6 +37,29 @@ public sealed class CurriculumUiContractTests
                 method.Name));
     }
 
+
+    [Fact]
+    public void Dashboard_RequiresVerifiedFrameworkSelectionBeforeTopicAuthoring()
+    {
+        var root = FindRepositoryRoot();
+        var view = File.ReadAllText(Path.Combine(
+            root,
+            "src/Edulytics.Web/Views/Curriculum/Index.cshtml"));
+
+        Assert.Contains(
+            "asp-action=\"SelectFramework\"",
+            view);
+        Assert.Contains(
+            "name=\"frameworkCode\"",
+            view);
+        Assert.Contains(
+            "@foreach (var framework in Model.Frameworks)",
+            view);
+        Assert.Contains(
+            "TopicRequiresFramework",
+            view);
+    }
+
     [Fact]
     public void ResponsiveCssContractExists()
     {

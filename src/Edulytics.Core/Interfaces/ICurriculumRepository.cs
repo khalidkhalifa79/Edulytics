@@ -29,6 +29,18 @@ public interface ICurriculumRepository
         Guid id,
         CancellationToken cancellationToken = default);
 
+    Task<SchoolCurriculumAdoption?> GetPrimaryDefaultAdoptionAsync(
+        Guid schoolId,
+        Guid gradeLevelId,
+        Guid subjectId,
+        CancellationToken cancellationToken = default) =>
+        Task.FromResult<SchoolCurriculumAdoption?>(null);
+
+    Task<Guid?> GetActivePlatformFrameworkVersionIdAsync(
+        string normalizedFrameworkCode,
+        CancellationToken cancellationToken = default) =>
+        Task.FromResult<Guid?>(null);
+
     Task<Guid?> GetPrimaryDefaultFrameworkVersionIdAsync(
         Guid schoolId,
         Guid gradeLevelId,

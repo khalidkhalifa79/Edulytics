@@ -16,6 +16,11 @@ public interface ICurriculumService
         Guid id,
         CancellationToken cancellationToken = default);
 
+    Task<CurriculumCommandResult> SelectFrameworkAsync(
+        Guid actorUserId,
+        SelectCurriculumFrameworkRequest request,
+        CancellationToken cancellationToken = default);
+
     Task<CurriculumCommandResult> CreateTopicAsync(
         Guid actorUserId,
         CreateCurriculumTopicRequest request,
