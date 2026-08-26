@@ -95,6 +95,37 @@ public sealed class CurriculumUiContractTests
         Assert.DoesNotContain(
             "SchoolOutcomeCode",
             view);
+        Assert.DoesNotContain(
+            "name=\"weight\"",
+            view);
+    }
+
+    [Fact]
+    public void CurriculumViews_DoNotExposeOutcomeWeight()
+    {
+        var root = FindRepositoryRoot();
+
+        foreach (var name in new[]
+        {
+            "Index.cshtml",
+            "EditOutcome.cshtml"
+        })
+        {
+            var view = File.ReadAllText(Path.Combine(
+                root,
+                "src/Edulytics.Web/Views/Curriculum",
+                name));
+
+            Assert.DoesNotContain(
+                "name=\"weight\"",
+                view);
+            Assert.DoesNotContain(
+                "@C[\"WeightHelp\"]",
+                view);
+            Assert.DoesNotContain(
+                "outcome.Weight",
+                view);
+        }
     }
 
     [Fact]

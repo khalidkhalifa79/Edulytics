@@ -26,8 +26,8 @@ public sealed class CurriculumServiceTests
                 topic.Id,
                 option.ContentNodeId,
                 option.LessonNodeId,
-                25m,
-                1));
+                1
+));
 
         Assert.True(result.Succeeded);
 
@@ -59,8 +59,8 @@ public sealed class CurriculumServiceTests
                 topic.Id,
                 option.ContentNodeId,
                 option.LessonNodeId,
-                25m,
-                1))).Succeeded);
+                1
+))).Succeeded);
 
         var outcome = Assert.Single(await f.Db.LearningOutcomes.ToListAsync());
         var update = await f.Service.UpdateOutcomeAsync(
@@ -69,8 +69,8 @@ public sealed class CurriculumServiceTests
                 outcome.Id,
                 "FAKE.CODE",
                 "Changed",
-                30m,
-                2));
+                2
+));
 
         Assert.False(update.Succeeded);
         Assert.Equal(

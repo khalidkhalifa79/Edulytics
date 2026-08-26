@@ -148,12 +148,11 @@ public sealed record CreateOfficialLearningOutcomeRequest(
     Guid TopicId,
     Guid ContentNodeId,
     Guid? LessonNodeId,
-    decimal Weight,
-    int Order);
+    int Order
+);
 
 public sealed record UpdateLearningOutcomeRequest(
     Guid Id,
     string Code,
     string Description,
-    decimal Weight,
     int Order);

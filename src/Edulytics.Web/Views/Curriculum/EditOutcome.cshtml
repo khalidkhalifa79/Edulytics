@@ -40,17 +40,6 @@
                       rows="5"
                       required>@Model.Outcome.Description</textarea>
 
-            <label for="weight">@C["Weight"]</label>
-            <input id="weight"
-                   name="weight"
-                   type="number"
-                   min="0.001"
-                   max="100"
-                   step="0.001"
-                   value="@Model.Outcome.Weight.ToString(System.Globalization.CultureInfo.InvariantCulture)"
-                   required />
-            <p class="curriculum-help">@C["WeightHelp"]</p>
-
             <label for="order">@C["Order"]</label>
             <input id="order"
                    name="order"
