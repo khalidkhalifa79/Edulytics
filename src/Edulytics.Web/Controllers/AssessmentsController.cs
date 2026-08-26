@@ -132,6 +132,7 @@ public sealed class AssessmentsController : Controller
         string prompt,
         decimal maxScore,
         int order,
+        Guid[]? outcomeIds,
         string rowVersion,
         CancellationToken cancellationToken)
     {
@@ -145,7 +146,13 @@ public sealed class AssessmentsController : Controller
 
         var result = await _service.CreateQuestionAsync(
             actorId,
-            new CreateAssessmentQuestionRequest(id, prompt, maxScore, order, bytes),
+            new CreateAssessmentQuestionRequest(
+                id,
+                prompt,
+                maxScore,
+                order,
+                outcomeIds ?? [],
+                bytes),
             cancellationToken);
 
         SetFeedback(result, "SuccessQuestionCreated");
@@ -169,6 +176,7 @@ public sealed class AssessmentsController : Controller
         return View(new AssessmentQuestionEditViewModel(
             assessmentId,
             question.Value,
+            assessment.Value.EligibleOutcomes,
             assessment.Value.Assessment.RowVersion));
     }
 
@@ -182,6 +190,7 @@ public sealed class AssessmentsController : Controller
         string prompt,
         decimal maxScore,
         int order,
+        Guid[]? outcomeIds,
         string rowVersion,
         CancellationToken cancellationToken)
     {
@@ -195,7 +204,13 @@ public sealed class AssessmentsController : Controller
 
         var result = await _service.UpdateQuestionAsync(
             actorId,
-            new UpdateAssessmentQuestionRequest(questionId, prompt, maxScore, order, bytes),
+            new UpdateAssessmentQuestionRequest(
+                questionId,
+                prompt,
+                maxScore,
+                order,
+                outcomeIds ?? [],
+                bytes),
             cancellationToken);
 
         SetFeedback(result, "SuccessQuestionUpdated");
@@ -203,6 +218,86 @@ public sealed class AssessmentsController : Controller
         return result.Succeeded
             ? RedirectToAction(nameof(Details), new { id = assessmentId })
             : RedirectToAction(nameof(EditQuestion), new { questionId, assessmentId });
+    }
+
+
+    [HttpPost("{id:guid}/delete")]
+    [ValidateAntiForgeryToken]
+    [RequestTimeout(BackendResiliencePolicyNames.InteractiveWrite)]
+    [EnableRateLimiting(BackendResiliencePolicyNames.HeavyWriteConcurrency)]
+    public async Task<IActionResult> DeleteAssessment(
+        Guid id,
+        string rowVersion,
+        CancellationToken cancellationToken)
+    {
+        if (!TryActor(out var actorId))
+            return Forbid();
+
+        if (!TryDecodeRowVersion(rowVersion, out var bytes))
+        {
+            TempData["Error"] =
+                _text["ErrorConcurrencyConflict"].Value;
+
+            return RedirectToAction(
+                nameof(Details),
+                new { id });
+        }
+
+        var result = await _service.DeleteAssessmentAsync(
+            actorId,
+            new DeleteAssessmentRequest(
+                id,
+                bytes),
+            cancellationToken);
+
+        SetFeedback(
+            result,
+            "SuccessAssessmentDeleted");
+
+        return result.Succeeded
+            ? RedirectToAction(nameof(Index))
+            : RedirectToAction(
+                nameof(Details),
+                new { id });
+    }
+
+    [HttpPost("questions/{questionId:guid}/delete")]
+    [ValidateAntiForgeryToken]
+    [RequestTimeout(BackendResiliencePolicyNames.InteractiveWrite)]
+    [EnableRateLimiting(BackendResiliencePolicyNames.HeavyWriteConcurrency)]
+    public async Task<IActionResult> DeleteQuestion(
+        Guid questionId,
+        Guid assessmentId,
+        string rowVersion,
+        CancellationToken cancellationToken)
+    {
+        if (!TryActor(out var actorId))
+            return Forbid();
+
+        if (!TryDecodeRowVersion(rowVersion, out var bytes))
+        {
+            TempData["Error"] =
+                _text["ErrorConcurrencyConflict"].Value;
+
+            return RedirectToAction(
+                nameof(Details),
+                new { id = assessmentId });
+        }
+
+        var result = await _service.DeleteQuestionAsync(
+            actorId,
+            new DeleteAssessmentQuestionRequest(
+                questionId,
+                bytes),
+            cancellationToken);
+
+        SetFeedback(
+            result,
+            "SuccessQuestionDeleted");
+
+        return RedirectToAction(
+            nameof(Details),
+            new { id = assessmentId });
     }
 
     [HttpPost("questions/{questionId:guid}/outcomes")]

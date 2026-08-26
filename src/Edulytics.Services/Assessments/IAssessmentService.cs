@@ -41,6 +41,16 @@ public interface IAssessmentService
         UpdateAssessmentQuestionRequest request,
         CancellationToken cancellationToken = default);
 
+    Task<AssessmentCommandResult> DeleteAssessmentAsync(
+        Guid actorUserId,
+        DeleteAssessmentRequest request,
+        CancellationToken cancellationToken = default);
+
+    Task<AssessmentCommandResult> DeleteQuestionAsync(
+        Guid actorUserId,
+        DeleteAssessmentQuestionRequest request,
+        CancellationToken cancellationToken = default);
+
     Task<AssessmentCommandResult> MapOutcomeAsync(
         Guid actorUserId,
         MapQuestionOutcomeRequest request,

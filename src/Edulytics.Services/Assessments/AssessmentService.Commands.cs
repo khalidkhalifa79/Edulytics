@@ -204,6 +204,7 @@ public sealed partial class AssessmentService
                 cancellationToken));
     }
 
+
     public async Task<AssessmentCommandResult> CreateQuestionAsync(
         Guid actorUserId,
         CreateAssessmentQuestionRequest request,
@@ -212,35 +213,100 @@ public sealed partial class AssessmentService
         var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
         if (!scope.Succeeded) return Fail(scope.Error!.Value);
 
-        var assessment = await _repo.GetAssessmentAsync(scope.School!.Id, request.AssessmentId, cancellationToken);
-        if (assessment is null) return Fail(AssessmentErrorCode.AssessmentNotFound);
+        var assessment = await _repo.GetAssessmentAsync(
+            scope.School!.Id,
+            request.AssessmentId,
+            cancellationToken);
 
-        if (!await CanManageAssessmentAsync(scope, assessment, cancellationToken))
+        if (assessment is null)
+            return Fail(AssessmentErrorCode.AssessmentNotFound);
+
+        if (!await CanManageAssessmentAsync(
+                scope,
+                assessment,
+                cancellationToken))
+        {
             return Fail(AssessmentErrorCode.AccessDenied);
+        }
 
         if (assessment.Status != AssessmentStatus.Draft)
             return Fail(AssessmentErrorCode.AssessmentNotDraft);
 
         var prompt = Clean(request.Prompt);
-        if (prompt.Length == 0) return Fail(nameof(request.Prompt), AssessmentErrorCode.Required);
-        if (prompt.Length > 1000) return Fail(nameof(request.Prompt), AssessmentErrorCode.InvalidText);
-        if (!ValidMax(request.MaxScore)) return Fail(nameof(request.MaxScore), AssessmentErrorCode.InvalidQuestionScore);
-        if (request.Order <= 0) return Fail(nameof(request.Order), AssessmentErrorCode.InvalidOrder);
+
+        if (prompt.Length == 0)
+            return Fail(
+                nameof(request.Prompt),
+                AssessmentErrorCode.Required);
+
+        if (prompt.Length > 1000)
+            return Fail(
+                nameof(request.Prompt),
+                AssessmentErrorCode.InvalidText);
+
+        if (!ValidMax(request.MaxScore))
+            return Fail(
+                nameof(request.MaxScore),
+                AssessmentErrorCode.InvalidQuestionScore);
+
+        if (request.Order <= 0)
+            return Fail(
+                nameof(request.Order),
+                AssessmentErrorCode.InvalidOrder);
+
+        var selectedOutcomeIds =
+            NormalizeOutcomeIds(request.OutcomeIds);
+
+        if (selectedOutcomeIds.Length == 0)
+            return Fail(
+                nameof(request.OutcomeIds),
+                AssessmentErrorCode.Required);
 
         if (await _repo.QuestionOrderExistsAsync(
                 scope.School.Id,
                 assessment.Id,
                 request.Order,
                 cancellationToken: cancellationToken))
-            return Fail(nameof(request.Order), AssessmentErrorCode.DuplicateQuestionOrder);
+        {
+            return Fail(
+                nameof(request.Order),
+                AssessmentErrorCode.DuplicateQuestionOrder);
+        }
 
-        var snapshot = await _repo.GetSnapshotAsync(scope.School.Id, cancellationToken);
+        var snapshot = await _repo.GetSnapshotAsync(
+            scope.School.Id,
+            cancellationToken);
+
         var currentTotal = snapshot.Questions
             .Where(x => x.AssessmentId == assessment.Id)
             .Sum(x => x.MaxScore);
 
         if (currentTotal + request.MaxScore > assessment.MaxScore)
-            return Fail(nameof(request.MaxScore), AssessmentErrorCode.AssessmentScoreMismatch);
+        {
+            return Fail(
+                nameof(request.MaxScore),
+                AssessmentErrorCode.AssessmentScoreMismatch);
+        }
+
+        var classGroup = snapshot.ClassGroups
+            .FirstOrDefault(x => x.Id == assessment.ClassGroupId);
+
+        if (classGroup is null)
+            return Fail(AssessmentErrorCode.ClassGroupNotFound);
+
+        var outcomeError =
+            ValidateOutcomeSelection(
+                snapshot,
+                assessment,
+                classGroup.GradeLevelId,
+                selectedOutcomeIds);
+
+        if (outcomeError.HasValue)
+        {
+            return Fail(
+                nameof(request.OutcomeIds),
+                outcomeError.Value);
+        }
 
         var question = new AssessmentQuestion
         {
@@ -256,8 +322,26 @@ public sealed partial class AssessmentService
             question,
             cancellationToken);
 
-        assessment.UpdatedAtUtc =
-            DateTime.UtcNow;
+        var mappings = new List<QuestionLearningOutcome>();
+
+        foreach (var outcomeId in selectedOutcomeIds)
+        {
+            var mapping = new QuestionLearningOutcome
+            {
+                Id = Guid.NewGuid(),
+                SchoolId = scope.School.Id,
+                AssessmentQuestionId = question.Id,
+                LearningOutcomeId = outcomeId
+            };
+
+            mappings.Add(mapping);
+
+            await _repo.AddAsync(
+                mapping,
+                cancellationToken);
+        }
+
+        assessment.UpdatedAtUtc = DateTime.UtcNow;
 
         await QueueAuditAsync(
             scope,
@@ -268,36 +352,61 @@ public sealed partial class AssessmentService
             newValues:
                 new Dictionary<string, object?>
                 {
-                    ["assessmentId"] =
-                        question.AssessmentId,
-                    ["promptLength"] =
-                        question.Prompt.Length,
-                    ["maxScore"] =
-                        question.MaxScore,
-                    ["order"] =
-                        question.Order
+                    ["assessmentId"] = question.AssessmentId,
+                    ["promptLength"] = question.Prompt.Length,
+                    ["maxScore"] = question.MaxScore,
+                    ["order"] = question.Order,
+                    ["outcomeIds"] =
+                        selectedOutcomeIds
+                            .Select(x => x.ToString("D"))
+                            .ToArray()
                 },
-            "Assessment question created.",
+            "Assessment question created with learning outcomes.",
             cancellationToken);
 
-        var saved =
-            await _repo.SaveWithRowVersionAsync(
-                assessment,
-                request.AssessmentRowVersion,
+        foreach (var mapping in mappings)
+        {
+            await QueueAuditAsync(
+                scope,
+                "QuestionOutcome.Mapped",
+                "QuestionLearningOutcome",
+                mapping.Id,
+                oldValues: null,
+                newValues:
+                    new Dictionary<string, object?>
+                    {
+                        ["assessmentQuestionId"] =
+                            mapping.AssessmentQuestionId,
+                        ["learningOutcomeId"] =
+                            mapping.LearningOutcomeId
+                    },
+                "Learning outcome mapped during question creation.",
                 cancellationToken);
+        }
+
+        var saved = await _repo.SaveWithRowVersionAsync(
+            assessment,
+            request.AssessmentRowVersion,
+            cancellationToken);
 
         return saved.Succeeded
             ? AssessmentCommandResult.Success(question.Id)
             : MapPersistence(saved);
     }
 
+
     public async Task<AssessmentCommandResult> UpdateQuestionAsync(
         Guid actorUserId,
         UpdateAssessmentQuestionRequest request,
         CancellationToken cancellationToken = default)
     {
-        var context = await ResolveQuestionContextAsync(actorUserId, request.QuestionId, cancellationToken);
-        if (!context.Succeeded) return Fail(context.Error!.Value);
+        var context = await ResolveQuestionContextAsync(
+            actorUserId,
+            request.QuestionId,
+            cancellationToken);
+
+        if (!context.Succeeded)
+            return Fail(context.Error!.Value);
 
         var assessment = context.Assessment!;
         var question = context.Question!;
@@ -306,10 +415,34 @@ public sealed partial class AssessmentService
             return Fail(AssessmentErrorCode.AssessmentNotDraft);
 
         var prompt = Clean(request.Prompt);
-        if (prompt.Length == 0) return Fail(nameof(request.Prompt), AssessmentErrorCode.Required);
-        if (prompt.Length > 1000) return Fail(nameof(request.Prompt), AssessmentErrorCode.InvalidText);
-        if (!ValidMax(request.MaxScore)) return Fail(nameof(request.MaxScore), AssessmentErrorCode.InvalidQuestionScore);
-        if (request.Order <= 0) return Fail(nameof(request.Order), AssessmentErrorCode.InvalidOrder);
+
+        if (prompt.Length == 0)
+            return Fail(
+                nameof(request.Prompt),
+                AssessmentErrorCode.Required);
+
+        if (prompt.Length > 1000)
+            return Fail(
+                nameof(request.Prompt),
+                AssessmentErrorCode.InvalidText);
+
+        if (!ValidMax(request.MaxScore))
+            return Fail(
+                nameof(request.MaxScore),
+                AssessmentErrorCode.InvalidQuestionScore);
+
+        if (request.Order <= 0)
+            return Fail(
+                nameof(request.Order),
+                AssessmentErrorCode.InvalidOrder);
+
+        var selectedOutcomeIds =
+            NormalizeOutcomeIds(request.OutcomeIds);
+
+        if (selectedOutcomeIds.Length == 0)
+            return Fail(
+                nameof(request.OutcomeIds),
+                AssessmentErrorCode.Required);
 
         if (await _repo.QuestionOrderExistsAsync(
                 context.Scope!.School!.Id,
@@ -317,51 +450,284 @@ public sealed partial class AssessmentService
                 request.Order,
                 question.Id,
                 cancellationToken))
-            return Fail(nameof(request.Order), AssessmentErrorCode.DuplicateQuestionOrder);
+        {
+            return Fail(
+                nameof(request.Order),
+                AssessmentErrorCode.DuplicateQuestionOrder);
+        }
 
-        var snapshot = await _repo.GetSnapshotAsync(context.Scope.School.Id, cancellationToken);
+        var snapshot = await _repo.GetSnapshotAsync(
+            context.Scope.School.Id,
+            cancellationToken);
+
         var otherTotal = snapshot.Questions
-            .Where(x => x.AssessmentId == assessment.Id && x.Id != question.Id)
+            .Where(x =>
+                x.AssessmentId == assessment.Id &&
+                x.Id != question.Id)
             .Sum(x => x.MaxScore);
 
         if (otherTotal + request.MaxScore > assessment.MaxScore)
-            return Fail(nameof(request.MaxScore), AssessmentErrorCode.AssessmentScoreMismatch);
+        {
+            return Fail(
+                nameof(request.MaxScore),
+                AssessmentErrorCode.AssessmentScoreMismatch);
+        }
+
+        var classGroup = snapshot.ClassGroups
+            .FirstOrDefault(x => x.Id == assessment.ClassGroupId);
+
+        if (classGroup is null)
+            return Fail(AssessmentErrorCode.ClassGroupNotFound);
+
+        var outcomeError =
+            ValidateOutcomeSelection(
+                snapshot,
+                assessment,
+                classGroup.GradeLevelId,
+                selectedOutcomeIds);
+
+        if (outcomeError.HasValue)
+        {
+            return Fail(
+                nameof(request.OutcomeIds),
+                outcomeError.Value);
+        }
+
+        var existingIds = snapshot.OutcomeMappings
+            .Where(x =>
+                x.AssessmentQuestionId == question.Id)
+            .Select(x => x.LearningOutcomeId)
+            .ToHashSet();
+
+        var desiredIds = selectedOutcomeIds.ToHashSet();
+
+        var toAdd = desiredIds
+            .Except(existingIds)
+            .OrderBy(x => x)
+            .ToArray();
+
+        var toRemove = existingIds
+            .Except(desiredIds)
+            .OrderBy(x => x)
+            .ToArray();
 
         var oldValues =
             new Dictionary<string, object?>
             {
-                ["promptLength"] =
-                    question.Prompt.Length,
-                ["maxScore"] =
-                    question.MaxScore,
-                ["order"] =
-                    question.Order
+                ["promptLength"] = question.Prompt.Length,
+                ["maxScore"] = question.MaxScore,
+                ["order"] = question.Order,
+                ["outcomeIds"] =
+                    existingIds
+                        .OrderBy(x => x)
+                        .Select(x => x.ToString("D"))
+                        .ToArray()
             };
 
         question.Prompt = prompt;
-        question.MaxScore =
-            Round(request.MaxScore);
-        question.Order =
-            request.Order;
-        assessment.UpdatedAtUtc =
-            DateTime.UtcNow;
+        question.MaxScore = Round(request.MaxScore);
+        question.Order = request.Order;
+        assessment.UpdatedAtUtc = DateTime.UtcNow;
+
+        foreach (var outcomeId in toRemove)
+        {
+            var mapping = await _repo.GetMappingAsync(
+                context.Scope.School.Id,
+                question.Id,
+                outcomeId,
+                cancellationToken);
+
+            if (mapping is null)
+                return Fail(AssessmentErrorCode.OutcomeNotFound);
+
+            _repo.RemoveMapping(mapping);
+
+            await QueueAuditAsync(
+                context.Scope,
+                "QuestionOutcome.Unmapped",
+                "QuestionLearningOutcome",
+                mapping.Id,
+                oldValues:
+                    new Dictionary<string, object?>
+                    {
+                        ["assessmentQuestionId"] =
+                            mapping.AssessmentQuestionId,
+                        ["learningOutcomeId"] =
+                            mapping.LearningOutcomeId
+                    },
+                newValues: null,
+                "Learning outcome removed during question update.",
+                cancellationToken);
+        }
+
+        foreach (var outcomeId in toAdd)
+        {
+            var mapping = new QuestionLearningOutcome
+            {
+                Id = Guid.NewGuid(),
+                SchoolId = context.Scope.School.Id,
+                AssessmentQuestionId = question.Id,
+                LearningOutcomeId = outcomeId
+            };
+
+            await _repo.AddAsync(
+                mapping,
+                cancellationToken);
+
+            await QueueAuditAsync(
+                context.Scope,
+                "QuestionOutcome.Mapped",
+                "QuestionLearningOutcome",
+                mapping.Id,
+                oldValues: null,
+                newValues:
+                    new Dictionary<string, object?>
+                    {
+                        ["assessmentQuestionId"] =
+                            mapping.AssessmentQuestionId,
+                        ["learningOutcomeId"] =
+                            mapping.LearningOutcomeId
+                    },
+                "Learning outcome mapped during question update.",
+                cancellationToken);
+        }
 
         await QueueAuditAsync(
-            context.Scope!,
+            context.Scope,
             "AssessmentQuestion.Updated",
             "AssessmentQuestion",
             question.Id,
             oldValues,
             new Dictionary<string, object?>
             {
-                ["promptLength"] =
-                    question.Prompt.Length,
-                ["maxScore"] =
-                    question.MaxScore,
-                ["order"] =
-                    question.Order
+                ["promptLength"] = question.Prompt.Length,
+                ["maxScore"] = question.MaxScore,
+                ["order"] = question.Order,
+                ["outcomeIds"] =
+                    selectedOutcomeIds
+                        .Select(x => x.ToString("D"))
+                        .ToArray()
             },
-            "Assessment question updated.",
+            "Assessment question and outcomes updated.",
+            cancellationToken);
+
+        return MapPersistence(
+            await _repo.SaveWithRowVersionAsync(
+                assessment,
+                request.AssessmentRowVersion,
+                cancellationToken));
+    }
+
+
+    public async Task<AssessmentCommandResult> DeleteAssessmentAsync(
+        Guid actorUserId,
+        DeleteAssessmentRequest request,
+        CancellationToken cancellationToken = default)
+    {
+        var scope = await ResolveScopeAsync(
+            actorUserId,
+            cancellationToken);
+
+        if (!scope.Succeeded)
+            return Fail(scope.Error!.Value);
+
+        var assessment = await _repo.GetAssessmentAsync(
+            scope.School!.Id,
+            request.AssessmentId,
+            cancellationToken);
+
+        if (assessment is null)
+            return Fail(AssessmentErrorCode.AssessmentNotFound);
+
+        if (!await CanManageAssessmentAsync(
+                scope,
+                assessment,
+                cancellationToken))
+        {
+            return Fail(AssessmentErrorCode.AccessDenied);
+        }
+
+        if (assessment.Status != AssessmentStatus.Draft)
+            return Fail(AssessmentErrorCode.AssessmentNotDraft);
+
+        var oldValues =
+            new Dictionary<string, object?>
+            {
+                ["subjectId"] = assessment.SubjectId,
+                ["classGroupId"] = assessment.ClassGroupId,
+                ["academicYearId"] = assessment.AcademicYearId,
+                ["termId"] = assessment.TermId,
+                ["title"] = assessment.Title,
+                ["assessmentDate"] = assessment.AssessmentDate,
+                ["maxScore"] = assessment.MaxScore,
+                ["status"] = assessment.Status.ToString()
+            };
+
+        await _repo.RemoveAssessmentAsync(
+            scope.School.Id,
+            assessment,
+            cancellationToken);
+
+        await QueueAuditAsync(
+            scope,
+            "Assessment.Deleted",
+            "Assessment",
+            assessment.Id,
+            oldValues,
+            newValues: null,
+            "Draft assessment deleted.",
+            cancellationToken);
+
+        return MapPersistence(
+            await _repo.SaveWithRowVersionAsync(
+                assessment,
+                request.RowVersion,
+                cancellationToken));
+    }
+
+    public async Task<AssessmentCommandResult> DeleteQuestionAsync(
+        Guid actorUserId,
+        DeleteAssessmentQuestionRequest request,
+        CancellationToken cancellationToken = default)
+    {
+        var context = await ResolveQuestionContextAsync(
+            actorUserId,
+            request.QuestionId,
+            cancellationToken);
+
+        if (!context.Succeeded)
+            return Fail(context.Error!.Value);
+
+        var assessment = context.Assessment!;
+        var question = context.Question!;
+
+        if (assessment.Status != AssessmentStatus.Draft)
+            return Fail(AssessmentErrorCode.AssessmentNotDraft);
+
+        var oldValues =
+            new Dictionary<string, object?>
+            {
+                ["assessmentId"] = question.AssessmentId,
+                ["promptLength"] = question.Prompt.Length,
+                ["maxScore"] = question.MaxScore,
+                ["order"] = question.Order
+            };
+
+        await _repo.RemoveQuestionAsync(
+            context.Scope!.School!.Id,
+            question,
+            cancellationToken);
+
+        assessment.UpdatedAtUtc = DateTime.UtcNow;
+
+        await QueueAuditAsync(
+            context.Scope,
+            "AssessmentQuestion.Deleted",
+            "AssessmentQuestion",
+            question.Id,
+            oldValues,
+            newValues: null,
+            "Draft assessment question deleted.",
             cancellationToken);
 
         return MapPersistence(

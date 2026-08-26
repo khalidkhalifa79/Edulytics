@@ -43,6 +43,7 @@ public sealed record AssessmentEditViewModel(AssessmentDetails Details);
 public sealed record AssessmentQuestionEditViewModel(
     Guid AssessmentId,
     AssessmentQuestionItem Question,
+    IReadOnlyList<AssessmentOutcomeItem> EligibleOutcomes,
     byte[] AssessmentRowVersion);
 
 public sealed record AssessmentResultsViewModel(AssessmentResultsWorkspace Workspace)

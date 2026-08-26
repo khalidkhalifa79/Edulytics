@@ -111,6 +111,16 @@ public interface IAssessmentRepository
         OutboxMessage message,
         CancellationToken cancellationToken = default);
 
+    Task RemoveAssessmentAsync(
+        Guid schoolId,
+        Assessment assessment,
+        CancellationToken cancellationToken = default);
+
+    Task RemoveQuestionAsync(
+        Guid schoolId,
+        AssessmentQuestion question,
+        CancellationToken cancellationToken = default);
+
     void RemoveMapping(QuestionLearningOutcome mapping);
 
     Task<AssessmentPersistenceResult> SaveAsync(
