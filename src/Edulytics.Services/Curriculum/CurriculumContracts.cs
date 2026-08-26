@@ -17,7 +17,10 @@ public enum CurriculumErrorCode
     DuplicateTopicOrder = 13,
     DuplicateOutcomeCode = 14,
     DuplicateOutcomeOrder = 15,
-    PersistenceError = 16
+    PersistenceError = 16,
+    FrameworkNotFound = 17,
+    CurriculumNotSelected = 18,
+    CurriculumFrameworkInUse = 19
 }
 
 public sealed record CurriculumCommandResult(
@@ -56,6 +59,10 @@ public sealed record CurriculumSubjectItem(
     string Name,
     string Code);
 
+public sealed record CurriculumFrameworkItem(
+    string Code,
+    string DisplayName);
+
 public sealed record LearningOutcomeItem(
     Guid Id,
     Guid TopicId,
@@ -76,7 +83,19 @@ public sealed record CurriculumDashboard(
     Guid SchoolId,
     IReadOnlyList<CurriculumGradeItem> GradeLevels,
     IReadOnlyList<CurriculumSubjectItem> Subjects,
-    IReadOnlyList<CurriculumTopicItem> Topics);
+    IReadOnlyList<CurriculumTopicItem> Topics)
+{
+    public IReadOnlyList<CurriculumFrameworkItem> Frameworks
+    {
+        get;
+        init;
+    } = [];
+}
+
+public sealed record SelectCurriculumFrameworkRequest(
+    Guid SubjectId,
+    Guid GradeLevelId,
+    string FrameworkCode);
 
 public sealed record CreateCurriculumTopicRequest(
     Guid SubjectId,

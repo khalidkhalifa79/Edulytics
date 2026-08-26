@@ -1,4 +1,5 @@
 using Edulytics.Core.Constants;
+using Edulytics.Core.Curriculum;
 using Edulytics.Core.Entities;
 using Edulytics.Core.Enums;
 using Edulytics.Core.Interfaces;
@@ -36,6 +37,78 @@ public sealed class CurriculumServiceTests
 
         Assert.Equal("G6.N.1", outcome.Code);
         Assert.Equal(25m, outcome.Weight);
+    }
+
+
+    [Fact]
+    public async Task SchoolAdmin_CanSelectVerifiedFramework_ThenCreateTopic()
+    {
+        using var f = CreateFixture(withAdoption: false);
+
+        var selected = await f.Service.SelectFrameworkAsync(
+            f.Admin.Id,
+            new SelectCurriculumFrameworkRequest(
+                f.Subject.Id,
+                f.Grade.Id,
+                MathematicsCurriculumPackRegistry.PolandCode));
+
+        Assert.True(selected.Succeeded);
+
+        var created = await f.Service.CreateTopicAsync(
+            f.Admin.Id,
+            new CreateCurriculumTopicRequest(
+                f.Subject.Id,
+                f.Grade.Id,
+                "Numbers",
+                1));
+
+        Assert.True(created.Succeeded);
+
+        var adoption = Assert.Single(
+            await f.Db.SchoolCurriculumAdoptions
+                .AsNoTracking()
+                .ToListAsync());
+
+        Assert.Equal(
+            f.FrameworkVersion.Id,
+            adoption.FrameworkVersionId);
+    }
+
+    [Fact]
+    public async Task CreateTopic_RequiresExplicitCurriculumSelection()
+    {
+        using var f = CreateFixture(withAdoption: false);
+
+        var result = await f.Service.CreateTopicAsync(
+            f.Admin.Id,
+            new CreateCurriculumTopicRequest(
+                f.Subject.Id,
+                f.Grade.Id,
+                "Numbers",
+                1));
+
+        Assert.False(result.Succeeded);
+        Assert.Equal(
+            CurriculumErrorCode.CurriculumNotSelected,
+            result.Error);
+    }
+
+    [Fact]
+    public async Task UnapprovedLegacyDefaultFramework_IsRejected()
+    {
+        using var f = CreateFixture(withAdoption: false);
+
+        var result = await f.Service.SelectFrameworkAsync(
+            f.Admin.Id,
+            new SelectCurriculumFrameworkRequest(
+                f.Subject.Id,
+                f.Grade.Id,
+                "EDULYTICS-DEFAULT"));
+
+        Assert.False(result.Succeeded);
+        Assert.Equal(
+            CurriculumErrorCode.FrameworkNotFound,
+            result.Error);
     }
 
     [Fact]
@@ -221,7 +294,8 @@ public sealed class CurriculumServiceTests
         return Assert.Single(dashboard.Value!.Topics);
     }
 
-    private static Fixture CreateFixture()
+    private static Fixture CreateFixture(
+        bool withAdoption = true)
     {
         var options =
             new DbContextOptionsBuilder<EdulyticsDbContext>()
@@ -242,9 +316,10 @@ public sealed class CurriculumServiceTests
         {
             Id = Guid.Parse("07500000-0000-0000-0000-000000000001"),
             OwnerSchoolId = null,
-            Code = "EDULYTICS-DEFAULT",
-            NormalizedCode = "EDULYTICS-DEFAULT",
-            Name = "Edulytics Default Curriculum",
+            Code = MathematicsCurriculumPackRegistry.PolandCode,
+            NormalizedCode = MathematicsCurriculumPackRegistry.PolandCode,
+            Name = "Polish National Curriculum Mathematics",
+            CountryCode = "PL",
             IsActive = true,
             CreatedAtUtc = DateTime.UtcNow,
             UpdatedAtUtc = DateTime.UtcNow
@@ -264,6 +339,26 @@ public sealed class CurriculumServiceTests
 
         db.CurriculumFrameworks.Add(framework);
         db.CurriculumFrameworkVersions.Add(version);
+
+        if (withAdoption)
+        {
+            db.SchoolCurriculumAdoptions.Add(
+                new SchoolCurriculumAdoption
+                {
+                    Id = Guid.NewGuid(),
+                    SchoolId = school.Id,
+                    AcademicYearId = null,
+                    GradeLevelId = grade.Id,
+                    SubjectId = subject.Id,
+                    FrameworkVersionId = version.Id,
+                    IsPrimary = true,
+                    IsActive = true,
+                    CreatedAtUtc = DateTime.UtcNow,
+                    UpdatedAtUtc = DateTime.UtcNow,
+                    RowVersion = BitConverter.GetBytes(1L)
+                });
+        }
+
         db.SaveChanges();
 
         var schools = new FakeSchoolRepository();
@@ -286,7 +381,8 @@ public sealed class CurriculumServiceTests
             admin,
             schools,
             users,
-            service);
+            service,
+            version);
     }
 
     private static School NewSchool()
@@ -354,7 +450,8 @@ public sealed class CurriculumServiceTests
         SchoolUserRecord Admin,
         FakeSchoolRepository Schools,
         FakeUserRepository Users,
-        CurriculumService Service)
+        CurriculumService Service,
+        CurriculumFrameworkVersion FrameworkVersion)
         : IDisposable
     {
         public void Dispose() => Db.Dispose();

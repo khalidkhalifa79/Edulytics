@@ -53,4 +53,15 @@
   <data name="SelectGrade" xml:space="preserve"><value>Select grade level</value></data>
   <data name="SelectTopic" xml:space="preserve"><value>Select topic</value></data>
   <data name="WeightHelp" xml:space="preserve"><value>Weight is a percentage greater than 0 and no more than 100. No sum-to-100 rule is imposed because the specification does not define one.</value></data>
+  <data name="FrameworkTitle" xml:space="preserve"><value>Curriculum framework</value></data>
+  <data name="FrameworkSubtitle" xml:space="preserve"><value>Choose the verified curriculum pack used by this grade and subject before creating school-authored topics.</value></data>
+  <data name="CurriculumFramework" xml:space="preserve"><value>Curriculum pack</value></data>
+  <data name="SelectFramework" xml:space="preserve"><value>Select curriculum pack</value></data>
+  <data name="UseFramework" xml:space="preserve"><value>Use curriculum</value></data>
+  <data name="FrameworkHelp" xml:space="preserve"><value>Available Mathematics packs are the four verified Edulytics packs. Official pack content remains immutable; topics and learning outcomes created below are school-authored additions under the selected pack.</value></data>
+  <data name="TopicRequiresFramework" xml:space="preserve"><value>First select and save a curriculum pack for this subject and grade.</value></data>
+  <data name="SuccessFrameworkSelected" xml:space="preserve"><value>Curriculum framework selected for this subject and grade.</value></data>
+  <data name="ErrorFrameworkNotFound" xml:space="preserve"><value>The selected verified curriculum pack is unavailable.</value></data>
+  <data name="ErrorCurriculumNotSelected" xml:space="preserve"><value>Select a curriculum pack for this subject and grade before creating a topic.</value></data>
+  <data name="ErrorCurriculumFrameworkInUse" xml:space="preserve"><value>This subject and grade already contain topics under another curriculum pack, so the curriculum cannot be changed here.</value></data>
 </root>

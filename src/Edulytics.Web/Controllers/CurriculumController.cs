@@ -40,7 +40,34 @@ public sealed class CurriculumController : Controller
             new CurriculumIndexViewModel(
                 result.Value.GradeLevels,
                 result.Value.Subjects,
-                result.Value.Topics));
+                result.Value.Topics)
+            {
+                Frameworks = result.Value.Frameworks
+            });
+    }
+
+
+    [HttpPost("framework")]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> SelectFramework(
+        Guid subjectId,
+        Guid gradeLevelId,
+        string frameworkCode,
+        CancellationToken cancellationToken)
+    {
+        if (!TryActor(out var actorId))
+            return Forbid();
+
+        var result = await _curriculum.SelectFrameworkAsync(
+            actorId,
+            new SelectCurriculumFrameworkRequest(
+                subjectId,
+                gradeLevelId,
+                frameworkCode),
+            cancellationToken);
+
+        SetFeedback(result, "SuccessFrameworkSelected");
+        return RedirectToAction(nameof(Index));
     }
 
     [HttpPost("topics")]
@@ -230,6 +257,9 @@ public sealed class CurriculumController : Controller
             CurriculumErrorCode.DuplicateTopicOrder => "ErrorDuplicateTopicOrder",
             CurriculumErrorCode.DuplicateOutcomeCode => "ErrorDuplicateOutcomeCode",
             CurriculumErrorCode.DuplicateOutcomeOrder => "ErrorDuplicateOutcomeOrder",
+            CurriculumErrorCode.FrameworkNotFound => "ErrorFrameworkNotFound",
+            CurriculumErrorCode.CurriculumNotSelected => "ErrorCurriculumNotSelected",
+            CurriculumErrorCode.CurriculumFrameworkInUse => "ErrorCurriculumFrameworkInUse",
             _ => "ErrorPersistence"
         };
 }

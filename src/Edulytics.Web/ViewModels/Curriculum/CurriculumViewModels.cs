@@ -7,6 +7,12 @@ public sealed record CurriculumIndexViewModel(
     IReadOnlyList<CurriculumSubjectItem> Subjects,
     IReadOnlyList<CurriculumTopicItem> Topics)
 {
+    public IReadOnlyList<CurriculumFrameworkItem> Frameworks
+    {
+        get;
+        init;
+    } = [];
+
     public string GradeName(Guid id) =>
         GradeLevels.FirstOrDefault(x => x.Id == id)?.Name ?? string.Empty;
 

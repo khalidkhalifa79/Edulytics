@@ -26,9 +26,68 @@
         <div class="school-alert school-alert-error" role="alert">@error</div>
     }
 
+
+    <section class="curriculum-create-grid">
+        <article class="curriculum-card">
+            <h2>@C["FrameworkTitle"]</h2>
+            <p>@C["FrameworkSubtitle"]</p>
+
+            <form asp-action="SelectFramework"
+                  method="post"
+                  class="curriculum-form">
+                @Html.AntiForgeryToken()
+
+                <label for="frameworkSubjectId">@C["Subject"]</label>
+                <select id="frameworkSubjectId"
+                        name="subjectId"
+                        required>
+                    <option value="">@C["SelectSubject"]</option>
+                    @foreach (var subject in Model.Subjects)
+                    {
+                        <option value="@subject.Id">
+                            @subject.Name (@subject.Code)
+                        </option>
+                    }
+                </select>
+
+                <label for="frameworkGradeLevelId">@C["GradeLevel"]</label>
+                <select id="frameworkGradeLevelId"
+                        name="gradeLevelId"
+                        required>
+                    <option value="">@C["SelectGrade"]</option>
+                    @foreach (var grade in Model.GradeLevels)
+                    {
+                        <option value="@grade.Id">@grade.Name</option>
+                    }
+                </select>
+
+                <label for="frameworkCode">@C["CurriculumFramework"]</label>
+                <select id="frameworkCode"
+                        name="frameworkCode"
+                        required>
+                    <option value="">@C["SelectFramework"]</option>
+                    @foreach (var framework in Model.Frameworks)
+                    {
+                        <option value="@framework.Code">
+                            @framework.DisplayName
+                        </option>
+                    }
+                </select>
+
+                <p class="curriculum-help">@C["FrameworkHelp"]</p>
+
+                <button type="submit"
+                        class="school-button school-button-primary">
+                    @C["UseFramework"]
+                </button>
+            </form>
+        </article>
+    </section>
+
     <section class="curriculum-create-grid">
         <article class="curriculum-card">
             <h2>@C["CreateTopic"]</h2>
+            <p class="curriculum-help">@C["TopicRequiresFramework"]</p>
             <form asp-action="CreateTopic"
                   method="post"
                   class="curriculum-form">

@@ -53,4 +53,15 @@
   <data name="SelectGrade" xml:space="preserve"><value>Wybierz poziom klasy</value></data>
   <data name="SelectTopic" xml:space="preserve"><value>Wybierz temat</value></data>
   <data name="WeightHelp" xml:space="preserve"><value>Waga jest wartością procentową większą od 0 i nie większą niż 100. Nie narzucamy sumy 100, ponieważ specyfikacja nie definiuje takiej zasady.</value></data>
+  <data name="FrameworkTitle" xml:space="preserve"><value>Program bazowy</value></data>
+  <data name="FrameworkSubtitle" xml:space="preserve"><value>Wybierz zweryfikowany program bazowy używany dla tej klasy i przedmiotu przed dodaniem tematów szkolnych.</value></data>
+  <data name="CurriculumFramework" xml:space="preserve"><value>Pakiet programu</value></data>
+  <data name="SelectFramework" xml:space="preserve"><value>Wybierz pakiet programu</value></data>
+  <data name="UseFramework" xml:space="preserve"><value>Użyj programu</value></data>
+  <data name="FrameworkHelp" xml:space="preserve"><value>Dostępne pakiety matematyki to cztery zweryfikowane pakiety Edulityks. Oficjalna zawartość pakietu pozostaje niezmienna; tematy i efekty uczenia się tworzone poniżej są dodatkami szkoły w ramach wybranego pakietu.</value></data>
+  <data name="TopicRequiresFramework" xml:space="preserve"><value>Najpierw wybierz i zapisz pakiet programu dla tego przedmiotu i poziomu klasy.</value></data>
+  <data name="SuccessFrameworkSelected" xml:space="preserve"><value>Wybrano program bazowy dla tego przedmiotu i poziomu klasy.</value></data>
+  <data name="ErrorFrameworkNotFound" xml:space="preserve"><value>Wybrany zweryfikowany pakiet programu jest niedostępny.</value></data>
+  <data name="ErrorCurriculumNotSelected" xml:space="preserve"><value>Przed utworzeniem tematu wybierz pakiet programu dla tego przedmiotu i poziomu klasy.</value></data>
+  <data name="ErrorCurriculumFrameworkInUse" xml:space="preserve"><value>Ten przedmiot i poziom klasy zawierają już tematy w innym pakiecie programu, dlatego programu nie można tutaj zmienić.</value></data>
 </root>
