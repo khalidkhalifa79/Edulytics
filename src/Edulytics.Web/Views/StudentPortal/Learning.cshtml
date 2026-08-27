@@ -1,5 +1,6 @@
 @model Edulytics.Web.ViewModels.StudentPortal.StudentLearningViewModel
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.StudentResource> S
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.LessonContentResource> L
 @{
     Layout = "_StudentLayout";
     ViewData["Title"] = S["LearningTitle"].Value;
@@ -68,3 +69,34 @@ else
         }
     </div>
 }
+<section class="student-published-lessons">
+    <header class="student-section-header">
+        <h2>@L["AvailableLessons"]</h2>
+    </header>
+
+    @if (Model.Lessons.Count == 0)
+    {
+        <div class="student-empty-state">@L["NoPublishedLessons"]</div>
+    }
+    else
+    {
+        <div class="student-lesson-grid">
+            @foreach (var lesson in Model.Lessons)
+            {
+                <article class="student-lesson-card">
+                    <span class="student-subject-code">@lesson.SubjectCode</span>
+                    <h3>@lesson.Title</h3>
+                    <p>@lesson.TopicName</p>
+                    <div class="student-learning-meta">
+                        <span>@L["Grade"]: <strong>@lesson.GradeName</strong></span>
+                        <span>@L["Framework"]: <strong>@lesson.FrameworkName</strong></span>
+                    </div>
+                    <a class="student-primary-link"
+                       asp-controller="StudentPortal"
+                       asp-action="Lesson"
+                       asp-route-id="@lesson.Id">@L["OpenLesson"]</a>
+                </article>
+            }
+        </div>
+    }
+</section>

@@ -155,6 +155,9 @@ builder.Services
     .AddStudentPortalPhase28();
 
 builder.Services
+    .AddLessonContentPhase29();
+
+builder.Services
     .AddInvitationEmailDelivery(
         builder.Configuration);
 

@@ -1,5 +1,7 @@
 using System.Security.Claims;
+using System.Globalization;
 using Edulytics.Services.Notifications;
+using Edulytics.Services.LessonContent;
 using Edulytics.Services.StudentPortal;
 using Edulytics.Web.ViewModels.StudentPortal;
 using Microsoft.AspNetCore.Authorization;
@@ -13,13 +15,16 @@ public sealed class StudentPortalController : Controller
 {
     private readonly IStudentPortalService _portal;
     private readonly INotificationService _notifications;
+    private readonly ILessonContentService _lessonContent;
 
     public StudentPortalController(
         IStudentPortalService portal,
-        INotificationService notifications)
+        INotificationService notifications,
+        ILessonContentService lessonContent)
     {
         _portal = portal;
         _notifications = notifications;
+        _lessonContent = lessonContent;
     }
 
     [HttpGet("")]
@@ -56,11 +61,59 @@ public sealed class StudentPortalController : Controller
         var workspace =
             await WorkspaceAsync(cancellationToken);
 
-        return workspace.Result ??
-            View(
-                nameof(Learning),
-                new StudentLearningViewModel(
-                    workspace.Workspace!));
+        if (workspace.Result is not null)
+            return workspace.Result;
+
+        if (!TryActor(out var actorId))
+            return Forbid();
+
+        var lessons =
+            await _lessonContent.ListPublishedForStudentAsync(
+                actorId,
+                CultureInfo.CurrentUICulture.Name,
+                cancellationToken);
+
+        if (lessons.Value is null)
+            return lessons.Error == LessonContentErrorCode.AccessDenied
+                ? Forbid()
+                : NotFound();
+
+        return View(
+            nameof(Learning),
+            new StudentLearningViewModel(
+                workspace.Workspace!,
+                lessons.Value));
+    }
+
+    [HttpGet("learning/lesson/{id:guid}")]
+    public async Task<IActionResult> Lesson(
+        Guid id,
+        CancellationToken cancellationToken)
+    {
+        if (!TryActor(out var actorId))
+            return Forbid();
+
+        var workspace =
+            await _portal.GetWorkspaceAsync(
+                actorId,
+                cancellationToken);
+
+        if (workspace.Value is null)
+            return HandlePortalError(workspace.Error);
+
+        var lesson =
+            await _lessonContent.GetPublishedForStudentAsync(
+                actorId,
+                id,
+                CultureInfo.CurrentUICulture.Name,
+                cancellationToken);
+
+        if (lesson.Value is null)
+            return lesson.Error == LessonContentErrorCode.AccessDenied
+                ? Forbid()
+                : NotFound();
+
+        return View(nameof(Lesson), lesson.Value);
     }
 
     [HttpGet("assessments")]

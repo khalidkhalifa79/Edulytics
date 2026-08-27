@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="PageTitle" xml:space="preserve"><value>Lesson content</value></data>
+  <data name="PageSubtitle" xml:space="preserve"><value>Build Edulytics lessons under the selected curriculum and align every lesson to official learning outcomes.</value></data>
+  <data name="PedagogicalLayerNotice" xml:space="preserve"><value>Lessons are an Edulytics pedagogical layer. Official outcome codes and descriptions remain the curriculum authority.</value></data>
+  <data name="AddLesson" xml:space="preserve"><value>Add lesson</value></data>
+  <data name="NoTopics" xml:space="preserve"><value>No curriculum topics are available yet.</value></data>
+  <data name="NoLessons" xml:space="preserve"><value>No lessons have been created for this topic.</value></data>
+  <data name="NoOutcomesForTopic" xml:space="preserve"><value>This topic has no mapped official outcomes, so a lesson cannot be created yet.</value></data>
+  <data name="Framework" xml:space="preserve"><value>Curriculum</value></data>
+  <data name="Grade" xml:space="preserve"><value>Grade</value></data>
+  <data name="Subject" xml:space="preserve"><value>Subject</value></data>
+  <data name="Topic" xml:space="preserve"><value>Topic</value></data>
+  <data name="Status" xml:space="preserve"><value>Status</value></data>
+  <data name="Order" xml:space="preserve"><value>Lesson order</value></data>
+  <data name="Outcomes" xml:space="preserve"><value>Official learning outcomes</value></data>
+  <data name="EnglishContent" xml:space="preserve"><value>English lesson content</value></data>
+  <data name="PolishContent" xml:space="preserve"><value>Polish lesson content (optional)</value></data>
+  <data name="LessonTitle" xml:space="preserve"><value>Lesson title</value></data>
+  <data name="Explanation" xml:space="preserve"><value>Explanation</value></data>
+  <data name="KeyConceptsAndRules" xml:space="preserve"><value>Key concepts and rules</value></data>
+  <data name="WorkedExamples" xml:space="preserve"><value>Worked examples</value></data>
+  <data name="StepByStepSolutions" xml:space="preserve"><value>Step-by-step solutions</value></data>
+  <data name="CommonMistakes" xml:space="preserve"><value>Common mistakes</value></data>
+  <data name="QuickSummary" xml:space="preserve"><value>Quick summary</value></data>
+  <data name="SaveDraft" xml:space="preserve"><value>Save draft</value></data>
+  <data name="SubmitForReview" xml:space="preserve"><value>Submit for review</value></data>
+  <data name="ReturnToDraft" xml:space="preserve"><value>Return to draft</value></data>
+  <data name="Publish" xml:space="preserve"><value>Publish</value></data>
+  <data name="BackToLessons" xml:space="preserve"><value>Back to lesson content</value></data>
+  <data name="ReadOnlyNotice" xml:space="preserve"><value>This lesson is read-only in your current role or workflow state.</value></data>
+  <data name="DraftStatus" xml:space="preserve"><value>Draft</value></data>
+  <data name="InReviewStatus" xml:space="preserve"><value>In review</value></data>
+  <data name="PublishedStatus" xml:space="preserve"><value>Published</value></data>
+  <data name="SavedAsDraft" xml:space="preserve"><value>Lesson saved as draft.</value></data>
+  <data name="DraftUpdated" xml:space="preserve"><value>Draft updated.</value></data>
+  <data name="SubmittedForReview" xml:space="preserve"><value>Lesson submitted for review.</value></data>
+  <data name="ReturnedToDraft" xml:space="preserve"><value>Lesson returned to draft.</value></data>
+  <data name="Published" xml:space="preserve"><value>Lesson published.</value></data>
+  <data name="ErrorInvalidOrder" xml:space="preserve"><value>Lesson order must be greater than zero.</value></data>
+  <data name="ErrorDuplicateOrder" xml:space="preserve"><value>Another lesson already uses this order in the topic.</value></data>
+  <data name="ErrorOutcomeRequired" xml:space="preserve"><value>Select at least one official learning outcome.</value></data>
+  <data name="ErrorOutcomeNotInTopic" xml:space="preserve"><value>A selected learning outcome does not belong to this topic.</value></data>
+  <data name="ErrorEnglishTitleRequired" xml:space="preserve"><value>An English lesson title is required.</value></data>
+  <data name="ErrorEnglishContentIncomplete" xml:space="preserve"><value>Complete all English lesson sections before review or publication.</value></data>
+  <data name="ErrorInvalidState" xml:space="preserve"><value>This action is not valid for the lesson's current workflow state.</value></data>
+  <data name="ErrorPublishedImmutable" xml:space="preserve"><value>Published lesson content is immutable in Phase 29.</value></data>
+  <data name="ErrorConcurrencyConflict" xml:space="preserve"><value>The lesson changed in another request. Reload and try again.</value></data>
+  <data name="ErrorConstraintViolation" xml:space="preserve"><value>The lesson could not be saved because of a data constraint.</value></data>
+  <data name="ErrorGeneric" xml:space="preserve"><value>The lesson content request could not be completed.</value></data>
+  <data name="AvailableLessons" xml:space="preserve"><value>Available lessons</value></data>
+  <data name="NoPublishedLessons" xml:space="preserve"><value>No published lessons are available for your current curriculum yet.</value></data>
+  <data name="OpenLesson" xml:space="preserve"><value>Open lesson</value></data>
+  <data name="AlignedOutcomes" xml:space="preserve"><value>Aligned official outcomes</value></data>
+  <data name="LessonNotAvailable" xml:space="preserve"><value>This lesson is not available for your current enrollment or has not been published.</value></data>
+  <data name="PublishedOn" xml:space="preserve"><value>Published</value></data>
+</root>

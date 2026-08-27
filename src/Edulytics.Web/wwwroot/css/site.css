@@ -6602,3 +6602,68 @@ body:not(.ed-auth-body):not(.ed-public-body) header .localized-brand-logo,
 /* EDULYTICS PHASE 28 STUDENT ERROR PROPAGATION FIX */
 
 /* EDULYTICS STUDENT DASHBOARD TITLE FIX */
+
+/* EDULYTICS PHASE 29 LESSON CONTENT ENGINE */
+.lesson-content-page,
+.lesson-editor-page,
+.student-published-lessons,
+.student-lesson-content-section {
+    display: grid;
+    gap: 1rem;
+}
+
+.lesson-topic-card,
+.lesson-summary-card,
+.lesson-editor-section,
+.student-lesson-card,
+.student-lesson-content-section,
+.student-outcome-item {
+    border: 1px solid rgba(127, 127, 127, 0.28);
+    border-radius: 0.75rem;
+    padding: 1rem;
+}
+
+.lesson-topic-header,
+.lesson-summary-header,
+.lesson-editor-actions,
+.student-section-header,
+.student-lesson-detail-meta {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.lesson-form-grid,
+.student-lesson-grid,
+.student-outcome-list {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.lesson-editor-section textarea {
+    width: 100%;
+    min-height: 8rem;
+}
+
+.lesson-outcome-list {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.lesson-outcome-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.student-primary-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+}
+
+.student-lesson-text {
+    white-space: pre-wrap;
+}
