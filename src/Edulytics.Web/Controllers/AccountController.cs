@@ -1,3 +1,4 @@
+using Edulytics.Core.Constants;
 using System.Globalization;
 using Edulytics.Data.Identity;
 using Edulytics.Services.Users;
@@ -132,13 +133,26 @@ public sealed class AccountController : Controller
             return Redirect(returnUrl!);
         }
 
-        return access.IsPlatformAdministrator
-            ? RedirectToAction(
+        if (access.IsPlatformAdministrator)
+        {
+            return RedirectToAction(
                 "Dashboard",
-                "Platform")
-            : RedirectToAction(
+                "Platform");
+        }
+
+        if (string.Equals(
+                access.Role,
+                RoleNames.Student,
+                StringComparison.Ordinal))
+        {
+            return RedirectToAction(
                 "Dashboard",
-                "SchoolHome");
+                "StudentPortal");
+        }
+
+        return RedirectToAction(
+            "Dashboard",
+            "SchoolHome");
     }
 
     [AllowAnonymous]

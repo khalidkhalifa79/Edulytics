@@ -1,0 +1,136 @@
+@model Edulytics.Web.ViewModels.StudentPortal.StudentDashboardViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.StudentResource> S
+@{
+    Layout = "_StudentLayout";
+    ViewData["Title"] = S["Dashboard"].Value;
+    var enrollment = Model.Workspace.Enrollments.FirstOrDefault();
+}
+<section class="student-hero">
+    <div>
+        <span class="student-eyebrow">@S["WelcomeBack"]</span>
+        <h1>@Model.Workspace.DisplayName</h1>
+        <p>@S["DashboardSubtitle"]</p>
+    </div>
+    <div class="student-profile-pill">
+        <span>@S["StudentNumber"]</span>
+        <strong>@Model.Workspace.StudentNumber</strong>
+    </div>
+</section>
+
+<section class="student-summary-grid">
+    <article class="student-summary-card">
+        <span>@S["School"]</span>
+        <strong>@Model.Workspace.SchoolName</strong>
+    </article>
+    <article class="student-summary-card">
+        <span>@S["ClassAndGrade"]</span>
+        <strong>
+            @(enrollment is null
+                ? "—"
+                : $"{enrollment.ClassName} · {enrollment.GradeName}")
+        </strong>
+    </article>
+    <article class="student-summary-card">
+        <span>@S["ActiveAssessments"]</span>
+        <strong>@Model.Workspace.Assessments.Count</strong>
+    </article>
+    <article class="student-summary-card">
+        <span>@S["UnreadNotifications"]</span>
+        <strong>@Model.UnreadNotifications</strong>
+    </article>
+</section>
+
+<section class="student-dashboard-grid">
+    <article class="student-panel student-learning-panel">
+        <div class="student-panel-heading">
+            <div>
+                <span class="student-eyebrow">@S["LearningSubjects"]</span>
+                <h2>@S["MyLearning"]</h2>
+            </div>
+            <a class="student-primary-link"
+               asp-action="Learning">
+                @S["OpenLearning"]
+            </a>
+        </div>
+
+        @if (Model.Workspace.Learning.Count == 0)
+        {
+            <p class="student-empty">@S["NoLearningYet"]</p>
+        }
+        else
+        {
+            <div class="student-subject-chips">
+                @foreach (var item in Model.Workspace.Learning.Take(6))
+                {
+                    <span>
+                        <strong>@item.SubjectName</strong>
+                        <small>@item.FrameworkName</small>
+                    </span>
+                }
+            </div>
+        }
+    </article>
+
+    <article class="student-panel">
+        <div class="student-panel-heading">
+            <div>
+                <span class="student-eyebrow">@S["ActiveAssessments"]</span>
+                <h2>@Model.Workspace.Assessments.Count</h2>
+            </div>
+            <a class="student-secondary-link"
+               asp-action="Assessments">
+                @S["ViewAssessments"]
+            </a>
+        </div>
+
+        @if (Model.Workspace.Assessments.Count == 0)
+        {
+            <p class="student-empty">@S["NoActiveAssessments"]</p>
+        }
+        else
+        {
+            <div class="student-compact-list">
+                @foreach (var item in Model.Workspace.Assessments.Take(4))
+                {
+                    <div>
+                        <strong>@item.Title</strong>
+                        <span>@item.SubjectName · @item.AssessmentDate.ToString("yyyy-MM-dd")</span>
+                    </div>
+                }
+            </div>
+        }
+    </article>
+
+    <article class="student-panel">
+        <div class="student-panel-heading">
+            <div>
+                <span class="student-eyebrow">@S["RecentResults"]</span>
+                <h2>@S["MyResults"]</h2>
+            </div>
+            <a class="student-secondary-link"
+               asp-action="Results">
+                @S["ViewResults"]
+            </a>
+        </div>
+
+        @if (Model.RecentResults.Count == 0)
+        {
+            <p class="student-empty">@S["NoResultsYet"]</p>
+        }
+        else
+        {
+            <div class="student-result-stack">
+                @foreach (var item in Model.RecentResults)
+                {
+                    <div>
+                        <span>
+                            <strong>@item.AssessmentTitle</strong>
+                            <small>@item.SubjectName</small>
+                        </span>
+                        <strong>@item.Percentage.ToString("0.##")%</strong>
+                    </div>
+                }
+            </div>
+        }
+    </article>
+</section>
