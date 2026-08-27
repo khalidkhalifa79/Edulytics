@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using Edulytics.Services.Users;
+using Edulytics.Services.StudentSetup;
 
 namespace Edulytics.Web.ViewModels.SchoolUsers;
 
@@ -47,6 +48,9 @@ public sealed class SchoolUserDetailsViewModel
 
     public IReadOnlyList<SchoolUserRoleOptionViewModel>
         RoleOptions { get; init; } = [];
+
+    public StudentRoleProvisioningContext?
+        StudentSetup { get; init; }
 }
 
 public sealed class SchoolHomeViewModel

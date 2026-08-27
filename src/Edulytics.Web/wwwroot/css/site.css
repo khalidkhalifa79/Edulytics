@@ -6458,3 +6458,143 @@ body:not(.ed-auth-body):not(.ed-public-body) header .localized-brand-logo,
         margin-left: 12px;
     }
 }
+
+/* EDULYTICS PHASE 28 ROLE CONVERSION FIX */
+.student-role-setup-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.student-role-field {
+    display: grid;
+    gap: .4rem;
+}
+
+.student-role-field > span {
+    font-size: .82rem;
+    font-weight: 700;
+}
+
+.student-role-field input,
+.student-role-field select,
+.student-role-setup-form > select {
+    width: 100%;
+}
+
+.student-role-setup-fields {
+    display: grid;
+    gap: .9rem;
+    padding: 1rem;
+    border: 1px solid var(--border-color, #d9dde5);
+    border-radius: .9rem;
+    background: var(--surface-color, #fff);
+}
+
+.student-role-setup-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: .8rem;
+}
+
+.student-role-setup-heading p {
+    margin: .25rem 0 0;
+    opacity: .78;
+}
+
+.student-setup-state {
+    flex: 0 0 auto;
+    border-radius: 999px;
+    padding: .3rem .65rem;
+    font-size: .76rem;
+    font-weight: 800;
+}
+
+.student-setup-state.is-complete {
+    background: rgba(22, 163, 74, .12);
+}
+
+.student-setup-state.is-incomplete {
+    background: rgba(217, 119, 6, .12);
+}
+
+.student-setup-current {
+    padding: .7rem .8rem;
+    border-radius: .7rem;
+    background: rgba(37, 99, 235, .06);
+}
+
+.student-role-setup-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .8rem;
+}
+
+.student-access-body {
+    margin: 0;
+    min-height: 100vh;
+    background: #f5f7fb;
+}
+
+.student-access-shell {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.student-access-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: #fff;
+    border-bottom: 1px solid var(--border-color, #d9dde5);
+}
+
+.student-access-brand {
+    display: inline-flex;
+    width: 190px;
+    max-width: 42vw;
+}
+
+.student-access-brand img {
+    max-width: 100%;
+    height: auto;
+}
+
+.student-access-account {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    min-width: 0;
+}
+
+.student-access-account > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.student-access-content {
+    width: min(760px, calc(100% - 2rem));
+    margin: auto;
+    padding: 2rem 0;
+}
+
+@media (max-width: 720px) {
+    .student-role-setup-heading,
+    .student-access-topbar,
+    .student-access-account {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .student-role-setup-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .student-access-brand {
+        width: 170px;
+    }
+}
