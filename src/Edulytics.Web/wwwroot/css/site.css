@@ -6945,3 +6945,15 @@ body:not(.ed-auth-body):not(.ed-public-body) header .localized-brand-logo,
         grid-column: 2;
     }
 }
+
+/* EDULYTICS PHASE 29 CANONICAL CONTENT ARCHITECTURE */
+.lesson-content-coverage-badge{display:inline-flex;align-items:center;width:fit-content;padding:.38rem .7rem;border-radius:999px;background:#eef2ff;color:#4c56a9;font-size:.74rem;font-weight:800}
+.lesson-content-row__title{display:grid;gap:.2rem}
+.lesson-content-row__title small{color:#7a8599;font-size:.72rem;font-weight:600}
+.lesson-content-status--verified{background:#eef4ff;color:#365f9c}
+.lesson-content-status--notstarted{background:#f4f5f8;color:#7a8292}
+.lesson-content-readonly-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem}
+.lesson-content-readonly-grid>div{display:grid;gap:.3rem;padding:.8rem .9rem;border:1px solid #e5e9f1;border-radius:12px;background:#fafbfe}
+.lesson-content-readonly-grid small{color:#7a8599;font-size:.72rem;font-weight:700}
+.lesson-content-readonly-grid strong{color:#25334d;overflow-wrap:anywhere}
+@media(max-width:760px){.lesson-content-readonly-grid{grid-template-columns:1fr}}

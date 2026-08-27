@@ -1,90 +1,48 @@
 @model Edulytics.Web.ViewModels.LessonContent.LessonContentIndexViewModel
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.LessonContentResource> L
 @using Edulytics.Core.Enums
-@{
-    Layout = "_AppLayout";
-    ViewData["Title"] = L["PageTitle"].Value;
-}
+@{ Layout="_AppLayout"; ViewData["Title"]=L["PageTitle"].Value; }
 
-<header class="ed-v3-page-header lesson-content-header">
-    <div>
-        <p class="ed-v3-eyebrow">@L["PageTitle"]</p>
-        <h1>@L["PageTitle"]</h1>
-        <p>@L["PageSubtitle"]</p>
-    </div>
+<header class="ed-v3-page-header lesson-content-header"><div>
+<p class="ed-v3-eyebrow">@L["CanonicalLibrary"]</p><h1>@L["PageTitle"]</h1><p>@L["PageSubtitle"]</p>
+</div></header>
+<div class="lesson-content-notice">@L["CanonicalNotice"]</div>
+
+@if(Model.Dashboard.Curricula.Count==0){<div class="lesson-content-empty">@L["NoAdoptedCurricula"]</div>}
+else{
+<div class="lesson-content-topic-stack">
+@foreach(var group in Model.Dashboard.Curricula){
+<section class="lesson-content-topic-card">
+<header class="lesson-content-topic-card__header"><div>
+<span class="student-subject-code">@group.SubjectCode</span><h2>@group.FrameworkName</h2>
+<div class="lesson-content-meta">
+<span>@L["Grade"]: <strong>@group.GradeName</strong></span>
+<span>@L["Version"]: <strong>@group.FrameworkVersionName</strong></span>
+<span>@L["Coverage"]: <strong>@group.ProductionReadyLessons / @group.TotalLessons</strong></span>
+</div></div>
+<span class="lesson-content-coverage-badge">@group.ProductionReadyLessons / @group.TotalLessons @L["ProductionReady"]</span>
 </header>
-
-<div class="lesson-content-notice">@L["PedagogicalLayerNotice"]</div>
-
-@if (TempData["LessonContentMessage"] is string message)
-{
-    <div class="lesson-content-message" role="status">@message</div>
+@if(group.Lessons.Count==0){<p class="lesson-content-empty">@L["NoCanonicalLessons"]</p>}
+else{
+<div class="lesson-content-list">
+@foreach(var lesson in group.Lessons){
+var statusText=lesson.Status switch{
+CanonicalLessonContentStatus.Draft=>L["InPreparation"].Value,
+CanonicalLessonContentStatus.Verified=>L["Verified"].Value,
+CanonicalLessonContentStatus.Published=>L["ProductionReady"].Value,
+_=>L["NotStarted"].Value};
+var statusClass=lesson.Status switch{
+CanonicalLessonContentStatus.Draft=>"draft",
+CanonicalLessonContentStatus.Verified=>"verified",
+CanonicalLessonContentStatus.Published=>"published",
+_=>"notstarted"};
+<a class="lesson-content-row" asp-controller="LessonContent" asp-action="Detail" asp-route-id="@lesson.LessonNodeId">
+<span class="lesson-content-row__order">@lesson.SortOrder</span>
+<span class="lesson-content-row__title">@lesson.LessonTitle
+@if(!string.IsNullOrWhiteSpace(lesson.UnitTitle)){<small>@lesson.UnitTitle</small>}
+</span>
+<span class="lesson-content-status lesson-content-status--@statusClass">@statusText</span></a>
 }
-@if (TempData["LessonContentError"] is string error)
-{
-    <div class="lesson-content-error" role="alert">@error</div>
-}
-
-@if (Model.Dashboard.Topics.Count == 0)
-{
-    <div class="lesson-content-empty">@L["NoTopics"]</div>
-}
-else
-{
-    <div class="lesson-content-topic-stack">
-        @foreach (var group in Model.Dashboard.Topics)
-        {
-            <section class="lesson-content-topic-card">
-                <header class="lesson-content-topic-card__header">
-                    <div>
-                        <h2>@group.Topic.TopicName</h2>
-                        <div class="lesson-content-meta">
-                            <span>@L["Subject"]: <strong>@group.Topic.SubjectName</strong></span>
-                            <span>@L["Grade"]: <strong>@group.Topic.GradeName</strong></span>
-                            <span>@L["Framework"]: <strong>@group.Topic.FrameworkName</strong></span>
-                        </div>
-                    </div>
-                    @if (Model.CanAuthor && group.Topic.Outcomes.Count > 0)
-                    {
-                        <a class="btn btn-primary"
-                           asp-controller="LessonContent"
-                           asp-action="Create"
-                           asp-route-topicId="@group.Topic.TopicId">@L["AddLesson"]</a>
-                    }
-                </header>
-
-                @if (group.Topic.Outcomes.Count == 0)
-                {
-                    <p class="lesson-content-warning">@L["NoOutcomesForTopic"]</p>
-                }
-
-                @if (group.Lessons.Count == 0)
-                {
-                    <p class="lesson-content-empty">@L["NoLessons"]</p>
-                }
-                else
-                {
-                    <div class="lesson-content-list">
-                        @foreach (var lesson in group.Lessons)
-                        {
-                            var statusText = lesson.Status switch
-                            {
-                                LearningLessonStatus.Draft => L["DraftStatus"].Value,
-                                LearningLessonStatus.InReview => L["InReviewStatus"].Value,
-                                _ => L["PublishedStatus"].Value
-                            };
-                            <a class="lesson-content-row"
-                               asp-controller="LessonContent"
-                               asp-action="Edit"
-                               asp-route-id="@lesson.Id">
-                                <span class="lesson-content-row__order">@lesson.Order</span>
-                                <span class="lesson-content-row__title">@lesson.Title</span>
-                                <span class="lesson-content-status lesson-content-status--@lesson.Status.ToString().ToLowerInvariant()">@statusText</span>
-                            </a>
-                        }
-                    </div>
-                }
-            </section>
-        }
-    </div>
-}
+</div>}
+</section>}
+</div>}

@@ -5,143 +5,61 @@ using Edulytics.Data.Contexts;
 using Edulytics.Services.LessonContent;
 using Microsoft.EntityFrameworkCore;
 using Xunit;
-
 namespace Edulytics.Tests.Phase29;
 
 public sealed class Phase29LessonContentEngineTests
 {
-    [Fact]
-    public void SubjectSupervisorCanAuthor()
-    {
-        Assert.True(LessonContentPolicy.CanAuthor([RoleNames.SubjectSupervisor]));
-    }
+    [Fact] public void CanonicalLessonContentIsNotSchoolScoped()
+    { Assert.Null(typeof(CurriculumLessonContent).GetProperty("SchoolId"));Assert.Null(typeof(CurriculumLessonContentTranslation).GetProperty("SchoolId")); }
 
-    [Fact]
-    public void SchoolAdminCannotAuthor()
-    {
-        Assert.False(LessonContentPolicy.CanAuthor([RoleNames.SchoolAdmin]));
-        Assert.True(LessonContentPolicy.CanReadStaff([RoleNames.SchoolAdmin]));
-    }
+    [Fact] public void CanonicalContentUsesOfficialLessonNodeIdentity()
+    { Assert.NotNull(typeof(CurriculumLessonContent).GetProperty(nameof(CurriculumLessonContent.LessonNodeId)));Assert.NotNull(typeof(CurriculumLessonContent).GetProperty(nameof(CurriculumLessonContent.FrameworkVersionId))); }
 
-    [Fact]
-    public void TeacherCannotAuthor()
-    {
-        Assert.False(LessonContentPolicy.CanAuthor([RoleNames.Teacher]));
-        Assert.True(LessonContentPolicy.CanReadStaff([RoleNames.Teacher]));
-    }
+    [Fact] public void EfModelMapsCanonicalTables()
+    { using var db=CreateDb();Assert.Equal("CurriculumLessonContents",db.Model.FindEntityType(typeof(CurriculumLessonContent))!.GetTableName());Assert.Equal("CurriculumLessonContentTranslations",db.Model.FindEntityType(typeof(CurriculumLessonContentTranslation))!.GetTableName()); }
 
-    [Fact]
-    public void DraftCanMoveToReview()
-    {
-        Assert.True(LessonContentPolicy.CanTransition(
-            LearningLessonStatus.Draft,
-            LearningLessonStatus.InReview));
-    }
+    [Fact] public void EfModelUsesUniqueCanonicalLessonNode()
+    { using var db=CreateDb();var e=db.Model.FindEntityType(typeof(CurriculumLessonContent))!;Assert.Contains(e.GetIndexes(),x=>x.IsUnique&&x.Properties.Count==1&&x.Properties[0].Name==nameof(CurriculumLessonContent.LessonNodeId)); }
 
-    [Fact]
-    public void ReviewCanReturnToDraft()
-    {
-        Assert.True(LessonContentPolicy.CanTransition(
-            LearningLessonStatus.InReview,
-            LearningLessonStatus.Draft));
-    }
+    [Fact] public void CanonicalContentUsesConcurrencyTokens()
+    { using var db=CreateDb();Assert.True(db.Model.FindEntityType(typeof(CurriculumLessonContent))!.FindProperty(nameof(CurriculumLessonContent.RowVersion))!.IsConcurrencyToken);Assert.True(db.Model.FindEntityType(typeof(CurriculumLessonContentTranslation))!.FindProperty(nameof(CurriculumLessonContentTranslation.RowVersion))!.IsConcurrencyToken); }
 
-    [Fact]
-    public void ReviewCanPublish()
-    {
-        Assert.True(LessonContentPolicy.CanTransition(
-            LearningLessonStatus.InReview,
-            LearningLessonStatus.Published));
-    }
+    [Fact] public void CanonicalLifecycleIsCentral()
+    { Assert.Equal(new[]{CanonicalLessonContentStatus.Draft,CanonicalLessonContentStatus.Verified,CanonicalLessonContentStatus.Published},Enum.GetValues<CanonicalLessonContentStatus>()); }
 
-    [Fact]
-    public void PublishedCannotMoveBack()
-    {
-        Assert.False(LessonContentPolicy.CanTransition(
-            LearningLessonStatus.Published,
-            LearningLessonStatus.Draft));
-        Assert.False(LessonContentPolicy.CanTransition(
-            LearningLessonStatus.Published,
-            LearningLessonStatus.InReview));
-    }
+    [Fact] public void AllThreeSchoolStaffRolesCanRead()
+    { Assert.True(LessonContentPolicy.CanReadStaff([RoleNames.SchoolAdmin]));Assert.True(LessonContentPolicy.CanReadStaff([RoleNames.SubjectSupervisor]));Assert.True(LessonContentPolicy.CanReadStaff([RoleNames.Teacher])); }
 
-    [Fact]
-    public void CompleteEnglishContentIsRequiredForWorkflow()
-    {
-        var complete = new LessonTranslationInput(
-            "Title", "Explanation", "Rules", "Examples", "Solutions", "Mistakes", "Summary");
-        var incomplete = complete with { QuickSummary = "" };
+    [Fact] public void SchoolRolesHaveNoCanonicalAuthoringPolicy()
+    { var s=File.ReadAllText(RepoPath("src/Edulytics.Services/LessonContent/LessonContentPolicy.cs"));Assert.DoesNotContain("CanAuthor",s,StringComparison.Ordinal);Assert.DoesNotContain("CanTransition",s,StringComparison.Ordinal); }
 
-        Assert.True(LessonContentPolicy.IsComplete(complete));
-        Assert.False(LessonContentPolicy.IsComplete(incomplete));
-    }
+    [Fact] public void SchoolLessonControllerIsReadOnlyGetSurface()
+    { var s=File.ReadAllText(RepoPath("src/Edulytics.Web/Controllers/LessonContentController.cs"));Assert.DoesNotContain("[HttpPost",s,StringComparison.Ordinal);Assert.DoesNotContain("CreateAsync",s,StringComparison.Ordinal);Assert.DoesNotContain("PublishAsync",s,StringComparison.Ordinal); }
 
-    [Fact]
-    public void EfModelHasThreeTenantScopedTables()
-    {
-        using var db = CreateDb();
+    [Fact] public void StaffViewsExposeNoAuthoringActions()
+    { var root=RepoPath("src/Edulytics.Web/Views/LessonContent");var text=string.Join("\n",Directory.GetFiles(root,"*.cshtml").Select(File.ReadAllText));Assert.DoesNotContain("AddLesson",text,StringComparison.Ordinal);Assert.DoesNotContain("SaveDraft",text,StringComparison.Ordinal);Assert.DoesNotContain("SubmitForReview",text,StringComparison.Ordinal);Assert.DoesNotContain("asp-action=\"Publish\"",text,StringComparison.Ordinal); }
 
-        Assert.Equal("LearningLessons", db.Model.FindEntityType(typeof(LearningLesson))!.GetTableName());
-        Assert.Equal("LearningLessonOutcomes", db.Model.FindEntityType(typeof(LearningLessonOutcome))!.GetTableName());
-        Assert.Equal("LearningLessonTranslations", db.Model.FindEntityType(typeof(LearningLessonTranslation))!.GetTableName());
+    [Fact] public void CanonicalRepositoryUsesPrimaryActiveAdoption()
+    { var s=File.ReadAllText(RepoPath("src/Edulytics.Data/Repositories/LessonContentRepository.cs"));Assert.Contains("x.IsActive&&x.IsPrimary",s,StringComparison.Ordinal); }
 
-        Assert.NotNull(db.Model.FindEntityType(typeof(LearningLesson))!.FindProperty(nameof(LearningLesson.SchoolId)));
-        Assert.NotNull(db.Model.FindEntityType(typeof(LearningLessonOutcome))!.FindProperty(nameof(LearningLessonOutcome.SchoolId)));
-        Assert.NotNull(db.Model.FindEntityType(typeof(LearningLessonTranslation))!.FindProperty(nameof(LearningLessonTranslation.SchoolId)));
-    }
+    [Fact] public void CanonicalRepositoryReadsOfficialPackLessonNodes()
+    { var s=File.ReadAllText(RepoPath("src/Edulytics.Data/Repositories/LessonContentRepository.cs"));Assert.Contains("CurriculumPackContentNodes",s,StringComparison.Ordinal);Assert.Contains("x.NodeKind==\"Lesson\"",s,StringComparison.Ordinal); }
 
-    [Fact]
-    public void EfModelUsesConcurrencyTokensOnLessonAndTranslation()
-    {
-        using var db = CreateDb();
+    [Fact] public void OutcomeAlignmentComesFromOfficialPackLinks()
+    { var s=File.ReadAllText(RepoPath("src/Edulytics.Data/Repositories/LessonContentRepository.cs"));Assert.Contains("CurriculumPackNodeLinks",s,StringComparison.Ordinal);Assert.Contains("LessonStandardAlignment",s,StringComparison.Ordinal); }
 
-        Assert.True(db.Model.FindEntityType(typeof(LearningLesson))!
-            .FindProperty(nameof(LearningLesson.RowVersion))!.IsConcurrencyToken);
-        Assert.True(db.Model.FindEntityType(typeof(LearningLessonTranslation))!
-            .FindProperty(nameof(LearningLessonTranslation.RowVersion))!.IsConcurrencyToken);
-    }
+    [Fact] public void StudentAccessIsEnrollmentAndAdoptionGated()
+    { var s=File.ReadAllText(RepoPath("src/Edulytics.Data/Repositories/LessonContentRepository.cs"));Assert.Contains("StudentProfiles",s,StringComparison.Ordinal);Assert.Contains("StudentEnrollments",s,StringComparison.Ordinal);Assert.Contains("ClassGroups",s,StringComparison.Ordinal);Assert.Contains("SchoolCurriculumAdoptions",s,StringComparison.Ordinal); }
 
-    [Fact]
-    public void StudentRepositoryRequiresPublishedEnrollmentAndAdoption()
-    {
-        var source = File.ReadAllText(
-            RepoPath("src/Edulytics.Data/Repositories/LessonContentRepository.cs"));
+    [Fact] public void StudentOnlyReceivesPublishedCanonicalBody()
+    { Assert.True(LessonContentPolicy.CanExposeCanonicalBody(CanonicalLessonContentStatus.Published));Assert.False(LessonContentPolicy.CanExposeCanonicalBody(CanonicalLessonContentStatus.Draft));Assert.False(LessonContentPolicy.CanExposeCanonicalBody(CanonicalLessonContentStatus.Verified)); }
 
-        Assert.Contains("LearningLessonStatus.Published", source, StringComparison.Ordinal);
-        Assert.Contains("StudentEnrollments.Any", source, StringComparison.Ordinal);
-        Assert.Contains("SchoolCurriculumAdoptions.Any", source, StringComparison.Ordinal);
-        Assert.Contains("a.IsPrimary && a.IsActive", source, StringComparison.Ordinal);
-        Assert.Contains("a.FrameworkVersionId == topic.FrameworkVersionId", source, StringComparison.Ordinal);
-    }
+    [Fact] public void StudentViewRemainsEncodedAndProtected()
+    { var view=File.ReadAllText(RepoPath("src/Edulytics.Web/Views/StudentPortal/Lesson.cshtml"));var controller=File.ReadAllText(RepoPath("src/Edulytics.Web/Controllers/StudentPortalController.cs"));Assert.DoesNotContain("Html.Raw",view,StringComparison.OrdinalIgnoreCase);Assert.Contains("[Authorize(Policy = \"StudentPortal\")]",controller,StringComparison.Ordinal); }
 
-    [Fact]
-    public void StudentViewIsEncodedAndControllerKeepsStudentPolicy()
-    {
-        var view = File.ReadAllText(
-            RepoPath("src/Edulytics.Web/Views/StudentPortal/Lesson.cshtml"));
-        var controller = File.ReadAllText(
-            RepoPath("src/Edulytics.Web/Controllers/StudentPortalController.cs"));
+    [Fact] public void ControllersDoNotUseDbContextAndNoPaidAiWasAdded()
+    { var staff=File.ReadAllText(RepoPath("src/Edulytics.Web/Controllers/LessonContentController.cs"));var student=File.ReadAllText(RepoPath("src/Edulytics.Web/Controllers/StudentPortalController.cs"));var service=File.ReadAllText(RepoPath("src/Edulytics.Services/LessonContent/LessonContentService.cs"));Assert.DoesNotContain("EdulyticsDbContext",staff,StringComparison.Ordinal);Assert.DoesNotContain("EdulyticsDbContext",student,StringComparison.Ordinal);Assert.DoesNotContain("OpenAI",service,StringComparison.OrdinalIgnoreCase);Assert.DoesNotContain("Anthropic",service,StringComparison.OrdinalIgnoreCase); }
 
-        Assert.DoesNotContain("Html.Raw", view, StringComparison.OrdinalIgnoreCase);
-        Assert.Contains("[Authorize(Policy = \"StudentPortal\")]", controller, StringComparison.Ordinal);
-        Assert.Contains("learning/lesson/{id:guid}", controller, StringComparison.Ordinal);
-    }
-
-    private static EdulyticsDbContext CreateDb()
-    {
-        var options = new DbContextOptionsBuilder<EdulyticsDbContext>()
-            .UseInMemoryDatabase(Guid.NewGuid().ToString())
-            .Options;
-        return new EdulyticsDbContext(options);
-    }
-
-    private static string RepoPath(string relative)
-    {
-        var current = new DirectoryInfo(AppContext.BaseDirectory);
-        while (current is not null && !File.Exists(Path.Combine(current.FullName, "Edulytics.sln")))
-            current = current.Parent;
-
-        Assert.NotNull(current);
-        return Path.Combine(current!.FullName, relative.Replace('/', Path.DirectorySeparatorChar));
-    }
+    private static EdulyticsDbContext CreateDb(){var options=new DbContextOptionsBuilder<EdulyticsDbContext>().UseInMemoryDatabase(Guid.NewGuid().ToString()).Options;return new EdulyticsDbContext(options);}
+    private static string RepoPath(string relative){var current=new DirectoryInfo(AppContext.BaseDirectory);while(current is not null&&!File.Exists(Path.Combine(current.FullName,"Edulytics.sln")))current=current.Parent;Assert.NotNull(current);return Path.Combine(current!.FullName,relative.Replace('/',Path.DirectorySeparatorChar));}
 }

@@ -1,61 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
-  <resheader name="version"><value>2.0</value></resheader>
-  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
-  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
-  <data name="PageTitle" xml:space="preserve"><value>Treść lekcji</value></data>
-  <data name="PageSubtitle" xml:space="preserve"><value>Twórz lekcje Edulityks w wybranym programie nauczania i przypisuj każdą lekcję do oficjalnych efektów uczenia się.</value></data>
-  <data name="PedagogicalLayerNotice" xml:space="preserve"><value>Lekcje są warstwą dydaktyczną Edulityks. Oficjalne kody i opisy efektów pozostają źródłem programu nauczania.</value></data>
-  <data name="AddLesson" xml:space="preserve"><value>Dodaj lekcję</value></data>
-  <data name="NoTopics" xml:space="preserve"><value>Nie ma jeszcze dostępnych tematów programu nauczania.</value></data>
-  <data name="NoLessons" xml:space="preserve"><value>Dla tego tematu nie utworzono jeszcze lekcji.</value></data>
-  <data name="NoOutcomesForTopic" xml:space="preserve"><value>Ten temat nie ma przypisanych oficjalnych efektów, dlatego nie można jeszcze utworzyć lekcji.</value></data>
-  <data name="Framework" xml:space="preserve"><value>Program nauczania</value></data>
-  <data name="Grade" xml:space="preserve"><value>Klasa</value></data>
-  <data name="Subject" xml:space="preserve"><value>Przedmiot</value></data>
-  <data name="Topic" xml:space="preserve"><value>Temat</value></data>
-  <data name="Status" xml:space="preserve"><value>Status</value></data>
-  <data name="Order" xml:space="preserve"><value>Kolejność lekcji</value></data>
-  <data name="Outcomes" xml:space="preserve"><value>Oficjalne efekty uczenia się</value></data>
-  <data name="EnglishContent" xml:space="preserve"><value>Treść lekcji po angielsku</value></data>
-  <data name="PolishContent" xml:space="preserve"><value>Treść lekcji po polsku (opcjonalnie)</value></data>
-  <data name="LessonTitle" xml:space="preserve"><value>Tytuł lekcji</value></data>
-  <data name="Explanation" xml:space="preserve"><value>Wyjaśnienie</value></data>
-  <data name="KeyConceptsAndRules" xml:space="preserve"><value>Kluczowe pojęcia i reguły</value></data>
-  <data name="WorkedExamples" xml:space="preserve"><value>Przykłady z rozwiązaniami</value></data>
-  <data name="StepByStepSolutions" xml:space="preserve"><value>Rozwiązania krok po kroku</value></data>
-  <data name="CommonMistakes" xml:space="preserve"><value>Typowe błędy</value></data>
-  <data name="QuickSummary" xml:space="preserve"><value>Krótkie podsumowanie</value></data>
-  <data name="SaveDraft" xml:space="preserve"><value>Zapisz wersję roboczą</value></data>
-  <data name="SubmitForReview" xml:space="preserve"><value>Prześlij do weryfikacji</value></data>
-  <data name="ReturnToDraft" xml:space="preserve"><value>Przywróć wersję roboczą</value></data>
-  <data name="Publish" xml:space="preserve"><value>Opublikuj</value></data>
-  <data name="BackToLessons" xml:space="preserve"><value>Wróć do treści lekcji</value></data>
-  <data name="ReadOnlyNotice" xml:space="preserve"><value>Ta lekcja jest tylko do odczytu dla bieżącej roli lub stanu procesu.</value></data>
-  <data name="DraftStatus" xml:space="preserve"><value>Wersja robocza</value></data>
-  <data name="InReviewStatus" xml:space="preserve"><value>W weryfikacji</value></data>
-  <data name="PublishedStatus" xml:space="preserve"><value>Opublikowana</value></data>
-  <data name="SavedAsDraft" xml:space="preserve"><value>Lekcja została zapisana jako wersja robocza.</value></data>
-  <data name="DraftUpdated" xml:space="preserve"><value>Wersja robocza została zaktualizowana.</value></data>
-  <data name="SubmittedForReview" xml:space="preserve"><value>Lekcja została przesłana do weryfikacji.</value></data>
-  <data name="ReturnedToDraft" xml:space="preserve"><value>Lekcja została przywrócona do wersji roboczej.</value></data>
-  <data name="Published" xml:space="preserve"><value>Lekcja została opublikowana.</value></data>
-  <data name="ErrorInvalidOrder" xml:space="preserve"><value>Kolejność lekcji musi być większa od zera.</value></data>
-  <data name="ErrorDuplicateOrder" xml:space="preserve"><value>Inna lekcja ma już tę kolejność w tym temacie.</value></data>
-  <data name="ErrorOutcomeRequired" xml:space="preserve"><value>Wybierz co najmniej jeden oficjalny efekt uczenia się.</value></data>
-  <data name="ErrorOutcomeNotInTopic" xml:space="preserve"><value>Wybrany efekt uczenia się nie należy do tego tematu.</value></data>
-  <data name="ErrorEnglishTitleRequired" xml:space="preserve"><value>Wymagany jest angielski tytuł lekcji.</value></data>
-  <data name="ErrorEnglishContentIncomplete" xml:space="preserve"><value>Uzupełnij wszystkie angielskie sekcje lekcji przed weryfikacją lub publikacją.</value></data>
-  <data name="ErrorInvalidState" xml:space="preserve"><value>Ta operacja nie jest dozwolona w bieżącym stanie lekcji.</value></data>
-  <data name="ErrorPublishedImmutable" xml:space="preserve"><value>Opublikowana treść lekcji jest niezmienna w Phase 29.</value></data>
-  <data name="ErrorConcurrencyConflict" xml:space="preserve"><value>Lekcja została zmieniona w innym żądaniu. Odśwież stronę i spróbuj ponownie.</value></data>
-  <data name="ErrorConstraintViolation" xml:space="preserve"><value>Nie można zapisać lekcji z powodu ograniczenia danych.</value></data>
-  <data name="ErrorGeneric" xml:space="preserve"><value>Nie można wykonać operacji na treści lekcji.</value></data>
-  <data name="AvailableLessons" xml:space="preserve"><value>Dostępne lekcje</value></data>
-  <data name="NoPublishedLessons" xml:space="preserve"><value>Dla bieżącego programu nauczania nie ma jeszcze opublikowanych lekcji.</value></data>
-  <data name="OpenLesson" xml:space="preserve"><value>Otwórz lekcję</value></data>
-  <data name="AlignedOutcomes" xml:space="preserve"><value>Powiązane oficjalne efekty</value></data>
-  <data name="LessonNotAvailable" xml:space="preserve"><value>Ta lekcja nie jest dostępna dla bieżącego zapisu ucznia lub nie została opublikowana.</value></data>
-  <data name="PublishedOn" xml:space="preserve"><value>Opublikowano</value></data>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>2.0</value></resheader>
+<resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+<resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+<data name="PageTitle" xml:space="preserve"><value>Treść lekcji</value></data>
+<data name="PageSubtitle" xml:space="preserve"><value>Przeglądaj kanoniczne lekcje matematyki Edulityks dostępne w programach nauczania przyjętych przez szkołę.</value></data>
+<data name="CanonicalLibrary" xml:space="preserve"><value>Kanoniczna biblioteka programu nauczania</value></data>
+<data name="CanonicalNotice" xml:space="preserve"><value>Podstawowe lekcje są przygotowywane centralnie przez Edulityks i współdzielone przez szkoły korzystające z tego samego programu. Użytkownicy szkoły nie tworzą ani nie publikują kanonicznej treści lekcji.</value></data>
+<data name="NoAdoptedCurricula" xml:space="preserve"><value>Brak aktywnego głównego programu nauczania dla tej szkoły.</value></data>
+<data name="NoCanonicalLessons" xml:space="preserve"><value>Dla tego programu i poziomu nie ma jeszcze oficjalnych węzłów lekcji.</value></data>
+<data name="Framework" xml:space="preserve"><value>Program nauczania</value></data><data name="Grade" xml:space="preserve"><value>Klasa</value></data>
+<data name="Subject" xml:space="preserve"><value>Przedmiot</value></data><data name="Version" xml:space="preserve"><value>Wersja</value></data>
+<data name="Coverage" xml:space="preserve"><value>Pokrycie treści</value></data><data name="Status" xml:space="preserve"><value>Status</value></data>
+<data name="NotStarted" xml:space="preserve"><value>Nie rozpoczęto</value></data><data name="InPreparation" xml:space="preserve"><value>Treść w przygotowaniu</value></data>
+<data name="Verified" xml:space="preserve"><value>Zweryfikowano</value></data><data name="ProductionReady" xml:space="preserve"><value>Gotowe produkcyjnie</value></data>
+<data name="BackToLessons" xml:space="preserve"><value>Powrót do treści lekcji</value></data>
+<data name="OfficialLessonIdentity" xml:space="preserve"><value>Oficjalna tożsamość lekcji</value></data>
+<data name="LessonCode" xml:space="preserve"><value>Kod lekcji</value></data><data name="Unit" xml:space="preserve"><value>Rozdział</value></data>
+<data name="Outcomes" xml:space="preserve"><value>Powiązane oficjalne efekty / standardy</value></data>
+<data name="NoAlignedOutcomes" xml:space="preserve"><value>Dla tej lekcji nie ma jeszcze oficjalnego powiązania z efektem.</value></data>
+<data name="ContentPreparationMessage" xml:space="preserve"><value>Kanoniczna treść lekcji nie jest jeszcze gotowa produkcyjnie. Wersje robocze i jedynie zweryfikowane nie są udostępniane szkołom ani uczniom.</value></data>
+<data name="Explanation" xml:space="preserve"><value>Wyjaśnienie</value></data><data name="KeyConceptsAndRules" xml:space="preserve"><value>Kluczowe pojęcia i reguły</value></data>
+<data name="WorkedExamples" xml:space="preserve"><value>Przykłady z rozwiązaniem</value></data><data name="StepByStepSolutions" xml:space="preserve"><value>Rozwiązania krok po kroku</value></data>
+<data name="CommonMistakes" xml:space="preserve"><value>Typowe błędy</value></data><data name="QuickSummary" xml:space="preserve"><value>Szybkie podsumowanie</value></data>
+<data name="AvailableLessons" xml:space="preserve"><value>Lekcje gotowe produkcyjnie</value></data>
+<data name="NoPublishedLessons" xml:space="preserve"><value>Brak gotowych produkcyjnie kanonicznych lekcji dla bieżącego programu.</value></data>
+<data name="OpenLesson" xml:space="preserve"><value>Otwórz lekcję</value></data><data name="AlignedOutcomes" xml:space="preserve"><value>Powiązane oficjalne efekty</value></data>
+<data name="PublishedOn" xml:space="preserve"><value>Opublikowano</value></data>
 </root>
