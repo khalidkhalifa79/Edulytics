@@ -2,6 +2,7 @@ using Edulytics.Core.Constants;
 using Edulytics.Core.Interfaces;
 using Edulytics.Data.Repositories;
 using Edulytics.Services.StudentPortal;
+using Edulytics.Services.StudentSetup;
 
 namespace Edulytics.Web.Extensions;
 
@@ -17,6 +18,14 @@ public static class StudentPortalRegistrationExtensions
         services.AddScoped<
             IStudentPortalService,
             StudentPortalService>();
+
+        services.AddScoped<
+            IStudentRoleProvisioningOperations,
+            StudentRoleProvisioningOperations>();
+
+        services.AddScoped<
+            IStudentRoleProvisioningService,
+            StudentRoleProvisioningService>();
 
         services.AddAuthorization(
             options =>

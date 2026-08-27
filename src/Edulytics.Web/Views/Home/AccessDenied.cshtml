@@ -1,3 +1,10 @@
+@using Edulytics.Core.Constants
+@{
+    if (User.IsInRole(RoleNames.Student))
+    {
+        Layout = "_StudentAccessLayout";
+    }
+}
 @inject IStringLocalizer<SharedResource> Text
 
 @{

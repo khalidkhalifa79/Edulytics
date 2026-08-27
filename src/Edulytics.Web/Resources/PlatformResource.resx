@@ -702,4 +702,21 @@
   <data name="ExportOwnScope" xml:space="preserve">
     <value>Export own scope</value>
   </data>
+  <data name="StudentSetupTitle" xml:space="preserve"><value>Student account setup</value></data>
+  <data name="StudentSetupDescription" xml:space="preserve"><value>Student role requires a linked student profile and class enrollment. These fields are used when saving the Student role.</value></data>
+  <data name="StudentNumber" xml:space="preserve"><value>Student number</value></data>
+  <data name="FirstName" xml:space="preserve"><value>First name</value></data>
+  <data name="LastName" xml:space="preserve"><value>Last name</value></data>
+  <data name="StudentClass" xml:space="preserve"><value>Class</value></data>
+  <data name="SelectStudentClass" xml:space="preserve"><value>Select a class</value></data>
+  <data name="StudentSetupCurrentEnrollment" xml:space="preserve"><value>Current enrollment</value></data>
+  <data name="StudentSetupComplete" xml:space="preserve"><value>Setup complete</value></data>
+  <data name="StudentSetupIncomplete" xml:space="preserve"><value>Setup required</value></data>
+  <data name="StudentSetupUnavailable" xml:space="preserve"><value>Student setup is unavailable for this action or account.</value></data>
+  <data name="StudentRoleSetupSuccess" xml:space="preserve"><value>Student role, profile and enrollment were saved successfully.</value></data>
+  <data name="StudentSetupMissingFields" xml:space="preserve"><value>Student number, first name, last name and class are required for the Student role.</value></data>
+  <data name="StudentSetupClassNotFound" xml:space="preserve"><value>The selected class is not available in this school.</value></data>
+  <data name="StudentSetupEnrollmentConflict" xml:space="preserve"><value>This student already has a different class enrollment for the same academic year.</value></data>
+  <data name="StudentSetupFailed" xml:space="preserve"><value>Student setup could not be completed. No incomplete Teacher-to-Student conversion was left behind.</value></data>
+  <data name="StudentSetupRecoveryFailed" xml:space="preserve"><value>Student setup failed and automatic recovery could not be completed. Review this account before retrying.</value></data>
 </root>

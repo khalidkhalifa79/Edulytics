@@ -1,0 +1,47 @@
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.SharedResource> Shared
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.StudentResource> S
+@{
+    var localizedProductName = Shared["ProductName"].Value;
+}
+<!DOCTYPE html>
+<html lang="@System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - @localizedProductName</title>
+
+    <link rel="stylesheet"
+          href="~/css/site.css"
+          asp-append-version="true" />
+</head>
+
+<body class="student-access-body">
+    <main class="student-access-shell">
+        <header class="student-access-topbar">
+            <a class="student-access-brand"
+               asp-controller="Home"
+               asp-action="Index">
+                <partial name="_LocalizedBrand" />
+            </a>
+
+            <div class="student-access-account">
+                <span>@User.Identity?.Name</span>
+
+                <form asp-controller="Account"
+                      asp-action="Logout"
+                      method="post">
+                    <button class="student-signout"
+                            type="submit">
+                        @S["SignOut"]
+                    </button>
+                </form>
+            </div>
+        </header>
+
+        <section class="student-access-content">
+            @RenderBody()
+        </section>
+    </main>
+</body>
+</html>
