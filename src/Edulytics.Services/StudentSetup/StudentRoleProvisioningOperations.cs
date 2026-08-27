@@ -229,9 +229,15 @@ public sealed class StudentRoleProvisioningOperations
     }
 
     private static StudentRoleProvisioningOperationResult Map(
-        AcademicCommandResult result) =>
-        result.Succeeded
-            ? StudentRoleProvisioningOperationResult.Success()
-            : StudentRoleProvisioningOperationResult.Failure(
-                result.Errors.FirstOrDefault()?.Code.ToString());
+        AcademicCommandResult result)
+    {
+        if (result.Succeeded)
+            return StudentRoleProvisioningOperationResult.Success();
+
+        var first = result.Errors.FirstOrDefault();
+
+        return StudentRoleProvisioningOperationResult.Failure(
+            first?.Code.ToString(),
+            first?.Code);
+    }
 }

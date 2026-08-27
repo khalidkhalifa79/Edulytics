@@ -1,4 +1,5 @@
 using Edulytics.Core.Constants;
+using Edulytics.Services.Academics;
 
 namespace Edulytics.Services.StudentSetup;
 
@@ -83,24 +84,28 @@ public sealed record StudentRoleProvisioningRequest(
 
 public sealed record StudentRoleProvisioningResult(
     bool Succeeded,
-    StudentRoleProvisioningErrorCode? Error)
+    StudentRoleProvisioningErrorCode? Error,
+    AcademicStructureErrorCode? AcademicError = null)
 {
     public static StudentRoleProvisioningResult Success() =>
-        new(true, null);
+        new(true, null, null);
 
     public static StudentRoleProvisioningResult Failure(
-        StudentRoleProvisioningErrorCode error) =>
-        new(false, error);
+        StudentRoleProvisioningErrorCode error,
+        AcademicStructureErrorCode? academicError = null) =>
+        new(false, error, academicError);
 }
 
 public sealed record StudentRoleProvisioningOperationResult(
     bool Succeeded,
-    string? Error = null)
+    string? Error = null,
+    AcademicStructureErrorCode? AcademicError = null)
 {
     public static StudentRoleProvisioningOperationResult Success() =>
-        new(true);
+        new(true, null, null);
 
     public static StudentRoleProvisioningOperationResult Failure(
-        string? error = null) =>
-        new(false, error);
+        string? error = null,
+        AcademicStructureErrorCode? academicError = null) =>
+        new(false, error, academicError);
 }

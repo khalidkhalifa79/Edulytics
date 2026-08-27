@@ -719,4 +719,15 @@
   <data name="StudentSetupEnrollmentConflict" xml:space="preserve"><value>Uczeń ma już inne przypisanie do klasy w tym samym roku szkolnym.</value></data>
   <data name="StudentSetupFailed" xml:space="preserve"><value>Nie udało się zakończyć konfiguracji ucznia. Nie pozostawiono niepełnej zmiany roli nauczyciela na ucznia.</value></data>
   <data name="StudentSetupRecoveryFailed" xml:space="preserve"><value>Konfiguracja ucznia nie powiodła się i automatyczne przywrócenie stanu nie zostało zakończone. Sprawdź konto przed ponowną próbą.</value></data>
+
+  <data name="StudentSetupDuplicateStudentNumber" xml:space="preserve"><value>Ten numer ucznia już istnieje. Wprowadź inny numer ucznia.</value></data>
+  <data name="StudentSetupSeatLimitReached" xml:space="preserve"><value>Osiągnięto limit zakontraktowanych miejsc dla uczniów. Zwiększ limit miejsc przed dodaniem kolejnego aktywnego ucznia.</value></data>
+  <data name="StudentSetupInvalidStudentAccount" xml:space="preserve"><value>Tego konta nie można powiązać jako aktywnego konta ucznia. Sprawdź status i rolę konta.</value></data>
+  <data name="StudentSetupDuplicateStudentUserLink" xml:space="preserve"><value>To konto logowania jest już powiązane z profilem ucznia.</value></data>
+  <data name="StudentSetupDuplicateEnrollment" xml:space="preserve"><value>Uczeń jest już zapisany do klasy w tym roku szkolnym.</value></data>
+  <data name="StudentSetupProfileStateChanged" xml:space="preserve"><value>Profil ucznia zmienił się podczas konfiguracji. Odśwież dane konta przed ponowną próbą.</value></data>
+  <data name="StudentSetupConcurrencyConflict" xml:space="preserve"><value>Rekord ucznia zmienił się podczas zapisywania. Odśwież dane konta i spróbuj ponownie.</value></data>
+  <data name="StudentSetupInvalidStudentNumber" xml:space="preserve"><value>Numer ucznia jest nieprawidłowy. Użyj tylko A-Z, 0-9 i łącznika.</value></data>
+  <data name="StudentSetupInvalidName" xml:space="preserve"><value>Imię lub nazwisko ucznia jest nieprawidłowe albo zbyt długie.</value></data>
+  <data name="StudentSetupPersistenceError" xml:space="preserve"><value>Nie udało się zapisać konfiguracji ucznia. Zmiana roli została wycofana. Odśwież dane konta i spróbuj ponownie.</value></data>
 </root>

@@ -1,4 +1,5 @@
 using Edulytics.Core.Constants;
+using Edulytics.Services.Academics;
 
 namespace Edulytics.Services.StudentSetup;
 
@@ -167,7 +168,8 @@ public sealed class StudentRoleProvisioningService
                     profileRestored,
                     StudentRoleProvisioningErrorCode
                         .UnderlyingOperationFailed,
-                    cancellationToken);
+                    cancellationToken,
+                    create.AcademicError);
             }
 
             profileCreated = true;
@@ -233,7 +235,8 @@ public sealed class StudentRoleProvisioningService
                     profileRestored,
                     StudentRoleProvisioningErrorCode
                         .UnderlyingOperationFailed,
-                    cancellationToken);
+                    cancellationToken,
+                    restore.AcademicError);
             }
 
             profileRestored = true;
@@ -342,7 +345,8 @@ public sealed class StudentRoleProvisioningService
                 profileRestored,
                 StudentRoleProvisioningErrorCode
                     .UnderlyingOperationFailed,
-                cancellationToken);
+                cancellationToken,
+                enrollment.AcademicError);
         }
 
         return StudentRoleProvisioningResult.Success();
@@ -379,7 +383,8 @@ public sealed class StudentRoleProvisioningService
             bool profileCreated,
             bool profileRestored,
             StudentRoleProvisioningErrorCode originalError,
-            CancellationToken cancellationToken)
+            CancellationToken cancellationToken,
+            AcademicStructureErrorCode? academicError = null)
     {
         var recovered = true;
 
@@ -426,7 +431,7 @@ public sealed class StudentRoleProvisioningService
         }
 
         return recovered
-            ? Failure(originalError)
+            ? Failure(originalError, academicError)
             : Failure(
                 StudentRoleProvisioningErrorCode
                     .RecoveryFailed);
@@ -436,6 +441,9 @@ public sealed class StudentRoleProvisioningService
         value?.Trim() ?? string.Empty;
 
     private static StudentRoleProvisioningResult Failure(
-        StudentRoleProvisioningErrorCode error) =>
-        StudentRoleProvisioningResult.Failure(error);
+        StudentRoleProvisioningErrorCode error,
+        AcademicStructureErrorCode? academicError = null) =>
+        StudentRoleProvisioningResult.Failure(
+            error,
+            academicError);
 }
