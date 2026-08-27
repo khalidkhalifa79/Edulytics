@@ -5,7 +5,7 @@
     ViewData["Title"] = T["Title"];
 }
 
-<div class="container-fluid py-4">
+<div class="container-fluid py-4 audit-page">
     <div class="mb-4">
         <h1 class="h3">@T["Title"]</h1>
         <p class="text-muted mb-0">
@@ -16,7 +16,7 @@
     <form method="get"
           asp-controller="Audit"
           asp-action="Index"
-          class="card card-body mb-4">
+          class="card card-body mb-4 audit-filter-card">
         <div class="row g-3">
 
             @if (Model.CanSelectSchool)
@@ -142,7 +142,7 @@
     </form>
 
     <div class="d-flex justify-content-between
-                align-items-center mb-3">
+                align-items-center mb-3 audit-summary-bar">
         <strong>
             @T["TotalEntries"]: @Model.TotalCount
         </strong>
@@ -161,83 +161,124 @@
     }
     else
     {
-        <div class="table-responsive">
-            <table class="table table-striped
-                          table-hover align-middle">
-                <thead>
-                    <tr>
-                        <th>@T["Timestamp"]</th>
-                        <th>@T["SchoolId"]</th>
-                        <th>@T["Actor"]</th>
-                        <th>@T["Role"]</th>
-                        <th>@T["Action"]</th>
-                        <th>@T["Entity"]</th>
-                        <th>@T["CorrelationId"]</th>
-                        <th>@T["Result"]</th>
-                        <th>@T["Changes"]</th>
-                    </tr>
-                </thead>
-                <tbody>
-                @foreach (var item in Model.Items)
-                {
-                    <tr>
-                        <td class="text-nowrap">
-                            @item.OccurredAtUtc.ToString("u")
-                        </td>
-                        <td>
-                            @item.SchoolId
-                        </td>
-                        <td>
-                            @item.ActorUserId
-                        </td>
-                        <td>
-                            @item.ActorRole
-                        </td>
-                        <td>
-                            <code>@item.Action</code>
-                        </td>
-                        <td>
-                            <div>@item.EntityType</div>
-                            <small class="text-muted">
-                                @item.EntityId
-                            </small>
-                        </td>
-                        <td>
-                            <code>@item.CorrelationId</code>
-                        </td>
-                        <td>
-                            @item.ResultSummary
-                            <div class="small text-muted">
-                                @item.Feature / @item.Source
-                            </div>
-                        </td>
-                        <td>
-                            @if (!string.IsNullOrWhiteSpace(
-                                    item.OldValuesJson))
+        <div class="audit-table-shell">
+            <div class="audit-table-scroll"
+                 tabindex="0"
+                 aria-label="@T["Title"]">
+                <table class="table audit-table align-middle mb-0">
+                    <thead>
+                        <tr>
+                            <th class="audit-col-time">@T["Timestamp"]</th>
+                            <th class="audit-col-school">@T["SchoolId"]</th>
+                            <th class="audit-col-actor">@T["Actor"]</th>
+                            <th class="audit-col-action">@T["Action"]</th>
+                            <th class="audit-col-entity">@T["Entity"]</th>
+                            <th class="audit-col-correlation">@T["CorrelationId"]</th>
+                            <th class="audit-col-details">@T["Result"] / @T["Changes"]</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var item in Model.Items)
+                    {
+                        var actorRoleLabel =
+                            item.ActorRole switch
                             {
-                                <details>
-                                    <summary>
-                                        @T["OldValues"]
-                                    </summary>
-                                    <pre class="small text-wrap">@item.OldValuesJson</pre>
-                                </details>
-                            }
+                                "SuperAdmin" => T["DisplayRoleSuperAdmin"].Value,
+                                "SchoolAdmin" => T["DisplayRoleSchoolAdmin"].Value,
+                                "SubjectSupervisor" => T["DisplayRoleSubjectSupervisor"].Value,
+                                "Teacher" => T["DisplayRoleTeacher"].Value,
+                                _ => item.ActorRole
+                            };
 
-                            @if (!string.IsNullOrWhiteSpace(
-                                    item.NewValuesJson))
-                            {
-                                <details>
-                                    <summary>
-                                        @T["NewValues"]
-                                    </summary>
-                                    <pre class="small text-wrap">@item.NewValuesJson</pre>
-                                </details>
-                            }
-                        </td>
-                    </tr>
-                }
-                </tbody>
-            </table>
+                        <tr>
+                            <td class="audit-cell-time">
+                                <span class="audit-time-value">
+                                    @item.OccurredAtUtc.ToString("u")
+                                </span>
+                            </td>
+
+                            <td class="audit-cell-school">
+                                @if (item.SchoolId.HasValue)
+                                {
+                                    <code class="audit-id" title="@item.SchoolId">
+                                        @item.SchoolId
+                                    </code>
+                                }
+                                else
+                                {
+                                    <span class="audit-scope-platform">
+                                        @T["PlatformScope"]
+                                    </span>
+                                }
+                            </td>
+
+                            <td class="audit-cell-actor">
+                                <code class="audit-id" title="@item.ActorUserId">
+                                    @item.ActorUserId
+                                </code>
+                                <span class="audit-role-badge">
+                                    @actorRoleLabel
+                                </span>
+                            </td>
+
+                            <td class="audit-cell-action">
+                                <code class="audit-action-code" title="@item.Action">
+                                    @item.Action
+                                </code>
+                            </td>
+
+                            <td class="audit-cell-entity">
+                                <span class="audit-entity-type" title="@item.EntityType">
+                                    @item.EntityType
+                                </span>
+                                <code class="audit-id audit-entity-id" title="@item.EntityId">
+                                    @item.EntityId
+                                </code>
+                            </td>
+
+                            <td class="audit-cell-correlation">
+                                <code class="audit-id" title="@item.CorrelationId">
+                                    @item.CorrelationId
+                                </code>
+                            </td>
+
+                            <td class="audit-cell-details">
+                                <div class="audit-result-summary">
+                                    @item.ResultSummary
+                                </div>
+                                <div class="audit-result-meta">
+                                    @item.Feature / @item.Source
+                                </div>
+
+                                @if (!string.IsNullOrWhiteSpace(item.OldValuesJson) ||
+                                     !string.IsNullOrWhiteSpace(item.NewValuesJson))
+                                {
+                                    <details class="audit-change-details">
+                                        <summary>@T["Changes"]</summary>
+
+                                        @if (!string.IsNullOrWhiteSpace(item.OldValuesJson))
+                                        {
+                                            <div class="audit-change-block">
+                                                <strong>@T["OldValues"]</strong>
+                                                <pre>@item.OldValuesJson</pre>
+                                            </div>
+                                        }
+
+                                        @if (!string.IsNullOrWhiteSpace(item.NewValuesJson))
+                                        {
+                                            <div class="audit-change-block">
+                                                <strong>@T["NewValues"]</strong>
+                                                <pre>@item.NewValuesJson</pre>
+                                            </div>
+                                        }
+                                    </details>
+                                }
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
         </div>
     }
 

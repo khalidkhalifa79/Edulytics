@@ -5483,3 +5483,247 @@ body:not(.ed-auth-body):not(.ed-public-body) header .localized-brand-logo,
     height: 19px;
   }
 }
+
+/* ===== EDULYTICS UI V3 AUDIT DATA TABLE ===== */
+
+.ed-v3-main .audit-page {
+    width: 100%;
+    max-width: none;
+    padding-inline: clamp(18px, 2.3vw, 34px);
+}
+
+.ed-v3-main .audit-filter-card {
+    border: 1px solid #e0e7f1;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(31, 49, 89, .055);
+}
+
+.ed-v3-main .audit-filter-card .form-label {
+    color: #51617e;
+    font-size: .76rem;
+    font-weight: 750;
+    letter-spacing: .025em;
+}
+
+.ed-v3-main .audit-filter-card .form-control,
+.ed-v3-main .audit-filter-card .form-select {
+    min-height: 42px;
+    border-color: #d9e2ef;
+    border-radius: 10px;
+}
+
+.ed-v3-main .audit-summary-bar {
+    min-height: 38px;
+    padding-inline: 2px;
+    color: #263754;
+}
+
+.ed-v3-main .audit-table-shell {
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #dfe7f1;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 16px 38px rgba(34, 49, 86, .065);
+}
+
+.ed-v3-main .audit-table-scroll {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: visible;
+    scrollbar-gutter: stable;
+    overscroll-behavior-inline: contain;
+}
+
+.ed-v3-main .audit-table-scroll:focus-visible {
+    outline: 3px solid rgba(68, 91, 235, .24);
+    outline-offset: -3px;
+}
+
+.ed-v3-main .audit-table {
+    width: 100%;
+    min-width: 1020px;
+    table-layout: fixed;
+    margin: 0;
+}
+
+.ed-v3-main .audit-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    padding: 14px 12px;
+    border-bottom: 1px solid #dbe4ef;
+    background: #f6f8fc;
+    color: #273650;
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .035em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.ed-v3-main .audit-table tbody td {
+    padding: 15px 12px;
+    border-color: #e9eef5;
+    background: #fff;
+    vertical-align: top;
+}
+
+.ed-v3-main .audit-table tbody tr:nth-child(even) td {
+    background: #fbfcfe;
+}
+
+.ed-v3-main .audit-table tbody tr:hover td {
+    background: #f7f9ff;
+}
+
+.ed-v3-main .audit-col-time { width: 138px; }
+.ed-v3-main .audit-col-school { width: 128px; }
+.ed-v3-main .audit-col-actor { width: 150px; }
+.ed-v3-main .audit-col-action { width: 168px; }
+.ed-v3-main .audit-col-entity { width: 156px; }
+.ed-v3-main .audit-col-correlation { width: 152px; }
+.ed-v3-main .audit-col-details { width: 220px; }
+
+.ed-v3-main .audit-time-value {
+    display: block;
+    color: #33425b;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.ed-v3-main .audit-id,
+.ed-v3-main .audit-action-code,
+.ed-v3-main .audit-entity-type {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    color: #35465f;
+    background: transparent;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    font-size: .78rem;
+    line-height: 1.42;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ed-v3-main .audit-action-code {
+    color: #ba3978;
+    font-weight: 700;
+}
+
+.ed-v3-main .audit-entity-type {
+    margin-bottom: 5px;
+    color: #1f2d44;
+    font-family: inherit;
+    font-size: .86rem;
+    font-weight: 750;
+}
+
+.ed-v3-main .audit-entity-id {
+    color: #728099;
+}
+
+.ed-v3-main .audit-role-badge,
+.ed-v3-main .audit-scope-platform {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    max-width: 100%;
+    margin-top: 7px;
+    padding: 4px 8px;
+    border: 1px solid #dfe5f2;
+    border-radius: 999px;
+    background: #f2f5fa;
+    color: #53617a;
+    font-size: .7rem;
+    font-weight: 750;
+    line-height: 1.2;
+}
+
+.ed-v3-main .audit-scope-platform {
+    margin-top: 0;
+    border-color: #ded8ff;
+    background: #f1eeff;
+    color: #6042c6;
+}
+
+.ed-v3-main .audit-result-summary {
+    color: #24344f;
+    font-size: .84rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.ed-v3-main .audit-result-meta {
+    margin-top: 4px;
+    color: #7a879b;
+    font-size: .72rem;
+    line-height: 1.35;
+}
+
+.ed-v3-main .audit-change-details {
+    margin-top: 9px;
+}
+
+.ed-v3-main .audit-change-details > summary {
+    width: fit-content;
+    cursor: pointer;
+    color: #4662db;
+    font-size: .74rem;
+    font-weight: 750;
+    user-select: none;
+}
+
+.ed-v3-main .audit-change-block {
+    margin-top: 9px;
+}
+
+.ed-v3-main .audit-change-block strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #56657d;
+    font-size: .7rem;
+}
+
+.ed-v3-main .audit-change-block pre {
+    max-width: 100%;
+    max-height: 180px;
+    overflow: auto;
+    margin: 0;
+    padding: 9px 10px;
+    border: 1px solid #e2e8f1;
+    border-radius: 9px;
+    background: #f7f9fc;
+    color: #36445a;
+    font-size: .69rem;
+    line-height: 1.42;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 1100px) {
+    .ed-v3-main .audit-table {
+        min-width: 980px;
+    }
+}
+
+@media (max-width: 720px) {
+    .ed-v3-main .audit-page {
+        padding-inline: 14px;
+    }
+
+    .ed-v3-main .audit-summary-bar {
+        align-items: flex-start !important;
+        gap: 6px;
+        flex-direction: column;
+    }
+
+    .ed-v3-main .audit-table-shell {
+        border-radius: 14px;
+    }
+
+    .ed-v3-main .audit-table {
+        min-width: 960px;
+    }
+}
