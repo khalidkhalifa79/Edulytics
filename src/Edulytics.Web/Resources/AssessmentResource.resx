@@ -102,4 +102,13 @@
   <data name="SuccessQuestionDeleted" xml:space="preserve"><value>Question deleted.</value></data>
   <data name="LearningOutcomes" xml:space="preserve"><value>Learning outcomes</value></data>
   <data name="SelectOneOrMoreOutcomes" xml:space="preserve"><value>Select at least one learning outcome.</value></data>
+  <data name="AssessmentViewSubtitle" xml:space="preserve">
+    <value>Monitor assessments, questions, learning-outcome coverage and student results. Editing remains with assigned teachers.</value>
+  </data>
+  <data name="AssessmentMonitorNotice" xml:space="preserve">
+    <value>This assessment is read-only for your role. Assigned teachers manage draft questions and assessment lifecycle.</value>
+  </data>
+  <data name="ResultsRoleReadOnly" xml:space="preserve">
+    <value>Results are read-only for your role. Assigned teachers can enter or update scores while the assessment is open.</value>
+  </data>
 </root>

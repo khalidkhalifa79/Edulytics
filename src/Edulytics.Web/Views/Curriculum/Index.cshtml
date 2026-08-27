@@ -9,11 +9,11 @@
     ViewData["Title"] = C["CurriculumTitle"];
 }
 
-<section class="curriculum-page">
+<section class="curriculum-page @(canManageCurriculum ? "" : "is-readonly")">
     <header class="curriculum-header">
         <div>
             <h1>@C["CurriculumTitle"]</h1>
-            <p>@C["CurriculumSubtitle"]</p>
+            <p>@(canManageCurriculum ? C["CurriculumSubtitle"] : C["CurriculumViewSubtitle"])</p>
             <p class="curriculum-note">@C["InitialFocus"]</p>
         </div>
         <a class="school-button"
@@ -109,7 +109,7 @@
         </article>
     </section>
 
-    <section class="curriculum-create-grid">
+    <section class="curriculum-create-grid curriculum-operational-create">
         <article class="curriculum-card">
             <h2>@C["CreateSchoolTopic"]</h2>
             <p class="curriculum-help">@C["TopicRequiresFramework"]</p>

@@ -11,7 +11,7 @@
     var rowVersion = Convert.ToBase64String(assessment.RowVersion);
 }
 
-<section class="assessment-page">
+<section class="assessment-page @(canManageAssessment ? "" : "is-readonly")">
     <header class="assessment-header">
         <div>
             <span class="assessment-context">
@@ -84,10 +84,17 @@
 
     @if (assessment.Status == Edulytics.Core.Enums.AssessmentStatus.Draft)
     {
-        <div class="assessment-info">@A["DraftHelp"]</div>
-        <div class="assessment-info">@A["DefinitionRule"]</div>
+        @if (canManageAssessment)
+        {
+            <div class="assessment-info">@A["DraftHelp"]</div>
+            <div class="assessment-info">@A["DefinitionRule"]</div>
+        }
+        else
+        {
+            <div class="assessment-info">@A["AssessmentMonitorNotice"]</div>
+        }
 
-        <section class="assessment-card">
+        <section class="assessment-card assessment-operational-create">
             <h2>@A["CreateQuestion"]</h2>
 
             @if (canManageAssessment)

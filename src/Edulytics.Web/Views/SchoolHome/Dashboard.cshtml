@@ -11,11 +11,22 @@
 
 @{
     ViewData["Title"] = T["SchoolDashboardTitle"].Value;
+
+    var isAdmin = Model.Role == RoleNames.SchoolAdmin;
+    var isSupervisor = Model.Role == RoleNames.SubjectSupervisor;
+    var isTeacher = Model.Role == RoleNames.Teacher;
+
+    var roleAccessKey = isSupervisor
+        ? "AccessManage"
+        : isTeacher
+            ? "AccessTeach"
+            : "AccessMonitor";
 }
 
-<section class="user-page">
-    <header class="user-page-header">
-        <div>
+<section class="user-page ed-dashboard">
+    <header class="ed-dashboard-hero"
+            aria-label="@T["AccountReady"]">
+        <div class="ed-dashboard-hero-copy">
             <div class="user-eyebrow">
                 @T["YourSchool"]
             </div>
@@ -26,162 +37,292 @@
                 @T["SchoolDashboardSubtitle"]
             </p>
         </div>
+
+        <div class="ed-dashboard-identity">
+            <span class="ed-dashboard-identity-label">
+                @T["YourRole"]
+            </span>
+
+            <strong>
+                @T[$"Role{Model.Role}"]
+            </strong>
+
+            <span class="ed-access-pill"
+                  data-access="@roleAccessKey">
+                @T[roleAccessKey]
+            </span>
+        </div>
     </header>
 
-    <section class="school-detail-card">
-        <h2>@T["AccountReady"]</h2>
-
-        <dl class="school-detail-grid">
-            <div>
-                <dt>@T["YourSchool"]</dt>
-                <dd>@Model.SchoolName</dd>
-            </div>
-
-            <div>
-                <dt>@T["YourRole"]</dt>
-                <dd>@T[$"Role{Model.Role}"]</dd>
-            </div>
-        </dl>
-    </section>
-
-    @if (Model.Role == RoleNames.SchoolAdmin ||
-         Model.Role == RoleNames.SubjectSupervisor)
-    {
-        <section class="user-dashboard-action">
-            <div>
-                <h2>@T["SchoolUsersTitle"]</h2>
-                <p>@T["SchoolUsersSubtitle"]</p>
-            </div>
-
-            <a class="school-button school-button-primary"
-               asp-controller="SchoolUsers"
-               asp-action="Index">
-                @T["SchoolUsersTitle"]
-            </a>
-        </section>
-    }
-
-    @if (Model.Role == RoleNames.SchoolAdmin)
-    {
-        <section class="user-dashboard-action">
-            <div>
-                <h2>@T["SubjectSupervisorAssignmentsTitle"]</h2>
-                <p>@T["SubjectSupervisorAssignmentsSubtitle"]</p>
-            </div>
-
-            <a class="school-button school-button-primary"
-               asp-controller="SubjectSupervisorAssignments"
-               asp-action="Index">
-                @T["ManageSubjectSupervisorAssignments"]
-            </a>
-        </section>
-    }
-
-    @if (Model.Role == RoleNames.SchoolAdmin ||
-         Model.Role == RoleNames.SubjectSupervisor ||
-         Model.Role == RoleNames.Teacher)
-    {
-        <section class="user-dashboard-action">
-            <div>
-                <h2>@A["AcademicStructureTitle"]</h2>
-                <p>@A["AcademicStructureSubtitle"]</p>
-            </div>
-
-            <a class="school-button school-button-primary"
-               asp-controller="AcademicStructure"
-               asp-action="Index">
-                @A["AcademicStructureTitle"]
-            </a>
-        </section>
-
-        <section class="user-dashboard-action">
-            <div>
-                <h2>@C["CurriculumTitle"]</h2>
-                <p>@C["CurriculumSubtitle"]</p>
-            </div>
-
-            <a class="school-button school-button-primary"
-               asp-controller="Curriculum"
-               asp-action="Index">
-                @C["CurriculumTitle"]
-            </a>
-        </section>
-
-        <section class="user-dashboard-action">
-            <div>
-                <h2>@S["AssessmentTitle"]</h2>
-                <p>@S["AssessmentSubtitle"]</p>
-            </div>
-
-            <a class="school-button school-button-primary"
-               asp-controller="Assessments"
-               asp-action="Index">
-                @S["AssessmentTitle"]
-            </a>
-        </section>
-    }
-
-
-    @if (Model.CanViewAnalytics)
-    {
-        <section class="user-dashboard-action">
-            <div>
-                <h2>@N["AnalyticsTitle"]</h2>
-                <p>@N["AnalyticsSubtitle"]</p>
-            </div>
-
-            <a class="school-button school-button-primary"
-               asp-controller="Analytics"
-               asp-action="Index">
-                @N["ManageAnalytics"]
-            </a>
-        </section>
-
-        @if (Model.CanViewReports)
+    <div class="ed-dashboard-grid">
+        @if (isAdmin || isSupervisor)
         {
-            <section class="user-dashboard-action">
+            <article class="user-dashboard-action ed-module-card"
+                     data-tone="blue">
                 <div>
-                    <h2>@R["DashboardReportsTitle"]</h2>
-                    <p>@R["DashboardReportsSubtitle"]</p>
+                    <div class="ed-module-meta">
+                        <span class="ed-access-pill"
+                              data-access="@(isSupervisor ? "AccessManage" : "AccessView")">
+                            @(isSupervisor
+                                ? T["AccessManage"]
+                                : T["AccessView"])
+                        </span>
+                    </div>
+
+                    <h2>@T["SchoolUsersTitle"]</h2>
+
+                    <p>
+                        @(isSupervisor
+                            ? T["DashboardSchoolUsersSupervisorDescription"]
+                            : T["DashboardSchoolUsersAdminDescription"])
+                    </p>
+                </div>
+
+                <a class="school-button @(isSupervisor ? "school-button-primary" : "school-button-secondary")"
+                   asp-controller="SchoolUsers"
+                   asp-action="Index">
+                    @(isSupervisor
+                        ? T["ManageUsersOperational"]
+                        : T["ViewUsers"])
+                </a>
+            </article>
+        }
+
+        @if (isAdmin)
+        {
+            <article class="user-dashboard-action ed-module-card"
+                     data-tone="violet">
+                <div>
+                    <div class="ed-module-meta">
+                        <span class="ed-access-pill"
+                              data-access="AccessManage">
+                            @T["AccessManage"]
+                        </span>
+                    </div>
+
+                    <h2>@T["SubjectSupervisorAssignmentsTitle"]</h2>
+
+                    <p>@T["DashboardSupervisorAssignmentsDescription"]</p>
                 </div>
 
                 <a class="school-button school-button-primary"
-                   asp-controller="Reports"
+                   asp-controller="SubjectSupervisorAssignments"
                    asp-action="Index">
-                    @R["ManageReports"]
+                    @T["ManageSupervisors"]
                 </a>
-            </section>
+            </article>
         }
-    }
 
-    @if (Model.Role == RoleNames.SchoolAdmin ||
-         Model.Role == RoleNames.SubjectSupervisor)
-    {
-        <section class="user-dashboard-action">
+        @if (isAdmin || isSupervisor || isTeacher)
+        {
+            <article class="user-dashboard-action ed-module-card"
+                     data-tone="cyan">
+                <div>
+                    <div class="ed-module-meta">
+                        <span class="ed-access-pill"
+                              data-access="@(isSupervisor ? "AccessManage" : "AccessView")">
+                            @(isSupervisor
+                                ? T["AccessManage"]
+                                : T["AccessView"])
+                        </span>
+                    </div>
+
+                    <h2>@A["AcademicStructureTitle"]</h2>
+
+                    <p>
+                        @(isSupervisor
+                            ? T["DashboardAcademicManageDescription"]
+                            : T["DashboardAcademicViewDescription"])
+                    </p>
+                </div>
+
+                <a class="school-button @(isSupervisor ? "school-button-primary" : "school-button-secondary")"
+                   asp-controller="AcademicStructure"
+                   asp-action="Index">
+                    @(isSupervisor
+                        ? T["ManageStructure"]
+                        : T["ViewStructure"])
+                </a>
+            </article>
+
+            <article class="user-dashboard-action ed-module-card"
+                     data-tone="teal">
+                <div>
+                    <div class="ed-module-meta">
+                        <span class="ed-access-pill"
+                              data-access="@(isSupervisor ? "AccessManage" : "AccessView")">
+                            @(isSupervisor
+                                ? T["AccessManage"]
+                                : T["AccessView"])
+                        </span>
+                    </div>
+
+                    <h2>@C["CurriculumTitle"]</h2>
+
+                    <p>
+                        @(isSupervisor
+                            ? T["DashboardCurriculumManageDescription"]
+                            : T["DashboardCurriculumViewDescription"])
+                    </p>
+                </div>
+
+                <a class="school-button @(isSupervisor ? "school-button-primary" : "school-button-secondary")"
+                   asp-controller="Curriculum"
+                   asp-action="Index">
+                    @(isSupervisor
+                        ? T["ManageCurriculumLink"]
+                        : T["ViewCurriculum"])
+                </a>
+            </article>
+
+            <article class="user-dashboard-action ed-module-card"
+                     data-tone="orange">
+                <div>
+                    <div class="ed-module-meta">
+                        <span class="ed-access-pill"
+                              data-access="@(isTeacher ? "AccessTeach" : "AccessMonitor")">
+                            @(isTeacher
+                                ? T["AccessTeach"]
+                                : T["AccessMonitor"])
+                        </span>
+                    </div>
+
+                    <h2>@S["AssessmentTitle"]</h2>
+
+                    <p>
+                        @(isTeacher
+                            ? T["DashboardAssessmentTeacherDescription"]
+                            : T["DashboardAssessmentMonitorDescription"])
+                    </p>
+                </div>
+
+                <a class="school-button @(isTeacher ? "school-button-primary" : "school-button-secondary")"
+                   asp-controller="Assessments"
+                   asp-action="Index">
+                    @(isTeacher
+                        ? T["ManageAssessmentsLink"]
+                        : T["MonitorAssessments"])
+                </a>
+            </article>
+        }
+
+        @if (Model.CanViewAnalytics)
+        {
+            <article class="user-dashboard-action ed-module-card"
+                     data-tone="indigo">
+                <div>
+                    <div class="ed-module-meta">
+                        <span class="ed-access-pill"
+                              data-access="AccessView">
+                            @T["AccessView"]
+                        </span>
+                    </div>
+
+                    <h2>@N["AnalyticsTitle"]</h2>
+
+                    <p>@T["DashboardAnalyticsDescription"]</p>
+                </div>
+
+                <a class="school-button school-button-secondary"
+                   asp-controller="Analytics"
+                   asp-action="Index">
+                    @T["ViewAnalytics"]
+                </a>
+            </article>
+
+            @if (Model.CanViewReports)
+            {
+                <article class="user-dashboard-action ed-module-card"
+                         data-tone="rose">
+                    <div>
+                        <div class="ed-module-meta">
+                            <span class="ed-access-pill"
+                                  data-access="@(isAdmin ? "AccessView" : isTeacher ? "AccessExportOwn" : "AccessExport")">
+                                @(isAdmin
+                                    ? T["AccessView"]
+                                    : isTeacher
+                                        ? T["AccessExportOwn"]
+                                        : T["AccessExport"])
+                            </span>
+                        </div>
+
+                        <h2>@R["DashboardReportsTitle"]</h2>
+
+                        <p>
+                            @(isAdmin
+                                ? T["DashboardReportsViewDescription"]
+                                : isTeacher
+                                    ? T["DashboardReportsTeacherDescription"]
+                                    : T["DashboardReportsManageDescription"])
+                        </p>
+                    </div>
+
+                    <a class="school-button @(isAdmin ? "school-button-secondary" : "school-button-primary")"
+                       asp-controller="Reports"
+                       asp-action="Index">
+                        @(isAdmin
+                            ? T["ViewReports"]
+                            : isTeacher
+                                ? T["ExportOwnScope"]
+                                : T["ManageReportsLink"])
+                    </a>
+                </article>
+            }
+        }
+
+        @if (isAdmin || isSupervisor)
+        {
+            <article class="user-dashboard-action ed-module-card"
+                     data-tone="slate">
+                <div>
+                    <div class="ed-module-meta">
+                        <span class="ed-access-pill"
+                              data-access="@(isSupervisor ? "AccessManage" : "AccessView")">
+                            @(isSupervisor
+                                ? T["AccessManage"]
+                                : T["AccessView"])
+                        </span>
+                    </div>
+
+                    <h2>@D["DashboardImportTitle"]</h2>
+
+                    <p>
+                        @(isSupervisor
+                            ? T["DashboardImportsManageDescription"]
+                            : T["DashboardImportsViewDescription"])
+                    </p>
+                </div>
+
+                <a class="school-button @(isSupervisor ? "school-button-primary" : "school-button-secondary")"
+                   asp-controller="Imports"
+                   asp-action="Index">
+                    @(isSupervisor
+                        ? T["ManageImportsLink"]
+                        : T["ViewImportHistory"])
+                </a>
+            </article>
+        }
+
+        <article class="user-dashboard-action ed-module-card"
+                 data-tone="green">
             <div>
-                <h2>@D["DashboardImportTitle"]</h2>
-                <p>@D["DashboardImportSubtitle"]</p>
+                <div class="ed-module-meta">
+                    <span class="ed-access-pill"
+                          data-access="AccessView">
+                        @T["AccessView"]
+                    </span>
+                </div>
+
+                <h2>@Q["DashboardNotificationsTitle"]</h2>
+
+                <p>@T["DashboardNotificationsDescription"]</p>
             </div>
 
-            <a class="school-button school-button-primary"
-               asp-controller="Imports"
+            <a class="school-button school-button-secondary"
+               asp-controller="Notifications"
                asp-action="Index">
-                @D["ManageImports"]
+                @T["OpenNotificationsLink"]
             </a>
-        </section>
-    }
-
-    <section class="user-dashboard-action">
-        <div>
-            <h2>@Q["DashboardNotificationsTitle"]</h2>
-            <p>@Q["DashboardNotificationsSubtitle"]</p>
-        </div>
-
-        <a class="school-button school-button-primary"
-           asp-controller="Notifications"
-           asp-action="Index">
-            @Q["OpenNotifications"]
-        </a>
-    </section>
-
+        </article>
+    </div>
 </section>

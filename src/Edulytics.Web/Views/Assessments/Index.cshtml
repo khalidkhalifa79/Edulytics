@@ -9,11 +9,11 @@
     ViewData["Title"] = A["AssessmentTitle"];
 }
 
-<section class="assessment-page">
+<section class="assessment-page @(canManageAssessment ? "" : "is-readonly")">
     <header class="assessment-header">
         <div>
             <h1>@A["AssessmentTitle"]</h1>
-            <p>@A["AssessmentSubtitle"]</p>
+            <p>@(canManageAssessment ? A["AssessmentSubtitle"] : A["AssessmentViewSubtitle"])</p>
         </div>
         <a class="school-button"
            asp-controller="SchoolHome"
@@ -29,7 +29,7 @@
         <div class="school-alert school-alert-error" role="alert">@error</div>
     }
 
-    <section class="assessment-card">
+    <section class="assessment-card assessment-operational-create">
         <h2>@A["CreateAssessment"]</h2>
         @if (canManageAssessment)
         {

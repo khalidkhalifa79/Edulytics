@@ -22,7 +22,7 @@
 
             <h1>@R["ReportsTitle"]</h1>
 
-            <p>@R["ReportsSubtitle"]</p>
+            <p>@(canRequestReportExport ? R["ReportsSubtitle"] : R["ReportsViewSubtitle"])</p>
         </div>
 
         <a class="school-button school-button-secondary"

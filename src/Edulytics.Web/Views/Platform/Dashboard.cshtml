@@ -1,103 +1,219 @@
-@* PHASE04_SCHOOL_MANAGEMENT *@
-@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.PlatformResource> SchoolText
-@inject IStringLocalizer<Edulytics.Web.PlatformResource> Text
-@inject IStringLocalizer<Edulytics.Web.OperationsResource> OperationsText
-@inject IStringLocalizer<Edulytics.Web.OnboardingResource> OnboardingText
-@inject IStringLocalizer<Edulytics.Web.SubscriptionResource> SubscriptionText
-@inject IStringLocalizer<Edulytics.Web.BillingResource> BillingText
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.SharedResource> S
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.OperationsResource> OperationsText
 
 @{
-    ViewData["Title"] = Text["DashboardTitle"];
+    ViewData["Title"] = S["V3PlatformDashboardTitle"].Value;
 }
 
-<section class="dashboard-shell">
-    <div class="dashboard-hero">
-        <div>
-            <span class="dashboard-eyebrow">
-                @Text["PlatformContext"]
-            </span>
+<section class="ed-v3-dashboard">
+    <div class="ed-v3-hero">
+        <div class="ed-v3-hero-copy">
+            <span class="ed-v3-kicker">@S["V3PlatformEyebrow"]</span>
+            <h1>@S["V3PlatformOverview"]</h1>
+            <p>@S["V3PlatformOverviewDescription"]</p>
 
-            <h1>@Text["DashboardTitle"]</h1>
-
-            <p>@Text["DashboardMessage"]</p>
+            <div class="ed-v3-hero-badge">
+                <span class="ed-v3-status-dot" aria-hidden="true"></span>
+                @S["V3ControlCenter"]
+            </div>
         </div>
 
-        <div class="dashboard-user-card">
-            <span class="dashboard-user-label">
-                @Text["SignedInAs"]
-            </span>
-
-            <strong>@User.Identity?.Name</strong>
+        <div class="ed-v3-hero-art"
+             aria-hidden="true">
+            <div class="ed-v3-art-glow"></div>
+            <div class="ed-v3-art-panel">
+                <div class="ed-v3-art-panel-head">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="ed-v3-art-chart">
+                    <i style="--h: 42%"></i>
+                    <i style="--h: 68%"></i>
+                    <i style="--h: 54%"></i>
+                    <i style="--h: 82%"></i>
+                    <i style="--h: 64%"></i>
+                </div>
+                <div class="ed-v3-art-lines">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="ed-v3-art-shield">
+                <svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.7 2.8 8.2 7 10 4.2-1.8 7-5.3 7-10V6zM9 12l2 2 4-5"/></svg>
+            </div>
         </div>
     </div>
-</section>
 
+    <div class="ed-v3-metrics">
+        <article class="ed-v3-metric">
+            <span class="ed-v3-metric-icon is-blue" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V9h12v11M3 9l9-5 9 5M9 13h2v3H9zm4 0h2v3h-2z"/></svg>
+            </span>
+            <div>
+                <span>@S["V3SchoolCapability"]</span>
+                <strong class="ed-v3-metric-word">@S["V3SchoolCapabilityValue"]</strong>
+            </div>
+        </article>
 
-<section class="school-dashboard-card">
-    <div>
-        <p class="school-eyebrow">Edulytics</p>
-        <h2>@SchoolText["DashboardSchoolsTitle"]</h2>
-        <p>@SchoolText["DashboardSchoolsDescription"]</p>
+        <article class="ed-v3-metric">
+            <span class="ed-v3-metric-icon is-green" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8m8 1a4 4 0 0 0 0-8m4 17v-2a4 4 0 0 0-3-3.9"/></svg>
+            </span>
+            <div>
+                <span>@S["V3AccessCapability"]</span>
+                <strong class="ed-v3-metric-word">@S["V3AccessCapabilityValue"]</strong>
+            </div>
+        </article>
+
+        <article class="ed-v3-metric">
+            <span class="ed-v3-metric-icon is-purple" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3 4 6v5c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6zM9 12l2 2 4-5"/></svg>
+            </span>
+            <div>
+                <span>@S["V3AuditCapability"]</span>
+                <strong class="ed-v3-metric-word">@S["V3AuditCapabilityValue"]</strong>
+            </div>
+        </article>
+
+        <article class="ed-v3-metric">
+            <span class="ed-v3-metric-icon is-orange" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1m-8.6 8.6-2.1 2.1"/><circle cx="12" cy="12" r="4"/></svg>
+            </span>
+            <div>
+                <span>@S["V3OperationsCapability"]</span>
+                <strong class="ed-v3-metric-word">@S["V3OperationsCapabilityValue"]</strong>
+            </div>
+        </article>
     </div>
 
-    <a class="school-button school-button-primary"
-       asp-controller="Schools"
-       asp-action="Index">
-        @SchoolText["ManageSchools"]
-    </a>
-</section>
+    <div class="ed-v3-dashboard-columns">
+        <div class="ed-v3-dashboard-primary">
+            <div class="ed-v3-section-heading">
+                <div>
+                    <span class="ed-v3-kicker">@S["V3ControlCenter"]</span>
+                    <h2>@S["V3PlatformManagement"]</h2>
+                </div>
+                <p>@S["V3ControlCenterDescription"]</p>
+            </div>
 
+            <div class="ed-v3-module-grid">
+                <a class="ed-v3-module-card"
+                   asp-controller="Schools"
+                   asp-action="Index">
+                    <span class="ed-v3-module-icon is-blue" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V9h12v11M3 9l9-5 9 5M9 13h2v3H9zm4 0h2v3h-2z"/></svg>
+                    </span>
+                    <span class="ed-v3-module-copy">
+                        <strong>@S["V3SchoolsTitle"]</strong>
+                        <span>@S["V3SchoolsDescription"]</span>
+                    </span>
+                    <span class="ed-v3-module-arrow" aria-hidden="true">→</span>
+                </a>
 
-<section class="school-dashboard-card">
-    <div>
-        <p class="school-eyebrow">@OnboardingText["Eyebrow"]</p>
-        <h2>@OnboardingText["DashboardTitle"]</h2>
-        <p>@OnboardingText["DashboardDescription"]</p>
+                <a class="ed-v3-module-card"
+                   asp-controller="CustomerOnboarding"
+                   asp-action="Index">
+                    <span class="ed-v3-module-icon is-green" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8m9-3v6m-3-3h6"/></svg>
+                    </span>
+                    <span class="ed-v3-module-copy">
+                        <strong>@S["V3OnboardingTitle"]</strong>
+                        <span>@S["V3OnboardingDescription"]</span>
+                    </span>
+                    <span class="ed-v3-module-arrow is-green" aria-hidden="true">→</span>
+                </a>
+
+                <a class="ed-v3-module-card"
+                   asp-controller="Billing"
+                   asp-action="Index">
+                    <span class="ed-v3-module-icon is-purple" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M6 2h12v20l-3-2-3 2-3-2-3 2zM9 7h6M9 11h6M9 15h4"/></svg>
+                    </span>
+                    <span class="ed-v3-module-copy">
+                        <strong>@S["V3BillingTitle"]</strong>
+                        <span>@S["V3BillingDescription"]</span>
+                    </span>
+                    <span class="ed-v3-module-arrow is-purple" aria-hidden="true">→</span>
+                </a>
+
+                <a class="ed-v3-module-card"
+                   asp-controller="Subscriptions"
+                   asp-action="Index">
+                    <span class="ed-v3-module-icon is-orange" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4zM8 10h8m-8 4h5"/></svg>
+                    </span>
+                    <span class="ed-v3-module-copy">
+                        <strong>@S["V3SubscriptionsTitle"]</strong>
+                        <span>@S["V3SubscriptionsDescription"]</span>
+                    </span>
+                    <span class="ed-v3-module-arrow is-orange" aria-hidden="true">→</span>
+                </a>
+
+                <a class="ed-v3-module-card"
+                   asp-controller="Operations"
+                   asp-action="Index">
+                    <span class="visually-hidden">@OperationsText["OpenOperations"]</span>
+                    <span class="ed-v3-module-icon is-cyan" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1m-8.6 8.6-2.1 2.1"/><circle cx="12" cy="12" r="4"/></svg>
+                    </span>
+                    <span class="ed-v3-module-copy">
+                        <strong>@S["V3OperationsTitle"]</strong>
+                        <span>@S["V3OperationsDescription"]</span>
+                    </span>
+                    <span class="ed-v3-module-arrow is-cyan" aria-hidden="true">→</span>
+                </a>
+
+                <a class="ed-v3-module-card"
+                   asp-controller="Audit"
+                   asp-action="Index">
+                    <span class="ed-v3-module-icon is-pink" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M12 3 4 6v5c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6zM9 12l2 2 4-5"/></svg>
+                    </span>
+                    <span class="ed-v3-module-copy">
+                        <strong>@S["V3AuditTitle"]</strong>
+                        <span>@S["V3AuditDescription"]</span>
+                    </span>
+                    <span class="ed-v3-module-arrow is-pink" aria-hidden="true">→</span>
+                </a>
+            </div>
+        </div>
+
+        <aside class="ed-v3-dashboard-rail">
+            <section class="ed-v3-rail-card">
+                <div class="ed-v3-rail-heading">
+                    <h2>@S["V3QuickAccess"]</h2>
+                </div>
+
+                <a asp-controller="Schools"
+                   asp-action="Index"
+                   class="ed-v3-shortcut">
+                    <span>@S["NavSchools"]</span><b aria-hidden="true">›</b>
+                </a>
+                <a asp-controller="CustomerOnboarding"
+                   asp-action="Index"
+                   class="ed-v3-shortcut">
+                    <span>@S["NavOnboarding"]</span><b aria-hidden="true">›</b>
+                </a>
+                <a asp-controller="Billing"
+                   asp-action="Index"
+                   class="ed-v3-shortcut">
+                    <span>@S["NavBilling"]</span><b aria-hidden="true">›</b>
+                </a>
+                <a asp-controller="Audit"
+                   asp-action="Index"
+                   class="ed-v3-shortcut">
+                    <span>@S["NavAuditLog"]</span><b aria-hidden="true">›</b>
+                </a>
+            </section>
+
+            <section class="ed-v3-rail-card ed-v3-rail-security">
+                <span class="ed-v3-rail-shield" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M12 3 4 6v5c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6zM9 12l2 2 4-5"/></svg>
+                </span>
+                <h2>@S["V3SecureWorkspace"]</h2>
+                <p>@S["V3SecureWorkspaceDescription"]</p>
+            </section>
+        </aside>
     </div>
-    <a class="school-button school-button-primary" asp-controller="CustomerOnboarding" asp-action="Index">@OnboardingText["ManageOnboarding"]</a>
-</section>
-
-
-<section class="school-dashboard-card">
-    <div>
-        <p class="school-eyebrow">@BillingText["Eyebrow"]</p>
-        <h2>@BillingText["DashboardTitle"]</h2>
-        <p>@BillingText["DashboardDescription"]</p>
-    </div>
-
-    <a class="school-button school-button-primary"
-       asp-controller="Billing"
-       asp-action="Index">
-        @BillingText["OpenBilling"]
-    </a>
-</section>
-
-
-<section class="school-dashboard-card">
-    <div>
-        <p class="school-eyebrow">@SubscriptionText["Eyebrow"]</p>
-        <h2>@SubscriptionText["DashboardTitle"]</h2>
-        <p>@SubscriptionText["DashboardDescription"]</p>
-    </div>
-
-    <a class="school-button school-button-primary"
-       asp-controller="Subscriptions"
-       asp-action="Index">
-        @SubscriptionText["OpenSubscriptions"]
-    </a>
-</section>
-
-
-<section class="school-dashboard-card">
-    <div>
-        <p class="school-eyebrow">Edulytics</p>
-        <h2>@OperationsText["DashboardOperationsTitle"]</h2>
-        <p>@OperationsText["DashboardOperationsDescription"]</p>
-    </div>
-
-    <a class="school-button school-button-primary"
-       asp-controller="Operations"
-       asp-action="Index">
-        @OperationsText["OpenOperations"]
-    </a>
 </section>

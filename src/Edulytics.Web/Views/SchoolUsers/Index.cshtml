@@ -3,7 +3,16 @@
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.PlatformResource> T
 
 @{
-    var canManageSchoolUsers = User.IsInRole(RoleNames.SubjectSupervisor) || User.IsInRole(RoleNames.SuperAdmin);
+    var canManageSchoolUsers =
+        User.IsInRole(RoleNames.SubjectSupervisor) ||
+        User.IsInRole(RoleNames.SuperAdmin);
+
+    var schoolUsersSubtitleKey =
+        Model.Context.IsPlatformActor
+            ? "SchoolUsersPlatformSubtitle"
+            : User.IsInRole(RoleNames.SubjectSupervisor)
+                ? "SchoolUsersSupervisorSubtitle"
+                : "SchoolUsersAdminSubtitle";
 }
 
 @{
@@ -38,7 +47,7 @@
             <h1>@T["SchoolUsersTitle"]</h1>
 
             <p class="user-page-subtitle">
-                @T["SchoolUsersSubtitle"]
+                @T[schoolUsersSubtitleKey]
             </p>
         </div>
 
