@@ -10,7 +10,7 @@
     ViewData["Title"] = I["ImportTitle"].Value;
 }
 
-<section class="import-page">
+<section class="import-page import-index @(canManageImports ? "" : "is-readonly")">
     <header class="import-page-header">
         <div>
             <div class="user-eyebrow">
@@ -20,7 +20,7 @@
             <h1>@I["ImportTitle"]</h1>
 
             <p class="user-page-subtitle">
-                @I["ImportSubtitle"]
+                @(canManageImports ? I["ImportSubtitle"] : I["ImportViewSubtitle"])
             </p>
         </div>
 
@@ -47,7 +47,15 @@
         </div>
     }
 
-    <section class="import-panel">
+    @if (!canManageImports)
+    {
+        <div class="import-message import-message-info"
+             role="status">
+            @I["ImportReadOnlyNotice"]
+        </div>
+    }
+
+    <section class="import-panel import-operational-panel">
         <h2>@I["UploadFile"]</h2>
 
         <p>@I["FileRules"]</p>
@@ -96,7 +104,7 @@
         }
     </section>
 
-    <section class="import-schema-grid">
+    <section class="import-schema-grid import-operational-schema">
         @foreach (var option in Model.Workspace.AllowedTypes)
         {
             <article class="import-panel import-schema-card">

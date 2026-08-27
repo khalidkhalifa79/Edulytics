@@ -1,63 +1,310 @@
+@using System.Globalization
+@using Edulytics.Core.Constants
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.SharedResource> Brand
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.SharedResource> S
+
 @{
     var localizedProductName = Brand["ProductName"].Value;
+    var pageLanguage = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+    var currentController = ViewContext.RouteData.Values["controller"]?.ToString() ?? string.Empty;
+    var pageTitle = ViewData["Title"]?.ToString() ?? S["NavDashboard"].Value;
+    var signedInName = User.Identity?.Name ?? S["NavAccount"].Value;
+
+    var isSuperAdmin = User.IsInRole(RoleNames.SuperAdmin);
+    var isSchoolAdmin = User.IsInRole(RoleNames.SchoolAdmin);
+    var isSupervisor = User.IsInRole(RoleNames.SubjectSupervisor);
+    var isTeacher = User.IsInRole(RoleNames.Teacher);
 }
-@using System.Globalization
-@inject IStringLocalizer<SharedResource> SharedText
-@inject IStringLocalizer<AuditResource> AuditText
+
 <!DOCTYPE html>
-<html lang="@CultureInfo.CurrentUICulture.TwoLetterISOLanguageName">
+<html lang="@pageLanguage">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] | @localizedProductName</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@pageTitle - @localizedProductName</title>
     <link rel="stylesheet"
           href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet"
           href="~/css/site.css"
           asp-append-version="true" />
 </head>
-<body class="ed-app-body">
-    <header class="ed-app-header">
-        <div class="ed-app-header-inner">
-            <a class="ed-brand"
-               asp-controller="Platform"
-               asp-action="Dashboard">
-            <partial name="_LocalizedBrand" />
-        </a>
-
-            @if (User.Identity?.IsAuthenticated == true)
+<body class="ed-app-body ed-v3-body">
+    <div class="ed-v3-shell">
+        <aside class="ed-v3-sidebar">
+            @if (isSuperAdmin)
             {
-                @if (User.IsInRole("SchoolAdmin") ||
-                     User.IsInRole("SuperAdmin"))
-                {
-                    <a class="ed-signout-button text-decoration-none"
-                       asp-controller="Audit"
-                       asp-action="Index">
-                        @AuditText["AuditLog"]
-                    </a>
-                }
-
-                <form asp-controller="Account"
-                      asp-action="Logout"
-                      method="post"
-                      class="m-0">
-                    @Html.AntiForgeryToken()
-                    <button type="submit"
-                            class="ed-signout-button"
-                            aria-label="@SharedText["SignOut"]">
-                        @SharedText["SignOut"]
-                    </button>
-                </form>
+                <a class="ed-brand ed-v3-sidebar-brand"
+                   asp-controller="Platform"
+                   asp-action="Dashboard"
+                   aria-label="@localizedProductName">
+                    <partial name="_LocalizedBrand" />
+                </a>
             }
+            else
+            {
+                <a class="ed-brand ed-v3-sidebar-brand"
+                   asp-controller="SchoolHome"
+                   asp-action="Dashboard"
+                   aria-label="@localizedProductName">
+                    <partial name="_LocalizedBrand" />
+                </a>
+            }
+
+            <div class="ed-v3-sidebar-scroll">
+                <nav class="ed-v3-nav"
+                     aria-label="@S["V3Navigation"]">
+                    @if (isSuperAdmin)
+                    {
+                        <a class="ed-v3-nav-link @(currentController == "Platform" ? "is-active" : null)"
+                           asp-controller="Platform"
+                           asp-action="Dashboard">
+                            <span class="ed-v3-nav-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5v8a1.5 1.5 0 0 1-1.5 1.5h-5v-6h-5v6h-5A1.5 1.5 0 0 1 3 19.5z"/></svg>
+                            </span>
+                            <span>@S["NavDashboard"]</span>
+                        </a>
+
+                        <p class="ed-v3-nav-section">@S["NavPlatformAdministration"]</p>
+
+                        <a class="ed-v3-nav-link @(currentController == "Schools" ? "is-active" : null)"
+                           asp-controller="Schools"
+                           asp-action="Index">
+                            <span class="ed-v3-nav-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V9h12v11M3 9l9-5 9 5M9 13h2v3H9zm4 0h2v3h-2z"/></svg>
+                            </span>
+                            <span>@S["NavSchools"]</span>
+                        </a>
+
+                        <a class="ed-v3-nav-link @(currentController == "CustomerOnboarding" ? "is-active" : null)"
+                           asp-controller="CustomerOnboarding"
+                           asp-action="Index">
+                            <span class="ed-v3-nav-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8m9-3v6m-3-3h6"/></svg>
+                            </span>
+                            <span>@S["NavOnboarding"]</span>
+                        </a>
+
+                        <a class="ed-v3-nav-link @(currentController == "Billing" ? "is-active" : null)"
+                           asp-controller="Billing"
+                           asp-action="Index">
+                            <span class="ed-v3-nav-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M6 2h12v20l-3-2-3 2-3-2-3 2zM9 7h6M9 11h6M9 15h4"/></svg>
+                            </span>
+                            <span>@S["NavBilling"]</span>
+                        </a>
+
+                        <a class="ed-v3-nav-link @(currentController == "Subscriptions" ? "is-active" : null)"
+                           asp-controller="Subscriptions"
+                           asp-action="Index">
+                            <span class="ed-v3-nav-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4zM8 10h8m-8 4h5"/></svg>
+                            </span>
+                            <span>@S["NavSubscriptions"]</span>
+                        </a>
+
+                        <a class="ed-v3-nav-link @(currentController == "Operations" ? "is-active" : null)"
+                           asp-controller="Operations"
+                           asp-action="Index">
+                            <span class="ed-v3-nav-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1m-8.6 8.6-2.1 2.1"/><circle cx="12" cy="12" r="4"/></svg>
+                            </span>
+                            <span>@S["NavOperations"]</span>
+                        </a>
+
+                        <a class="ed-v3-nav-link @(currentController == "Audit" ? "is-active" : null)"
+                           asp-controller="Audit"
+                           asp-action="Index">
+                            <span class="ed-v3-nav-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M12 3 4 6v5c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6zM9 12l2 2 4-5"/></svg>
+                            </span>
+                            <span>@S["NavAuditLog"]</span>
+                        </a>
+                    }
+                    else
+                    {
+                        <a class="ed-v3-nav-link @(currentController == "SchoolHome" ? "is-active" : null)"
+                           asp-controller="SchoolHome"
+                           asp-action="Dashboard">
+                            <span class="ed-v3-nav-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5v8a1.5 1.5 0 0 1-1.5 1.5h-5v-6h-5v6h-5A1.5 1.5 0 0 1 3 19.5z"/></svg>
+                            </span>
+                            <span>@S["NavDashboard"]</span>
+                        </a>
+
+                        <p class="ed-v3-nav-section">@S["NavAcademicWorkspace"]</p>
+
+                        @if (isSchoolAdmin || isSupervisor)
+                        {
+                            <a class="ed-v3-nav-link @(currentController == "SchoolUsers" ? "is-active" : null)"
+                               asp-controller="SchoolUsers"
+                               asp-action="Index">
+                                <span class="ed-v3-nav-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8m8 0 2 2 3-4"/></svg>
+                                </span>
+                                <span>@S["NavSchoolUsers"]</span>
+                            </a>
+                        }
+
+                        @if (isSchoolAdmin)
+                        {
+                            <a class="ed-v3-nav-link @(currentController == "SubjectSupervisorAssignments" ? "is-active" : null)"
+                               asp-controller="SubjectSupervisorAssignments"
+                               asp-action="Index">
+                                <span class="ed-v3-nav-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8m-8 4h5m4 0 2 2 3-4"/></svg>
+                                </span>
+                                <span>@S["NavSupervisorAssignments"]</span>
+                            </a>
+                        }
+
+                        @if (isSchoolAdmin || isSupervisor || isTeacher)
+                        {
+                            <a class="ed-v3-nav-link @(currentController == "AcademicStructure" ? "is-active" : null)"
+                               asp-controller="AcademicStructure"
+                               asp-action="Index">
+                                <span class="ed-v3-nav-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24"><path d="M4 5h16v4H4zm0 6h7v8H4zm9 0h7v8h-7z"/></svg>
+                                </span>
+                                <span>@S["NavAcademicStructure"]</span>
+                            </a>
+
+                            <a class="ed-v3-nav-link @(currentController == "Curriculum" ? "is-active" : null)"
+                               asp-controller="Curriculum"
+                               asp-action="Index">
+                                <span class="ed-v3-nav-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 0 1 3 3v13a3 3 0 0 0-3-3H4zm16 0h-6a3 3 0 0 0-3 3"/></svg>
+                                </span>
+                                <span>@S["NavCurriculum"]</span>
+                            </a>
+
+                            <a class="ed-v3-nav-link @(currentController == "Assessments" ? "is-active" : null)"
+                               asp-controller="Assessments"
+                               asp-action="Index">
+                                <span class="ed-v3-nav-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24"><path d="M6 3h12v18H6zM9 8h6m-6 4h6m-6 4h4"/></svg>
+                                </span>
+                                <span>@S["NavAssessments"]</span>
+                            </a>
+
+                            <a class="ed-v3-nav-link @(currentController == "Analytics" ? "is-active" : null)"
+                               asp-controller="Analytics"
+                               asp-action="Index">
+                                <span class="ed-v3-nav-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24"><path d="M5 20V10m7 10V4m7 16v-7"/></svg>
+                                </span>
+                                <span>@S["NavAnalytics"]</span>
+                            </a>
+
+                            <a class="ed-v3-nav-link @(currentController == "Reports" ? "is-active" : null)"
+                               asp-controller="Reports"
+                               asp-action="Index">
+                                <span class="ed-v3-nav-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24"><path d="M5 3h10l4 4v14H5zM14 3v5h5M8 13h8m-8 4h6"/></svg>
+                                </span>
+                                <span>@S["NavReports"]</span>
+                            </a>
+
+                            @if (isSchoolAdmin || isSupervisor)
+                            {
+                                <a class="ed-v3-nav-link @(currentController == "Imports" ? "is-active" : null)"
+                                   asp-controller="Imports"
+                                   asp-action="Index">
+                                    <span class="ed-v3-nav-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24"><path d="M12 3v12m-4-4 4 4 4-4M5 19h14"/></svg>
+                                    </span>
+                                    <span>@S["NavImports"]</span>
+                                </a>
+                            }
+
+                            <a class="ed-v3-nav-link @(currentController == "Notifications" ? "is-active" : null)"
+                               asp-controller="Notifications"
+                               asp-action="Index">
+                                <span class="ed-v3-nav-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9m-8 13h4"/></svg>
+                                </span>
+                                <span>@S["NavNotifications"]</span>
+                            </a>
+                        }
+
+                        @if (isSchoolAdmin)
+                        {
+                            <a class="ed-v3-nav-link @(currentController == "Audit" ? "is-active" : null)"
+                               asp-controller="Audit"
+                               asp-action="Index">
+                                <span class="ed-v3-nav-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24"><path d="M12 3 4 6v5c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6zM9 12l2 2 4-5"/></svg>
+                                </span>
+                                <span>@S["NavAuditLog"]</span>
+                            </a>
+                        }
+                    }
+                </nav>
+            </div>
+
+            <div class="ed-v3-secure-card">
+                <span class="ed-v3-secure-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M12 3 4 6v5c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6zM9 12l2 2 4-5"/></svg>
+                </span>
+                <strong>@S["V3SecureWorkspace"]</strong>
+                <span>@S["V3SecureWorkspaceDescription"]</span>
+            </div>
+        </aside>
+
+        <div class="ed-v3-content">
+            <header class="ed-app-header ed-v3-topbar">
+                <div class="ed-app-header-inner ed-v3-topbar-inner">
+                    <div class="ed-v3-topbar-copy">
+                        <span class="ed-v3-mobile-brand">@localizedProductName</span>
+                        <strong>@pageTitle</strong>
+                    </div>
+
+                    <div class="ed-v3-topbar-actions">
+                        @if (isSuperAdmin || isSchoolAdmin)
+                        {
+                            <a class="ed-v3-topbar-button"
+                               asp-controller="Audit"
+                               asp-action="Index">
+                                <span aria-hidden="true">☷</span>
+                                <span>@S["NavAuditLog"]</span>
+                            </a>
+                        }
+
+                        <div class="ed-v3-profile">
+                            <span class="ed-v3-avatar" aria-hidden="true">
+                                @(string.IsNullOrWhiteSpace(signedInName) ? "U" : signedInName[..1].ToUpperInvariant())
+                            </span>
+                            <span class="ed-v3-profile-copy">
+                                <small>@S["V3SignedInAs"]</small>
+                                <strong>@signedInName</strong>
+                            </span>
+                        </div>
+
+                        <form method="post"
+                              asp-controller="Account"
+                              asp-action="Logout"
+                              class="m-0">
+                            <button type="submit"
+                                    class="ed-signout-button ed-v3-signout">
+                                @S["NavSignOut"]
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </header>
+
+            <main role="main"
+                  class="ed-app-main ed-v3-main">
+                @RenderBody()
+            </main>
+
+            <footer class="ed-v3-footer">
+                &copy; 2026 @localizedProductName · @S["V3Footer"]
+            </footer>
         </div>
-    </header>
+    </div>
 
-    <main class="ed-app-main">
-        @RenderBody()
-    </main>
-
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js"
             asp-append-version="true"></script>
 

@@ -11,12 +11,12 @@
     ViewData["Title"] = A["AcademicStructureTitle"].Value;
 }
 
-<section class="academic-page">
+<section class="academic-page @(canManageAcademic ? "" : "is-readonly")">
     <header class="academic-header">
         <div>
             <div class="user-eyebrow">@A["School"]</div>
             <h1>@A["AcademicStructureTitle"]</h1>
-            <p>@A["AcademicStructureSubtitle"]</p>
+            <p>@(canManageAcademic ? A["AcademicStructureSubtitle"] : A["AcademicStructureViewSubtitle"])</p>
             <strong>@Model.SchoolName</strong>
         </div>
         <a class="school-button"
@@ -284,7 +284,13 @@
                                 <td data-label="@A["AcademicYear"]">@item.AcademicYearName</td>
                                 <td data-label="@A["GradeLevel"]">@item.GradeLevelName</td>
                                 <td data-label="@A["Status"]">@A[$"Status{item.Status}"]</td>
-                                <td><a asp-action="EditClassGroup" asp-route-id="@item.Id">@A["Edit"]</a></td>
+                                <td>
+                                    @if (canManageAcademic)
+                                    {
+                                        <a asp-action="EditClassGroup"
+                                           asp-route-id="@item.Id">@A["Edit"]</a>
+                                    }
+                                </td>
                             </tr>
                         }
                         </tbody>
@@ -332,7 +338,13 @@
                                 <td data-label="@A["Code"]">@item.Code</td>
                                 <td data-label="@A["Name"]">@item.Name</td>
                                 <td data-label="@A["Status"]">@A[$"Status{item.Status}"]</td>
-                                <td><a asp-action="EditSubject" asp-route-id="@item.Id">@A["Edit"]</a></td>
+                                <td>
+                                    @if (canManageAcademic)
+                                    {
+                                        <a asp-action="EditSubject"
+                                           asp-route-id="@item.Id">@A["Edit"]</a>
+                                    }
+                                </td>
                             </tr>
                         }
                         </tbody>

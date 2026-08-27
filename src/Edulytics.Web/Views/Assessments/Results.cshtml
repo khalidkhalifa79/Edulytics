@@ -8,7 +8,7 @@
 @{
     ViewData["Title"] = A["Results"];
     var assessment = Model.Workspace.Assessment;
-    var editable = assessment.Status == Edulytics.Core.Enums.AssessmentStatus.Open;
+    var editable = canManageAssessment && assessment.Status == Edulytics.Core.Enums.AssessmentStatus.Open;
 }
 <section class="assessment-page">
     <header class="assessment-header">
@@ -35,7 +35,11 @@
 
     @if (!editable)
     {
-        <div class="assessment-info">@A["ResultsReadOnly"]</div>
+        <div class="assessment-info">
+            @(assessment.Status == Edulytics.Core.Enums.AssessmentStatus.Open
+                ? A["ResultsRoleReadOnly"]
+                : A["ResultsReadOnly"])
+        </div>
     }
 
     @if (Model.Workspace.Students.Count == 0)

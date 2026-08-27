@@ -4,14 +4,21 @@
 
 @{
     var canManageSchoolUsers = User.IsInRole(RoleNames.SubjectSupervisor) || User.IsInRole(RoleNames.SuperAdmin);
+    var isPlatformActor = User.IsInRole(RoleNames.SuperAdmin);
+
     var operationalRoleOptions =
-        User.IsInRole(RoleNames.SuperAdmin)
+        isPlatformActor
             ? Model.RoleOptions
             : Model.RoleOptions
                 .Where(x =>
                     x.Value == RoleNames.Teacher ||
                     x.Value == RoleNames.Student)
                 .ToArray();
+
+    var createUserIntroKey =
+        isPlatformActor
+            ? "CreateUserIntro"
+            : "CreateOperationalUserIntro";
 }
 
 @{
@@ -31,7 +38,7 @@
             <h1>@T["CreateSchoolUser"]</h1>
 
             <p class="user-page-subtitle">
-                @T["CreateUserIntro"]
+                @T[createUserIntroKey]
             </p>
         </div>
     </header>

@@ -60,4 +60,175 @@
   <data name="ServiceUnavailableMessage" xml:space="preserve">
     <value>Spróbuj ponownie za chwilę. Jeśli problem będzie się powtarzał, przekaż pomocy technicznej poniższy identyfikator korelacji.</value>
   </data>
+  <data name="NavDashboard" xml:space="preserve">
+    <value>Panel główny</value>
+  </data>
+  <data name="NavPlatformAdministration" xml:space="preserve">
+    <value>Administracja platformą</value>
+  </data>
+  <data name="NavAcademicWorkspace" xml:space="preserve">
+    <value>Obszar akademicki</value>
+  </data>
+  <data name="NavSchools" xml:space="preserve">
+    <value>Szkoły</value>
+  </data>
+  <data name="NavOnboarding" xml:space="preserve">
+    <value>Wdrażanie klientów</value>
+  </data>
+  <data name="NavBilling" xml:space="preserve">
+    <value>Rozliczenia i finanse</value>
+  </data>
+  <data name="NavSubscriptions" xml:space="preserve">
+    <value>Subskrypcje</value>
+  </data>
+  <data name="NavOperations" xml:space="preserve">
+    <value>Operacje</value>
+  </data>
+  <data name="NavAuditLog" xml:space="preserve">
+    <value>Dziennik audytu</value>
+  </data>
+  <data name="NavSchoolUsers" xml:space="preserve">
+    <value>Użytkownicy szkoły</value>
+  </data>
+  <data name="NavSupervisorAssignments" xml:space="preserve">
+    <value>Przypisania koordynatorów</value>
+  </data>
+  <data name="NavAcademicStructure" xml:space="preserve">
+    <value>Struktura akademicka</value>
+  </data>
+  <data name="NavCurriculum" xml:space="preserve">
+    <value>Program nauczania</value>
+  </data>
+  <data name="NavAssessments" xml:space="preserve">
+    <value>Oceny i testy</value>
+  </data>
+  <data name="NavAnalytics" xml:space="preserve">
+    <value>Analityka</value>
+  </data>
+  <data name="NavReports" xml:space="preserve">
+    <value>Raporty</value>
+  </data>
+  <data name="NavImports" xml:space="preserve">
+    <value>Import danych</value>
+  </data>
+  <data name="NavNotifications" xml:space="preserve">
+    <value>Powiadomienia</value>
+  </data>
+  <data name="NavAccount" xml:space="preserve">
+    <value>Konto</value>
+  </data>
+  <data name="NavSignOut" xml:space="preserve">
+    <value>Wyloguj</value>
+  </data>
+  <data name="V3SecureWorkspace" xml:space="preserve">
+    <value>Bezpieczny obszar</value>
+  </data>
+  <data name="V3SecureWorkspaceDescription" xml:space="preserve">
+    <value>Dostęp zależny od roli i audytowana administracja.</value>
+  </data>
+  <data name="V3PlatformOverview" xml:space="preserve">
+    <value>Przegląd platformy</value>
+  </data>
+  <data name="V3PlatformOverviewDescription" xml:space="preserve">
+    <value>Zarządzaj szkołami, operacjami komercyjnymi i administracją platformy w jednym miejscu.</value>
+  </data>
+  <data name="V3PlatformEyebrow" xml:space="preserve">
+    <value>Administracja platformą</value>
+  </data>
+  <data name="V3TotalSchools" xml:space="preserve">
+    <value>Łączna liczba szkół</value>
+  </data>
+  <data name="V3TotalUsers" xml:space="preserve">
+    <value>Łączna liczba użytkowników</value>
+  </data>
+  <data name="V3AuditCapability" xml:space="preserve">
+    <value>Ślad audytowy</value>
+  </data>
+  <data name="V3AuditCapabilityValue" xml:space="preserve">
+    <value>Dostępny</value>
+  </data>
+  <data name="V3OperationsCapability" xml:space="preserve">
+    <value>Operacje</value>
+  </data>
+  <data name="V3OperationsCapabilityValue" xml:space="preserve">
+    <value>Obszar roboczy</value>
+  </data>
+  <data name="V3PlatformManagement" xml:space="preserve">
+    <value>Zarządzanie platformą</value>
+  </data>
+  <data name="V3QuickAccess" xml:space="preserve">
+    <value>Szybki dostęp</value>
+  </data>
+  <data name="V3ControlCenter" xml:space="preserve">
+    <value>Centrum sterowania</value>
+  </data>
+  <data name="V3ControlCenterDescription" xml:space="preserve">
+    <value>Narzędzia administracyjne są pogrupowane według odpowiedzialności operacyjnej.</value>
+  </data>
+  <data name="V3SchoolsTitle" xml:space="preserve">
+    <value>Zarządzanie szkołami</value>
+  </data>
+  <data name="V3SchoolsDescription" xml:space="preserve">
+    <value>Twórz i zarządzaj szkołami, ich statusem i podstawowymi informacjami.</value>
+  </data>
+  <data name="V3OnboardingTitle" xml:space="preserve">
+    <value>Wdrażanie klientów</value>
+  </data>
+  <data name="V3OnboardingDescription" xml:space="preserve">
+    <value>Przeglądaj leady, wersje demonstracyjne i kontrolowane tworzenie szkół.</value>
+  </data>
+  <data name="V3BillingTitle" xml:space="preserve">
+    <value>Rozliczenia i finanse</value>
+  </data>
+  <data name="V3BillingDescription" xml:space="preserve">
+    <value>Zarządzaj fakturami, weryfikacją przelewów i stanem płatności.</value>
+  </data>
+  <data name="V3SubscriptionsTitle" xml:space="preserve">
+    <value>Subskrypcje</value>
+  </data>
+  <data name="V3SubscriptionsDescription" xml:space="preserve">
+    <value>Zarządzaj warunkami, miejscami, odnowieniami i uprawnieniami.</value>
+  </data>
+  <data name="V3OperationsTitle" xml:space="preserve">
+    <value>Operacje platformy</value>
+  </data>
+  <data name="V3OperationsDescription" xml:space="preserve">
+    <value>Sprawdzaj operacje systemowe, zadania w tle i stan operacyjny.</value>
+  </data>
+  <data name="V3AuditTitle" xml:space="preserve">
+    <value>Audyt i zgodność</value>
+  </data>
+  <data name="V3AuditDescription" xml:space="preserve">
+    <value>Przeglądaj trwały dziennik działań administracyjnych i filtry.</value>
+  </data>
+  <data name="V3OpenWorkspace" xml:space="preserve">
+    <value>Otwórz obszar</value>
+  </data>
+  <data name="V3SignedInAs" xml:space="preserve">
+    <value>Zalogowano jako</value>
+  </data>
+  <data name="V3PlatformAdmin" xml:space="preserve">
+    <value>Administrator platformy</value>
+  </data>
+  <data name="V3Navigation" xml:space="preserve">
+    <value>Główna nawigacja</value>
+  </data>
+  <data name="V3Footer" xml:space="preserve">
+    <value>Obszar administracyjny Edulityks</value>
+  </data>
+  <data name="V3SchoolCapability" xml:space="preserve">
+    <value>Zarządzanie szkołami</value>
+  </data>
+  <data name="V3SchoolCapabilityValue" xml:space="preserve">
+    <value>Obszar roboczy</value>
+  </data>
+  <data name="V3AccessCapability" xml:space="preserve">
+    <value>Kontrola dostępu</value>
+  </data>
+  <data name="V3AccessCapabilityValue" xml:space="preserve">
+    <value>Zależna od roli</value>
+  </data>
+  <data name="V3PlatformDashboardTitle" xml:space="preserve">
+    <value>Panel platformy</value>
+  </data>
 </root>

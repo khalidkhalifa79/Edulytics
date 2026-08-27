@@ -81,4 +81,10 @@
   <data name="ErrorSeatLimitReached" xml:space="preserve">
     <value>The student import would exceed the committed student-seat limit.</value>
   </data>
+  <data name="ImportViewSubtitle" xml:space="preserve">
+    <value>Review import history, batch status and validation results. Import operations are managed by the subject supervisor.</value>
+  </data>
+  <data name="ImportReadOnlyNotice" xml:space="preserve">
+    <value>You have read-only access to data imports. Review completed and validated batches below.</value>
+  </data>
 </root>
