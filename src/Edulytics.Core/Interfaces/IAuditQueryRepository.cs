@@ -12,7 +12,8 @@ public sealed record AuditLogQuerySpec(
     DateTime? FromUtc,
     DateTime? ToUtc,
     int Skip,
-    int Take);
+    int Take,
+    string? ActorRole = null);
 
 public sealed record AuditLogQueryPageData(
     int TotalCount,

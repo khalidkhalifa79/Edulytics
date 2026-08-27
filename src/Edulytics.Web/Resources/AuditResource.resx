@@ -108,4 +108,22 @@
   <data name="PlatformScope" xml:space="preserve">
     <value>Platform</value>
   </data>
+  <data name="AllActors" xml:space="preserve">
+    <value>All actors</value>
+  </data>
+  <data name="DisplayRoleStudent" xml:space="preserve">
+    <value>Student</value>
+  </data>
+  <data name="ActionPlaceholder" xml:space="preserve">
+    <value>e.g. StudentProfile.Restored</value>
+  </data>
+  <data name="ActorUserIdPlaceholder" xml:space="preserve">
+    <value>Paste exact actor UUID</value>
+  </data>
+  <data name="CorrelationIdPlaceholder" xml:space="preserve">
+    <value>Full or partial correlation ID</value>
+  </data>
+  <data name="DisplayActorSystem" xml:space="preserve">
+    <value>System</value>
+  </data>
 </root>

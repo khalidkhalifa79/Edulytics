@@ -79,6 +79,8 @@ public sealed class AuditQueryService
                     Clean(request.EntityType),
                 CorrelationId =
                     Clean(request.CorrelationId),
+                ActorRole =
+                    Clean(request.ActorRole),
                 Page = page,
                 PageSize = pageSize
             };
@@ -95,7 +97,8 @@ public sealed class AuditQueryService
                     normalized.FromUtc,
                     normalized.ToUtc,
                     (page - 1) * pageSize,
-                    pageSize),
+                    pageSize,
+                      normalized.ActorRole),
                 cancellationToken);
 
         var items =

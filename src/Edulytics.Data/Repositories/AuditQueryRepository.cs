@@ -70,6 +70,16 @@ public sealed class AuditQueryRepository
                     spec.ActorUserId.Value);
         }
 
+        if (!string.IsNullOrWhiteSpace(
+                spec.ActorRole))
+        {
+            var actorRole =
+                spec.ActorRole.Trim();
+
+            query = query.Where(
+                x => x.ActorRole == actorRole);
+        }
+
         if (spec.FromUtc.HasValue)
         {
             query = query.Where(

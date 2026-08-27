@@ -23,6 +23,7 @@ public sealed class AuditRouteBindingRegressionTests
                 .ToArray();
 
         Assert.Contains("auditAction", names);
+        Assert.Contains("actorRole", names);
 
         Assert.DoesNotContain(
             names,
@@ -33,7 +34,7 @@ public sealed class AuditRouteBindingRegressionTests
     }
 
     [Fact]
-    public void AuditView_FilterAndPagination_UseAuditActionQueryKey()
+    public void AuditView_FilterAndPagination_UseSafeQueryKeys()
     {
         var root = FindRepositoryRoot();
 
@@ -46,6 +47,24 @@ public sealed class AuditRouteBindingRegressionTests
                     "Views",
                     "Audit",
                     "Index.cshtml"));
+
+        var service =
+            File.ReadAllText(
+                Path.Combine(
+                    root,
+                    "src",
+                    "Edulytics.Services",
+                    "Auditing",
+                    "AuditQueryService.cs"));
+
+        var repository =
+            File.ReadAllText(
+                Path.Combine(
+                    root,
+                    "src",
+                    "Edulytics.Data",
+                    "Repositories",
+                    "AuditQueryRepository.cs"));
 
         Assert.Contains(
             "name=\"auditAction\"",
@@ -70,6 +89,41 @@ public sealed class AuditRouteBindingRegressionTests
         Assert.DoesNotContain(
             "asp-route-action=\"@Model.Query.Action\"",
             view);
+
+        Assert.Contains(
+            "name=\"actorRole\"",
+            view);
+        Assert.Contains(
+            "(\"System\", T[\"DisplayActorSystem\"].Value)",
+            view);
+
+        Assert.Contains(
+            "asp-route-actorRole=\"@Model.Query.ActorRole\"",
+            view);
+
+        Assert.Contains(
+            "audit-time-date",
+            view);
+
+        Assert.Contains(
+            "@item.OccurredAtUtc.ToString(\"u\")",
+            view);
+
+        Assert.Contains(
+            "Clean(request.ActorRole)",
+            service);
+
+        Assert.Contains(
+            "normalized.ActorRole",
+            service);
+
+        Assert.Contains(
+            "spec.ActorRole",
+            repository);
+
+        Assert.Contains(
+            "x.ActorRole == actorRole",
+            repository);
     }
 
     private static string FindRepositoryRoot()
