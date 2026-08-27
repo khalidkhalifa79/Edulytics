@@ -1,0 +1,93 @@
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.SharedResource> Shared
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.StudentResource> S
+@{
+    var localizedProductName = Shared["ProductName"].Value;
+    var action = ViewContext.RouteData.Values["action"]?.ToString() ?? string.Empty;
+}
+<!DOCTYPE html>
+<html lang="@System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - @localizedProductName</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body class="student-portal-body">
+    <div class="student-app-shell">
+        <aside class="student-sidebar" aria-label="@S["StudentPortal"]">
+            <a class="student-brand-link"
+               asp-controller="StudentPortal"
+               asp-action="Dashboard">
+                <partial name="_LocalizedBrand" />
+            </a>
+
+            <div class="student-nav-label">@S["StudentPortal"]</div>
+
+            <nav class="student-nav">
+                <a class="student-nav-link @(action == "Dashboard" ? "is-active" : "")"
+                   asp-controller="StudentPortal"
+                   asp-action="Dashboard">
+                    <span aria-hidden="true">⌂</span>
+                    <span>@S["Dashboard"]</span>
+                </a>
+
+                <a class="student-nav-link @(action == "Learning" ? "is-active" : "")"
+                   asp-controller="StudentPortal"
+                   asp-action="Learning">
+                    <span aria-hidden="true">▤</span>
+                    <span>@S["MyLearning"]</span>
+                </a>
+
+                <a class="student-nav-link @(action == "Assessments" ? "is-active" : "")"
+                   asp-controller="StudentPortal"
+                   asp-action="Assessments">
+                    <span aria-hidden="true">✓</span>
+                    <span>@S["Assessments"]</span>
+                </a>
+
+                <a class="student-nav-link @(action == "Results" ? "is-active" : "")"
+                   asp-controller="StudentPortal"
+                   asp-action="Results">
+                    <span aria-hidden="true">↗</span>
+                    <span>@S["MyResults"]</span>
+                </a>
+
+                <a class="student-nav-link @(action == "Notifications" ? "is-active" : "")"
+                   asp-controller="StudentPortal"
+                   asp-action="Notifications">
+                    <span aria-hidden="true">◇</span>
+                    <span>@S["Notifications"]</span>
+                </a>
+            </nav>
+
+            <div class="student-secure-card">
+                <strong>@S["StudentPortal"]</strong>
+                <span>@User.Identity?.Name</span>
+            </div>
+        </aside>
+
+        <main class="student-main">
+            <header class="student-topbar">
+                <div>
+                    <span class="student-topbar-product">@localizedProductName</span>
+                    <strong>@ViewData["Title"]</strong>
+                </div>
+
+                <form asp-controller="Account"
+                      asp-action="Logout"
+                      method="post">
+                    <button class="student-signout" type="submit">
+                        @S["SignOut"]
+                    </button>
+                </form>
+            </header>
+
+            <div class="student-page-frame">
+                @RenderBody()
+            </div>
+        </main>
+    </div>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

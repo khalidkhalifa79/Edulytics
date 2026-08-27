@@ -47,6 +47,13 @@ public sealed class SchoolHomeController : Controller
             return Forbid();
         }
 
+        if (context.Role == RoleNames.Student)
+        {
+            return RedirectToAction(
+                "Dashboard",
+                "StudentPortal");
+        }
+
         var reportCatalog =
             await _reports.GetCatalogAsync(
                 userId,

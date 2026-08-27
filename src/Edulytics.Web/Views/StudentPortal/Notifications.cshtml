@@ -1,0 +1,48 @@
+@model Edulytics.Web.ViewModels.StudentPortal.StudentNotificationsViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.StudentResource> S
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.NotificationResource> N
+@{
+    Layout = "_StudentLayout";
+    ViewData["Title"] = S["NotificationsTitle"].Value;
+}
+<header class="student-page-header">
+    <span class="student-eyebrow">@S["Notifications"]</span>
+    <h1>@S["NotificationsTitle"]</h1>
+    <p>@S["NotificationsSubtitle"]</p>
+</header>
+
+@if (Model.Notifications.Count == 0)
+{
+    <div class="student-empty-state">@S["NoNotifications"]</div>
+}
+else
+{
+    <div class="student-notification-list">
+        @foreach (var item in Model.Notifications)
+        {
+            <article class="student-notification-card @(!item.ReadAtUtc.HasValue ? "is-unread" : "")">
+                <div>
+                    <div class="student-notification-heading">
+                        <strong>@N[item.TitleKey]</strong>
+                        <span>@(!item.ReadAtUtc.HasValue ? S["Unread"] : S["Read"])</span>
+                    </div>
+                    <p>@N[item.MessageKey]</p>
+                    <time datetime="@item.CreatedAtUtc.ToString("O")">
+                        @item.CreatedAtUtc.ToString("yyyy-MM-dd HH:mm") UTC
+                    </time>
+                </div>
+
+                <form asp-action="SetNotificationReadState"
+                      asp-route-id="@item.Id"
+                      method="post">
+                    <input type="hidden"
+                           name="isRead"
+                           value="@(!item.ReadAtUtc.HasValue ? "true" : "false")" />
+                    <button class="student-secondary-link" type="submit">
+                        @(!item.ReadAtUtc.HasValue ? S["MarkRead"] : S["MarkUnread"])
+                    </button>
+                </form>
+            </article>
+        }
+    </div>
+}

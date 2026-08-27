@@ -1,0 +1,70 @@
+@model Edulytics.Web.ViewModels.StudentPortal.StudentLearningViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.StudentResource> S
+@{
+    Layout = "_StudentLayout";
+    ViewData["Title"] = S["LearningTitle"].Value;
+}
+<header class="student-page-header">
+    <span class="student-eyebrow">@S["MyLearning"]</span>
+    <h1>@S["LearningTitle"]</h1>
+    <p>@S["LearningSubtitle"]</p>
+</header>
+
+<div class="student-info-banner">
+    @S["CurriculumNavigationOnly"]
+</div>
+
+@if (Model.Workspace.Learning.Count == 0)
+{
+    <div class="student-empty-state">@S["NoLearningYet"]</div>
+}
+else
+{
+    <div class="student-learning-stack">
+        @foreach (var subject in Model.Workspace.Learning)
+        {
+            <article class="student-learning-card">
+                <header>
+                    <div>
+                        <span class="student-subject-code">@subject.SubjectCode</span>
+                        <h2>@subject.SubjectName</h2>
+                    </div>
+                    <div class="student-learning-meta">
+                        <span>@S["AcademicYear"]: <strong>@subject.AcademicYearName</strong></span>
+                        <span>@S["Grade"]: <strong>@subject.GradeName</strong></span>
+                        <span>@S["Curriculum"]: <strong>@subject.FrameworkName</strong></span>
+                    </div>
+                </header>
+
+                @if (subject.Nodes.Count == 0)
+                {
+                    <p class="student-empty">@S["NoLearningYet"]</p>
+                }
+                else
+                {
+                    <div class="student-curriculum-tree">
+                        @foreach (var node in subject.Nodes)
+                        {
+                            <div class="student-node @(node.Kind == "Lesson" ? "is-lesson" : "is-unit")">
+                                <span class="student-node-kind">
+                                    @(node.Kind == "Lesson" ? S["Lesson"] : S["Unit"])
+                                </span>
+                                <div>
+                                    <strong>@node.Title</strong>
+                                    @if (!string.IsNullOrWhiteSpace(node.Pathway))
+                                    {
+                                        <small>@S["Pathway"]: @node.Pathway</small>
+                                    }
+                                    @if (!string.IsNullOrWhiteSpace(node.OfficialText))
+                                    {
+                                        <p>@node.OfficialText</p>
+                                    }
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+            </article>
+        }
+    </div>
+}

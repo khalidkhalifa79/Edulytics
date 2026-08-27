@@ -1,0 +1,44 @@
+@model Edulytics.Web.ViewModels.StudentPortal.StudentResultsViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.StudentResource> S
+@{
+    Layout = "_StudentLayout";
+    ViewData["Title"] = S["ResultsTitle"].Value;
+}
+<header class="student-page-header">
+    <span class="student-eyebrow">@S["MyResults"]</span>
+    <h1>@S["ResultsTitle"]</h1>
+    <p>@S["ResultsSubtitle"]</p>
+</header>
+
+@if (Model.Workspace.Results.Count == 0)
+{
+    <div class="student-empty-state">@S["NoResultsYet"]</div>
+}
+else
+{
+    <div class="student-results-table-shell">
+        <table class="student-results-table">
+            <thead>
+                <tr>
+                    <th>@S["Assessment"]</th>
+                    <th>@S["Subject"]</th>
+                    <th>@S["AssessmentDate"]</th>
+                    <th>@S["Score"]</th>
+                    <th>@S["Percentage"]</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Workspace.Results)
+                {
+                    <tr>
+                        <td>@item.AssessmentTitle</td>
+                        <td>@item.SubjectName</td>
+                        <td>@item.AssessmentDate.ToString("yyyy-MM-dd")</td>
+                        <td>@item.Score.ToString("0.##") / @item.MaxScore.ToString("0.##")</td>
+                        <td><strong>@item.Percentage.ToString("0.##")%</strong></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}

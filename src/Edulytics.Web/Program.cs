@@ -152,6 +152,9 @@ builder.Services
     .AddNotificationsPhase21();
 
 builder.Services
+    .AddStudentPortalPhase28();
+
+builder.Services
     .AddInvitationEmailDelivery(
         builder.Configuration);
 
