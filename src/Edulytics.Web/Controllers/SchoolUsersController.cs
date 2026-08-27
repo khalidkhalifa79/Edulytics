@@ -1,5 +1,6 @@
 using System.Security.Claims;
 using Edulytics.Core.Constants;
+using Edulytics.Services.Academics;
 using Edulytics.Services.Users;
 using Edulytics.Services.StudentSetup;
 using Edulytics.Web.Email;
@@ -401,47 +402,7 @@ public sealed class SchoolUsersController : Controller
             if (!setup.Succeeded)
             {
                 var key =
-                    setup.Error switch
-                    {
-                        StudentRoleProvisioningErrorCode
-                            .MissingStudentNumber =>
-                            "StudentSetupMissingFields",
-
-                        StudentRoleProvisioningErrorCode
-                            .MissingFirstName =>
-                            "StudentSetupMissingFields",
-
-                        StudentRoleProvisioningErrorCode
-                            .MissingLastName =>
-                            "StudentSetupMissingFields",
-
-                        StudentRoleProvisioningErrorCode
-                            .MissingClass =>
-                            "StudentSetupMissingFields",
-
-                        StudentRoleProvisioningErrorCode
-                            .ClassNotFound =>
-                            "StudentSetupClassNotFound",
-
-                        StudentRoleProvisioningErrorCode
-                            .EnrollmentConflict =>
-                            "StudentSetupEnrollmentConflict",
-
-                        StudentRoleProvisioningErrorCode
-                            .RecoveryFailed =>
-                            "StudentSetupRecoveryFailed",
-
-                        StudentRoleProvisioningErrorCode
-                            .AccessDenied =>
-                            "StudentSetupUnavailable",
-
-                        StudentRoleProvisioningErrorCode
-                            .InvalidTargetRole =>
-                            "StudentSetupUnavailable",
-
-                        _ =>
-                            "StudentSetupFailed"
-                    };
+                    StudentSetupErrorKey(setup);
 
                 TempData["SchoolUserError"] =
                     _text[key].Value;
@@ -584,6 +545,127 @@ public sealed class SchoolUsersController : Controller
                 id,
                 schoolId
             });
+    }
+
+    private static string StudentSetupErrorKey(
+        StudentRoleProvisioningResult setup)
+    {
+        if (setup.Error ==
+            StudentRoleProvisioningErrorCode
+                .UnderlyingOperationFailed)
+        {
+            return setup.AcademicError switch
+            {
+                AcademicStructureErrorCode
+                    .DuplicateStudentNumber =>
+                    "StudentSetupDuplicateStudentNumber",
+
+                AcademicStructureErrorCode
+                    .StudentSeatLimitReached =>
+                    "StudentSetupSeatLimitReached",
+
+                AcademicStructureErrorCode
+                    .InvalidStudentAccount =>
+                    "StudentSetupInvalidStudentAccount",
+
+                AcademicStructureErrorCode
+                    .DuplicateStudentUserLink =>
+                    "StudentSetupDuplicateStudentUserLink",
+
+                AcademicStructureErrorCode
+                    .ClassGroupNotFound =>
+                    "StudentSetupClassNotFound",
+
+                AcademicStructureErrorCode
+                    .DuplicateEnrollment =>
+                    "StudentSetupDuplicateEnrollment",
+
+                AcademicStructureErrorCode
+                    .StudentProfileNotFound =>
+                    "StudentSetupProfileStateChanged",
+
+                AcademicStructureErrorCode
+                    .StudentAlreadyArchived =>
+                    "StudentSetupProfileStateChanged",
+
+                AcademicStructureErrorCode
+                    .StudentNotArchived =>
+                    "StudentSetupProfileStateChanged",
+
+                AcademicStructureErrorCode
+                    .ConcurrencyConflict =>
+                    "StudentSetupConcurrencyConflict",
+
+                AcademicStructureErrorCode
+                    .InvalidCode =>
+                    "StudentSetupInvalidStudentNumber",
+
+                AcademicStructureErrorCode
+                    .InvalidName =>
+                    "StudentSetupInvalidName",
+
+                AcademicStructureErrorCode
+                    .Required =>
+                    "StudentSetupMissingFields",
+
+                AcademicStructureErrorCode
+                    .SchoolNotActive =>
+                    "StudentSetupUnavailable",
+
+                AcademicStructureErrorCode
+                    .AccessDenied =>
+                    "StudentSetupUnavailable",
+
+                AcademicStructureErrorCode
+                    .PersistenceError =>
+                    "StudentSetupPersistenceError",
+
+                _ =>
+                    "StudentSetupFailed"
+            };
+        }
+
+        return setup.Error switch
+        {
+            StudentRoleProvisioningErrorCode
+                .MissingStudentNumber =>
+                "StudentSetupMissingFields",
+
+            StudentRoleProvisioningErrorCode
+                .MissingFirstName =>
+                "StudentSetupMissingFields",
+
+            StudentRoleProvisioningErrorCode
+                .MissingLastName =>
+                "StudentSetupMissingFields",
+
+            StudentRoleProvisioningErrorCode
+                .MissingClass =>
+                "StudentSetupMissingFields",
+
+            StudentRoleProvisioningErrorCode
+                .ClassNotFound =>
+                "StudentSetupClassNotFound",
+
+            StudentRoleProvisioningErrorCode
+                .EnrollmentConflict =>
+                "StudentSetupEnrollmentConflict",
+
+            StudentRoleProvisioningErrorCode
+                .RecoveryFailed =>
+                "StudentSetupRecoveryFailed",
+
+            StudentRoleProvisioningErrorCode
+                .AccessDenied =>
+                "StudentSetupUnavailable",
+
+            StudentRoleProvisioningErrorCode
+                .InvalidTargetRole =>
+                "StudentSetupUnavailable",
+
+            _ =>
+                "StudentSetupFailed"
+        };
     }
 
     private static string GetInvitationCulture()
