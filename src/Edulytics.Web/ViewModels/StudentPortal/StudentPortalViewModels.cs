@@ -1,4 +1,5 @@
 using Edulytics.Services.Notifications;
+using Edulytics.Services.LessonContent;
 using Edulytics.Services.StudentPortal;
 
 namespace Edulytics.Web.ViewModels.StudentPortal;
@@ -15,7 +16,8 @@ public sealed record StudentDashboardViewModel(
 }
 
 public sealed record StudentLearningViewModel(
-    StudentPortalWorkspace Workspace);
+    StudentPortalWorkspace Workspace,
+    IReadOnlyList<StudentLessonSummary> Lessons);
 
 public sealed record StudentAssessmentsViewModel(
     StudentPortalWorkspace Workspace);

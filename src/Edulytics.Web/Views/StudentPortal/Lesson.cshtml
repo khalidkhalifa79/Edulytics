@@ -1,0 +1,54 @@
+@model Edulytics.Services.LessonContent.StudentLessonDetail
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.LessonContentResource> L
+@{
+    Layout = "_StudentLayout";
+    ViewData["Title"] = Model.Title;
+}
+
+<header class="student-page-header">
+    <span class="student-eyebrow">@Model.SubjectCode · @Model.GradeName</span>
+    <h1>@Model.Title</h1>
+    <p>@Model.TopicName · @Model.FrameworkName</p>
+</header>
+
+<div class="student-lesson-detail-meta">
+    <span>@L["PublishedOn"]: @Model.PublishedAtUtc.ToString("yyyy-MM-dd")</span>
+</div>
+
+<section class="student-lesson-content-section">
+    <h2>@L["AlignedOutcomes"]</h2>
+    <div class="student-outcome-list">
+        @foreach (var outcome in Model.Outcomes)
+        {
+            <article class="student-outcome-item">
+                <strong>@outcome.Code</strong>
+                <span>@outcome.Description</span>
+            </article>
+        }
+    </div>
+</section>
+
+<section class="student-lesson-content-section">
+    <h2>@L["Explanation"]</h2>
+    <div class="student-lesson-text">@Model.Explanation</div>
+</section>
+<section class="student-lesson-content-section">
+    <h2>@L["KeyConceptsAndRules"]</h2>
+    <div class="student-lesson-text">@Model.KeyConceptsAndRules</div>
+</section>
+<section class="student-lesson-content-section">
+    <h2>@L["WorkedExamples"]</h2>
+    <div class="student-lesson-text">@Model.WorkedExamples</div>
+</section>
+<section class="student-lesson-content-section">
+    <h2>@L["StepByStepSolutions"]</h2>
+    <div class="student-lesson-text">@Model.StepByStepSolutions</div>
+</section>
+<section class="student-lesson-content-section">
+    <h2>@L["CommonMistakes"]</h2>
+    <div class="student-lesson-text">@Model.CommonMistakes</div>
+</section>
+<section class="student-lesson-content-section">
+    <h2>@L["QuickSummary"]</h2>
+    <div class="student-lesson-text">@Model.QuickSummary</div>
+</section>
