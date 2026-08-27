@@ -5727,3 +5727,109 @@ body:not(.ed-auth-body):not(.ed-public-body) header .localized-brand-logo,
         min-width: 960px;
     }
 }
+
+/* ===== EDULYTICS UI V3 AUDIT COLUMN SPACING POLISH ===== */
+
+.ed-v3-main .audit-table {
+    min-width: 1252px;
+}
+
+.ed-v3-main .audit-col-time {
+    width: 172px;
+}
+
+.ed-v3-main .audit-col-school {
+    width: 150px;
+}
+
+.ed-v3-main .audit-col-actor {
+    width: 184px;
+}
+
+.ed-v3-main .audit-col-action {
+    width: 174px;
+}
+
+.ed-v3-main .audit-col-entity {
+    width: 166px;
+}
+
+.ed-v3-main .audit-col-correlation {
+    width: 166px;
+}
+
+.ed-v3-main .audit-col-details {
+    width: 240px;
+}
+
+.ed-v3-main .audit-col-time,
+.ed-v3-main .audit-cell-time {
+    padding-right: 20px;
+}
+
+.ed-v3-main .audit-col-school,
+.ed-v3-main .audit-cell-school {
+    padding-left: 20px;
+}
+
+.ed-v3-main .audit-time-value {
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.ed-v3-main .audit-role-badge {
+    max-width: none;
+    white-space: nowrap;
+}
+
+.ed-v3-main .audit-cell-actor {
+    padding-right: 16px;
+}
+
+@media (max-width: 1220px) {
+    .ed-v3-main .audit-table {
+        min-width: 1252px;
+    }
+}
+
+/* ===== EDULYTICS UI V3 AUDIT SEARCH + TIMESTAMP POLISH ===== */
+
+.ed-v3-main .audit-time-value {
+    display: grid;
+    gap: 3px;
+    overflow: visible;
+    text-overflow: unset;
+    white-space: normal;
+    line-height: 1.18;
+}
+
+.ed-v3-main .audit-time-date {
+    display: block;
+    color: #2f405d;
+    font-size: .82rem;
+    font-weight: 750;
+    letter-spacing: .01em;
+    white-space: nowrap;
+}
+
+.ed-v3-main .audit-time-clock {
+    display: block;
+    color: #77859b;
+    font-size: .72rem;
+    font-weight: 650;
+    white-space: nowrap;
+}
+
+.ed-v3-main .audit-col-time {
+    width: 148px;
+}
+
+.ed-v3-main .audit-cell-time {
+    padding-right: 18px;
+}
+
+.ed-v3-main .audit-filter-card select[name="actorRole"] {
+    cursor: pointer;
+}
+
+/* ===== EDULYTICS UI V3 AUDIT ACTOR TAXONOMY FINAL ===== */

@@ -9,7 +9,8 @@ public sealed record AuditQueryRequest(
     DateTime? FromUtc = null,
     DateTime? ToUtc = null,
     int Page = 1,
-    int PageSize = 25);
+    int PageSize = 25,
+    string? ActorRole = null);
 
 public sealed record AuditLogItem(
     Guid Id,

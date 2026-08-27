@@ -41,6 +41,7 @@
                 <input class="form-control"
                        id="auditAction"
                        name="auditAction"
+                       placeholder="@T["ActionPlaceholder"]"
                        value="@Model.Query.Action" />
             </div>
 
@@ -63,6 +64,7 @@
                 <input class="form-control"
                        id="correlationId"
                        name="correlationId"
+                       placeholder="@T["CorrelationIdPlaceholder"]"
                        value="@Model.Query.CorrelationId" />
             </div>
 
@@ -74,7 +76,51 @@
                 <input class="form-control"
                        id="actorUserId"
                        name="actorUserId"
+                       placeholder="@T["ActorUserIdPlaceholder"]"
                        value="@Model.Query.ActorUserId" />
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label"
+                       for="actorRole">
+                    @T["Actor"]
+                </label>
+                <select class="form-select"
+                        id="actorRole"
+                        name="actorRole">
+                    @if (string.IsNullOrWhiteSpace(Model.Query.ActorRole))
+                    {
+                        <option value="" selected>@T["AllActors"]</option>
+                    }
+                    else
+                    {
+                        <option value="">@T["AllActors"]</option>
+                    }
+
+                    @foreach (var option in new[]
+                    {
+                        ("System", T["DisplayActorSystem"].Value),
+                        ("SuperAdmin", T["DisplayRoleSuperAdmin"].Value),
+                        ("SchoolAdmin", T["DisplayRoleSchoolAdmin"].Value),
+                        ("SubjectSupervisor", T["DisplayRoleSubjectSupervisor"].Value),
+                        ("Teacher", T["DisplayRoleTeacher"].Value),
+                        ("Student", T["DisplayRoleStudent"].Value)
+                    })
+                    {
+                        if (Model.Query.ActorRole == option.Item1)
+                        {
+                            <option value="@option.Item1" selected>
+                                @option.Item2
+                            </option>
+                        }
+                        else
+                        {
+                            <option value="@option.Item1">
+                                @option.Item2
+                            </option>
+                        }
+                    }
+                </select>
             </div>
 
             <div class="col-md-4">
@@ -183,18 +229,27 @@
                         var actorRoleLabel =
                             item.ActorRole switch
                             {
+                                "System" => T["DisplayActorSystem"].Value,
                                 "SuperAdmin" => T["DisplayRoleSuperAdmin"].Value,
                                 "SchoolAdmin" => T["DisplayRoleSchoolAdmin"].Value,
                                 "SubjectSupervisor" => T["DisplayRoleSubjectSupervisor"].Value,
                                 "Teacher" => T["DisplayRoleTeacher"].Value,
+                                "Student" => T["DisplayRoleStudent"].Value,
                                 _ => item.ActorRole
                             };
 
                         <tr>
                             <td class="audit-cell-time">
-                                <span class="audit-time-value">
-                                    @item.OccurredAtUtc.ToString("u")
-                                </span>
+                                <time class="audit-time-value"
+                                      datetime="@item.OccurredAtUtc.ToString("O")"
+                                      title="@item.OccurredAtUtc.ToString("u")">
+                                    <span class="audit-time-date">
+                                        @item.OccurredAtUtc.ToString("yyyy-MM-dd")
+                                    </span>
+                                    <span class="audit-time-clock">
+                                        @item.OccurredAtUtc.ToString("HH:mm:ss") UTC
+                                    </span>
+                                </time>
                             </td>
 
                             <td class="audit-cell-school">
@@ -292,6 +347,7 @@
                asp-route-entityType="@Model.Query.EntityType"
                asp-route-correlationId="@Model.Query.CorrelationId"
                asp-route-actorUserId="@Model.Query.ActorUserId"
+               asp-route-actorRole="@Model.Query.ActorRole"
                asp-route-fromUtc="@Model.Query.FromUtc"
                asp-route-toUtc="@Model.Query.ToUtc"
                asp-route-page="@(Model.Page - 1)"
@@ -314,6 +370,7 @@
                asp-route-entityType="@Model.Query.EntityType"
                asp-route-correlationId="@Model.Query.CorrelationId"
                asp-route-actorUserId="@Model.Query.ActorUserId"
+               asp-route-actorRole="@Model.Query.ActorRole"
                asp-route-fromUtc="@Model.Query.FromUtc"
                asp-route-toUtc="@Model.Query.ToUtc"
                asp-route-page="@(Model.Page + 1)"

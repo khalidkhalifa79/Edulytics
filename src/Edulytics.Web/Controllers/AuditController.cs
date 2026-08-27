@@ -25,6 +25,7 @@ public sealed class AuditController
         string? entityType,
         string? correlationId,
         Guid? actorUserId,
+        string? actorRole,
         DateTime? fromUtc,
         DateTime? toUtc,
         int page = 1,
@@ -54,7 +55,8 @@ public sealed class AuditController
                     fromUtc,
                     toUtc,
                     page,
-                    pageSize),
+                    pageSize,
+                      actorRole),
                 cancellationToken);
 
         if (!result.Succeeded)
