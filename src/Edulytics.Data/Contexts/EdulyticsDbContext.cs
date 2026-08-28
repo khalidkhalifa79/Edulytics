@@ -35,6 +35,8 @@ public class EdulyticsDbContext
     public DbSet<LearningLesson> LearningLessons => Set<LearningLesson>();
     public DbSet<LearningLessonOutcome> LearningLessonOutcomes => Set<LearningLessonOutcome>();
     public DbSet<LearningLessonTranslation> LearningLessonTranslations => Set<LearningLessonTranslation>();
+    public DbSet<CurriculumPedagogicalLesson> CurriculumPedagogicalLessons => Set<CurriculumPedagogicalLesson>();
+    public DbSet<CurriculumPedagogicalLessonOutcome> CurriculumPedagogicalLessonOutcomes => Set<CurriculumPedagogicalLessonOutcome>();
     public DbSet<CurriculumLessonContent> CurriculumLessonContents => Set<CurriculumLessonContent>();
     public DbSet<CurriculumLessonContentTranslation> CurriculumLessonContentTranslations => Set<CurriculumLessonContentTranslation>();
     public DbSet<CurriculumPackContentNode> CurriculumPackContentNodes => Set<CurriculumPackContentNode>();
@@ -160,6 +162,8 @@ public class EdulyticsDbContext
         builder.ApplyConfiguration(new LearningLessonConfiguration());
         builder.ApplyConfiguration(new LearningLessonOutcomeConfiguration());
         builder.ApplyConfiguration(new LearningLessonTranslationConfiguration());
+        builder.ApplyConfiguration(new CurriculumPedagogicalLessonConfiguration());
+        builder.ApplyConfiguration(new CurriculumPedagogicalLessonOutcomeConfiguration());
         builder.ApplyConfiguration(new CurriculumLessonContentConfiguration());
         builder.ApplyConfiguration(new CurriculumLessonContentTranslationConfiguration());
         builder.ApplyConfiguration(new CurriculumPackContentNodeConfiguration());

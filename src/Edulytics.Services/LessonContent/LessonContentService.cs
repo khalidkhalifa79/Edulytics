@@ -1,3 +1,5 @@
+using System.Text.RegularExpressions;
+using Edulytics.Core.Curriculum;
 using Edulytics.Core.Entities;
 using Edulytics.Core.Enums;
 using Edulytics.Core.Interfaces;
@@ -11,10 +13,12 @@ public sealed class LessonContentService : ILessonContentService
     private readonly ISchoolUserRepository _users;
     private readonly ISchoolRepository _schools;
 
-    public LessonContentService(ILessonContentRepository lessons,ISchoolUserRepository users,ISchoolRepository schools)
+    public LessonContentService(
+        ILessonContentRepository lessons,ISchoolUserRepository users,ISchoolRepository schools)
     { _lessons=lessons;_users=users;_schools=schools; }
 
-    public async Task<LessonContentQueryResult<LessonContentDashboard>> GetDashboardAsync(Guid actorUserId,CancellationToken cancellationToken=default)
+    public async Task<LessonContentQueryResult<LessonContentDashboard>> GetDashboardAsync(
+        Guid actorUserId,CancellationToken cancellationToken=default)
     {
         var scope=await ResolveScopeAsync(actorUserId,cancellationToken);
         if(!scope.Succeeded)return LessonContentQueryResult<LessonContentDashboard>.Failure(scope.Error!.Value);
@@ -22,63 +26,88 @@ public sealed class LessonContentService : ILessonContentService
             return LessonContentQueryResult<LessonContentDashboard>.Failure(LessonContentErrorCode.AccessDenied);
 
         var contexts=await _lessons.ListStaffAdoptionsAsync(scope.School!.Id,cancellationToken);
-        var nodes=await _lessons.ListCurriculumNodesAsync(contexts.Select(x=>x.FrameworkVersionId).Distinct().ToArray(),cancellationToken);
-        var lessonNodes=nodes.Where(x=>x.NodeKind=="Lesson").ToArray();
-        var contents=await _lessons.ListCanonicalContentsAsync(lessonNodes.Select(x=>x.Id).ToArray(),cancellationToken);
-        var contentByNode=contents.ToDictionary(x=>x.LessonNodeId);
-        var nodeById=nodes.ToDictionary(x=>x.Id);
+        var lessons=await _lessons.ListPedagogicalLessonsAsync(
+            contexts.Select(x=>x.FrameworkVersionId).Distinct().ToArray(),cancellationToken);
+        var contents=await _lessons.ListCanonicalContentsAsync(
+            lessons.Select(x=>x.Id).ToArray(),cancellationToken);
+        var contentByLesson=contents.ToDictionary(x=>x.PedagogicalLessonId);
 
-        var groups=contexts.GroupBy(x=>new{x.FrameworkVersionId,x.FrameworkName,x.FrameworkVersionName,x.SubjectName,x.SubjectCode,x.GradeName,x.GradeOrder})
-            .Select(group=>{
+        var groups=contexts
+            .GroupBy(x=>new{x.FrameworkVersionId,x.FrameworkCode,x.FrameworkName,x.FrameworkVersionName,
+                x.SubjectName,x.SubjectCode,x.GradeName,x.GradeOrder})
+            .Select(group=>
+            {
                 var c=group.First();
-                var items=lessonNodes.Where(x=>x.FrameworkVersionId==c.FrameworkVersionId&&InGrade(x,c.GradeOrder))
-                    .OrderBy(x=>x.SortOrder).Select(node=>{
-                        contentByNode.TryGetValue(node.Id,out var content);
-                        var unit=node.ParentId.HasValue&&nodeById.TryGetValue(node.ParentId.Value,out var u)?u.Title:string.Empty;
-                        return new CanonicalLessonLibraryItem(node.Id,node.Code,node.Title,unit,node.SortOrder,content?.Status,content?.PublishedAtUtc);
+                var logicalLevel=ResolveLogicalLevel(c);
+                var items=lessons
+                    .Where(x=>x.FrameworkVersionId==c.FrameworkVersionId&&InLogicalLevel(x,logicalLevel))
+                    .OrderBy(x=>x.SortOrder)
+                    .Select(lesson=>
+                    {
+                        contentByLesson.TryGetValue(lesson.Id,out var content);
+                        return new CanonicalLessonLibraryItem(
+                            lesson.Id,lesson.Code,lesson.Title,lesson.UnitTitle,lesson.SortOrder,
+                            content?.Status,content?.PublishedAtUtc,lesson.OfficialOutcomeCount>0);
                     }).ToArray();
-                return new CanonicalCurriculumLibraryGroup(c.FrameworkVersionId,c.FrameworkName,c.FrameworkVersionName,c.SubjectName,c.SubjectCode,
-                    c.GradeName,items.Length,items.Count(x=>x.Status==CanonicalLessonContentStatus.Published),items);
-            }).OrderBy(x=>x.SubjectCode).ThenBy(x=>x.GradeName).ThenBy(x=>x.FrameworkName).ToArray();
 
-        return LessonContentQueryResult<LessonContentDashboard>.Success(new LessonContentDashboard(scope.School.Id,groups));
+                return new CanonicalCurriculumLibraryGroup(
+                    c.FrameworkVersionId,c.FrameworkName,c.FrameworkVersionName,
+                    c.SubjectName,c.SubjectCode,c.GradeName,
+                    items.Length,items.Count(x=>x.Status==CanonicalLessonContentStatus.Published&&x.HasOfficialAlignment),items);
+            })
+            .OrderBy(x=>x.SubjectCode).ThenBy(x=>x.GradeName).ThenBy(x=>x.FrameworkName)
+            .ToArray();
+
+        return LessonContentQueryResult<LessonContentDashboard>.Success(
+            new LessonContentDashboard(scope.School.Id,groups));
     }
 
     public async Task<LessonContentQueryResult<CanonicalLessonDetail>> GetStaffLessonAsync(
-        Guid actorUserId,Guid lessonNodeId,string cultureCode,CancellationToken cancellationToken=default)
+        Guid actorUserId,Guid lessonId,string cultureCode,CancellationToken cancellationToken=default)
     {
         var scope=await ResolveScopeAsync(actorUserId,cancellationToken);
         if(!scope.Succeeded)return LessonContentQueryResult<CanonicalLessonDetail>.Failure(scope.Error!.Value);
         if(!LessonContentPolicy.CanReadStaff(scope.Actor!.Roles))
             return LessonContentQueryResult<CanonicalLessonDetail>.Failure(LessonContentErrorCode.AccessDenied);
         var contexts=await _lessons.ListStaffAdoptionsAsync(scope.School!.Id,cancellationToken);
-        return await BuildStaffDetailAsync(contexts,lessonNodeId,cultureCode,cancellationToken);
+        return await BuildStaffDetailAsync(contexts,lessonId,cultureCode,cancellationToken);
     }
 
     public async Task<LessonContentQueryResult<IReadOnlyList<StudentLessonSummary>>> ListPublishedForStudentAsync(
         Guid actorUserId,string cultureCode,CancellationToken cancellationToken=default)
     {
         var scope=await ResolveScopeAsync(actorUserId,cancellationToken);
-        if(!scope.Succeeded)return LessonContentQueryResult<IReadOnlyList<StudentLessonSummary>>.Failure(scope.Error!.Value);
+        if(!scope.Succeeded)
+            return LessonContentQueryResult<IReadOnlyList<StudentLessonSummary>>.Failure(scope.Error!.Value);
         if(!LessonContentPolicy.IsStudent(scope.Actor!.Roles))
             return LessonContentQueryResult<IReadOnlyList<StudentLessonSummary>>.Failure(LessonContentErrorCode.AccessDenied);
 
         var contexts=await _lessons.ListStudentAdoptionsAsync(actorUserId,scope.School!.Id,cancellationToken);
-        var nodes=await _lessons.ListCurriculumNodesAsync(contexts.Select(x=>x.FrameworkVersionId).Distinct().ToArray(),cancellationToken);
-        var lessons=nodes.Where(x=>x.NodeKind=="Lesson").ToArray();
-        var contents=await _lessons.ListCanonicalContentsAsync(lessons.Select(x=>x.Id).ToArray(),cancellationToken);
-        var contentByNode=contents.Where(x=>x.Status==CanonicalLessonContentStatus.Published).ToDictionary(x=>x.LessonNodeId);
-        var nodeById=nodes.ToDictionary(x=>x.Id);
-        var result=new Dictionary<Guid,StudentLessonSummary>();
+        var lessons=await _lessons.ListPedagogicalLessonsAsync(
+            contexts.Select(x=>x.FrameworkVersionId).Distinct().ToArray(),cancellationToken);
+        var contents=await _lessons.ListCanonicalContentsAsync(
+            lessons.Select(x=>x.Id).ToArray(),cancellationToken);
+        var contentByLesson=contents
+            .Where(x=>x.Status==CanonicalLessonContentStatus.Published)
+            .ToDictionary(x=>x.PedagogicalLessonId);
 
+        var result=new Dictionary<Guid,StudentLessonSummary>();
         foreach(var c in contexts)
-        foreach(var lesson in lessons.Where(x=>x.FrameworkVersionId==c.FrameworkVersionId&&InGrade(x,c.GradeOrder)))
         {
-            if(!contentByNode.TryGetValue(lesson.Id,out var content))continue;
-            var tr=SelectTranslation(content.Translations,cultureCode);
-            if(tr is null)continue;
-            var unit=lesson.ParentId.HasValue&&nodeById.TryGetValue(lesson.ParentId.Value,out var u)?u.Title:string.Empty;
-            result.TryAdd(lesson.Id,new StudentLessonSummary(lesson.Id,tr.Title,unit,c.SubjectName,c.SubjectCode,c.GradeName,c.FrameworkName,lesson.SortOrder));
+            var logicalLevel=ResolveLogicalLevel(c);
+            foreach(var lesson in lessons.Where(x=>
+                x.FrameworkVersionId==c.FrameworkVersionId&&
+                InLogicalLevel(x,logicalLevel)&&
+                x.OfficialOutcomeCount>0))
+            {
+                if(!contentByLesson.TryGetValue(lesson.Id,out var content))continue;
+                var tr=SelectTranslation(content.Translations,cultureCode);
+                if(tr is null)continue;
+
+                result.TryAdd(lesson.Id,new StudentLessonSummary(
+                    lesson.Id,tr.Title,lesson.UnitTitle,
+                    c.SubjectName,c.SubjectCode,c.GradeName,c.FrameworkName,lesson.SortOrder));
+            }
         }
 
         return LessonContentQueryResult<IReadOnlyList<StudentLessonSummary>>.Success(
@@ -86,7 +115,7 @@ public sealed class LessonContentService : ILessonContentService
     }
 
     public async Task<LessonContentQueryResult<StudentLessonDetail>> GetPublishedForStudentAsync(
-        Guid actorUserId,Guid lessonNodeId,string cultureCode,CancellationToken cancellationToken=default)
+        Guid actorUserId,Guid lessonId,string cultureCode,CancellationToken cancellationToken=default)
     {
         var scope=await ResolveScopeAsync(actorUserId,cancellationToken);
         if(!scope.Succeeded)return LessonContentQueryResult<StudentLessonDetail>.Failure(scope.Error!.Value);
@@ -94,56 +123,103 @@ public sealed class LessonContentService : ILessonContentService
             return LessonContentQueryResult<StudentLessonDetail>.Failure(LessonContentErrorCode.AccessDenied);
 
         var contexts=await _lessons.ListStudentAdoptionsAsync(actorUserId,scope.School!.Id,cancellationToken);
-        var nodes=await _lessons.ListCurriculumNodesAsync(contexts.Select(x=>x.FrameworkVersionId).Distinct().ToArray(),cancellationToken);
-        var lesson=nodes.SingleOrDefault(x=>x.Id==lessonNodeId&&x.NodeKind=="Lesson");
-        if(lesson is null)return LessonContentQueryResult<StudentLessonDetail>.Failure(LessonContentErrorCode.LessonNotFound);
-        var c=contexts.FirstOrDefault(x=>x.FrameworkVersionId==lesson.FrameworkVersionId&&InGrade(lesson,x.GradeOrder));
+        var lessons=await _lessons.ListPedagogicalLessonsAsync(
+            contexts.Select(x=>x.FrameworkVersionId).Distinct().ToArray(),cancellationToken);
+        var lesson=lessons.SingleOrDefault(x=>x.Id==lessonId);
+        if(lesson is null||lesson.OfficialOutcomeCount==0)
+            return LessonContentQueryResult<StudentLessonDetail>.Failure(LessonContentErrorCode.LessonNotFound);
+
+        var c=contexts.FirstOrDefault(x=>
+            x.FrameworkVersionId==lesson.FrameworkVersionId&&
+            InLogicalLevel(lesson,ResolveLogicalLevel(x)));
         if(c is null)return LessonContentQueryResult<StudentLessonDetail>.Failure(LessonContentErrorCode.LessonNotFound);
-        var content=(await _lessons.ListCanonicalContentsAsync([lessonNodeId],cancellationToken)).SingleOrDefault();
+
+        var content=(await _lessons.ListCanonicalContentsAsync([lessonId],cancellationToken)).SingleOrDefault();
         if(content is null||!LessonContentPolicy.CanExposeCanonicalBody(content.Status))
             return LessonContentQueryResult<StudentLessonDetail>.Failure(LessonContentErrorCode.LessonNotFound);
+
         var tr=SelectTranslation(content.Translations,cultureCode);
         if(tr is null)return LessonContentQueryResult<StudentLessonDetail>.Failure(LessonContentErrorCode.LessonNotFound);
-        var nodeById=nodes.ToDictionary(x=>x.Id);
-        var unit=lesson.ParentId.HasValue&&nodeById.TryGetValue(lesson.ParentId.Value,out var u)?u.Title:string.Empty;
-        var outcomes=await _lessons.ListOfficialOutcomesAsync(lesson.FrameworkVersionId,lesson.Id,cancellationToken);
-        return LessonContentQueryResult<StudentLessonDetail>.Success(new StudentLessonDetail(lesson.Id,tr.Title,unit,c.SubjectName,c.SubjectCode,
-            c.GradeName,c.FrameworkName,tr.Explanation,tr.KeyConceptsAndRules,tr.WorkedExamples,tr.StepByStepSolutions,tr.CommonMistakes,tr.QuickSummary,
-            outcomes,content.PublishedAtUtc??content.UpdatedAtUtc));
+
+        var outcomes=await _lessons.ListOfficialOutcomesAsync(
+            lesson.FrameworkVersionId,lesson.Id,cancellationToken);
+
+        return LessonContentQueryResult<StudentLessonDetail>.Success(new StudentLessonDetail(
+            lesson.Id,tr.Title,lesson.UnitTitle,c.SubjectName,c.SubjectCode,c.GradeName,c.FrameworkName,
+            tr.Explanation,tr.KeyConceptsAndRules,tr.WorkedExamples,tr.StepByStepSolutions,
+            tr.CommonMistakes,tr.QuickSummary,outcomes,content.PublishedAtUtc??content.UpdatedAtUtc));
     }
 
     private async Task<LessonContentQueryResult<CanonicalLessonDetail>> BuildStaffDetailAsync(
-        IReadOnlyList<CanonicalCurriculumContextRecord> contexts,Guid lessonNodeId,string cultureCode,CancellationToken cancellationToken)
+        IReadOnlyList<CanonicalCurriculumContextRecord> contexts,Guid lessonId,
+        string cultureCode,CancellationToken cancellationToken)
     {
-        var nodes=await _lessons.ListCurriculumNodesAsync(contexts.Select(x=>x.FrameworkVersionId).Distinct().ToArray(),cancellationToken);
-        var lesson=nodes.SingleOrDefault(x=>x.Id==lessonNodeId&&x.NodeKind=="Lesson");
+        var lessons=await _lessons.ListPedagogicalLessonsAsync(
+            contexts.Select(x=>x.FrameworkVersionId).Distinct().ToArray(),cancellationToken);
+        var lesson=lessons.SingleOrDefault(x=>x.Id==lessonId);
         if(lesson is null)return LessonContentQueryResult<CanonicalLessonDetail>.Failure(LessonContentErrorCode.LessonNotFound);
-        var c=contexts.FirstOrDefault(x=>x.FrameworkVersionId==lesson.FrameworkVersionId&&InGrade(lesson,x.GradeOrder));
+
+        var c=contexts.FirstOrDefault(x=>
+            x.FrameworkVersionId==lesson.FrameworkVersionId&&
+            InLogicalLevel(lesson,ResolveLogicalLevel(x)));
         if(c is null)return LessonContentQueryResult<CanonicalLessonDetail>.Failure(LessonContentErrorCode.LessonNotFound);
-        var content=(await _lessons.ListCanonicalContentsAsync([lessonNodeId],cancellationToken)).SingleOrDefault();
+
+        var content=(await _lessons.ListCanonicalContentsAsync([lessonId],cancellationToken)).SingleOrDefault();
         CanonicalLessonTranslationRecord? body=null;
         if(content is not null&&LessonContentPolicy.CanExposeCanonicalBody(content.Status))
             body=SelectTranslation(content.Translations,cultureCode);
-        var nodeById=nodes.ToDictionary(x=>x.Id);
-        var unit=lesson.ParentId.HasValue&&nodeById.TryGetValue(lesson.ParentId.Value,out var u)?u.Title:string.Empty;
-        var outcomes=await _lessons.ListOfficialOutcomesAsync(lesson.FrameworkVersionId,lesson.Id,cancellationToken);
-        return LessonContentQueryResult<CanonicalLessonDetail>.Success(new CanonicalLessonDetail(lesson.Id,lesson.Code,lesson.Title,unit,c.FrameworkName,
-            c.FrameworkVersionName,c.SubjectName,c.SubjectCode,c.GradeName,content?.Status,content?.PublishedAtUtc,body,outcomes));
+
+        var outcomes=await _lessons.ListOfficialOutcomesAsync(
+            lesson.FrameworkVersionId,lesson.Id,cancellationToken);
+
+        return LessonContentQueryResult<CanonicalLessonDetail>.Success(new CanonicalLessonDetail(
+            lesson.Id,lesson.Code,lesson.Title,lesson.UnitTitle,c.FrameworkName,c.FrameworkVersionName,
+            c.SubjectName,c.SubjectCode,c.GradeName,content?.Status,content?.PublishedAtUtc,body,outcomes));
     }
 
     private async Task<ScopeResult> ResolveScopeAsync(Guid actorUserId,CancellationToken cancellationToken)
     {
         var actor=await _users.GetActorAsync(actorUserId,cancellationToken);
-        if(actor is null||!actor.IsActive||actor.IsLocked||!actor.SchoolId.HasValue)return ScopeResult.Fail(LessonContentErrorCode.AccessDenied);
+        if(actor is null||!actor.IsActive||actor.IsLocked||!actor.SchoolId.HasValue)
+            return ScopeResult.Fail(LessonContentErrorCode.AccessDenied);
         var school=await _schools.GetByIdAsync(actor.SchoolId.Value,cancellationToken);
-        if(school is null||school.Status!=SchoolStatus.Active)return ScopeResult.Fail(LessonContentErrorCode.SchoolNotActive);
+        if(school is null||school.Status!=SchoolStatus.Active)
+            return ScopeResult.Fail(LessonContentErrorCode.SchoolNotActive);
         return ScopeResult.Success(actor,school);
     }
 
-    private static bool InGrade(CanonicalCurriculumNodeRecord node,int gradeOrder)=>
-        node.LogicalLevelFrom<=gradeOrder&&gradeOrder<=node.LogicalLevelTo;
+    private static bool InLogicalLevel(PedagogicalLessonRecord lesson,int logicalLevel)=>
+        lesson.LogicalLevelFrom<=logicalLevel&&logicalLevel<=lesson.LogicalLevelTo;
 
-    private static CanonicalLessonTranslationRecord? SelectTranslation(IReadOnlyList<CanonicalLessonTranslationRecord> translations,string cultureCode)
+    // Must match CurriculumService's verified native-grade mapping logic.
+    private static int ResolveLogicalLevel(CanonicalCurriculumContextRecord context)
+    {
+        var pack=MathematicsCurriculumPackRegistry.All.Single(x=>
+            string.Equals(x.Code,context.FrameworkCode,StringComparison.Ordinal));
+
+        var exact=pack.Levels.FirstOrDefault(x=>
+            string.Equals(x.NativeLabel,context.GradeName,StringComparison.OrdinalIgnoreCase));
+        if(exact is not null)return exact.LogicalLevel;
+
+        var gradeNumberMatch=Regex.Match(
+            context.GradeName ?? string.Empty,
+            @"\d+",
+            RegexOptions.CultureInvariant);
+
+        if(gradeNumberMatch.Success&&
+           int.TryParse(gradeNumberMatch.Value,out var gradeNumber))
+        {
+            var native=pack.Levels.FirstOrDefault(x=>
+                string.Equals(x.NativeLabel,$"Grade {gradeNumber}",StringComparison.OrdinalIgnoreCase)||
+                string.Equals(x.NativeLabel,$"Year {gradeNumber}",StringComparison.OrdinalIgnoreCase));
+            if(native is not null)return native.LogicalLevel;
+        }
+
+        return context.GradeOrder;
+    }
+
+    private static CanonicalLessonTranslationRecord? SelectTranslation(
+        IReadOnlyList<CanonicalLessonTranslationRecord> translations,string cultureCode)
     {
         var c=NormalizeCulture(cultureCode);
         return translations.FirstOrDefault(x=>NormalizeCulture(x.CultureCode)==c)
