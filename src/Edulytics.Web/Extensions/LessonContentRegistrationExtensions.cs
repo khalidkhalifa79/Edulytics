@@ -12,6 +12,7 @@ public static class LessonContentRegistrationExtensions
         services.AddScoped<ILessonContentRepository, LessonContentRepository>();
         services.AddScoped<ILessonContentService, LessonContentService>();
         services.AddScoped<MathematicsPedagogicalLessonSeeder>();
+        services.AddScoped<MathematicsCanonicalLessonContentSeeder>();
         return services;
     }
 }

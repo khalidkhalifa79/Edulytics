@@ -245,6 +245,14 @@ using (var scope =
 
     await mathematicsPedagogicalLessonSeeder
         .SeedAsync();
+
+    var mathematicsCanonicalLessonContentSeeder =
+        scope.ServiceProvider
+            .GetRequiredService<
+                Edulytics.Data.Seeding.MathematicsCanonicalLessonContentSeeder>();
+
+    await mathematicsCanonicalLessonContentSeeder
+        .SeedAsync();
 }
 
 app.UseForwardedHeaders();
