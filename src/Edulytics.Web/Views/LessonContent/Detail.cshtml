@@ -1,0 +1,43 @@
+@model Edulytics.Web.ViewModels.LessonContent.LessonContentDetailViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.LessonContentResource> L
+@using Edulytics.Core.Enums
+@{
+Layout="_AppLayout"; ViewData["Title"]=Model.Lesson.LessonTitle;
+var statusText=Model.Lesson.Status switch{
+CanonicalLessonContentStatus.Draft=>L["InPreparation"].Value,
+CanonicalLessonContentStatus.Verified=>L["Verified"].Value,
+CanonicalLessonContentStatus.Published=>L["ProductionReady"].Value,
+_=>L["NotStarted"].Value};
+}
+<header class="ed-v3-page-header lesson-content-header"><div>
+<p class="ed-v3-eyebrow">@L["CanonicalLibrary"]</p><h1>@Model.Lesson.LessonTitle</h1>
+<div class="lesson-content-meta">
+<span>@L["Subject"]: <strong>@Model.Lesson.SubjectName</strong></span>
+<span>@L["Grade"]: <strong>@Model.Lesson.GradeName</strong></span>
+<span>@L["Framework"]: <strong>@Model.Lesson.FrameworkName</strong></span>
+<span>@L["Status"]: <strong>@statusText</strong></span>
+</div></div><a class="btn btn-secondary" asp-action="Index">@L["BackToLessons"]</a></header>
+
+<section class="lesson-content-panel"><h2>@L["OfficialLessonIdentity"]</h2>
+<div class="lesson-content-readonly-grid">
+<div><small>@L["LessonCode"]</small><strong>@Model.Lesson.LessonCode</strong></div>
+<div><small>@L["Unit"]</small><strong>@(string.IsNullOrWhiteSpace(Model.Lesson.UnitTitle)?"—":Model.Lesson.UnitTitle)</strong></div>
+<div><small>@L["Version"]</small><strong>@Model.Lesson.FrameworkVersionName</strong></div>
+</div></section>
+
+<section class="lesson-content-panel"><h2>@L["Outcomes"]</h2>
+@if(Model.Lesson.Outcomes.Count==0){<div class="lesson-content-empty">@L["NoAlignedOutcomes"]</div>}
+else{<div class="lesson-content-outcomes">@foreach(var outcome in Model.Lesson.Outcomes){
+<div class="lesson-content-outcome"><span><strong>@outcome.Code</strong> — @outcome.Description</span></div>}</div>}
+</section>
+
+@if(Model.Lesson.Body is null){
+<div class="lesson-content-notice"><strong>@statusText</strong><br/>@L["ContentPreparationMessage"]</div>
+}else{
+<section class="lesson-content-panel"><h2>@L["Explanation"]</h2><div class="student-lesson-text">@Model.Lesson.Body.Explanation</div></section>
+<section class="lesson-content-panel"><h2>@L["KeyConceptsAndRules"]</h2><div class="student-lesson-text">@Model.Lesson.Body.KeyConceptsAndRules</div></section>
+<section class="lesson-content-panel"><h2>@L["WorkedExamples"]</h2><div class="student-lesson-text">@Model.Lesson.Body.WorkedExamples</div></section>
+<section class="lesson-content-panel"><h2>@L["StepByStepSolutions"]</h2><div class="student-lesson-text">@Model.Lesson.Body.StepByStepSolutions</div></section>
+<section class="lesson-content-panel"><h2>@L["CommonMistakes"]</h2><div class="student-lesson-text">@Model.Lesson.Body.CommonMistakes</div></section>
+<section class="lesson-content-panel"><h2>@L["QuickSummary"]</h2><div class="student-lesson-text">@Model.Lesson.Body.QuickSummary</div></section>
+}

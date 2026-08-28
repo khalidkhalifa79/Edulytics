@@ -1,428 +1,108 @@
-using Edulytics.Core.Entities;
 using Edulytics.Core.Enums;
 using Edulytics.Core.Interfaces;
 using Edulytics.Core.Lessons;
 using Edulytics.Data.Contexts;
 using Microsoft.EntityFrameworkCore;
-
 namespace Edulytics.Data.Repositories;
 
 public sealed class LessonContentRepository : ILessonContentRepository
 {
+    private const string LessonStandardAlignment = "LessonStandardAlignment";
     private readonly EdulyticsDbContext _db;
+    public LessonContentRepository(EdulyticsDbContext db)=>_db=db;
 
-    public LessonContentRepository(EdulyticsDbContext db)
+    public async Task<IReadOnlyList<CanonicalCurriculumContextRecord>> ListStaffAdoptionsAsync(Guid schoolId,CancellationToken cancellationToken=default)
     {
-        _db = db;
+        var adoptions=await _db.SchoolCurriculumAdoptions.AsNoTracking()
+            .Where(x=>x.SchoolId==schoolId&&x.IsActive&&x.IsPrimary).ToArrayAsync(cancellationToken);
+        return await HydrateContextsAsync(schoolId,adoptions,cancellationToken);
     }
 
-    public async Task<IReadOnlyList<LessonTopicRecord>> ListTopicContextsAsync(
-        Guid schoolId,
-        CancellationToken cancellationToken = default)
+    public async Task<IReadOnlyList<CanonicalCurriculumContextRecord>> ListStudentAdoptionsAsync(Guid actorUserId,Guid schoolId,CancellationToken cancellationToken=default)
     {
-        var topics = await (
-            from topic in _db.CurriculumTopics.AsNoTracking()
-            join subject in _db.Subjects.AsNoTracking()
-                on new { topic.SchoolId, Id = topic.SubjectId }
-                equals new { subject.SchoolId, subject.Id }
-            join grade in _db.GradeLevels.AsNoTracking()
-                on new { topic.SchoolId, Id = topic.GradeLevelId }
-                equals new { grade.SchoolId, grade.Id }
-            join version in _db.CurriculumFrameworkVersions.AsNoTracking()
-                on topic.FrameworkVersionId equals version.Id
-            join framework in _db.CurriculumFrameworks.AsNoTracking()
-                on version.FrameworkId equals framework.Id
-            where topic.SchoolId == schoolId
-            orderby subject.Name, grade.Order, topic.Order
-            select new
-            {
-                topic.Id,
-                topic.FrameworkVersionId,
-                FrameworkName = framework.Name,
-                FrameworkVersionName = version.Name,
-                topic.SubjectId,
-                SubjectName = subject.Name,
-                SubjectCode = subject.Code,
-                topic.GradeLevelId,
-                GradeName = grade.Name,
-                TopicName = topic.Name,
-                TopicOrder = topic.Order
-            })
-            .ToListAsync(cancellationToken);
-
-        var topicIds = topics.Select(x => x.Id).ToArray();
-        var outcomes = await _db.LearningOutcomes.AsNoTracking()
-            .Where(x => x.SchoolId == schoolId && topicIds.Contains(x.TopicId))
-            .OrderBy(x => x.TopicId)
-            .ThenBy(x => x.Order)
-            .Select(x => new
-            {
-                x.TopicId,
-                Item = new LessonOutcomeRecord(
-                    x.Id,
-                    x.Code,
-                    x.Description,
-                    x.Order)
-            })
-            .ToListAsync(cancellationToken);
-
-        var outcomeMap = outcomes
-            .GroupBy(x => x.TopicId)
-            .ToDictionary(
-                x => x.Key,
-                x => (IReadOnlyList<LessonOutcomeRecord>)x
-                    .Select(y => y.Item)
-                    .ToArray());
-
-        return topics
-            .Select(x => new LessonTopicRecord(
-                x.Id,
-                x.FrameworkVersionId,
-                x.FrameworkName,
-                x.FrameworkVersionName,
-                x.SubjectId,
-                x.SubjectName,
-                x.SubjectCode,
-                x.GradeLevelId,
-                x.GradeName,
-                x.TopicName,
-                x.TopicOrder,
-                outcomeMap.GetValueOrDefault(
-                    x.Id,
-                    Array.Empty<LessonOutcomeRecord>())))
-            .ToArray();
+        var profile=await _db.StudentProfiles.AsNoTracking().SingleOrDefaultAsync(
+            x=>x.SchoolId==schoolId&&x.UserId==actorUserId&&!x.IsArchived&&x.Status==AcademicStructureStatus.Active,cancellationToken);
+        if(profile is null)return [];
+        var enrollments=await _db.StudentEnrollments.AsNoTracking()
+            .Where(x=>x.SchoolId==schoolId&&x.StudentProfileId==profile.Id).ToArrayAsync(cancellationToken);
+        if(enrollments.Length==0)return [];
+        var classIds=enrollments.Select(x=>x.ClassGroupId).Distinct().ToArray();
+        var yearIds=enrollments.Select(x=>x.AcademicYearId).Distinct().ToArray();
+        var classes=await _db.ClassGroups.AsNoTracking().Where(x=>x.SchoolId==schoolId&&classIds.Contains(x.Id)).ToArrayAsync(cancellationToken);
+        var gradeIds=classes.Select(x=>x.GradeLevelId).Distinct().ToArray();
+        if(gradeIds.Length==0)return [];
+        var adoptions=await _db.SchoolCurriculumAdoptions.AsNoTracking()
+            .Where(x=>x.SchoolId==schoolId&&x.IsActive&&x.IsPrimary&&gradeIds.Contains(x.GradeLevelId)&&
+                (!x.AcademicYearId.HasValue||yearIds.Contains(x.AcademicYearId.Value))).ToArrayAsync(cancellationToken);
+        return await HydrateContextsAsync(schoolId,adoptions,cancellationToken);
     }
 
-    public async Task<LessonTopicRecord?> GetTopicContextAsync(
-        Guid schoolId,
-        Guid topicId,
-        CancellationToken cancellationToken = default) =>
-        (await ListTopicContextsAsync(schoolId, cancellationToken))
-            .SingleOrDefault(x => x.TopicId == topicId);
-
-    public async Task<IReadOnlyList<LessonAggregateRecord>> ListLessonAggregatesAsync(
-        Guid schoolId,
-        CancellationToken cancellationToken = default)
+    public async Task<IReadOnlyList<CanonicalCurriculumNodeRecord>> ListCurriculumNodesAsync(IReadOnlyCollection<Guid> frameworkVersionIds,CancellationToken cancellationToken=default)
     {
-        var lessons = await _db.LearningLessons.AsNoTracking()
-            .Where(x => x.SchoolId == schoolId)
-            .OrderBy(x => x.TopicId)
-            .ThenBy(x => x.Order)
-            .ToListAsync(cancellationToken);
-
-        return await BuildAggregatesAsync(
-            schoolId,
-            lessons,
-            cancellationToken);
+        if(frameworkVersionIds.Count==0)return [];
+        var ids=frameworkVersionIds.Distinct().ToArray();
+        return await _db.CurriculumPackContentNodes.AsNoTracking()
+            .Where(x=>ids.Contains(x.FrameworkVersionId)&&x.IsActive&&(x.NodeKind=="Unit"||x.NodeKind=="Lesson"))
+            .OrderBy(x=>x.FrameworkVersionId).ThenBy(x=>x.SortOrder)
+            .Select(x=>new CanonicalCurriculumNodeRecord(x.Id,x.FrameworkVersionId,x.ParentId,x.NodeKind,x.Code,x.Title,
+                x.OfficialText,x.Pathway,x.LogicalLevelFrom,x.LogicalLevelTo,x.SortOrder)).ToArrayAsync(cancellationToken);
     }
 
-    public async Task<LessonAggregateRecord?> GetLessonAggregateAsync(
-        Guid schoolId,
-        Guid lessonId,
-        CancellationToken cancellationToken = default)
+    public async Task<IReadOnlyList<CanonicalLessonContentRecord>> ListCanonicalContentsAsync(IReadOnlyCollection<Guid> lessonNodeIds,CancellationToken cancellationToken=default)
     {
-        var lesson = await _db.LearningLessons.AsNoTracking()
-            .SingleOrDefaultAsync(
-                x => x.SchoolId == schoolId && x.Id == lessonId,
-                cancellationToken);
-
-        if (lesson is null)
-            return null;
-
-        return (await BuildAggregatesAsync(
-            schoolId,
-            [lesson],
-            cancellationToken)).Single();
+        if(lessonNodeIds.Count==0)return [];
+        var nodeIds=lessonNodeIds.Distinct().ToArray();
+        var contents=await _db.CurriculumLessonContents.AsNoTracking().Where(x=>nodeIds.Contains(x.LessonNodeId)).ToArrayAsync(cancellationToken);
+        if(contents.Length==0)return [];
+        var contentIds=contents.Select(x=>x.Id).ToArray();
+        var translations=await _db.CurriculumLessonContentTranslations.AsNoTracking()
+            .Where(x=>contentIds.Contains(x.CurriculumLessonContentId)).OrderBy(x=>x.CultureCode).ToArrayAsync(cancellationToken);
+        return contents.Select(c=>new CanonicalLessonContentRecord(c.Id,c.FrameworkVersionId,c.LessonNodeId,c.Status,c.ContentVersion,
+            c.VerifiedAtUtc,c.PublishedAtUtc,c.UpdatedAtUtc,
+            translations.Where(t=>t.CurriculumLessonContentId==c.Id)
+                .Select(t=>new CanonicalLessonTranslationRecord(t.CultureCode,t.Title,t.Explanation,t.KeyConceptsAndRules,
+                    t.WorkedExamples,t.StepByStepSolutions,t.CommonMistakes,t.QuickSummary)).ToArray())).ToArray();
     }
 
-    public Task<LearningLesson?> GetLessonForUpdateAsync(
-        Guid schoolId,
-        Guid lessonId,
-        CancellationToken cancellationToken = default) =>
-        _db.LearningLessons.SingleOrDefaultAsync(
-            x => x.SchoolId == schoolId && x.Id == lessonId,
-            cancellationToken);
-
-    public async Task<IReadOnlyList<LearningLessonTranslation>> GetTranslationsForUpdateAsync(
-        Guid schoolId,
-        Guid lessonId,
-        CancellationToken cancellationToken = default) =>
-        await _db.LearningLessonTranslations
-            .Where(x => x.SchoolId == schoolId && x.LessonId == lessonId)
-            .OrderBy(x => x.CultureCode)
-            .ToListAsync(cancellationToken);
-
-    public Task<bool> LessonOrderExistsAsync(
-        Guid schoolId,
-        Guid topicId,
-        int order,
-        Guid? excludeLessonId = null,
-        CancellationToken cancellationToken = default) =>
-        _db.LearningLessons.AnyAsync(
-            x => x.SchoolId == schoolId &&
-                 x.TopicId == topicId &&
-                 x.Order == order &&
-                 (!excludeLessonId.HasValue || x.Id != excludeLessonId.Value),
-            cancellationToken);
-
-    public async Task AddLessonAsync(
-        LearningLesson lesson,
-        CancellationToken cancellationToken = default) =>
-        await _db.LearningLessons.AddAsync(lesson, cancellationToken);
-
-    public async Task AddTranslationAsync(
-        LearningLessonTranslation translation,
-        CancellationToken cancellationToken = default) =>
-        await _db.LearningLessonTranslations.AddAsync(
-            translation,
-            cancellationToken);
-
-    public async Task AddOutcomeLinkAsync(
-        LearningLessonOutcome link,
-        CancellationToken cancellationToken = default) =>
-        await _db.LearningLessonOutcomes.AddAsync(link, cancellationToken);
-
-    public async Task ReplaceOutcomeLinksAsync(
-        Guid schoolId,
-        Guid lessonId,
-        IReadOnlyCollection<Guid> outcomeIds,
-        CancellationToken cancellationToken = default)
+    public async Task<IReadOnlyList<LessonOutcomeRecord>> ListOfficialOutcomesAsync(Guid frameworkVersionId,Guid lessonNodeId,CancellationToken cancellationToken=default)
     {
-        var existing = await _db.LearningLessonOutcomes
-            .Where(x => x.SchoolId == schoolId && x.LessonId == lessonId)
-            .ToListAsync(cancellationToken);
+        var links=await _db.CurriculumPackNodeLinks.AsNoTracking()
+            .Where(x=>x.FrameworkVersionId==frameworkVersionId&&x.LinkKind==LessonStandardAlignment&&
+                (x.FromNodeId==lessonNodeId||x.ToNodeId==lessonNodeId)).OrderBy(x=>x.SortOrder).ToArrayAsync(cancellationToken);
+        if(links.Length==0)return [];
+        var otherIds=links.Select(x=>x.FromNodeId==lessonNodeId?x.ToNodeId:x.FromNodeId).Distinct().ToArray();
+        var nodes=await _db.CurriculumPackContentNodes.AsNoTracking()
+            .Where(x=>x.FrameworkVersionId==frameworkVersionId&&x.IsActive&&otherIds.Contains(x.Id)).ToArrayAsync(cancellationToken);
+        var byId=nodes.ToDictionary(x=>x.Id);
+        return links.Select((link,index)=>{
+            var id=link.FromNodeId==lessonNodeId?link.ToNodeId:link.FromNodeId;
+            if(!byId.TryGetValue(id,out var node))return null;
+            return new LessonOutcomeRecord(node.Id,node.Code,node.OfficialText??node.AuthorDescription??node.Title,
+                link.SortOrder!=0?link.SortOrder:index+1);
+        }).Where(x=>x is not null).Select(x=>x!).GroupBy(x=>x.Id).Select(x=>x.First()).OrderBy(x=>x.Order).ToArray();
+    }
 
-        _db.LearningLessonOutcomes.RemoveRange(existing);
-
-        foreach (var outcomeId in outcomeIds.Distinct())
+    private async Task<IReadOnlyList<CanonicalCurriculumContextRecord>> HydrateContextsAsync(
+        Guid schoolId,IReadOnlyCollection<Edulytics.Core.Entities.SchoolCurriculumAdoption> adoptions,CancellationToken cancellationToken)
+    {
+        if(adoptions.Count==0)return [];
+        var subjectIds=adoptions.Select(x=>x.SubjectId).Distinct().ToArray();
+        var gradeIds=adoptions.Select(x=>x.GradeLevelId).Distinct().ToArray();
+        var versionIds=adoptions.Select(x=>x.FrameworkVersionId).Distinct().ToArray();
+        var subjects=await _db.Subjects.AsNoTracking().Where(x=>x.SchoolId==schoolId&&subjectIds.Contains(x.Id)).ToArrayAsync(cancellationToken);
+        var grades=await _db.GradeLevels.AsNoTracking().Where(x=>x.SchoolId==schoolId&&gradeIds.Contains(x.Id)).ToArrayAsync(cancellationToken);
+        var versions=await _db.CurriculumFrameworkVersions.AsNoTracking().Where(x=>versionIds.Contains(x.Id)&&x.IsActive).ToArrayAsync(cancellationToken);
+        var frameworkIds=versions.Select(x=>x.FrameworkId).Distinct().ToArray();
+        var frameworks=await _db.CurriculumFrameworks.AsNoTracking().Where(x=>frameworkIds.Contains(x.Id)&&x.IsActive).ToArrayAsync(cancellationToken);
+        var sb=subjects.ToDictionary(x=>x.Id);var gb=grades.ToDictionary(x=>x.Id);var vb=versions.ToDictionary(x=>x.Id);var fb=frameworks.ToDictionary(x=>x.Id);
+        var result=new List<CanonicalCurriculumContextRecord>();
+        foreach(var a in adoptions)
         {
-            await _db.LearningLessonOutcomes.AddAsync(
-                new LearningLessonOutcome
-                {
-                    SchoolId = schoolId,
-                    LessonId = lessonId,
-                    LearningOutcomeId = outcomeId
-                },
-                cancellationToken);
+            if(!sb.TryGetValue(a.SubjectId,out var subject)||!gb.TryGetValue(a.GradeLevelId,out var grade)||
+               !vb.TryGetValue(a.FrameworkVersionId,out var version)||!fb.TryGetValue(version.FrameworkId,out var framework))continue;
+            result.Add(new CanonicalCurriculumContextRecord(version.Id,framework.Name,version.Name,subject.Id,subject.Name,subject.Code,
+                grade.Id,grade.Name,grade.Order));
         }
-    }
-
-    public async Task<IReadOnlyList<StudentPublishedLessonRecord>> ListPublishedForStudentAsync(
-        Guid actorUserId,
-        Guid schoolId,
-        CancellationToken cancellationToken = default)
-    {
-        var profileId = await _db.StudentProfiles.AsNoTracking()
-            .Where(x => x.SchoolId == schoolId && x.UserId == actorUserId)
-            .Select(x => (Guid?)x.Id)
-            .SingleOrDefaultAsync(cancellationToken);
-
-        if (!profileId.HasValue)
-            return Array.Empty<StudentPublishedLessonRecord>();
-
-        var accessible = await (
-            from lesson in _db.LearningLessons.AsNoTracking()
-            join topic in _db.CurriculumTopics.AsNoTracking()
-                on new { lesson.SchoolId, Id = lesson.TopicId }
-                equals new { topic.SchoolId, topic.Id }
-            join subject in _db.Subjects.AsNoTracking()
-                on new { topic.SchoolId, Id = topic.SubjectId }
-                equals new { subject.SchoolId, subject.Id }
-            join grade in _db.GradeLevels.AsNoTracking()
-                on new { topic.SchoolId, Id = topic.GradeLevelId }
-                equals new { grade.SchoolId, grade.Id }
-            join version in _db.CurriculumFrameworkVersions.AsNoTracking()
-                on topic.FrameworkVersionId equals version.Id
-            join framework in _db.CurriculumFrameworks.AsNoTracking()
-                on version.FrameworkId equals framework.Id
-            where lesson.SchoolId == schoolId &&
-                  lesson.Status == LearningLessonStatus.Published &&
-                  lesson.PublishedAtUtc != null &&
-                  _db.StudentEnrollments.Any(e =>
-                      e.SchoolId == schoolId &&
-                      e.StudentProfileId == profileId.Value &&
-                      _db.ClassGroups.Any(c =>
-                          c.SchoolId == schoolId &&
-                          c.Id == e.ClassGroupId &&
-                          c.GradeLevelId == topic.GradeLevelId)) &&
-                  _db.SchoolCurriculumAdoptions.Any(a =>
-                      a.SchoolId == schoolId &&
-                      a.GradeLevelId == topic.GradeLevelId &&
-                      a.SubjectId == topic.SubjectId &&
-                      a.FrameworkVersionId == topic.FrameworkVersionId &&
-                      a.IsPrimary && a.IsActive)
-            orderby subject.Name, grade.Order, topic.Order, lesson.Order
-            select new
-            {
-                lesson.Id,
-                lesson.TopicId,
-                TopicName = topic.Name,
-                SubjectName = subject.Name,
-                SubjectCode = subject.Code,
-                GradeName = grade.Name,
-                FrameworkName = framework.Name,
-                lesson.Order,
-                PublishedAtUtc = lesson.PublishedAtUtc!.Value
-            })
-            .ToListAsync(cancellationToken);
-
-        if (accessible.Count == 0)
-            return Array.Empty<StudentPublishedLessonRecord>();
-
-        var lessonIds = accessible.Select(x => x.Id).ToArray();
-        var translations = await LoadTranslationRecordsAsync(
-            schoolId,
-            lessonIds,
-            cancellationToken);
-        var outcomes = await LoadOutcomeRecordsAsync(
-            schoolId,
-            lessonIds,
-            cancellationToken);
-
-        return accessible.Select(x => new StudentPublishedLessonRecord(
-            x.Id,
-            x.TopicId,
-            x.TopicName,
-            x.SubjectName,
-            x.SubjectCode,
-            x.GradeName,
-            x.FrameworkName,
-            x.Order,
-            x.PublishedAtUtc,
-            outcomes.GetValueOrDefault(x.Id, Array.Empty<LessonOutcomeRecord>()),
-            translations.GetValueOrDefault(x.Id, Array.Empty<LessonTranslationRecord>())))
-            .ToArray();
-    }
-
-    public async Task<StudentPublishedLessonRecord?> GetPublishedForStudentAsync(
-        Guid actorUserId,
-        Guid schoolId,
-        Guid lessonId,
-        CancellationToken cancellationToken = default) =>
-        (await ListPublishedForStudentAsync(
-            actorUserId,
-            schoolId,
-            cancellationToken))
-        .SingleOrDefault(x => x.Id == lessonId);
-
-    public async Task<LessonContentWriteResult> SaveAsync(
-        CancellationToken cancellationToken = default)
-    {
-        try
-        {
-            await _db.SaveChangesAsync(cancellationToken);
-            return LessonContentWriteResult.Success;
-        }
-        catch (DbUpdateConcurrencyException)
-        {
-            return LessonContentWriteResult.ConcurrencyConflict;
-        }
-        catch (DbUpdateException)
-        {
-            return LessonContentWriteResult.ConstraintViolation;
-        }
-    }
-
-    private async Task<IReadOnlyList<LessonAggregateRecord>> BuildAggregatesAsync(
-        Guid schoolId,
-        IReadOnlyList<LearningLesson> lessons,
-        CancellationToken cancellationToken)
-    {
-        if (lessons.Count == 0)
-            return Array.Empty<LessonAggregateRecord>();
-
-        var ids = lessons.Select(x => x.Id).ToArray();
-        var translations = await LoadTranslationRecordsAsync(
-            schoolId,
-            ids,
-            cancellationToken);
-
-        var outcomeIds = await _db.LearningLessonOutcomes.AsNoTracking()
-            .Where(x => x.SchoolId == schoolId && ids.Contains(x.LessonId))
-            .OrderBy(x => x.LessonId)
-            .ThenBy(x => x.LearningOutcomeId)
-            .ToListAsync(cancellationToken);
-
-        var outcomeMap = outcomeIds
-            .GroupBy(x => x.LessonId)
-            .ToDictionary(
-                x => x.Key,
-                x => (IReadOnlyList<Guid>)x.Select(y => y.LearningOutcomeId).ToArray());
-
-        return lessons.Select(x => new LessonAggregateRecord(
-            x.Id,
-            x.TopicId,
-            x.Order,
-            x.Status,
-            x.CreatedAtUtc,
-            x.UpdatedAtUtc,
-            x.SubmittedAtUtc,
-            x.PublishedAtUtc,
-            outcomeMap.GetValueOrDefault(x.Id, Array.Empty<Guid>()),
-            translations.GetValueOrDefault(x.Id, Array.Empty<LessonTranslationRecord>())))
-            .ToArray();
-    }
-
-    private async Task<Dictionary<Guid, IReadOnlyList<LessonTranslationRecord>>>
-        LoadTranslationRecordsAsync(
-            Guid schoolId,
-            IReadOnlyCollection<Guid> lessonIds,
-            CancellationToken cancellationToken)
-    {
-        var rows = await _db.LearningLessonTranslations.AsNoTracking()
-            .Where(x => x.SchoolId == schoolId && lessonIds.Contains(x.LessonId))
-            .OrderBy(x => x.LessonId)
-            .ThenBy(x => x.CultureCode)
-            .Select(x => new
-            {
-                x.LessonId,
-                Item = new LessonTranslationRecord(
-                    x.CultureCode,
-                    x.Title,
-                    x.Explanation,
-                    x.KeyConceptsAndRules,
-                    x.WorkedExamples,
-                    x.StepByStepSolutions,
-                    x.CommonMistakes,
-                    x.QuickSummary)
-            })
-            .ToListAsync(cancellationToken);
-
-        return rows
-            .GroupBy(x => x.LessonId)
-            .ToDictionary(
-                x => x.Key,
-                x => (IReadOnlyList<LessonTranslationRecord>)x.Select(y => y.Item).ToArray());
-    }
-
-    private async Task<Dictionary<Guid, IReadOnlyList<LessonOutcomeRecord>>>
-        LoadOutcomeRecordsAsync(
-            Guid schoolId,
-            IReadOnlyCollection<Guid> lessonIds,
-            CancellationToken cancellationToken)
-    {
-        var rows = await (
-            from link in _db.LearningLessonOutcomes.AsNoTracking()
-            join outcome in _db.LearningOutcomes.AsNoTracking()
-                on new { link.SchoolId, Id = link.LearningOutcomeId }
-                equals new { outcome.SchoolId, outcome.Id }
-            where link.SchoolId == schoolId && lessonIds.Contains(link.LessonId)
-            orderby link.LessonId, outcome.Order
-            select new
-            {
-                link.LessonId,
-                Item = new LessonOutcomeRecord(
-                    outcome.Id,
-                    outcome.Code,
-                    outcome.Description,
-                    outcome.Order)
-            })
-            .ToListAsync(cancellationToken);
-
-        return rows
-            .GroupBy(x => x.LessonId)
-            .ToDictionary(
-                x => x.Key,
-                x => (IReadOnlyList<LessonOutcomeRecord>)x.Select(y => y.Item).ToArray());
+        return result.Distinct().OrderBy(x=>x.SubjectCode).ThenBy(x=>x.GradeOrder).ThenBy(x=>x.FrameworkName).ToArray();
     }
 }
