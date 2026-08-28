@@ -2,9 +2,21 @@
   "packCode": "REPLACE_WITH_REGISTERED_PACK_CODE",
   "versionCode": "REPLACE_WITH_ACCEPTED_CURRICULUM_VERSION",
   "contentVersion": "1",
+
+  "targetCurriculumPeriod": "REPLACE_WITH_TARGET_PERIOD",
+  "sourceCurriculumPeriod": "REPLACE_WITH_ACTUAL_OFFICIAL_SOURCE_PERIOD",
+  "sourceVersionLabel": "REPLACE_WITH_OFFICIAL_SOURCE_VERSION",
+  "sourceAuthority": "REPLACE_WITH_OFFICIAL_AUTHORITY",
+  "sourceUrl": "https://REPLACE_WITH_OFFICIAL_SOURCE_URL",
+  "sourceCheckedAtUtc": "2026-08-29T00:00:00Z",
+  "sourceResolution": "CurrentOfficial",
+  "fallbackReason": "",
+  "reviewMethod": "Official-source curriculum alignment plus independent mathematical and pedagogical verification.",
+
   "status": "Draft",
   "reviewedBy": "",
   "reviewEvidence": "",
+
   "lessons": [
     {
       "lessonCode": "REPLACE_WITH_EXACT_PEDAGOGICAL_LESSON_CODE",

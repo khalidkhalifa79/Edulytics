@@ -1,0 +1,48 @@
+{
+  "packCode": "UAE-MOE-MATH",
+  "versionCode": "MOE-2026-2027-T1",
+  "contentVersion": "uae-g9-adv-t1-pilot-v1",
+  "targetCurriculumPeriod": "2026-2027 Term 1",
+  "sourceCurriculumPeriod": "2026-2027 Term 1",
+  "sourceVersionLabel": "UAE MoE Mathematics 2026-2027 — Term 1",
+  "sourceAuthority": "UAE Ministry of Education",
+  "sourceUrl": "https://minhaji.moe.gov.ae/",
+  "sourceCheckedAtUtc": "2026-08-29T00:00:00Z",
+  "sourceResolution": "CurrentOfficial",
+  "fallbackReason": "",
+  "reviewMethod": "Official-source curriculum alignment, exact accepted OutcomeCode verification, independent mathematical verification of every example and solution, and pedagogical scope review for Grade 9 Advanced.",
+  "status": "Published",
+  "reviewedBy": "Edulytics Curriculum Review",
+  "reviewEvidence": "Pedagogical LessonCode PED:UAE:G9:ADV:T1:L1-2, which reuses verified official Lesson identity UAE:G9:ADV:T1:L1-2, was checked against the accepted UAE-MOE-MATH 2026-2027 Term 1 curriculum pack. Its two exact LessonStandardAlignment targets UAE:STD:MAT.2.02.01 and UAE:STD:MAT.2.02.02 were preserved. The lesson body is Edulytics-authored rather than government-authored. All numerical and algebraic examples and step-by-step solutions were independently recomputed and checked. Publication follows the Product Owner-approved official-source review and fallback policy.",
+  "lessons": [
+    {
+      "lessonCode": "PED:UAE:G9:ADV:T1:L1-2",
+      "outcomeCodes": [
+        "UAE:STD:MAT.2.02.01",
+        "UAE:STD:MAT.2.02.02"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "Order of Operations",
+          "explanation": "The order of operations gives a consistent method for evaluating numerical and algebraic expressions. Work inside grouping symbols first, then evaluate powers, then perform multiplication and division from left to right, and finally perform addition and subtraction from left to right. Multiplication does not automatically come before division; they have equal priority and are handled from left to right. The same is true for addition and subtraction. When an algebraic expression is evaluated for given variable values, substitute the values carefully and then apply the same order of operations.",
+          "keyConceptsAndRules": "1. Grouping symbols first: parentheses, brackets, or other indicated groups. 2. Evaluate powers and exponents next. 3. Multiply and divide from left to right. 4. Add and subtract from left to right. 5. Operations at the same priority level are performed from left to right. 6. When substituting a negative value for a variable, parentheses help preserve the intended sign. 7. A fraction bar acts as a grouping symbol: simplify its numerator and denominator before performing the division.",
+          "workedExamples": "Example 1: Evaluate 18 - 3 * 4 + 2. Multiply first: 3 * 4 = 12. The expression becomes 18 - 12 + 2. Work left to right: 18 - 12 = 6, then 6 + 2 = 8. Example 2: Evaluate 2^3 + 12 / (5 - 2). Parentheses: 5 - 2 = 3. Exponent: 2^3 = 8. Division: 12 / 3 = 4. Addition: 8 + 4 = 12. Example 3: Evaluate 3x^2 - 2(x - 1) when x = 2. Substitute: 3(2)^2 - 2(2 - 1). Parentheses and exponent give 3(4) - 2(1). Multiply: 12 - 2. Result: 10.",
+          "stepByStepSolutions": "For 24 / 6 * 2 + 5: Step 1: division and multiplication have equal priority, so work from left to right. 24 / 6 = 4. Step 2: 4 * 2 = 8. Step 3: 8 + 5 = 13. For 5 + 2(7 - 3)^2: Step 1: parentheses, 7 - 3 = 4. Step 2: exponent, 4^2 = 16. Step 3: multiplication, 2 * 16 = 32. Step 4: addition, 5 + 32 = 37. For 4a - 3b when a = -2 and b = 5: Step 1: substitute using parentheses, 4(-2) - 3(5). Step 2: multiply, -8 - 15. Step 3: subtract, -23.",
+          "commonMistakes": "A common mistake is reading every expression strictly from left to right without respecting operation priority. Another is believing multiplication must always be completed before division; multiplication and division share the same priority. Students may also perform addition before subtraction even when subtraction appears first; these also share a priority level. Another frequent error is losing the sign of a negative substituted value. For example, if x = -3, writing x^2 as -3^2 can be ambiguous in ordinary notation; substituting as (-3)^2 makes the intended value clear. Finally, do not ignore grouping created by a fraction bar.",
+          "quickSummary": "Use grouping symbols first, then exponents, then multiplication/division from left to right, then addition/subtraction from left to right. Equal-priority operations are handled from left to right. Substitute variable values carefully, especially negative values, and then use the same rules."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Kolejność wykonywania działań",
+          "explanation": "Kolejność wykonywania działań zapewnia jednoznaczny sposób obliczania wartości wyrażeń liczbowych i algebraicznych. Najpierw wykonuje się działania wewnątrz nawiasów lub innych znaków grupujących, następnie potęgi, potem mnożenie i dzielenie od lewej do prawej, a na końcu dodawanie i odejmowanie od lewej do prawej. Mnożenie nie ma pierwszeństwa przed dzieleniem — oba działania mają ten sam priorytet. Tak samo dodawanie i odejmowanie mają równy priorytet. Przy obliczaniu wartości wyrażenia algebraicznego najpierw należy poprawnie podstawić wartości zmiennych, a następnie zastosować tę samą kolejność działań.",
+          "keyConceptsAndRules": "1. Najpierw wykonuj działania w nawiasach i innych grupach. 2. Następnie oblicz potęgi. 3. Mnożenie i dzielenie wykonuj od lewej do prawej. 4. Dodawanie i odejmowanie wykonuj od lewej do prawej. 5. Działania o tym samym priorytecie wykonuje się w kolejności występowania od lewej do prawej. 6. Przy podstawianiu liczby ujemnej za zmienną warto używać nawiasów, aby zachować poprawny znak. 7. Kreska ułamkowa pełni funkcję grupującą — najpierw upraszczaj licznik i mianownik.",
+          "workedExamples": "Przykład 1: Oblicz 18 - 3 * 4 + 2. Najpierw mnożenie: 3 * 4 = 12. Otrzymujemy 18 - 12 + 2. Od lewej do prawej: 18 - 12 = 6, następnie 6 + 2 = 8. Przykład 2: Oblicz 2^3 + 12 / (5 - 2). Nawias: 5 - 2 = 3. Potęga: 2^3 = 8. Dzielenie: 12 / 3 = 4. Dodawanie: 8 + 4 = 12. Przykład 3: Oblicz 3x^2 - 2(x - 1) dla x = 2. Podstawienie: 3(2)^2 - 2(2 - 1). Nawias i potęga dają 3(4) - 2(1). Mnożenie: 12 - 2. Wynik: 10.",
+          "stepByStepSolutions": "Dla 24 / 6 * 2 + 5: Krok 1: dzielenie i mnożenie mają ten sam priorytet, więc działamy od lewej do prawej. 24 / 6 = 4. Krok 2: 4 * 2 = 8. Krok 3: 8 + 5 = 13. Dla 5 + 2(7 - 3)^2: Krok 1: nawias, 7 - 3 = 4. Krok 2: potęga, 4^2 = 16. Krok 3: mnożenie, 2 * 16 = 32. Krok 4: dodawanie, 5 + 32 = 37. Dla 4a - 3b przy a = -2 i b = 5: Krok 1: podstawienie z użyciem nawiasów, 4(-2) - 3(5). Krok 2: mnożenie, -8 - 15. Krok 3: odejmowanie, -23.",
+          "commonMistakes": "Częstym błędem jest wykonywanie wszystkich działań wyłącznie od lewej do prawej bez uwzględnienia ich priorytetu. Innym błędem jest przekonanie, że mnożenie zawsze wykonuje się przed dzieleniem — oba działania mają ten sam priorytet. Podobnie dodawanie nie ma pierwszeństwa przed odejmowaniem. Przy podstawianiu wartości ujemnych łatwo zgubić znak; dlatego np. dla x = -3 zapis (-3)^2 jasno pokazuje zamierzone działanie. Należy również pamiętać, że kreska ułamkowa grupuje licznik i mianownik.",
+          "quickSummary": "Najpierw nawiasy, następnie potęgi, potem mnożenie i dzielenie od lewej do prawej, a na końcu dodawanie i odejmowanie od lewej do prawej. Działania o tym samym priorytecie wykonuje się od lewej do prawej. Wartości zmiennych, szczególnie liczby ujemne, należy podstawiać bardzo uważnie."
+        }
+      ]
+    }
+  ]
+}
