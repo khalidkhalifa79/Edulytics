@@ -43,6 +43,7 @@ public sealed class CurriculumController : Controller
                 result.Value.Subjects,
                 result.Value.Topics)
             {
+                AcademicPrograms = result.Value.AcademicPrograms,
                 Frameworks = result.Value.Frameworks,
                 Adoptions = result.Value.Adoptions
             });
@@ -55,6 +56,7 @@ public sealed class CurriculumController : Controller
     public async Task<IActionResult> SelectFramework(
         Guid subjectId,
         Guid gradeLevelId,
+        Guid academicProgramId,
         string frameworkCode,
         CancellationToken cancellationToken)
     {
@@ -66,7 +68,8 @@ public sealed class CurriculumController : Controller
             new SelectCurriculumFrameworkRequest(
                 subjectId,
                 gradeLevelId,
-                frameworkCode),
+                frameworkCode,
+                academicProgramId),
             cancellationToken);
 
         SetFeedback(result, "SuccessFrameworkSelected");
@@ -79,6 +82,7 @@ public sealed class CurriculumController : Controller
     public async Task<IActionResult> CreateTopic(
         Guid subjectId,
         Guid gradeLevelId,
+        Guid academicProgramId,
         string name,
         int order,
         CancellationToken cancellationToken)
@@ -92,7 +96,8 @@ public sealed class CurriculumController : Controller
                 subjectId,
                 gradeLevelId,
                 name,
-                order),
+                order,
+                academicProgramId),
             cancellationToken);
 
         SetFeedback(result, "SuccessTopicCreated");
@@ -272,6 +277,7 @@ public sealed class CurriculumController : Controller
             CurriculumErrorCode.CurriculumFrameworkInUse => "ErrorCurriculumFrameworkInUse",
             CurriculumErrorCode.OfficialOutcomeNotFound => "ErrorOfficialOutcomeNotFound",
             CurriculumErrorCode.OfficialOutcomeReadOnly => "ErrorOfficialOutcomeReadOnly",
+            CurriculumErrorCode.AcademicProgramNotFound => "ErrorAcademicProgramNotFound",
             _ => "ErrorPersistence"
         };
 

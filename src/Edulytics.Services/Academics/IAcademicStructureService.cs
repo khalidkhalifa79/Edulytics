@@ -41,6 +41,11 @@ public interface IAcademicStructureService
         CreateGradeLevelRequest request,
         CancellationToken cancellationToken = default);
 
+    Task<AcademicCommandResult> CreateAcademicProgramAsync(
+        Guid actorUserId,
+        CreateAcademicProgramRequest request,
+        CancellationToken cancellationToken = default);
+
     Task<AcademicCommandResult> CreateClassGroupAsync(
         Guid actorUserId,
         CreateClassGroupRequest request,

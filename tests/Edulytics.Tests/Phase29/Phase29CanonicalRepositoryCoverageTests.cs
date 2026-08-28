@@ -25,6 +25,8 @@ public sealed class Phase29CanonicalRepositoryCoverageTests
             await repository.ListStaffAdoptionsAsync(ids.SchoolId));
 
         Assert.Equal(ids.FrameworkVersionId, staff.FrameworkVersionId);
+        Assert.Equal(ids.AcademicProgramId, staff.AcademicProgramId);
+        Assert.Equal("British Stream", staff.AcademicProgramName);
         Assert.Equal("UK-NC-ENG-MATH", staff.FrameworkCode);
         Assert.Equal("GRADE 6", staff.GradeName);
 
@@ -61,6 +63,8 @@ public sealed class Phase29CanonicalRepositoryCoverageTests
                 ids.SchoolId));
 
         Assert.Equal(ids.GradeLevelId, student.GradeLevelId);
+        Assert.Equal(ids.AcademicProgramId, student.AcademicProgramId);
+        Assert.Equal("British Stream", student.AcademicProgramName);
         Assert.Equal(ids.FrameworkVersionId, student.FrameworkVersionId);
     }
 
@@ -101,6 +105,7 @@ public sealed class Phase29CanonicalRepositoryCoverageTests
         var studentProfileId = Guid.NewGuid();
         var classGroupId = Guid.NewGuid();
         var academicYearId = Guid.NewGuid();
+        var academicProgramId = Guid.NewGuid();
 
         db.Schools.Add(new School
         {
@@ -136,6 +141,19 @@ public sealed class Phase29CanonicalRepositoryCoverageTests
             Order = 6
         });
 
+        db.AcademicPrograms.Add(new AcademicProgram
+        {
+            Id = academicProgramId,
+            SchoolId = schoolId,
+            Name = "British Stream",
+            Code = "BRITISH",
+            NormalizedCode = "BRITISH",
+            Status = AcademicStructureStatus.Active,
+            IsDefault = true,
+            CreatedAtUtc = now,
+            UpdatedAtUtc = now
+        });
+
         db.CurriculumFrameworks.Add(new CurriculumFramework
         {
             Id = frameworkId,
@@ -166,6 +184,7 @@ public sealed class Phase29CanonicalRepositoryCoverageTests
             Id = Guid.NewGuid(),
             SchoolId = schoolId,
             AcademicYearId = null,
+            AcademicProgramId = academicProgramId,
             GradeLevelId = gradeLevelId,
             SubjectId = subjectId,
             FrameworkVersionId = frameworkVersionId,
@@ -275,6 +294,7 @@ public sealed class Phase29CanonicalRepositoryCoverageTests
             Id = classGroupId,
             SchoolId = schoolId,
             AcademicYearId = academicYearId,
+            AcademicProgramId = academicProgramId,
             GradeLevelId = gradeLevelId,
             Name = "A-1",
             Code = "A-1",
@@ -296,6 +316,7 @@ public sealed class Phase29CanonicalRepositoryCoverageTests
 
         return new SeedIds(
             schoolId,
+            academicProgramId,
             gradeLevelId,
             frameworkVersionId,
             standardNodeId,
@@ -305,6 +326,7 @@ public sealed class Phase29CanonicalRepositoryCoverageTests
 
     private sealed record SeedIds(
         Guid SchoolId,
+        Guid AcademicProgramId,
         Guid GradeLevelId,
         Guid FrameworkVersionId,
         Guid StandardNodeId,

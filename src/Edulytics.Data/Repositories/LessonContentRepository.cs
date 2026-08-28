@@ -75,24 +75,13 @@ public sealed class LessonContentRepository : ILessonContentRepository
                 classIds.Contains(x.Id))
             .ToArrayAsync(cancellationToken);
 
-        var gradeIds = classes
-            .Select(x => x.GradeLevelId)
-            .Distinct()
-            .ToArray();
-
-        if (gradeIds.Length == 0)
-            return [];
-
-        var adoptions = await _db.SchoolCurriculumAdoptions
-            .AsNoTracking()
-            .Where(x =>
-                x.SchoolId == schoolId &&
-                x.IsActive &&
-                x.IsPrimary &&
-                gradeIds.Contains(x.GradeLevelId) &&
-                (!x.AcademicYearId.HasValue ||
-                 yearIds.Contains(x.AcademicYearId.Value)))
-            .ToArrayAsync(cancellationToken);
+        var classById = classes.ToDictionary(x => x.Id);
+        var scopes = enrollments.Where(x => classById.ContainsKey(x.ClassGroupId)).Select(x => new { classById[x.ClassGroupId].AcademicProgramId, classById[x.ClassGroupId].GradeLevelId, x.AcademicYearId }).Distinct().ToArray();
+        if (scopes.Length == 0) return [];
+        var programIds = scopes.Select(x => x.AcademicProgramId).Distinct().ToArray();
+        var gradeIds = scopes.Select(x => x.GradeLevelId).Distinct().ToArray();
+        var candidates = await _db.SchoolCurriculumAdoptions.AsNoTracking().Where(x => x.SchoolId == schoolId && x.IsActive && x.IsPrimary && programIds.Contains(x.AcademicProgramId) && gradeIds.Contains(x.GradeLevelId) && (!x.AcademicYearId.HasValue || yearIds.Contains(x.AcademicYearId.Value))).ToArrayAsync(cancellationToken);
+        var adoptions = candidates.Where(a => scopes.Any(q => a.AcademicProgramId == q.AcademicProgramId && a.GradeLevelId == q.GradeLevelId && (!a.AcademicYearId.HasValue || a.AcademicYearId.Value == q.AcademicYearId))).ToArray();
 
         return await HydrateContextsAsync(
             schoolId,
@@ -293,6 +282,9 @@ public sealed class LessonContentRepository : ILessonContentRepository
             .Distinct()
             .ToArray();
 
+        var programIds = adoptions.Select(x => x.AcademicProgramId).Distinct().ToArray();
+        var programs = await _db.AcademicPrograms.AsNoTracking().Where(x => x.SchoolId == schoolId && programIds.Contains(x.Id)).ToArrayAsync(cancellationToken);
+
         var subjects = await _db.Subjects
             .AsNoTracking()
             .Where(x =>
@@ -326,6 +318,7 @@ public sealed class LessonContentRepository : ILessonContentRepository
                 x.IsActive)
             .ToArrayAsync(cancellationToken);
 
+        var programsById = programs.ToDictionary(x => x.Id);
         var subjectsById = subjects.ToDictionary(x => x.Id);
         var gradesById = grades.ToDictionary(x => x.Id);
         var versionsById = versions.ToDictionary(x => x.Id);
@@ -335,7 +328,8 @@ public sealed class LessonContentRepository : ILessonContentRepository
 
         foreach (var adoption in adoptions)
         {
-            if (!subjectsById.TryGetValue(adoption.SubjectId, out var subject) ||
+            if (!programsById.TryGetValue(adoption.AcademicProgramId, out var program) ||
+                !subjectsById.TryGetValue(adoption.SubjectId, out var subject) ||
                 !gradesById.TryGetValue(adoption.GradeLevelId, out var grade) ||
                 !versionsById.TryGetValue(adoption.FrameworkVersionId, out var version) ||
                 !frameworksById.TryGetValue(version.FrameworkId, out var framework))
@@ -353,7 +347,7 @@ public sealed class LessonContentRepository : ILessonContentRepository
                 subject.Code,
                 grade.Id,
                 grade.Name,
-                grade.Order));
+                grade.Order) { AcademicProgramId = program.Id, AcademicProgramName = program.Name, AcademicProgramCode = program.Code });
         }
 
         return result

@@ -40,6 +40,7 @@
         <a href="#years">@A["AcademicYears"]</a>
         <a href="#terms">@A["Terms"]</a>
         <a href="#grades">@A["GradeLevels"]</a>
+        <a href="#programs">@A["AcademicPrograms"]</a>
         <a href="#classes">@A["Classes"]</a>
         <a href="#subjects">@A["Subjects"]</a>
         <a href="#teachers">@A["TeacherAssignments"]</a>
@@ -219,6 +220,40 @@
         </div>
     </section>
 
+    <section id="programs" class="academic-section">
+        <h2>@A["AcademicPrograms"]</h2>
+        <div class="academic-two-column">
+            @if (canManageAcademic)
+            {
+                <form asp-action="CreateAcademicProgram" method="post" class="academic-card academic-form">
+                    <h3>@A["CreateAcademicProgram"]</h3>
+                    <label for="program-name">@A["Name"]</label>
+                    <input id="program-name" name="name" maxlength="150" required />
+                    <label for="program-code">@A["Code"]</label>
+                    <input id="program-code" name="code" maxlength="50" pattern="[A-Za-z0-9-]+" required />
+                    <label for="program-status">@A["Status"]</label>
+                    <select id="program-status" name="status">
+                        <option value="@((int)AcademicStructureStatus.Active)">@A["StatusActive"]</option>
+                        <option value="@((int)AcademicStructureStatus.Inactive)">@A["StatusInactive"]</option>
+                    </select>
+                    <button class="school-button school-button-primary" type="submit">@A["CreateAcademicProgram"]</button>
+                </form>
+            }
+            <div class="academic-card">
+                @if (Model.AcademicPrograms.Count == 0) { <p>@A["NoAcademicPrograms"]</p> }
+                else
+                {
+                    <table class="academic-table"><thead><tr><th>@A["Code"]</th><th>@A["Name"]</th><th>@A["Status"]</th></tr></thead><tbody>
+                    @foreach (var item in Model.AcademicPrograms)
+                    {
+                        <tr><td>@item.Code</td><td>@item.Name</td><td>@A[$"Status{item.Status}"]</td></tr>
+                    }
+                    </tbody></table>
+                }
+            </div>
+        </div>
+    </section>
+
     <section id="classes" class="academic-section">
         <h2>@A["Classes"]</h2>
         <div class="academic-two-column">
@@ -234,6 +269,12 @@
                                     {
                                         <option value="@year.Id">@year.Name</option>
                                     }
+                                </select>
+                                <label for="class-program">@A["AcademicProgram"]</label>
+                                <select id="class-program" name="academicProgramId" required>
+                                    <option value="">@A["SelectOption"]</option>
+                                    @foreach (var program in Model.AcademicPrograms.Where(x => x.Status == AcademicStructureStatus.Active))
+                                    { <option value="@program.Id">@program.Name (@program.Code)</option> }
                                 </select>
                                 <label for="class-grade">@A["GradeLevel"]</label>
                                 <select id="class-grade" name="gradeLevelId" required>
@@ -270,6 +311,7 @@
                             <th>@A["Code"]</th>
                             <th>@A["Name"]</th>
                             <th>@A["AcademicYear"]</th>
+                            <th>@A["AcademicProgram"]</th>
                             <th>@A["GradeLevel"]</th>
                             <th>@A["Status"]</th>
                             <th></th>
@@ -282,6 +324,7 @@
                                 <td data-label="@A["Code"]">@item.Code</td>
                                 <td data-label="@A["Name"]">@item.Name</td>
                                 <td data-label="@A["AcademicYear"]">@item.AcademicYearName</td>
+                                <td data-label="@A["AcademicProgram"]">@item.AcademicProgramName</td>
                                 <td data-label="@A["GradeLevel"]">@item.GradeLevelName</td>
                                 <td data-label="@A["Status"]">@A[$"Status{item.Status}"]</td>
                                 <td>

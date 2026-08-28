@@ -9,6 +9,9 @@ public interface ICurriculumRepository
         Guid schoolId,
         CancellationToken cancellationToken = default);
 
+    Task<AcademicProgram?> GetAcademicProgramAsync(Guid schoolId, Guid id, CancellationToken cancellationToken = default) => Task.FromResult<AcademicProgram?>(null);
+    Task<AcademicProgram?> GetDefaultAcademicProgramAsync(Guid schoolId, CancellationToken cancellationToken = default) => Task.FromResult<AcademicProgram?>(null);
+
     Task<GradeLevel?> GetGradeLevelAsync(
         Guid schoolId,
         Guid id,
@@ -36,6 +39,9 @@ public interface ICurriculumRepository
         CancellationToken cancellationToken = default) =>
         Task.FromResult<SchoolCurriculumAdoption?>(null);
 
+    Task<SchoolCurriculumAdoption?> GetPrimaryAdoptionAsync(Guid schoolId, Guid academicProgramId, Guid gradeLevelId, Guid subjectId, CancellationToken cancellationToken = default) =>
+        GetPrimaryDefaultAdoptionAsync(schoolId,gradeLevelId,subjectId,cancellationToken);
+
     Task<Guid?> GetActivePlatformFrameworkVersionIdAsync(
         string normalizedFrameworkCode,
         CancellationToken cancellationToken = default) =>
@@ -46,6 +52,9 @@ public interface ICurriculumRepository
         Guid gradeLevelId,
         Guid subjectId,
         CancellationToken cancellationToken = default);
+
+    Task<Guid?> GetPrimaryFrameworkVersionIdAsync(Guid schoolId, Guid academicProgramId, Guid gradeLevelId, Guid subjectId, CancellationToken cancellationToken = default) =>
+        GetPrimaryDefaultFrameworkVersionIdAsync(schoolId,gradeLevelId,subjectId,cancellationToken);
 
     Task<IReadOnlyList<AdoptedCurriculumContext>>
         GetAdoptedCurriculumContextsAsync(
@@ -90,6 +99,11 @@ public interface ICurriculumRepository
         Guid? excludeId = null,
         CancellationToken cancellationToken = default);
 
+    Task<bool> TopicNameExistsInProgramAsync(Guid schoolId, Guid academicProgramId, Guid frameworkVersionId, Guid subjectId, Guid gradeLevelId, string normalizedName, Guid? excludeId = null, CancellationToken cancellationToken = default) =>
+        TopicNameExistsAsync(schoolId,frameworkVersionId,subjectId,gradeLevelId,normalizedName,excludeId,cancellationToken);
+    Task<bool> TopicOrderExistsInProgramAsync(Guid schoolId, Guid academicProgramId, Guid frameworkVersionId, Guid subjectId, Guid gradeLevelId, int order, Guid? excludeId = null, CancellationToken cancellationToken = default) =>
+        TopicOrderExistsAsync(schoolId,frameworkVersionId,subjectId,gradeLevelId,order,excludeId,cancellationToken);
+
     Task<bool> OutcomeCodeExistsAsync(
         Guid schoolId,
         Guid frameworkVersionId,
@@ -98,6 +112,9 @@ public interface ICurriculumRepository
         string normalizedCode,
         Guid? excludeId = null,
         CancellationToken cancellationToken = default);
+
+    Task<bool> OutcomeCodeExistsInProgramAsync(Guid schoolId, Guid academicProgramId, Guid frameworkVersionId, Guid subjectId, Guid gradeLevelId, string normalizedCode, Guid? excludeId = null, CancellationToken cancellationToken = default) =>
+        OutcomeCodeExistsAsync(schoolId,frameworkVersionId,subjectId,gradeLevelId,normalizedCode,excludeId,cancellationToken);
 
     Task<bool> OutcomeOrderExistsAsync(
         Guid schoolId,

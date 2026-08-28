@@ -10,7 +10,10 @@ public sealed record AcademicStructureSnapshot(
     IReadOnlyList<Subject> Subjects,
     IReadOnlyList<StudentProfile> StudentProfiles,
     IReadOnlyList<TeacherAssignment> TeacherAssignments,
-    IReadOnlyList<StudentEnrollment> StudentEnrollments);
+    IReadOnlyList<StudentEnrollment> StudentEnrollments)
+{
+    public IReadOnlyList<AcademicProgram> AcademicPrograms { get; init; } = [];
+}
 
 public enum AcademicPersistenceError
 {

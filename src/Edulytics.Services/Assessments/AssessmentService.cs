@@ -81,10 +81,12 @@ public sealed partial class AssessmentService : IAssessmentService
                 snapshot,
                 assessment.AcademicYearId,
                 classGroup.GradeLevelId,
-                assessment.SubjectId);
+                assessment.SubjectId,
+                classGroup.AcademicProgramId);
 
         var outcomes = snapshot.LearningOutcomes
             .Where(x =>
+                x.AcademicProgramId == classGroup.AcademicProgramId &&
                 x.SubjectId == assessment.SubjectId &&
                 x.GradeLevelId == classGroup.GradeLevelId &&
                 eligibleFrameworkVersionIds.Contains(x.FrameworkVersionId))

@@ -185,6 +185,7 @@ public sealed class AssessmentServiceTests
                 Id = Guid.NewGuid(),
                 SchoolId = f.School.Id,
                 AcademicYearId = f.Year.Id,
+                AcademicProgramId = f.Class.AcademicProgramId,
                 GradeLevelId = f.Grade.Id,
                 SubjectId = f.Subject.Id,
                 FrameworkVersionId = yearVersion.Id,
@@ -370,6 +371,7 @@ public sealed class AssessmentServiceTests
         {
             Id = Guid.NewGuid(),
             SchoolId = f.School.Id,
+            AcademicProgramId = f.Class.AcademicProgramId,
             FrameworkVersionId =
                 f.Outcome.FrameworkVersionId,
             SubjectId =
@@ -585,7 +587,24 @@ public sealed class AssessmentServiceTests
                 Name = "Grade 6",
                 Order = 6
             };
-            var classGroup = NewClass(school.Id, year.Id, grade.Id);
+            var program = new AcademicProgram
+            {
+                Id = Guid.NewGuid(),
+                SchoolId = school.Id,
+                Name = "Phase 08 Default Program",
+                Code = "MAIN",
+                NormalizedCode = "MAIN",
+                Status = AcademicStructureStatus.Active,
+                IsDefault = true,
+                CreatedAtUtc = DateTime.UtcNow,
+                UpdatedAtUtc = DateTime.UtcNow,
+                RowVersion = BitConverter.GetBytes(1L)
+            };
+            var classGroup = NewClass(
+                school.Id,
+                year.Id,
+                grade.Id,
+                program.Id);
             var subject = NewSubject(school.Id);
             var student = NewStudent(school.Id);
 
@@ -614,6 +633,7 @@ public sealed class AssessmentServiceTests
             {
                 Id = Guid.NewGuid(),
                 SchoolId = school.Id,
+                AcademicProgramId = program.Id,
                 FrameworkVersionId = frameworkVersion.Id,
                 SubjectId = subject.Id,
                 GradeLevelId = grade.Id,
@@ -624,6 +644,7 @@ public sealed class AssessmentServiceTests
             {
                 Id = Guid.NewGuid(),
                 SchoolId = school.Id,
+                AcademicProgramId = program.Id,
                 FrameworkVersionId = frameworkVersion.Id,
                 SubjectId = subject.Id,
                 GradeLevelId = grade.Id,
@@ -638,6 +659,7 @@ public sealed class AssessmentServiceTests
                 Id = Guid.NewGuid(),
                 SchoolId = school.Id,
                 AcademicYearId = null,
+                AcademicProgramId = program.Id,
                 GradeLevelId = grade.Id,
                 SubjectId = subject.Id,
                 FrameworkVersionId = frameworkVersion.Id,
@@ -657,6 +679,7 @@ public sealed class AssessmentServiceTests
             db.AcademicYears.Add(year);
             db.Terms.Add(term);
             db.GradeLevels.Add(grade);
+            db.AcademicPrograms.Add(program);
             db.ClassGroups.Add(classGroup);
             db.Subjects.Add(subject);
             db.StudentProfiles.Add(student);
@@ -771,7 +794,11 @@ public sealed class AssessmentServiceTests
                 Status = AcademicStructureStatus.Active
             };
 
-        private static ClassGroup NewClass(Guid schoolId, Guid yearId, Guid gradeId)
+        private static ClassGroup NewClass(
+            Guid schoolId,
+            Guid yearId,
+            Guid gradeId,
+            Guid academicProgramId)
         {
             var code = $"C-{Guid.NewGuid():N}"[..10].ToUpperInvariant();
             return new ClassGroup
@@ -779,6 +806,7 @@ public sealed class AssessmentServiceTests
                 Id = Guid.NewGuid(),
                 SchoolId = schoolId,
                 AcademicYearId = yearId,
+                AcademicProgramId = academicProgramId,
                 GradeLevelId = gradeId,
                 Name = "6A",
                 Code = code,

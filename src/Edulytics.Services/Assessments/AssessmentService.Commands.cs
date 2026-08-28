@@ -764,9 +764,12 @@ public sealed partial class AssessmentService
                 snapshot,
                 context.Assessment.AcademicYearId,
                 classGroup.GradeLevelId,
-                context.Assessment.SubjectId);
+                context.Assessment.SubjectId,
+                classGroup.AcademicProgramId);
 
-        if (outcome.SubjectId != context.Assessment.SubjectId ||
+        if (outcome.AcademicProgramId != classGroup.AcademicProgramId ||
+            topic.AcademicProgramId != classGroup.AcademicProgramId ||
+            outcome.SubjectId != context.Assessment.SubjectId ||
             outcome.GradeLevelId != classGroup.GradeLevelId ||
             topic.SubjectId != context.Assessment.SubjectId ||
             topic.GradeLevelId != classGroup.GradeLevelId ||
@@ -913,7 +916,8 @@ public sealed partial class AssessmentService
                 snapshot,
                 assessment.AcademicYearId,
                 classGroup.GradeLevelId,
-                assessment.SubjectId);
+                assessment.SubjectId,
+                classGroup.AcademicProgramId);
 
         var mappedOutcomeIds = snapshot.OutcomeMappings
             .Where(x => mapped.Contains(x.AssessmentQuestionId))
@@ -923,6 +927,7 @@ public sealed partial class AssessmentService
         var eligibleMappedOutcomeIds = snapshot.LearningOutcomes
             .Where(x =>
                 mappedOutcomeIds.Contains(x.Id) &&
+                x.AcademicProgramId == classGroup.AcademicProgramId &&
                 x.SubjectId == assessment.SubjectId &&
                 x.GradeLevelId == classGroup.GradeLevelId &&
                 eligibleFrameworkVersionIds.Contains(x.FrameworkVersionId))
