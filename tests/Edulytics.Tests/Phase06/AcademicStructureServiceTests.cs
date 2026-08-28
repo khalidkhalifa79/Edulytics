@@ -232,9 +232,11 @@ public sealed class AcademicStructureServiceTests
 
         var dashboard = await f.Service.GetDashboardAsync(f.Supervisor.Id);
         var british = Assert.Single(
-            dashboard.Value!.AcademicPrograms.Where(x => x.Code == "BRITISH"));
+            dashboard.Value!.AcademicPrograms,
+            x => x.Code == "BRITISH");
         var american = Assert.Single(
-            dashboard.Value.AcademicPrograms.Where(x => x.Code == "AMERICAN"));
+            dashboard.Value.AcademicPrograms,
+            x => x.Code == "AMERICAN");
 
         var britishClass = await f.Service.CreateClassGroupAsync(
             f.Supervisor.Id,
