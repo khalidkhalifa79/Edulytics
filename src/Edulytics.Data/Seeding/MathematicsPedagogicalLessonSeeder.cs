@@ -9,16 +9,18 @@ using Microsoft.EntityFrameworkCore;
 namespace Edulytics.Data.Seeding;
 
 /// <summary>
-/// Seeds platform-scoped Edulytics pedagogical lesson definitions without adding
-/// synthetic Unit/Lesson nodes to the verified official curriculum packs.
+/// Seeds platform-scoped Edulytics pedagogical lessons without mutating verified
+/// official curriculum packs.
 ///
-/// UAE: each verified official Lesson node becomes the pedagogical lesson identity,
-/// preserving the official lesson node id and verified LessonStandardAlignment links.
+/// UAE keeps its verified official Lesson identities and verified
+/// LessonStandardAlignment links.
 ///
-/// England/Common Core/Poland: the existing Edulytics MathematicsLessonBlueprintRegistry
-/// supplies baseline lesson slots. These are Edulytics pedagogical definitions, not
-/// official curriculum Lesson nodes. Official standard/outcome alignments are curated
-/// separately; this seeder never guesses them.
+/// England, Common Core and Poland do not publish verified Lesson nodes in the
+/// accepted pack snapshots. For those packs Edulytics creates a grade/pathway-
+/// specific pedagogical lesson for each applicable official Standard/Outcome.
+/// Each created lesson is mapped directly to that exact official node. This is a
+/// structural, deterministic alignment: no fuzzy text matching and no invented
+/// official relationship.
 /// </summary>
 public sealed class MathematicsPedagogicalLessonSeeder
 {
@@ -37,7 +39,6 @@ public sealed class MathematicsPedagogicalLessonSeeder
     public async Task SeedAsync(CancellationToken ct = default)
     {
         MathematicsCurriculumPackRegistry.Validate();
-        MathematicsLessonBlueprintRegistry.Validate();
 
         var states = await _db.CurriculumPackImportStates
             .AsNoTracking()
@@ -67,24 +68,17 @@ public sealed class MathematicsPedagogicalLessonSeeder
             expectedMappings,
             ct);
 
-        BuildBlueprintLessons(
+        await BuildOutcomeBackedLessonsAsync(
             stateByCode,
-            expectedLessons);
+            expectedLessons,
+            expectedMappings,
+            ct);
 
-        if (expectedLessons.Count != 313)
-        {
-            throw new InvalidOperationException(
-                $"Pedagogical Mathematics baseline count drift. Expected 313, got {expectedLessons.Count}.");
-        }
-
-        if (expectedMappings.Count != 48)
-        {
-            throw new InvalidOperationException(
-                $"Verified UAE pedagogical alignment count drift. Expected 48, got {expectedMappings.Count}.");
-        }
+        ValidateExpectedGraph(expectedLessons, expectedMappings);
 
         await UpsertLessonsAsync(expectedLessons, ct);
         await UpsertMappingsAsync(expectedMappings, ct);
+        await RemoveStaleLessonsSafelyAsync(expectedLessons, ct);
     }
 
     private async Task BuildUaeAsync(
@@ -107,7 +101,10 @@ public sealed class MathematicsPedagogicalLessonSeeder
             .ToArray();
 
         if (lessons.Length != 42)
-            throw new InvalidOperationException("UAE pedagogical seed requires exactly 42 verified official Lesson nodes.");
+        {
+            throw new InvalidOperationException(
+                "UAE pedagogical seed requires exactly 42 verified official Lesson nodes.");
+        }
 
         var nodeById = nodes.ToDictionary(x => x.Id);
         var now = DateTime.UtcNow;
@@ -121,8 +118,8 @@ public sealed class MathematicsPedagogicalLessonSeeder
 
             expectedLessons.Add(new CurriculumPedagogicalLesson
             {
-                // Deliberately reuse the verified official Lesson id so any canonical
-                // content row created by the prior Phase29 architecture remains valid.
+                // Reuse the verified official Lesson id so existing canonical
+                // Phase 29 UAE content stays attached without data migration.
                 Id = lesson.Id,
                 FrameworkVersionId = lesson.FrameworkVersionId,
                 OfficialLessonNodeId = lesson.Id,
@@ -151,7 +148,10 @@ public sealed class MathematicsPedagogicalLessonSeeder
             .ToArrayAsync(ct);
 
         if (links.Length != 48)
-            throw new InvalidOperationException("UAE pedagogical seed requires exactly 48 verified LessonStandardAlignment links.");
+        {
+            throw new InvalidOperationException(
+                "UAE pedagogical seed requires exactly 48 verified LessonStandardAlignment links.");
+        }
 
         foreach (var link in links)
         {
@@ -165,11 +165,12 @@ public sealed class MathematicsPedagogicalLessonSeeder
         }
     }
 
-    private static void BuildBlueprintLessons(
+    private async Task BuildOutcomeBackedLessonsAsync(
         IReadOnlyDictionary<string, CurriculumPackImportState> stateByCode,
-        ICollection<CurriculumPedagogicalLesson> expectedLessons)
+        ICollection<CurriculumPedagogicalLesson> expectedLessons,
+        ICollection<CurriculumPedagogicalLessonOutcome> expectedMappings,
+        CancellationToken ct)
     {
-        var allBlueprints = MathematicsLessonBlueprintRegistry.CreateBlueprints();
         var now = DateTime.UtcNow;
 
         foreach (var pack in MathematicsCurriculumPackRegistry.All
@@ -177,63 +178,217 @@ public sealed class MathematicsPedagogicalLessonSeeder
         {
             var state = stateByCode[pack.Code];
 
-            foreach (var level in pack.Levels
-                         .GroupBy(x => new { x.LogicalLevel, x.NativeLabel, x.Pathway })
-                         .Select(x => x.First()))
+            var nodes = await _db.CurriculumPackContentNodes
+                .AsNoTracking()
+                .Where(x =>
+                    x.FrameworkVersionId == state.FrameworkVersionId &&
+                    x.FrameworkCode == pack.Code &&
+                    x.IsActive)
+                .OrderBy(x => x.SortOrder)
+                .ThenBy(x => x.Code)
+                .ToArrayAsync(ct);
+
+            var officialOutcomes = nodes
+                .Where(x =>
+                    x.IsOfficial &&
+                    (x.NodeKind == "Standard" || x.NodeKind == "Outcome"))
+                .ToArray();
+
+            if (officialOutcomes.Length != state.OfficialNodeCount)
             {
-                var units = allBlueprints
+                throw new InvalidOperationException(
+                    $"Official outcome count drift for {pack.Code}. Expected {state.OfficialNodeCount}, got {officialOutcomes.Length}.");
+            }
+
+            var nodeById = nodes.ToDictionary(x => x.Id);
+            var levels = pack.Levels
+                .GroupBy(x => new { x.LogicalLevel, x.NativeLabel, x.Pathway })
+                .Select(x => x.First())
+                .OrderBy(x => x.LogicalLevel)
+                .ThenBy(x => x.Pathway)
+                .ToArray();
+
+            foreach (var level in levels)
+            {
+                var applicable = officialOutcomes
                     .Where(x =>
-                        x.PackCode == pack.Code &&
-                        x.LogicalLevel == level.LogicalLevel &&
-                        string.Equals(
-                            x.NativeLevel,
-                            level.NativeLabel,
-                            StringComparison.Ordinal))
-                    .GroupBy(x => x.UnitKey, StringComparer.Ordinal)
-                    .Select(x => x.First())
+                        x.LogicalLevelFrom <= level.LogicalLevel &&
+                        x.LogicalLevelTo >= level.LogicalLevel &&
+                        PathwayMatches(level.Pathway, x.Pathway))
+                    .OrderBy(x => x.SortOrder)
+                    .ThenBy(x => x.Code)
                     .ToArray();
 
-                if (units.Length == 0)
+                if (applicable.Length == 0)
                 {
                     throw new InvalidOperationException(
-                        $"No Edulytics lesson blueprints exist for {pack.Code} logical level {level.LogicalLevel}.");
+                        $"No official Standard/Outcome applies to {pack.Code} logical level {level.LogicalLevel} ({level.NativeLabel}, {level.Pathway ?? "core"}).");
                 }
 
-                for (var index = 0; index < units.Length; index++)
+                var pathwayKey = string.IsNullOrWhiteSpace(level.Pathway)
+                    ? "CORE"
+                    : NormalizeKey(level.Pathway);
+
+                var nativeKey = NormalizeKey(level.NativeLabel);
+                var unitCounters = new Dictionary<string, int>(StringComparer.Ordinal);
+                var lessonSort = 0;
+
+                foreach (var outcome in applicable)
                 {
-                    var blueprint = units[index];
-                    var unitToken = blueprint.UnitKey
-                        .Split(':', StringSplitOptions.RemoveEmptyEntries)
-                        .Last();
+                    var unit = ResolveTeachingUnit(outcome, nodeById)
+                        ?? throw new InvalidOperationException(
+                            $"Official node {outcome.Code} has no Domain/Strand/Unit ancestor.");
 
-                    var pathwayKey = string.IsNullOrWhiteSpace(level.Pathway)
-                        ? "CORE"
-                        : NormalizeKey(level.Pathway);
+                    var unitKey =
+                        $"{unit.Code}:L{level.LogicalLevel}:{nativeKey}:{pathwayKey}";
 
-                    var nativeKey = NormalizeKey(level.NativeLabel);
+                    unitCounters.TryGetValue(unitKey, out var withinUnit);
+                    withinUnit++;
+                    unitCounters[unitKey] = withinUnit;
+                    lessonSort++;
+
                     var code =
-                        $"PED:{pack.Code}:L{level.LogicalLevel}:{nativeKey}:{pathwayKey}:{unitToken}:LESSON-01";
+                        $"PED:{pack.Code}:L{level.LogicalLevel}:{nativeKey}:{pathwayKey}:{NormalizeKey(outcome.Code)}";
+
+                    var lessonId = G(
+                        $"pedagogical|{state.FrameworkVersionId}|L{level.LogicalLevel}|{nativeKey}|{pathwayKey}|{outcome.Id}");
 
                     expectedLessons.Add(new CurriculumPedagogicalLesson
                     {
-                        Id = G($"pedagogical|{state.FrameworkVersionId}|{code}"),
+                        Id = lessonId,
                         FrameworkVersionId = state.FrameworkVersionId,
                         OfficialLessonNodeId = null,
                         Code = code,
-                        UnitKey =
-                            $"{pack.Code}:L{level.LogicalLevel}:{nativeKey}:{pathwayKey}:{unitToken}",
-                        UnitTitle = HumanizeUnit(unitToken),
-                        Title = $"{level.NativeLabel} — {HumanizeUnit(unitToken)}",
+                        UnitKey = unitKey,
+                        UnitTitle = unit.Title,
+                        Title = $"{unit.Title} — Lesson {withinUnit:D2}",
                         LogicalLevelFrom = level.LogicalLevel,
                         LogicalLevelTo = level.LogicalLevel,
                         NativeLevel = level.NativeLabel,
                         Pathway = level.Pathway,
-                        SortOrder = index + 1,
+                        SortOrder = lessonSort,
                         CreatedAtUtc = now,
                         UpdatedAtUtc = now
                     });
+
+                    expectedMappings.Add(new CurriculumPedagogicalLessonOutcome
+                    {
+                        PedagogicalLessonId = lessonId,
+                        FrameworkVersionId = state.FrameworkVersionId,
+                        OutcomeNodeId = outcome.Id,
+                        SortOrder = 1
+                    });
                 }
             }
+        }
+    }
+
+    private static CurriculumPackContentNode? ResolveTeachingUnit(
+        CurriculumPackContentNode outcome,
+        IReadOnlyDictionary<Guid, CurriculumPackContentNode> nodeById)
+    {
+        var parentId = outcome.ParentId;
+
+        while (parentId.HasValue &&
+               nodeById.TryGetValue(parentId.Value, out var parent))
+        {
+            if (parent.NodeKind is "Domain" or "Strand" or "Unit")
+                return parent;
+
+            parentId = parent.ParentId;
+        }
+
+        return null;
+    }
+
+    private static bool PathwayMatches(
+        string? levelPathway,
+        string? officialPathway)
+    {
+        if (string.IsNullOrWhiteSpace(officialPathway))
+            return true;
+
+        if (string.IsNullOrWhiteSpace(levelPathway))
+            return false;
+
+        var wanted = levelPathway.Trim();
+        var exact = officialPathway
+            .Split('|', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+            .Any(x => string.Equals(x, wanted, StringComparison.OrdinalIgnoreCase));
+
+        if (exact)
+            return true;
+
+        var officialNormalized = NormalizeKey(officialPathway);
+        var wantedNormalized = NormalizeKey(wanted);
+
+        return officialNormalized.Contains(
+                   wantedNormalized,
+                   StringComparison.Ordinal) ||
+               wantedNormalized.Contains(
+                   officialNormalized,
+                   StringComparison.Ordinal);
+    }
+
+    private static void ValidateExpectedGraph(
+        IReadOnlyCollection<CurriculumPedagogicalLesson> lessons,
+        IReadOnlyCollection<CurriculumPedagogicalLessonOutcome> mappings)
+    {
+        var duplicateLessonIds = lessons
+            .GroupBy(x => x.Id)
+            .Where(x => x.Count() != 1)
+            .Select(x => x.Key)
+            .ToArray();
+
+        if (duplicateLessonIds.Length != 0)
+            throw new InvalidOperationException("Duplicate pedagogical lesson ids were generated.");
+
+        var duplicateCodes = lessons
+            .GroupBy(
+                x => (x.FrameworkVersionId, x.Code),
+                EqualityComparer<(Guid, string)>.Default)
+            .Where(x => x.Count() != 1)
+            .ToArray();
+
+        if (duplicateCodes.Length != 0)
+            throw new InvalidOperationException("Duplicate pedagogical lesson codes were generated.");
+
+        var uaeLessonIds = lessons
+            .Where(x => x.OfficialLessonNodeId.HasValue)
+            .Select(x => x.Id)
+            .ToHashSet();
+
+        if (uaeLessonIds.Count != 42)
+            throw new InvalidOperationException("UAE pedagogical lesson cardinality drift.");
+
+        var uaeMappings = mappings
+            .Count(x => uaeLessonIds.Contains(x.PedagogicalLessonId));
+
+        if (uaeMappings != 48)
+            throw new InvalidOperationException("UAE pedagogical alignment cardinality drift.");
+
+        var mappingCountByLesson = mappings
+            .GroupBy(x => x.PedagogicalLessonId)
+            .ToDictionary(x => x.Key, x => x.Count());
+
+        var nonUaeLessons = lessons
+            .Where(x => !x.OfficialLessonNodeId.HasValue)
+            .ToArray();
+
+        if (nonUaeLessons.Length == 0 ||
+            nonUaeLessons.Any(x => mappingCountByLesson.GetValueOrDefault(x.Id) != 1))
+        {
+            throw new InvalidOperationException(
+                "Every non-UAE pedagogical lesson must map to exactly one applicable official Standard/Outcome.");
+        }
+
+        if (mappings.Any(m =>
+                lessons.All(l =>
+                    l.Id != m.PedagogicalLessonId ||
+                    l.FrameworkVersionId != m.FrameworkVersionId)))
+        {
+            throw new InvalidOperationException(
+                "Pedagogical mapping points outside its lesson framework version.");
         }
     }
 
@@ -304,6 +459,58 @@ public sealed class MathematicsPedagogicalLessonSeeder
         await _db.SaveChangesAsync(ct);
     }
 
+    private async Task RemoveStaleLessonsSafelyAsync(
+        IReadOnlyCollection<CurriculumPedagogicalLesson> expected,
+        CancellationToken ct)
+    {
+        var versionIds = expected
+            .Select(x => x.FrameworkVersionId)
+            .Distinct()
+            .ToArray();
+
+        var expectedIds = expected
+            .Select(x => x.Id)
+            .ToHashSet();
+
+        var allExisting = await _db.CurriculumPedagogicalLessons
+            .Where(x => versionIds.Contains(x.FrameworkVersionId))
+            .ToArrayAsync(ct);
+
+        var stale = allExisting
+            .Where(x => !expectedIds.Contains(x.Id))
+            .ToArray();
+
+        if (stale.Length == 0)
+            return;
+
+        var staleIds = stale
+            .Select(x => x.Id)
+            .ToArray();
+
+        var referencedByCanonicalContent =
+            await _db.CurriculumLessonContents
+                .AsNoTracking()
+                .Where(x => staleIds.Contains(x.PedagogicalLessonId))
+                .Select(x => x.PedagogicalLessonId)
+                .Distinct()
+                .ToArrayAsync(ct);
+
+        if (referencedByCanonicalContent.Length != 0)
+        {
+            throw new InvalidOperationException(
+                "Refusing to remove obsolete pseudo-lessons because canonical lesson content references them. " +
+                $"Referenced lesson ids: {string.Join(", ", referencedByCanonicalContent)}");
+        }
+
+        var staleMappings = await _db.CurriculumPedagogicalLessonOutcomes
+            .Where(x => staleIds.Contains(x.PedagogicalLessonId))
+            .ToArrayAsync(ct);
+
+        _db.CurriculumPedagogicalLessonOutcomes.RemoveRange(staleMappings);
+        _db.CurriculumPedagogicalLessons.RemoveRange(stale);
+        await _db.SaveChangesAsync(ct);
+    }
+
     private static void EnsureLessonMatches(
         CurriculumPedagogicalLesson current,
         CurriculumPedagogicalLesson expected)
@@ -333,16 +540,6 @@ public sealed class MathematicsPedagogicalLessonSeeder
             "-");
 
         return normalized.Trim('-');
-    }
-
-    private static string HumanizeUnit(string token)
-    {
-        var value = Regex.Replace(token, "([a-z0-9])([A-Z])", "$1 $2");
-        value = value.Replace('_', ' ').Trim();
-
-        return value.Length == 0
-            ? token
-            : char.ToUpperInvariant(value[0]) + value[1..];
     }
 
     private static Guid G(string value)
