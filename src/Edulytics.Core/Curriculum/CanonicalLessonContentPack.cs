@@ -2,6 +2,12 @@ using Edulytics.Core.Enums;
 
 namespace Edulytics.Core.Curriculum;
 
+public enum CurriculumSourceResolutionStatus
+{
+    CurrentOfficial = 1,
+    PreviousOfficialFallback = 2
+}
+
 /// <summary>
 /// Version-controlled Edulytics-authored/reviewed lesson content.
 /// This is not an official curriculum pack and must never be represented as
@@ -12,6 +18,21 @@ public sealed class CanonicalLessonContentPackDocument
     public string PackCode { get; set; } = string.Empty;
     public string VersionCode { get; set; } = string.Empty;
     public string ContentVersion { get; set; } = string.Empty;
+
+    // Curriculum authority/provenance.
+    // TargetCurriculumPeriod is what Edulytics is serving.
+    // SourceCurriculumPeriod is the official source actually reviewed.
+    public string TargetCurriculumPeriod { get; set; } = string.Empty;
+    public string SourceCurriculumPeriod { get; set; } = string.Empty;
+    public string SourceVersionLabel { get; set; } = string.Empty;
+    public string SourceAuthority { get; set; } = string.Empty;
+    public string SourceUrl { get; set; } = string.Empty;
+    public string SourceCheckedAtUtc { get; set; } = string.Empty;
+    public CurriculumSourceResolutionStatus SourceResolution { get; set; } =
+        CurriculumSourceResolutionStatus.CurrentOfficial;
+    public string FallbackReason { get; set; } = string.Empty;
+    public string ReviewMethod { get; set; } = string.Empty;
+
     public CanonicalLessonContentStatus Status { get; set; } =
         CanonicalLessonContentStatus.Draft;
     public string ReviewedBy { get; set; } = string.Empty;
@@ -64,6 +85,76 @@ public static class CanonicalLessonContentPackContract
         Require(document.VersionCode, "VersionCode");
         Require(document.ContentVersion, "ContentVersion");
 
+        Require(
+            document.TargetCurriculumPeriod,
+            "TargetCurriculumPeriod");
+
+        Require(
+            document.SourceCurriculumPeriod,
+            "SourceCurriculumPeriod");
+
+        Require(
+            document.SourceVersionLabel,
+            "SourceVersionLabel");
+
+        Require(
+            document.SourceAuthority,
+            "SourceAuthority");
+
+        Require(
+            document.SourceUrl,
+            "SourceUrl");
+
+        Require(
+            document.SourceCheckedAtUtc,
+            "SourceCheckedAtUtc");
+
+        if (!Uri.TryCreate(
+                document.SourceUrl,
+                UriKind.Absolute,
+                out var sourceUri) ||
+            (sourceUri.Scheme != Uri.UriSchemeHttps &&
+             sourceUri.Scheme != Uri.UriSchemeHttp))
+        {
+            throw new InvalidOperationException(
+                $"Canonical lesson content SourceUrl must be an absolute HTTP/HTTPS URL: {document.SourceUrl}.");
+        }
+
+        if (!DateTimeOffset.TryParse(
+                document.SourceCheckedAtUtc,
+                out var sourceChecked))
+        {
+            throw new InvalidOperationException(
+                $"Canonical lesson content SourceCheckedAtUtc is invalid: {document.SourceCheckedAtUtc}.");
+        }
+
+        if (sourceChecked.Offset != TimeSpan.Zero)
+        {
+            throw new InvalidOperationException(
+                "Canonical lesson content SourceCheckedAtUtc must be UTC.");
+        }
+
+        if (!Enum.IsDefined(
+                typeof(CurriculumSourceResolutionStatus),
+                document.SourceResolution))
+        {
+            throw new InvalidOperationException(
+                $"Unsupported curriculum source resolution: {document.SourceResolution}.");
+        }
+
+        if (document.SourceResolution ==
+            CurriculumSourceResolutionStatus.PreviousOfficialFallback)
+        {
+            Require(
+                document.FallbackReason,
+                "FallbackReason");
+        }
+        else if (!string.IsNullOrWhiteSpace(document.FallbackReason))
+        {
+            throw new InvalidOperationException(
+                "FallbackReason is only valid for PreviousOfficialFallback.");
+        }
+
         if (document.ContentVersion.Length > 80)
             throw new InvalidOperationException("ContentVersion exceeds 80 characters.");
 
@@ -85,6 +176,7 @@ public static class CanonicalLessonContentPackContract
         {
             Require(document.ReviewedBy, "ReviewedBy");
             Require(document.ReviewEvidence, "ReviewEvidence");
+            Require(document.ReviewMethod, "ReviewMethod");
         }
 
         var lessonCodes = new HashSet<string>(StringComparer.Ordinal);
