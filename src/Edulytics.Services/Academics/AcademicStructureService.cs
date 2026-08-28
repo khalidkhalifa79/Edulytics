@@ -50,6 +50,7 @@ public sealed class AcademicStructureService : IAcademicStructureService
 
         var years = snapshot.AcademicYears.ToDictionary(x => x.Id);
         var grades = snapshot.GradeLevels.ToDictionary(x => x.Id);
+        var programs = snapshot.AcademicPrograms.ToDictionary(x => x.Id);
         var classes = snapshot.ClassGroups.ToDictionary(x => x.Id);
         var subjects = snapshot.Subjects.ToDictionary(x => x.Id);
         var profiles = snapshot.StudentProfiles.ToDictionary(x => x.Id);
@@ -102,7 +103,12 @@ public sealed class AcademicStructureService : IAcademicStructureService
                 x.Name,
                 x.Code,
                 x.Status,
-                x.RowVersion)).ToArray(),
+                x.RowVersion)
+            {
+                AcademicProgramId = x.AcademicProgramId,
+                AcademicProgramName = programs.GetValueOrDefault(x.AcademicProgramId)?.Name ?? string.Empty,
+                AcademicProgramCode = programs.GetValueOrDefault(x.AcademicProgramId)?.Code ?? string.Empty
+            }).ToArray(),
             snapshot.Subjects.Select(MapSubject).ToArray(),
             snapshot.TeacherAssignments.Select(x =>
             {
@@ -141,7 +147,14 @@ public sealed class AcademicStructureService : IAcademicStructureService
                     years.GetValueOrDefault(x.AcademicYearId)?.Name ?? string.Empty);
             }).ToArray(),
             teacherCandidates,
-            studentCandidates);
+            studentCandidates)
+        {
+            AcademicPrograms = snapshot.AcademicPrograms
+                .OrderBy(x => x.Name)
+                .Select(x => new AcademicProgramItem(
+                    x.Id, x.Name, x.Code, x.Status, x.IsDefault, x.RowVersion))
+                .ToArray()
+        };
 
         return AcademicQueryResult<AcademicStructureDashboard>.Success(dashboard);
     }
@@ -194,6 +207,9 @@ public sealed class AcademicStructureService : IAcademicStructureService
         var grade = await _academic.GetGradeLevelAsync(
             schoolId, entity.GradeLevelId, cancellationToken);
 
+        var program = await _academic.GetAcademicProgramAsync(
+            schoolId, entity.AcademicProgramId, cancellationToken);
+
         return AcademicQueryResult<ClassGroupItem>.Success(new ClassGroupItem(
             entity.Id,
             entity.AcademicYearId,
@@ -203,7 +219,12 @@ public sealed class AcademicStructureService : IAcademicStructureService
             entity.Name,
             entity.Code,
             entity.Status,
-            entity.RowVersion));
+            entity.RowVersion)
+        {
+            AcademicProgramId = entity.AcademicProgramId,
+            AcademicProgramName = program?.Name ?? string.Empty,
+            AcademicProgramCode = program?.Code ?? string.Empty
+        });
     }
 
     public async Task<AcademicQueryResult<SubjectItem>> GetSubjectAsync(
@@ -502,6 +523,46 @@ var name = Clean(request.Name);
         return await PersistAsync(cancellationToken);
     }
 
+    public async Task<AcademicCommandResult> CreateAcademicProgramAsync(
+        Guid actorUserId,
+        CreateAcademicProgramRequest request,
+        CancellationToken cancellationToken = default)
+    {
+        var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
+        if (!scope.Succeeded) return Fail(scope.Error!.Value);
+        if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
+            return Fail(AcademicStructureErrorCode.AccessDenied);
+
+        var name = Clean(request.Name);
+        var code = NormalizeCode(request.Code);
+        var validation = ValidateName(name);
+        if (validation is not null) return validation;
+        if (!ValidCode(code))
+            return Fail(nameof(request.Code), AcademicStructureErrorCode.InvalidCode);
+
+        var schoolId = scope.School!.Id;
+        if (await _academic.AcademicProgramCodeExistsAsync(schoolId, code, cancellationToken))
+            return Fail(nameof(request.Code), AcademicStructureErrorCode.DuplicateAcademicProgram);
+
+        var now = DateTime.UtcNow;
+        var entity = new AcademicProgram
+        {
+            Id = Guid.NewGuid(), SchoolId = schoolId, Name = name,
+            Code = code, NormalizedCode = code, Status = request.Status,
+            IsDefault = false, CreatedAtUtc = now, UpdatedAtUtc = now
+        };
+        await _academic.AddAsync(entity, cancellationToken);
+        await QueueAuditAsync(scope, "AcademicProgram.Created", "AcademicProgram", entity.Id,
+            oldValues: null,
+            newValues: new Dictionary<string, object?>
+            {
+                ["name"] = entity.Name, ["code"] = entity.Code,
+                ["status"] = entity.Status.ToString(), ["isDefault"] = entity.IsDefault
+            },
+            "Academic program / curriculum stream created.", cancellationToken);
+        return await PersistAsync(cancellationToken);
+    }
+
     public async Task<AcademicCommandResult> CreateClassGroupAsync(
         Guid actorUserId,
         CreateClassGroupRequest request,
@@ -536,8 +597,15 @@ var name = Clean(request.Name);
             return Fail(nameof(request.GradeLevelId),
                 AcademicStructureErrorCode.GradeLevelNotFound);
 
-        if (await _academic.ClassCodeExistsAsync(
-                schoolId, year.Id, code, cancellationToken: cancellationToken))
+        var program = request.AcademicProgramId == Guid.Empty
+            ? await _academic.GetDefaultAcademicProgramAsync(schoolId, cancellationToken)
+            : await _academic.GetAcademicProgramAsync(schoolId, request.AcademicProgramId, cancellationToken);
+        var programId = program?.Id ?? request.AcademicProgramId;
+        if (request.AcademicProgramId != Guid.Empty && program is null)
+            return Fail(nameof(request.AcademicProgramId), AcademicStructureErrorCode.AcademicProgramNotFound);
+
+        if (await _academic.ClassCodeExistsInProgramAsync(
+                schoolId, year.Id, programId, code, cancellationToken: cancellationToken))
             return Fail(nameof(request.Code),
                 AcademicStructureErrorCode.DuplicateClassCode);
 
@@ -546,6 +614,7 @@ var name = Clean(request.Name);
             Id = Guid.NewGuid(),
             SchoolId = schoolId,
             AcademicYearId = year.Id,
+            AcademicProgramId = programId,
             GradeLevelId = grade.Id,
             Name = name,
             Code = code,
@@ -617,8 +686,16 @@ if (request.ExpectedRowVersion.Length == 0)
             return Fail(nameof(request.GradeLevelId),
                 AcademicStructureErrorCode.GradeLevelNotFound);
 
-        if (await _academic.ClassCodeExistsAsync(
-                schoolId, entity.AcademicYearId, code,
+        var program = request.AcademicProgramId == Guid.Empty
+            ? await _academic.GetAcademicProgramAsync(schoolId, entity.AcademicProgramId, cancellationToken)
+            : await _academic.GetAcademicProgramAsync(schoolId, request.AcademicProgramId, cancellationToken);
+        var programId = program?.Id ?? (request.AcademicProgramId == Guid.Empty
+            ? entity.AcademicProgramId : request.AcademicProgramId);
+        if (request.AcademicProgramId != Guid.Empty && program is null)
+            return Fail(nameof(request.AcademicProgramId), AcademicStructureErrorCode.AcademicProgramNotFound);
+
+        if (await _academic.ClassCodeExistsInProgramAsync(
+                schoolId, entity.AcademicYearId, programId, code,
                 request.Id, cancellationToken))
             return Fail(nameof(request.Code),
                 AcademicStructureErrorCode.DuplicateClassCode);
@@ -634,6 +711,7 @@ if (request.ExpectedRowVersion.Length == 0)
                     entity.Status.ToString()
             };
 
+        entity.AcademicProgramId = programId;
         entity.GradeLevelId = grade.Id;
         entity.Name = name;
         entity.Code = code;

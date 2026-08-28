@@ -58,7 +58,8 @@ public sealed partial class AssessmentService
         AssessmentSnapshot snapshot,
         Guid academicYearId,
         Guid gradeLevelId,
-        Guid subjectId)
+        Guid subjectId,
+        Guid academicProgramId = default)
     {
         var activeVersionIds = snapshot.FrameworkVersions
             .Where(x => x.IsActive)
@@ -69,6 +70,7 @@ public sealed partial class AssessmentService
             .Where(x =>
                 x.IsActive &&
                 x.AcademicYearId == academicYearId &&
+                x.AcademicProgramId == academicProgramId &&
                 x.GradeLevelId == gradeLevelId &&
                 x.SubjectId == subjectId &&
                 activeVersionIds.Contains(x.FrameworkVersionId))
@@ -80,6 +82,7 @@ public sealed partial class AssessmentService
                 .Where(x =>
                     x.IsActive &&
                     x.AcademicYearId is null &&
+                    x.AcademicProgramId == academicProgramId &&
                     x.GradeLevelId == gradeLevelId &&
                     x.SubjectId == subjectId &&
                     activeVersionIds.Contains(x.FrameworkVersionId))
@@ -283,12 +286,9 @@ public sealed partial class AssessmentService
         if (outcomeIds.Count == 0)
             return AssessmentErrorCode.Required;
 
-        var eligibleFrameworkVersionIds =
-            ResolveEligibleFrameworkVersionIds(
-                snapshot,
-                assessment.AcademicYearId,
-                gradeLevelId,
-                assessment.SubjectId);
+        var classGroup = snapshot.ClassGroups.FirstOrDefault(x => x.Id == assessment.ClassGroupId);
+        if (classGroup is null) return AssessmentErrorCode.ClassGroupNotFound;
+        var eligibleFrameworkVersionIds = ResolveEligibleFrameworkVersionIds(snapshot, assessment.AcademicYearId, gradeLevelId, assessment.SubjectId, classGroup.AcademicProgramId);
 
         foreach (var outcomeId in outcomeIds)
         {
@@ -304,7 +304,9 @@ public sealed partial class AssessmentService
             if (topic is null)
                 return AssessmentErrorCode.OutcomeNotFound;
 
-            if (outcome.SubjectId != assessment.SubjectId ||
+            if (outcome.AcademicProgramId != classGroup.AcademicProgramId ||
+                topic.AcademicProgramId != classGroup.AcademicProgramId ||
+                outcome.SubjectId != assessment.SubjectId ||
                 outcome.GradeLevelId != gradeLevelId ||
                 topic.SubjectId != assessment.SubjectId ||
                 topic.GradeLevelId != gradeLevelId ||

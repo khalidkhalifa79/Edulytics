@@ -248,7 +248,7 @@ public sealed class PostgreSqlProviderTests
             nullableIndexes.Single(
                 index =>
                     index.Properties.Count ==
-                    4);
+                    5);
 
         Assert.Equal(
             "\"IsPrimary\" = TRUE",

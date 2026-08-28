@@ -7,6 +7,7 @@ public sealed class SchoolCurriculumAdoption : ISchoolScoped
     public Guid Id { get; set; }
     public Guid SchoolId { get; set; }
     public Guid? AcademicYearId { get; set; }
+    public Guid AcademicProgramId { get; set; }
     public Guid GradeLevelId { get; set; }
     public Guid SubjectId { get; set; }
     public Guid FrameworkVersionId { get; set; }

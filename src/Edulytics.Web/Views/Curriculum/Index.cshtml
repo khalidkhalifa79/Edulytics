@@ -44,6 +44,12 @@
                                   class="curriculum-form">
                                 @Html.AntiForgeryToken()
 
+                                <label for="frameworkAcademicProgramId">@C["AcademicProgram"]</label>
+                                <select id="frameworkAcademicProgramId" name="academicProgramId" required>
+                                    <option value="">@C["SelectProgram"]</option>
+                                    @foreach (var program in Model.AcademicPrograms) { <option value="@program.Id">@program.Name (@program.Code)</option> }
+                                </select>
+
                                 <label for="frameworkSubjectId">@C["Subject"]</label>
                                 <select id="frameworkSubjectId"
                                         name="subjectId"
@@ -99,7 +105,7 @@
                     {
                         <li>
                             <strong>@adoption.FrameworkDisplayName</strong>
-                            — @Model.SubjectName(adoption.SubjectId) /
+                            — @adoption.AcademicProgramName / @Model.SubjectName(adoption.SubjectId) /
                             @Model.GradeName(adoption.GradeLevelId)
                         </li>
                     }
@@ -119,6 +125,12 @@
                                   method="post"
                                   class="curriculum-form">
                                 @Html.AntiForgeryToken()
+
+                                <label for="academicProgramId">@C["AcademicProgram"]</label>
+                                <select id="academicProgramId" name="academicProgramId" required>
+                                    <option value="">@C["SelectProgram"]</option>
+                                    @foreach (var program in Model.AcademicPrograms) { <option value="@program.Id">@program.Name (@program.Code)</option> }
+                                </select>
 
                                 <label for="subjectId">@C["Subject"]</label>
                                 <select id="subjectId" name="subjectId" required>
@@ -176,7 +188,7 @@
                                     @foreach (var topic in Model.Topics)
                                     {
                                         <option value="@topic.Id">
-                                            @topic.FrameworkDisplayName →
+                                            @topic.AcademicProgramName → @topic.FrameworkDisplayName →
                                             @Model.SubjectName(topic.SubjectId) /
                                             @Model.GradeName(topic.GradeLevelId) /
                                             @topic.Name
@@ -258,7 +270,7 @@
                     <header>
                         <div>
                             <span class="curriculum-context">
-                                @topic.FrameworkDisplayName ·
+                                @topic.AcademicProgramName · @topic.FrameworkDisplayName ·
                                 @Model.SubjectName(topic.SubjectId) ·
                                 @Model.GradeName(topic.GradeLevelId)
                             </span>

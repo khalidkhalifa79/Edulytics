@@ -22,7 +22,8 @@ public enum CurriculumErrorCode
     CurriculumNotSelected = 18,
     CurriculumFrameworkInUse = 19,
     OfficialOutcomeNotFound = 20,
-    OfficialOutcomeReadOnly = 21
+    OfficialOutcomeReadOnly = 21,
+    AcademicProgramNotFound = 22
 }
 
 public sealed record CurriculumCommandResult(
@@ -55,6 +56,8 @@ public sealed record CurriculumGradeItem(
     Guid Id,
     string Name,
     int Order);
+
+public sealed record CurriculumProgramItem(Guid Id, string Name, string Code);
 
 public sealed record CurriculumSubjectItem(
     Guid Id,
@@ -89,7 +92,12 @@ public sealed record CurriculumAdoptionItem(
     Guid GradeLevelId,
     Guid SubjectId,
     string FrameworkCode,
-    string FrameworkDisplayName);
+    string FrameworkDisplayName)
+{
+    public Guid AcademicProgramId { get; init; }
+    public string AcademicProgramName { get; init; } = string.Empty;
+    public string AcademicProgramCode { get; init; } = string.Empty;
+}
 
 public sealed record CurriculumTopicItem(
     Guid Id,
@@ -99,6 +107,8 @@ public sealed record CurriculumTopicItem(
     int Order,
     IReadOnlyList<LearningOutcomeItem> Outcomes)
 {
+    public Guid AcademicProgramId { get; init; }
+    public string AcademicProgramName { get; init; } = string.Empty;
     public string FrameworkCode { get; init; } = string.Empty;
     public string FrameworkDisplayName { get; init; } = string.Empty;
     public IReadOnlyList<OfficialCurriculumOutcomeOption> OfficialOutcomes
@@ -114,6 +124,8 @@ public sealed record CurriculumDashboard(
     IReadOnlyList<CurriculumSubjectItem> Subjects,
     IReadOnlyList<CurriculumTopicItem> Topics)
 {
+    public IReadOnlyList<CurriculumProgramItem> AcademicPrograms { get; init; } = [];
+
     public IReadOnlyList<CurriculumFrameworkItem> Frameworks
     {
         get;
@@ -130,13 +142,15 @@ public sealed record CurriculumDashboard(
 public sealed record SelectCurriculumFrameworkRequest(
     Guid SubjectId,
     Guid GradeLevelId,
-    string FrameworkCode);
+    string FrameworkCode,
+    Guid AcademicProgramId = default);
 
 public sealed record CreateCurriculumTopicRequest(
     Guid SubjectId,
     Guid GradeLevelId,
     string Name,
-    int Order);
+    int Order,
+    Guid AcademicProgramId = default);
 
 public sealed record UpdateCurriculumTopicRequest(
     Guid Id,

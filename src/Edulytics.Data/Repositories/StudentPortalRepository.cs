@@ -68,11 +68,10 @@ public sealed class StudentPortalRepository : IStudentPortalRepository
                         classIds.Contains(x.Id))
                 .ToArrayAsync(cancellationToken);
 
-        var gradeIds =
-            classGroups
-                .Select(x => x.GradeLevelId)
-                .Distinct()
-                .ToArray();
+        var gradeIds = classGroups.Select(x => x.GradeLevelId).Distinct().ToArray();
+        var classById = classGroups.ToDictionary(x => x.Id);
+        var scopes = enrollments.Where(x => classById.ContainsKey(x.ClassGroupId)).Select(x => new { classById[x.ClassGroupId].AcademicProgramId, classById[x.ClassGroupId].GradeLevelId, x.AcademicYearId }).Distinct().ToArray();
+        var programIds = scopes.Select(x => x.AcademicProgramId).Distinct().ToArray();
 
         var academicYears =
             await _db.AcademicYears
@@ -92,17 +91,8 @@ public sealed class StudentPortalRepository : IStudentPortalRepository
                         gradeIds.Contains(x.Id))
                 .ToArrayAsync(cancellationToken);
 
-        var adoptions =
-            await _db.SchoolCurriculumAdoptions
-                .AsNoTracking()
-                .Where(
-                    x =>
-                        x.SchoolId == schoolId &&
-                        x.IsActive &&
-                        gradeIds.Contains(x.GradeLevelId) &&
-                        (!x.AcademicYearId.HasValue ||
-                         yearIds.Contains(x.AcademicYearId.Value)))
-                .ToArrayAsync(cancellationToken);
+        var adoptionCandidates = await _db.SchoolCurriculumAdoptions.AsNoTracking().Where(x => x.SchoolId == schoolId && x.IsActive && x.IsPrimary && programIds.Contains(x.AcademicProgramId) && gradeIds.Contains(x.GradeLevelId) && (!x.AcademicYearId.HasValue || yearIds.Contains(x.AcademicYearId.Value))).ToArrayAsync(cancellationToken);
+        var adoptions = adoptionCandidates.Where(a => scopes.Any(q => a.AcademicProgramId == q.AcademicProgramId && a.GradeLevelId == q.GradeLevelId && (!a.AcademicYearId.HasValue || a.AcademicYearId.Value == q.AcademicYearId))).ToArray();
 
         var assessments =
             await _db.Assessments

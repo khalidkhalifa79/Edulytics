@@ -53,8 +53,7 @@ public sealed class CurriculumService : ICurriculumService
             await _curriculum.GetAdoptedCurriculumContextsAsync(
                 scope.School.Id,
                 cancellationToken);
-        var adoptedByScope = adoptedContexts.ToDictionary(
-            x => (x.GradeLevelId, x.SubjectId));
+        var adoptedByScope = adoptedContexts.ToDictionary(x => (x.AcademicProgramId, x.GradeLevelId, x.SubjectId));
         var gradesById = snapshot.GradeLevels.ToDictionary(x => x.Id);
         var officialByScope = new Dictionary<
             (Guid FrameworkVersionId, int LogicalLevel),
@@ -99,7 +98,7 @@ public sealed class CurriculumService : ICurriculumService
             .Select(x =>
             {
                 adoptedByScope.TryGetValue(
-                    (x.GradeLevelId, x.SubjectId),
+                    (x.AcademicProgramId, x.GradeLevelId, x.SubjectId),
                     out var adoption);
                 var official = Array.Empty<OfficialCurriculumOutcomeOption>();
 
@@ -129,6 +128,8 @@ public sealed class CurriculumService : ICurriculumService
                         x.Id,
                         Array.Empty<LearningOutcomeItem>()))
                 {
+                    AcademicProgramId = x.AcademicProgramId,
+                    AcademicProgramName = adoption?.AcademicProgramName ?? snapshot.AcademicPrograms.FirstOrDefault(p => p.Id == x.AcademicProgramId)?.Name ?? string.Empty,
                     FrameworkCode = adoption?.FrameworkCode ?? string.Empty,
                     FrameworkDisplayName =
                         adoption?.FrameworkName ?? string.Empty,
@@ -156,6 +157,7 @@ public sealed class CurriculumService : ICurriculumService
                     .ToArray(),
                 topics)
             {
+                AcademicPrograms = snapshot.AcademicPrograms.Where(x => x.Status == AcademicStructureStatus.Active).OrderBy(x => x.Name).Select(x => new CurriculumProgramItem(x.Id,x.Name,x.Code)).ToArray(),
                 Frameworks = MathematicsCurriculumPackRegistry.All
                     .Select(x => new CurriculumFrameworkItem(
                         x.Code,
@@ -167,7 +169,7 @@ public sealed class CurriculumService : ICurriculumService
                         x.GradeLevelId,
                         x.SubjectId,
                         x.FrameworkCode,
-                        x.FrameworkName))
+                        x.FrameworkName) { AcademicProgramId = x.AcademicProgramId, AcademicProgramName = x.AcademicProgramName, AcademicProgramCode = x.AcademicProgramCode })
                     .ToArray()
             });
     }
@@ -204,6 +206,7 @@ public sealed class CurriculumService : ICurriculumService
                 scope.School.Id,
                 cancellationToken))
             .SingleOrDefault(x =>
+                x.AcademicProgramId == topic.AcademicProgramId &&
                 x.GradeLevelId == topic.GradeLevelId &&
                 x.SubjectId == topic.SubjectId &&
                 x.FrameworkVersionId == topic.FrameworkVersionId);
@@ -232,6 +235,8 @@ public sealed class CurriculumService : ICurriculumService
                     .Select(MapOutcome)
                     .ToArray())
             {
+                AcademicProgramId = topic.AcademicProgramId,
+                AcademicProgramName = adoption?.AcademicProgramName ?? string.Empty,
                 FrameworkCode = adoption?.FrameworkCode ?? string.Empty,
                 FrameworkDisplayName =
                     adoption?.FrameworkName ?? string.Empty,
@@ -303,6 +308,13 @@ public sealed class CurriculumService : ICurriculumService
                 CurriculumErrorCode.GradeLevelNotFound);
         }
 
+        var program = request.AcademicProgramId == Guid.Empty
+            ? await _curriculum.GetDefaultAcademicProgramAsync(schoolId,cancellationToken)
+            : await _curriculum.GetAcademicProgramAsync(schoolId,request.AcademicProgramId,cancellationToken);
+        var programId = program?.Id ?? request.AcademicProgramId;
+        if (request.AcademicProgramId != Guid.Empty && program is null)
+            return Fail("AcademicProgramId", CurriculumErrorCode.AcademicProgramNotFound);
+
         var frameworkCode = Clean(request.FrameworkCode)
             .ToUpperInvariant();
 
@@ -330,8 +342,9 @@ public sealed class CurriculumService : ICurriculumService
         }
 
         var adoption =
-            await _curriculum.GetPrimaryDefaultAdoptionAsync(
+            await _curriculum.GetPrimaryAdoptionAsync(
                 schoolId,
+                programId,
                 request.GradeLevelId,
                 request.SubjectId,
                 cancellationToken);
@@ -350,6 +363,7 @@ public sealed class CurriculumService : ICurriculumService
 
             if (snapshot.Topics.Any(
                     x =>
+                        x.AcademicProgramId == programId &&
                         x.SubjectId == request.SubjectId &&
                         x.GradeLevelId == request.GradeLevelId))
             {
@@ -369,6 +383,7 @@ public sealed class CurriculumService : ICurriculumService
                 Id = Guid.NewGuid(),
                 SchoolId = schoolId,
                 AcademicYearId = null,
+                AcademicProgramId = programId,
                 GradeLevelId = request.GradeLevelId,
                 SubjectId = request.SubjectId,
                 FrameworkVersionId = frameworkVersionId.Value,
@@ -468,12 +483,15 @@ public sealed class CurriculumService : ICurriculumService
                 CurriculumErrorCode.GradeLevelNotFound);
         }
 
-        var frameworkVersionId =
-            await _curriculum.GetPrimaryDefaultFrameworkVersionIdAsync(
-                schoolId,
-                request.GradeLevelId,
-                request.SubjectId,
-                cancellationToken);
+        var program = request.AcademicProgramId == Guid.Empty
+            ? await _curriculum.GetDefaultAcademicProgramAsync(schoolId,cancellationToken)
+            : await _curriculum.GetAcademicProgramAsync(schoolId,request.AcademicProgramId,cancellationToken);
+        var programId = program?.Id ?? request.AcademicProgramId;
+        if (request.AcademicProgramId != Guid.Empty && program is null)
+            return Fail("AcademicProgramId", CurriculumErrorCode.AcademicProgramNotFound);
+
+        var frameworkVersionId = await _curriculum.GetPrimaryFrameworkVersionIdAsync(
+            schoolId, programId, request.GradeLevelId, request.SubjectId, cancellationToken);
 
         if (!frameworkVersionId.HasValue)
         {
@@ -482,8 +500,9 @@ public sealed class CurriculumService : ICurriculumService
                 CurriculumErrorCode.CurriculumNotSelected);
         }
 
-        if (await _curriculum.TopicNameExistsAsync(
+        if (await _curriculum.TopicNameExistsInProgramAsync(
                 schoolId,
+                programId,
                 frameworkVersionId.Value,
                 request.SubjectId,
                 request.GradeLevelId,
@@ -495,8 +514,9 @@ public sealed class CurriculumService : ICurriculumService
                 CurriculumErrorCode.DuplicateTopicName);
         }
 
-        if (await _curriculum.TopicOrderExistsAsync(
+        if (await _curriculum.TopicOrderExistsInProgramAsync(
                 schoolId,
+                programId,
                 frameworkVersionId.Value,
                 request.SubjectId,
                 request.GradeLevelId,
@@ -512,6 +532,7 @@ public sealed class CurriculumService : ICurriculumService
         {
             Id = Guid.NewGuid(),
             SchoolId = schoolId,
+            AcademicProgramId = programId,
             FrameworkVersionId =
                 frameworkVersionId.Value,
             SubjectId = request.SubjectId,
@@ -582,8 +603,9 @@ public sealed class CurriculumService : ICurriculumService
         if (request.Order <= 0)
             return Fail("Order", CurriculumErrorCode.InvalidOrder);
 
-        if (await _curriculum.TopicNameExistsAsync(
+        if (await _curriculum.TopicNameExistsInProgramAsync(
                 schoolId,
+                topic.AcademicProgramId,
                 topic.FrameworkVersionId,
                 topic.SubjectId,
                 topic.GradeLevelId,
@@ -596,8 +618,9 @@ public sealed class CurriculumService : ICurriculumService
                 CurriculumErrorCode.DuplicateTopicName);
         }
 
-        if (await _curriculum.TopicOrderExistsAsync(
+        if (await _curriculum.TopicOrderExistsInProgramAsync(
                 schoolId,
+                topic.AcademicProgramId,
                 topic.FrameworkVersionId,
                 topic.SubjectId,
                 topic.GradeLevelId,
@@ -681,6 +704,7 @@ if (request.Order <= 0)
                 schoolId,
                 cancellationToken))
             .SingleOrDefault(x =>
+                x.AcademicProgramId == topic.AcademicProgramId &&
                 x.GradeLevelId == topic.GradeLevelId &&
                 x.SubjectId == topic.SubjectId &&
                 x.FrameworkVersionId == topic.FrameworkVersionId);
@@ -706,8 +730,9 @@ if (request.Order <= 0)
                 CurriculumErrorCode.OfficialOutcomeNotFound);
         }
 
-        if (await _curriculum.OutcomeCodeExistsAsync(
+        if (await _curriculum.OutcomeCodeExistsInProgramAsync(
                 schoolId,
+                topic.AcademicProgramId,
                 topic.FrameworkVersionId,
                 topic.SubjectId,
                 topic.GradeLevelId,
@@ -734,6 +759,7 @@ if (request.Order <= 0)
         {
             Id = Guid.NewGuid(),
             SchoolId = schoolId,
+            AcademicProgramId = topic.AcademicProgramId,
             FrameworkVersionId = topic.FrameworkVersionId,
             SubjectId = topic.SubjectId,
             GradeLevelId = topic.GradeLevelId,
@@ -821,8 +847,9 @@ if (request.Order <= 0)
 if (request.Order <= 0)
             return Fail("Order", CurriculumErrorCode.InvalidOrder);
 
-        if (await _curriculum.OutcomeCodeExistsAsync(
+        if (await _curriculum.OutcomeCodeExistsInProgramAsync(
                 schoolId,
+                outcome.AcademicProgramId,
                 outcome.FrameworkVersionId,
                 outcome.SubjectId,
                 outcome.GradeLevelId,

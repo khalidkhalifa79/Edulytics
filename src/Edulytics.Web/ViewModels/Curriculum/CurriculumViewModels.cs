@@ -7,6 +7,8 @@ public sealed record CurriculumIndexViewModel(
     IReadOnlyList<CurriculumSubjectItem> Subjects,
     IReadOnlyList<CurriculumTopicItem> Topics)
 {
+    public IReadOnlyList<CurriculumProgramItem> AcademicPrograms { get; init; } = [];
+
     public IReadOnlyList<CurriculumFrameworkItem> Frameworks
     {
         get;

@@ -62,6 +62,7 @@ public sealed class CurriculumModelTests
                     new[]
                     {
                         nameof(LearningOutcome.SchoolId),
+                        nameof(LearningOutcome.AcademicProgramId),
                         nameof(LearningOutcome.FrameworkVersionId),
                         nameof(LearningOutcome.SubjectId),
                         nameof(LearningOutcome.GradeLevelId),

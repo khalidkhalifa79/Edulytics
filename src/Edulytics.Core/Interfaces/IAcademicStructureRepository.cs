@@ -14,6 +14,17 @@ public interface IAcademicStructureRepository
         Guid id,
         CancellationToken cancellationToken = default);
 
+    Task<AcademicProgram?> GetAcademicProgramAsync(
+        Guid schoolId,
+        Guid id,
+        CancellationToken cancellationToken = default) =>
+        Task.FromResult<AcademicProgram?>(null);
+
+    Task<AcademicProgram?> GetDefaultAcademicProgramAsync(
+        Guid schoolId,
+        CancellationToken cancellationToken = default) =>
+        Task.FromResult<AcademicProgram?>(null);
+
     Task<GradeLevel?> GetGradeLevelAsync(
         Guid schoolId,
         Guid id,
@@ -56,12 +67,27 @@ public interface IAcademicStructureRepository
         int order,
         CancellationToken cancellationToken = default);
 
+    Task<bool> AcademicProgramCodeExistsAsync(
+        Guid schoolId,
+        string normalizedCode,
+        CancellationToken cancellationToken = default) =>
+        Task.FromResult(false);
+
     Task<bool> ClassCodeExistsAsync(
         Guid schoolId,
         Guid academicYearId,
         string normalizedCode,
         Guid? excludeId = null,
         CancellationToken cancellationToken = default);
+
+    Task<bool> ClassCodeExistsInProgramAsync(
+        Guid schoolId,
+        Guid academicYearId,
+        Guid academicProgramId,
+        string normalizedCode,
+        Guid? excludeId = null,
+        CancellationToken cancellationToken = default) =>
+        ClassCodeExistsAsync(schoolId, academicYearId, normalizedCode, excludeId, cancellationToken);
 
     Task<bool> SubjectCodeExistsAsync(
         Guid schoolId,

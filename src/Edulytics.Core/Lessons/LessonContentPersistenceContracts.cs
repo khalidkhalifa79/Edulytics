@@ -12,7 +12,12 @@ public sealed record CanonicalCurriculumContextRecord(
     string SubjectCode,
     Guid GradeLevelId,
     string GradeName,
-    int GradeOrder);
+    int GradeOrder)
+{
+    public Guid AcademicProgramId { get; init; }
+    public string AcademicProgramName { get; init; } = string.Empty;
+    public string AcademicProgramCode { get; init; } = string.Empty;
+}
 
 public sealed record PedagogicalLessonRecord(
     Guid Id,

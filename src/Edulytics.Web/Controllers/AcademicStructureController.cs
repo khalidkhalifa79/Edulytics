@@ -111,17 +111,28 @@ public sealed class AcademicStructureController : Controller
             "SuccessGradeCreated");
 
     [Authorize(Roles = RoleNames.SubjectSupervisor)]
+    [HttpPost("academic-programs")]
+    [ValidateAntiForgeryToken]
+    public Task<IActionResult> CreateAcademicProgram(
+        string name, string code, AcademicStructureStatus status,
+        CancellationToken cancellationToken) =>
+        ExecuteAsync(
+            id => _academic.CreateAcademicProgramAsync(
+                id, new CreateAcademicProgramRequest(name, code, status), cancellationToken),
+            "SuccessAcademicProgramCreated");
+
+    [Authorize(Roles = RoleNames.SubjectSupervisor)]
     [HttpPost("classes")]
     [ValidateAntiForgeryToken]
     public Task<IActionResult> CreateClassGroup(
-        Guid academicYearId, Guid gradeLevelId, string name, string code,
+        Guid academicYearId, Guid academicProgramId, Guid gradeLevelId, string name, string code,
         AcademicStructureStatus status,
         CancellationToken cancellationToken) =>
         ExecuteAsync(
             id => _academic.CreateClassGroupAsync(
                 id,
                 new CreateClassGroupRequest(
-                    academicYearId, gradeLevelId, name, code, status),
+                    academicYearId, gradeLevelId, name, code, status, academicProgramId),
                 cancellationToken),
             "SuccessClassCreated");
 
@@ -145,7 +156,8 @@ public sealed class AcademicStructureController : Controller
         return View(new ClassGroupEditViewModel
         {
             ClassGroup = item.Value,
-            GradeLevels = dashboard.Value.GradeLevels
+            GradeLevels = dashboard.Value.GradeLevels,
+            AcademicPrograms = dashboard.Value.AcademicPrograms
         });
     }
 
@@ -153,7 +165,7 @@ public sealed class AcademicStructureController : Controller
     [HttpPost("classes/{id:guid}/edit")]
     [ValidateAntiForgeryToken]
     public Task<IActionResult> EditClassGroup(
-        Guid id, Guid gradeLevelId, string name, string code,
+        Guid id, Guid academicProgramId, Guid gradeLevelId, string name, string code,
         AcademicStructureStatus status, string rowVersion,
         CancellationToken cancellationToken)
     {
@@ -164,7 +176,7 @@ public sealed class AcademicStructureController : Controller
             actorId => _academic.UpdateClassGroupAsync(
                 actorId,
                 new UpdateClassGroupRequest(
-                    id, gradeLevelId, name, code, status, expected),
+                    id, gradeLevelId, name, code, status, expected, academicProgramId),
                 cancellationToken),
             "SuccessClassUpdated");
     }

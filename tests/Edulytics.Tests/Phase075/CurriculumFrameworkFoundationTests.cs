@@ -21,6 +21,7 @@ public sealed class CurriculumFrameworkFoundationTests
                     new[]
                     {
                         nameof(CurriculumTopic.SchoolId),
+                        nameof(CurriculumTopic.AcademicProgramId),
                         nameof(CurriculumTopic.FrameworkVersionId),
                         nameof(CurriculumTopic.SubjectId),
                         nameof(CurriculumTopic.GradeLevelId),
@@ -35,6 +36,7 @@ public sealed class CurriculumFrameworkFoundationTests
                     new[]
                     {
                         nameof(CurriculumTopic.SchoolId),
+                        nameof(CurriculumTopic.AcademicProgramId),
                         nameof(CurriculumTopic.FrameworkVersionId),
                         nameof(CurriculumTopic.SubjectId),
                         nameof(CurriculumTopic.GradeLevelId),
@@ -56,6 +58,7 @@ public sealed class CurriculumFrameworkFoundationTests
                     new[]
                     {
                         nameof(LearningOutcome.SchoolId),
+                        nameof(LearningOutcome.AcademicProgramId),
                         nameof(LearningOutcome.FrameworkVersionId),
                         nameof(LearningOutcome.SubjectId),
                         nameof(LearningOutcome.GradeLevelId),
@@ -95,11 +98,13 @@ public sealed class CurriculumFrameworkFoundationTests
         var gradeId = Guid.NewGuid();
         var versionA = Guid.NewGuid();
         var versionB = Guid.NewGuid();
+        var topicProgramId = Guid.NewGuid();
 
         db.CurriculumTopics.Add(new CurriculumTopic
         {
             Id = Guid.NewGuid(),
             SchoolId = schoolId,
+            AcademicProgramId = topicProgramId,
             FrameworkVersionId = versionA,
             SubjectId = subjectId,
             GradeLevelId = gradeId,
@@ -127,11 +132,13 @@ public sealed class CurriculumFrameworkFoundationTests
         var grade7 = Guid.NewGuid();
         var versionA = Guid.NewGuid();
         var versionB = Guid.NewGuid();
+        var outcomeProgramId = Guid.NewGuid();
 
         db.LearningOutcomes.Add(new LearningOutcome
         {
             Id = Guid.NewGuid(),
             SchoolId = schoolId,
+            AcademicProgramId = outcomeProgramId,
             FrameworkVersionId = versionA,
             SubjectId = subjectId,
             GradeLevelId = grade6,

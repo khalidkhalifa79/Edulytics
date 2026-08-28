@@ -125,4 +125,25 @@
   <data name="AcademicStructureViewSubtitle" xml:space="preserve">
     <value>View academic years, terms, grades, classes, subjects, teacher assignments and student enrollment.</value>
   </data>
+  <data name="AcademicPrograms" xml:space="preserve">
+    <value>Programs / curriculum streams</value>
+  </data>
+  <data name="AcademicProgram" xml:space="preserve">
+    <value>Program / stream</value>
+  </data>
+  <data name="CreateAcademicProgram" xml:space="preserve">
+    <value>Create program / stream</value>
+  </data>
+  <data name="NoAcademicPrograms" xml:space="preserve">
+    <value>No programs or curriculum streams exist yet.</value>
+  </data>
+  <data name="SuccessAcademicProgramCreated" xml:space="preserve">
+    <value>Program / curriculum stream created.</value>
+  </data>
+  <data name="ErrorDuplicateAcademicProgram" xml:space="preserve">
+    <value>A program with this code already exists.</value>
+  </data>
+  <data name="ErrorAcademicProgramNotFound" xml:space="preserve">
+    <value>Select a valid program / curriculum stream.</value>
+  </data>
 </root>

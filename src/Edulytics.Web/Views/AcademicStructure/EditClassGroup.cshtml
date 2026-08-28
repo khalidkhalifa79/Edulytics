@@ -11,6 +11,14 @@
                value="@Convert.ToBase64String(Model.ClassGroup.RowVersion)" />
         <label>@A["AcademicYear"]</label>
         <input value="@Model.ClassGroup.AcademicYearName" disabled />
+        <label for="academicProgramId">@A["AcademicProgram"]</label>
+        <select id="academicProgramId" name="academicProgramId" required>
+            @foreach (var program in Model.AcademicPrograms)
+            {
+                <option value="@program.Id" selected="@(program.Id == Model.ClassGroup.AcademicProgramId)">@program.Name (@program.Code)</option>
+            }
+        </select>
+
         <label for="gradeLevelId">@A["GradeLevel"]</label>
         <select id="gradeLevelId" name="gradeLevelId" required>
             @foreach (var grade in Model.GradeLevels)

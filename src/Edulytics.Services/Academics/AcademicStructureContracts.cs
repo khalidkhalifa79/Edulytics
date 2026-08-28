@@ -16,6 +16,7 @@ public enum AcademicStructureErrorCode
     DuplicateTerm,
     DuplicateGradeLevel,
     DuplicateGradeOrder,
+    DuplicateAcademicProgram,
     DuplicateClassCode,
     DuplicateSubjectCode,
     DuplicateStudentNumber,
@@ -23,6 +24,7 @@ public enum AcademicStructureErrorCode
     DuplicateTeacherAssignment,
     DuplicateEnrollment,
     AcademicYearNotFound,
+    AcademicProgramNotFound,
     GradeLevelNotFound,
     ClassGroupNotFound,
     SubjectNotFound,
@@ -81,6 +83,14 @@ public sealed record TermItem(
 
 public sealed record GradeLevelItem(Guid Id, string Name, int Order);
 
+public sealed record AcademicProgramItem(
+    Guid Id,
+    string Name,
+    string Code,
+    AcademicStructureStatus Status,
+    bool IsDefault,
+    byte[] RowVersion);
+
 public sealed record ClassGroupItem(
     Guid Id,
     Guid AcademicYearId,
@@ -90,7 +100,12 @@ public sealed record ClassGroupItem(
     string Name,
     string Code,
     AcademicStructureStatus Status,
-    byte[] RowVersion);
+    byte[] RowVersion)
+{
+    public Guid AcademicProgramId { get; init; }
+    public string AcademicProgramName { get; init; } = string.Empty;
+    public string AcademicProgramCode { get; init; } = string.Empty;
+}
 
 public sealed record SubjectItem(
     Guid Id,
@@ -141,7 +156,10 @@ public sealed record AcademicStructureDashboard(
     IReadOnlyList<StudentProfileItem> StudentProfiles,
     IReadOnlyList<StudentEnrollmentItem> StudentEnrollments,
     IReadOnlyList<UserCandidate> TeacherCandidates,
-    IReadOnlyList<UserCandidate> StudentAccountCandidates);
+    IReadOnlyList<UserCandidate> StudentAccountCandidates)
+{
+    public IReadOnlyList<AcademicProgramItem> AcademicPrograms { get; init; } = [];
+}
 
 public sealed record CreateAcademicYearRequest(
     string Name,
@@ -166,12 +184,18 @@ public sealed record CreateTermRequest(
 
 public sealed record CreateGradeLevelRequest(string Name, int Order);
 
+public sealed record CreateAcademicProgramRequest(
+    string Name,
+    string Code,
+    AcademicStructureStatus Status);
+
 public sealed record CreateClassGroupRequest(
     Guid AcademicYearId,
     Guid GradeLevelId,
     string Name,
     string Code,
-    AcademicStructureStatus Status);
+    AcademicStructureStatus Status,
+    Guid AcademicProgramId = default);
 
 public sealed record UpdateClassGroupRequest(
     Guid Id,
@@ -179,7 +203,8 @@ public sealed record UpdateClassGroupRequest(
     string Name,
     string Code,
     AcademicStructureStatus Status,
-    byte[] ExpectedRowVersion);
+    byte[] ExpectedRowVersion,
+    Guid AcademicProgramId = default);
 
 public sealed record CreateSubjectRequest(
     string Name,

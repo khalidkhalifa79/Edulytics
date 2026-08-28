@@ -11,6 +11,7 @@ public sealed class ClassGroupEditViewModel
 {
     public required ClassGroupItem ClassGroup { get; init; }
     public required IReadOnlyList<GradeLevelItem> GradeLevels { get; init; }
+    public required IReadOnlyList<AcademicProgramItem> AcademicPrograms { get; init; }
 }
 
 public sealed class SubjectEditViewModel
