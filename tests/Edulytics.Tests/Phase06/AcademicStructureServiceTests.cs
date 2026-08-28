@@ -326,17 +326,33 @@ public sealed class AcademicStructureServiceTests
             denied.Errors,
             x => x.Code == AcademicStructureErrorCode.AccessDenied);
 
-        var invalid = await f.Service.CreateAcademicProgramAsync(
+        var unsupported = await f.Service.CreateAcademicProgramAsync(
             f.Supervisor.Id,
             new CreateAcademicProgramRequest(
-                "Invalid Stream",
-                "BAD CODE!",
+                "Custom Stream",
+                "CUSTOM",
                 AcademicStructureStatus.Active));
 
-        Assert.False(invalid.Succeeded);
+        Assert.False(unsupported.Succeeded);
         Assert.Contains(
-            invalid.Errors,
-            x => x.Code == AcademicStructureErrorCode.InvalidCode);
+            unsupported.Errors,
+            x =>
+                x.Code ==
+                AcademicStructureErrorCode.AcademicProgramNotFound);
+
+        var forgedPair = await f.Service.CreateAcademicProgramAsync(
+            f.Supervisor.Id,
+            new CreateAcademicProgramRequest(
+                "Forged American Name",
+                "AMERICAN",
+                AcademicStructureStatus.Active));
+
+        Assert.False(forgedPair.Succeeded);
+        Assert.Contains(
+            forgedPair.Errors,
+            x =>
+                x.Code ==
+                AcademicStructureErrorCode.InvalidName);
     }
 
     [Fact]

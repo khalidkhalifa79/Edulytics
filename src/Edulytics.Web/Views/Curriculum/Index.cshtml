@@ -47,7 +47,7 @@
                                 <label for="frameworkAcademicProgramId">@C["AcademicProgram"]</label>
                                 <select id="frameworkAcademicProgramId" name="academicProgramId" required>
                                     <option value="">@C["SelectProgram"]</option>
-                                    @foreach (var program in Model.AcademicPrograms) { <option value="@program.Id">@program.Name (@program.Code)</option> }
+                                    @foreach (var program in Model.AcademicPrograms) { <option value="@program.Id">@program.Name</option> }
                                 </select>
 
                                 <label for="frameworkSubjectId">@C["Subject"]</label>
@@ -129,7 +129,7 @@
                                 <label for="academicProgramId">@C["AcademicProgram"]</label>
                                 <select id="academicProgramId" name="academicProgramId" required>
                                     <option value="">@C["SelectProgram"]</option>
-                                    @foreach (var program in Model.AcademicPrograms) { <option value="@program.Id">@program.Name (@program.Code)</option> }
+                                    @foreach (var program in Model.AcademicPrograms) { <option value="@program.Id">@program.Name</option> }
                                 </select>
 
                                 <label for="subjectId">@C["Subject"]</label>

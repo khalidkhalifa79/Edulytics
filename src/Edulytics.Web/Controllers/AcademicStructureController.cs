@@ -1,4 +1,5 @@
 using System.Security.Claims;
+using Edulytics.Core.Academics;
 using Edulytics.Core.Constants;
 using Edulytics.Core.Enums;
 using Edulytics.Services.Academics;
@@ -114,12 +115,33 @@ public sealed class AcademicStructureController : Controller
     [HttpPost("academic-programs")]
     [ValidateAntiForgeryToken]
     public Task<IActionResult> CreateAcademicProgram(
-        string name, string code, AcademicStructureStatus status,
-        CancellationToken cancellationToken) =>
-        ExecuteAsync(
-            id => _academic.CreateAcademicProgramAsync(
-                id, new CreateAcademicProgramRequest(name, code, status), cancellationToken),
+        string programChoice,
+        AcademicStructureStatus status,
+        CancellationToken cancellationToken)
+    {
+        var choice =
+            AcademicProgramCatalog.FindByKey(
+                programChoice);
+
+        var request =
+            choice is null
+                ? new CreateAcademicProgramRequest(
+                    string.Empty,
+                    string.Empty,
+                    status)
+                : new CreateAcademicProgramRequest(
+                    choice.Name,
+                    choice.Code,
+                    status);
+
+        return ExecuteAsync(
+            id =>
+                _academic.CreateAcademicProgramAsync(
+                    id,
+                    request,
+                    cancellationToken),
             "SuccessAcademicProgramCreated");
+    }
 
     [Authorize(Roles = RoleNames.SubjectSupervisor)]
     [HttpPost("classes")]

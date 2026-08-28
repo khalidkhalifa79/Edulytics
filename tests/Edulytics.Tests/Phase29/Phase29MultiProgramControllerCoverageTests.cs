@@ -79,8 +79,7 @@ public sealed class Phase29MultiProgramControllerCoverageTests
 
         Assert.IsType<RedirectToActionResult>(
             await controller.CreateAcademicProgram(
-                "British Stream",
-                "BRITISH",
+                "british",
                 AcademicStructureStatus.Active,
                 CancellationToken.None));
 
@@ -203,8 +202,7 @@ public sealed class Phase29MultiProgramControllerCoverageTests
 
         Assert.IsType<RedirectToActionResult>(
             await controller.CreateAcademicProgram(
-                "Failure",
-                "FAILURE",
+                "not-a-valid-program-choice",
                 AcademicStructureStatus.Active,
                 CancellationToken.None));
 
@@ -688,13 +686,16 @@ public sealed class Phase29MultiProgramControllerCoverageTests
             CurriculumCommandResult.Success();
 
         public CurriculumQueryResult<CurriculumDashboard>
-            DashboardResult { get; set; }
+            DashboardResult
+        { get; set; }
 
         public CurriculumQueryResult<CurriculumTopicItem>
-            TopicResult { get; set; }
+            TopicResult
+        { get; set; }
 
         public CurriculumQueryResult<LearningOutcomeItem>
-            OutcomeResult { get; set; }
+            OutcomeResult
+        { get; set; }
 
         public FakeCurriculumService()
         {
