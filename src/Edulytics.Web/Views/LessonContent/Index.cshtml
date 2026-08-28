@@ -36,7 +36,7 @@ CanonicalLessonContentStatus.Draft=>"draft",
 CanonicalLessonContentStatus.Verified=>"verified",
 CanonicalLessonContentStatus.Published=>"published",
 _=>"notstarted"};
-<a class="lesson-content-row" asp-controller="LessonContent" asp-action="Detail" asp-route-id="@lesson.LessonNodeId">
+<a class="lesson-content-row" asp-controller="LessonContent" asp-action="Detail" asp-route-id="@lesson.LessonId">
 <span class="lesson-content-row__order">@lesson.SortOrder</span>
 <span class="lesson-content-row__title">@lesson.LessonTitle
 @if(!string.IsNullOrWhiteSpace(lesson.UnitTitle)){<small>@lesson.UnitTitle</small>}

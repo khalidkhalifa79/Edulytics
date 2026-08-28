@@ -11,8 +11,8 @@ public sealed record LessonContentQueryResult<T>(T? Value,LessonContentErrorCode
 }
 
 public sealed record CanonicalLessonLibraryItem(
-    Guid LessonNodeId,string LessonCode,string LessonTitle,string UnitTitle,int SortOrder,
-    CanonicalLessonContentStatus? Status,DateTime? PublishedAtUtc);
+    Guid LessonId,string LessonCode,string LessonTitle,string UnitTitle,int SortOrder,
+    CanonicalLessonContentStatus? Status,DateTime? PublishedAtUtc,bool HasOfficialAlignment);
 
 public sealed record CanonicalCurriculumLibraryGroup(
     Guid FrameworkVersionId,string FrameworkName,string FrameworkVersionName,string SubjectName,string SubjectCode,
@@ -21,7 +21,7 @@ public sealed record CanonicalCurriculumLibraryGroup(
 public sealed record LessonContentDashboard(Guid SchoolId,IReadOnlyList<CanonicalCurriculumLibraryGroup> Curricula);
 
 public sealed record CanonicalLessonDetail(
-    Guid LessonNodeId,string LessonCode,string LessonTitle,string UnitTitle,string FrameworkName,string FrameworkVersionName,
+    Guid LessonId,string LessonCode,string LessonTitle,string UnitTitle,string FrameworkName,string FrameworkVersionName,
     string SubjectName,string SubjectCode,string GradeName,CanonicalLessonContentStatus? Status,DateTime? PublishedAtUtc,
     CanonicalLessonTranslationRecord? Body,IReadOnlyList<LessonOutcomeRecord> Outcomes);
 
