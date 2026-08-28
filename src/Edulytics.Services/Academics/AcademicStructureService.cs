@@ -259,7 +259,7 @@ public sealed class AcademicStructureService : IAcademicStructureService
 
         if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
             return Fail(AcademicStructureErrorCode.AccessDenied);
-var name = Clean(request.Name);
+        var name = Clean(request.Name);
         var validation = ValidateName(name);
         if (validation is not null) return validation;
 
@@ -322,7 +322,7 @@ var name = Clean(request.Name);
 
         if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
             return Fail(AcademicStructureErrorCode.AccessDenied);
-if (request.ExpectedRowVersion.Length == 0)
+        if (request.ExpectedRowVersion.Length == 0)
             return Fail(AcademicStructureErrorCode.ConcurrencyConflict);
 
         var name = Clean(request.Name);
@@ -402,7 +402,7 @@ if (request.ExpectedRowVersion.Length == 0)
 
         if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
             return Fail(AcademicStructureErrorCode.AccessDenied);
-var name = Clean(request.Name);
+        var name = Clean(request.Name);
         var validation = ValidateName(name);
         if (validation is not null) return validation;
 
@@ -474,7 +474,7 @@ var name = Clean(request.Name);
 
         if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
             return Fail(AcademicStructureErrorCode.AccessDenied);
-var name = Clean(request.Name);
+        var name = Clean(request.Name);
         var validation = ValidateName(name);
         if (validation is not null) return validation;
 
@@ -528,39 +528,109 @@ var name = Clean(request.Name);
         CreateAcademicProgramRequest request,
         CancellationToken cancellationToken = default)
     {
-        var scope = await ResolveScopeAsync(actorUserId, cancellationToken);
-        if (!scope.Succeeded) return Fail(scope.Error!.Value);
-        if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
-            return Fail(AcademicStructureErrorCode.AccessDenied);
+        var scope =
+            await ResolveScopeAsync(
+                actorUserId,
+                cancellationToken);
 
-        var name = Clean(request.Name);
-        var code = NormalizeCode(request.Code);
-        var validation = ValidateName(name);
-        if (validation is not null) return validation;
-        if (!ValidCode(code))
-            return Fail(nameof(request.Code), AcademicStructureErrorCode.InvalidCode);
+        if (!scope.Succeeded)
+            return Fail(scope.Error!.Value);
 
-        var schoolId = scope.School!.Id;
-        if (await _academic.AcademicProgramCodeExistsAsync(schoolId, code, cancellationToken))
-            return Fail(nameof(request.Code), AcademicStructureErrorCode.DuplicateAcademicProgram);
-
-        var now = DateTime.UtcNow;
-        var entity = new AcademicProgram
+        if (SingleRole(scope.Actor!.Roles) !=
+            RoleNames.SubjectSupervisor)
         {
-            Id = Guid.NewGuid(), SchoolId = schoolId, Name = name,
-            Code = code, NormalizedCode = code, Status = request.Status,
-            IsDefault = false, CreatedAtUtc = now, UpdatedAtUtc = now
-        };
-        await _academic.AddAsync(entity, cancellationToken);
-        await QueueAuditAsync(scope, "AcademicProgram.Created", "AcademicProgram", entity.Id,
-            oldValues: null,
-            newValues: new Dictionary<string, object?>
+            return Fail(
+                AcademicStructureErrorCode.AccessDenied);
+        }
+
+        var code =
+            NormalizeCode(request.Code);
+
+        var choice =
+            AcademicProgramCatalog.FindByCode(code);
+
+        if (choice is null)
+        {
+            return Fail(
+                nameof(request.Code),
+                AcademicStructureErrorCode
+                    .AcademicProgramNotFound);
+        }
+
+        var schoolId =
+            scope.School!.Id;
+
+        // Duplicate is resolved before comparing the submitted name so
+        // existing callers receive the stable duplicate-program result.
+        if (await _academic
+                .AcademicProgramCodeExistsAsync(
+                    schoolId,
+                    choice.Code,
+                    cancellationToken))
+        {
+            return Fail(
+                nameof(request.Code),
+                AcademicStructureErrorCode
+                    .DuplicateAcademicProgram);
+        }
+
+        var submittedName =
+            Clean(request.Name);
+
+        // The friendly name and technical code are a controlled pair.
+        // A crafted/internal caller cannot create an arbitrary combination.
+        if (!string.Equals(
+                submittedName,
+                choice.Name,
+                StringComparison.Ordinal))
+        {
+            return Fail(
+                nameof(request.Name),
+                AcademicStructureErrorCode.InvalidName);
+        }
+
+        var now =
+            DateTime.UtcNow;
+
+        var entity =
+            new AcademicProgram
             {
-                ["name"] = entity.Name, ["code"] = entity.Code,
-                ["status"] = entity.Status.ToString(), ["isDefault"] = entity.IsDefault
-            },
-            "Academic program / curriculum stream created.", cancellationToken);
-        return await PersistAsync(cancellationToken);
+                Id = Guid.NewGuid(),
+                SchoolId = schoolId,
+                Name = choice.Name,
+                Code = choice.Code,
+                NormalizedCode = choice.Code,
+                Status = request.Status,
+                IsDefault = false,
+                CreatedAtUtc = now,
+                UpdatedAtUtc = now
+            };
+
+        await _academic.AddAsync(
+            entity,
+            cancellationToken);
+
+        await QueueAuditAsync(
+            scope,
+            "AcademicProgram.Created",
+            "AcademicProgram",
+            entity.Id,
+            oldValues: null,
+            newValues:
+                new Dictionary<string, object?>
+                {
+                    ["name"] = entity.Name,
+                    ["code"] = entity.Code,
+                    ["status"] =
+                        entity.Status.ToString(),
+                    ["isDefault"] =
+                        entity.IsDefault
+                },
+            "Academic program / curriculum stream created.",
+            cancellationToken);
+
+        return await PersistAsync(
+            cancellationToken);
     }
 
     public async Task<AcademicCommandResult> CreateClassGroupAsync(
@@ -574,7 +644,7 @@ var name = Clean(request.Name);
 
         if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
             return Fail(AcademicStructureErrorCode.AccessDenied);
-var name = Clean(request.Name);
+        var name = Clean(request.Name);
         var code = NormalizeCode(request.Code);
         var validation = ValidateName(name);
         if (validation is not null) return validation;
@@ -661,7 +731,7 @@ var name = Clean(request.Name);
 
         if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
             return Fail(AcademicStructureErrorCode.AccessDenied);
-if (request.ExpectedRowVersion.Length == 0)
+        if (request.ExpectedRowVersion.Length == 0)
             return Fail(AcademicStructureErrorCode.ConcurrencyConflict);
 
         var name = Clean(request.Name);
@@ -754,7 +824,7 @@ if (request.ExpectedRowVersion.Length == 0)
 
         if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
             return Fail(AcademicStructureErrorCode.AccessDenied);
-var name = Clean(request.Name);
+        var name = Clean(request.Name);
         var code = NormalizeCode(request.Code);
         var validation = ValidateName(name);
         if (validation is not null) return validation;
@@ -814,7 +884,7 @@ var name = Clean(request.Name);
 
         if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
             return Fail(AcademicStructureErrorCode.AccessDenied);
-if (request.ExpectedRowVersion.Length == 0)
+        if (request.ExpectedRowVersion.Length == 0)
             return Fail(AcademicStructureErrorCode.ConcurrencyConflict);
 
         var name = Clean(request.Name);
@@ -885,7 +955,7 @@ if (request.ExpectedRowVersion.Length == 0)
 
         if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
             return Fail(AcademicStructureErrorCode.AccessDenied);
-var schoolId = scope.School!.Id;
+        var schoolId = scope.School!.Id;
         var teacher = await _users.GetBySchoolAndIdAsync(
             schoolId, request.TeacherUserId, cancellationToken);
 
@@ -965,7 +1035,7 @@ var schoolId = scope.School!.Id;
 
         if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
             return Fail(AcademicStructureErrorCode.AccessDenied);
-var studentNumber = NormalizeCode(request.StudentNumber);
+        var studentNumber = NormalizeCode(request.StudentNumber);
         if (!ValidCode(studentNumber))
             return Fail(nameof(request.StudentNumber), AcademicStructureErrorCode.InvalidCode);
 
@@ -1176,7 +1246,7 @@ var studentNumber = NormalizeCode(request.StudentNumber);
 
         if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
             return Fail(AcademicStructureErrorCode.AccessDenied);
-var schoolId = scope.School!.Id;
+        var schoolId = scope.School!.Id;
         var profile = await _academic.GetStudentProfileAsync(
             schoolId, request.StudentProfileId, cancellationToken);
 

@@ -15,7 +15,7 @@
         <select id="academicProgramId" name="academicProgramId" required>
             @foreach (var program in Model.AcademicPrograms)
             {
-                <option value="@program.Id" selected="@(program.Id == Model.ClassGroup.AcademicProgramId)">@program.Name (@program.Code)</option>
+                <option value="@program.Id" selected="@(program.Id == Model.ClassGroup.AcademicProgramId)">@program.Name</option>
             }
         </select>
 

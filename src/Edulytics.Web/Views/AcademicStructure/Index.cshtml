@@ -1,4 +1,5 @@
 @using Edulytics.Core.Constants
+@using Edulytics.Core.Academics
 @model Edulytics.Services.Academics.AcademicStructureDashboard
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.AcademicResource> A
 @using Edulytics.Core.Enums
@@ -225,30 +226,80 @@
         <div class="academic-two-column">
             @if (canManageAcademic)
             {
-                <form asp-action="CreateAcademicProgram" method="post" class="academic-card academic-form">
+                <form asp-action="CreateAcademicProgram"
+                      method="post"
+                      class="academic-card academic-form">
                     <h3>@A["CreateAcademicProgram"]</h3>
-                    <label for="program-name">@A["Name"]</label>
-                    <input id="program-name" name="name" maxlength="150" required />
-                    <label for="program-code">@A["Code"]</label>
-                    <input id="program-code" name="code" maxlength="50" pattern="[A-Za-z0-9-]+" required />
-                    <label for="program-status">@A["Status"]</label>
-                    <select id="program-status" name="status">
-                        <option value="@((int)AcademicStructureStatus.Active)">@A["StatusActive"]</option>
-                        <option value="@((int)AcademicStructureStatus.Inactive)">@A["StatusInactive"]</option>
+
+                    <label for="program-choice">
+                        @A["Name"]
+                    </label>
+
+                    <select id="program-choice"
+                            name="programChoice"
+                            required>
+                        <option value="">
+                            @A["SelectOption"]
+                        </option>
+
+                        @foreach (
+                            var choice in
+                                AcademicProgramCatalog.All.Where(
+                                    choice =>
+                                        Model.AcademicPrograms.All(
+                                            program =>
+                                                !string.Equals(
+                                                    program.Code,
+                                                    choice.Code,
+                                                    StringComparison.OrdinalIgnoreCase))))
+                        {
+                            <option value="@choice.Key">
+                                @choice.Name
+                            </option>
+                        }
                     </select>
-                    <button class="school-button school-button-primary" type="submit">@A["CreateAcademicProgram"]</button>
+
+                    <label for="program-status">
+                        @A["Status"]
+                    </label>
+
+                    <select id="program-status"
+                            name="status">
+                        <option value="@((int)AcademicStructureStatus.Active)">
+                            @A["StatusActive"]
+                        </option>
+                        <option value="@((int)AcademicStructureStatus.Inactive)">
+                            @A["StatusInactive"]
+                        </option>
+                    </select>
+
+                    <button class="school-button school-button-primary"
+                            type="submit">
+                        @A["CreateAcademicProgram"]
+                    </button>
                 </form>
             }
             <div class="academic-card">
                 @if (Model.AcademicPrograms.Count == 0) { <p>@A["NoAcademicPrograms"]</p> }
                 else
                 {
-                    <table class="academic-table"><thead><tr><th>@A["Code"]</th><th>@A["Name"]</th><th>@A["Status"]</th></tr></thead><tbody>
-                    @foreach (var item in Model.AcademicPrograms)
-                    {
-                        <tr><td>@item.Code</td><td>@item.Name</td><td>@A[$"Status{item.Status}"]</td></tr>
-                    }
-                    </tbody></table>
+                    <table class="academic-table">
+                        <thead>
+                            <tr>
+                                <th>@A["Name"]</th>
+                                <th>@A["Status"]</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (var item in Model.AcademicPrograms)
+                        {
+                            <tr>
+                                <td>@item.Name</td>
+                                <td>@A[$"Status{item.Status}"]</td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
                 }
             </div>
         </div>
@@ -274,7 +325,7 @@
                                 <select id="class-program" name="academicProgramId" required>
                                     <option value="">@A["SelectOption"]</option>
                                     @foreach (var program in Model.AcademicPrograms.Where(x => x.Status == AcademicStructureStatus.Active))
-                                    { <option value="@program.Id">@program.Name (@program.Code)</option> }
+                                    { <option value="@program.Id">@program.Name</option> }
                                 </select>
                                 <label for="class-grade">@A["GradeLevel"]</label>
                                 <select id="class-grade" name="gradeLevelId" required>
