@@ -168,3 +168,31 @@ The Product Owner has approved:
   framework itself cannot be obtained or verified reliably.
 
 All fallbacks remain explicitly traceable and replaceable.
+
+## Poland 2026-2027 rollout baseline decision
+
+For the current Edulytics Poland Mathematics rollout, the Product Owner has
+explicitly selected the complete 2025-2026 Polish curriculum baseline for all
+supported Polish grades/stages/pathways.
+
+This is a deliberate stability decision for the current rollout and not a claim
+that the 2025-2026 source is the newest Polish curriculum.
+
+Therefore:
+
+- Edulytics operational target period remains `2026-2027`;
+- Poland academic source period is `2025-2026`;
+- Poland source resolution is recorded as `PreviousOfficialFallback`;
+- the accepted curriculum pack remains `PL-MATH-2025-2026`;
+- pedagogical textbook research for Poland must target books/materials aligned
+  to the 2025-2026 curriculum baseline;
+- no Polish 2026 transitional cohort is mixed into this Phase 29 rollout;
+- no 2025-2026 source may be relabelled as a 2026-2027 official Polish source;
+- a future Poland curriculum upgrade is handled as a separate reviewed source
+  upgrade after the current full-content rollout.
+
+Fallback reason:
+
+`Product Owner selected the complete verified 2025-2026 Polish curriculum as
+the stable baseline for the current rollout instead of mixing transitional
+2026 curriculum cohorts.`
