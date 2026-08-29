@@ -31,9 +31,6 @@
         </select>
         <label for="name">@A["Name"]</label>
         <input id="name" name="name" value="@Model.ClassGroup.Name" maxlength="150" required />
-        <label for="code">@A["Code"]</label>
-        <input id="code" name="code" value="@Model.ClassGroup.Code" maxlength="50"
-               pattern="[A-Za-z0-9-]+" required />
         <label for="status">@A["Status"]</label>
         <select id="status" name="status">
             <option value="@((int)AcademicStructureStatus.Active)"

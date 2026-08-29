@@ -949,6 +949,92 @@ public sealed class AcademicStructureServiceTests
     }
 
     [Fact]
+    public async Task ClassCode_IsGeneratedInternally_AndPreservedOnEdit()
+    {
+        using var f = CreateFixture();
+
+        var year = await CreateYear(f);
+        var grade = await CreateGrade(f);
+
+        Assert.True(
+            (await f.Service.OfferAcademicProgramAsync(
+                f.Supervisor.Id,
+                new OfferAcademicProgramRequest(
+                    year.Id,
+                    "british")))
+            .Succeeded);
+
+        var dashboard =
+            await f.Service.GetDashboardAsync(
+                f.Supervisor.Id);
+
+        var british =
+            dashboard.Value!.AcademicPrograms
+                .Single(
+                    x =>
+                        x.Code ==
+                        "BRITISH");
+
+        var created =
+            await f.Service.CreateClassGroupAsync(
+                f.Supervisor.Id,
+                new CreateClassGroupRequest(
+                    year.Id,
+                    grade.Id,
+                    "Grade 6A",
+                    string.Empty,
+                    AcademicStructureStatus.Active,
+                    british.Id));
+
+        Assert.True(created.Succeeded);
+
+        dashboard =
+            await f.Service.GetDashboardAsync(
+                f.Supervisor.Id);
+
+        var classGroup =
+            Assert.Single(
+                dashboard.Value!.ClassGroups);
+
+        Assert.Matches(
+            "^CLS-[A-F0-9]{32}$",
+            classGroup.Code);
+
+        var originalCode =
+            classGroup.Code;
+
+        var updated =
+            await f.Service.UpdateClassGroupAsync(
+                f.Supervisor.Id,
+                new UpdateClassGroupRequest(
+                    classGroup.Id,
+                    grade.Id,
+                    "Grade 6A Updated",
+                    string.Empty,
+                    AcademicStructureStatus.Active,
+                    classGroup.RowVersion,
+                    british.Id));
+
+        Assert.True(updated.Succeeded);
+
+        dashboard =
+            await f.Service.GetDashboardAsync(
+                f.Supervisor.Id);
+
+        classGroup =
+            Assert.Single(
+                dashboard.Value!.ClassGroups);
+
+        Assert.Equal(
+            originalCode,
+            classGroup.Code);
+
+        Assert.Equal(
+            "Grade 6A Updated",
+            classGroup.Name);
+    }
+
+    [Fact]
     public async Task AcademicValidationBranches_CoverDuplicateAndStateErrors()
     {
         using var f = CreateFixture();

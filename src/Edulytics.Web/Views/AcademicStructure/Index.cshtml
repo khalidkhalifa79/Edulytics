@@ -224,7 +224,7 @@
     <section id="programs" class="academic-section">
         <h2>@A["AcademicPrograms"]</h2>
 
-        <div class="academic-card">
+        <div class="academic-card academic-form">
             <label for="program-year-filter">
                 @A["AcademicYear"]
             </label>
@@ -430,9 +430,6 @@
                                 </select>
                                 <label for="class-name">@A["Name"]</label>
                                 <input id="class-name" name="name" maxlength="150" required />
-                                <label for="class-code">@A["Code"]</label>
-                                <input id="class-code" name="code" maxlength="50"
-                                       pattern="[A-Za-z0-9-]+" required />
                                 <label for="class-status">@A["Status"]</label>
                                 <select id="class-status" name="status">
                                     <option value="@((int)AcademicStructureStatus.Active)">@A["StatusActive"]</option>
@@ -452,7 +449,6 @@
                     <table class="academic-table">
                         <thead>
                         <tr>
-                            <th>@A["Code"]</th>
                             <th>@A["Name"]</th>
                             <th>@A["AcademicYear"]</th>
                             <th>@A["AcademicProgram"]</th>
@@ -465,7 +461,6 @@
                         @foreach (var item in Model.ClassGroups)
                         {
                             <tr>
-                                <td data-label="@A["Code"]">@item.Code</td>
                                 <td data-label="@A["Name"]">@item.Name</td>
                                 <td data-label="@A["AcademicYear"]">@item.AcademicYearName</td>
                                 <td data-label="@A["AcademicProgram"]">@item.AcademicProgramName</td>
@@ -562,7 +557,7 @@
                                     <option value="">@A["SelectOption"]</option>
                                     @foreach (var item in Model.ClassGroups)
                                     {
-                                        <option value="@item.Id">@item.Code — @item.Name</option>
+                                        <option value="@item.Id">@item.Name</option>
                                     }
                                 </select>
                                 <label for="teacher-subject">@A["Subject"]</label>
@@ -591,7 +586,7 @@
                         {
                             <tr>
                                 <td data-label="@A["Teacher"]">@item.TeacherEmail</td>
-                                <td data-label="@A["Class"]">@item.ClassCode — @item.ClassName</td>
+                                <td data-label="@A["Class"]">@item.ClassName</td>
                                 <td data-label="@A["Subject"]">@item.SubjectName</td>
                                 <td data-label="@A["AcademicYear"]">@item.AcademicYearName</td>
                             </tr>
@@ -654,7 +649,7 @@
                                     <option value="">@A["SelectOption"]</option>
                                     @foreach (var item in Model.ClassGroups)
                                     {
-                                        <option value="@item.Id">@item.Code — @item.Name</option>
+                                        <option value="@item.Id">@item.Name</option>
                                     }
                                 </select>
                                 <button class="school-button school-button-primary" type="submit">@A["EnrollStudent"]</button>
@@ -743,7 +738,7 @@
                         {
                             <tr>
                                 <td data-label="@A["Student"]">@item.StudentDisplayName</td>
-                                <td data-label="@A["Class"]">@item.ClassCode — @item.ClassName</td>
+                                <td data-label="@A["Class"]">@item.ClassName</td>
                                 <td data-label="@A["AcademicYear"]">@item.AcademicYearName</td>
                             </tr>
                         }

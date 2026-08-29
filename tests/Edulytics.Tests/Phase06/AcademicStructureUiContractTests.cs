@@ -194,6 +194,161 @@ public sealed class AcademicStructureUiContractTests
     }
 
     [Fact]
+    public void ClassCode_IsInternalAndNotAcceptedFromBrowser()
+    {
+        var methods =
+            typeof(AcademicStructureController)
+                .GetMethods(
+                    BindingFlags.Instance |
+                    BindingFlags.Public);
+
+        var create =
+            methods.Single(
+                x =>
+                    x.Name ==
+                        nameof(
+                            AcademicStructureController
+                                .CreateClassGroup));
+
+        var createParameters =
+            create.GetParameters()
+                .Select(x => x.Name)
+                .ToArray();
+
+        Assert.DoesNotContain(
+            "code",
+            createParameters);
+
+        var editPost =
+            methods.Single(
+                x =>
+                    x.Name ==
+                        nameof(
+                            AcademicStructureController
+                                .EditClassGroup) &&
+                    x.GetCustomAttributes<HttpPostAttribute>()
+                        .Any());
+
+        var editParameters =
+            editPost.GetParameters()
+                .Select(x => x.Name)
+                .ToArray();
+
+        Assert.DoesNotContain(
+            "code",
+            editParameters);
+    }
+
+    [Fact]
+    public void ClassCode_IsHiddenAcrossAcademicStructureUi()
+    {
+        var root =
+            FindRepositoryRoot();
+
+        var academic =
+            File.ReadAllText(
+                Path.Combine(
+                    root,
+                    "src/Edulytics.Web/Views/" +
+                    "AcademicStructure/Index.cshtml"));
+
+        var editClass =
+            File.ReadAllText(
+                Path.Combine(
+                    root,
+                    "src/Edulytics.Web/Views/" +
+                    "AcademicStructure/EditClassGroup.cshtml"));
+
+        var classesStart =
+            academic.IndexOf(
+                "<section id=\"classes\"",
+                StringComparison.Ordinal);
+
+        var subjectsStart =
+            academic.IndexOf(
+                "<section id=\"subjects\"",
+                StringComparison.Ordinal);
+
+        Assert.True(
+            classesStart >= 0 &&
+            subjectsStart > classesStart);
+
+        var classesSection =
+            academic[
+                classesStart..subjectsStart];
+
+        Assert.DoesNotContain(
+            "class-code",
+            classesSection);
+
+        Assert.DoesNotContain(
+            "@A[\"Code\"]",
+            classesSection);
+
+        Assert.DoesNotContain(
+            "name=\"code\"",
+            editClass);
+
+        Assert.DoesNotContain(
+            "ClassCode —",
+            academic);
+
+        var teacherClassStart =
+            academic.IndexOf(
+                "<select id=\"teacher-class\"",
+                StringComparison.Ordinal);
+
+        var teacherClassEnd =
+            academic.IndexOf(
+                "</select>",
+                teacherClassStart,
+                StringComparison.Ordinal);
+
+        Assert.True(
+            teacherClassStart >= 0 &&
+            teacherClassEnd > teacherClassStart);
+
+        var teacherClassSelector =
+            academic[
+                teacherClassStart..(teacherClassEnd + "</select>".Length)];
+
+        Assert.DoesNotContain(
+            "@item.Code",
+            teacherClassSelector);
+
+        Assert.Contains(
+            "@item.Name",
+            teacherClassSelector);
+
+        var enrollClassStart =
+            academic.IndexOf(
+                "<select id=\"enroll-class\"",
+                StringComparison.Ordinal);
+
+        var enrollClassEnd =
+            academic.IndexOf(
+                "</select>",
+                enrollClassStart,
+                StringComparison.Ordinal);
+
+        Assert.True(
+            enrollClassStart >= 0 &&
+            enrollClassEnd > enrollClassStart);
+
+        var enrollClassSelector =
+            academic[
+                enrollClassStart..(enrollClassEnd + "</select>".Length)];
+
+        Assert.DoesNotContain(
+            "@item.Code",
+            enrollClassSelector);
+
+        Assert.Contains(
+            "@item.Name",
+            enrollClassSelector);
+    }
+
+    [Fact]
     public void ProgramStreamUi_ContainsAnnualOfferingControls()
     {
         var root =
@@ -208,6 +363,10 @@ public sealed class AcademicStructureUiContractTests
 
         Assert.Contains(
             "id=\"program-year-filter\"",
+            academic);
+
+        Assert.Contains(
+            "<div class=\"academic-card academic-form\">",
             academic);
 
         Assert.Contains(
