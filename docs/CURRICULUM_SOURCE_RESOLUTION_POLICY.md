@@ -1,65 +1,170 @@
-# Edulytics Curriculum Source Resolution Policy
+# Edulytics Curriculum and Lesson Source Resolution Policy
 
 ## Scope
 
-This policy applies to every curriculum, country, grade, pathway, academic year,
-subject version, lesson-content pack, assessment mapping, and future curriculum-
-dependent phase in Edulytics.
+This policy applies to every country, curriculum, subject, grade/stage,
+pathway, academic year, term/version, pedagogical lesson, lesson-content pack,
+assessment mapping, and future curriculum-dependent phase in Edulytics.
 
-It is not Poland-specific.
+The target academic period for the current full-content rollout is 2026-2027.
 
-## Rule
+## Two independent source responsibilities
 
-For every curriculum target:
+Edulytics MUST distinguish between:
 
-1. Search for and prefer the newest applicable official source published by the
-   responsible government, ministry, standards authority, or official standards
-   organization.
-2. Resolve applicability at the smallest meaningful scope:
+1. **Official academic authority source**
+   - controls official curriculum identity;
+   - controls official Standards / Learning Outcomes;
+   - controls official codes where such codes exist;
+   - remains the final authority for academic alignment.
+
+2. **Pedagogical textbook/material source**
+   - helps determine lesson sequencing;
+   - helps determine lesson scope and age-appropriate depth;
+   - provides a reference for commonly used examples and visual treatment;
+   - may supply a real lesson title where a usable source title exists.
+
+A commercial textbook never becomes an official government authority merely
+because Edulytics uses it as a pedagogical source.
+
+## Official academic source rule
+
+For the official curriculum/standards layer:
+
+1. Prefer the newest applicable official source.
+2. Resolve at the smallest meaningful scope:
    country + curriculum + subject + grade/stage + pathway + term/version.
-3. If the newest target version is available and verifiable, use:
+3. If the target version is available and verifiable:
    `CurrentOfficial`.
-4. If the newest target version is announced, expected, inaccessible, incomplete,
-   unavailable, or cannot yet be verified reliably, Edulytics may use the most
-   recent verifiable previous official version as:
+4. If the target official framework itself is unavailable, inaccessible,
+   incomplete, or cannot be verified reliably, the most recent verifiable
+   previous official version may be:
    `PreviousOfficialFallback`.
-5. A fallback MUST record:
-   - target curriculum period;
-   - actual source curriculum period;
-   - official authority;
-   - source version;
-   - source URL;
-   - source verification timestamp;
-   - explicit fallback reason.
-6. A previous official source must never be falsely labelled as the current
-   official curriculum.
-7. When a newer official source becomes available, only the affected
-   grade/stage/pathway/term mappings and content must be re-reviewed.
-8. Unaffected grades/stages remain valid and must not be rewritten merely because
-   another grade changed.
-9. No synthetic official codes, standards, outcomes, or lesson identities may be
-   invented to fill a source gap.
-10. Edulytics-authored explanations, examples, solutions, common mistakes and
-    summaries are educational content aligned to official sources; they are not
-    represented as government-authored text.
+5. Previous official fallback metadata MUST state the target period, actual
+   source period, authority, source version, URL, check timestamp, and reason.
+6. A previous source must never be labelled as the current official source.
+7. No official code, Standard, Learning Outcome, or official lesson identity
+   may be invented.
+
+## Pedagogical textbook priority — Source Policy v2
+
+For each grade/stage/pathway and target academic year, choose the pedagogical
+source in this order:
+
+### Priority 1 — School-adopted textbook
+
+If the school has selected a Mathematics textbook/material for the target
+academic year (currently 2026-2027), use that book as the primary pedagogical
+source.
+
+Record evidence of school adoption.
+
+### Priority 2 — Current official/ministry textbook or material
+
+If no school-adopted textbook is known, use the applicable current
+2026-2027 official Ministry/government/standards-authority textbook or
+pedagogical material when such material exists.
+
+### Priority 3 — Widely-used publisher textbook
+
+If no suitable current school-adopted or official textbook/material exists,
+select a reputable publisher textbook that:
+
+- is aligned to the current official curriculum/standards;
+- is applicable to the exact grade/stage/pathway;
+- is current for the target period where possible;
+- has evidence supporting that it is widely adopted/used.
+
+"Most widely used" MUST NOT be asserted without recorded evidence.
+
+### Priority 4 — Official framework only
+
+Use the official Standards/Learning Outcomes directly only when no suitable
+textbook/material source can be resolved after the above search.
+
+In that case Edulytics constructs the pedagogical lesson sequence and lesson
+titles from the verified official Outcomes/Standards.
+
+## Lesson title rule
+
+A published Edulytics lesson must have a meaningful pedagogical title.
+
+Allowed title origins:
+
+1. `PedagogicalSource`
+   - title comes from the selected textbook/material source.
+
+2. `EdulyticsDerivedFromOfficialOutcome`
+   - used when the official source provides Standards/Outcomes but no usable
+     lesson title;
+   - title is authored by Edulytics from the exact aligned official outcome(s).
+
+Generic shell names such as:
+
+- `Lesson 01`
+- `6.EE — Lesson 01`
+- `Geometry — Lesson 05`
+
+are not acceptable for Source Policy v2 Published content.
+
+## Content authorship
+
+Textbooks and official sources are references.
+
+Unless explicit reuse rights have been verified:
+
+- do not copy textbook prose wholesale;
+- do not copy publisher diagrams wholesale;
+- do not imply government or publisher authorship of Edulytics content.
+
+Edulytics explanations, worked examples, solutions, common mistakes,
+summaries, and original diagrams are Edulytics-authored/reviewed educational
+content aligned to the selected sources.
+
+## Publisher fallback evidence
+
+When `WidelyUsedPublisherTextbook` is selected, the lesson-content pack MUST
+record evidence supporting the selection.
+
+Acceptable evidence can include, as applicable:
+
+- school adoption lists;
+- official approved-textbook lists;
+- publisher adoption data;
+- independent market/adoption data;
+- documented broad school usage.
+
+If evidence is insufficient, do not label a publisher "most widely used".
 
 ## Review status
 
 `ReviewedBy = Edulytics Curriculum Review` means Edulytics reviewed its own
-educational content against the recorded official source and checked:
+educational content against the recorded sources and checked:
 
-- curriculum/outcome alignment;
+- official curriculum/outcome alignment;
+- lesson scope;
 - mathematical correctness;
-- worked examples and solutions;
-- pedagogical scope for the target level;
-- absence of unsupported official claims.
+- examples and solutions;
+- pedagogical level;
+- title provenance;
+- visual/diagram appropriateness when required;
+- absence of unsupported official or publisher claims.
 
-It does NOT mean that the government/ministry reviewed or endorsed Edulytics.
+It does NOT mean that a government, Ministry, standards organization,
+publisher, or school endorsed Edulytics.
 
-## Product Owner rule
+## Product Owner decisions
 
-The Product Owner has approved the use of the most recent verifiable previous
-official curriculum whenever the intended newer curriculum cannot currently be
-obtained or verified reliably, for any curriculum and any educational stage.
+The Product Owner has approved:
 
-The fallback remains explicitly traceable and replaceable.
+- target academic period 2026-2027 for the current rollout;
+- school-adopted textbook first when known;
+- current official textbook/material second;
+- evidence-backed widely-used publisher textbook when required;
+- official Outcomes/Standards as the final academic authority;
+- Edulytics-authored pedagogical titles when a source provides outcomes but
+  no usable lesson title;
+- previous-official fallback only when the applicable current official
+  framework itself cannot be obtained or verified reliably.
+
+All fallbacks remain explicitly traceable and replaceable.

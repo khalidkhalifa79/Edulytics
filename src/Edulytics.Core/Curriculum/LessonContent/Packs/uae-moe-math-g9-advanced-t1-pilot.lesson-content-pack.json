@@ -2,6 +2,7 @@
   "packCode": "UAE-MOE-MATH",
   "versionCode": "MOE-2026-2027-T1",
   "contentVersion": "uae-g9-adv-t1-pilot-v1",
+  "sourcePolicyVersion": 2,
   "targetCurriculumPeriod": "2026-2027 Term 1",
   "sourceCurriculumPeriod": "2026-2027 Term 1",
   "sourceVersionLabel": "UAE MoE Mathematics 2026-2027 — Term 1",
@@ -10,6 +11,15 @@
   "sourceCheckedAtUtc": "2026-08-29T00:00:00Z",
   "sourceResolution": "CurrentOfficial",
   "fallbackReason": "",
+  "pedagogicalSourceType": "CurrentOfficialTextbook",
+  "pedagogicalSourceTitle": "UAE MoE Mathematics Grade 9 Advanced — Term 1",
+  "pedagogicalSourcePublisher": "UAE Ministry of Education",
+  "pedagogicalSourceEdition": "2026-2027 Term 1",
+  "pedagogicalSourceUrl": "https://minhaji.moe.gov.ae/",
+  "pedagogicalSourceCheckedAtUtc": "2026-08-29T00:00:00Z",
+  "pedagogicalSourceSelectionReason": "Current UAE Ministry of Education mathematics material for the target 2026-2027 period is available, so no commercial publisher fallback is used.",
+  "pedagogicalSourceSelectionEvidence": "",
+  "pedagogicalSourceRightsNote": "The official material is used as a curriculum and pedagogical reference. The Edulytics lesson body is independently authored and is not represented as Ministry-authored text.",
   "reviewMethod": "Official-source curriculum alignment, exact accepted OutcomeCode verification, independent mathematical verification of every example and solution, and pedagogical scope review for Grade 9 Advanced.",
   "status": "Published",
   "reviewedBy": "Edulytics Curriculum Review",
@@ -17,6 +27,8 @@
   "lessons": [
     {
       "lessonCode": "PED:UAE:G9:ADV:T1:L1-2",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "UAE:G9:ADV:T1:L1-2 — Order of Operations",
       "outcomeCodes": [
         "UAE:STD:MAT.2.02.01",
         "UAE:STD:MAT.2.02.02"

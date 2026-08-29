@@ -139,6 +139,110 @@ public sealed class Phase29CanonicalContentPackPipelineTests
     }
 
     [Fact]
+    public void SourcePolicyV2_RejectsGenericLessonShellTitle()
+    {
+        var document = ValidDocument();
+
+        document.Lessons[0]
+            .Translations
+            .Single(x => x.CultureCode == "en")
+            .Title =
+                "6.EE — Lesson 01";
+
+        var error =
+            Assert.Throws<InvalidOperationException>(
+                () =>
+                    CanonicalLessonContentPackContract.Validate(
+                        document));
+
+        Assert.Contains(
+            "generic synthetic title",
+            error.Message,
+            StringComparison.OrdinalIgnoreCase);
+    }
+
+    [Fact]
+    public void SourcePolicyV2_PublisherFallbackRequiresSelectionEvidence()
+    {
+        var document = ValidDocument();
+
+        document.PedagogicalSourceType =
+            PedagogicalSourceType
+                .WidelyUsedPublisherTextbook;
+
+        document.PedagogicalSourceTitle =
+            "Publisher mathematics textbook";
+
+        document.PedagogicalSourcePublisher =
+            "Publisher";
+
+        document.PedagogicalSourceSelectionReason =
+            "No school-adopted or current official textbook is available.";
+
+        document.PedagogicalSourceSelectionEvidence =
+            string.Empty;
+
+        var error =
+            Assert.Throws<InvalidOperationException>(
+                () =>
+                    CanonicalLessonContentPackContract.Validate(
+                        document));
+
+        Assert.Contains(
+            "PedagogicalSourceSelectionEvidence",
+            error.Message,
+            StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void SourcePolicyV2_SchoolTextbookRequiresAdoptionEvidence()
+    {
+        var document = ValidDocument();
+
+        document.PedagogicalSourceType =
+            PedagogicalSourceType
+                .SchoolAdoptedTextbook;
+
+        document.PedagogicalSourceSelectionReason =
+            "The school selected this textbook for the target year.";
+
+        document.PedagogicalSourceSelectionEvidence =
+            string.Empty;
+
+        var error =
+            Assert.Throws<InvalidOperationException>(
+                () =>
+                    CanonicalLessonContentPackContract.Validate(
+                        document));
+
+        Assert.Contains(
+            "PedagogicalSourceSelectionEvidence",
+            error.Message,
+            StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void SourcePolicyV2_RequiresTraceableLessonTitleOrigin()
+    {
+        var document = ValidDocument();
+
+        document.Lessons[0]
+            .TitleProvenance =
+                LessonTitleProvenance.LegacyUnspecified;
+
+        var error =
+            Assert.Throws<InvalidOperationException>(
+                () =>
+                    CanonicalLessonContentPackContract.Validate(
+                        document));
+
+        Assert.Contains(
+            "TitleProvenance",
+            error.Message,
+            StringComparison.Ordinal);
+    }
+
+    [Fact]
     public async Task SeederUsesExactPedagogicalLessonAndOutcomeAndIsIdempotent()
     {
         await using var db = CreateDb();
@@ -291,6 +395,18 @@ public sealed class Phase29CanonicalContentPackPipelineTests
             uae.SourceResolution);
 
         Assert.Equal(
+            2,
+            uae.SourcePolicyVersion);
+
+        Assert.Equal(
+            PedagogicalSourceType.CurrentOfficialTextbook,
+            uae.PedagogicalSourceType);
+
+        Assert.False(
+            string.IsNullOrWhiteSpace(
+                uae.PedagogicalSourceRightsNote));
+
+        Assert.Equal(
             CanonicalLessonContentStatus.Published,
             uae.Status);
 
@@ -304,6 +420,14 @@ public sealed class Phase29CanonicalContentPackPipelineTests
         Assert.Equal(
             "PED:UAE:G9:ADV:T1:L1-2",
             lesson.LessonCode);
+
+        Assert.Equal(
+            LessonTitleProvenance.PedagogicalSource,
+            lesson.TitleProvenance);
+
+        Assert.False(
+            string.IsNullOrWhiteSpace(
+                lesson.TitleSourceReference));
 
         Assert.Equal(
             new[]
@@ -453,6 +577,7 @@ public sealed class Phase29CanonicalContentPackPipelineTests
 
             VersionCode = versionCode,
             ContentVersion = "reviewed-v1",
+            SourcePolicyVersion = 2,
 
             TargetCurriculumPeriod = "2026-2027",
             SourceCurriculumPeriod = "2026-2027",
@@ -463,6 +588,34 @@ public sealed class Phase29CanonicalContentPackPipelineTests
             SourceResolution =
                 CurriculumSourceResolutionStatus.CurrentOfficial,
             FallbackReason = string.Empty,
+
+            PedagogicalSourceType =
+                PedagogicalSourceType.CurrentOfficialTextbook,
+
+            PedagogicalSourceTitle =
+                "Current official mathematics textbook",
+
+            PedagogicalSourcePublisher =
+                "Official curriculum authority",
+
+            PedagogicalSourceEdition =
+                "2026-2027",
+
+            PedagogicalSourceUrl =
+                "https://example.gov/official-mathematics-textbook",
+
+            PedagogicalSourceCheckedAtUtc =
+                "2026-08-29T00:00:00Z",
+
+            PedagogicalSourceSelectionReason =
+                "Current official target-year pedagogical material is available.",
+
+            PedagogicalSourceSelectionEvidence =
+                string.Empty,
+
+            PedagogicalSourceRightsNote =
+                "Reference-only fixture; Edulytics content is independently authored.",
+
             ReviewMethod =
                 "Official-source alignment plus mathematical and pedagogical verification.",
 
@@ -480,6 +633,13 @@ public sealed class Phase29CanonicalContentPackPipelineTests
                 new CanonicalLessonContentPackLesson
                 {
                     LessonCode = lessonCode,
+
+                    TitleProvenance =
+                        LessonTitleProvenance
+                            .EdulyticsDerivedFromOfficialOutcome,
+
+                    TitleSourceReference =
+                        outcomeCode,
 
                     OutcomeCodes =
                     [
