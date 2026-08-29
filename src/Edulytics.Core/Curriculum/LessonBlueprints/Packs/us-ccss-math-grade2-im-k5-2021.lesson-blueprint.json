@@ -1,0 +1,5831 @@
+{
+  "SchemaVersion": 1,
+  "BlueprintCode": "US-CCSS-MATH:G2:IM-K5-2021",
+  "PackCode": "US-CCSS-MATH",
+  "VersionCode": "CCSSM-2010",
+  "LogicalLevel": 3,
+  "NativeLevel": "Grade 2",
+  "Pathway": null,
+  "OfficialAuthority": "NGA Center / CCSSO",
+  "OfficialSourceUrl": "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf",
+  "PedagogicalSourceType": "OpenEducationalResource",
+  "SourceTitle": "IM K-5 Math Grade 2",
+  "SourcePublisher": "Illustrative Mathematics / Kendall Hunt",
+  "SourceEdition": "1st Edition (2021)",
+  "SourceRootUrl": "https://im.kendallhunt.com/k5/teachers/grade-2",
+  "SourceCheckedAtUtc": "2026-08-29T18:14:00Z",
+  "SourceLicense": "CC BY 4.0",
+  "RequiredDigitalAttribution": "Attribute Illustrative Mathematics IM K-5 Math 1st Edition (2021), link the source and CC BY 4.0 license.",
+  "SourceSelectionReason": "No school-adopted Grade 2 textbook has been supplied. Source Policy therefore uses the traceable IM K-5 2021 CC BY 4.0 Common-Core-aligned pedagogical source.",
+  "SourceSelectionEvidence": "Persistent Grade 2 source-lock graph SHA-256 5566fcd85ca099f10cd62021c8d0cd778093b3789fe7f72d2a1b1a1cc6594c74; elementary batch source-lock SHA-256 3bf5fba93d0a0288658b1f58949dc3114eaede7bd775816a3e3aa4e47e4ffc9f; 9 units, 146 lessons, 330 formal mappings, 26/26 accepted Grade 2 Standards covered by source Addressing alignments.",
+  "SourceEvidenceUrls": [
+    "https://im.kendallhunt.com/k5/teachers/grade-2/units.html",
+    "https://illustrativemathematics.org/site-ip-content/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "SourceRightsNote": "The pedagogical unit/lesson sequence, lesson titles and alignment metadata are captured from the CC BY 4.0 source with attribution. IM/Kendall Hunt names or logos, book-cover artwork, proprietary visual design and assessment content are not imported. Edulytics lesson explanations, worked examples, diagrams, common mistakes and summaries remain independently authored and reviewed.",
+  "SemanticGraphSha256": "21a401ad90fee5953763955922f81eac74e40cb80a480be5bdd201510edb7dbe",
+  "AcquisitionDiagnostics": {
+    "UnitCount": 9,
+    "LessonCount": 146,
+    "OfficialStandardCount": 26,
+    "AddressingCoverageCount": 26,
+    "FormalMappingCount": 330,
+    "LessonsWithoutNumberedGradeReferenceAnyRole": 0,
+    "LessonsWithoutNumberedAddressingStandard": 3,
+    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 0,
+    "MultiStandardLessons": 113
+  },
+  "Units": [
+    {
+      "Number": 1,
+      "Title": "Adding, Subtracting, and Working with Data",
+      "LessonCount": 18,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-1/lessons.html",
+      "SemanticSha256": "4150d78d4a2572459cbf225ab4bf18e8fea103f7b7f9f05099252b350a5fbb55"
+    },
+    {
+      "Number": 2,
+      "Title": "Adding and Subtracting within 100",
+      "LessonCount": 16,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-2/lessons.html",
+      "SemanticSha256": "34a988f3f39df8225f4255535d51281f3b43361cfb625399db45e18f6a838d08"
+    },
+    {
+      "Number": 3,
+      "Title": "Measuring Length",
+      "LessonCount": 18,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-3/lessons.html",
+      "SemanticSha256": "144fb25fcd54eedebb9e233307c85c19a6d9390e354e7d5bc2a0cd634802ca2f"
+    },
+    {
+      "Number": 4,
+      "Title": "Addition and Subtraction on the Number Line",
+      "LessonCount": 15,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-4/lessons.html",
+      "SemanticSha256": "93a5236782343bf7fbc33f3ae59615f893f9a3fb212e0eef57163f9f6eb0743d"
+    },
+    {
+      "Number": 5,
+      "Title": "Numbers to 1,000",
+      "LessonCount": 14,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-5/lessons.html",
+      "SemanticSha256": "5653ab93260b67c66f022feebd7cf159be727488eb07fdf122f07d251d4bfaf5"
+    },
+    {
+      "Number": 6,
+      "Title": "Geometry, Time, and Money",
+      "LessonCount": 21,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-6/lessons.html",
+      "SemanticSha256": "a2a0dfd0ac24d6c9ae0e02f157f907fdf039bf4860ef1dd5dbb93c199ab81de0"
+    },
+    {
+      "Number": 7,
+      "Title": "Adding and Subtracting within 1,000",
+      "LessonCount": 18,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-7/lessons.html",
+      "SemanticSha256": "6f58bcfc0eeca71f899b99ab9d4539835bbbcc93c696a1a3cc12e2b9c3b29633"
+    },
+    {
+      "Number": 8,
+      "Title": "Equal Groups",
+      "LessonCount": 13,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-8/lessons.html",
+      "SemanticSha256": "e23f471f4e7db4af1749b7c80da1069132b047e71b61cb779d981e523a67cd20"
+    },
+    {
+      "Number": 9,
+      "Title": "Putting It All Together",
+      "LessonCount": 13,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-9/lessons.html",
+      "SemanticSha256": "8e86579645b3ac542f502ec59d99a66ea99c2e18edc3405aa3df12ceeef09fb2"
+    }
+  ],
+  "Lessons": [
+    {
+      "SourceLessonCode": "2.1.1",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U01:L01",
+      "UnitNumber": 1,
+      "UnitTitle": "Adding, Subtracting, and Working with Data",
+      "LessonNumber": 1,
+      "Title": "Add and Subtract Within 10",
+      "SortOrder": 1,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-1/lesson-1/preparation.html",
+      "SemanticSha256": "5e63e61f41b08c854078d3078a1a4efe2964e82d77d2cfc5d46e97789545425d",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "1.OA.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.1.2",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U01:L02",
+      "UnitNumber": 1,
+      "UnitTitle": "Adding, Subtracting, and Working with Data",
+      "LessonNumber": 2,
+      "Title": "Relate Addition and Subtraction within 10 PLC Activity",
+      "SortOrder": 2,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-1/lesson-2/preparation.html",
+      "SemanticSha256": "07faf2e8c7f80211f6bb4db5763882df5dfabf6691e5fc63f839819938b04a36",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "1.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.1.3",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U01:L03",
+      "UnitNumber": 1,
+      "UnitTitle": "Adding, Subtracting, and Working with Data",
+      "LessonNumber": 3,
+      "Title": "Relate Addition and Subtraction within 20",
+      "SortOrder": 3,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-1/lesson-3/preparation.html",
+      "SemanticSha256": "c6028192e98bb2e63298816c5286438d975b6fa9de1b2a9a243ee77c7596b4b9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.1.4",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U01:L04",
+      "UnitNumber": 1,
+      "UnitTitle": "Adding, Subtracting, and Working with Data",
+      "LessonNumber": 4,
+      "Title": "Add and Subtract Your Way",
+      "SortOrder": 4,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-1/lesson-4/preparation.html",
+      "SemanticSha256": "99fff756f0766b099296da385cbed112853fac5e5981afe78f96c5c8e7e335f0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.1.5",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U01:L05",
+      "UnitNumber": 1,
+      "UnitTitle": "Adding, Subtracting, and Working with Data",
+      "LessonNumber": 5,
+      "Title": "Add Within 50",
+      "SortOrder": 5,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-1/lesson-5/preparation.html",
+      "SemanticSha256": "a940ec1af9c76523550b71cbc6ba39fe94273c4e774c62a0d55edbe99006a497",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "1.NBT.C.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.1.6",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U01:L06",
+      "UnitNumber": 1,
+      "UnitTitle": "Adding, Subtracting, and Working with Data",
+      "LessonNumber": 6,
+      "Title": "Center Day 1 (optional)",
+      "SortOrder": 6,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-1/lesson-6/preparation.html",
+      "SemanticSha256": "2050ea0635b46fd276bb2d824ff626b5cff9711a32f0f823a3381db9efeca3fa",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.1.7",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U01:L07",
+      "UnitNumber": 1,
+      "UnitTitle": "Adding, Subtracting, and Working with Data",
+      "LessonNumber": 7,
+      "Title": "Collect and Represent Data",
+      "SortOrder": 7,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-1/lesson-7/preparation.html",
+      "SemanticSha256": "8bb30a118f99955ed4a2359f325ac58676565b818d1b9a2defd0ea2a08de297e",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "1.MD.C.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.MD.D.10",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "2.1.8",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U01:L08",
+      "UnitNumber": 1,
+      "UnitTitle": "Adding, Subtracting, and Working with Data",
+      "LessonNumber": 8,
+      "Title": "Interpret Picture Graphs",
+      "SortOrder": 8,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-1/lesson-8/preparation.html",
+      "SemanticSha256": "ef0491854430e98a098875bf7c22162ed314d0aef27d120ac7447638920cfa7d",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "1.OA.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.MD.D.10",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.D.10",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.D.10",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.D.10"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.1.9",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U01:L09",
+      "UnitNumber": 1,
+      "UnitTitle": "Adding, Subtracting, and Working with Data",
+      "LessonNumber": 9,
+      "Title": "Interpret Bar Graphs PLC Activity",
+      "SortOrder": 9,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-1/lesson-9/preparation.html",
+      "SemanticSha256": "77014fdd060af7fb42972239d0fe47f2dd2f662624d0503762893a7925d5422b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.D.10",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.D.10",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.MD.D.10",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.D.10"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.1.10",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U01:L10",
+      "UnitNumber": 1,
+      "UnitTitle": "Adding, Subtracting, and Working with Data",
+      "LessonNumber": 10,
+      "Title": "Represent Data Using Picture Graphs and Bar Graphs",
+      "SortOrder": 10,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-1/lesson-10/preparation.html",
+      "SemanticSha256": "2490548339382e84cf71efb8fb28707d6919559ff23811d083093c413ba8e9d2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.D.10",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.D.10",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.D.10"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.1.11",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U01:L11",
+      "UnitNumber": 1,
+      "UnitTitle": "Adding, Subtracting, and Working with Data",
+      "LessonNumber": 11,
+      "Title": "Questions About Data",
+      "SortOrder": 11,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-1/lesson-11/preparation.html",
+      "SemanticSha256": "1b0994b844b15369b5ac12cbc76dd7e8d35f5a06377fd930d1f040e71083219a",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "1.OA.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.D.10",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.D.10",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.D.10",
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.1.12",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U01:L12",
+      "UnitNumber": 1,
+      "UnitTitle": "Adding, Subtracting, and Working with Data",
+      "LessonNumber": 12,
+      "Title": "Center Day 2 (optional)",
+      "SortOrder": 12,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-1/lesson-12/preparation.html",
+      "SemanticSha256": "fb0c144615def847d5a50bfd08026ad383c152fa30cfb8faf1e323fae1111637",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.D.10",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.D.10",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.D.10",
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.1.13",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U01:L13",
+      "UnitNumber": 1,
+      "UnitTitle": "Adding, Subtracting, and Working with Data",
+      "LessonNumber": 13,
+      "Title": "Use Bar Graphs to Compare",
+      "SortOrder": 13,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-1/lesson-13/preparation.html",
+      "SemanticSha256": "34bbf51211518ca0154aa2da7eea0ac186452f625c038b846da1e4e5c78d6976",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.D.10",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.D.10",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.D.10",
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.1.14",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U01:L14",
+      "UnitNumber": 1,
+      "UnitTitle": "Adding, Subtracting, and Working with Data",
+      "LessonNumber": 14,
+      "Title": "Use Diagrams to Compare PLC Activity",
+      "SortOrder": 14,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-1/lesson-14/preparation.html",
+      "SemanticSha256": "fda978e730b13c5d176246866cf21b70714f18fc3ea1967a9e462afbc72e76ff",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.D.10",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.D.10",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.D.10"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.1.15",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U01:L15",
+      "UnitNumber": 1,
+      "UnitTitle": "Adding, Subtracting, and Working with Data",
+      "LessonNumber": 15,
+      "Title": "Diagrams with All Kinds of Compare Problems",
+      "SortOrder": 15,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-1/lesson-15/preparation.html",
+      "SemanticSha256": "10f77d2f30b661aa06f8a32767bb27d8550656bce045d946452a2e2e9e8dd71f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.OA.A.1",
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.1.16",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U01:L16",
+      "UnitNumber": 1,
+      "UnitTitle": "Adding, Subtracting, and Working with Data",
+      "LessonNumber": 16,
+      "Title": "Solve All Kinds of Compare Problems",
+      "SortOrder": 16,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-1/lesson-16/preparation.html",
+      "SemanticSha256": "4e7a98fcc9905a8508149d371cf4e31773324cb8c7d8da46091a78f8f6ccc781",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.OA.A.1",
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.1.17",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U01:L17",
+      "UnitNumber": 1,
+      "UnitTitle": "Adding, Subtracting, and Working with Data",
+      "LessonNumber": 17,
+      "Title": "Center Day 3 (optional)",
+      "SortOrder": 17,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-1/lesson-17/preparation.html",
+      "SemanticSha256": "607c3f15b403b39d2629a80b9d76c27bbead505159eff163c1f20ed3ea1e1bc1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.D.10",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.D.10",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.D.10",
+        "CCSS:2.NBT.A.2",
+        "CCSS:2.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.1.18",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U01:L18",
+      "UnitNumber": 1,
+      "UnitTitle": "Adding, Subtracting, and Working with Data",
+      "LessonNumber": 18,
+      "Title": "Class Surveys (optional)",
+      "SortOrder": 18,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-1/lesson-18/preparation.html",
+      "SemanticSha256": "c78ed0ca42ca7296933145b655d717957b38bf8523c09676d3d7f8f468461a53",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.D.10",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.D.10",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.D.10",
+        "CCSS:2.OA.A.1",
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.2.1",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U02:L01",
+      "UnitNumber": 2,
+      "UnitTitle": "Adding and Subtracting within 100",
+      "LessonNumber": 1,
+      "Title": "Add and Subtract to Compare",
+      "SortOrder": 19,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-2/lesson-1/preparation.html",
+      "SemanticSha256": "5f59c7f5beefb2967bc765e1c90c61b7c5068f5697ed8c563019e13c00e90cb4",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.D.10",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.D.10",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.D.10",
+        "CCSS:2.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.2.2",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U02:L02",
+      "UnitNumber": 2,
+      "UnitTitle": "Adding and Subtracting within 100",
+      "LessonNumber": 2,
+      "Title": "Find the Unknown Addend PLC Activity",
+      "SortOrder": 20,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-2/lesson-2/preparation.html",
+      "SemanticSha256": "c835f6852625bbaa8dc1c69fed5ce6cbbcd4209f748d71dc39022c3fda9bf5fa",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.9",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.A.2",
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.NBT.B.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.2.3",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U02:L03",
+      "UnitNumber": 2,
+      "UnitTitle": "Adding and Subtracting within 100",
+      "LessonNumber": 3,
+      "Title": "Add or Subtract to Solve Story Problems",
+      "SortOrder": 21,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-2/lesson-3/preparation.html",
+      "SemanticSha256": "3fe8c3d126f1b5104f8cb6877338dd30b3a75f366048f517b873f416c75e6361",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.2.4",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U02:L04",
+      "UnitNumber": 2,
+      "UnitTitle": "Adding and Subtracting within 100",
+      "LessonNumber": 4,
+      "Title": "Center Day 1 (optional)",
+      "SortOrder": 22,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-2/lesson-4/preparation.html",
+      "SemanticSha256": "df8a6e72f222c6395a63daba4f5f142d473dbef1a31f0c09699d11401d1986a4",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.2.5",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U02:L05",
+      "UnitNumber": 2,
+      "UnitTitle": "Adding and Subtracting within 100",
+      "LessonNumber": 5,
+      "Title": "Subtract Your Way PLC Activity",
+      "SortOrder": 23,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-2/lesson-5/preparation.html",
+      "SemanticSha256": "e0257b4f5b0033e2cf59bd000eaa6ed2fdbc72018dd4bca810258693c2468553",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.2.6",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U02:L06",
+      "UnitNumber": 2,
+      "UnitTitle": "Adding and Subtracting within 100",
+      "LessonNumber": 6,
+      "Title": "Compare Methods for Subtraction",
+      "SortOrder": 24,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-2/lesson-6/preparation.html",
+      "SemanticSha256": "2ca5ba7288358ac3403d1148fe479205635cef79698fbf116ae3b85f5c4c26b6",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.2.7",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U02:L07",
+      "UnitNumber": 2,
+      "UnitTitle": "Adding and Subtracting within 100",
+      "LessonNumber": 7,
+      "Title": "Subtract Two Digits",
+      "SortOrder": 25,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-2/lesson-7/preparation.html",
+      "SemanticSha256": "a251def0ef67117314e17d6f4435baaba456c90dc25052c49310f4788a95a25b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.6",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.9",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.NBT.B.6",
+        "CCSS:2.NBT.B.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.2.8",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U02:L08",
+      "UnitNumber": 2,
+      "UnitTitle": "Adding and Subtracting within 100",
+      "LessonNumber": 8,
+      "Title": "Different Ways to Decompose",
+      "SortOrder": 26,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-2/lesson-8/preparation.html",
+      "SemanticSha256": "14e1122d2b962b81d3490b320ff651fee1769c542327229ea00f07c3a8c81ed9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.9",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.NBT.B.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.2.9",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U02:L09",
+      "UnitNumber": 2,
+      "UnitTitle": "Adding and Subtracting within 100",
+      "LessonNumber": 9,
+      "Title": "Add and Subtract Within 100",
+      "SortOrder": 27,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-2/lesson-9/preparation.html",
+      "SemanticSha256": "8d506bf43de06f3ecbd2103c704da25561c09d19104057037775cfa8c80ecf3b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.2.10",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U02:L10",
+      "UnitNumber": 2,
+      "UnitTitle": "Adding and Subtracting within 100",
+      "LessonNumber": 10,
+      "Title": "Center Day 2 (optional)",
+      "SortOrder": 28,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-2/lesson-10/preparation.html",
+      "SemanticSha256": "6327cb06e644b5b64834742735378765c2b9518b90c32ab8d7e1ea37e503ab21",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.9",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.NBT.B.9",
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.2.11",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U02:L11",
+      "UnitNumber": 2,
+      "UnitTitle": "Adding and Subtracting within 100",
+      "LessonNumber": 11,
+      "Title": "How Do You Solve Story Problems?",
+      "SortOrder": 29,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-2/lesson-11/preparation.html",
+      "SemanticSha256": "8c0a50b0dcdc730e7bf8cb58fbf45520a6e296da485e5095158fd5854f917780",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.2.12",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U02:L12",
+      "UnitNumber": 2,
+      "UnitTitle": "Adding and Subtracting within 100",
+      "LessonNumber": 12,
+      "Title": "Story Problems and Diagrams PLC Activity",
+      "SortOrder": 30,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-2/lesson-12/preparation.html",
+      "SemanticSha256": "f4dfabe5104ca50ee13d7e42fa59c68b284749b0c3bdb967ff3d842ccaa4fd3b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.2.13",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U02:L13",
+      "UnitNumber": 2,
+      "UnitTitle": "Adding and Subtracting within 100",
+      "LessonNumber": 13,
+      "Title": "Story Problems and Equations",
+      "SortOrder": 31,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-2/lesson-13/preparation.html",
+      "SemanticSha256": "34f8d3007933c2976b301c0d8afcf84309bd210ec62f0416e04633457e5774c5",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.2.14",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U02:L14",
+      "UnitNumber": 2,
+      "UnitTitle": "Adding and Subtracting within 100",
+      "LessonNumber": 14,
+      "Title": "Solve It Your Way",
+      "SortOrder": 32,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-2/lesson-14/preparation.html",
+      "SemanticSha256": "28b2657cb685e62ed538e12da8a5129efd43776cb1a45d944877034f691bb506",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.2.15",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U02:L15",
+      "UnitNumber": 2,
+      "UnitTitle": "Adding and Subtracting within 100",
+      "LessonNumber": 15,
+      "Title": "Center Day 3 (optional)",
+      "SortOrder": 33,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-2/lesson-15/preparation.html",
+      "SemanticSha256": "2f0c3ab71a665a3363acf307548027f38bfe357b5ab5b7f7dfb36ff9ff94d09f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.A.1",
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.2.16",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U02:L16",
+      "UnitNumber": 2,
+      "UnitTitle": "Adding and Subtracting within 100",
+      "LessonNumber": 16,
+      "Title": "Our Market’s Inventory (optional)",
+      "SortOrder": 34,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-2/lesson-16/preparation.html",
+      "SemanticSha256": "650485df82686406a0e4d59ae6ee634bec00b4665c2e2a8599b33418d7ad5e14",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.6",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.A.1",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.NBT.B.6",
+        "CCSS:2.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.3.1",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U03:L01",
+      "UnitNumber": 3,
+      "UnitTitle": "Measuring Length",
+      "LessonNumber": 1,
+      "Title": "Standard Units of Measure",
+      "SortOrder": 35,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-3/lesson-1/preparation.html",
+      "SemanticSha256": "fa0c69434230bc02f76e2e568ce29d29f578e0e1147e3c51eb829ffc72d1a5ad",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "1.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "2.3.2",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U03:L02",
+      "UnitNumber": 3,
+      "UnitTitle": "Measuring Length",
+      "LessonNumber": 2,
+      "Title": "Measure in Centimeters PLC Activity",
+      "SortOrder": 36,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-3/lesson-2/preparation.html",
+      "SemanticSha256": "986b801e2c278050c94d00f3bcdae961c15e5c9433f87d34340ce2f5e77d0283",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.4",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.A.1",
+        "CCSS:2.MD.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.3.3",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U03:L03",
+      "UnitNumber": 3,
+      "UnitTitle": "Measuring Length",
+      "LessonNumber": 3,
+      "Title": "Create and Use a Ruler",
+      "SortOrder": 37,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-3/lesson-3/preparation.html",
+      "SemanticSha256": "cff202c39fef2863d2b7f76bb84ea021a5774614cacf7c9aa67a6cfac8ec6312",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.4",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.6",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.A.1",
+        "CCSS:2.MD.A.4",
+        "CCSS:2.MD.B.6",
+        "CCSS:2.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.3.4",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U03:L04",
+      "UnitNumber": 3,
+      "UnitTitle": "Measuring Length",
+      "LessonNumber": 4,
+      "Title": "Measure and Estimate in Centimeters",
+      "SortOrder": 38,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-3/lesson-4/preparation.html",
+      "SemanticSha256": "7b4df15924d90f30ee89ef4cd52f9b68a06f92719605eb993cad5379d01f9758",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.A.1",
+        "CCSS:2.MD.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.3.5",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U03:L05",
+      "UnitNumber": 3,
+      "UnitTitle": "Measuring Length",
+      "LessonNumber": 5,
+      "Title": "Measure in Meters",
+      "SortOrder": 39,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-3/lesson-5/preparation.html",
+      "SemanticSha256": "4fa94c9e8b1d8c00a71c4c6499c98cfce6ae8b9b6eb06f57551aab154dac646d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.A.1",
+        "CCSS:2.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.3.6",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U03:L06",
+      "UnitNumber": 3,
+      "UnitTitle": "Measuring Length",
+      "LessonNumber": 6,
+      "Title": "Compare Reptile Lengths in Story Problems",
+      "SortOrder": 40,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-3/lesson-6/preparation.html",
+      "SemanticSha256": "b8e829eb694ccfd88aaa0ffb0cfa923376e18c39583b0d9fd9d9e34ff2ce7516",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.A.1",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.B.5",
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.A.1",
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.3.7",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U03:L07",
+      "UnitNumber": 3,
+      "UnitTitle": "Measuring Length",
+      "LessonNumber": 7,
+      "Title": "Center Day 1 (optional)",
+      "SortOrder": 41,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-3/lesson-7/preparation.html",
+      "SemanticSha256": "944ddc505442f0fe3f2aea8be2ff2d8146dd478c6359ff1861bda3f04d0601b2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.A.1",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.A.1",
+        "CCSS:2.MD.A.3",
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.3.8",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U03:L08",
+      "UnitNumber": 3,
+      "UnitTitle": "Measuring Length",
+      "LessonNumber": 8,
+      "Title": "What is an Inch?",
+      "SortOrder": 42,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-3/lesson-8/preparation.html",
+      "SemanticSha256": "1e1a3c6396e8afd1bf6eeb533a634eb1431897ef2fe0c09ffd60aefa68754a5d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.A.1",
+        "CCSS:2.MD.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.3.9",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U03:L09",
+      "UnitNumber": 3,
+      "UnitTitle": "Measuring Length",
+      "LessonNumber": 9,
+      "Title": "From Feet to Inches",
+      "SortOrder": 43,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-3/lesson-9/preparation.html",
+      "SemanticSha256": "83525c67722d14266a01430ee253d7c08eea4278f4e44342d1aa72ba7f052890",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.A.1",
+        "CCSS:2.MD.A.2",
+        "CCSS:2.MD.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.3.10",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U03:L10",
+      "UnitNumber": 3,
+      "UnitTitle": "Measuring Length",
+      "LessonNumber": 10,
+      "Title": "Measure with a Torn Tape",
+      "SortOrder": 44,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-3/lesson-10/preparation.html",
+      "SemanticSha256": "e0a2939042b94dcfa9dbeb0ba4f2d3844033cef2d63dc451a280b51737bc04c1",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "1.OA.D.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.MD.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.3.11",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U03:L11",
+      "UnitNumber": 3,
+      "UnitTitle": "Measuring Length",
+      "LessonNumber": 11,
+      "Title": "Saree Silk Stories: Necklaces and Bracelets PLC Activity",
+      "SortOrder": 45,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-3/lesson-11/preparation.html",
+      "SemanticSha256": "96a1496033c53af04c466bbcf66fd03deae8bc851f2d6def4b38ba4f422c7cab",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.B.5",
+        "CCSS:2.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.3.12",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U03:L12",
+      "UnitNumber": 3,
+      "UnitTitle": "Measuring Length",
+      "LessonNumber": 12,
+      "Title": "Saree Silk Stories: Friendship Bracelets",
+      "SortOrder": 46,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-3/lesson-12/preparation.html",
+      "SemanticSha256": "3e667f0076c106a5aef22a5e295ad5e5da8508fb82a3bbb6a3fd747ce24e5306",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "1.NBT.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.B.5",
+        "CCSS:2.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.3.13",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U03:L13",
+      "UnitNumber": 3,
+      "UnitTitle": "Measuring Length",
+      "LessonNumber": 13,
+      "Title": "Center Day 2 (optional)",
+      "SortOrder": 47,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-3/lesson-13/preparation.html",
+      "SemanticSha256": "2851f2d582ae826ae39136c9b0370eb8511b47da749e233aab9194182edd3a29",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.4",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.A.1",
+        "CCSS:2.MD.A.3",
+        "CCSS:2.MD.A.4",
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.3.14",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U03:L14",
+      "UnitNumber": 3,
+      "UnitTitle": "Measuring Length",
+      "LessonNumber": 14,
+      "Title": "What is a Line Plot?",
+      "SortOrder": 48,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-3/lesson-14/preparation.html",
+      "SemanticSha256": "ff9356260434dcd6bcb9e9a70e95212df508376bd5984530fce59d6bef637919",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.D.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.D.9",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.MD.D.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.A.1",
+        "CCSS:2.MD.D.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.3.15",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U03:L15",
+      "UnitNumber": 3,
+      "UnitTitle": "Measuring Length",
+      "LessonNumber": 15,
+      "Title": "Create Line Plots PLC Activity",
+      "SortOrder": 49,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-3/lesson-15/preparation.html",
+      "SemanticSha256": "1e4abf13b1c722b685fb2001382470d60ace425cecf6ba3201bf39cb623e0bd7",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.D.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.D.9",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.A.1",
+        "CCSS:2.MD.D.9",
+        "CCSS:2.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.3.16",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U03:L16",
+      "UnitNumber": 3,
+      "UnitTitle": "Measuring Length",
+      "LessonNumber": 16,
+      "Title": "Interpret Measurement Data",
+      "SortOrder": 50,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-3/lesson-16/preparation.html",
+      "SemanticSha256": "e0686077dcc5860f699460fe81634e0ba7cbaeffcad2965497ac939269bb0bda",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.D.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.D.9",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.D.9",
+        "CCSS:2.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.3.17",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U03:L17",
+      "UnitNumber": 3,
+      "UnitTitle": "Measuring Length",
+      "LessonNumber": 17,
+      "Title": "Center Day 3 (optional)",
+      "SortOrder": 51,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-3/lesson-17/preparation.html",
+      "SemanticSha256": "0647e028a91f35ae3af0e59ec8508f02cafa4be60a7b64ba834311b4277192a2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.4",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.D.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.D.9",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 5
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 6
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.A.1",
+        "CCSS:2.MD.A.3",
+        "CCSS:2.MD.A.4",
+        "CCSS:2.MD.D.9",
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.3.18",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U03:L18",
+      "UnitNumber": 3,
+      "UnitTitle": "Measuring Length",
+      "LessonNumber": 18,
+      "Title": "Make a Yard Stick (optional)",
+      "SortOrder": 52,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-3/lesson-18/preparation.html",
+      "SemanticSha256": "5e86fe2208ea628be8d2e42c7a570f5d32d07da8f3f1c089d269cbe4ac48da40",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.4",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.5",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.6",
+          "SortOrder": 5
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.D.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.D.9",
+          "SortOrder": 6
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 7
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.A.1",
+        "CCSS:2.MD.A.4",
+        "CCSS:2.MD.B.5",
+        "CCSS:2.MD.B.6",
+        "CCSS:2.MD.D.9",
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.4.1",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U04:L01",
+      "UnitNumber": 4,
+      "UnitTitle": "Addition and Subtraction on the Number Line",
+      "LessonNumber": 1,
+      "Title": "Whole Numbers on the Number Line",
+      "SortOrder": 53,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-4/lesson-1/preparation.html",
+      "SemanticSha256": "cb781aa1c388f4c20fbdc54bab10b52dd3a12e0e1775ccc17b9e26771001904c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.MD.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.B.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.4.2",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U04:L02",
+      "UnitNumber": 4,
+      "UnitTitle": "Addition and Subtraction on the Number Line",
+      "LessonNumber": 2,
+      "Title": "Features of a Number Line PLC Activity",
+      "SortOrder": 54,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-4/lesson-2/preparation.html",
+      "SemanticSha256": "d9d1d4e49d5b020930b7b544a87fe1a0010354e0edd9147685e8fe96e818e080",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.B.6",
+        "CCSS:2.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.4.3",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U04:L03",
+      "UnitNumber": 4,
+      "UnitTitle": "Addition and Subtraction on the Number Line",
+      "LessonNumber": 3,
+      "Title": "Unlabeled Tick Marks",
+      "SortOrder": 55,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-4/lesson-3/preparation.html",
+      "SemanticSha256": "d5ba108c016f4f604d110f7ac527d4fe9f4e21bd63abc7f8f94e41172e0f7850",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.B.6",
+        "CCSS:2.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.4.4",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U04:L04",
+      "UnitNumber": 4,
+      "UnitTitle": "Addition and Subtraction on the Number Line",
+      "LessonNumber": 4,
+      "Title": "Compare Numbers on a Number Line",
+      "SortOrder": 56,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-4/lesson-4/preparation.html",
+      "SemanticSha256": "8bab5a33b60822628337e854711d917bde5fe170241aeb117658688ce60d3862",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.B.6",
+        "CCSS:2.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.4.5",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U04:L05",
+      "UnitNumber": 4,
+      "UnitTitle": "Addition and Subtraction on the Number Line",
+      "LessonNumber": 5,
+      "Title": "Estimate on a Number Line",
+      "SortOrder": 57,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-4/lesson-5/preparation.html",
+      "SemanticSha256": "314c785673c5f6a1e1173e2c139f92de5a3811ccecc5d67314f8d349b80af292",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.6",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.B.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.4.6",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U04:L06",
+      "UnitNumber": 4,
+      "UnitTitle": "Addition and Subtraction on the Number Line",
+      "LessonNumber": 6,
+      "Title": "Center Day 1 (optional)",
+      "SortOrder": 58,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-4/lesson-6/preparation.html",
+      "SemanticSha256": "7dde0dc10d46e58de40c828588e8a34d4c776a6659a5bd4d51f549f9647b67a4",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.B.6",
+        "CCSS:2.NBT.A.2",
+        "CCSS:2.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.4.7",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U04:L07",
+      "UnitNumber": 4,
+      "UnitTitle": "Addition and Subtraction on the Number Line",
+      "LessonNumber": 7,
+      "Title": "Addition and Subtraction on the Number Line",
+      "SortOrder": 59,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-4/lesson-7/preparation.html",
+      "SemanticSha256": "da6057120755bad95d2ead7c1863608d8f31e1fafda5093532059c28adbcf9fb",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.6",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.B.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.4.8",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U04:L08",
+      "UnitNumber": 4,
+      "UnitTitle": "Addition and Subtraction on the Number Line",
+      "LessonNumber": 8,
+      "Title": "Equations on a Number Line PLC Activity",
+      "SortOrder": 60,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-4/lesson-8/preparation.html",
+      "SemanticSha256": "2ed984f7c251f1f7921307ee7d6b3d9a94e102d1c96eb5b217d4c03701446932",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.B.6",
+        "CCSS:2.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.4.9",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U04:L09",
+      "UnitNumber": 4,
+      "UnitTitle": "Addition and Subtraction on the Number Line",
+      "LessonNumber": 9,
+      "Title": "The Difference Between Numbers",
+      "SortOrder": 61,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-4/lesson-9/preparation.html",
+      "SemanticSha256": "cba3b07964d39bfe23a89390bffbd8bb7825ace66bda9aa0a5b04ae4ae7c54c3",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.6",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.B.5",
+        "CCSS:2.MD.B.6",
+        "CCSS:2.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.4.10",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U04:L10",
+      "UnitNumber": 4,
+      "UnitTitle": "Addition and Subtraction on the Number Line",
+      "LessonNumber": 10,
+      "Title": "Place Value and the Number Line",
+      "SortOrder": 62,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-4/lesson-10/preparation.html",
+      "SemanticSha256": "a4adb4cfac91bfa6338e7aa7ab519b80d0f2b2b5bcf2d3d0142567b9974af659",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.B.6",
+        "CCSS:2.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.4.11",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U04:L11",
+      "UnitNumber": 4,
+      "UnitTitle": "Addition and Subtraction on the Number Line",
+      "LessonNumber": 11,
+      "Title": "Different Ways to Add and Subtract",
+      "SortOrder": 63,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-4/lesson-11/preparation.html",
+      "SemanticSha256": "ec2308d6d59f28bbc5ef626f5dbf1b844664f9d4fefe858a5da865615edb7425",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.B.6",
+        "CCSS:2.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.4.12",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U04:L12",
+      "UnitNumber": 4,
+      "UnitTitle": "Addition and Subtraction on the Number Line",
+      "LessonNumber": 12,
+      "Title": "Equations with Unknowns",
+      "SortOrder": 64,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-4/lesson-12/preparation.html",
+      "SemanticSha256": "5914e387abc234747d265f65307c9ff636bd488eda2fe2fe4c3877062573c8f0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.A.1",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.B.6",
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.4.13",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U04:L13",
+      "UnitNumber": 4,
+      "UnitTitle": "Addition and Subtraction on the Number Line",
+      "LessonNumber": 13,
+      "Title": "Represent Story Problems",
+      "SortOrder": 65,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-4/lesson-13/preparation.html",
+      "SemanticSha256": "cdea8bc00688bfaab1197922b6bd76d31fcbbc7727e8bff81c3d1ae46a6e12b0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.A.1",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.B.6",
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.4.14",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U04:L14",
+      "UnitNumber": 4,
+      "UnitTitle": "Addition and Subtraction on the Number Line",
+      "LessonNumber": 14,
+      "Title": "Center Day 2 (optional)",
+      "SortOrder": 66,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-4/lesson-14/preparation.html",
+      "SemanticSha256": "98d66fd0b3067a16f1d2c6e8763b3dc88db3ea96e0a884fc2432977c66c4421a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.B.6",
+        "CCSS:2.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.4.15",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U04:L15",
+      "UnitNumber": 4,
+      "UnitTitle": "Addition and Subtraction on the Number Line",
+      "LessonNumber": 15,
+      "Title": "Riddles (optional)",
+      "SortOrder": 67,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-4/lesson-15/preparation.html",
+      "SemanticSha256": "aa3a61fefb89b2fa22616826bf46752d423706e286e87e832ee4cbab9e473a58",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.A.1",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.B.6",
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.5.1",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U05:L01",
+      "UnitNumber": 5,
+      "UnitTitle": "Numbers to 1,000",
+      "LessonNumber": 1,
+      "Title": "How Do We Compose a Hundred?",
+      "SortOrder": 68,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-5/lesson-1/preparation.html",
+      "SemanticSha256": "0387047de9dd25b9b45a1f5d941d795b4451b4ce61c8059b64c22f4525eb13f7",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.1.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:2.NBT.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.2",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.A.1",
+        "CCSS:2.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.5.2",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U05:L02",
+      "UnitNumber": 5,
+      "UnitTitle": "Numbers to 1,000",
+      "LessonNumber": 2,
+      "Title": "Make Hundreds PLC Activity",
+      "SortOrder": 69,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-5/lesson-2/preparation.html",
+      "SemanticSha256": "add71b6a31ba0f29dce0879ae97d03d5ca80452217ae34d307642e083893ed54",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.1.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:2.NBT.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.1.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:2.NBT.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.2",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.A.1",
+        "CCSS:2.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.5.3",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U05:L03",
+      "UnitNumber": 5,
+      "UnitTitle": "Numbers to 1,000",
+      "LessonNumber": 3,
+      "Title": "Compose Three-digit Numbers",
+      "SortOrder": 70,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-5/lesson-3/preparation.html",
+      "SemanticSha256": "322c9eeb0e71ee18e1f5690aa48d0ebc803c3d4768a9b8c7a62607ea610877c6",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.1.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:2.NBT.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.1.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:2.NBT.A.1",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.2",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.A.1",
+        "CCSS:2.NBT.A.2",
+        "CCSS:2.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.5.4",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U05:L04",
+      "UnitNumber": 5,
+      "UnitTitle": "Numbers to 1,000",
+      "LessonNumber": 4,
+      "Title": "Write Three-digit Numbers",
+      "SortOrder": 71,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-5/lesson-4/preparation.html",
+      "SemanticSha256": "88e0aecd11f5fe8214a65607939b1933dcc452b2eb2fe64d4b0ec96f52995b10",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.A.1",
+        "CCSS:2.NBT.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.5.5",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U05:L05",
+      "UnitNumber": 5,
+      "UnitTitle": "Numbers to 1,000",
+      "LessonNumber": 5,
+      "Title": "Expanded Form of Numbers",
+      "SortOrder": 72,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-5/lesson-5/preparation.html",
+      "SemanticSha256": "4cf33051aab53b98524801e17e02c83ab65b285a9267d0a8ac21e23816781ac6",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.NBT.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.A.1",
+        "CCSS:2.NBT.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.5.6",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U05:L06",
+      "UnitNumber": 5,
+      "UnitTitle": "Numbers to 1,000",
+      "LessonNumber": 6,
+      "Title": "Represent Numbers in Different Ways",
+      "SortOrder": 73,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-5/lesson-6/preparation.html",
+      "SemanticSha256": "3b0039592965ccb8483f76fc1a79d387cf43ae63ae3960f9eb4763d6cfe065b1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.3",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.5.7",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U05:L07",
+      "UnitNumber": 5,
+      "UnitTitle": "Numbers to 1,000",
+      "LessonNumber": 7,
+      "Title": "Center Day 1 (optional)",
+      "SortOrder": 74,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-5/lesson-7/preparation.html",
+      "SemanticSha256": "77d68015bb48937410eb8b4a33452c4a562e6f78955739591279478ef10f72cd",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.1.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:2.NBT.A.1",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 5
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.NBT.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 6
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.B.6",
+        "CCSS:2.NBT.A.1",
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.5.8",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U05:L08",
+      "UnitNumber": 5,
+      "UnitTitle": "Numbers to 1,000",
+      "LessonNumber": 8,
+      "Title": "Three-digit Numbers on the Number Line",
+      "SortOrder": 75,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-5/lesson-8/preparation.html",
+      "SemanticSha256": "bc4bbf4612f0ebf85987ef4d7c3cc74ddb5280b500185da6ac8840fe9f108da8",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.2",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.B.6",
+        "CCSS:2.NBT.A.1",
+        "CCSS:2.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.5.9",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U05:L09",
+      "UnitNumber": 5,
+      "UnitTitle": "Numbers to 1,000",
+      "LessonNumber": 9,
+      "Title": "Compare Numbers on the Number Line PLC Activity",
+      "SortOrder": 76,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-5/lesson-9/preparation.html",
+      "SemanticSha256": "fb9bd4676bb2c09390bcd12687756a2ebe319f9397d6f5ef3d9bb15f683f7f2e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.4",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.B.6",
+        "CCSS:2.NBT.A.1",
+        "CCSS:2.NBT.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.5.10",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U05:L10",
+      "UnitNumber": 5,
+      "UnitTitle": "Numbers to 1,000",
+      "LessonNumber": 10,
+      "Title": "Place Value Comparisons (Part 1)",
+      "SortOrder": 77,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-5/lesson-10/preparation.html",
+      "SemanticSha256": "fec350daf90666711ed5d1b9ed4092b889bc5a5f27c5c4103a625d52a0a2ea8b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.4",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.8",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.A.4",
+        "CCSS:2.NBT.B.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.5.11",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U05:L11",
+      "UnitNumber": 5,
+      "UnitTitle": "Numbers to 1,000",
+      "LessonNumber": 11,
+      "Title": "Place Value Comparisons (Part 2)",
+      "SortOrder": 78,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-5/lesson-11/preparation.html",
+      "SemanticSha256": "c6ee452666cdac55c2f04d5b6ffc8d5bca60100deb7bcfe83d5dd6000aaa008a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.4",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.A.1",
+        "CCSS:2.NBT.A.3",
+        "CCSS:2.NBT.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.5.12",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U05:L12",
+      "UnitNumber": 5,
+      "UnitTitle": "Numbers to 1,000",
+      "LessonNumber": 12,
+      "Title": "Order Numbers",
+      "SortOrder": 79,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-5/lesson-12/preparation.html",
+      "SemanticSha256": "4342050d861173d1bb6d94dab84741a4bd199af3a0a07a6766d80ca6a8525e44",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.4",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.8",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.A.1",
+        "CCSS:2.NBT.A.4",
+        "CCSS:2.NBT.B.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.5.13",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U05:L13",
+      "UnitNumber": 5,
+      "UnitTitle": "Numbers to 1,000",
+      "LessonNumber": 13,
+      "Title": "Center Day 2 (optional)",
+      "SortOrder": 80,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-5/lesson-13/preparation.html",
+      "SemanticSha256": "6979f183809a60c1f2d5dc41c62c3146fb8532bf9de7a687617dd59700851dd4",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.4",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.NBT.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.A.1",
+        "CCSS:2.NBT.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.5.14",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U05:L14",
+      "UnitNumber": 5,
+      "UnitTitle": "Numbers to 1,000",
+      "LessonNumber": 14,
+      "Title": "Hundreds of Objects (optional)",
+      "SortOrder": 81,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-5/lesson-14/preparation.html",
+      "SemanticSha256": "345c5adcd5ee7722092f3e084ce124c4d58094ccebcedb1980eee85735a5b920",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.A.1",
+        "CCSS:2.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.6.1",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U06:L01",
+      "UnitNumber": 6,
+      "UnitTitle": "Geometry, Time, and Money",
+      "LessonNumber": 1,
+      "Title": "Identify and Sort Shapes",
+      "SortOrder": 82,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-6/lesson-1/preparation.html",
+      "SemanticSha256": "f3108f13a2b2a5c0135e80d785bb731d0a5db3e55402bdd4b0cc1678177de804",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "1.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.G.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.6.2",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U06:L02",
+      "UnitNumber": 6,
+      "UnitTitle": "Geometry, Time, and Money",
+      "LessonNumber": 2,
+      "Title": "Draw Shapes PLC Activity",
+      "SortOrder": 83,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-6/lesson-2/preparation.html",
+      "SemanticSha256": "d8602168e538db47408c6fda417b0ebd4e67600a26460b5b6f974dba9d9d5436",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.G.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.6.3",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U06:L03",
+      "UnitNumber": 6,
+      "UnitTitle": "Geometry, Time, and Money",
+      "LessonNumber": 3,
+      "Title": "Specific Side Lengths",
+      "SortOrder": 84,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-6/lesson-3/preparation.html",
+      "SemanticSha256": "407d9a17e9a6b75e0b7cb8bd01970359cbdb3f4da3436b9aa31dd6038ae9cb37",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.G.A.1",
+        "CCSS:2.MD.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.6.4",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U06:L04",
+      "UnitNumber": 6,
+      "UnitTitle": "Geometry, Time, and Money",
+      "LessonNumber": 4,
+      "Title": "Solid Shapes",
+      "SortOrder": 85,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-6/lesson-4/preparation.html",
+      "SemanticSha256": "ffd911bc6c371714f7cc9e9165bf69c761bef4f22649af5b4d1fc1c3977f78d3",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.G.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.6.5",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U06:L05",
+      "UnitNumber": 6,
+      "UnitTitle": "Geometry, Time, and Money",
+      "LessonNumber": 5,
+      "Title": "Center Day 1 (optional)",
+      "SortOrder": 86,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-6/lesson-5/preparation.html",
+      "SemanticSha256": "11f0bb3b8b5b404df024f794e7bf76f612426101c3c29ca5df50bc53bbe84a1e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.G.A.1",
+        "CCSS:2.NBT.A.3",
+        "CCSS:2.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.6.6",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U06:L06",
+      "UnitNumber": 6,
+      "UnitTitle": "Geometry, Time, and Money",
+      "LessonNumber": 6,
+      "Title": "Compose and Decompose Shapes",
+      "SortOrder": 87,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-6/lesson-6/preparation.html",
+      "SemanticSha256": "2dbf65c9a7ec1351e7d6c6fd7552b7c2b8c4d55fa4e06e115432439c1af264b4",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "1.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.G.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.G.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.6.7",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U06:L07",
+      "UnitNumber": 6,
+      "UnitTitle": "Geometry, Time, and Money",
+      "LessonNumber": 7,
+      "Title": "Make Halves, Thirds, and Fourths PLC Activity",
+      "SortOrder": 88,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-6/lesson-7/preparation.html",
+      "SemanticSha256": "1e25720b6b7df169dc117bff3b668f24e4f58e4fdb06ef3c08f9588d36da0578",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.G.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.G.A.3",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.G.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.6.8",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U06:L08",
+      "UnitNumber": 6,
+      "UnitTitle": "Geometry, Time, and Money",
+      "LessonNumber": 8,
+      "Title": "Are All Pieces Created Equal?",
+      "SortOrder": 89,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-6/lesson-8/preparation.html",
+      "SemanticSha256": "04dbcb4d4e8c5a8f3a29f55d1c4e9055695a0c93e8633f399b71bbd8e4bdc724",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.G.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.G.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.G.A.3",
+        "CCSS:2.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.6.9",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U06:L09",
+      "UnitNumber": 6,
+      "UnitTitle": "Geometry, Time, and Money",
+      "LessonNumber": 9,
+      "Title": "You Ate the Whole Thing",
+      "SortOrder": 90,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-6/lesson-9/preparation.html",
+      "SemanticSha256": "9ed556e57826d07daf19b6f3058b8be5027115dd1f10ffd179416523e702685b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.G.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.G.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.MD.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.G.A.3",
+        "CCSS:2.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.6.10",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U06:L10",
+      "UnitNumber": 6,
+      "UnitTitle": "Geometry, Time, and Money",
+      "LessonNumber": 10,
+      "Title": "Center Day 2 (optional)",
+      "SortOrder": 91,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-6/lesson-10/preparation.html",
+      "SemanticSha256": "384d097bf057b21e34abec2329e91c880553354141f1cbe786fe11b970b2ba17",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.G.A.1",
+        "CCSS:2.NBT.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.6.11",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U06:L11",
+      "UnitNumber": 6,
+      "UnitTitle": "Geometry, Time, and Money",
+      "LessonNumber": 11,
+      "Title": "Tell Time with Halves and Quarters",
+      "SortOrder": 92,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-6/lesson-11/preparation.html",
+      "SemanticSha256": "e0787ea584973585f095a97bb474eab200914f35cdd07fc51f0551353ac3e374",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "1.MD.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.C.7",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.MD.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.6.12",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U06:L12",
+      "UnitNumber": 6,
+      "UnitTitle": "Geometry, Time, and Money",
+      "LessonNumber": 12,
+      "Title": "Count by 5 to Tell Time",
+      "SortOrder": 93,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-6/lesson-12/preparation.html",
+      "SemanticSha256": "439b83e2d8756c212fb6d30105e71720bb931cebbf9ed54a2fa09ee75ef05701",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.C.7",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.MD.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.C.7",
+        "CCSS:2.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.6.13",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U06:L13",
+      "UnitNumber": 6,
+      "UnitTitle": "Geometry, Time, and Money",
+      "LessonNumber": 13,
+      "Title": "Is It a.m. or p.m.? PLC Activity",
+      "SortOrder": 94,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-6/lesson-13/preparation.html",
+      "SemanticSha256": "65697d2a65606d756f153459b189d09cb210f5b30ddee0f443e5d356b1ca696d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.C.7",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.6.14",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U06:L14",
+      "UnitNumber": 6,
+      "UnitTitle": "Geometry, Time, and Money",
+      "LessonNumber": 14,
+      "Title": "Center Day 3 (optional)",
+      "SortOrder": 95,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-6/lesson-14/preparation.html",
+      "SemanticSha256": "a6da4ac7ef228a4eebc005be886709c99f46ab1ea9e345ec0902d1abf993d9f4",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.G.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.6",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.G.A.1",
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.NBT.B.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.6.15",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U06:L15",
+      "UnitNumber": 6,
+      "UnitTitle": "Geometry, Time, and Money",
+      "LessonNumber": 15,
+      "Title": "Identify Pennies, Nickels, and Dimes",
+      "SortOrder": 96,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-6/lesson-15/preparation.html",
+      "SemanticSha256": "cfac24126b7912d7b7f29754b70c5939e79cebe769168faee765953e9251243d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.C.8",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.6",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.8",
+          "SortOrder": 5
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.MD.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 6
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.C.8",
+        "CCSS:2.NBT.A.2",
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.NBT.B.6",
+        "CCSS:2.NBT.B.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.6.16",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U06:L16",
+      "UnitNumber": 6,
+      "UnitTitle": "Geometry, Time, and Money",
+      "LessonNumber": 16,
+      "Title": "Identify Quarters PLC Activity",
+      "SortOrder": 97,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-6/lesson-16/preparation.html",
+      "SemanticSha256": "f312f9542a97c286f38822255f3a49e183e55cd21adc1bfb71b55e86cf08c143",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.C.8",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.C.8",
+        "CCSS:2.NBT.A.2",
+        "CCSS:2.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.6.17",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U06:L17",
+      "UnitNumber": 6,
+      "UnitTitle": "Geometry, Time, and Money",
+      "LessonNumber": 17,
+      "Title": "Let’s Make a Dollar",
+      "SortOrder": 98,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-6/lesson-17/preparation.html",
+      "SemanticSha256": "7f2b781bbbd3aaade4287017391fb0e030e7b92b33e1f2bce787bcd26187edc6",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.C.8",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.6",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.C.8",
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.NBT.B.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.6.18",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U06:L18",
+      "UnitNumber": 6,
+      "UnitTitle": "Geometry, Time, and Money",
+      "LessonNumber": 18,
+      "Title": "Money Problems",
+      "SortOrder": 99,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-6/lesson-18/preparation.html",
+      "SemanticSha256": "52ac5cec239d788f0cdc0ae04dd23c14c75b054451c3c655c6b88dbb76c6a2f7",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.C.8",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.A.1",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.C.8",
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.6.19",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U06:L19",
+      "UnitNumber": 6,
+      "UnitTitle": "Geometry, Time, and Money",
+      "LessonNumber": 19,
+      "Title": "More Money Problems",
+      "SortOrder": 100,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-6/lesson-19/preparation.html",
+      "SemanticSha256": "bb5c493ec95ff4eb5c8f25b9f5c9f1d8ea7f68b6b36c72674d97d8eb5d11959a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.C.8",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.A.1",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.C.8",
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.6.20",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U06:L20",
+      "UnitNumber": 6,
+      "UnitTitle": "Geometry, Time, and Money",
+      "LessonNumber": 20,
+      "Title": "Center Day 4 (optional)",
+      "SortOrder": 101,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-6/lesson-20/preparation.html",
+      "SemanticSha256": "e7c283286407f2b63e581f5246e5525f7c3d52e11f562cba721c145eaa0b3b9e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.G.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.C.8",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.6",
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.G.A.1",
+        "CCSS:2.MD.C.8",
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.NBT.B.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.6.21",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U06:L21",
+      "UnitNumber": 6,
+      "UnitTitle": "Geometry, Time, and Money",
+      "LessonNumber": 21,
+      "Title": "Pattern Block Puzzles (optional)",
+      "SortOrder": 102,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-6/lesson-21/preparation.html",
+      "SemanticSha256": "630bb4e3ff0036a1ec1e525d3f389be912482d24eee35d85c6671b24f0b1491f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.C.8",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.A.1",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.G.A.1",
+        "CCSS:2.MD.C.8",
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.7.1",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U07:L01",
+      "UnitNumber": 7,
+      "UnitTitle": "Adding and Subtracting within 1,000",
+      "LessonNumber": 1,
+      "Title": "Compare, Count on, and Count Back",
+      "SortOrder": 103,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-7/lesson-1/preparation.html",
+      "SemanticSha256": "53c6deb531554dca5da831f206648a40393558bb8a3388ee5f9bbdcc90809989",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.7",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.8",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.A.2",
+        "CCSS:2.NBT.B.7",
+        "CCSS:2.NBT.B.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.7.2",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U07:L02",
+      "UnitNumber": 7,
+      "UnitTitle": "Adding and Subtracting within 1,000",
+      "LessonNumber": 2,
+      "Title": "Add and Subtract with Tens and Hundreds",
+      "SortOrder": 104,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-7/lesson-2/preparation.html",
+      "SemanticSha256": "65a48a569172aeee4da6e3579e3304e8a1a384328582635bc7abfd18f492e8a4",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.NBT.B.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.7.3",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U07:L03",
+      "UnitNumber": 7,
+      "UnitTitle": "Adding and Subtracting within 1,000",
+      "LessonNumber": 3,
+      "Title": "Count on or Count Back to Subtract",
+      "SortOrder": 105,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-7/lesson-3/preparation.html",
+      "SemanticSha256": "ddd1845c6c9aca5580737c14e4e3db8548cc9edcadcb2803b015ff8de7fc1751",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.7",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.7.4",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U07:L04",
+      "UnitNumber": 7,
+      "UnitTitle": "Adding and Subtracting within 1,000",
+      "LessonNumber": 4,
+      "Title": "Add and Subtract Three-digit Numbers in Different Ways PLC Activity",
+      "SortOrder": 106,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-7/lesson-4/preparation.html",
+      "SemanticSha256": "5ed17c8d5443135ce4595a0e7b3da991bcaf50625ba64620c7e2eb478193a0bf",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.7",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.8",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.9",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.7",
+        "CCSS:2.NBT.B.8",
+        "CCSS:2.NBT.B.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.7.5",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U07:L05",
+      "UnitNumber": 7,
+      "UnitTitle": "Adding and Subtracting within 1,000",
+      "LessonNumber": 5,
+      "Title": "Center Day 1 (optional)",
+      "SortOrder": 107,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-7/lesson-5/preparation.html",
+      "SemanticSha256": "4388d3b1df6ff39536e5d8551f68e17bb4c9b8f0b6020a5910c5f9b6d2903d91",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.4",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.7",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.A.4",
+        "CCSS:2.NBT.B.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.7.6",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U07:L06",
+      "UnitNumber": 7,
+      "UnitTitle": "Adding and Subtracting within 1,000",
+      "LessonNumber": 6,
+      "Title": "Use a Ten to Add Within 1,000",
+      "SortOrder": 108,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-7/lesson-6/preparation.html",
+      "SemanticSha256": "f00932cb91cdcc5c2c9ce3b0e42f1dbe408e60f8074a34fa503a58f3b979c9ac",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.NBT.B.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.7.7",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U07:L07",
+      "UnitNumber": 7,
+      "UnitTitle": "Adding and Subtracting within 1,000",
+      "LessonNumber": 7,
+      "Title": "Compose a Larger Unit PLC Activity",
+      "SortOrder": 109,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-7/lesson-7/preparation.html",
+      "SemanticSha256": "bc4cdf0313cf2e3135b0e57fac96252bc3ae8541aa268148b20dcab7fed55c70",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.7",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.8",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.NBT.B.7",
+        "CCSS:2.NBT.B.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.7.8",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U07:L08",
+      "UnitNumber": 7,
+      "UnitTitle": "Adding and Subtracting within 1,000",
+      "LessonNumber": 8,
+      "Title": "Compose Tens and Hundreds to Add",
+      "SortOrder": 110,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-7/lesson-8/preparation.html",
+      "SemanticSha256": "3ae5b533c0506bd9bc950102dfc09b094318b573773ba0b56e774d9bdb66fcc8",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.7",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.9",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.7",
+        "CCSS:2.NBT.B.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.7.9",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U07:L09",
+      "UnitNumber": 7,
+      "UnitTitle": "Adding and Subtracting within 1,000",
+      "LessonNumber": 9,
+      "Title": "Add Three-digit Numbers",
+      "SortOrder": 111,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-7/lesson-9/preparation.html",
+      "SemanticSha256": "e469093df82b9970ed2cee163c893e332fd6e095e984134c725402f03aa52b66",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.7",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.9",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.7",
+        "CCSS:2.NBT.B.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.7.10",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U07:L10",
+      "UnitNumber": 7,
+      "UnitTitle": "Adding and Subtracting within 1,000",
+      "LessonNumber": 10,
+      "Title": "Add within 1,000",
+      "SortOrder": 112,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-7/lesson-10/preparation.html",
+      "SemanticSha256": "0d440e848e8f5190058be7cb9ed424a8c2f62505d22af676e1bfadbefabf800d",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.7",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.9",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.7",
+        "CCSS:2.NBT.B.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.7.11",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U07:L11",
+      "UnitNumber": 7,
+      "UnitTitle": "Adding and Subtracting within 1,000",
+      "LessonNumber": 11,
+      "Title": "Center Day 2 (optional)",
+      "SortOrder": 113,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-7/lesson-11/preparation.html",
+      "SemanticSha256": "0151f786684a9ae563d1032231deac33cba6181e3a70129a2fb6fa13e348e966",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.6",
+        "CCSS:2.NBT.B.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.7.12",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U07:L12",
+      "UnitNumber": 7,
+      "UnitTitle": "Adding and Subtracting within 1,000",
+      "LessonNumber": 12,
+      "Title": "Decompose to Subtract",
+      "SortOrder": 114,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-7/lesson-12/preparation.html",
+      "SemanticSha256": "c9cfbad7bd76aca4584c0055a06f5efa38bd0ab9dee550d54180f6f358d5ed91",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.7",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.A.1",
+        "CCSS:2.NBT.A.3",
+        "CCSS:2.NBT.B.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.7.13",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U07:L13",
+      "UnitNumber": 7,
+      "UnitTitle": "Adding and Subtracting within 1,000",
+      "LessonNumber": 13,
+      "Title": "Decompose Tens or Hundreds",
+      "SortOrder": 115,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-7/lesson-13/preparation.html",
+      "SemanticSha256": "eec0797466a267e7f62ae06236eaf4c47947521ca0b4e843fa2a28203884c919",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.7",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.9",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.7",
+        "CCSS:2.NBT.B.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.7.14",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U07:L14",
+      "UnitNumber": 7,
+      "UnitTitle": "Adding and Subtracting within 1,000",
+      "LessonNumber": 14,
+      "Title": "Think Before You Subtract PLC Activity",
+      "SortOrder": 116,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-7/lesson-14/preparation.html",
+      "SemanticSha256": "ce03b6df9843e9cc2fced278c70e9fce198edd486a291c98535e642964268ce1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.7",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.9",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.A.1",
+        "CCSS:2.NBT.B.7",
+        "CCSS:2.NBT.B.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.7.15",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U07:L15",
+      "UnitNumber": 7,
+      "UnitTitle": "Adding and Subtracting within 1,000",
+      "LessonNumber": 15,
+      "Title": "Decompose a Ten and a Hundred to Subtract",
+      "SortOrder": 117,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-7/lesson-15/preparation.html",
+      "SemanticSha256": "eae2c047b425d15ff2bdf84c84994e8aeb2314f2f4305a313e68041b48025cd1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.7",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.9",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.A.2",
+        "CCSS:2.NBT.B.7",
+        "CCSS:2.NBT.B.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.7.16",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U07:L16",
+      "UnitNumber": 7,
+      "UnitTitle": "Adding and Subtracting within 1,000",
+      "LessonNumber": 16,
+      "Title": "Subtract Within 1,000",
+      "SortOrder": 118,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-7/lesson-16/preparation.html",
+      "SemanticSha256": "733ca1f5ec0e13ef39c14eb02810784cf88b35bc30d26b2339e9db505ee17f91",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.7",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.9",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.A.1",
+        "CCSS:2.NBT.B.7",
+        "CCSS:2.NBT.B.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.7.17",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U07:L17",
+      "UnitNumber": 7,
+      "UnitTitle": "Adding and Subtracting within 1,000",
+      "LessonNumber": 17,
+      "Title": "Center Day 3 (optional)",
+      "SortOrder": 119,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-7/lesson-17/preparation.html",
+      "SemanticSha256": "ef4ce0ce67e00d78d283b4643cfae9e728b148975e344d2093f7683635f90096",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.7",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.8",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.7",
+        "CCSS:2.NBT.B.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.7.18",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U07:L18",
+      "UnitNumber": 7,
+      "UnitTitle": "Adding and Subtracting within 1,000",
+      "LessonNumber": 18,
+      "Title": "Paint Splattered Bar Graph (optional)",
+      "SortOrder": 120,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-7/lesson-18/preparation.html",
+      "SemanticSha256": "819b21998f18a00b8ff8ac47fb21ed9c100ec48f6cb9b2c936430900fdadd5b2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.D.10",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.D.10",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.7",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.8",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.9",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.D.10",
+        "CCSS:2.NBT.B.7",
+        "CCSS:2.NBT.B.8",
+        "CCSS:2.NBT.B.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.8.1",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U08:L01",
+      "UnitNumber": 8,
+      "UnitTitle": "Equal Groups",
+      "LessonNumber": 1,
+      "Title": "Can You Share?",
+      "SortOrder": 121,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-8/lesson-1/preparation.html",
+      "SemanticSha256": "12a4ad79b2a20348d5a68c425568d5cfc0e86425cee6369ef3a3b386433da2f4",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.C",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.OA.C.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "2.8.2",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U08:L02",
+      "UnitNumber": 8,
+      "UnitTitle": "Equal Groups",
+      "LessonNumber": 2,
+      "Title": "Partners Make Pairs",
+      "SortOrder": 122,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-8/lesson-2/preparation.html",
+      "SemanticSha256": "f09ab6fccf5daebdad2d83a45a7a0aca60ffa9f3c249699d7780eebd8c6815fa",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.C",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.C.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.C.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.OA.C.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.8.3",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U08:L03",
+      "UnitNumber": 8,
+      "UnitTitle": "Equal Groups",
+      "LessonNumber": 3,
+      "Title": "Is it Odd or Even? PLC Activity",
+      "SortOrder": 123,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-8/lesson-3/preparation.html",
+      "SemanticSha256": "776418bfa789ab4f6abd3507d67f4a39b14b8d0515180d5cc5a95eb451122044",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.C.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.C.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.OA.C.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.OA.C.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.8.4",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U08:L04",
+      "UnitNumber": 8,
+      "UnitTitle": "Equal Groups",
+      "LessonNumber": 4,
+      "Title": "Decompose Even and Odd Numbers",
+      "SortOrder": 124,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-8/lesson-4/preparation.html",
+      "SemanticSha256": "63e80f9337dc0b59c5ed05a2b1506ca7296f84744a9dde4c59b73b0367ee63f1",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.C.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.C.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.OA.B.2",
+        "CCSS:2.OA.C.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.8.5",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U08:L05",
+      "UnitNumber": 8,
+      "UnitTitle": "Equal Groups",
+      "LessonNumber": 5,
+      "Title": "Patterns with Even and Odd Numbers (optional)",
+      "SortOrder": 125,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-8/lesson-5/preparation.html",
+      "SemanticSha256": "70ba28b5b36baf782e2f978491a61ed453a7c385e3001027af578ba0264d280a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.C.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.C.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.OA.B.2",
+        "CCSS:2.OA.C.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.8.6",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U08:L06",
+      "UnitNumber": 8,
+      "UnitTitle": "Equal Groups",
+      "LessonNumber": 6,
+      "Title": "Center Day 1 (optional)",
+      "SortOrder": 126,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-8/lesson-6/preparation.html",
+      "SemanticSha256": "e5dcaa60b12bc035b9ff7543cc4a744c2d8f0761d22adb752eef115b3e2e7826",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.7",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.8",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.OA.C.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.A.2",
+        "CCSS:2.NBT.B.7",
+        "CCSS:2.NBT.B.8",
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.8.7",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U08:L07",
+      "UnitNumber": 8,
+      "UnitTitle": "Equal Groups",
+      "LessonNumber": 7,
+      "Title": "What is an Array?",
+      "SortOrder": 127,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-8/lesson-7/preparation.html",
+      "SemanticSha256": "c0a2db7f0ec072616f6facdc85a5ee54ac101bb0d7104b99156d34cf6beb20cc",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.C.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.C.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.C.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.C.4",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.OA.B.2",
+        "CCSS:2.OA.C.3",
+        "CCSS:2.OA.C.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.8.8",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U08:L08",
+      "UnitNumber": 8,
+      "UnitTitle": "Equal Groups",
+      "LessonNumber": 8,
+      "Title": "Count Columns and Objects in Columns",
+      "SortOrder": 128,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-8/lesson-8/preparation.html",
+      "SemanticSha256": "f54606f7295fa9f262de94f9548f67fe2025060c86e4e90296c67d4fe492e2a9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.C.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.C.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.C.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.C.4",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.OA.B.2",
+        "CCSS:2.OA.C.3",
+        "CCSS:2.OA.C.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.8.9",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U08:L09",
+      "UnitNumber": 8,
+      "UnitTitle": "Equal Groups",
+      "LessonNumber": 9,
+      "Title": "A Sum of Equal Addends PLC Activity",
+      "SortOrder": 129,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-8/lesson-9/preparation.html",
+      "SemanticSha256": "e18a4cf0892feee44a6f37daecf0b9b42f80348f0b007529843e5b32d925bfbe",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.C.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.C.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.C.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.C.4",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.OA.B.2",
+        "CCSS:2.OA.C.3",
+        "CCSS:2.OA.C.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.8.10",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U08:L10",
+      "UnitNumber": 8,
+      "UnitTitle": "Equal Groups",
+      "LessonNumber": 10,
+      "Title": "Write Expressions and Equations to Represent Arrays",
+      "SortOrder": 130,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-8/lesson-10/preparation.html",
+      "SemanticSha256": "857ba1318faafe3009432261c7cce0162dece431cca70924e4236f375983aaa3",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.C.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.C.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.C.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.C.4",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.A.2",
+        "CCSS:2.OA.B.2",
+        "CCSS:2.OA.C.3",
+        "CCSS:2.OA.C.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.8.11",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U08:L11",
+      "UnitNumber": 8,
+      "UnitTitle": "Equal Groups",
+      "LessonNumber": 11,
+      "Title": "Arrays and Rectangles",
+      "SortOrder": 131,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-8/lesson-11/preparation.html",
+      "SemanticSha256": "d018c2b8dbd34053ca0e29079de0171c16b95946b0d37089546adc3724be90e3",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.G.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.C.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.C.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.C.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.C.4",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.G.A.2",
+        "CCSS:2.OA.C.3",
+        "CCSS:2.OA.C.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.8.12",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U08:L12",
+      "UnitNumber": 8,
+      "UnitTitle": "Equal Groups",
+      "LessonNumber": 12,
+      "Title": "Partition Rectangles into Squares",
+      "SortOrder": 132,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-8/lesson-12/preparation.html",
+      "SemanticSha256": "68c9d8b29b6663841d5177fef84e019fa68ecb7d9bcd9806c86a3a7ed4efc276",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.G.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.C.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.C.4",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.MD.C",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.G.A.2",
+        "CCSS:2.OA.C.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.8.13",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U08:L13",
+      "UnitNumber": 8,
+      "UnitTitle": "Equal Groups",
+      "LessonNumber": 13,
+      "Title": "Center Day 2 (optional)",
+      "SortOrder": 133,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-8/lesson-13/preparation.html",
+      "SemanticSha256": "bc0216743d443cf1de4e690594c2802e743e0ed3ddf5dfd1d620b80ecbc9dbb0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.A.2",
+        "CCSS:2.NBT.B.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.9.1",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U09:L01",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 1,
+      "Title": "Sums and Differences Within 20",
+      "SortOrder": 134,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-9/lesson-1/preparation.html",
+      "SemanticSha256": "2238156aa95780b99ad4ccca09862727d049a9e3f5f0064c9748d4315a3e5428",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.9.2",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U09:L02",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 2,
+      "Title": "Fluency Flip",
+      "SortOrder": 135,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-9/lesson-2/preparation.html",
+      "SemanticSha256": "54c5ba62e155862821ca63c050df1e02fa26b21c0acb3af9724c98fe066f605e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.9.3",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U09:L03",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 3,
+      "Title": "Measure on a Map PLC Activity",
+      "SortOrder": 136,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-9/lesson-3/preparation.html",
+      "SemanticSha256": "a840980868b24d259fa9ba0ed69145e24d08ddcacd83695051a58ede9d495120",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.4",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.B.5",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "2.MD.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.A.1",
+        "CCSS:2.MD.A.4",
+        "CCSS:2.MD.B.5",
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.9.4",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U09:L04",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 4,
+      "Title": "Measure and Plot",
+      "SortOrder": 137,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-9/lesson-4/preparation.html",
+      "SemanticSha256": "166fddb4711869bca9ef919a6129e265553c43d6ef7c977226f6aaa7261c50f7",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.MD.D.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.MD.D.9",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.B.2",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.MD.A.1",
+        "CCSS:2.MD.D.9",
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.9.5",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U09:L05",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 5,
+      "Title": "Compose and Decompose Numbers Within 1,000 PLC Activity",
+      "SortOrder": 138,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-9/lesson-5/preparation.html",
+      "SemanticSha256": "fd768e6b054d0568651ffd72867317ad566a48228818f77672f9196de78e3b48",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.9.6",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U09:L06",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 6,
+      "Title": "Represent Numbers with Expressions",
+      "SortOrder": 139,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-9/lesson-6/preparation.html",
+      "SemanticSha256": "2bd399fa23c63198f8ff5fc1c685db91113074ca8cf97cd6cc992e82ad8d6309",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.A.1",
+        "CCSS:2.NBT.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.9.7",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U09:L07",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 7,
+      "Title": "Add and Subtract Within 1,000",
+      "SortOrder": 140,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-9/lesson-7/preparation.html",
+      "SemanticSha256": "1837082aea75667adc4f3ec3ba96fe1822a69b63e581d46aca45b5e3f2c31cef",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.NBT.B.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.9.8",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U09:L08",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 8,
+      "Title": "Add and Subtract Within 100",
+      "SortOrder": 141,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-9/lesson-8/preparation.html",
+      "SemanticSha256": "4f5e0da0ccb4f5e7681d43a7220306f6c2f5b0df7885614c9f7c28c5243dafa0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.NBT.B.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.9.9",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U09:L09",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 9,
+      "Title": "Sort the Story Problems",
+      "SortOrder": 142,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-9/lesson-9/preparation.html",
+      "SemanticSha256": "725bc6b700176f752b758b26fe967a68452efda4f3375b737e9117f4c074c931",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.9",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.A.1",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.NBT.B.9",
+        "CCSS:2.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.9.10",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U09:L10",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 10,
+      "Title": "What’s the Question? PLC Activity",
+      "SortOrder": 143,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-9/lesson-10/preparation.html",
+      "SemanticSha256": "e1441952104fa4a29fb6cf1f6b4e72811e4450ad5fd771e8918e078268831f5a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.9.11",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U09:L11",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 11,
+      "Title": "All About Tape Diagrams",
+      "SortOrder": 144,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-9/lesson-11/preparation.html",
+      "SemanticSha256": "39b09a5a8cfaa8d64356dfba61cbe94d855bdba1d871831756e91d5081d282a3",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.9.12",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U09:L12",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 12,
+      "Title": "What’s the Story?",
+      "SortOrder": 145,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-9/lesson-12/preparation.html",
+      "SemanticSha256": "824a20db3b9917ee886ea752e928382713aebd6d05e7d15fd9d7f21fafcf2336",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "2.9.13",
+      "LessonCode": "PED:US-CCSS-MATH:G2:U09:L13",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 13,
+      "Title": "Let’s Solve Our Story Problems",
+      "SortOrder": 146,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-2/unit-9/lesson-13/preparation.html",
+      "SemanticSha256": "dc6fee4357ba62d046f139df81925636dab488bd413d0c86c259f6ac37a8f62e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:2.OA.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:2.NBT.B.5",
+        "CCSS:2.OA.A.1"
+      ]
+    }
+  ]
+}

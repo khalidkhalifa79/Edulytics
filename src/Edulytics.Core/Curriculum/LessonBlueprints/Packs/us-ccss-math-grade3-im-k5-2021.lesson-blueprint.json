@@ -1,0 +1,5042 @@
+{
+  "SchemaVersion": 1,
+  "BlueprintCode": "US-CCSS-MATH:G3:IM-K5-2021",
+  "PackCode": "US-CCSS-MATH",
+  "VersionCode": "CCSSM-2010",
+  "LogicalLevel": 4,
+  "NativeLevel": "Grade 3",
+  "Pathway": null,
+  "OfficialAuthority": "NGA Center / CCSSO",
+  "OfficialSourceUrl": "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf",
+  "PedagogicalSourceType": "OpenEducationalResource",
+  "SourceTitle": "IM K-5 Math Grade 3",
+  "SourcePublisher": "Illustrative Mathematics / Kendall Hunt",
+  "SourceEdition": "1st Edition (2021)",
+  "SourceRootUrl": "https://im.kendallhunt.com/k5/teachers/grade-3",
+  "SourceCheckedAtUtc": "2026-08-29T18:14:00Z",
+  "SourceLicense": "CC BY 4.0",
+  "RequiredDigitalAttribution": "Attribute Illustrative Mathematics IM K-5 Math 1st Edition (2021), link the source and CC BY 4.0 license.",
+  "SourceSelectionReason": "No school-adopted Grade 3 textbook has been supplied. Source Policy therefore uses the traceable IM K-5 2021 CC BY 4.0 Common-Core-aligned pedagogical source.",
+  "SourceSelectionEvidence": "Persistent Grade 3 source-lock graph SHA-256 4ef968a9f5024e97199617425c7b18244886b12285498160e46284a5141648e0; elementary batch source-lock SHA-256 3bf5fba93d0a0288658b1f58949dc3114eaede7bd775816a3e3aa4e47e4ffc9f; 8 units, 143 lessons, 222 formal mappings, 25/25 accepted Grade 3 Standards covered by source Addressing alignments.",
+  "SourceEvidenceUrls": [
+    "https://im.kendallhunt.com/k5/teachers/grade-3/units.html",
+    "https://illustrativemathematics.org/site-ip-content/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "SourceRightsNote": "The pedagogical unit/lesson sequence, lesson titles and alignment metadata are captured from the CC BY 4.0 source with attribution. IM/Kendall Hunt names or logos, book-cover artwork, proprietary visual design and assessment content are not imported. Edulytics lesson explanations, worked examples, diagrams, common mistakes and summaries remain independently authored and reviewed.",
+  "SemanticGraphSha256": "a4e226b0cca877a12679b3bae1a3347ef8eec6b0105445bac43c0d0b005eef5e",
+  "AcquisitionDiagnostics": {
+    "UnitCount": 8,
+    "LessonCount": 143,
+    "OfficialStandardCount": 25,
+    "AddressingCoverageCount": 25,
+    "FormalMappingCount": 222,
+    "LessonsWithoutNumberedGradeReferenceAnyRole": 1,
+    "LessonsWithoutNumberedAddressingStandard": 8,
+    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 1,
+    "MultiStandardLessons": 64
+  },
+  "Units": [
+    {
+      "Number": 1,
+      "Title": "Introducing Multiplication",
+      "LessonCount": 21,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-1/lessons.html",
+      "SemanticSha256": "fce17cc9119c9e4a8a512651ad813c4d2d3c73fee0afd0934a802bade33ec2a1"
+    },
+    {
+      "Number": 2,
+      "Title": "Area and Multiplication",
+      "LessonCount": 15,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-2/lessons.html",
+      "SemanticSha256": "b2309f51063692afc171861e5ceeec3257b7597586daa9590c58489bc670da9c"
+    },
+    {
+      "Number": 3,
+      "Title": "Wrapping Up Addition and Subtraction Within 1,000",
+      "LessonCount": 21,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-3/lessons.html",
+      "SemanticSha256": "cbca172d6e7b1850dac83b5e4794ac33c9a23e62bb22f21cb685def9f5a75613"
+    },
+    {
+      "Number": 4,
+      "Title": "Relating Multiplication to Division",
+      "LessonCount": 22,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-4/lessons.html",
+      "SemanticSha256": "fb4fa15dd8a31cdac590a6fb57d8b00d615ee9c1773f085f42ead68fed30d47c"
+    },
+    {
+      "Number": 5,
+      "Title": "Fractions as Numbers",
+      "LessonCount": 18,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-5/lessons.html",
+      "SemanticSha256": "9f3fe315a7eddd3bf52be68dc30a744055f0c69bc25b15ec54531de8c7ead5ff"
+    },
+    {
+      "Number": 6,
+      "Title": "Measuring Length, Time, Liquid Volume, and Weight",
+      "LessonCount": 16,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-6/lessons.html",
+      "SemanticSha256": "05ea5554ddb4e201ea4eb1f5fd7ed20c39652677dd476081f247deb123d51dc7"
+    },
+    {
+      "Number": 7,
+      "Title": "Two-dimensional Shapes and Perimeter",
+      "LessonCount": 15,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-7/lessons.html",
+      "SemanticSha256": "bb915c53a9e397d38d1ef89278577b7372988d13773fbf0a15d433e6cff1b615"
+    },
+    {
+      "Number": 8,
+      "Title": "Putting It All Together",
+      "LessonCount": 15,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-8/lessons.html",
+      "SemanticSha256": "4ce57fbebfa758442ee7a0bc93d38eda00c545e05d1946fe9cf5ff3d83f3b4b5"
+    }
+  ],
+  "Lessons": [
+    {
+      "SourceLessonCode": "3.1.1",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U01:L01",
+      "UnitNumber": 1,
+      "UnitTitle": "Introducing Multiplication",
+      "LessonNumber": 1,
+      "Title": "Make Sense of Data",
+      "SortOrder": 1,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-1/lesson-1/preparation.html",
+      "SemanticSha256": "e4b809c9849d3cad11664665569d7a154944de73b27134db23a8f2fd9dcc816f",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.MD.D.10",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.MD.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "3.1.2",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U01:L02",
+      "UnitNumber": 1,
+      "UnitTitle": "Introducing Multiplication",
+      "LessonNumber": 2,
+      "Title": "Represent Data and Solve Problems",
+      "SortOrder": 2,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-1/lesson-2/preparation.html",
+      "SemanticSha256": "3ee42e10d9f900306669f00aa0acebcb994c40a7a8706338edaa35849f80ccaa",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.MD.D.10",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.OA.C.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.MD.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "3.1.3",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U01:L03",
+      "UnitNumber": 1,
+      "UnitTitle": "Introducing Multiplication",
+      "LessonNumber": 3,
+      "Title": "Scaled Picture Graphs PLC Activity",
+      "SortOrder": 3,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-1/lesson-3/preparation.html",
+      "SemanticSha256": "9219c0e3410c33f100d67a99bdcc8d0c3160e51dd5c4e15ea06c88caefe7dcdd",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.MD.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "3.1.4",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U01:L04",
+      "UnitNumber": 1,
+      "UnitTitle": "Introducing Multiplication",
+      "LessonNumber": 4,
+      "Title": "Create Scaled Picture Graphs",
+      "SortOrder": 4,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-1/lesson-4/preparation.html",
+      "SemanticSha256": "ea860b67bfbd3e0329ec46747d45d1b342de1cec938807a2614da5c22fc18418",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.B.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.MD.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.1.5",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U01:L05",
+      "UnitNumber": 1,
+      "UnitTitle": "Introducing Multiplication",
+      "LessonNumber": 5,
+      "Title": "Represent Data in Scaled Bar Graphs",
+      "SortOrder": 5,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-1/lesson-5/preparation.html",
+      "SemanticSha256": "a57a592fc686add7486bd01ec727299177d9ecb8e61de07f660c3f6523be4750",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.B.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.MD.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.1.6",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U01:L06",
+      "UnitNumber": 1,
+      "UnitTitle": "Introducing Multiplication",
+      "LessonNumber": 6,
+      "Title": "Choose a Scale",
+      "SortOrder": 6,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-1/lesson-6/preparation.html",
+      "SemanticSha256": "57aa7eade27191a9b5d50a20ef3282108b83efe0ac8978909d552b24790a6f45",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.B.3",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.1.7",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U01:L07",
+      "UnitNumber": 1,
+      "UnitTitle": "Introducing Multiplication",
+      "LessonNumber": 7,
+      "Title": "Answer Questions about Scaled Bar Graphs",
+      "SortOrder": 7,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-1/lesson-7/preparation.html",
+      "SemanticSha256": "c40007496f64ba3789b87c1225407664a4625dddd30b2845844180bd0b3c7241",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.OA.C.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.B.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.MD.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.1.8",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U01:L08",
+      "UnitNumber": 1,
+      "UnitTitle": "Introducing Multiplication",
+      "LessonNumber": 8,
+      "Title": "More Questions about Scaled Bar Graphs",
+      "SortOrder": 8,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-1/lesson-8/preparation.html",
+      "SemanticSha256": "36bb66d02a7e2f9c029a351a29ebc4ff8111115485180703be1bb091c7c07a80",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.B.3",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.1.9",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U01:L09",
+      "UnitNumber": 1,
+      "UnitTitle": "Introducing Multiplication",
+      "LessonNumber": 9,
+      "Title": "Multiplication as Equal Groups",
+      "SortOrder": 9,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-1/lesson-9/preparation.html",
+      "SemanticSha256": "26296780297a68848b1c2aa4e6c22d0bb5ef0c1900f3d4c1ea524024f02af59b",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.1",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.1.10",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U01:L10",
+      "UnitNumber": 1,
+      "UnitTitle": "Introducing Multiplication",
+      "LessonNumber": 10,
+      "Title": "Drawings, Situations, and Diagrams, Oh My! PLC Activity",
+      "SortOrder": 10,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-1/lesson-10/preparation.html",
+      "SemanticSha256": "a23e7b09ae8d0c2bbf8f024a2351a47114608776799055fd487019c5caf16128",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.1.11",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U01:L11",
+      "UnitNumber": 1,
+      "UnitTitle": "Introducing Multiplication",
+      "LessonNumber": 11,
+      "Title": "Multiplication Expressions",
+      "SortOrder": 11,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-1/lesson-11/preparation.html",
+      "SemanticSha256": "c4f2d95676615143a8ed9476dc7544a7f62198c14997936ab3fc694a49453448",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.1.12",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U01:L12",
+      "UnitNumber": 1,
+      "UnitTitle": "Introducing Multiplication",
+      "LessonNumber": 12,
+      "Title": "Represent and Solve Multiplication Problems",
+      "SortOrder": 12,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-1/lesson-12/preparation.html",
+      "SemanticSha256": "80993e7d3f0f78e7dd27e2f6d660fdbb0f2c59c57bf79dea4769b7e1d629a8d2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.A.1",
+        "CCSS:3.OA.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.1.13",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U01:L13",
+      "UnitNumber": 1,
+      "UnitTitle": "Introducing Multiplication",
+      "LessonNumber": 13,
+      "Title": "Multiplication Equations",
+      "SortOrder": 13,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-1/lesson-13/preparation.html",
+      "SemanticSha256": "9b004069b172864e19251e7e10166bbbab9858256f3552c9dceb0e25d34f13e1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.A.1",
+        "CCSS:3.OA.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.1.14",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U01:L14",
+      "UnitNumber": 1,
+      "UnitTitle": "Introducing Multiplication",
+      "LessonNumber": 14,
+      "Title": "Write and Solve Equations with Unknowns",
+      "SortOrder": 14,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-1/lesson-14/preparation.html",
+      "SemanticSha256": "b95bfc2a1eb44890cd0ad6fc58062fb490f97d877f3596fdd2e46b15351d8cee",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.4",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.D.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.D.9",
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.A.1",
+        "CCSS:3.OA.A.3",
+        "CCSS:3.OA.A.4",
+        "CCSS:3.OA.D.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.1.15",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U01:L15",
+      "UnitNumber": 1,
+      "UnitTitle": "Introducing Multiplication",
+      "LessonNumber": 15,
+      "Title": "More Factors, More Problems",
+      "SortOrder": 15,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-1/lesson-15/preparation.html",
+      "SemanticSha256": "28f4519a4e2488e2d1fb6ff8479b0a7eebf07048244c2c5e6dd57758e98bc5ec",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.4",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.D.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.D.9",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.A.3",
+        "CCSS:3.OA.A.4",
+        "CCSS:3.OA.D.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.1.16",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U01:L16",
+      "UnitNumber": 1,
+      "UnitTitle": "Introducing Multiplication",
+      "LessonNumber": 16,
+      "Title": "Arrange Objects Into Arrays",
+      "SortOrder": 16,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-1/lesson-16/preparation.html",
+      "SemanticSha256": "87168bd1f5977f345b25ba674fa401cb730f71edec9849925869c77c97901fa6",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.OA.C.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.1.17",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U01:L17",
+      "UnitNumber": 1,
+      "UnitTitle": "Introducing Multiplication",
+      "LessonNumber": 17,
+      "Title": "Match and Draw Arrays",
+      "SortOrder": 17,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-1/lesson-17/preparation.html",
+      "SemanticSha256": "0ff3436ac0692f9885832f0982e024c11a5b1925a55b4af34d891c65fee36fb3",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.1.18",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U01:L18",
+      "UnitNumber": 1,
+      "UnitTitle": "Introducing Multiplication",
+      "LessonNumber": 18,
+      "Title": "Represent Arrays with Expressions",
+      "SortOrder": 18,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-1/lesson-18/preparation.html",
+      "SemanticSha256": "21eaf0a1cac275a09f01b259dd8cb032018bc6211461abd6144feae38144644d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.1.19",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U01:L19",
+      "UnitNumber": 1,
+      "UnitTitle": "Introducing Multiplication",
+      "LessonNumber": 19,
+      "Title": "Solve Problems Involving Arrays",
+      "SortOrder": 19,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-1/lesson-19/preparation.html",
+      "SemanticSha256": "05dc4e00573398b4bd8799f337fd20bca44323ecb40080af080f46e79fff8178",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.C.7",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.D.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.D.9",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.A.1",
+        "CCSS:3.OA.A.3",
+        "CCSS:3.OA.C.7",
+        "CCSS:3.OA.D.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.1.20",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U01:L20",
+      "UnitNumber": 1,
+      "UnitTitle": "Introducing Multiplication",
+      "LessonNumber": 20,
+      "Title": "The Commutative Property PLC Activity",
+      "SortOrder": 20,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-1/lesson-20/preparation.html",
+      "SemanticSha256": "e3359e992ad188b0fc238e076aef076714681fbd6ecdb7c20be5ece3273e51a8",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.1.21",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U01:L21",
+      "UnitNumber": 1,
+      "UnitTitle": "Introducing Multiplication",
+      "LessonNumber": 21,
+      "Title": "Game Night Seating Plan (optional)",
+      "SortOrder": 21,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-1/lesson-21/preparation.html",
+      "SemanticSha256": "bcee3cede4429a68569f73a767b8ac2e406ea54ffa00c0d3a196b73520ce6c02",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.B.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.B.3",
+        "CCSS:3.OA.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.2.1",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U02:L01",
+      "UnitNumber": 2,
+      "UnitTitle": "Area and Multiplication",
+      "LessonNumber": 1,
+      "Title": "What is Area? PLC Activity",
+      "SortOrder": 22,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-2/lesson-1/preparation.html",
+      "SemanticSha256": "93425d8bcb11f7e8776c02c41fdcf0044e127bc0a5d852039f3a10bbd3904f55",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.C.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.MD.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.C.5",
+        "CCSS:3.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.2.2",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U02:L02",
+      "UnitNumber": 2,
+      "UnitTitle": "Area and Multiplication",
+      "LessonNumber": 2,
+      "Title": "How Do We Measure Area?",
+      "SortOrder": 23,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-2/lesson-2/preparation.html",
+      "SemanticSha256": "d7256153eb6eff83349dd09214b22c4308a57a2bf33f97a54dbfa353fa28f373",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.C.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.5.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.MD.C.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.5.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.MD.C.5",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.MD.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.C.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.2.3",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U02:L03",
+      "UnitNumber": 2,
+      "UnitTitle": "Area and Multiplication",
+      "LessonNumber": 3,
+      "Title": "Tile Rectangles",
+      "SortOrder": 24,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-2/lesson-3/preparation.html",
+      "SemanticSha256": "8e5dbf347b32845f80b5c5c9312415eac8fe606b1b93947853a1ebb130e840e0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.5.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.MD.C.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.C.6",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.C.5",
+        "CCSS:3.MD.C.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.2.4",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U02:L04",
+      "UnitNumber": 2,
+      "UnitTitle": "Area and Multiplication",
+      "LessonNumber": 4,
+      "Title": "Area of Rectangles",
+      "SortOrder": 25,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-2/lesson-4/preparation.html",
+      "SemanticSha256": "9d655912c641bd9bf08a316c4499f53747828d90192a79ce46689c839bb406c7",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.C.6",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.C.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.2.5",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U02:L05",
+      "UnitNumber": 2,
+      "UnitTitle": "Area and Multiplication",
+      "LessonNumber": 5,
+      "Title": "Represent Products as Areas PLC Activity",
+      "SortOrder": 26,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-2/lesson-5/preparation.html",
+      "SemanticSha256": "624e56800da8d8220cb0504a1f56b48178f3db952746a00ef54d3865543ce1eb",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.7.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.MD.C.7",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.B.5",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.C.7",
+        "CCSS:3.OA.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.2.6",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U02:L06",
+      "UnitNumber": 2,
+      "UnitTitle": "Area and Multiplication",
+      "LessonNumber": 6,
+      "Title": "Different Square Units (Part 1)",
+      "SortOrder": 27,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-2/lesson-6/preparation.html",
+      "SemanticSha256": "c7efd2593c2b02019c7dc65689b77501335ad84472ebc87fac88fc2cda4c0828",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.C.6",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.C.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.2.7",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U02:L07",
+      "UnitNumber": 2,
+      "UnitTitle": "Area and Multiplication",
+      "LessonNumber": 7,
+      "Title": "Different Square Units (Part 2)",
+      "SortOrder": 28,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-2/lesson-7/preparation.html",
+      "SemanticSha256": "ee8dd43e4c4ee31dcef0ca845900311edba95496696049e3d76598a2d3f91747",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.C.6",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.C.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.2.8",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U02:L08",
+      "UnitNumber": 2,
+      "UnitTitle": "Area and Multiplication",
+      "LessonNumber": 8,
+      "Title": "Area of Rectangles Without a Grid",
+      "SortOrder": 29,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-2/lesson-8/preparation.html",
+      "SemanticSha256": "7e7c18f4a0c416b6ea4f9b17b47b729a644054bfaed546c8e7cb180976a5eabf",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.7.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.MD.C.7",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.B.5",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.C.7",
+        "CCSS:3.OA.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.2.9",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U02:L09",
+      "UnitNumber": 2,
+      "UnitTitle": "Area and Multiplication",
+      "LessonNumber": 9,
+      "Title": "Measure to Find the Area",
+      "SortOrder": 30,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-2/lesson-9/preparation.html",
+      "SemanticSha256": "61caab8352989b3c81b89fe087ac6be01d6b475b688683da006a5bb183181110",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.7.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.MD.C.7",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.B.5",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.C.7",
+        "CCSS:3.OA.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.2.10",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U02:L10",
+      "UnitNumber": 2,
+      "UnitTitle": "Area and Multiplication",
+      "LessonNumber": 10,
+      "Title": "Solve Area Problems",
+      "SortOrder": 31,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-2/lesson-10/preparation.html",
+      "SemanticSha256": "6096e8bfe54cc213d6e240906e698a2e9a7064b6ac69f39e223ad17ae085244d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.7.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.MD.C.7",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.B.5",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.C.7",
+        "CCSS:3.OA.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.2.11",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U02:L11",
+      "UnitNumber": 2,
+      "UnitTitle": "Area and Multiplication",
+      "LessonNumber": 11,
+      "Title": "Area and the Multiplication Table (optional)",
+      "SortOrder": 32,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-2/lesson-11/preparation.html",
+      "SemanticSha256": "95f350e1a976928bd60d9f02a9ce3f4c4203e7c169dffb82dac335a1407d71ba",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.OA.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.7.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.MD.C.7",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.B.5",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.D.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.D.9",
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.MD.C.7.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.C.7",
+        "CCSS:3.OA.B.5",
+        "CCSS:3.OA.D.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.2.12",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U02:L12",
+      "UnitNumber": 2,
+      "UnitTitle": "Area and Multiplication",
+      "LessonNumber": 12,
+      "Title": "Area and Addition PLC Activity",
+      "SortOrder": 33,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-2/lesson-12/preparation.html",
+      "SemanticSha256": "699d92b39f9167884af7a29d290093c6313c59c4791b612252a6eb0163587409",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.7.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.MD.C.7",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.2.13",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U02:L13",
+      "UnitNumber": 2,
+      "UnitTitle": "Area and Multiplication",
+      "LessonNumber": 13,
+      "Title": "Find the Area of Figures",
+      "SortOrder": 34,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-2/lesson-13/preparation.html",
+      "SemanticSha256": "94eeed7d4ead02a1c8beb3196d9a1a9e19c7a79fad1d448cf065c56cfd1c9b7f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.7.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.MD.C.7",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.C.7",
+        "CCSS:3.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.2.14",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U02:L14",
+      "UnitNumber": 2,
+      "UnitTitle": "Area and Multiplication",
+      "LessonNumber": 14,
+      "Title": "Find the Area of Figures with Missing Sides",
+      "SortOrder": 35,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-2/lesson-14/preparation.html",
+      "SemanticSha256": "257d7605bac8b36c088495dc0f293aeebe05012b50f7518b483514f208392827",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.7.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.MD.C.7",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.2.15",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U02:L15",
+      "UnitNumber": 2,
+      "UnitTitle": "Area and Multiplication",
+      "LessonNumber": 15,
+      "Title": "New Room (optional)",
+      "SortOrder": 36,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-2/lesson-15/preparation.html",
+      "SemanticSha256": "beb75026b7cc037bf2c50647edf85dc7bf4fb443fd7f1edfad71072775d071ae",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.C.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.C.6",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.7.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.MD.C.7",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.7.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.MD.C.7",
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.MD.C.7.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.MD.C.7.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 6
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.C.5",
+        "CCSS:3.MD.C.6",
+        "CCSS:3.MD.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.3.1",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U03:L01",
+      "UnitNumber": 3,
+      "UnitTitle": "Wrapping Up Addition and Subtraction Within 1,000",
+      "LessonNumber": 1,
+      "Title": "Represent Numbers in Different Ways",
+      "SortOrder": 37,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-3/lesson-1/preparation.html",
+      "SemanticSha256": "edfd142da767ceafd318e659c06cb2afba271a3961af5954649dea6b0b7561e3",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.NBT.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "3.3.2",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U03:L02",
+      "UnitNumber": 3,
+      "UnitTitle": "Wrapping Up Addition and Subtraction Within 1,000",
+      "LessonNumber": 2,
+      "Title": "Addition and Subtraction Situations",
+      "SortOrder": 38,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-3/lesson-2/preparation.html",
+      "SemanticSha256": "57d59a82535a29f49e8ae414ac998f52ab517fcb915c6ebef068f11397d8d622",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.D.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.D.9",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.2",
+        "CCSS:3.OA.D.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.3.3",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U03:L03",
+      "UnitNumber": 3,
+      "UnitTitle": "Wrapping Up Addition and Subtraction Within 1,000",
+      "LessonNumber": 3,
+      "Title": "Add Your Way",
+      "SortOrder": 39,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-3/lesson-3/preparation.html",
+      "SemanticSha256": "33e2b3dd5b8773e0e6c84fc4ad237b5d202947b67066872f807b21f5309bf44e",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.3.4",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U03:L04",
+      "UnitNumber": 3,
+      "UnitTitle": "Wrapping Up Addition and Subtraction Within 1,000",
+      "LessonNumber": 4,
+      "Title": "Introduction to Addition Algorithms PLC Activity",
+      "SortOrder": 40,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-3/lesson-4/preparation.html",
+      "SemanticSha256": "3898a450cf68064e98b80a75f7efd4f3bedd28b3875fa65a15f208e01e95d520",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.3.5",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U03:L05",
+      "UnitNumber": 3,
+      "UnitTitle": "Wrapping Up Addition and Subtraction Within 1,000",
+      "LessonNumber": 5,
+      "Title": "Another Addition Algorithm",
+      "SortOrder": 41,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-3/lesson-5/preparation.html",
+      "SemanticSha256": "1de2361de92975c7f148d8504ef49d03fdef8aa361cc41179b3b377e51712dc2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.D.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.D.9",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.2",
+        "CCSS:3.OA.D.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.3.6",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U03:L06",
+      "UnitNumber": 3,
+      "UnitTitle": "Wrapping Up Addition and Subtraction Within 1,000",
+      "LessonNumber": 6,
+      "Title": "Use Strategies and Algorithms to Add",
+      "SortOrder": 42,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-3/lesson-6/preparation.html",
+      "SemanticSha256": "d526539df18a909788ec39ad859efc7dbbf9b4435e96df484f951f5f60134aa9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.3.7",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U03:L07",
+      "UnitNumber": 3,
+      "UnitTitle": "Wrapping Up Addition and Subtraction Within 1,000",
+      "LessonNumber": 7,
+      "Title": "Subtract Your Way",
+      "SortOrder": 43,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-3/lesson-7/preparation.html",
+      "SemanticSha256": "bac7289d0ffabb7e81368ebdaec45ee9ee28e5ef6aae2ce05c3dd091d123a6f2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.3.8",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U03:L08",
+      "UnitNumber": 3,
+      "UnitTitle": "Wrapping Up Addition and Subtraction Within 1,000",
+      "LessonNumber": 8,
+      "Title": "Subtraction Algorithms (Part 1)",
+      "SortOrder": 44,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-3/lesson-8/preparation.html",
+      "SemanticSha256": "3e6b238c48436edf8f23d79e552dd3a0c1f542e7726e6c7afaf3d87f0e352af7",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.3.9",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U03:L09",
+      "UnitNumber": 3,
+      "UnitTitle": "Wrapping Up Addition and Subtraction Within 1,000",
+      "LessonNumber": 9,
+      "Title": "Subtraction Algorithms (Part 2)",
+      "SortOrder": 45,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-3/lesson-9/preparation.html",
+      "SemanticSha256": "3d1b68835a4c0748c43ca38602a9f28a76fcc178da181e573cfea18c71b70a04",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.3.10",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U03:L10",
+      "UnitNumber": 3,
+      "UnitTitle": "Wrapping Up Addition and Subtraction Within 1,000",
+      "LessonNumber": 10,
+      "Title": "Subtraction Algorithms (Part 3) PLC Activity",
+      "SortOrder": 46,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-3/lesson-10/preparation.html",
+      "SemanticSha256": "29a52871a1b919d8d624f709f542d387cdf8fdea302442ddf23eb509cd378128",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.3.11",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U03:L11",
+      "UnitNumber": 3,
+      "UnitTitle": "Wrapping Up Addition and Subtraction Within 1,000",
+      "LessonNumber": 11,
+      "Title": "Analyze Subtraction Algorithms",
+      "SortOrder": 47,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-3/lesson-11/preparation.html",
+      "SemanticSha256": "a0cf0eb7be970c5e9fa6d7e020d306e49a6d9f6a1cd07adc47dfc2c270ec31bc",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.3.12",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U03:L12",
+      "UnitNumber": 3,
+      "UnitTitle": "Wrapping Up Addition and Subtraction Within 1,000",
+      "LessonNumber": 12,
+      "Title": "Subtract Strategically",
+      "SortOrder": 48,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-3/lesson-12/preparation.html",
+      "SemanticSha256": "2e686aa51ce74705b8cf5228729a2ff7c0de381406a031d737a4779eac43425b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.2",
+        "CCSS:3.OA.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.3.13",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U03:L13",
+      "UnitNumber": 3,
+      "UnitTitle": "Wrapping Up Addition and Subtraction Within 1,000",
+      "LessonNumber": 13,
+      "Title": "Multiples of 100 PLC Activity",
+      "SortOrder": 49,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-3/lesson-13/preparation.html",
+      "SemanticSha256": "5998b7b3c4cd56e26760b5b6f74d878254d09525291f3ac0ec9d1ab6da9dd2aa",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.3.14",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U03:L14",
+      "UnitNumber": 3,
+      "UnitTitle": "Wrapping Up Addition and Subtraction Within 1,000",
+      "LessonNumber": 14,
+      "Title": "Nearest Multiples of 10 and 100",
+      "SortOrder": 50,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-3/lesson-14/preparation.html",
+      "SemanticSha256": "3dea6594ddbc469180d00603847c52f7b00a93a09d4ef2aaca094e4925f7a74d",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.NBT.B.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.3.15",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U03:L15",
+      "UnitNumber": 3,
+      "UnitTitle": "Wrapping Up Addition and Subtraction Within 1,000",
+      "LessonNumber": 15,
+      "Title": "Round to the Nearest Ten and Hundred",
+      "SortOrder": 51,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-3/lesson-15/preparation.html",
+      "SemanticSha256": "aebd5ddc3780dac089738bf7fe4c4458f354d0b9e93bc37228d161fa11d4e9ee",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.NBT.B.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.3.16",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U03:L16",
+      "UnitNumber": 3,
+      "UnitTitle": "Wrapping Up Addition and Subtraction Within 1,000",
+      "LessonNumber": 16,
+      "Title": "Round and Round Again",
+      "SortOrder": 52,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-3/lesson-16/preparation.html",
+      "SemanticSha256": "36ef4c6c16ba59403e4dd150fcf30f78f3d0aa1fee8495b467dae3db40dac127",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.C.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.1",
+        "CCSS:3.OA.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.3.17",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U03:L17",
+      "UnitNumber": 3,
+      "UnitTitle": "Wrapping Up Addition and Subtraction Within 1,000",
+      "LessonNumber": 17,
+      "Title": "Does It Make Sense? PLC Activity",
+      "SortOrder": 53,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-3/lesson-17/preparation.html",
+      "SemanticSha256": "d7de5e0d4e93ff352b8c3630f028f46da68ae5bf3a5d48b0cc9bc950bcff525c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.D.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.D.8",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.OA.D.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.D.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.3.18",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U03:L18",
+      "UnitNumber": 3,
+      "UnitTitle": "Wrapping Up Addition and Subtraction Within 1,000",
+      "LessonNumber": 18,
+      "Title": "Diagrams and Equations for Word Problems",
+      "SortOrder": 54,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-3/lesson-18/preparation.html",
+      "SemanticSha256": "3a5279ca4959b243412c34173814689a1124545cb6b30b0e139f3d35ffd7746a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.D.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.D.8",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.OA.D.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.D.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.3.19",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U03:L19",
+      "UnitNumber": 3,
+      "UnitTitle": "Wrapping Up Addition and Subtraction Within 1,000",
+      "LessonNumber": 19,
+      "Title": "Situations and Equations",
+      "SortOrder": 55,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-3/lesson-19/preparation.html",
+      "SemanticSha256": "5c11d4b4249dde6d7de168506988de6385631a54914c4dab85ff5808d1781ecc",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.D.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.D.8",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.D.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.3.20",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U03:L20",
+      "UnitNumber": 3,
+      "UnitTitle": "Wrapping Up Addition and Subtraction Within 1,000",
+      "LessonNumber": 20,
+      "Title": "More Practice to Represent and Solve",
+      "SortOrder": 56,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-3/lesson-20/preparation.html",
+      "SemanticSha256": "b5f50f128408356a3411cb5962e6a35ae0052fa80129baca9771368a139dca89",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.C.7",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.D.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.D.8",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.C.7",
+        "CCSS:3.OA.D.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.3.21",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U03:L21",
+      "UnitNumber": 3,
+      "UnitTitle": "Wrapping Up Addition and Subtraction Within 1,000",
+      "LessonNumber": 21,
+      "Title": "Classroom Supplies (optional)",
+      "SortOrder": 57,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-3/lesson-21/preparation.html",
+      "SemanticSha256": "2ec7d5141069f4807cd5ffea18ac7c13a837c2a0acef6617cbd44555588e4bac",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.1",
+        "CCSS:3.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.4.1",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U04:L01",
+      "UnitNumber": 4,
+      "UnitTitle": "Relating Multiplication to Division",
+      "LessonNumber": 1,
+      "Title": "How Many Groups?",
+      "SortOrder": 58,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-4/lesson-1/preparation.html",
+      "SemanticSha256": "d2393dac1ce6b0e156e4aca6ed0202f317b8d1082d5c2d277176822e5b8a9043",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.A.2",
+        "CCSS:3.OA.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.4.2",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U04:L02",
+      "UnitNumber": 4,
+      "UnitTitle": "Relating Multiplication to Division",
+      "LessonNumber": 2,
+      "Title": "How Many in Each Group?",
+      "SortOrder": 59,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-4/lesson-2/preparation.html",
+      "SemanticSha256": "879611cb243f448dfbeb3c2cbac165ee6ebcf9427f14bf5a798b3d913b4db4b7",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.A.2",
+        "CCSS:3.OA.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.4.3",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U04:L03",
+      "UnitNumber": 4,
+      "UnitTitle": "Relating Multiplication to Division",
+      "LessonNumber": 3,
+      "Title": "Division Situation Drawings",
+      "SortOrder": 60,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-4/lesson-3/preparation.html",
+      "SemanticSha256": "d13b0ce12fdadd6406af2b1f9eed9929b31a5d3d48190f2a555eeb1a63738d61",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.2",
+        "CCSS:3.OA.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.4.4",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U04:L04",
+      "UnitNumber": 4,
+      "UnitTitle": "Relating Multiplication to Division",
+      "LessonNumber": 4,
+      "Title": "Interpret Division Expressions PLC Activity",
+      "SortOrder": 61,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-4/lesson-4/preparation.html",
+      "SemanticSha256": "9b7e2b8525840c173ddafb1238c55587b6c90b8690ee1d8fce92498d91a7405e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.2",
+        "CCSS:3.OA.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.4.5",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U04:L05",
+      "UnitNumber": 4,
+      "UnitTitle": "Relating Multiplication to Division",
+      "LessonNumber": 5,
+      "Title": "Write Division Expressions",
+      "SortOrder": 62,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-4/lesson-5/preparation.html",
+      "SemanticSha256": "1048b48957de3bc9f7e5c6a524aa18326ff8a468e76090ddfee0093b1f8e3bfe",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.2",
+        "CCSS:3.OA.A.2",
+        "CCSS:3.OA.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.4.6",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U04:L06",
+      "UnitNumber": 4,
+      "UnitTitle": "Relating Multiplication to Division",
+      "LessonNumber": 6,
+      "Title": "Division as an Unknown Factor",
+      "SortOrder": 63,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-4/lesson-6/preparation.html",
+      "SemanticSha256": "24f8959d83ad966ab8a6a4660c12e827c5f9f9481edd5460210ceec400738418",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.B.6",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.A.2",
+        "CCSS:3.OA.B.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.4.7",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U04:L07",
+      "UnitNumber": 4,
+      "UnitTitle": "Relating Multiplication to Division",
+      "LessonNumber": 7,
+      "Title": "Relate Multiplication and Division PLC Activity",
+      "SortOrder": 64,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-4/lesson-7/preparation.html",
+      "SemanticSha256": "16935e37f7c64186d3e4e2d2c8debe2c01c81ca13c04ec37f09eecfe921b633b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.B.6",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.3",
+        "CCSS:3.OA.A.2",
+        "CCSS:3.OA.A.3",
+        "CCSS:3.OA.B.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.4.8",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U04:L08",
+      "UnitNumber": 4,
+      "UnitTitle": "Relating Multiplication to Division",
+      "LessonNumber": 8,
+      "Title": "Relate Quotients to Familiar Products",
+      "SortOrder": 65,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-4/lesson-8/preparation.html",
+      "SemanticSha256": "ff9262e5ac939d9b1ee7fb3e32e51eba30b3ce30c6768b24c9ec030d9a89b517",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.B.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.C.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.B.6",
+        "CCSS:3.OA.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.4.9",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U04:L09",
+      "UnitNumber": 4,
+      "UnitTitle": "Relating Multiplication to Division",
+      "LessonNumber": 9,
+      "Title": "Patterns in the Multiplication Table",
+      "SortOrder": 66,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-4/lesson-9/preparation.html",
+      "SemanticSha256": "361d47c995693ea818774a3712f563339b578433a37fc0bd0a395abd5499dad0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.C.7",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.D.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.D.9",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.C.7",
+        "CCSS:3.OA.D.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.4.10",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U04:L10",
+      "UnitNumber": 4,
+      "UnitTitle": "Relating Multiplication to Division",
+      "LessonNumber": 10,
+      "Title": "Explore Multiplication Strategies with Rectangles",
+      "SortOrder": 67,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-4/lesson-10/preparation.html",
+      "SemanticSha256": "f4f1fccf9552326977b734076d20f58941458d0cffdf9d395593b6e641117f98",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.7.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.MD.C.7",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.C.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.C.7",
+        "CCSS:3.OA.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.4.11",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U04:L11",
+      "UnitNumber": 4,
+      "UnitTitle": "Relating Multiplication to Division",
+      "LessonNumber": 11,
+      "Title": "Multiplication Strategies on Ungridded Rectangles",
+      "SortOrder": 68,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-4/lesson-11/preparation.html",
+      "SemanticSha256": "4994c5b07249a1e4f5581e9eb35b7e3ee98870fff3b0bebef9a7398a22297604",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.7.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.MD.C.7",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.C.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.C.7",
+        "CCSS:3.OA.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.4.12",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U04:L12",
+      "UnitNumber": 4,
+      "UnitTitle": "Relating Multiplication to Division",
+      "LessonNumber": 12,
+      "Title": "Multiply Multiples of Ten",
+      "SortOrder": 69,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-4/lesson-12/preparation.html",
+      "SemanticSha256": "29f52aebbde22dde61b051247ff28c04d5523357419f6d940a6590c1b2803fe5",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.3",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.4.13",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U04:L13",
+      "UnitNumber": 4,
+      "UnitTitle": "Relating Multiplication to Division",
+      "LessonNumber": 13,
+      "Title": "Solve Problems With Equal Groups",
+      "SortOrder": 70,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-4/lesson-13/preparation.html",
+      "SemanticSha256": "ddd41efbc9215d0f9b1f70f4f4aa89b3098da11ce4de4190f4410fcb04bca64c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.A.3",
+        "CCSS:3.OA.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.4.14",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U04:L14",
+      "UnitNumber": 4,
+      "UnitTitle": "Relating Multiplication to Division",
+      "LessonNumber": 14,
+      "Title": "Ways to Represent Multiplication of Teen Numbers PLC Activity",
+      "SortOrder": 71,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-4/lesson-14/preparation.html",
+      "SemanticSha256": "8af03c5020b946a13b4a17d1697a8e18dfaf8920e743ff7b80cfc31005356f3e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.4.15",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U04:L15",
+      "UnitNumber": 4,
+      "UnitTitle": "Relating Multiplication to Division",
+      "LessonNumber": 15,
+      "Title": "Equal Groups, Larger Numbers",
+      "SortOrder": 72,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-4/lesson-15/preparation.html",
+      "SemanticSha256": "e3115eae3e3f60c85cc7c0164c2125b2125853158e51a644ade7a50cb3fb5147",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.7.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.MD.C.7",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.B.5",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.C.7",
+        "CCSS:3.OA.A.3",
+        "CCSS:3.OA.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.4.16",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U04:L16",
+      "UnitNumber": 4,
+      "UnitTitle": "Relating Multiplication to Division",
+      "LessonNumber": 16,
+      "Title": "Multiply Numbers Larger than 20",
+      "SortOrder": 73,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-4/lesson-16/preparation.html",
+      "SemanticSha256": "23513847fa643558c96f19efe3f1a5f70f6a2073d0bf9f544271f80da4c9cf3d",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.OA.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.4.17",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U04:L17",
+      "UnitNumber": 4,
+      "UnitTitle": "Relating Multiplication to Division",
+      "LessonNumber": 17,
+      "Title": "Use the Four Operations to Solve Problems",
+      "SortOrder": 74,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-4/lesson-17/preparation.html",
+      "SemanticSha256": "7405b84f5c5ccd69f41763c420dcf62442b871968316b3352122854de5214607",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.D.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.D.8",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.3",
+        "CCSS:3.OA.B.5",
+        "CCSS:3.OA.D.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.4.18",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U04:L18",
+      "UnitNumber": 4,
+      "UnitTitle": "Relating Multiplication to Division",
+      "LessonNumber": 18,
+      "Title": "Larger Numbers in Equal Groups",
+      "SortOrder": 75,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-4/lesson-18/preparation.html",
+      "SemanticSha256": "6ff338d78fcf38b6b719c67e5099a9d6e73f611be7021f55279e34c1ef5b9295",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.A.2",
+        "CCSS:3.OA.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.4.19",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U04:L19",
+      "UnitNumber": 4,
+      "UnitTitle": "Relating Multiplication to Division",
+      "LessonNumber": 19,
+      "Title": "Ways to Divide Larger Numbers",
+      "SortOrder": 76,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-4/lesson-19/preparation.html",
+      "SemanticSha256": "382b3cb92f72035971064a57b188e062c7168c12f5723eb9b67ef3063ca2eaf6",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.B.5",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.C.7",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.3",
+        "CCSS:3.OA.A.2",
+        "CCSS:3.OA.B.5",
+        "CCSS:3.OA.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.4.20",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U04:L20",
+      "UnitNumber": 4,
+      "UnitTitle": "Relating Multiplication to Division",
+      "LessonNumber": 20,
+      "Title": "Strategies for Dividing",
+      "SortOrder": 77,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-4/lesson-20/preparation.html",
+      "SemanticSha256": "c11f3d63dbc4c54151538fc29060e765fe8042445a09e81529d9e9854af68485",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.C.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.B.5",
+        "CCSS:3.OA.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.4.21",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U04:L21",
+      "UnitNumber": 4,
+      "UnitTitle": "Relating Multiplication to Division",
+      "LessonNumber": 21,
+      "Title": "Solve Problems Using the Four Operations PLC Activity",
+      "SortOrder": 78,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-4/lesson-21/preparation.html",
+      "SemanticSha256": "d0c5f8d636e492e5da674058d9058682918efef10a1a7437140e35a3e7548467",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.D.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.D.8",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.D.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.4.22",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U04:L22",
+      "UnitNumber": 4,
+      "UnitTitle": "Relating Multiplication to Division",
+      "LessonNumber": 22,
+      "Title": "School Community Garden (optional)",
+      "SortOrder": 79,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-4/lesson-22/preparation.html",
+      "SemanticSha256": "047092e550c756828d29fec88f68f115420122fef6f8db995bf9ba3286d5ebfe",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.C.7",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.4",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.D.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.D.8",
+          "SortOrder": 5
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 6
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.C.7",
+        "CCSS:3.OA.A.2",
+        "CCSS:3.OA.A.3",
+        "CCSS:3.OA.A.4",
+        "CCSS:3.OA.D.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.5.1",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U05:L01",
+      "UnitNumber": 5,
+      "UnitTitle": "Fractions as Numbers",
+      "LessonNumber": 1,
+      "Title": "Name the Parts",
+      "SortOrder": 80,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-5/lesson-1/preparation.html",
+      "SemanticSha256": "cbf6c1bf860bfe653723f39510fcd0b1d1b68346b4a98e13c0495f33e23e436a",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.G.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.G.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NF.A.1",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.G.A.2",
+        "CCSS:3.NF.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.5.2",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U05:L02",
+      "UnitNumber": 5,
+      "UnitTitle": "Fractions as Numbers",
+      "LessonNumber": 2,
+      "Title": "Name Parts as Fractions",
+      "SortOrder": 81,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-5/lesson-2/preparation.html",
+      "SemanticSha256": "d458ffa173b50dc8670bc998dee4472eb722a94cd00612b4383fa41bbe2c147a",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.G.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NF.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NF.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.5.3",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U05:L03",
+      "UnitNumber": 5,
+      "UnitTitle": "Fractions as Numbers",
+      "LessonNumber": 3,
+      "Title": "Non-unit Fractions PLC Activity",
+      "SortOrder": 82,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-5/lesson-3/preparation.html",
+      "SemanticSha256": "1afb05ed797b0b4694701614d139b4dfca5fc553f7350c4dad6820fc5055f9d5",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NF.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NF.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.5.4",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U05:L04",
+      "UnitNumber": 5,
+      "UnitTitle": "Fractions as Numbers",
+      "LessonNumber": 4,
+      "Title": "Build Fractions from Unit Fractions",
+      "SortOrder": 83,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-5/lesson-4/preparation.html",
+      "SemanticSha256": "817e6b4e1d784a4bbb46bd4a097072565d226a8e3d2c861e9326cc4cf0200cd2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NF.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.C.7",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NF.A.1",
+        "CCSS:3.OA.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.5.5",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U05:L05",
+      "UnitNumber": 5,
+      "UnitTitle": "Fractions as Numbers",
+      "LessonNumber": 5,
+      "Title": "To the Number Line",
+      "SortOrder": 84,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-5/lesson-5/preparation.html",
+      "SemanticSha256": "08093eb3e3cb1cbbdccc387ed7e5eb63d2a8341817f9be9b834508af3a830c35",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NF.A.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NF.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.5.6",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U05:L06",
+      "UnitNumber": 5,
+      "UnitTitle": "Fractions as Numbers",
+      "LessonNumber": 6,
+      "Title": "Locate Unit Fractions on the Number Line",
+      "SortOrder": 85,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-5/lesson-6/preparation.html",
+      "SemanticSha256": "a8b414556fa87229e76ef9aa98abc4b6e4012fd0c0ff8aa763a3255a0b5106f3",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NF.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.2.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.NF.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NF.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.5.7",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U05:L07",
+      "UnitNumber": 5,
+      "UnitTitle": "Fractions as Numbers",
+      "LessonNumber": 7,
+      "Title": "Non-unit Fractions on the Number Line PLC Activity",
+      "SortOrder": 86,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-5/lesson-7/preparation.html",
+      "SemanticSha256": "02a97cb2fb43384fcbc52f5e27a224b256460c209d527354c853850d6357f566",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.2.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.NF.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NF.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.5.8",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U05:L08",
+      "UnitNumber": 5,
+      "UnitTitle": "Fractions as Numbers",
+      "LessonNumber": 8,
+      "Title": "Fractions and Whole Numbers",
+      "SortOrder": 87,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-5/lesson-8/preparation.html",
+      "SemanticSha256": "f6faa4570bd5ef58c3a1ea38dd429421e76d8602c771be49e501301ff4f62eed",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NF.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.NF.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.C.7",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NF.A.2",
+        "CCSS:3.NF.A.3",
+        "CCSS:3.OA.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.5.9",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U05:L09",
+      "UnitNumber": 5,
+      "UnitTitle": "Fractions as Numbers",
+      "LessonNumber": 9,
+      "Title": "All Kinds of Numbers on the Number Line",
+      "SortOrder": 88,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-5/lesson-9/preparation.html",
+      "SemanticSha256": "5e7816a8bd139817836667537555365f03d62437a9a9092b58b28f721551e912",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NF.A.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NF.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.5.10",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U05:L10",
+      "UnitNumber": 5,
+      "UnitTitle": "Fractions as Numbers",
+      "LessonNumber": 10,
+      "Title": "Equivalent Fractions",
+      "SortOrder": 89,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-5/lesson-10/preparation.html",
+      "SemanticSha256": "d66315a726dfbcc7353f2d4e09887dd574b4e85b94d29e4a89f4ee249f7592c8",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.3.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.NF.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.3.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.NF.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NF.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.5.11",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U05:L11",
+      "UnitNumber": 5,
+      "UnitTitle": "Fractions as Numbers",
+      "LessonNumber": 11,
+      "Title": "Generate Equivalent Fractions",
+      "SortOrder": 90,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-5/lesson-11/preparation.html",
+      "SemanticSha256": "9a4edbf044164e7b71ba09a382f8ecd5a8f36d867d00a04525c60675d1a8798a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.3.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.NF.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.3.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.NF.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.B.5",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NF.A.3",
+        "CCSS:3.OA.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.5.12",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U05:L12",
+      "UnitNumber": 5,
+      "UnitTitle": "Fractions as Numbers",
+      "LessonNumber": 12,
+      "Title": "Equivalent Fractions on a Number Line PLC Activity",
+      "SortOrder": 91,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-5/lesson-12/preparation.html",
+      "SemanticSha256": "fca6660c77dcd0f8e2490e79e5d39babb76375fbbbcacf6748366bf4b66b1985",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.3.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.NF.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.3.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.NF.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.NF.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NF.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.5.13",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U05:L13",
+      "UnitNumber": 5,
+      "UnitTitle": "Fractions as Numbers",
+      "LessonNumber": 13,
+      "Title": "Whole Numbers and Fractions",
+      "SortOrder": 92,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-5/lesson-13/preparation.html",
+      "SemanticSha256": "a2dcbf0f9e63c813ca43dd9bc0e84d04bf6526c728427aa40f48fd63f998291d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.NF.A.3",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NF.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.5.14",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U05:L14",
+      "UnitNumber": 5,
+      "UnitTitle": "Fractions as Numbers",
+      "LessonNumber": 14,
+      "Title": "How Do You Compare Fractions?",
+      "SortOrder": 93,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-5/lesson-14/preparation.html",
+      "SemanticSha256": "95d1af9e3714667e60873783031352a224a2e15f2d85ff645900851c6d038744",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NF.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.NF.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.3.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.NF.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NF.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.5.15",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U05:L15",
+      "UnitNumber": 5,
+      "UnitTitle": "Fractions as Numbers",
+      "LessonNumber": 15,
+      "Title": "Compare Fractions with the Same Denominator",
+      "SortOrder": 94,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-5/lesson-15/preparation.html",
+      "SemanticSha256": "6361b3c4ac645a6131a89fbcbab4619a900ebff759f007325a3bd246cc5f9833",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NF.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.3.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.NF.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NF.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.5.16",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U05:L16",
+      "UnitNumber": 5,
+      "UnitTitle": "Fractions as Numbers",
+      "LessonNumber": 16,
+      "Title": "Compare Fractions with the Same Numerator",
+      "SortOrder": 95,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-5/lesson-16/preparation.html",
+      "SemanticSha256": "9b74745eef5ad5ddc880f82d48d998274d13693110cb4368fe362e1b3e919739",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.3.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.NF.A.3",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NF.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.5.17",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U05:L17",
+      "UnitNumber": 5,
+      "UnitTitle": "Fractions as Numbers",
+      "LessonNumber": 17,
+      "Title": "Compare Fractions PLC Activity",
+      "SortOrder": 96,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-5/lesson-17/preparation.html",
+      "SemanticSha256": "e3e0e06b75e9e2073d139f8ef2bdf1d63c6ba52dddbacd55a15d0316ed68468f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NF.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NF.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.3.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.NF.A.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.MD.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NF.A.2",
+        "CCSS:3.NF.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.5.18",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U05:L18",
+      "UnitNumber": 5,
+      "UnitTitle": "Fractions as Numbers",
+      "LessonNumber": 18,
+      "Title": "Design With Fractions (optional)",
+      "SortOrder": 97,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-5/lesson-18/preparation.html",
+      "SemanticSha256": "ec90c802d9eb3380bf6e64068bcdd2d5ee7b774f9b3df9dfc48b8d90c993b802",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.NF.A.2.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NF.A.2",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NF.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.6.1",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U06:L01",
+      "UnitNumber": 6,
+      "UnitTitle": "Measuring Length, Time, Liquid Volume, and Weight",
+      "LessonNumber": 1,
+      "Title": "Measure in Halves of an Inch",
+      "SortOrder": 98,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-6/lesson-1/preparation.html",
+      "SemanticSha256": "7d186b9a272632f34d452863041edd1b64d1a3e3e31f9402a84637dd123ed17d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.B.4",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.MD.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.6.2",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U06:L02",
+      "UnitNumber": 6,
+      "UnitTitle": "Measuring Length, Time, Liquid Volume, and Weight",
+      "LessonNumber": 2,
+      "Title": "Measure in Fourths of an Inch",
+      "SortOrder": 99,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-6/lesson-2/preparation.html",
+      "SemanticSha256": "d232bf5db10c50638eb574247fb7795a53df2417edd29768fca328e817e1729d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.B.4",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.6.3",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U06:L03",
+      "UnitNumber": 6,
+      "UnitTitle": "Measuring Length, Time, Liquid Volume, and Weight",
+      "LessonNumber": 3,
+      "Title": "Measure in Halves and Fourths of an Inch PLC Activity",
+      "SortOrder": 100,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-6/lesson-3/preparation.html",
+      "SemanticSha256": "07ceac349ae5dc877c8ea6c421e0e393e9f5e94b3de4ba7d78f4849195921cf4",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.B.4",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.NF.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.B.4",
+        "CCSS:3.NF.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.6.4",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U06:L04",
+      "UnitNumber": 6,
+      "UnitTitle": "Measuring Length, Time, Liquid Volume, and Weight",
+      "LessonNumber": 4,
+      "Title": "Interpret Measurement Data on Line Plots",
+      "SortOrder": 101,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-6/lesson-4/preparation.html",
+      "SemanticSha256": "bf1b429dde3f21fcea463acf17ad447b2e8fab07f936e19d0f3c3c6e55a6de4c",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.MD.D.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.B.4",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.MD.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.6.5",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U06:L05",
+      "UnitNumber": 6,
+      "UnitTitle": "Measuring Length, Time, Liquid Volume, and Weight",
+      "LessonNumber": 5,
+      "Title": "Represent Measurement Data on Line Plots",
+      "SortOrder": 102,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-6/lesson-5/preparation.html",
+      "SemanticSha256": "1d4fe5ab132e3eecbb0a584b06d3cb7218204a58b99566a355149c27d1591122",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.B.4",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.C.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.B.4",
+        "CCSS:3.OA.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.6.6",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U06:L06",
+      "UnitNumber": 6,
+      "UnitTitle": "Measuring Length, Time, Liquid Volume, and Weight",
+      "LessonNumber": 6,
+      "Title": "Estimate and Measure Weight",
+      "SortOrder": 103,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-6/lesson-6/preparation.html",
+      "SemanticSha256": "5e6a3f410e4f84e04f476636a4b478c970841abe61412e6aa227d5bb87bff429",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.6.7",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U06:L07",
+      "UnitNumber": 6,
+      "UnitTitle": "Measuring Length, Time, Liquid Volume, and Weight",
+      "LessonNumber": 7,
+      "Title": "Introduction to Liquid Volume PLC Activity",
+      "SortOrder": 104,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-6/lesson-7/preparation.html",
+      "SemanticSha256": "22ae3378b160e27009878121dd8e9d5541ea9c134a60d7531cb5d72fd3caa02c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.A.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.6.8",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U06:L08",
+      "UnitNumber": 6,
+      "UnitTitle": "Measuring Length, Time, Liquid Volume, and Weight",
+      "LessonNumber": 8,
+      "Title": "Estimate and Measure Liquid Volume",
+      "SortOrder": 105,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-6/lesson-8/preparation.html",
+      "SemanticSha256": "e5f3a567bdd7bdb65a573e186323a3fe44b3b417769a10c334d7bc737b976f7a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.C.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.A.2",
+        "CCSS:3.OA.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.6.9",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U06:L09",
+      "UnitNumber": 6,
+      "UnitTitle": "Measuring Length, Time, Liquid Volume, and Weight",
+      "LessonNumber": 9,
+      "Title": "Time to the Nearest Minute",
+      "SortOrder": 106,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-6/lesson-9/preparation.html",
+      "SemanticSha256": "e1a3794392f3c04b54b12528e971bf813f9cfb0c54ee5010507ec270b5ba1aa9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.6.10",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U06:L10",
+      "UnitNumber": 6,
+      "UnitTitle": "Measuring Length, Time, Liquid Volume, and Weight",
+      "LessonNumber": 10,
+      "Title": "Solve Problems Involving Time (Part 1) PLC Activity",
+      "SortOrder": 107,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-6/lesson-10/preparation.html",
+      "SemanticSha256": "b6caf60081ae862b60b2d6c2bddc64c96a22a6c47b84a2fe8541c5f73586b875",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.6.11",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U06:L11",
+      "UnitNumber": 6,
+      "UnitTitle": "Measuring Length, Time, Liquid Volume, and Weight",
+      "LessonNumber": 11,
+      "Title": "Solve Problems Involving Time (Part 2)",
+      "SortOrder": 108,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-6/lesson-11/preparation.html",
+      "SemanticSha256": "2f7d9a9223e32505e4c55f21e4983abb910375e0e59238a24c3cf0f41ae0be11",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.6.12",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U06:L12",
+      "UnitNumber": 6,
+      "UnitTitle": "Measuring Length, Time, Liquid Volume, and Weight",
+      "LessonNumber": 12,
+      "Title": "Ways to Represent Measurement Situations PLC Activity",
+      "SortOrder": 109,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-6/lesson-12/preparation.html",
+      "SemanticSha256": "bea1b7a5604a50e3f1008c6365e8bcd12e230d631a4053555a3625145cd98f3f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.6.13",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U06:L13",
+      "UnitNumber": 6,
+      "UnitTitle": "Measuring Length, Time, Liquid Volume, and Weight",
+      "LessonNumber": 13,
+      "Title": "Problems with Missing Information",
+      "SortOrder": 110,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-6/lesson-13/preparation.html",
+      "SemanticSha256": "b8384add20011e86ab0c3c0d242375b3d775d029bad2ff4a59a9bfd7ac8ae94b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.A.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.6.14",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U06:L14",
+      "UnitNumber": 6,
+      "UnitTitle": "Measuring Length, Time, Liquid Volume, and Weight",
+      "LessonNumber": 14,
+      "Title": "What Makes Sense in the Problem?",
+      "SortOrder": 111,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-6/lesson-14/preparation.html",
+      "SemanticSha256": "f2d432a0f74c55cc30faa9837d4bf9c2c29846b8733acb0fd6610c9ac381dc3d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.2",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.A.1",
+        "CCSS:3.MD.A.2",
+        "CCSS:3.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.6.15",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U06:L15",
+      "UnitNumber": 6,
+      "UnitTitle": "Measuring Length, Time, Liquid Volume, and Weight",
+      "LessonNumber": 15,
+      "Title": "Ways to Solve Problems and Show Solutions",
+      "SortOrder": 112,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-6/lesson-15/preparation.html",
+      "SemanticSha256": "ef5d71d968febb1399df1c8098c77e0859168bd2c7870782aa841cd41a8cfe2d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.C.7",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.A.1",
+        "CCSS:3.MD.A.2",
+        "CCSS:3.OA.A.3",
+        "CCSS:3.OA.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.6.16",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U06:L16",
+      "UnitNumber": 6,
+      "UnitTitle": "Measuring Length, Time, Liquid Volume, and Weight",
+      "LessonNumber": 16,
+      "Title": "Design a Carnival Game (optional)",
+      "SortOrder": 113,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-6/lesson-16/preparation.html",
+      "SemanticSha256": "d87619a104023d6fd222e5ea248ab811e6c7c0b756433d75f2d6ed59f66ff1f3",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.MD.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.OA.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "3.7.1",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U07:L01",
+      "UnitNumber": 7,
+      "UnitTitle": "Two-dimensional Shapes and Perimeter",
+      "LessonNumber": 1,
+      "Title": "What Attributes Do You See?",
+      "SortOrder": 114,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-7/lesson-1/preparation.html",
+      "SemanticSha256": "fd91e828448c6d43158a4ae1d264e2e72b88ae6c8c134a60b0849ac88cee9a32",
+      "Alignments": [
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "3.7.2",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U07:L02",
+      "UnitNumber": 7,
+      "UnitTitle": "Two-dimensional Shapes and Perimeter",
+      "LessonNumber": 2,
+      "Title": "Attributes of Triangles and Quadrilaterals",
+      "SortOrder": 115,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-7/lesson-2/preparation.html",
+      "SemanticSha256": "16e1c72033383c56c34af45612308f6ad531d7f5dff0b7ac0ac58d27adc3d97b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.G.A.1",
+        "CCSS:3.NBT.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.7.3",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U07:L03",
+      "UnitNumber": 7,
+      "UnitTitle": "Two-dimensional Shapes and Perimeter",
+      "LessonNumber": 3,
+      "Title": "Attributes that Define Shapes",
+      "SortOrder": 116,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-7/lesson-3/preparation.html",
+      "SemanticSha256": "900799e34e63b87c24269b4bbdea9e7f7ec57b169dff335cbf59b18b3cda56de",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.G.A.1",
+        "CCSS:3.NBT.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.7.4",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U07:L04",
+      "UnitNumber": 7,
+      "UnitTitle": "Two-dimensional Shapes and Perimeter",
+      "LessonNumber": 4,
+      "Title": "Attributes of Rectangles, Rhombuses, and Squares PLC Activity",
+      "SortOrder": 117,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-7/lesson-4/preparation.html",
+      "SemanticSha256": "5fd5b085db4fd13c161dcddcae729ed7f44f8296ea243394d7ae55fccb1fd503",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.G.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.7.5",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U07:L05",
+      "UnitNumber": 7,
+      "UnitTitle": "Two-dimensional Shapes and Perimeter",
+      "LessonNumber": 5,
+      "Title": "Attributes of Other Quadrilaterals",
+      "SortOrder": 118,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-7/lesson-5/preparation.html",
+      "SemanticSha256": "f36d3c764f7c602fbc2399cb6f0d96f8490c385baa8aa3435ff4e69fa7ad6b9f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.C.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.G.A.1",
+        "CCSS:3.OA.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.7.6",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U07:L06",
+      "UnitNumber": 7,
+      "UnitTitle": "Two-dimensional Shapes and Perimeter",
+      "LessonNumber": 6,
+      "Title": "Distance Around Shapes",
+      "SortOrder": 119,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-7/lesson-6/preparation.html",
+      "SemanticSha256": "29214a599fb498a81673c11fe501ff2f90ee939669a022861e7637c71182ca58",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.D",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.D.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.D.8",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.MD.D.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.D.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.7.7",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U07:L07",
+      "UnitNumber": 7,
+      "UnitTitle": "Two-dimensional Shapes and Perimeter",
+      "LessonNumber": 7,
+      "Title": "Same Perimeter, Different Shapes",
+      "SortOrder": 120,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-7/lesson-7/preparation.html",
+      "SemanticSha256": "68ea6a45bb8315510d206b278d78df4b2764ce8fd935ad0de929913f3cc8e93f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.D.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.D.8",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.MD.D.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.D.8",
+        "CCSS:3.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.7.8",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U07:L08",
+      "UnitNumber": 7,
+      "UnitTitle": "Two-dimensional Shapes and Perimeter",
+      "LessonNumber": 8,
+      "Title": "Find the Perimeter PLC Activity",
+      "SortOrder": 121,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-7/lesson-8/preparation.html",
+      "SemanticSha256": "114bfdf6d86acfbea88ece0d6a58949c79dff407c499109cbe888b331a9b9740",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.D.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.D.8",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.C.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.D.8",
+        "CCSS:3.OA.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.7.9",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U07:L09",
+      "UnitNumber": 7,
+      "UnitTitle": "Two-dimensional Shapes and Perimeter",
+      "LessonNumber": 9,
+      "Title": "Perimeter Problems",
+      "SortOrder": 122,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-7/lesson-9/preparation.html",
+      "SemanticSha256": "b29220edfc92fc8d4896a7bfc6aef5574cdbcfd849a1cf03cd4835af98eed76e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.D.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.D.8",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.D.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.7.10",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U07:L10",
+      "UnitNumber": 7,
+      "UnitTitle": "Two-dimensional Shapes and Perimeter",
+      "LessonNumber": 10,
+      "Title": "Problem Solving With Perimeter and Area",
+      "SortOrder": 123,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-7/lesson-10/preparation.html",
+      "SemanticSha256": "d60dd371ab33f9919167e05844602e715a149382c0bb992090954c87afba5960",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.D.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.D.8",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.C.7",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.D.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.D.8",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.D.8",
+        "CCSS:3.OA.C.7",
+        "CCSS:3.OA.D.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.7.11",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U07:L11",
+      "UnitNumber": 7,
+      "UnitTitle": "Two-dimensional Shapes and Perimeter",
+      "LessonNumber": 11,
+      "Title": "Rectangles with the Same Perimeter PLC Activity",
+      "SortOrder": 124,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-7/lesson-11/preparation.html",
+      "SemanticSha256": "f27bd70973836af7d696bb4e5e619612a0cd9c6dd26b865044fe9bfe9d99c347",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.D.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.D.8",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.C.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.D.8",
+        "CCSS:3.OA.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.7.12",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U07:L12",
+      "UnitNumber": 7,
+      "UnitTitle": "Two-dimensional Shapes and Perimeter",
+      "LessonNumber": 12,
+      "Title": "Rectangles with the Same Area",
+      "SortOrder": 125,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-7/lesson-12/preparation.html",
+      "SemanticSha256": "9d3577e5dda9678cd20d2101b50ca78750d811918949aa5d4a622e154242da4a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.D.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.D.8",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.C.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.D.8",
+        "CCSS:3.OA.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.7.13",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U07:L13",
+      "UnitNumber": 7,
+      "UnitTitle": "Two-dimensional Shapes and Perimeter",
+      "LessonNumber": 13,
+      "Title": "Shapes and Play",
+      "SortOrder": 126,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-7/lesson-13/preparation.html",
+      "SemanticSha256": "77dc4a80a6dfa3abe2b192b0dcc414a731ba1d89fe348e3d32e9291760ed9e11",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.D.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.D.8",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.D.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.7.14",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U07:L14",
+      "UnitNumber": 7,
+      "UnitTitle": "Two-dimensional Shapes and Perimeter",
+      "LessonNumber": 14,
+      "Title": "Wax Prints PLC Activity",
+      "SortOrder": 127,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-7/lesson-14/preparation.html",
+      "SemanticSha256": "755fbf77cd26040ba8330c7832fcc8f0bd502853c01e039dc26bba583ea5cac2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.D.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.D.8",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.G.A.1",
+        "CCSS:3.MD.D.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.7.15",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U07:L15",
+      "UnitNumber": 7,
+      "UnitTitle": "Two-dimensional Shapes and Perimeter",
+      "LessonNumber": 15,
+      "Title": "Design Your Own Robot",
+      "SortOrder": 128,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-7/lesson-15/preparation.html",
+      "SemanticSha256": "5c4025b317113c98f48f4dadb8748558cc814ed6bbbeb5b0f40aa3b2ff4115c6",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.D.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.D.8",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.D.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.8.1",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U08:L01",
+      "UnitNumber": 8,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 1,
+      "Title": "Estimation Explorations with Fractions",
+      "SortOrder": 129,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-8/lesson-1/preparation.html",
+      "SemanticSha256": "77e7256da281a50e7388fb0c59e7c379e1a59bd1549efebc63ca8b7413fb2275",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NF.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NF.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NF.A.1",
+        "CCSS:3.NF.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.8.2",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U08:L02",
+      "UnitNumber": 8,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 2,
+      "Title": "Create Your Own Number Line",
+      "SortOrder": 130,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-8/lesson-2/preparation.html",
+      "SemanticSha256": "891ea19ce03d24c675a236103d7caccf39be4372426200e91e054718082c01ef",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NF.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NF.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NF.A.2",
+        "CCSS:3.NF.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.8.3",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U08:L03",
+      "UnitNumber": 8,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 3,
+      "Title": "Fractions Round Table PLC Activity",
+      "SortOrder": 131,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-8/lesson-3/preparation.html",
+      "SemanticSha256": "bb6a7f4e89b3ea28b1728a878f87d1cc8d5bf3885106f8940c6bf3714bf9bd93",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NF.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NF.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NF.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NF.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NF.A.1",
+        "CCSS:3.NF.A.2",
+        "CCSS:3.NF.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.8.4",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U08:L04",
+      "UnitNumber": 8,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 4,
+      "Title": "Tiny House: Design and Solve PLC Activity",
+      "SortOrder": 132,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-8/lesson-4/preparation.html",
+      "SemanticSha256": "d697dd5eb3a6da927abd5d5b787835fa89528dc98cf87928f7527166dc28a3fb",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.MD.C",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.MD.C.7.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.C.7.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:3.MD.C.7",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.D.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.D.8",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.C.7",
+        "CCSS:3.MD.D.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.8.5",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U08:L05",
+      "UnitNumber": 8,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 5,
+      "Title": "Tiny House: Cost",
+      "SortOrder": 133,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-8/lesson-5/preparation.html",
+      "SemanticSha256": "0bf880f46c56d3325540cc00983d8614ce2472f42b347f06732151f5ef873863",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.D.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.D.8",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.2",
+        "CCSS:3.OA.D.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.8.6",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U08:L06",
+      "UnitNumber": 8,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 6,
+      "Title": "Survey the Class, Survey the School",
+      "SortOrder": 134,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-8/lesson-6/preparation.html",
+      "SemanticSha256": "960311a245848804854a3dc67b1e66a3b3cd7e2cbb3a7c1eb0511fa2b7075251",
+      "Alignments": [
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "3.MD.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "3.8.7",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U08:L07",
+      "UnitNumber": 8,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 7,
+      "Title": "Graph and Answer",
+      "SortOrder": 135,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-8/lesson-7/preparation.html",
+      "SemanticSha256": "78d58fe71f8768020064278eaad1ba7f51eaa0534ebb8d1ffc464a9f0ce83fb0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.B.3",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.8.8",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U08:L08",
+      "UnitNumber": 8,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 8,
+      "Title": "Multiplication Center Day",
+      "SortOrder": 136,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-8/lesson-8/preparation.html",
+      "SemanticSha256": "082ba76785082735613ed2bad6dd103f498cdf87d658fbbac200348afc6faeba",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.C.7",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.8.9",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U08:L09",
+      "UnitNumber": 8,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 9,
+      "Title": "Multiplication Game Day",
+      "SortOrder": 137,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-8/lesson-9/preparation.html",
+      "SemanticSha256": "79130ab0f0426adbf8682e69b04e8bf31b28562b0905be91138cea8d7a268f5c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.C.7",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.8.10",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U08:L10",
+      "UnitNumber": 8,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 10,
+      "Title": "Multiplication and Division PLC Activity",
+      "SortOrder": 138,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-8/lesson-10/preparation.html",
+      "SemanticSha256": "74da0371d46a1d98c8d0e31e6c7074ef860b58143c37f22f173d5373388d7265",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.B.6",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.A.3",
+        "CCSS:3.OA.B.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.8.11",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U08:L11",
+      "UnitNumber": 8,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 11,
+      "Title": "Division Game Day",
+      "SortOrder": 139,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-8/lesson-11/preparation.html",
+      "SemanticSha256": "3fbc98635677fae8f23b4b6e40ab879bd4c9990b2f4007aef458180b9d6f98a3",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.C.7",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.8.12",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U08:L12",
+      "UnitNumber": 8,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 12,
+      "Title": "Notice and Wonder",
+      "SortOrder": 140,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-8/lesson-12/preparation.html",
+      "SemanticSha256": "1a81d7f7b547e9688015a3b6c98659c05d3b5b6ce1a7265ea0f3a253a098b789",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "3.8.13",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U08:L13",
+      "UnitNumber": 8,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 13,
+      "Title": "How Many Do You See? PLC Activity",
+      "SortOrder": 141,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-8/lesson-13/preparation.html",
+      "SemanticSha256": "5a5c476e894edc53feb3f4cc64f7a6e387d911e2d80f0714ced34f688a7fe7ff",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.OA.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.OA.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.8.14",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U08:L14",
+      "UnitNumber": 8,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 14,
+      "Title": "Estimation Exploration",
+      "SortOrder": 142,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-8/lesson-14/preparation.html",
+      "SemanticSha256": "cf89404fbd2a0171d9893a75f6f0aff022bb370b960274ca5bb2e4552e329313",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.MD.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.MD.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.MD.B.4",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.MD.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "3.8.15",
+      "LessonCode": "PED:US-CCSS-MATH:G3:U08:L15",
+      "UnitNumber": 8,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 15,
+      "Title": "Number Talk",
+      "SortOrder": 143,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-3/unit-8/lesson-15/preparation.html",
+      "SemanticSha256": "f450ca7d16bcb0daafc8abff49154351f87e40673336a92ae666cb5b50a5d663",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:3.NBT.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:3.NBT.A.2"
+      ]
+    }
+  ]
+}

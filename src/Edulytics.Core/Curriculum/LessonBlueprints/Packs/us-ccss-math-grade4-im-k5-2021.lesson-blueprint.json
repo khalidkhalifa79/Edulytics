@@ -1,0 +1,5803 @@
+{
+  "SchemaVersion": 1,
+  "BlueprintCode": "US-CCSS-MATH:G4:IM-K5-2021",
+  "PackCode": "US-CCSS-MATH",
+  "VersionCode": "CCSSM-2010",
+  "LogicalLevel": 5,
+  "NativeLevel": "Grade 4",
+  "Pathway": null,
+  "OfficialAuthority": "NGA Center / CCSSO",
+  "OfficialSourceUrl": "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf",
+  "PedagogicalSourceType": "OpenEducationalResource",
+  "SourceTitle": "IM K-5 Math Grade 4",
+  "SourcePublisher": "Illustrative Mathematics / Kendall Hunt",
+  "SourceEdition": "1st Edition (2021)",
+  "SourceRootUrl": "https://im.kendallhunt.com/k5/teachers/grade-4",
+  "SourceCheckedAtUtc": "2026-08-29T18:14:00Z",
+  "SourceLicense": "CC BY 4.0",
+  "RequiredDigitalAttribution": "Attribute Illustrative Mathematics IM K-5 Math 1st Edition (2021), link the source and CC BY 4.0 license.",
+  "SourceSelectionReason": "No school-adopted Grade 4 textbook has been supplied. Source Policy therefore uses the traceable IM K-5 2021 CC BY 4.0 Common-Core-aligned pedagogical source.",
+  "SourceSelectionEvidence": "Persistent Grade 4 source-lock graph SHA-256 fe06ae8a0daabaa0ad36c8c6f956b2348705bd732873f52c60730731d61c03f1; elementary batch source-lock SHA-256 3bf5fba93d0a0288658b1f58949dc3114eaede7bd775816a3e3aa4e47e4ffc9f; 9 units, 149 lessons, 253 formal mappings, 28/28 accepted Grade 4 Standards covered by source Addressing alignments.",
+  "SourceEvidenceUrls": [
+    "https://im.kendallhunt.com/k5/teachers/grade-4/units.html",
+    "https://illustrativemathematics.org/site-ip-content/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "SourceRightsNote": "The pedagogical unit/lesson sequence, lesson titles and alignment metadata are captured from the CC BY 4.0 source with attribution. IM/Kendall Hunt names or logos, book-cover artwork, proprietary visual design and assessment content are not imported. Edulytics lesson explanations, worked examples, diagrams, common mistakes and summaries remain independently authored and reviewed.",
+  "SemanticGraphSha256": "936b8d1f772ce196989cd6a39d60f0adac709169ec784da270f7a42d7f7aae43",
+  "AcquisitionDiagnostics": {
+    "UnitCount": 9,
+    "LessonCount": 149,
+    "OfficialStandardCount": 28,
+    "AddressingCoverageCount": 28,
+    "FormalMappingCount": 253,
+    "LessonsWithoutNumberedGradeReferenceAnyRole": 1,
+    "LessonsWithoutNumberedAddressingStandard": 7,
+    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 1,
+    "MultiStandardLessons": 74
+  },
+  "Units": [
+    {
+      "Number": 1,
+      "Title": "Factors and Multiples",
+      "LessonCount": 8,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-1/lessons.html",
+      "SemanticSha256": "bbd2719ce1f247c0b12c344c9e341e5733bfafe1ada1ea0a62228c696ac5ee06"
+    },
+    {
+      "Number": 2,
+      "Title": "Fraction Equivalence and Comparison",
+      "LessonCount": 17,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-2/lessons.html",
+      "SemanticSha256": "09653523d72694c073d73a14f9a3817d715f818f0a3e7fa2717dc5ba2e764734"
+    },
+    {
+      "Number": 3,
+      "Title": "Extending Operations to Fractions",
+      "LessonCount": 20,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-3/lessons.html",
+      "SemanticSha256": "c788a2a38a9e7775f6f95d94b7cfd43ac8f098470342289490544f6d3199c4b7"
+    },
+    {
+      "Number": 4,
+      "Title": "From Hundredths to Hundred-thousands",
+      "LessonCount": 23,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-4/lessons.html",
+      "SemanticSha256": "24b185fe3902c7f6a3607741c6c1b6f77123da9124c3b4d2072e542717b765c6"
+    },
+    {
+      "Number": 5,
+      "Title": "Multiplicative Comparison and Measurement",
+      "LessonCount": 18,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-5/lessons.html",
+      "SemanticSha256": "0c901d6eec0d9db1b7876628e0bd62bf04f90f69fc46dfdfcd690d9ed9ee26fe"
+    },
+    {
+      "Number": 6,
+      "Title": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonCount": 25,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lessons.html",
+      "SemanticSha256": "ea66c0d6324574981e8b1314a294e64231d87246fa22363e4fd88b618be9b31c"
+    },
+    {
+      "Number": 7,
+      "Title": "Angles and Angle Measurement",
+      "LessonCount": 16,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-7/lessons.html",
+      "SemanticSha256": "fe907ffcd9a576c66f3704cf0e58936cebfe5ed1beaccb9a3188cd19c1c6688e"
+    },
+    {
+      "Number": 8,
+      "Title": "Properties of Two-dimensional Shapes",
+      "LessonCount": 10,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-8/lessons.html",
+      "SemanticSha256": "f5f507cee74531317c67043e6a8185d01650040ff39646e3920a925a679840c8"
+    },
+    {
+      "Number": 9,
+      "Title": "Putting It All Together",
+      "LessonCount": 12,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-9/lessons.html",
+      "SemanticSha256": "5d5fd7541097dbda89d08b7059eadc6bbf0504b194a108109daa626b07263f3d"
+    }
+  ],
+  "Lessons": [
+    {
+      "SourceLessonCode": "4.1.1",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U01:L01",
+      "UnitNumber": 1,
+      "UnitTitle": "Factors and Multiples",
+      "LessonNumber": 1,
+      "Title": "Multiples of a Number PLC Activity",
+      "SortOrder": 1,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-1/lesson-1/preparation.html",
+      "SemanticSha256": "5bdbe5ebdec4bd2552e2caf4c3f47cfa503733cb8204d5ebafe6fc85b85a20f4",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.MD.C",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.MD.C.7.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.B.4",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.OA.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.OA.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.1.2",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U01:L02",
+      "UnitNumber": 1,
+      "UnitTitle": "Factors and Multiples",
+      "LessonNumber": 2,
+      "Title": "Factor Pairs",
+      "SortOrder": 2,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-1/lesson-2/preparation.html",
+      "SemanticSha256": "9ccf3459efe7955566c2297eff77ea176590e965176d343728e3ca9975510ae5",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.B.4",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.OA.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.1.3",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U01:L03",
+      "UnitNumber": 1,
+      "UnitTitle": "Factors and Multiples",
+      "LessonNumber": 3,
+      "Title": "Prime and Composite Numbers",
+      "SortOrder": 3,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-1/lesson-3/preparation.html",
+      "SemanticSha256": "42040c91837addc4a95e6f110c0505581faf485b8c1dea3d2bbd4490ef5c10d3",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.B.4",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.C.5",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.OA.B.4",
+        "CCSS:4.OA.C.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.1.4",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U01:L04",
+      "UnitNumber": 1,
+      "UnitTitle": "Factors and Multiples",
+      "LessonNumber": 4,
+      "Title": "Multiplication Practice (optional)",
+      "SortOrder": 4,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-1/lesson-4/preparation.html",
+      "SemanticSha256": "3ecf735509729d6b1d134c96f66ada12629c289321c7f170d36d29906efba3f0",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.B.4",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.OA.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.1.5",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U01:L05",
+      "UnitNumber": 1,
+      "UnitTitle": "Factors and Multiples",
+      "LessonNumber": 5,
+      "Title": "More Multiples",
+      "SortOrder": 5,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-1/lesson-5/preparation.html",
+      "SemanticSha256": "cf1df68886e034457b9b2bad985a8c1df48a48872419bb543aa6395ba50a0426",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.B.4",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.OA.A.3",
+        "CCSS:4.OA.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.1.6",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U01:L06",
+      "UnitNumber": 1,
+      "UnitTitle": "Factors and Multiples",
+      "LessonNumber": 6,
+      "Title": "The Locker Problem PLC Activity",
+      "SortOrder": 6,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-1/lesson-6/preparation.html",
+      "SemanticSha256": "5e85a78ec12c158ba20b3a3aae7a026bdd71555642db6a817a2d4ad0e5fde393",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.B.4",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.OA.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.1.7",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U01:L07",
+      "UnitNumber": 1,
+      "UnitTitle": "Factors and Multiples",
+      "LessonNumber": 7,
+      "Title": "Find Factors and Multiples",
+      "SortOrder": 7,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-1/lesson-7/preparation.html",
+      "SemanticSha256": "a0bc75b248562fac53db0f5eaf9667bbfd3866d4f5644607d1b7e1953db7de55",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.OA.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.OA.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.B.4",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.OA.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.1.8",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U01:L08",
+      "UnitNumber": 1,
+      "UnitTitle": "Factors and Multiples",
+      "LessonNumber": 8,
+      "Title": "Mondrian's Art (optional)",
+      "SortOrder": 8,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-1/lesson-8/preparation.html",
+      "SemanticSha256": "8f1651581bab8daea33804eabe4729b808200d25791230a8670248724dcb6b5b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.B.4",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.OA.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.OA.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.2.1",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U02:L01",
+      "UnitNumber": 2,
+      "UnitTitle": "Fraction Equivalence and Comparison",
+      "LessonNumber": 1,
+      "Title": "Representations of Fractions (Part 1)",
+      "SortOrder": 9,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-2/lesson-1/preparation.html",
+      "SemanticSha256": "881ff7f08fe5cb403490561f824e89b4c48b05da2f4237639b952b71cad6b76e",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "4.2.2",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U02:L02",
+      "UnitNumber": 2,
+      "UnitTitle": "Fraction Equivalence and Comparison",
+      "LessonNumber": 2,
+      "Title": "Representations of Fractions (Part 2)",
+      "SortOrder": 10,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-2/lesson-2/preparation.html",
+      "SemanticSha256": "7abe09354d04913add338a5ac56c4f5f731cc4c53e1fd0f2224e614dc78a6200",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "4.2.3",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U02:L03",
+      "UnitNumber": 2,
+      "UnitTitle": "Fraction Equivalence and Comparison",
+      "LessonNumber": 3,
+      "Title": "Same Denominator or Numerator",
+      "SortOrder": 11,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-2/lesson-3/preparation.html",
+      "SemanticSha256": "2f6d16001051b64bdb940573494ac184dd948251082227eba90b67129f9835b2",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.NF.A.3.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NBT.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "4.2.4",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U02:L04",
+      "UnitNumber": 2,
+      "UnitTitle": "Fraction Equivalence and Comparison",
+      "LessonNumber": 4,
+      "Title": "Same Size, Related Sizes PLC Activity",
+      "SortOrder": 12,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-2/lesson-4/preparation.html",
+      "SemanticSha256": "a7bb2a5661cc37135d9bb2712ebd46057667c4ba5a3f9fbe007b7e79043a9b8c",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.NF.A.2.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.NF.A.3.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.A.1",
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.2.5",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U02:L05",
+      "UnitNumber": 2,
+      "UnitTitle": "Fraction Equivalence and Comparison",
+      "LessonNumber": 5,
+      "Title": "Fractions on Number Lines",
+      "SortOrder": 13,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-2/lesson-5/preparation.html",
+      "SemanticSha256": "1698ca45fc11de85296885c16ad4ba74f470b42cafa8578259bb1624510d4389",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.OA.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.2.6",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U02:L06",
+      "UnitNumber": 2,
+      "UnitTitle": "Fraction Equivalence and Comparison",
+      "LessonNumber": 6,
+      "Title": "Relate Fractions to Benchmarks",
+      "SortOrder": 14,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-2/lesson-6/preparation.html",
+      "SemanticSha256": "e0ee0d3251028cc32171f6f493f287381b94e3c6c94550a285409cc83275c5dd",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.NF.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "4.2.7",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U02:L07",
+      "UnitNumber": 2,
+      "UnitTitle": "Fraction Equivalence and Comparison",
+      "LessonNumber": 7,
+      "Title": "Equivalent Fractions",
+      "SortOrder": 15,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-2/lesson-7/preparation.html",
+      "SemanticSha256": "ed16355c7e2794f00cb8efa14de31224bcf48052cd357ee7953093d6f4fcaad1",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.NF.A.3.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.2.8",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U02:L08",
+      "UnitNumber": 2,
+      "UnitTitle": "Fraction Equivalence and Comparison",
+      "LessonNumber": 8,
+      "Title": "Equivalent Fractions on the Number Line PLC Activity",
+      "SortOrder": 16,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-2/lesson-8/preparation.html",
+      "SemanticSha256": "0ee5f2df61f5167410f922f15ecee995f16ea7baaf104595351cfb4854724779",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.2.9",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U02:L09",
+      "UnitNumber": 2,
+      "UnitTitle": "Fraction Equivalence and Comparison",
+      "LessonNumber": 9,
+      "Title": "Explain Equivalence",
+      "SortOrder": 17,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-2/lesson-9/preparation.html",
+      "SemanticSha256": "aae480bacb1aa4c6ab095a559001c1652c68c374a0b89b3845c20a0ada41b865",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.OA.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.2.10",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U02:L10",
+      "UnitNumber": 2,
+      "UnitTitle": "Fraction Equivalence and Comparison",
+      "LessonNumber": 10,
+      "Title": "Use Multiples to Find Equivalent Fractions",
+      "SortOrder": 18,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-2/lesson-10/preparation.html",
+      "SemanticSha256": "1ca8b64f3a676484248f556de3eb890399d661c348665e64b7c73a3935b1a052",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.2.11",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U02:L11",
+      "UnitNumber": 2,
+      "UnitTitle": "Fraction Equivalence and Comparison",
+      "LessonNumber": 11,
+      "Title": "Use Factors to Find Equivalent Fractions",
+      "SortOrder": 19,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-2/lesson-11/preparation.html",
+      "SemanticSha256": "b7ab9a69de081fdfd52198035f41ff8794dd66f786e235717fa86e8befd46938",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.2.12",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U02:L12",
+      "UnitNumber": 2,
+      "UnitTitle": "Fraction Equivalence and Comparison",
+      "LessonNumber": 12,
+      "Title": "Ways to Compare Fractions PLC Activity",
+      "SortOrder": 20,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-2/lesson-12/preparation.html",
+      "SemanticSha256": "3bea654c0a7cc234a73fefbc715b3c136f6b8e8e7bb40f5531530344ec136d3a",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.2.13",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U02:L13",
+      "UnitNumber": 2,
+      "UnitTitle": "Fraction Equivalence and Comparison",
+      "LessonNumber": 13,
+      "Title": "Use Equivalent Fractions to Compare",
+      "SortOrder": 21,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-2/lesson-13/preparation.html",
+      "SemanticSha256": "a3e6071353728cf654d55a463a49227e33472895bb8a77a747396bbc73fa600c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.A.1",
+        "CCSS:4.NF.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.2.14",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U02:L14",
+      "UnitNumber": 2,
+      "UnitTitle": "Fraction Equivalence and Comparison",
+      "LessonNumber": 14,
+      "Title": "Fraction Comparison Problems",
+      "SortOrder": 22,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-2/lesson-14/preparation.html",
+      "SemanticSha256": "2f9e7e79e3817db1898693706d6f5806222cdfd4722744782c7e3711d09050d3",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NBT.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.A.1",
+        "CCSS:4.NF.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.2.15",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U02:L15",
+      "UnitNumber": 2,
+      "UnitTitle": "Fraction Equivalence and Comparison",
+      "LessonNumber": 15,
+      "Title": "Common Denominators to Compare",
+      "SortOrder": 23,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-2/lesson-15/preparation.html",
+      "SemanticSha256": "23b618e3acd45c1a616ffe3665d9009ae6afd6ad3d9cfd5d90c015d5221548d2",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.OA.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.A.2",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.A.1",
+        "CCSS:4.NF.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.2.16",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U02:L16",
+      "UnitNumber": 2,
+      "UnitTitle": "Fraction Equivalence and Comparison",
+      "LessonNumber": 16,
+      "Title": "Compare and Order Fractions",
+      "SortOrder": 24,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-2/lesson-16/preparation.html",
+      "SemanticSha256": "23e87f24cd4f450ef4f828f7280066dffa3e180e90aead9bdb89d38fa2aef739",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.OA.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.2.17",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U02:L17",
+      "UnitNumber": 2,
+      "UnitTitle": "Fraction Equivalence and Comparison",
+      "LessonNumber": 17,
+      "Title": "Paper Clip Games (optional)",
+      "SortOrder": 25,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-2/lesson-17/preparation.html",
+      "SemanticSha256": "9c8fd7175c19ff4963ceb87cfb356fa09d9f9687f615ec90ba32698dfd90e652",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NF.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "4.3.1",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U03:L01",
+      "UnitNumber": 3,
+      "UnitTitle": "Extending Operations to Fractions",
+      "LessonNumber": 1,
+      "Title": "Equal Groups of Unit Fractions",
+      "SortOrder": 26,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-3/lesson-1/preparation.html",
+      "SemanticSha256": "1a42f0dfa04d2f1c4c5957587b9e9dd4f76f39962000057e5942eb5ffedae4b3",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NF.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.3.2",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U03:L02",
+      "UnitNumber": 3,
+      "UnitTitle": "Extending Operations to Fractions",
+      "LessonNumber": 2,
+      "Title": "Representations of Equal Groups of Fractions PLC Activity",
+      "SortOrder": 27,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-3/lesson-2/preparation.html",
+      "SemanticSha256": "53c0c8f730ec03e303891bfce41a99901f240e32bbdcf64ed08791d8c9036480",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NF.B.4.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.3.3",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U03:L03",
+      "UnitNumber": 3,
+      "UnitTitle": "Extending Operations to Fractions",
+      "LessonNumber": 3,
+      "Title": "Patterns in Multiplication PLC Activity",
+      "SortOrder": 28,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-3/lesson-3/preparation.html",
+      "SemanticSha256": "60f14ad66f9695570bbe3e563f4612249cd93fe49467f629343576c1c618fed9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.3.4",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U03:L04",
+      "UnitNumber": 3,
+      "UnitTitle": "Extending Operations to Fractions",
+      "LessonNumber": 4,
+      "Title": "Equal Groups of Non-Unit Fractions",
+      "SortOrder": 29,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-3/lesson-4/preparation.html",
+      "SemanticSha256": "4c528fa70a3ac275674e65814e397bc74a739e6998af2fbfc8bfdd67c68950c3",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.3.5",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U03:L05",
+      "UnitNumber": 3,
+      "UnitTitle": "Extending Operations to Fractions",
+      "LessonNumber": 5,
+      "Title": "Equivalent Multiplication Expressions",
+      "SortOrder": 30,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-3/lesson-5/preparation.html",
+      "SemanticSha256": "368786833f784aed9adc3b85400d8dab389ce61ae67e8364269b9a1e89c9b6d0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.3.6",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U03:L06",
+      "UnitNumber": 3,
+      "UnitTitle": "Extending Operations to Fractions",
+      "LessonNumber": 6,
+      "Title": "Problems with Equal Groups of Fractions",
+      "SortOrder": 31,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-3/lesson-6/preparation.html",
+      "SemanticSha256": "b0bc9c9e40a9312a4e10415d682b577b49fda4cd0c03ffe5e4a5955f6fe7d52b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.3.7",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U03:L07",
+      "UnitNumber": 3,
+      "UnitTitle": "Extending Operations to Fractions",
+      "LessonNumber": 7,
+      "Title": "Fractions as Sums",
+      "SortOrder": 32,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-3/lesson-7/preparation.html",
+      "SemanticSha256": "d6a1383e438fd28cbb53f64ba2cb0c29fde88461aaa0fd42d9e73e040fdf58bd",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NF.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.3.8",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U03:L08",
+      "UnitNumber": 3,
+      "UnitTitle": "Extending Operations to Fractions",
+      "LessonNumber": 8,
+      "Title": "Addition of Fractions",
+      "SortOrder": 33,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-3/lesson-8/preparation.html",
+      "SemanticSha256": "c9ced5b7c3d168cd2403ba2b702a3fa996196e2ca06f6a720920d7bd3c2f0349",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NF.B.3.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NF.B.3.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NF.B.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.3.9",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U03:L09",
+      "UnitNumber": 3,
+      "UnitTitle": "Extending Operations to Fractions",
+      "LessonNumber": 9,
+      "Title": "Differences of Fractions",
+      "SortOrder": 34,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-3/lesson-9/preparation.html",
+      "SemanticSha256": "932051cb75f9c0cacdec56832a1cf70f3656571fcba05bbe0f4224f04ebc8689",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.3.10",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U03:L10",
+      "UnitNumber": 3,
+      "UnitTitle": "Extending Operations to Fractions",
+      "LessonNumber": 10,
+      "Title": "The Numbers in Subtraction PLC Activity",
+      "SortOrder": 35,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-3/lesson-10/preparation.html",
+      "SemanticSha256": "7aba33e9c3b04f1d71941f491011159ee003b7a61e2b209a0585db1f99f6dfd2",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NF.B.3.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NF.B.4.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.B.3",
+        "CCSS:4.NF.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.3.11",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U03:L11",
+      "UnitNumber": 3,
+      "UnitTitle": "Extending Operations to Fractions",
+      "LessonNumber": 11,
+      "Title": "Subtract Fractions Flexibly",
+      "SortOrder": 36,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-3/lesson-11/preparation.html",
+      "SemanticSha256": "c8326ed930eeb9bdd16bd2bcd50814592b95ae6351e40a8b17866ab143fa168a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.3.12",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U03:L12",
+      "UnitNumber": 3,
+      "UnitTitle": "Extending Operations to Fractions",
+      "LessonNumber": 12,
+      "Title": "Sums and Differences of Fractions",
+      "SortOrder": 37,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-3/lesson-12/preparation.html",
+      "SemanticSha256": "d76fd676e1e1058699a36b84167931f0723d372ecae9d993d428ef4ed535d420",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.3.13",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U03:L13",
+      "UnitNumber": 3,
+      "UnitTitle": "Extending Operations to Fractions",
+      "LessonNumber": 13,
+      "Title": "Fractional Measurements on Line Plots",
+      "SortOrder": 38,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-3/lesson-13/preparation.html",
+      "SemanticSha256": "f27e250226f1e84242bdb72610908958a2b4beb79b098f2b72bd4d09e089532d",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.MD.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.B.4",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.MD.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.MD.B.4",
+        "CCSS:4.NF.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.3.14",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U03:L14",
+      "UnitNumber": 3,
+      "UnitTitle": "Extending Operations to Fractions",
+      "LessonNumber": 14,
+      "Title": "Problems about Fractional Measurement Data",
+      "SortOrder": 39,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-3/lesson-14/preparation.html",
+      "SemanticSha256": "3b6bc5938a94d3bbaa00c89e59361bc80b1a93fb023069543f0d43f30d1e237d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.B.4",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.MD.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.MD.B.4",
+        "CCSS:4.NF.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.3.15",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U03:L15",
+      "UnitNumber": 3,
+      "UnitTitle": "Extending Operations to Fractions",
+      "LessonNumber": 15,
+      "Title": "An Assortment of Fractions PLC Activity",
+      "SortOrder": 40,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-3/lesson-15/preparation.html",
+      "SemanticSha256": "974f6785950c3ac65495d29febb650957cd72b15428f92b6e8954484d081280d",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NF.B.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NF.B.3.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NF.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NF.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "4.3.16",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U03:L16",
+      "UnitNumber": 3,
+      "UnitTitle": "Extending Operations to Fractions",
+      "LessonNumber": 16,
+      "Title": "Tenths and Hundredths, Together",
+      "SortOrder": 41,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-3/lesson-16/preparation.html",
+      "SemanticSha256": "9c3fb9d7eebe8e1d3b12a3d2b10b4241cf34cf374dbeb8e8d9175068dacdb5f9",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.A.1",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.C.5",
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NF.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.A.1",
+        "CCSS:4.NF.C.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.3.17",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U03:L17",
+      "UnitNumber": 3,
+      "UnitTitle": "Extending Operations to Fractions",
+      "LessonNumber": 17,
+      "Title": "Sums of Tenths and Hundredths",
+      "SortOrder": 42,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-3/lesson-17/preparation.html",
+      "SemanticSha256": "71c7d2c6c1fe7917b47acadbb6fbc9a4d1e77927724425e3d2564513cce683e6",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.C.5",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.C.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.3.18",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U03:L18",
+      "UnitNumber": 3,
+      "UnitTitle": "Extending Operations to Fractions",
+      "LessonNumber": 18,
+      "Title": "Lots of Fractions to Add",
+      "SortOrder": 43,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-3/lesson-18/preparation.html",
+      "SemanticSha256": "b91f81ae14e38608bd0b2ee013e49d3c2464932da378ccc36163c93c45c18c48",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.C.5",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.B.4",
+        "CCSS:4.NF.C.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.3.19",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U03:L19",
+      "UnitNumber": 3,
+      "UnitTitle": "Extending Operations to Fractions",
+      "LessonNumber": 19,
+      "Title": "Flexible with Fractions (optional)",
+      "SortOrder": 44,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-3/lesson-19/preparation.html",
+      "SemanticSha256": "a61bbc64eb7b867d41991bde52c04ed082443846d4f6a4ebb6a23fc4d4f0e4b8",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.C.5",
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NF.B.3.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NF.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 6
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.B.3",
+        "CCSS:4.NF.B.4",
+        "CCSS:4.NF.C.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.3.20",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U03:L20",
+      "UnitNumber": 3,
+      "UnitTitle": "Extending Operations to Fractions",
+      "LessonNumber": 20,
+      "Title": "Sticky Notes (optional)",
+      "SortOrder": 45,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-3/lesson-20/preparation.html",
+      "SemanticSha256": "6eec96a08bc3c1d10165702d5cec486016a23a310cc5e5087f014cb51526ee9a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.B.3",
+        "CCSS:4.NF.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.4.1",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U04:L01",
+      "UnitNumber": 4,
+      "UnitTitle": "From Hundredths to Hundred-thousands",
+      "LessonNumber": 1,
+      "Title": "Decimal Numbers",
+      "SortOrder": 46,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-4/lesson-1/preparation.html",
+      "SemanticSha256": "9b96057a3a468963604b178c19d36db7d6ae5aa5b600b3243bc68cb1205da789",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.C.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NF.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.C.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.4.2",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U04:L02",
+      "UnitNumber": 4,
+      "UnitTitle": "From Hundredths to Hundred-thousands",
+      "LessonNumber": 2,
+      "Title": "Equivalent Decimals",
+      "SortOrder": 47,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-4/lesson-2/preparation.html",
+      "SemanticSha256": "91005ca7714fcd077ee04be2bdfc0e1e8259767ffa5bd6f8fbffb93426bc8f16",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.C.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.C.6",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.C.7",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.C.5",
+        "CCSS:4.NF.C.6",
+        "CCSS:4.NF.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.4.3",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U04:L03",
+      "UnitNumber": 4,
+      "UnitTitle": "From Hundredths to Hundred-thousands",
+      "LessonNumber": 3,
+      "Title": "Decimals on Number Lines PLC Activity",
+      "SortOrder": 48,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-4/lesson-3/preparation.html",
+      "SemanticSha256": "4cece568f44642cb49c912144a61c3eaa4c5030fd89cb83909984d7698dcfad2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.C",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.C.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.4.4",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U04:L04",
+      "UnitNumber": 4,
+      "UnitTitle": "From Hundredths to Hundred-thousands",
+      "LessonNumber": 4,
+      "Title": "Compare and Order Decimals",
+      "SortOrder": 49,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-4/lesson-4/preparation.html",
+      "SemanticSha256": "4d931478432dce536fd5826ac30d1df57830a1608038a80358aa714c001add9c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.C.7",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.4.5",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U04:L05",
+      "UnitNumber": 4,
+      "UnitTitle": "From Hundredths to Hundred-thousands",
+      "LessonNumber": 5,
+      "Title": "Compare and Order Decimals and Fractions",
+      "SortOrder": 50,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-4/lesson-5/preparation.html",
+      "SemanticSha256": "abdcd04a13f80ebc1ae580728f159a40020e3bb9f5f6948dc069e3dec2de2579",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.C.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.C.6",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.C.7",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.C.5",
+        "CCSS:4.NF.C.6",
+        "CCSS:4.NF.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.4.6",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U04:L06",
+      "UnitNumber": 4,
+      "UnitTitle": "From Hundredths to Hundred-thousands",
+      "LessonNumber": 6,
+      "Title": "How Much is 10,000? PLC Activity",
+      "SortOrder": 51,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-4/lesson-6/preparation.html",
+      "SemanticSha256": "9a4a0fce2f61cbe38200afabe77cbe4519d3bde55a610239923303b2ac3a86f8",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.4.7",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U04:L07",
+      "UnitNumber": 4,
+      "UnitTitle": "From Hundredths to Hundred-thousands",
+      "LessonNumber": 7,
+      "Title": "Numbers Within 100,000",
+      "SortOrder": 52,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-4/lesson-7/preparation.html",
+      "SemanticSha256": "e92d18e191a588d9872297e59b95d5a23561e0122f13ba504c7f7627fdc8aaa7",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.A.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.4.8",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U04:L08",
+      "UnitNumber": 4,
+      "UnitTitle": "From Hundredths to Hundred-thousands",
+      "LessonNumber": 8,
+      "Title": "Beyond 100,000",
+      "SortOrder": 53,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-4/lesson-8/preparation.html",
+      "SemanticSha256": "4bef8eb09ce751afe5787a4641f04b1ed179ffb26409751360c553f54d8b69a9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.A.1",
+        "CCSS:4.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.4.9",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U04:L09",
+      "UnitNumber": 4,
+      "UnitTitle": "From Hundredths to Hundred-thousands",
+      "LessonNumber": 9,
+      "Title": "Same Digit, Different Value",
+      "SortOrder": 54,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-4/lesson-9/preparation.html",
+      "SemanticSha256": "12cc0f760468720b59f291d195a3bf01fe90968165a762663ac2db63a27d2859",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.A.1",
+        "CCSS:4.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.4.10",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U04:L10",
+      "UnitNumber": 4,
+      "UnitTitle": "From Hundredths to Hundred-thousands",
+      "LessonNumber": 10,
+      "Title": "Ten Times As Much",
+      "SortOrder": 55,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-4/lesson-10/preparation.html",
+      "SemanticSha256": "e395b2213f26488e1704c7184c0c26e9764aab70005b45a6f23d9ec0c94c708f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.4",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.A.1",
+        "CCSS:4.NBT.A.2",
+        "CCSS:4.NBT.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.4.11",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U04:L11",
+      "UnitNumber": 4,
+      "UnitTitle": "From Hundredths to Hundred-thousands",
+      "LessonNumber": 11,
+      "Title": "Large Numbers on a Number Line",
+      "SortOrder": 56,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-4/lesson-11/preparation.html",
+      "SemanticSha256": "1c08ccff6b60ddd4d374edae4b31579c4e051a9d4e0a964528734c211ae6cbbc",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.A.1",
+        "CCSS:4.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.4.12",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U04:L12",
+      "UnitNumber": 4,
+      "UnitTitle": "From Hundredths to Hundred-thousands",
+      "LessonNumber": 12,
+      "Title": "Compare Multi-digit Numbers",
+      "SortOrder": 57,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-4/lesson-12/preparation.html",
+      "SemanticSha256": "37d78bf5d8366c7bd77322488ac0075cd47405470bc492d6f9ead9772c9caebb",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.A.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.4.13",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U04:L13",
+      "UnitNumber": 4,
+      "UnitTitle": "From Hundredths to Hundred-thousands",
+      "LessonNumber": 13,
+      "Title": "Order Multi-digit Numbers",
+      "SortOrder": 58,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-4/lesson-13/preparation.html",
+      "SemanticSha256": "11d74a82660ae94db90d3db19de1e1fe0c53ed35fc9a629ad372cf187ad2bbcd",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.A.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.4.14",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U04:L14",
+      "UnitNumber": 4,
+      "UnitTitle": "From Hundredths to Hundred-thousands",
+      "LessonNumber": 14,
+      "Title": "Multiples of 10,000 and 100,000",
+      "SortOrder": 59,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-4/lesson-14/preparation.html",
+      "SemanticSha256": "bc9e34cd43b4c52d2368faa4d636f6537b5a2b2c0bdbbe8823e24e7ffd853a0a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NBT.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.A.2",
+        "CCSS:4.NBT.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.4.15",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U04:L15",
+      "UnitNumber": 4,
+      "UnitTitle": "From Hundredths to Hundred-thousands",
+      "LessonNumber": 15,
+      "Title": "The Nearest Multiples of 1,000, 10,000, and 100,000",
+      "SortOrder": 60,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-4/lesson-15/preparation.html",
+      "SemanticSha256": "ba76b30e12af7a4588913310cb0d197366d29a8bcb250beed641d460f04f5ad9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NBT.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.4.16",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U04:L16",
+      "UnitNumber": 4,
+      "UnitTitle": "From Hundredths to Hundred-thousands",
+      "LessonNumber": 16,
+      "Title": "Round Numbers PLC Activity",
+      "SortOrder": 61,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-4/lesson-16/preparation.html",
+      "SemanticSha256": "fe2d72454f786ed24f89e7f8012fda77bd98d4a5597db28caefc277ac7762975",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.A.3",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.4.17",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U04:L17",
+      "UnitNumber": 4,
+      "UnitTitle": "From Hundredths to Hundred-thousands",
+      "LessonNumber": 17,
+      "Title": "Apply Rounding",
+      "SortOrder": 62,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-4/lesson-17/preparation.html",
+      "SemanticSha256": "afdac8ee7f223f866a8a0cdda6833514601b50b5abf50278b5dd7e34fc9ee21a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NBT.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.4.18",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U04:L18",
+      "UnitNumber": 4,
+      "UnitTitle": "From Hundredths to Hundred-thousands",
+      "LessonNumber": 18,
+      "Title": "Standard Algorithm to Add and Subtract",
+      "SortOrder": 63,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-4/lesson-18/preparation.html",
+      "SemanticSha256": "d7f90376b6146abe434b3c1fa1e3627d544a79135798ac7a631433fef5de3f3d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.4",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.4.19",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U04:L19",
+      "UnitNumber": 4,
+      "UnitTitle": "From Hundredths to Hundred-thousands",
+      "LessonNumber": 19,
+      "Title": "Compose and Decompose to Add and Subtract",
+      "SortOrder": 64,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-4/lesson-19/preparation.html",
+      "SemanticSha256": "1f88dfc810a6aec8c42611d0e2349f5423e806525a6f6f18c6a7f651e437294e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.4",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.4",
+        "CCSS:4.NF.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.4.20",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U04:L20",
+      "UnitNumber": 4,
+      "UnitTitle": "From Hundredths to Hundred-thousands",
+      "LessonNumber": 20,
+      "Title": "Add and Subtract Within 1,000,000 PLC Activity",
+      "SortOrder": 65,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-4/lesson-20/preparation.html",
+      "SemanticSha256": "85c1fa51916bdfef987c9cc83ff96fde05baf70b794dba66fd1584bc44ae0cfb",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.4",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.4.21",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U04:L21",
+      "UnitNumber": 4,
+      "UnitTitle": "From Hundredths to Hundred-thousands",
+      "LessonNumber": 21,
+      "Title": "Zeros in the Standard Algorithm",
+      "SortOrder": 66,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-4/lesson-21/preparation.html",
+      "SemanticSha256": "49ddea10efbf025bbc6dbd466888fada01e4d0aed64cbcf3c9a93c862bf18a36",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.4",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.A.2",
+        "CCSS:4.NBT.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.4.22",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U04:L22",
+      "UnitNumber": 4,
+      "UnitTitle": "From Hundredths to Hundred-thousands",
+      "LessonNumber": 22,
+      "Title": "Solve Problems Involving Large Numbers",
+      "SortOrder": 67,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-4/lesson-22/preparation.html",
+      "SemanticSha256": "01529a42b4ad0ae614062a25f8097004370c84eb3cd19cec5656c281a48cd8ae",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.4",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.4.23",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U04:L23",
+      "UnitNumber": 4,
+      "UnitTitle": "From Hundredths to Hundred-thousands",
+      "LessonNumber": 23,
+      "Title": "Bees are Buzzing (optional)",
+      "SortOrder": 68,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-4/lesson-23/preparation.html",
+      "SemanticSha256": "274b5ddf71495813939c5358316be947c310365c150ee44937a49766c0679111",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.4",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.5.1",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U05:L01",
+      "UnitNumber": 5,
+      "UnitTitle": "Multiplicative Comparison and Measurement",
+      "LessonNumber": 1,
+      "Title": "Times as Many",
+      "SortOrder": 69,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-5/lesson-1/preparation.html",
+      "SemanticSha256": "855835b07a8bbba6829244fd2ee9fc1d0cfa7b6de3be364015ae03bccc5901c2",
+      "Alignments": [
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "4.5.2",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U05:L02",
+      "UnitNumber": 5,
+      "UnitTitle": "Multiplicative Comparison and Measurement",
+      "LessonNumber": 2,
+      "Title": "Interpret Representations of Multiplicative Comparison PLC Activity",
+      "SortOrder": 70,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-5/lesson-2/preparation.html",
+      "SemanticSha256": "429b13fa1dc1eb64dcd1105438f6c211b888b652a00737089b1e9c78b669163a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.OA.A.1",
+        "CCSS:4.OA.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.5.3",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U05:L03",
+      "UnitNumber": 5,
+      "UnitTitle": "Multiplicative Comparison and Measurement",
+      "LessonNumber": 3,
+      "Title": "Solve Multiplicative Comparison Problems",
+      "SortOrder": 71,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-5/lesson-3/preparation.html",
+      "SemanticSha256": "b50125876e24d12a5e1feb597d5162a092bc953ed41d1bf02902a3b0b56d161f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.OA.A.1",
+        "CCSS:4.OA.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.5.4",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U05:L04",
+      "UnitNumber": 5,
+      "UnitTitle": "Multiplicative Comparison and Measurement",
+      "LessonNumber": 4,
+      "Title": "Solve Multiplicative Comparison Problems with Large Numbers",
+      "SortOrder": 72,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-5/lesson-4/preparation.html",
+      "SemanticSha256": "53f38bbde5a5da5db86cb892de3166e5b8a3eddab64bca00c063eb91816117b8",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.OA.A.1",
+        "CCSS:4.OA.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.5.5",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U05:L05",
+      "UnitNumber": 5,
+      "UnitTitle": "Multiplicative Comparison and Measurement",
+      "LessonNumber": 5,
+      "Title": "One- and Two-step Comparison Problems",
+      "SortOrder": 73,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-5/lesson-5/preparation.html",
+      "SemanticSha256": "e82df9f6de596bea9207e04e77885b9c4c5d043abc1fe3919d1d41c3979480d6",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.OA.A.1",
+        "CCSS:4.OA.A.2",
+        "CCSS:4.OA.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.5.6",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U05:L06",
+      "UnitNumber": 5,
+      "UnitTitle": "Multiplicative Comparison and Measurement",
+      "LessonNumber": 6,
+      "Title": "Ten Times as Many",
+      "SortOrder": 74,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-5/lesson-6/preparation.html",
+      "SemanticSha256": "b6a849e44999b884366e56a48b67bac6e27da630335a738d8831999e4a30c8af",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.5",
+        "CCSS:4.OA.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.5.7",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U05:L07",
+      "UnitNumber": 5,
+      "UnitTitle": "Multiplicative Comparison and Measurement",
+      "LessonNumber": 7,
+      "Title": "Meters and Centimeters",
+      "SortOrder": 75,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-5/lesson-7/preparation.html",
+      "SemanticSha256": "e3bb96571481ab1c0d53f54d7e57ebbf00bff05868f91120f525472c1fc7e138",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.MD.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.5.8",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U05:L08",
+      "UnitNumber": 5,
+      "UnitTitle": "Multiplicative Comparison and Measurement",
+      "LessonNumber": 8,
+      "Title": "Meters and Kilometers PLC Activity",
+      "SortOrder": 76,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-5/lesson-8/preparation.html",
+      "SemanticSha256": "a1571851efe08db1d07fbac0c2c07edadcc3a15eb0d65d2dd9072ad8c381ef91",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.A.2",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.MD.A.1",
+        "CCSS:4.MD.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.5.9",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U05:L09",
+      "UnitNumber": 5,
+      "UnitTitle": "Multiplicative Comparison and Measurement",
+      "LessonNumber": 9,
+      "Title": "Grams and Kilograms, Liters and Milliliters",
+      "SortOrder": 77,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-5/lesson-9/preparation.html",
+      "SemanticSha256": "4373feceef1f54840620bc037c6d3ffc840d2405901901b16db42c76cb13cf79",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.MD.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.5.10",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U05:L10",
+      "UnitNumber": 5,
+      "UnitTitle": "Multiplicative Comparison and Measurement",
+      "LessonNumber": 10,
+      "Title": "Multi-step Measurement Problems",
+      "SortOrder": 78,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-5/lesson-10/preparation.html",
+      "SemanticSha256": "28f4f77ad8904dbdee083166e72317fdf975de22aeffe3318fb05d28ce6ffe12",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.MD.A.2",
+        "CCSS:4.OA.A.2",
+        "CCSS:4.OA.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.5.11",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U05:L11",
+      "UnitNumber": 5,
+      "UnitTitle": "Multiplicative Comparison and Measurement",
+      "LessonNumber": 11,
+      "Title": "Pounds and Ounces",
+      "SortOrder": 79,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-5/lesson-11/preparation.html",
+      "SemanticSha256": "660957ed20baa8926262f4ba4249e539fb32e04f39903a1a2bfa402395c0eeaf",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.MD.A.1",
+        "CCSS:4.MD.A.2",
+        "CCSS:4.OA.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.5.12",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U05:L12",
+      "UnitNumber": 5,
+      "UnitTitle": "Multiplicative Comparison and Measurement",
+      "LessonNumber": 12,
+      "Title": "Hours, Minutes, and Seconds",
+      "SortOrder": 80,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-5/lesson-12/preparation.html",
+      "SemanticSha256": "f5772668f30a928a01ea2ecba17136327c9283fccc3df5edfc1cf23acbe262b6",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.MD.A.1",
+        "CCSS:4.MD.A.2",
+        "CCSS:4.OA.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.5.13",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U05:L13",
+      "UnitNumber": 5,
+      "UnitTitle": "Multiplicative Comparison and Measurement",
+      "LessonNumber": 13,
+      "Title": "Multi-step Measurement Problems with Fractions",
+      "SortOrder": 81,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-5/lesson-13/preparation.html",
+      "SemanticSha256": "1d0ae8e600cf69f3782f3c7396fdb44dee4b738c1ad5715c0c1dd2402ccefcd0",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NF.B.4.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.MD.A.2",
+        "CCSS:4.OA.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.5.14",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U05:L14",
+      "UnitNumber": 5,
+      "UnitTitle": "Multiplicative Comparison and Measurement",
+      "LessonNumber": 14,
+      "Title": "Weight and Capacity Measurements",
+      "SortOrder": 82,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-5/lesson-14/preparation.html",
+      "SemanticSha256": "3b32294ad98ed2ea25e51571205757f49beb27ae3424cd40d197b3b474cb031c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.2",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.MD.A.1",
+        "CCSS:4.MD.A.2",
+        "CCSS:4.OA.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.5.15",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U05:L15",
+      "UnitNumber": 5,
+      "UnitTitle": "Multiplicative Comparison and Measurement",
+      "LessonNumber": 15,
+      "Title": "Length Measurements PLC Activity",
+      "SortOrder": 83,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-5/lesson-15/preparation.html",
+      "SemanticSha256": "7e896a489c89396682d522c85478f0b5fbc8372a809f51ace20cdb0d6397d67b",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.2",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.MD.A.2",
+        "CCSS:4.NF.B.4",
+        "CCSS:4.OA.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.5.16",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U05:L16",
+      "UnitNumber": 5,
+      "UnitTitle": "Multiplicative Comparison and Measurement",
+      "LessonNumber": 16,
+      "Title": "Compare Perimeters of Rectangles",
+      "SortOrder": 84,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-5/lesson-16/preparation.html",
+      "SemanticSha256": "3d280de647e69421b58c72163b5d804ee1d7807fbf8555fe07141a7e6c148721",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.2",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.MD.A.3",
+        "CCSS:4.NF.B.4",
+        "CCSS:4.OA.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.5.17",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U05:L17",
+      "UnitNumber": 5,
+      "UnitTitle": "Multiplicative Comparison and Measurement",
+      "LessonNumber": 17,
+      "Title": "More Perimeter Problems",
+      "SortOrder": 85,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-5/lesson-17/preparation.html",
+      "SemanticSha256": "86786528e9a1d1367c053fa38b69a4ad08bbe669528bb21de0f0081bc54c9e36",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NF.B.3.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.A.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.2",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.MD.A.2",
+        "CCSS:4.MD.A.3",
+        "CCSS:4.OA.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.5.18",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U05:L18",
+      "UnitNumber": 5,
+      "UnitTitle": "Multiplicative Comparison and Measurement",
+      "LessonNumber": 18,
+      "Title": "Two Truths and a Lie (optional)",
+      "SortOrder": 86,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-5/lesson-18/preparation.html",
+      "SemanticSha256": "e90432d8adba2577d9e40f8ec7f07004be58c3ba3ca93d31de96fe20da5ead7d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.MD.A.1",
+        "CCSS:4.OA.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.1",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L01",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 1,
+      "Title": "Patterns that Grow PLC Activity",
+      "SortOrder": 87,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-1/preparation.html",
+      "SemanticSha256": "68413642c7b216ad3ea2d3c17b75d2d8edf381ead0def04ef28685cb81d9a61c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.C.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.OA.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.OA.C.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.2",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L02",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 2,
+      "Title": "Patterns that Repeat",
+      "SortOrder": 88,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-2/preparation.html",
+      "SemanticSha256": "d7ee5a458b0982f161e4ac028db4fafb8abf84aa94f08c3c82ce617645d51016",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.C.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.OA.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.OA.C.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.3",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L03",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 3,
+      "Title": "From Visual Patterns to Numerical Patterns",
+      "SortOrder": 89,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-3/preparation.html",
+      "SemanticSha256": "57caf5e6f269258fd8126bd61f22d210c288eda47b3db03448426d5486960a9d",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.OA.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.C.5",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.OA.C.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.4",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L04",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 4,
+      "Title": "Numerical Patterns",
+      "SortOrder": 90,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-4/preparation.html",
+      "SemanticSha256": "e26977440c1ac5430a9fbf447dc2496e3e6679f36e78153fa5238c0d058ef456",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.OA.D.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.C.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.OA.C.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.5",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L05",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 5,
+      "Title": "Products Beyond 100",
+      "SortOrder": 91,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-5/preparation.html",
+      "SemanticSha256": "d4945b1ceb528ef30951ac41a828e0fba113fd296fbbf3dd91a83cf7e1ffb4bb",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.6",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L06",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 6,
+      "Title": "Multiply Two-digit Numbers and One-digit Numbers",
+      "SortOrder": 92,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-6/preparation.html",
+      "SemanticSha256": "d759dfdd8a59970b8bdcb8d160900086f4c6bd086b729e14e0736e08a825e2d7",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.5",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.7",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L07",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 7,
+      "Title": "Multiply Three- and Four-digit Numbers by One-digit Numbers",
+      "SortOrder": 93,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-7/preparation.html",
+      "SemanticSha256": "238d945cda436d1de6984acafb07c6468be4d71fc0d062895089d928168feca0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.5",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.8",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L08",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 8,
+      "Title": "Multiply 2 Two-digit Numbers",
+      "SortOrder": 94,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-8/preparation.html",
+      "SemanticSha256": "abebfb92bd87123c0c3be7331f39868eec8213fa1515f45dc1767745a58e6a01",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.4",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.5",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.4",
+        "CCSS:4.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.9",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L09",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 9,
+      "Title": "Recording Partial Products: One-digit and Three- or Four-digit Factors PLC Activity",
+      "SortOrder": 95,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-9/preparation.html",
+      "SemanticSha256": "998333dbb2cc999966bb7ba34b8023c2fd823fc7bb29143380b7bb8507999c70",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.5",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.10",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L10",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 10,
+      "Title": "Using Algorithms with Partial Products: 2 Two-digit Numbers",
+      "SortOrder": 96,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-10/preparation.html",
+      "SemanticSha256": "f44d04908ec13d5615a8d0c9e39942f25608f6bcd1f99780990ecf910889cf69",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.5",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.11",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L11",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 11,
+      "Title": "Partial Products and the Standard Algorithm",
+      "SortOrder": 97,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-11/preparation.html",
+      "SemanticSha256": "87b7e8cfdbf403ec600ef170fb64c22b6c11068090c19c9bac477d463656c00e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.5",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.12",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L12",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 12,
+      "Title": "Solve Problems Involving Multiplication",
+      "SortOrder": 98,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-12/preparation.html",
+      "SemanticSha256": "670750d26682754e2ee6cd639fe276b59503252888823c1e3b51ed09a0d7d1e1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.5",
+        "CCSS:4.OA.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.13",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L13",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 13,
+      "Title": "Situations Involving Equal-size Groups",
+      "SortOrder": 99,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-13/preparation.html",
+      "SemanticSha256": "678ad2fd5ccaeaa6ceb3ef6c9cc983aba9145eb273b6b77ad2b44fc850784842",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.6",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.14",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L14",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 14,
+      "Title": "Situations Involving Factors and Multiples",
+      "SortOrder": 100,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-14/preparation.html",
+      "SemanticSha256": "3e4f8388756b0643f4998dfacdee7874970412de0e4aac873ebb8ce865cfddec",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.OA.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.6",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.15",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L15",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 15,
+      "Title": "Situations Involving Area PLC Activity",
+      "SortOrder": 101,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-15/preparation.html",
+      "SemanticSha256": "ac734749b07b9272be33da3fd23872e6d755eca02916ff2dfe021b8281791c89",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.MD.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.A.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.6",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.3",
+          "SortOrder": 5
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.MD.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 6
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 7
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.MD.A.3",
+        "CCSS:4.NBT.B.6",
+        "CCSS:4.OA.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.16",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L16",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 16,
+      "Title": "Base-ten Blocks to Divide",
+      "SortOrder": 102,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-16/preparation.html",
+      "SemanticSha256": "572e829330f1b6847efce2ff666d614248a30f9db5482ca677c223a581e5f305",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.NBT.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.17",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L17",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 17,
+      "Title": "Base-ten Diagrams to Represent Division",
+      "SortOrder": 103,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-17/preparation.html",
+      "SemanticSha256": "120f3006c24e68d575159b2fe2da910a14fb179ea19b335a0da110f9547945a2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.6",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.18",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L18",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 18,
+      "Title": "Divide with Partial Quotients",
+      "SortOrder": 104,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-18/preparation.html",
+      "SemanticSha256": "0fda9a0423e003dce706a0dda3cfc5ef47908fc4fabed6d6da2bcd22c915cfda",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.6",
+        "CCSS:4.OA.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.19",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L19",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 19,
+      "Title": "Division With and Without Remainders",
+      "SortOrder": 105,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-19/preparation.html",
+      "SemanticSha256": "29e7a15b31a98e50857965de81142d3c7c27610447eabd5d9f114036e427a706",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.B.4",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.6",
+        "CCSS:4.OA.A.3",
+        "CCSS:4.OA.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.20",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L20",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 20,
+      "Title": "Interpret Remainders in Division Situations",
+      "SortOrder": 106,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-20/preparation.html",
+      "SemanticSha256": "354c48a7cde5cc4352f9e0fa3f294602f91dfdb9085704c289152483217a66e1",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.OA.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.6",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.6",
+        "CCSS:4.OA.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.21",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L21",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 21,
+      "Title": "Different Ways to Solve Problems",
+      "SortOrder": 107,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-21/preparation.html",
+      "SemanticSha256": "b46652fd0c0180c38cb59d62bdd584dc1b88e3f44db3878db965593dd5f711c9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.5",
+        "CCSS:4.OA.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.22",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L22",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 22,
+      "Title": "Problems About Perimeter and Area PLC Activity",
+      "SortOrder": 108,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-22/preparation.html",
+      "SemanticSha256": "2901ceb6d64f78f64cc8a1d3c0fd35ba4bc21b9689865223c3171c6b24e51b7d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.MD.A.2",
+        "CCSS:4.MD.A.3",
+        "CCSS:4.OA.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.23",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L23",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 23,
+      "Title": "Solve Problems with Many Operations",
+      "SortOrder": 109,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-23/preparation.html",
+      "SemanticSha256": "af5e85996d259a274e8a22a1eae639bf61cba4fb2b33395f8df7e482b82babaf",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.4",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.6",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.4",
+        "CCSS:4.NBT.B.5",
+        "CCSS:4.NBT.B.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.24",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L24",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 24,
+      "Title": "Assess the Reasonableness of Solutions",
+      "SortOrder": 110,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-24/preparation.html",
+      "SemanticSha256": "7067d3928d4593c1f2404ccde7ab72e651a178b623888771bdb57bd5be108f84",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.4",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.4",
+        "CCSS:4.OA.A.2",
+        "CCSS:4.OA.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.6.25",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U06:L25",
+      "UnitNumber": 6,
+      "UnitTitle": "Multiplying and Dividing Multi-digit Numbers",
+      "LessonNumber": 25,
+      "Title": "Paper Flower Decorations (optional)",
+      "SortOrder": 111,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-6/lesson-25/preparation.html",
+      "SemanticSha256": "20aef2fee5c0085218d0b67f102be55b3ec8370bd5b78133118778cd77799e6d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.C.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.OA.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.OA.A.3",
+        "CCSS:4.OA.C.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.7.1",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U07:L01",
+      "UnitNumber": 7,
+      "UnitTitle": "Angles and Angle Measurement",
+      "LessonNumber": 1,
+      "Title": "How Would You Describe These Figures?",
+      "SortOrder": 112,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-7/lesson-1/preparation.html",
+      "SemanticSha256": "d6d47f839c60dba1f695ff7f6101048924349c2f99be7368bd6c174ae500c0f0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.7.2",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U07:L02",
+      "UnitNumber": 7,
+      "UnitTitle": "Angles and Angle Measurement",
+      "LessonNumber": 2,
+      "Title": "Points, Lines, Rays, and Segments",
+      "SortOrder": 113,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-7/lesson-2/preparation.html",
+      "SemanticSha256": "d39123a188b6e79d343a2eeeaf484642cec783ffcd2e827dd09d2bdf12522b26",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.4",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.5",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.G.A.1",
+        "CCSS:4.NBT.B.4",
+        "CCSS:4.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.7.3",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U07:L03",
+      "UnitNumber": 7,
+      "UnitTitle": "Angles and Angle Measurement",
+      "LessonNumber": 3,
+      "Title": "Two or More Lines PLC Activity",
+      "SortOrder": 114,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-7/lesson-3/preparation.html",
+      "SemanticSha256": "84a8f97835561aa0d5699ece2f686675f4775b8a5ca541c77d3811ab4b0018c9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.7.4",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U07:L04",
+      "UnitNumber": 7,
+      "UnitTitle": "Angles and Angle Measurement",
+      "LessonNumber": 4,
+      "Title": "Points and Lines All Around",
+      "SortOrder": 115,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-7/lesson-4/preparation.html",
+      "SemanticSha256": "9990f7463dd3cfebbb7ddc254248809e6d07f7ae05409eb1ca2d5779e60afea1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.7.5",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U07:L05",
+      "UnitNumber": 7,
+      "UnitTitle": "Angles and Angle Measurement",
+      "LessonNumber": 5,
+      "Title": "What is an Angle?",
+      "SortOrder": 116,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-7/lesson-5/preparation.html",
+      "SemanticSha256": "de3fe55a1b0ab7427998d93f7dae5de5f54bd2511ba78d9fdc09e5e2dd9756da",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.C.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.MD.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.G.A.1",
+        "CCSS:4.MD.C.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.7.6",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U07:L06",
+      "UnitNumber": 7,
+      "UnitTitle": "Angles and Angle Measurement",
+      "LessonNumber": 6,
+      "Title": "Compare and Describe Angles",
+      "SortOrder": 117,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-7/lesson-6/preparation.html",
+      "SemanticSha256": "11276bdd8f66bb2f968e810ee8214b570a3e83949a86200a90cb80155655bb14",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.C.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.MD.C.5.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.G.A.1",
+        "CCSS:4.MD.C.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.7.7",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U07:L07",
+      "UnitNumber": 7,
+      "UnitTitle": "Angles and Angle Measurement",
+      "LessonNumber": 7,
+      "Title": "The Size of Angles on a Clock",
+      "SortOrder": 118,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-7/lesson-7/preparation.html",
+      "SemanticSha256": "a73603f2b75447c4b658f77f5c6a088eef633f2fce79656b64d1606416cd4849",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.C.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.C.5.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.MD.C.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.MD.C.5.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.MD.C.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.7.8",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U07:L08",
+      "UnitNumber": 7,
+      "UnitTitle": "Angles and Angle Measurement",
+      "LessonNumber": 8,
+      "Title": "The Size of Angles in Degrees",
+      "SortOrder": 119,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-7/lesson-8/preparation.html",
+      "SemanticSha256": "1acd8b67ccff097325bf8107cc52d580332c237ed5989b474e9a16729843b74c",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.C.5.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.MD.C.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.C.7",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.MD.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.MD.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.MD.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 6
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.MD.C.5",
+        "CCSS:4.MD.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.7.9",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U07:L09",
+      "UnitNumber": 7,
+      "UnitTitle": "Angles and Angle Measurement",
+      "LessonNumber": 9,
+      "Title": "Use a Protractor to Measure Angles",
+      "SortOrder": 120,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-7/lesson-9/preparation.html",
+      "SemanticSha256": "722d2a74543e3faf04595cf6d7f188a61f0cacdcea44c5b2f01e42fff2e91875",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.C.5.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.MD.C.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.C.5.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.MD.C.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.C.6",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.C.7",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.5",
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.MD.C.5",
+        "CCSS:4.MD.C.6",
+        "CCSS:4.MD.C.7",
+        "CCSS:4.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.7.10",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U07:L10",
+      "UnitNumber": 7,
+      "UnitTitle": "Angles and Angle Measurement",
+      "LessonNumber": 10,
+      "Title": "Angle Measurement and Perpendicular Lines",
+      "SortOrder": 121,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-7/lesson-10/preparation.html",
+      "SemanticSha256": "c2f656755fc33942398faff6f035d64a2f649ebe109ce1cde50a1dcd03fb720d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.C.6",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.6",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.G.A.1",
+        "CCSS:4.MD.C.6",
+        "CCSS:4.NBT.B.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.7.11",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U07:L11",
+      "UnitNumber": 7,
+      "UnitTitle": "Angles and Angle Measurement",
+      "LessonNumber": 11,
+      "Title": "Use a Protractor to Draw Angles",
+      "SortOrder": 122,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-7/lesson-11/preparation.html",
+      "SemanticSha256": "6e1c914bbe3f898ecf54bda838877a36fe8ee23d5e97b3c2f6a5985a7620a0d5",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.C.5.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.MD.C.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.C.6",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.G.A.1",
+        "CCSS:4.MD.C.5",
+        "CCSS:4.MD.C.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.7.12",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U07:L12",
+      "UnitNumber": 7,
+      "UnitTitle": "Angles and Angle Measurement",
+      "LessonNumber": 12,
+      "Title": "Types of Angles",
+      "SortOrder": 123,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-7/lesson-12/preparation.html",
+      "SemanticSha256": "81b695a8e99b763fe21b53aff3aeeeebc6b03aea3dfc79afb657d02a45ea8e09",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NF.B.4.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.7.13",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U07:L13",
+      "UnitNumber": 7,
+      "UnitTitle": "Angles and Angle Measurement",
+      "LessonNumber": 13,
+      "Title": "Find Angle Measurements",
+      "SortOrder": 124,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-7/lesson-13/preparation.html",
+      "SemanticSha256": "8ff07780015b743be4bb25529dcd13921534ee976fc0ba3be3500bcf3d341d78",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.C.7",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.MD.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.7.14",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U07:L14",
+      "UnitNumber": 7,
+      "UnitTitle": "Angles and Angle Measurement",
+      "LessonNumber": 14,
+      "Title": "Reasoning about Angles (Part 1) PLC Activity",
+      "SortOrder": 125,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-7/lesson-14/preparation.html",
+      "SemanticSha256": "48196f1cdf440aa24a2277eff9d8497750dbb0e73101ad54d889c73a12aa102f",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.C.6",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.C.7",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.MD.C.6",
+        "CCSS:4.MD.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.7.15",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U07:L15",
+      "UnitNumber": 7,
+      "UnitTitle": "Angles and Angle Measurement",
+      "LessonNumber": 15,
+      "Title": "Reasoning About Angles (Part 2)",
+      "SortOrder": 126,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-7/lesson-15/preparation.html",
+      "SemanticSha256": "0e92a099d90c35788c4802aacf7d5a68f5a60a7fedcff9cd1e103ed0b45659d1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.C.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.G.A.1",
+        "CCSS:4.MD.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.7.16",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U07:L16",
+      "UnitNumber": 7,
+      "UnitTitle": "Angles and Angle Measurement",
+      "LessonNumber": 16,
+      "Title": "Guess the Figure (optional)",
+      "SortOrder": 127,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-7/lesson-16/preparation.html",
+      "SemanticSha256": "ff1e92e72d5bfe1638c832a0338caf014f5f4c7193099630483829a45bb8755e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.G.A.1",
+        "CCSS:4.G.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.8.1",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U08:L01",
+      "UnitNumber": 8,
+      "UnitTitle": "Properties of Two-dimensional Shapes",
+      "LessonNumber": 1,
+      "Title": "Ways to Look at Figures",
+      "SortOrder": 128,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-8/lesson-1/preparation.html",
+      "SemanticSha256": "42ec05116a428aa219271a4246d18d2a1f8b1df96719c7b743fd0618d94e79c5",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "4.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.G.A.1",
+        "CCSS:4.G.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.8.2",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U08:L02",
+      "UnitNumber": 8,
+      "UnitTitle": "Properties of Two-dimensional Shapes",
+      "LessonNumber": 2,
+      "Title": "Ways to Look at Triangles",
+      "SortOrder": 129,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-8/lesson-2/preparation.html",
+      "SemanticSha256": "64770fd7e6a8e347ff4c8ebe2af2064bc0c1a476fa9befd97eed8f28a06d6d67",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.G.A.2",
+        "CCSS:4.NF.B.3",
+        "CCSS:4.NF.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.8.3",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U08:L03",
+      "UnitNumber": 8,
+      "UnitTitle": "Properties of Two-dimensional Shapes",
+      "LessonNumber": 3,
+      "Title": "Ways to Look at Quadrilaterals PLC Activity",
+      "SortOrder": 130,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-8/lesson-3/preparation.html",
+      "SemanticSha256": "361b82d62cfa7f1c70bb8c7a6a646c05c6b62cb5334ad57a9232d26587061ca2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.C",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.G.A.1",
+        "CCSS:4.G.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.8.4",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U08:L04",
+      "UnitNumber": 8,
+      "UnitTitle": "Properties of Two-dimensional Shapes",
+      "LessonNumber": 4,
+      "Title": "Symmetry in Figures (Part 1)",
+      "SortOrder": 131,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-8/lesson-4/preparation.html",
+      "SemanticSha256": "d85b39162f6133b74217a34247ba600287de22b845d390708671ca81a58efc9e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.G.A.2",
+        "CCSS:4.G.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.8.5",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U08:L05",
+      "UnitNumber": 8,
+      "UnitTitle": "Properties of Two-dimensional Shapes",
+      "LessonNumber": 5,
+      "Title": "Symmetry in Figures (Part 2)",
+      "SortOrder": 132,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-8/lesson-5/preparation.html",
+      "SemanticSha256": "ba2405f75f024c068636b530ac46cbea12105f42e1ca0bbaaafe990c11f0d8d7",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.5",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.G.A.1",
+        "CCSS:4.G.A.3",
+        "CCSS:4.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.8.6",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U08:L06",
+      "UnitNumber": 8,
+      "UnitTitle": "Properties of Two-dimensional Shapes",
+      "LessonNumber": 6,
+      "Title": "All Kinds of Attributes (optional)",
+      "SortOrder": 133,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-8/lesson-6/preparation.html",
+      "SemanticSha256": "dfccaf3b1f69ca0128d3f17643b48bb397f96cd29799b75a00c70cc6d331035a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.G.A.1",
+        "CCSS:4.G.A.2",
+        "CCSS:4.G.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.8.7",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U08:L07",
+      "UnitNumber": 8,
+      "UnitTitle": "Properties of Two-dimensional Shapes",
+      "LessonNumber": 7,
+      "Title": "Ways to Find Unknown Length (Part 1)",
+      "SortOrder": 134,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-8/lesson-7/preparation.html",
+      "SemanticSha256": "494396adc694d4b94da6e620cb5bf092f9f82c5b8e69eca179d2d0d734bac878",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.G.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.MD.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 5
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 6
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.B.3",
+        "CCSS:4.NF.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.8.8",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U08:L08",
+      "UnitNumber": 8,
+      "UnitTitle": "Properties of Two-dimensional Shapes",
+      "LessonNumber": 8,
+      "Title": "Ways to Find Unknown Length (Part 2) PLC Activity",
+      "SortOrder": 135,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-8/lesson-8/preparation.html",
+      "SemanticSha256": "0ae9e119b8d987496ca8d8a76be78d62e67abdae8cccd9f287a3ce03c7366ca3",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.G.A.3",
+        "CCSS:4.NF.B.3",
+        "CCSS:4.NF.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.8.9",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U08:L09",
+      "UnitNumber": 8,
+      "UnitTitle": "Properties of Two-dimensional Shapes",
+      "LessonNumber": 9,
+      "Title": "Symmetry in Action (optional)",
+      "SortOrder": 136,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-8/lesson-9/preparation.html",
+      "SemanticSha256": "b6b870e5ceb5d393908bb01a36627a15e6b4d9377cba7e17db759e01e8154f26",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.A.3",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.G.A.1",
+        "CCSS:4.G.A.2",
+        "CCSS:4.G.A.3",
+        "CCSS:4.MD.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.8.10",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U08:L10",
+      "UnitNumber": 8,
+      "UnitTitle": "Properties of Two-dimensional Shapes",
+      "LessonNumber": 10,
+      "Title": "Ways to Find Angle Measurements (optional)",
+      "SortOrder": 137,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-8/lesson-10/preparation.html",
+      "SemanticSha256": "f9b32ec196733337ecf64f4b9102b6c70a270810422dd3cdbb0ed311253e7f6b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.MD.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.MD.C.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.G.A.3",
+        "CCSS:4.MD.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.9.1",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U09:L01",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 1,
+      "Title": "Add, Subtract, and Multiply Fractions PLC Activity",
+      "SortOrder": 138,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-9/lesson-1/preparation.html",
+      "SemanticSha256": "c5e4ee0c447a51651d7f67a062714e7747002525511d1a501e66290eef63675a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.C.5",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.B.3",
+        "CCSS:4.NF.B.4",
+        "CCSS:4.NF.C.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.9.2",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U09:L02",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 2,
+      "Title": "Sums and Differences of Fractions",
+      "SortOrder": 139,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-9/lesson-2/preparation.html",
+      "SemanticSha256": "3a251d27495c1af598d557bf20f3ef878a6435c32bdaf2762086c03d815376e0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 5
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 6
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "5.NF.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 7
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.A.1",
+        "CCSS:4.NF.A.2",
+        "CCSS:4.NF.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.9.3",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U09:L03",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 3,
+      "Title": "Stories with Fractions",
+      "SortOrder": 140,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-9/lesson-3/preparation.html",
+      "SemanticSha256": "51bc7bc31ad2df4675dc0eeeac1a0ee4286d0eb64c348be4028c3f493949a2c9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.3.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:4.NF.B.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.C.5",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.C.6",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.C.7",
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NF.B.3",
+        "CCSS:4.NF.C.5",
+        "CCSS:4.NF.C.6",
+        "CCSS:4.NF.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.9.4",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U09:L04",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 4,
+      "Title": "Another Look at the Standard Algorithm PLC Activity",
+      "SortOrder": 141,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-9/lesson-4/preparation.html",
+      "SemanticSha256": "d8b87942437df3542ff4f923f132d311be447db996aa04a01f3c86ff55f17368",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.4",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.9.5",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U09:L05",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 5,
+      "Title": "Multiplication of Multi-digit Numbers",
+      "SortOrder": 142,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-9/lesson-5/preparation.html",
+      "SemanticSha256": "f1ebbf1657166ecbc66b20088a32459b9b02ad239dfb2384463b014092bbb70f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.5",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.9.6",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U09:L06",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 6,
+      "Title": "What’s the Quotient?",
+      "SortOrder": 143,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-9/lesson-6/preparation.html",
+      "SemanticSha256": "badae34ff1d7483b98d4f848fa806eaabcd91086946e9570bd4e04c57c5c29db",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.6",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.9.7",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U09:L07",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 7,
+      "Title": "Solve Multiplicative Comparison Problems PLC Activity",
+      "SortOrder": 144,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-9/lesson-7/preparation.html",
+      "SemanticSha256": "6ada6c4048d2e0c5d10fa6cdac4d698f92b248b599a8ad1ae617981c04a710cd",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.6",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.2",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.3",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.5",
+        "CCSS:4.NBT.B.6",
+        "CCSS:4.OA.A.2",
+        "CCSS:4.OA.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.9.8",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U09:L08",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 8,
+      "Title": "Solve Problems with Multiplication and Division",
+      "SortOrder": 145,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-9/lesson-8/preparation.html",
+      "SemanticSha256": "17dea30525be12725f93c69f4c52d55f18be85be2d04b9153cb202cd5d7e8959",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.6",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.5",
+        "CCSS:4.NBT.B.6",
+        "CCSS:4.OA.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.9.9",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U09:L09",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 9,
+      "Title": "Create Word Problems",
+      "SortOrder": 146,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-9/lesson-9/preparation.html",
+      "SemanticSha256": "fe4eb1034865eff4b77664c6f1d8c144f83ff6fe81b1df29f8765bc487127c1a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.4",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.5",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.B.6",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.3",
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.B.4",
+        "CCSS:4.NBT.B.5",
+        "CCSS:4.NBT.B.6",
+        "CCSS:4.OA.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.9.10",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U09:L10",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 10,
+      "Title": "Estimation Exploration",
+      "SortOrder": 147,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-9/lesson-10/preparation.html",
+      "SemanticSha256": "12009bb85f4f2c0aee0df4a7ee44fcffb638e9d58f7c4475faf1b5e9cb8399f0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA",
+          "ReferenceKind": "Domain",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.OA.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.OA.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.9.11",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U09:L11",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 11,
+      "Title": "Which One Doesn’t Belong? PLC Activity",
+      "SortOrder": 148,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-9/lesson-11/preparation.html",
+      "SemanticSha256": "a20f460b3efd4827b4369de275a3ea6f3496b23d4cb0aad012b1106537915226",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.OA.C",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "4.9.12",
+      "LessonCode": "PED:US-CCSS-MATH:G4:U09:L12",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 12,
+      "Title": "Number Talk",
+      "SortOrder": 149,
+      "SourceUrl": "https://im.kendallhunt.com/k5/teachers/grade-4/unit-9/lesson-12/preparation.html",
+      "SemanticSha256": "c8af0b0ccb74b2c6fb0ef80e089d51cb935a047a9795a5dd7b7bd4e542571551",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NBT.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NBT.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4.NF.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:4.NF.B.4",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:4.NBT.A.1",
+        "CCSS:4.NF.B.4"
+      ]
+    }
+  ]
+}
