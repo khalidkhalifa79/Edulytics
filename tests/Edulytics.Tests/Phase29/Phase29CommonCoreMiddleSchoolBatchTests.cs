@@ -54,8 +54,10 @@ public sealed class Phase29CommonCoreMiddleSchoolBatchTests
             PedagogicalLessonBlueprintRegistry
                 .LoadEmbeddedDocuments();
 
+        // Common Core now has five elementary blueprints plus
+        // the already accepted Grade 6-8 middle-school blueprints.
         Assert.Equal(
-            3,
+            8,
             documents.Count(
                 x =>
                     x.PackCode ==

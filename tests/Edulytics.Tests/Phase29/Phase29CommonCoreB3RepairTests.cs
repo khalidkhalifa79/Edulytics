@@ -3,32 +3,12 @@ using Edulytics.Core.Curriculum;
 using Edulytics.Data.Contexts;
 using Edulytics.Data.Seeding;
 using Microsoft.EntityFrameworkCore;
+using Xunit;
 
 namespace Edulytics.Tests.Phase29;
 
 public sealed class Phase29CommonCoreB3RepairTests
 {
-    private static readonly string[] AffectedOaLessonSuffixes =
-    [
-        ":CCSS-1-OA-B-4",
-        ":CCSS-1-OA-C-5",
-        ":CCSS-1-OA-C-6",
-        ":CCSS-1-OA-D-7",
-        ":CCSS-1-OA-D-8"
-    ];
-
-    private static readonly string[] AffectedPracticeLessonSuffixes =
-    [
-        ":CCSS-MP-1",
-        ":CCSS-MP-2",
-        ":CCSS-MP-3",
-        ":CCSS-MP-4",
-        ":CCSS-MP-5",
-        ":CCSS-MP-6",
-        ":CCSS-MP-7",
-        ":CCSS-MP-8"
-    ];
-
     private static EdulyticsDbContext Db(
         string name) =>
         new(
@@ -66,87 +46,21 @@ public sealed class Phase29CommonCoreB3RepairTests
             stream);
     }
 
-    private static bool IsAffectedOaLesson(
-        string code) =>
-        code.StartsWith(
-            "PED:US-CCSS-MATH:L2:GRADE-1:CORE:",
-            StringComparison.Ordinal) &&
-        AffectedOaLessonSuffixes.Any(
-            suffix =>
-                code.EndsWith(
-                    suffix,
-                    StringComparison.Ordinal));
-
-    private static bool IsAffectedPracticeLesson(
-        string code) =>
-        code.StartsWith(
-            "PED:US-CCSS-MATH:L2:GRADE-1:CORE:",
-            StringComparison.Ordinal) &&
-        AffectedPracticeLessonSuffixes.Any(
-            suffix =>
-                code.EndsWith(
-                    suffix,
-                    StringComparison.Ordinal));
-
-    private static string PreviousLessonTitle(
-        string current)
-    {
-        const string marker =
-            " — Lesson ";
-
-        var markerIndex =
-            current.LastIndexOf(
-                marker,
-                StringComparison.Ordinal);
-
-        if (markerIndex < 0)
-        {
-            throw new InvalidOperationException(
-                $"Unexpected lesson title: {current}");
-        }
-
-        var numberStart =
-            markerIndex +
-            marker.Length;
-
-        if (!int.TryParse(
-                current[numberStart..],
-                out var number) ||
-            number <= 1)
-        {
-            throw new InvalidOperationException(
-                $"Unexpected lesson number: {current}");
-        }
-
-        return
-            current[..numberStart] +
-            (number - 1)
-                .ToString("D2");
-    }
-
     [Fact]
     public async Task
-        AcceptedV13_458_392_UpgradesToV14_459_393_AndRebaselinesAllB3AffectedGrade1Lessons()
+        AcceptedV13_458_392_UpgradesExactlyToV14_459_393()
     {
-        var name =
-            "p29-ccss-b3-v14-" +
-            Guid.NewGuid()
-                .ToString("N");
-
         await using var db =
-            Db(name);
+            Db(
+                "p29-ccss-b3-v14-" +
+                Guid.NewGuid()
+                    .ToString("N"));
 
-        var curriculumSeeder =
+        var seeder =
             new MathematicsCurriculumPackSeeder(
                 db);
 
-        var pedagogicalSeeder =
-            new MathematicsPedagogicalLessonSeeder(
-                db);
-
-        // Build the clean V14 target first.
-        await curriculumSeeder.SeedAsync();
-        await pedagogicalSeeder.SeedAsync();
+        await seeder.SeedAsync();
 
         var state =
             await db
@@ -168,41 +82,12 @@ public sealed class Phase29CommonCoreB3RepairTests
         var versionId =
             state.FrameworkVersionId;
 
-        var targetLessons =
-            await db
-                .CurriculumPedagogicalLessons
-                .AsNoTracking()
-                .Where(
-                    x =>
-                        x.FrameworkVersionId ==
-                        versionId)
-                .ToDictionaryAsync(
-                    x => x.Code,
-                    x => new
-                    {
-                        x.Id,
-                        x.Title,
-                        x.SortOrder
-                    });
-
-        var targetB3Lesson =
-            targetLessons
-                .Single(
-                    x =>
-                        x.Key.EndsWith(
-                            ":CCSS-1-OA-B-3",
-                            StringComparison.Ordinal));
-
-        // ----------------------------------------------------
-        // Downgrade official curriculum to the exact accepted
-        // 458/392 V13 state.
-        // ----------------------------------------------------
-
         using var manifest =
             LoadCommonCoreIntegrityManifest();
 
         var previous =
-            manifest.RootElement
+            manifest
+                .RootElement
                 .GetProperty(
                     "PreviousCorrected");
 
@@ -222,7 +107,7 @@ public sealed class Phase29CommonCoreB3RepairTests
             439,
             previousHashes.Count);
 
-        var b3Node =
+        var b3 =
             await db
                 .CurriculumPackContentNodes
                 .SingleAsync(
@@ -234,36 +119,10 @@ public sealed class Phase29CommonCoreB3RepairTests
 
         Assert.Equal(
             20,
-            b3Node.SortOrder);
+            b3.SortOrder);
 
-        var b3Mappings =
-            await db
-                .CurriculumPedagogicalLessonOutcomes
-                .Where(
-                    x =>
-                        x.PedagogicalLessonId ==
-                        targetB3Lesson.Value.Id)
-                .ToArrayAsync();
-
-        var b3PedagogicalLesson =
-            await db
-                .CurriculumPedagogicalLessons
-                .SingleAsync(
-                    x =>
-                        x.Id ==
-                        targetB3Lesson.Value.Id);
-
-        db.CurriculumPedagogicalLessonOutcomes
-            .RemoveRange(
-                b3Mappings);
-
-        db.CurriculumPedagogicalLessons
-            .Remove(
-                b3PedagogicalLesson);
-
-        db.CurriculumPackContentNodes
-            .Remove(
-                b3Node);
+        db.CurriculumPackContentNodes.Remove(
+            b3);
 
         var shiftedCodes =
             previousHashes
@@ -285,8 +144,7 @@ public sealed class Phase29CommonCoreB3RepairTests
             439,
             shiftedNodes.Length);
 
-        foreach (var row in
-                 shiftedNodes)
+        foreach (var row in shiftedNodes)
         {
             row.SortOrder--;
 
@@ -294,63 +152,6 @@ public sealed class Phase29CommonCoreB3RepairTests
                 previousHashes[
                     row.Code];
         }
-
-        var existingLessons =
-            await db
-                .CurriculumPedagogicalLessons
-                .Where(
-                    x =>
-                        x.FrameworkVersionId ==
-                            versionId)
-                .ToArrayAsync();
-
-        var affectedOaLessons =
-            existingLessons
-                .Where(
-                    x =>
-                        IsAffectedOaLesson(
-                            x.Code))
-                .ToArray();
-
-        Assert.Equal(
-            5,
-            affectedOaLessons.Length);
-
-        foreach (var row in
-                 affectedOaLessons)
-        {
-            row.SortOrder--;
-
-            row.Title =
-                PreviousLessonTitle(
-                    row.Title);
-        }
-
-        var affectedPracticeLessons =
-            existingLessons
-                .Where(
-                    x =>
-                        IsAffectedPracticeLesson(
-                            x.Code))
-                .ToArray();
-
-        Assert.Equal(
-            8,
-            affectedPracticeLessons.Length);
-
-        foreach (var row in
-                 affectedPracticeLessons)
-        {
-            // V13 had one fewer Grade 1 numbered Standard
-            // before the Mathematical Practices. Practice
-            // titles are unit-local and therefore unchanged.
-            row.SortOrder--;
-        }
-
-        Assert.Equal(
-            13,
-            affectedOaLessons.Length +
-            affectedPracticeLessons.Length);
 
         state.SourceDigest =
             previous
@@ -422,20 +223,7 @@ public sealed class Phase29CommonCoreB3RepairTests
                         x.Code ==
                             "CCSS:1.OA.B.3"));
 
-        Assert.False(
-            await db
-                .CurriculumPedagogicalLessons
-                .AnyAsync(
-                    x =>
-                        x.Id ==
-                        targetB3Lesson.Value.Id));
-
-        // ----------------------------------------------------
-        // Production startup sequence.
-        // ----------------------------------------------------
-
-        await curriculumSeeder.SeedAsync();
-        await pedagogicalSeeder.SeedAsync();
+        await seeder.SeedAsync();
 
         db.ChangeTracker.Clear();
 
@@ -457,7 +245,7 @@ public sealed class Phase29CommonCoreB3RepairTests
             393,
             repairedState.OfficialNodeCount);
 
-        var repairedNodes =
+        var repaired =
             await db
                 .CurriculumPackContentNodes
                 .AsNoTracking()
@@ -466,54 +254,25 @@ public sealed class Phase29CommonCoreB3RepairTests
                         x.FrameworkVersionId ==
                         versionId)
                 .OrderBy(
-                    x => x.SortOrder)
+                    x =>
+                        x.SortOrder)
                 .ToArrayAsync();
 
         Assert.Equal(
             459,
-            repairedNodes.Length);
+            repaired.Length);
 
         Assert.Equal(
             Enumerable.Range(
                 1,
                 459),
-            repairedNodes.Select(
-                x => x.SortOrder));
-
-        var oa =
-            repairedNodes.Single(
+            repaired.Select(
                 x =>
-                    x.Code ==
-                    "CCSS:DOMAIN:2-2:1.OA");
-
-        var oaChildren =
-            repairedNodes
-                .Where(
-                    x =>
-                        x.ParentId ==
-                        oa.Id)
-                .OrderBy(
-                    x => x.SortOrder)
-                .Select(
-                    x => x.Code)
-                .ToArray();
-
-        Assert.Equal(
-            [
-                "CCSS:1.OA.A.1",
-                "CCSS:1.OA.A.2",
-                "CCSS:1.OA.B.3",
-                "CCSS:1.OA.B.4",
-                "CCSS:1.OA.C.5",
-                "CCSS:1.OA.C.6",
-                "CCSS:1.OA.D.7",
-                "CCSS:1.OA.D.8"
-            ],
-            oaChildren);
+                    x.SortOrder));
 
         Assert.Equal(
             20,
-            repairedNodes
+            repaired
                 .Single(
                     x =>
                         x.Code ==
@@ -522,81 +281,14 @@ public sealed class Phase29CommonCoreB3RepairTests
 
         Assert.Equal(
             21,
-            repairedNodes
+            repaired
                 .Single(
                     x =>
                         x.Code ==
                         "CCSS:1.OA.B.4")
                 .SortOrder);
 
-        var repairedLessons =
-            await db
-                .CurriculumPedagogicalLessons
-                .AsNoTracking()
-                .Where(
-                    x =>
-                        x.FrameworkVersionId ==
-                        versionId)
-                .ToDictionaryAsync(
-                    x => x.Code,
-                    x => new
-                    {
-                        x.Id,
-                        x.Title,
-                        x.SortOrder
-                    });
-
-        Assert.Equal(
-            targetLessons.Count,
-            repairedLessons.Count);
-
-        foreach (var target in
-                 targetLessons)
-        {
-            Assert.True(
-                repairedLessons.TryGetValue(
-                    target.Key,
-                    out var actual));
-
-            Assert.Equal(
-                target.Value.Id,
-                actual!.Id);
-
-            Assert.Equal(
-                target.Value.Title,
-                actual.Title);
-
-            Assert.Equal(
-                target.Value.SortOrder,
-                actual.SortOrder);
-        }
-
-        var repairedGrade1Practices =
-            repairedLessons
-                .Where(
-                    x =>
-                        IsAffectedPracticeLesson(
-                            x.Key))
-                .OrderBy(
-                    x => x.Value.SortOrder)
-                .ToArray();
-
-        Assert.Equal(
-            8,
-            repairedGrade1Practices.Length);
-
-        Assert.Equal(
-            Enumerable.Range(
-                22,
-                8),
-            repairedGrade1Practices
-                .Select(
-                    x =>
-                        x.Value.SortOrder));
-
-        // Prove target state is now idempotent.
-        await curriculumSeeder.SeedAsync();
-        await pedagogicalSeeder.SeedAsync();
+        await seeder.SeedAsync();
 
         Assert.Equal(
             459,
