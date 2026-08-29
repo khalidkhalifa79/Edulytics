@@ -61,7 +61,7 @@ public sealed class MathematicsCurriculumVerifiedPersistenceTests
         var states = await db.CurriculumPackImportStates.AsNoTracking().ToListAsync();
         Assert.Equal(4, states.Count);
         Assert.Equal(436, states.Single(x => x.FrameworkCode == MathematicsCurriculumPackRegistry.EnglandCode).OfficialNodeCount);
-        Assert.Equal(392, states.Single(x => x.FrameworkCode == MathematicsCurriculumPackRegistry.CommonCoreCode).OfficialNodeCount);
+        Assert.Equal(393, states.Single(x => x.FrameworkCode == MathematicsCurriculumPackRegistry.CommonCoreCode).OfficialNodeCount);
         Assert.Equal(306, states.Single(x => x.FrameworkCode == MathematicsCurriculumPackRegistry.PolandCode).OfficialNodeCount);
 
         var uae = states.Single(x => x.FrameworkCode == MathematicsCurriculumPackRegistry.UaeCode);
@@ -135,11 +135,11 @@ public sealed class MathematicsCurriculumVerifiedPersistenceTests
                         MathematicsCurriculumPackRegistry.CommonCoreCode);
 
         Assert.Equal(
-            458,
+            459,
             state.NodeCount);
 
         Assert.Equal(
-            392,
+            393,
             state.OfficialNodeCount);
 
         using var manifest =
@@ -161,13 +161,13 @@ public sealed class MathematicsCurriculumVerifiedPersistenceTests
                 .GetString());
 
         Assert.Equal(
-            384,
+            385,
             root.GetProperty(
                     "NumberedStandardCount")
                 .GetInt32());
 
         Assert.Equal(
-            228,
+            229,
             root.GetProperty(
                     "K8NumberedStandardCount")
                 .GetInt32());
@@ -196,7 +196,7 @@ public sealed class MathematicsCurriculumVerifiedPersistenceTests
                     StringComparer.Ordinal);
 
         Assert.Equal(
-            384,
+            385,
             expectedHashes.Count);
 
         var versionId =
@@ -212,7 +212,7 @@ public sealed class MathematicsCurriculumVerifiedPersistenceTests
                 .ToArrayAsync();
 
         Assert.Equal(
-            458,
+            459,
             nodes.Length);
 
         Assert.Equal(
@@ -231,7 +231,7 @@ public sealed class MathematicsCurriculumVerifiedPersistenceTests
                 .ToArray();
 
         Assert.Equal(
-            384,
+            385,
             numbered.Length);
 
         foreach (var node in numbered)
@@ -395,17 +395,72 @@ public sealed class MathematicsCurriculumVerifiedPersistenceTests
                     x =>
                         x.FrameworkVersionId ==
                             versionId &&
-                        missingCodes.Contains(
-                            x.Code))
+                        (missingCodes.Contains(
+                             x.Code) ||
+                         x.Code ==
+                            "CCSS:1.OA.B.3"))
                 .ToArrayAsync();
 
         Assert.Equal(
-            38,
+            39,
             rowsToRemove.Length);
 
         db.CurriculumPackContentNodes
             .RemoveRange(
                 rowsToRemove);
+
+        await db.SaveChangesAsync();
+
+        // V14 inserted B3 at semantic SortOrder 20.
+        // Recreate the exact accepted V13 ordering/hash state
+        // before applying the older 420/360 content fingerprint.
+        var previousCorrected =
+            root.GetProperty(
+                "PreviousCorrected");
+
+        var previousChangedHashes =
+            previousCorrected.GetProperty(
+                    "ChangedNodeContentHashes")
+                .EnumerateObject()
+                .ToDictionary(
+                    x => x.Name,
+                    x =>
+                        x.Value.GetString()
+                        ?? string.Empty,
+                    StringComparer.Ordinal);
+
+        Assert.Equal(
+            439,
+            previousChangedHashes.Count);
+
+        var previousChangedCodes =
+            previousChangedHashes
+                .Keys
+                .ToArray();
+
+        var previousChangedRows =
+            await db.CurriculumPackContentNodes
+                .Where(
+                    x =>
+                        x.FrameworkVersionId ==
+                            versionId &&
+                        previousChangedCodes.Contains(
+                            x.Code))
+                .ToArrayAsync();
+
+        Assert.Equal(
+            401,
+            previousChangedRows.Length);
+
+        foreach (var row in
+                 previousChangedRows)
+        {
+            row.SortOrder--;
+
+            row.ContentHash =
+                previousChangedHashes[
+                    row.Code];
+        }
 
         var changedCodes =
             legacyChangedHashes
@@ -504,11 +559,11 @@ public sealed class MathematicsCurriculumVerifiedPersistenceTests
                         MathematicsCurriculumPackRegistry.CommonCoreCode);
 
         Assert.Equal(
-            458,
+            459,
             repairedState.NodeCount);
 
         Assert.Equal(
-            392,
+            393,
             repairedState.OfficialNodeCount);
 
         var repairedNodes =
@@ -521,7 +576,7 @@ public sealed class MathematicsCurriculumVerifiedPersistenceTests
                 .ToArrayAsync();
 
         Assert.Equal(
-            458,
+            459,
             repairedNodes.Length);
 
         Assert.Equal(
@@ -640,7 +695,7 @@ public sealed class MathematicsCurriculumVerifiedPersistenceTests
         await curriculumSeeder.SeedAsync();
 
         Assert.Equal(
-            458,
+            459,
             await db.CurriculumPackContentNodes
                 .CountAsync(
                     x =>
