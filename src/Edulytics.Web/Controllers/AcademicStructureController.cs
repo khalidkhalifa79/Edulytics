@@ -115,32 +115,50 @@ public sealed class AcademicStructureController : Controller
     [HttpPost("academic-programs")]
     [ValidateAntiForgeryToken]
     public Task<IActionResult> CreateAcademicProgram(
+        Guid academicYearId,
         string programChoice,
-        AcademicStructureStatus status,
+        CancellationToken cancellationToken) =>
+        ExecuteAsync(
+            id =>
+                _academic.OfferAcademicProgramAsync(
+                    id,
+                    new OfferAcademicProgramRequest(
+                        academicYearId,
+                        programChoice),
+                    cancellationToken),
+            "SuccessAcademicProgramOffered");
+
+    [Authorize(Roles = RoleNames.SubjectSupervisor)]
+    [HttpPost(
+        "academic-programs/{academicProgramId:guid}/years/" +
+        "{academicYearId:guid}/stop")]
+    [ValidateAntiForgeryToken]
+    public Task<IActionResult> StopAcademicProgramForYear(
+        Guid academicProgramId,
+        Guid academicYearId,
+        string rowVersion,
         CancellationToken cancellationToken)
     {
-        var choice =
-            AcademicProgramCatalog.FindByKey(
-                programChoice);
-
-        var request =
-            choice is null
-                ? new CreateAcademicProgramRequest(
-                    string.Empty,
-                    string.Empty,
-                    status)
-                : new CreateAcademicProgramRequest(
-                    choice.Name,
-                    choice.Code,
-                    status);
+        if (!TryDecodeRowVersion(
+                rowVersion,
+                out var expected))
+        {
+            return Task.FromResult(
+                RedirectWithError(
+                    "ErrorConcurrencyConflict"));
+        }
 
         return ExecuteAsync(
             id =>
-                _academic.CreateAcademicProgramAsync(
-                    id,
-                    request,
-                    cancellationToken),
-            "SuccessAcademicProgramCreated");
+                _academic
+                    .StopAcademicProgramOfferingAsync(
+                        id,
+                        new StopAcademicProgramOfferingRequest(
+                            academicYearId,
+                            academicProgramId,
+                            expected),
+                        cancellationToken),
+            "SuccessAcademicProgramStopped");
     }
 
     [Authorize(Roles = RoleNames.SubjectSupervisor)]
@@ -179,7 +197,23 @@ public sealed class AcademicStructureController : Controller
         {
             ClassGroup = item.Value,
             GradeLevels = dashboard.Value.GradeLevels,
-            AcademicPrograms = dashboard.Value.AcademicPrograms
+            AcademicPrograms =
+                dashboard.Value.AcademicPrograms
+                    .Where(
+                        x =>
+                            x.Id ==
+                                item.Value.AcademicProgramId ||
+                            dashboard.Value
+                                .AcademicYearProgramOfferings
+                                .Any(
+                                    offering =>
+                                        offering.AcademicYearId ==
+                                            item.Value.AcademicYearId &&
+                                        offering.AcademicProgramId ==
+                                            x.Id &&
+                                        offering.IsOffered))
+                    .OrderBy(x => x.Name)
+                    .ToArray()
         });
     }
 

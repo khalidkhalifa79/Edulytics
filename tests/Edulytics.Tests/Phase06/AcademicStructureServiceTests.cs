@@ -1,3 +1,4 @@
+using Edulytics.Core.Academics;
 using Edulytics.Core.Constants;
 using Edulytics.Core.Entities;
 using Edulytics.Core.Enums;
@@ -230,6 +231,18 @@ public sealed class AcademicStructureServiceTests
                 "AMERICAN",
                 AcademicStructureStatus.Active))).Succeeded);
 
+        Assert.True((await f.Service.OfferAcademicProgramAsync(
+            f.Supervisor.Id,
+            new OfferAcademicProgramRequest(
+                year.Id,
+                "british"))).Succeeded);
+
+        Assert.True((await f.Service.OfferAcademicProgramAsync(
+            f.Supervisor.Id,
+            new OfferAcademicProgramRequest(
+                year.Id,
+                "american"))).Succeeded);
+
         var dashboard = await f.Service.GetDashboardAsync(f.Supervisor.Id);
         var british = Assert.Single(
             dashboard.Value!.AcademicPrograms,
@@ -377,6 +390,18 @@ public sealed class AcademicStructureServiceTests
                 "AMERICAN",
                 AcademicStructureStatus.Active))).Succeeded);
 
+        Assert.True((await f.Service.OfferAcademicProgramAsync(
+            f.Supervisor.Id,
+            new OfferAcademicProgramRequest(
+                year.Id,
+                "british"))).Succeeded);
+
+        Assert.True((await f.Service.OfferAcademicProgramAsync(
+            f.Supervisor.Id,
+            new OfferAcademicProgramRequest(
+                year.Id,
+                "american"))).Succeeded);
+
         var dashboard = await f.Service.GetDashboardAsync(f.Supervisor.Id);
         var british = dashboard.Value!.AcademicPrograms.Single(x => x.Code == "BRITISH");
         var american = dashboard.Value.AcademicPrograms.Single(x => x.Code == "AMERICAN");
@@ -522,6 +547,12 @@ public sealed class AcademicStructureServiceTests
 
         Assert.True(programCreate.Succeeded);
 
+        Assert.True((await f.Service.OfferAcademicProgramAsync(
+            f.Supervisor.Id,
+            new OfferAcademicProgramRequest(
+                year.Id,
+                "british"))).Succeeded);
+
         var dashboard = await f.Service.GetDashboardAsync(f.Supervisor.Id);
         var program = Assert.Single(
             dashboard.Value!.AcademicPrograms,
@@ -662,6 +693,262 @@ public sealed class AcademicStructureServiceTests
     }
 
     [Fact]
+    public async Task ProgramOffering_IsScopedByAcademicYear()
+    {
+        using var f = CreateFixture();
+
+        var firstYear = await CreateYear(f);
+        var grade = await CreateGrade(f);
+
+        Assert.True(
+            (await f.Service.OfferAcademicProgramAsync(
+                f.Supervisor.Id,
+                new OfferAcademicProgramRequest(
+                    firstYear.Id,
+                    "british")))
+            .Succeeded);
+
+        var firstDashboard =
+            await f.Service.GetDashboardAsync(
+                f.Supervisor.Id);
+
+        var british =
+            firstDashboard.Value!.AcademicPrograms
+                .Single(
+                    x =>
+                        x.Code ==
+                        "BRITISH");
+
+        Assert.True(
+            (await f.Service.CreateClassGroupAsync(
+                f.Supervisor.Id,
+                new CreateClassGroupRequest(
+                    firstYear.Id,
+                    grade.Id,
+                    "British 6A",
+                    "6A",
+                    AcademicStructureStatus.Active,
+                    british.Id)))
+            .Succeeded);
+
+        Assert.True(
+            (await f.Service.CreateAcademicYearAsync(
+                f.Supervisor.Id,
+                new CreateAcademicYearRequest(
+                    "2027/2028",
+                    new DateOnly(2027, 9, 1),
+                    new DateOnly(2028, 6, 30),
+                    AcademicStructureStatus.Active)))
+            .Succeeded);
+
+        var dashboard =
+            await f.Service.GetDashboardAsync(
+                f.Supervisor.Id);
+
+        var secondYear =
+            dashboard.Value!.AcademicYears
+                .Single(
+                    x =>
+                        x.Name ==
+                        "2027/2028");
+
+        var rejected =
+            await f.Service.CreateClassGroupAsync(
+                f.Supervisor.Id,
+                new CreateClassGroupRequest(
+                    secondYear.Id,
+                    grade.Id,
+                    "British 7A",
+                    "7A",
+                    AcademicStructureStatus.Active,
+                    british.Id));
+
+        Assert.False(
+            rejected.Succeeded);
+
+        Assert.Contains(
+            rejected.Errors,
+            x =>
+                x.Code ==
+                AcademicStructureErrorCode
+                    .AcademicProgramNotOffered);
+
+        Assert.True(
+            (await f.Service.OfferAcademicProgramAsync(
+                f.Supervisor.Id,
+                new OfferAcademicProgramRequest(
+                    secondYear.Id,
+                    "american")))
+            .Succeeded);
+
+        dashboard =
+            await f.Service.GetDashboardAsync(
+                f.Supervisor.Id);
+
+        var american =
+            dashboard.Value!.AcademicPrograms
+                .Single(
+                    x =>
+                        x.Code ==
+                        "AMERICAN");
+
+        Assert.True(
+            (await f.Service.CreateClassGroupAsync(
+                f.Supervisor.Id,
+                new CreateClassGroupRequest(
+                    secondYear.Id,
+                    grade.Id,
+                    "American 7A",
+                    "7A",
+                    AcademicStructureStatus.Active,
+                    american.Id)))
+            .Succeeded);
+    }
+
+    [Fact]
+    public async Task ProgramOffering_CannotStopWhenYearAlreadyUsesProgram()
+    {
+        using var f = CreateFixture();
+
+        var year = await CreateYear(f);
+        var grade = await CreateGrade(f);
+
+        Assert.True(
+            (await f.Service.OfferAcademicProgramAsync(
+                f.Supervisor.Id,
+                new OfferAcademicProgramRequest(
+                    year.Id,
+                    "british")))
+            .Succeeded);
+
+        var dashboard =
+            await f.Service.GetDashboardAsync(
+                f.Supervisor.Id);
+
+        var british =
+            dashboard.Value!.AcademicPrograms
+                .Single(
+                    x =>
+                        x.Code ==
+                        "BRITISH");
+
+        Assert.True(
+            (await f.Service.CreateClassGroupAsync(
+                f.Supervisor.Id,
+                new CreateClassGroupRequest(
+                    year.Id,
+                    grade.Id,
+                    "6A",
+                    "6A",
+                    AcademicStructureStatus.Active,
+                    british.Id)))
+            .Succeeded);
+
+        dashboard =
+            await f.Service.GetDashboardAsync(
+                f.Supervisor.Id);
+
+        var offering =
+            dashboard.Value!
+                .AcademicYearProgramOfferings
+                .Single(
+                    x =>
+                        x.AcademicYearId ==
+                            year.Id &&
+                        x.AcademicProgramId ==
+                            british.Id &&
+                        x.IsOffered);
+
+        var stopped =
+            await f.Service
+                .StopAcademicProgramOfferingAsync(
+                    f.Supervisor.Id,
+                    new StopAcademicProgramOfferingRequest(
+                        year.Id,
+                        british.Id,
+                        offering.RowVersion));
+
+        Assert.False(
+            stopped.Succeeded);
+
+        Assert.Contains(
+            stopped.Errors,
+            x =>
+                x.Code ==
+                AcademicStructureErrorCode
+                    .AcademicProgramInUseForAcademicYear);
+    }
+
+    [Fact]
+    public async Task FutureYearProgramCanBeStoppedWithoutDeletingHistory()
+    {
+        using var f = CreateFixture();
+
+        var year = await CreateYear(f);
+
+        Assert.True(
+            (await f.Service.OfferAcademicProgramAsync(
+                f.Supervisor.Id,
+                new OfferAcademicProgramRequest(
+                    year.Id,
+                    "british")))
+            .Succeeded);
+
+        var dashboard =
+            await f.Service.GetDashboardAsync(
+                f.Supervisor.Id);
+
+        var british =
+            dashboard.Value!.AcademicPrograms
+                .Single(
+                    x =>
+                        x.Code ==
+                        "BRITISH");
+
+        var offering =
+            dashboard.Value
+                .AcademicYearProgramOfferings
+                .Single(
+                    x =>
+                        x.AcademicYearId ==
+                            year.Id &&
+                        x.AcademicProgramId ==
+                            british.Id);
+
+        var stopped =
+            await f.Service
+                .StopAcademicProgramOfferingAsync(
+                    f.Supervisor.Id,
+                    new StopAcademicProgramOfferingRequest(
+                        year.Id,
+                        british.Id,
+                        offering.RowVersion));
+
+        Assert.True(
+            stopped.Succeeded);
+
+        dashboard =
+            await f.Service.GetDashboardAsync(
+                f.Supervisor.Id);
+
+        Assert.Contains(
+            dashboard.Value!.AcademicPrograms,
+            x =>
+                x.Id ==
+                british.Id);
+
+        Assert.Contains(
+            dashboard.Value
+                .AcademicYearProgramOfferings,
+            x =>
+                x.AcademicProgramId ==
+                    british.Id &&
+                x.AcademicYearId ==
+                    year.Id &&
+                !x.IsOffered);
+    }
+
+    [Fact]
     public async Task AcademicValidationBranches_CoverDuplicateAndStateErrors()
     {
         using var f = CreateFixture();
@@ -775,17 +1062,79 @@ public sealed class AcademicStructureServiceTests
         Guid yearId,
         Guid gradeId)
     {
-        Assert.True((await f.Service.CreateClassGroupAsync(
-            f.Supervisor.Id,
-            new CreateClassGroupRequest(
-                yearId,
-                gradeId,
-                "6A",
-                "6A",
-                AcademicStructureStatus.Active))).Succeeded);
+        var dashboard =
+            await f.Service.GetDashboardAsync(
+                f.Supervisor.Id);
 
-        var dashboard = await f.Service.GetDashboardAsync(f.Supervisor.Id);
-        return Assert.Single(dashboard.Value!.ClassGroups);
+        var program =
+            dashboard.Value!.AcademicPrograms
+                .SingleOrDefault(
+                    x => x.Code == "BRITISH");
+
+        if (program is null)
+        {
+            Assert.True(
+                (await f.Service.CreateAcademicProgramAsync(
+                    f.Supervisor.Id,
+                    new CreateAcademicProgramRequest(
+                        "British Stream",
+                        "BRITISH",
+                        AcademicStructureStatus.Active)))
+                .Succeeded);
+
+            dashboard =
+                await f.Service.GetDashboardAsync(
+                    f.Supervisor.Id);
+
+            program =
+                dashboard.Value!.AcademicPrograms
+                    .Single(
+                        x =>
+                            x.Code ==
+                            "BRITISH");
+        }
+
+        var alreadyOffered =
+            dashboard.Value
+                .AcademicYearProgramOfferings
+                .Any(
+                    x =>
+                        x.AcademicYearId ==
+                            yearId &&
+                        x.AcademicProgramId ==
+                            program.Id &&
+                        x.IsOffered);
+
+        if (!alreadyOffered)
+        {
+            Assert.True(
+                (await f.Service
+                    .OfferAcademicProgramAsync(
+                        f.Supervisor.Id,
+                        new OfferAcademicProgramRequest(
+                            yearId,
+                            "british")))
+                .Succeeded);
+        }
+
+        Assert.True(
+            (await f.Service.CreateClassGroupAsync(
+                f.Supervisor.Id,
+                new CreateClassGroupRequest(
+                    yearId,
+                    gradeId,
+                    "6A",
+                    "6A",
+                    AcademicStructureStatus.Active,
+                    program.Id)))
+            .Succeeded);
+
+        dashboard =
+            await f.Service.GetDashboardAsync(
+                f.Supervisor.Id);
+
+        return Assert.Single(
+            dashboard.Value!.ClassGroups);
     }
 
     private static async Task<SubjectItem> CreateSubject(Fixture f)

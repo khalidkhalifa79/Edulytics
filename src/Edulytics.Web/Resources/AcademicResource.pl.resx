@@ -146,4 +146,28 @@
   <data name="ErrorAcademicProgramNotFound" xml:space="preserve">
     <value>Wybierz prawidłowy program / ścieżkę.</value>
   </data>
+  <data name="AddProgramToAcademicYear" xml:space="preserve">
+    <value>Dodaj program / ścieżkę do roku szkolnego</value>
+  </data>
+  <data name="RemoveProgramFromAcademicYear" xml:space="preserve">
+    <value>Usuń z tego roku szkolnego</value>
+  </data>
+  <data name="NoProgramsOfferedForAcademicYear" xml:space="preserve">
+    <value>W tym roku szkolnym nie jest oferowany żaden program ani ścieżka programowa.</value>
+  </data>
+  <data name="SuccessAcademicProgramOffered" xml:space="preserve">
+    <value>Program / ścieżka została dodana do roku szkolnego.</value>
+  </data>
+  <data name="SuccessAcademicProgramStopped" xml:space="preserve">
+    <value>Program / ścieżka została usunięta z roku szkolnego.</value>
+  </data>
+  <data name="ErrorDuplicateAcademicYearProgramOffering" xml:space="preserve">
+    <value>Ten program / ścieżka jest już oferowany w tym roku szkolnym.</value>
+  </data>
+  <data name="ErrorAcademicProgramNotOffered" xml:space="preserve">
+    <value>Ten program / ścieżka nie jest oferowany w wybranym roku szkolnym.</value>
+  </data>
+  <data name="ErrorAcademicProgramInUseForAcademicYear" xml:space="preserve">
+    <value>Nie można usunąć tego programu / ścieżki, ponieważ w tym roku szkolnym korzystają z niego klasy lub aktywne dane programu nauczania.</value>
+  </data>
 </root>

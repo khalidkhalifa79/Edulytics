@@ -223,13 +223,39 @@
 
     <section id="programs" class="academic-section">
         <h2>@A["AcademicPrograms"]</h2>
+
+        <div class="academic-card">
+            <label for="program-year-filter">
+                @A["AcademicYear"]
+            </label>
+
+            <select id="program-year-filter">
+                @if (Model.AcademicYears.Count == 0)
+                {
+                    <option value="">@A["SelectOption"]</option>
+                }
+                else
+                {
+                    @foreach (var year in Model.AcademicYears)
+                    {
+                        <option value="@year.Id">@year.Name</option>
+                    }
+                }
+            </select>
+        </div>
+
         <div class="academic-two-column">
             @if (canManageAcademic)
             {
                 <form asp-action="CreateAcademicProgram"
                       method="post"
                       class="academic-card academic-form">
-                    <h3>@A["CreateAcademicProgram"]</h3>
+
+                    <h3>@A["AddProgramToAcademicYear"]</h3>
+
+                    <input id="program-offer-year"
+                           type="hidden"
+                           name="academicYearId" />
 
                     <label for="program-choice">
                         @A["Name"]
@@ -242,65 +268,105 @@
                             @A["SelectOption"]
                         </option>
 
-                        @foreach (
-                            var choice in
-                                AcademicProgramCatalog.All.Where(
-                                    choice =>
-                                        Model.AcademicPrograms.All(
-                                            program =>
-                                                !string.Equals(
-                                                    program.Code,
-                                                    choice.Code,
-                                                    StringComparison.OrdinalIgnoreCase))))
+                        @foreach (var choice in AcademicProgramCatalog.All)
                         {
-                            <option value="@choice.Key">
+                            var existingProgram =
+                                Model.AcademicPrograms
+                                    .FirstOrDefault(
+                                        program =>
+                                            string.Equals(
+                                                program.Code,
+                                                choice.Code,
+                                                StringComparison.OrdinalIgnoreCase));
+
+                            var offeredYears =
+                                existingProgram is null
+                                    ? string.Empty
+                                    : string.Join(
+                                        "|",
+                                        Model.AcademicYearProgramOfferings
+                                            .Where(
+                                                offering =>
+                                                    offering.AcademicProgramId ==
+                                                        existingProgram.Id &&
+                                                    offering.IsOffered)
+                                            .Select(
+                                                offering =>
+                                                    offering.AcademicYearId));
+
+                            <option value="@choice.Key"
+                                    data-offered-years="@offeredYears">
                                 @choice.Name
                             </option>
                         }
                     </select>
 
-                    <label for="program-status">
-                        @A["Status"]
-                    </label>
-
-                    <select id="program-status"
-                            name="status">
-                        <option value="@((int)AcademicStructureStatus.Active)">
-                            @A["StatusActive"]
-                        </option>
-                        <option value="@((int)AcademicStructureStatus.Inactive)">
-                            @A["StatusInactive"]
-                        </option>
-                    </select>
-
                     <button class="school-button school-button-primary"
                             type="submit">
-                        @A["CreateAcademicProgram"]
+                        @A["AddProgramToAcademicYear"]
                     </button>
                 </form>
             }
+
             <div class="academic-card">
-                @if (Model.AcademicPrograms.Count == 0) { <p>@A["NoAcademicPrograms"]</p> }
-                else
-                {
-                    <table class="academic-table">
-                        <thead>
-                            <tr>
-                                <th>@A["Name"]</th>
-                                <th>@A["Status"]</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        @foreach (var item in Model.AcademicPrograms)
+                <table class="academic-table"
+                       id="program-year-table">
+                    <thead>
+                        <tr>
+                            <th>@A["Name"]</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (
+                        var offering in
+                            Model.AcademicYearProgramOfferings
+                                .Where(x => x.IsOffered))
+                    {
+                        var program =
+                            Model.AcademicPrograms
+                                .FirstOrDefault(
+                                    x =>
+                                        x.Id ==
+                                        offering.AcademicProgramId);
+
+                        if (program is null ||
+                            program.IsDefault)
                         {
-                            <tr>
-                                <td>@item.Name</td>
-                                <td>@A[$"Status{item.Status}"]</td>
-                            </tr>
+                            continue;
                         }
-                        </tbody>
-                    </table>
-                }
+
+                        <tr data-program-offering-row
+                            data-year-id="@offering.AcademicYearId">
+                            <td>@program.Name</td>
+                            <td>
+                                @if (canManageAcademic)
+                                {
+                                    <form asp-action="StopAcademicProgramForYear"
+                                          asp-route-academicProgramId="@program.Id"
+                                          asp-route-academicYearId="@offering.AcademicYearId"
+                                          method="post">
+                                        <input type="hidden"
+                                               name="rowVersion"
+                                               value="@Convert.ToBase64String(offering.RowVersion)" />
+
+                                        <button type="submit"
+                                                class="school-button">
+                                            @A["RemoveProgramFromAcademicYear"]
+                                        </button>
+                                    </form>
+                                }
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+
+                <p id="program-year-empty"
+                   class="academic-help"
+                   hidden>
+                    @A["NoProgramsOfferedForAcademicYear"]
+                </p>
             </div>
         </div>
     </section>
@@ -324,8 +390,35 @@
                                 <label for="class-program">@A["AcademicProgram"]</label>
                                 <select id="class-program" name="academicProgramId" required>
                                     <option value="">@A["SelectOption"]</option>
-                                    @foreach (var program in Model.AcademicPrograms.Where(x => x.Status == AcademicStructureStatus.Active))
-                                    { <option value="@program.Id">@program.Name</option> }
+                                    @foreach (
+                                        var program in
+                                            Model.AcademicPrograms
+                                                .Where(
+                                                    x =>
+                                                        x.Status ==
+                                                            AcademicStructureStatus.Active &&
+                                                        !x.IsDefault))
+                                    {
+                                        var offeredYears =
+                                            string.Join(
+                                                "|",
+                                                Model.AcademicYearProgramOfferings
+                                                    .Where(
+                                                        offering =>
+                                                            offering.AcademicProgramId ==
+                                                                program.Id &&
+                                                            offering.IsOffered)
+                                                    .Select(
+                                                        offering =>
+                                                            offering.AcademicYearId));
+
+                                        <option value="@program.Id"
+                                                data-offered-years="@offeredYears"
+                                                hidden
+                                                disabled>
+                                            @program.Name
+                                        </option>
+                                    }
                                 </select>
                                 <label for="class-grade">@A["GradeLevel"]</label>
                                 <select id="class-grade" name="gradeLevelId" required>
@@ -661,3 +754,141 @@
         </div>
     </section>
 </section>
+
+
+<script>
+(() => {
+    const programYear =
+        document.getElementById('program-year-filter');
+
+    const programOfferYear =
+        document.getElementById('program-offer-year');
+
+    const programChoice =
+        document.getElementById('program-choice');
+
+    const offeringRows =
+        Array.from(
+            document.querySelectorAll(
+                '[data-program-offering-row]'));
+
+    const programEmpty =
+        document.getElementById('program-year-empty');
+
+    const splitYears = value =>
+        (value || '')
+            .split('|')
+            .filter(Boolean);
+
+    const refreshAnnualPrograms = () => {
+        if (!programYear) return;
+
+        const yearId =
+            programYear.value;
+
+        if (programOfferYear) {
+            programOfferYear.value =
+                yearId;
+        }
+
+        let visibleRows = 0;
+
+        for (const row of offeringRows) {
+            const visible =
+                row.dataset.yearId === yearId;
+
+            row.hidden =
+                !visible;
+
+            if (visible) {
+                visibleRows++;
+            }
+        }
+
+        if (programEmpty) {
+            programEmpty.hidden =
+                visibleRows > 0;
+        }
+
+        if (programChoice) {
+            programChoice.value = '';
+
+            for (
+                const option of
+                    Array.from(programChoice.options)
+            ) {
+                if (!option.value) continue;
+
+                const offered =
+                    splitYears(
+                        option.dataset.offeredYears)
+                        .includes(yearId);
+
+                option.hidden =
+                    offered;
+
+                option.disabled =
+                    offered;
+            }
+
+            programChoice.disabled =
+                !yearId;
+        }
+    };
+
+    programYear?.addEventListener(
+        'change',
+        refreshAnnualPrograms);
+
+    refreshAnnualPrograms();
+
+    const classYear =
+        document.getElementById('class-year');
+
+    const classProgram =
+        document.getElementById('class-program');
+
+    const refreshClassPrograms = () => {
+        if (!classYear || !classProgram) return;
+
+        const yearId =
+            classYear.value;
+
+        classProgram.value = '';
+
+        let available = 0;
+
+        for (
+            const option of
+                Array.from(classProgram.options)
+        ) {
+            if (!option.value) continue;
+
+            const offered =
+                splitYears(
+                    option.dataset.offeredYears)
+                    .includes(yearId);
+
+            option.hidden =
+                !offered;
+
+            option.disabled =
+                !offered;
+
+            if (offered) {
+                available++;
+            }
+        }
+
+        classProgram.disabled =
+            !yearId ||
+            available === 0;
+    };
+
+    classYear?.addEventListener(
+        'change',
+        refreshClassPrograms);
+
+    refreshClassPrograms();
+})();
+</script>

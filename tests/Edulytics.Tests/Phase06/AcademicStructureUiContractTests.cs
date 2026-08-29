@@ -117,6 +117,10 @@ public sealed class AcademicStructureUiContractTests
                 .ToArray();
 
         Assert.Contains(
+            "academicYearId",
+            parameters);
+
+        Assert.Contains(
             "programChoice",
             parameters);
 
@@ -186,6 +190,44 @@ public sealed class AcademicStructureUiContractTests
 
         Assert.DoesNotContain(
             "<td>@item.Code</td><td>@item.Name</td>",
+            academic);
+    }
+
+    [Fact]
+    public void ProgramStreamUi_ContainsAnnualOfferingControls()
+    {
+        var root =
+            FindRepositoryRoot();
+
+        var academic =
+            File.ReadAllText(
+                Path.Combine(
+                    root,
+                    "src/Edulytics.Web/Views/" +
+                    "AcademicStructure/Index.cshtml"));
+
+        Assert.Contains(
+            "id=\"program-year-filter\"",
+            academic);
+
+        Assert.Contains(
+            "name=\"academicYearId\"",
+            academic);
+
+        Assert.Contains(
+            "StopAcademicProgramForYear",
+            academic);
+
+        Assert.Contains(
+            "data-offered-years",
+            academic);
+
+        Assert.Contains(
+            "refreshClassPrograms",
+            academic);
+
+        Assert.DoesNotContain(
+            "id=\"program-status\"",
             academic);
     }
 

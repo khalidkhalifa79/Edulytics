@@ -258,6 +258,40 @@ public sealed class Phase06EndToEndAcceptanceTests
             grade.Name);
 
         // -------------------------------------------------
+        // Program / Stream offering for this academic year
+        // -------------------------------------------------
+
+        var offerBritish =
+            await service.OfferAcademicProgramAsync(
+                supervisorA.Id,
+                new OfferAcademicProgramRequest(
+                    year.Id,
+                    "british"));
+
+        Assert.True(
+            offerBritish.Succeeded);
+
+        dashboard =
+            (await service.GetDashboardAsync(
+                adminA.Id)).Value!;
+
+        var britishProgram =
+            Assert.Single(
+                dashboard.AcademicPrograms,
+                x =>
+                    x.Code ==
+                    "BRITISH");
+
+        Assert.Contains(
+            dashboard.AcademicYearProgramOfferings,
+            x =>
+                x.AcademicYearId ==
+                    year.Id &&
+                x.AcademicProgramId ==
+                    britishProgram.Id &&
+                x.IsOffered);
+
+        // -------------------------------------------------
         // Class
         // -------------------------------------------------
 
@@ -269,7 +303,8 @@ public sealed class Phase06EndToEndAcceptanceTests
                     grade.Id,
                     "Grade 6A",
                     "6A",
-                    AcademicStructureStatus.Active));
+                    AcademicStructureStatus.Active,
+                    britishProgram.Id));
 
         Assert.True(
             createClass.Succeeded);
