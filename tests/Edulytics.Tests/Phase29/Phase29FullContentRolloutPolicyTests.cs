@@ -91,6 +91,46 @@ public sealed class Phase29FullContentRolloutPolicyTests
             StringComparison.OrdinalIgnoreCase);
     }
 
+    [Fact]
+    public void PolandRollout_UsesComplete2025_2026Baseline()
+    {
+        var root =
+            FindRepositoryRoot();
+
+        var policy =
+            File.ReadAllText(
+                Path.Combine(
+                    root,
+                    "docs/CURRICULUM_SOURCE_RESOLUTION_POLICY.md"));
+
+        var rollout =
+            File.ReadAllText(
+                Path.Combine(
+                    root,
+                    "docs/PHASE_29_FULL_CONTENT_ROLLOUT.md"));
+
+        Assert.Contains(
+            "Poland 2026-2027 rollout baseline decision",
+            policy);
+
+        Assert.Contains(
+            "2025-2026 Polish curriculum",
+            policy);
+
+        Assert.Contains(
+            "PreviousOfficialFallback",
+            policy);
+
+        Assert.Contains(
+            "the 2026 transitional curriculum is not mixed into this rollout",
+            rollout,
+            StringComparison.OrdinalIgnoreCase);
+
+        Assert.Contains(
+            "PL-MATH-2025-2026",
+            rollout);
+    }
+
     private static string FindRepositoryRoot()
     {
         var directory =

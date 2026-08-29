@@ -25,6 +25,23 @@ Edulytics does not invent a Grade 13 where that system does not define one.
 
 Every content batch follows `CURRICULUM_SOURCE_RESOLUTION_POLICY.md`.
 
+### Poland baseline exception
+
+For the current Phase 29 full-content rollout:
+
+- Edulytics operational target period remains 2026-2027;
+- every Poland Mathematics grade/stage/pathway uses the complete verified
+  2025-2026 Polish curriculum baseline;
+- accepted Poland curriculum pack is `PL-MATH-2025-2026`;
+- Poland is recorded as `PreviousOfficialFallback`;
+- Poland textbook acquisition targets 2025-2026-aligned books/materials;
+- the 2026 transitional curriculum is not mixed into this rollout.
+
+The active grade/stage/pathway source status is maintained in:
+
+`docs/PHASE_29_SOURCE_ACQUISITION_MATRIX.json`
+
+
 Pedagogical source priority:
 
 1. school-adopted target-year textbook;
