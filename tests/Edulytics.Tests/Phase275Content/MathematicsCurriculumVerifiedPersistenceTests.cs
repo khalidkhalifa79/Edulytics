@@ -303,6 +303,12 @@ public sealed class MathematicsCurriculumVerifiedPersistenceTests
 
         await curriculumSeeder.SeedAsync();
 
+        var pedagogicalSeeder =
+            new MathematicsPedagogicalLessonSeeder(
+                db);
+
+        await pedagogicalSeeder.SeedAsync();
+
         var state =
             await db.CurriculumPackImportStates
                 .SingleAsync(
@@ -312,6 +318,37 @@ public sealed class MathematicsCurriculumVerifiedPersistenceTests
 
         var versionId =
             state.FrameworkVersionId;
+
+        var before =
+            await db.CurriculumPedagogicalLessons
+                .AsNoTracking()
+                .Where(
+                    x =>
+                        x.FrameworkVersionId ==
+                            versionId)
+                .ToDictionaryAsync(
+                    x => x.Code,
+                    x => new
+                    {
+                        x.Title,
+                        x.SortOrder
+                    });
+
+        // The regression intentionally downgrades only the official
+        // Common Core pack to the exact historical 420/360 state.
+        //
+        // The current pedagogical graph already exists before that
+        // downgrade. This mirrors the actual preservation invariant:
+        // repairing official curriculum data must not rewrite or lose
+        // valid current pedagogical lesson identities.
+        db.ChangeTracker.Clear();
+
+        state =
+            await db.CurriculumPackImportStates
+                .SingleAsync(
+                    x =>
+                        x.FrameworkCode ==
+                        MathematicsCurriculumPackRegistry.CommonCoreCode);
 
         using var manifest =
             LoadCommonCoreIntegrityManifest();
@@ -449,27 +486,10 @@ public sealed class MathematicsCurriculumVerifiedPersistenceTests
 
         db.ChangeTracker.Clear();
 
-        var pedagogicalSeeder =
-            new MathematicsPedagogicalLessonSeeder(
-                db);
-
-        await pedagogicalSeeder.SeedAsync();
-
-        var before =
-            await db.CurriculumPedagogicalLessons
-                .AsNoTracking()
-                .Where(
-                    x =>
-                        x.FrameworkVersionId ==
-                            versionId)
-                .ToDictionaryAsync(
-                    x => x.Code,
-                    x => new
-                    {
-                        x.Title,
-                        x.SortOrder
-                    });
-
+        // Production startup repairs/verifies the official curriculum pack
+        // before seeding the pedagogical graph. Do not ask the new Grade 6
+        // source blueprint to resolve against an intentionally incomplete
+        // historical 420/360 fixture.
         await curriculumSeeder.SeedAsync();
         await pedagogicalSeeder.SeedAsync();
 
@@ -592,13 +612,12 @@ public sealed class MathematicsCurriculumVerifiedPersistenceTests
                         x.SortOrder
                     });
 
-        // 23 restored K-8 Standards produce one
-        // outcome-backed lesson each.
-        //
-        // Nine HSS-CP Standards apply to logical
-        // levels 10-13, producing 9 * 4 = 36.
+        // The current pedagogical graph was already present before the
+        // official-pack downgrade. Repairing the known legacy 420/360 state
+        // must restore official nodes in place while preserving that graph
+        // exactly, including the source-driven Grade 6 blueprint.
         Assert.Equal(
-            before.Count + 59,
+            before.Count,
             after.Count);
 
         foreach (var previous in before)

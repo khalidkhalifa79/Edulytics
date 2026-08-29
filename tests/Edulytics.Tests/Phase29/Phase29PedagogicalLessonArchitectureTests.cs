@@ -1,4 +1,6 @@
+using System.Text.RegularExpressions;
 using Edulytics.Core.Curriculum;
+using Edulytics.Core.Entities;
 using Edulytics.Data.Contexts;
 using Edulytics.Data.Seeding;
 using Microsoft.EntityFrameworkCore;
@@ -8,222 +10,642 @@ namespace Edulytics.Tests.Phase29;
 
 public sealed class Phase29PedagogicalLessonArchitectureTests
 {
+    private const string GradeSixSemanticGraphSha =
+        "edae65cc700ae2b2f3a5a7828275a3ff" +
+        "dded4fbf07759489801e7c4e5059e0e9";
+
     [Fact]
-    public async Task SeederCreatesOutcomeBackedLessonsForEveryNonUaePackAndPreservesUae()
+    public void CommonCoreGradeSixBlueprintLocksExactSourceSemantics()
     {
-        await using var db = CreateDb();
+        var blueprint =
+            Assert.Single(
+                PedagogicalLessonBlueprintRegistry
+                    .LoadEmbeddedDocuments(),
+                x =>
+                    x.PackCode ==
+                        MathematicsCurriculumPackRegistry.CommonCoreCode &&
+                    x.VersionCode ==
+                        "CCSSM-2010" &&
+                    x.LogicalLevel ==
+                        7 &&
+                    x.NativeLevel ==
+                        "Grade 6");
 
-        await new MathematicsCurriculumPackSeeder(db).SeedAsync();
+        Assert.Equal(
+            "US-CCSS-MATH:G6:OUR-IM-2017",
+            blueprint.BlueprintCode);
 
-        var seeder = new MathematicsPedagogicalLessonSeeder(db);
+        Assert.Equal(
+            "CC BY 4.0",
+            blueprint.SourceLicense);
+
+        Assert.Equal(
+            GradeSixSemanticGraphSha,
+            blueprint.SemanticGraphSha256);
+
+        Assert.Equal(
+            9,
+            blueprint.Units.Count);
+
+        Assert.Equal(
+            147,
+            blueprint.Lessons.Count);
+
+        Assert.Equal(
+            new[]
+            {
+                19, 17, 17, 17, 15,
+                19, 19, 18, 6
+            },
+            blueprint.Units
+                .OrderBy(x => x.Number)
+                .Select(x => x.LessonCount)
+                .ToArray());
+
+        Assert.Equal(
+            Enumerable.Range(1, 147).ToArray(),
+            blueprint.Lessons
+                .OrderBy(x => x.SortOrder)
+                .Select(x => x.SortOrder)
+                .ToArray());
+
+        Assert.Equal(
+            147,
+            blueprint.Lessons
+                .Select(x => x.SourceLessonCode)
+                .Distinct(StringComparer.Ordinal)
+                .Count());
+
+        Assert.Equal(
+            147,
+            blueprint.Lessons
+                .Select(x => x.LessonCode)
+                .Distinct(StringComparer.Ordinal)
+                .Count());
+
+        Assert.All(
+            blueprint.Lessons,
+            lesson =>
+            {
+                Assert.False(
+                    string.IsNullOrWhiteSpace(
+                        lesson.Title));
+
+                Assert.Matches(
+                    "^[0-9a-f]{64}$",
+                    lesson.SemanticSha256);
+
+                Assert.False(
+                    Regex.IsMatch(
+                        lesson.Title,
+                        @"(?:^|\s[—-]\s)Lesson\s+\d+\s*$",
+                        RegexOptions.IgnoreCase |
+                        RegexOptions.CultureInvariant));
+            });
+
+        Assert.Equal(
+            208,
+            blueprint.Lessons.Sum(
+                x =>
+                    x.OutcomeCodes.Count));
+
+        Assert.Equal(
+            17,
+            blueprint.Lessons.Count(
+                x =>
+                    x.OutcomeCodes.Count == 0));
+
+        var formalCoverage =
+            blueprint.Lessons
+                .SelectMany(
+                    x => x.OutcomeCodes)
+                .Distinct(
+                    StringComparer.Ordinal)
+                .OrderBy(x => x)
+                .ToArray();
+
+        Assert.Equal(
+            29,
+            formalCoverage.Length);
+
+        Assert.All(
+            formalCoverage,
+            code =>
+                Assert.Matches(
+                    @"^CCSS:6\.(RP|NS|EE|G|SP)\.[A-Z]\.\d+$",
+                    code));
+
+        var noNumberedGradeSix =
+            blueprint.Lessons
+                .Where(
+                    lesson =>
+                        !lesson.Alignments.Any(
+                            x =>
+                                IsGradeSixNumberedReference(
+                                    x.ReferenceCode)))
+                .Select(
+                    x => x.SourceLessonCode)
+                .OrderBy(x => x)
+                .ToArray();
+
+        Assert.Equal(
+            new[]
+            {
+                "6.3.17",
+                "6.4.1",
+                "6.4.2",
+                "6.5.1",
+                "6.5.5",
+                "6.5.6",
+                "6.5.9",
+                "6.9.1",
+                "6.9.2"
+            },
+            noNumberedGradeSix);
+
+        var multiStandard =
+            blueprint.Lessons.Count(
+                lesson =>
+                    lesson.Alignments
+                        .Where(
+                            x =>
+                                IsGradeSixNumberedReference(
+                                    x.ReferenceCode))
+                        .Select(
+                            x =>
+                                NormalizeAcceptedParent(
+                                    x.ReferenceCode))
+                        .Distinct(
+                            StringComparer.Ordinal)
+                        .Count() > 1);
+
+        Assert.Equal(
+            60,
+            multiStandard);
+
+        Assert.DoesNotContain(
+            blueprint.Lessons
+                .SelectMany(
+                    x => x.Alignments),
+            x =>
+                x.Role != "Addressing" &&
+                !string.IsNullOrWhiteSpace(
+                    x.OutcomeCode));
+
+        Assert.DoesNotContain(
+            blueprint.Lessons
+                .SelectMany(
+                    x => x.Alignments),
+            x =>
+                (x.ReferenceKind is
+                    "Cluster" or "Domain") &&
+                !string.IsNullOrWhiteSpace(
+                    x.OutcomeCode));
+    }
+
+    [Fact]
+    public async Task SeederCreatesExactGradeSixBlueprintAndPreservesFallbacks()
+    {
+        await using var db =
+            CreateDb();
+
+        await new MathematicsCurriculumPackSeeder(
+                db)
+            .SeedAsync();
+
+        var seeder =
+            new MathematicsPedagogicalLessonSeeder(
+                db);
+
         await seeder.SeedAsync();
-        await seeder.SeedAsync();
 
-        var states = await db.CurriculumPackImportStates
-            .ToDictionaryAsync(x => x.FrameworkCode);
+        var blueprint =
+            Assert.Single(
+                PedagogicalLessonBlueprintRegistry
+                    .LoadEmbeddedDocuments());
+
+        var states =
+            await db.CurriculumPackImportStates
+                .ToDictionaryAsync(
+                    x => x.FrameworkCode);
+
+        var commonCoreVersionId =
+            states[
+                MathematicsCurriculumPackRegistry
+                    .CommonCoreCode]
+                .FrameworkVersionId;
+
+        var gradeSixLessons =
+            await db.CurriculumPedagogicalLessons
+                .Where(
+                    x =>
+                        x.FrameworkVersionId ==
+                            commonCoreVersionId &&
+                        x.LogicalLevelFrom == 7 &&
+                        x.LogicalLevelTo == 7 &&
+                        x.NativeLevel == "Grade 6")
+                .OrderBy(
+                    x => x.SortOrder)
+                .ToArrayAsync();
+
+        Assert.Equal(
+            147,
+            gradeSixLessons.Length);
+
+        var byCode =
+            gradeSixLessons.ToDictionary(
+                x => x.Code,
+                StringComparer.Ordinal);
+
+        var gradeSixIds =
+            gradeSixLessons
+                .Select(x => x.Id)
+                .ToArray();
+
+        var mappings =
+            await db.CurriculumPedagogicalLessonOutcomes
+                .Where(
+                    x =>
+                        gradeSixIds.Contains(
+                            x.PedagogicalLessonId))
+                .OrderBy(
+                    x => x.SortOrder)
+                .ToArrayAsync();
+
+        Assert.Equal(
+            208,
+            mappings.Length);
+
+        var mappedNodeIds =
+            mappings
+                .Select(x => x.OutcomeNodeId)
+                .Distinct()
+                .ToArray();
+
+        var nodeCodes =
+            await db.CurriculumPackContentNodes
+                .Where(
+                    x =>
+                        mappedNodeIds.Contains(
+                            x.Id))
+                .ToDictionaryAsync(
+                    x => x.Id,
+                    x => x.Code);
+
+        Assert.Equal(
+            29,
+            nodeCodes.Values
+                .Distinct(
+                    StringComparer.Ordinal)
+                .Count());
+
+        foreach (var expected in
+                 blueprint.Lessons)
+        {
+            Assert.True(
+                byCode.TryGetValue(
+                    expected.LessonCode,
+                    out var actual));
+
+            Assert.Equal(
+                expected.Title,
+                actual!.Title);
+
+            Assert.Equal(
+                expected.UnitTitle,
+                actual.UnitTitle);
+
+            Assert.Equal(
+                expected.SortOrder,
+                actual.SortOrder);
+
+            Assert.Null(
+                actual.OfficialLessonNodeId);
+
+            var actualMappings =
+                mappings
+                    .Where(
+                        x =>
+                            x.PedagogicalLessonId ==
+                            actual.Id)
+                    .OrderBy(
+                        x => x.SortOrder)
+                    .Select(
+                        x =>
+                            nodeCodes[
+                                x.OutcomeNodeId])
+                    .ToArray();
+
+            Assert.Equal(
+                expected.OutcomeCodes.ToArray(),
+                actualMappings);
+        }
+
+        Assert.Equal(
+            17,
+            gradeSixLessons.Count(
+                lesson =>
+                    !mappings.Any(
+                        x =>
+                            x.PedagogicalLessonId ==
+                            lesson.Id)));
 
         var uaeVersionId =
-            states[MathematicsCurriculumPackRegistry.UaeCode].FrameworkVersionId;
+            states[
+                MathematicsCurriculumPackRegistry
+                    .UaeCode]
+                .FrameworkVersionId;
 
         Assert.Equal(
             42,
-            await db.CurriculumPedagogicalLessons.CountAsync(
-                x =>
-                    x.FrameworkVersionId == uaeVersionId &&
-                    x.OfficialLessonNodeId != null));
+            await db.CurriculumPedagogicalLessons
+                .CountAsync(
+                    x =>
+                        x.FrameworkVersionId ==
+                            uaeVersionId &&
+                        x.OfficialLessonNodeId != null));
 
         Assert.Equal(
             48,
-            await db.CurriculumPedagogicalLessonOutcomes.CountAsync(
-                x => x.FrameworkVersionId == uaeVersionId));
+            await db.CurriculumPedagogicalLessonOutcomes
+                .CountAsync(
+                    x =>
+                        x.FrameworkVersionId ==
+                            uaeVersionId));
 
-        var nonUaeLessons = await db.CurriculumPedagogicalLessons
-            .Where(x => x.FrameworkVersionId != uaeVersionId)
-            .ToArrayAsync();
+        var fallbackLessons =
+            await db.CurriculumPedagogicalLessons
+                .Where(
+                    x =>
+                        x.FrameworkVersionId !=
+                            uaeVersionId &&
+                        !gradeSixIds.Contains(
+                            x.Id))
+                .ToArrayAsync();
 
-        Assert.NotEmpty(nonUaeLessons);
-        Assert.DoesNotContain(nonUaeLessons, x => x.OfficialLessonNodeId != null);
+        Assert.NotEmpty(
+            fallbackLessons);
 
-        var nonUaeLessonIds = nonUaeLessons
-            .Select(x => x.Id)
-            .ToArray();
+        var fallbackIds =
+            fallbackLessons
+                .Select(x => x.Id)
+                .ToArray();
 
-        var nonUaeMappings = await db.CurriculumPedagogicalLessonOutcomes
-            .Where(x => nonUaeLessonIds.Contains(x.PedagogicalLessonId))
-            .ToArrayAsync();
+        var fallbackMappings =
+            await db.CurriculumPedagogicalLessonOutcomes
+                .Where(
+                    x =>
+                        fallbackIds.Contains(
+                            x.PedagogicalLessonId))
+                .ToArrayAsync();
 
-        Assert.Equal(nonUaeLessons.Length, nonUaeMappings.Length);
+        Assert.Equal(
+            fallbackLessons.Length,
+            fallbackMappings.Length);
 
-        foreach (var lesson in nonUaeLessons)
-        {
-            var mapping = Assert.Single(
-                nonUaeMappings,
-                x => x.PedagogicalLessonId == lesson.Id);
+        Assert.All(
+            fallbackLessons,
+            lesson =>
+                Assert.Single(
+                    fallbackMappings,
+                    x =>
+                        x.PedagogicalLessonId ==
+                        lesson.Id));
 
-            Assert.Equal(lesson.FrameworkVersionId, mapping.FrameworkVersionId);
+        var lessonCount =
+            await db.CurriculumPedagogicalLessons
+                .CountAsync();
 
-            var official = await db.CurriculumPackContentNodes.SingleAsync(
-                x => x.Id == mapping.OutcomeNodeId);
+        var mappingCount =
+            await db.CurriculumPedagogicalLessonOutcomes
+                .CountAsync();
 
-            Assert.True(official.IsOfficial);
-            Assert.True(official.IsActive);
-            Assert.True(
-                official.NodeKind is "Standard" or "Outcome",
-                $"Unexpected mapped node kind {official.NodeKind} for {official.Code}.");
-            Assert.Equal(lesson.FrameworkVersionId, official.FrameworkVersionId);
-            Assert.InRange(
-                lesson.LogicalLevelFrom,
-                official.LogicalLevelFrom,
-                official.LogicalLevelTo);
-        }
+        await seeder.SeedAsync();
 
-        foreach (var code in new[]
-                 {
-                     MathematicsCurriculumPackRegistry.EnglandCode,
-                     MathematicsCurriculumPackRegistry.CommonCoreCode,
-                     MathematicsCurriculumPackRegistry.PolandCode
-                 })
-        {
-            var versionId = states[code].FrameworkVersionId;
-            Assert.Contains(
-                nonUaeLessons,
-                x => x.FrameworkVersionId == versionId);
-            Assert.Contains(
-                nonUaeMappings,
-                x => x.FrameworkVersionId == versionId);
-        }
+        Assert.Equal(
+            lessonCount,
+            await db.CurriculumPedagogicalLessons
+                .CountAsync());
+
+        Assert.Equal(
+            mappingCount,
+            await db.CurriculumPedagogicalLessonOutcomes
+                .CountAsync());
     }
 
     [Fact]
-    public async Task EnglandYearSixHasRealLessonGranularityAndOfficialAlignment()
+    public async Task EnglandYearSixKeepsOutcomeBackedFallback()
     {
-        await using var db = CreateDb();
+        await using var db =
+            CreateDb();
 
-        await new MathematicsCurriculumPackSeeder(db).SeedAsync();
-        await new MathematicsPedagogicalLessonSeeder(db).SeedAsync();
+        await new MathematicsCurriculumPackSeeder(
+                db)
+            .SeedAsync();
 
-        var versionId = await db.CurriculumPackImportStates
-            .Where(x => x.FrameworkCode == MathematicsCurriculumPackRegistry.EnglandCode)
-            .Select(x => x.FrameworkVersionId)
-            .SingleAsync();
+        await new MathematicsPedagogicalLessonSeeder(
+                db)
+            .SeedAsync();
 
-        var yearSix = await db.CurriculumPedagogicalLessons
-            .Where(x =>
-                x.FrameworkVersionId == versionId &&
-                x.LogicalLevelFrom == 6 &&
-                x.LogicalLevelTo == 6)
-            .OrderBy(x => x.SortOrder)
-            .ToArrayAsync();
+        var versionId =
+            await db.CurriculumPackImportStates
+                .Where(
+                    x =>
+                        x.FrameworkCode ==
+                        MathematicsCurriculumPackRegistry
+                            .EnglandCode)
+                .Select(
+                    x => x.FrameworkVersionId)
+                .SingleAsync();
+
+        var lessons =
+            await db.CurriculumPedagogicalLessons
+                .Where(
+                    x =>
+                        x.FrameworkVersionId ==
+                            versionId &&
+                        x.LogicalLevelFrom == 6 &&
+                        x.LogicalLevelTo == 6)
+                .ToArrayAsync();
 
         Assert.True(
-            yearSix.Length > 6,
-            $"Year 6 must contain more than the six old pseudo-unit shells; got {yearSix.Length}.");
+            lessons.Length > 6);
 
-        var numberLessons = yearSix
-            .Where(x => x.UnitTitle.Contains("Number", StringComparison.OrdinalIgnoreCase))
-            .ToArray();
+        var ids =
+            lessons
+                .Select(x => x.Id)
+                .ToArray();
 
-        Assert.True(
-            numberLessons.Length > 1,
-            $"Year 6 Number must contain multiple pedagogical lessons; got {numberLessons.Length}.");
-
-        var yearSixIds = yearSix.Select(x => x.Id).ToArray();
-
-        var mappedLessonIds = await db.CurriculumPedagogicalLessonOutcomes
-            .Where(x => yearSixIds.Contains(x.PedagogicalLessonId))
-            .Select(x => x.PedagogicalLessonId)
-            .Distinct()
-            .ToArrayAsync();
-
-        Assert.Equal(yearSix.Length, mappedLessonIds.Length);
+        Assert.Equal(
+            lessons.Length,
+            await db.CurriculumPedagogicalLessonOutcomes
+                .CountAsync(
+                    x =>
+                        ids.Contains(
+                            x.PedagogicalLessonId)));
     }
 
     [Fact]
-    public async Task CommonCoreGradeSixIsLogicalSevenAndPolandIsMapped()
+    public async Task SeederRemovesUnreferencedObsoletePseudoLesson()
     {
-        await using var db = CreateDb();
+        await using var db =
+            CreateDb();
 
-        await new MathematicsCurriculumPackSeeder(db).SeedAsync();
-        await new MathematicsPedagogicalLessonSeeder(db).SeedAsync();
+        await new MathematicsCurriculumPackSeeder(
+                db)
+            .SeedAsync();
 
-        var states = await db.CurriculumPackImportStates
-            .ToDictionaryAsync(x => x.FrameworkCode);
+        var state =
+            await db.CurriculumPackImportStates
+                .SingleAsync(
+                    x =>
+                        x.FrameworkCode ==
+                        MathematicsCurriculumPackRegistry
+                            .CommonCoreCode);
 
-        var us = MathematicsCurriculumPackRegistry.All.Single(
-            x => x.Code == MathematicsCurriculumPackRegistry.CommonCoreCode);
+        var official =
+            await db.CurriculumPackContentNodes
+                .SingleAsync(
+                    x =>
+                        x.FrameworkVersionId ==
+                            state.FrameworkVersionId &&
+                        x.Code ==
+                            "CCSS:6.RP.A.1");
 
-        var gradeSix = Assert.Single(
-            us.Levels,
-            x => x.NativeLabel == "Grade 6");
+        var id =
+            Guid.NewGuid();
 
-        Assert.Equal(7, gradeSix.LogicalLevel);
+        db.CurriculumPedagogicalLessons.Add(
+            new CurriculumPedagogicalLesson
+            {
+                Id = id,
+                FrameworkVersionId =
+                    state.FrameworkVersionId,
+                OfficialLessonNodeId =
+                    null,
+                Code =
+                    "PED:US-CCSS-MATH:"
+                    + "LEGACY-G6-PSEUDO-TEST",
+                UnitKey =
+                    "LEGACY",
+                UnitTitle =
+                    "Ratios",
+                Title =
+                    "Ratios — Lesson 99",
+                LogicalLevelFrom =
+                    7,
+                LogicalLevelTo =
+                    7,
+                NativeLevel =
+                    "Grade 6",
+                Pathway =
+                    null,
+                SortOrder =
+                    9999,
+                CreatedAtUtc =
+                    DateTime.UtcNow,
+                UpdatedAtUtc =
+                    DateTime.UtcNow
+            });
 
-        var usVersionId =
-            states[MathematicsCurriculumPackRegistry.CommonCoreCode].FrameworkVersionId;
+        db.CurriculumPedagogicalLessonOutcomes.Add(
+            new CurriculumPedagogicalLessonOutcome
+            {
+                PedagogicalLessonId =
+                    id,
+                FrameworkVersionId =
+                    state.FrameworkVersionId,
+                OutcomeNodeId =
+                    official.Id,
+                SortOrder =
+                    1
+            });
 
-        var usGradeSixLessons = await db.CurriculumPedagogicalLessons
-            .Where(x =>
-                x.FrameworkVersionId == usVersionId &&
-                x.LogicalLevelFrom == 7 &&
-                x.LogicalLevelTo == 7 &&
-                x.NativeLevel == "Grade 6")
-            .ToArrayAsync();
+        await db.SaveChangesAsync();
 
-        Assert.True(usGradeSixLessons.Length > 6);
+        await new MathematicsPedagogicalLessonSeeder(
+                db)
+            .SeedAsync();
 
-        var usGradeSixIds = usGradeSixLessons.Select(x => x.Id).ToArray();
-        Assert.Equal(
-            usGradeSixLessons.Length,
-            await db.CurriculumPedagogicalLessonOutcomes.CountAsync(
-                x => usGradeSixIds.Contains(x.PedagogicalLessonId)));
+        Assert.False(
+            await db.CurriculumPedagogicalLessons
+                .AnyAsync(
+                    x => x.Id == id));
 
-        var plVersionId =
-            states[MathematicsCurriculumPackRegistry.PolandCode].FrameworkVersionId;
-
-        var polishLessons = await db.CurriculumPedagogicalLessons
-            .Where(x => x.FrameworkVersionId == plVersionId)
-            .ToArrayAsync();
-
-        Assert.NotEmpty(polishLessons);
-
-        var polishIds = polishLessons.Select(x => x.Id).ToArray();
-        Assert.Equal(
-            polishLessons.Length,
-            await db.CurriculumPedagogicalLessonOutcomes.CountAsync(
-                x => polishIds.Contains(x.PedagogicalLessonId)));
+        Assert.False(
+            await db.CurriculumPedagogicalLessonOutcomes
+                .AnyAsync(
+                    x =>
+                        x.PedagogicalLessonId ==
+                        id));
     }
 
     [Fact]
     public void CanonicalContentForeignKeyTargetsPedagogicalLesson()
     {
-        using var db = CreateDb();
+        using var db =
+            CreateDb();
 
-        var entity = db.Model.FindEntityType(
-            "Edulytics.Core.Entities.CurriculumLessonContent");
+        var entity =
+            db.Model.FindEntityType(
+                "Edulytics.Core.Entities."
+                + "CurriculumLessonContent");
 
-        Assert.NotNull(entity);
+        Assert.NotNull(
+            entity);
 
-        var property = entity!.FindProperty("PedagogicalLessonId");
-        Assert.NotNull(property);
-        Assert.Equal("LessonNodeId", property!.GetColumnName());
+        var property =
+            entity!.FindProperty(
+                "PedagogicalLessonId");
 
-        var fk = Assert.Single(
-            entity.GetForeignKeys(),
-            x => x.Properties.Any(
-                p => p.Name == "PedagogicalLessonId"));
+        Assert.NotNull(
+            property);
 
         Assert.Equal(
-            "Edulytics.Core.Entities.CurriculumPedagogicalLesson",
+            "LessonNodeId",
+            property!.GetColumnName());
+
+        var fk =
+            Assert.Single(
+                entity.GetForeignKeys(),
+                x =>
+                    x.Properties.Any(
+                        p =>
+                            p.Name ==
+                            "PedagogicalLessonId"));
+
+        Assert.Equal(
+            "Edulytics.Core.Entities."
+            + "CurriculumPedagogicalLesson",
             fk.PrincipalEntityType.Name);
     }
 
+    private static bool IsGradeSixNumberedReference(
+        string reference) =>
+        Regex.IsMatch(
+            reference,
+            @"^6\.(RP|NS|EE|G|SP)\.[A-Z]\.\d+(?:\.[a-z])?$",
+            RegexOptions.CultureInvariant);
+
+    private static string NormalizeAcceptedParent(
+        string reference) =>
+        Regex.Replace(
+            reference,
+            @"\.[a-z]$",
+            string.Empty,
+            RegexOptions.CultureInvariant);
+
     private static EdulyticsDbContext CreateDb()
     {
-        var options = new DbContextOptionsBuilder<EdulyticsDbContext>()
-            .UseInMemoryDatabase(
-                "p29-pedagogical-" + Guid.NewGuid())
-            .Options;
+        var options =
+            new DbContextOptionsBuilder<
+                    EdulyticsDbContext>()
+                .UseInMemoryDatabase(
+                    "phase29-" +
+                    Guid.NewGuid())
+                .Options;
 
-        return new EdulyticsDbContext(options);
+        return new EdulyticsDbContext(
+            options);
     }
 }
