@@ -98,7 +98,7 @@ public sealed class MathematicsCurriculumPackSeeder
         if (d.PackCode == MathematicsCurriculumPackRegistry.EnglandCode && d.OfficialNodeCount != 436)
             throw new InvalidOperationException("England verified count must be 436.");
         if (d.PackCode == MathematicsCurriculumPackRegistry.CommonCoreCode &&
-            (d.OfficialNodeCount != 360 ||
+            (d.OfficialNodeCount != 392 ||
              d.ReuseBasis != "ProductOwnerConfirmedCommercialUseEvidence" ||
              !d.Attribution.Contains("Copyright 2010", StringComparison.Ordinal)))
             throw new InvalidOperationException("Common Core verified contract failed.");
@@ -178,17 +178,27 @@ public sealed class MathematicsCurriculumPackSeeder
 
         if (state is not null)
         {
-            if (state.SourceDigest != d.SourceDigest || state.ContentDigest != d.ContentDigest ||
-                state.NodeCount != d.NodeCount || state.OfficialNodeCount != d.OfficialNodeCount ||
-                state.UnitCount != d.UnitCount || state.LessonCount != d.LessonCount ||
-                state.LinkCount != d.LinkCount || !state.IsComplete)
-                throw new InvalidOperationException($"Immutable accepted pack drift: {d.PackCode}");
+            if (StateMatchesDocument(state, d))
+            {
+                await ValidatePersistedRowsAsync(
+                    d,
+                    version.Id,
+                    ct);
 
-            var nodeCount = await _db.CurriculumPackContentNodes.CountAsync(x => x.FrameworkVersionId == version.Id, ct);
-            var linkCount = await _db.CurriculumPackNodeLinks.CountAsync(x => x.FrameworkVersionId == version.Id, ct);
-            if (nodeCount != d.NodeCount || linkCount != d.LinkCount)
-                throw new InvalidOperationException($"Persisted rows drift: {d.PackCode}");
-            return;
+                return;
+            }
+
+            if (await TryRepairAcceptedCommonCoreV13Async(
+                    d,
+                    state,
+                    version.Id,
+                    ct))
+            {
+                return;
+            }
+
+            throw new InvalidOperationException(
+                $"Immutable accepted pack drift: {d.PackCode}");
         }
 
         if (await _db.CurriculumPackContentNodes.AnyAsync(x => x.FrameworkVersionId == version.Id, ct) ||
@@ -268,6 +278,565 @@ public sealed class MathematicsCurriculumPackSeeder
         await _db.SaveChangesAsync(ct);
     }
 
+    private static bool StateMatchesDocument(
+        CurriculumPackImportState state,
+        Doc d)
+    {
+        return
+            state.SourceDigest == d.SourceDigest &&
+            state.ContentDigest == d.ContentDigest &&
+            state.NodeCount == d.NodeCount &&
+            state.OfficialNodeCount == d.OfficialNodeCount &&
+            state.UnitCount == d.UnitCount &&
+            state.LessonCount == d.LessonCount &&
+            state.LinkCount == d.LinkCount &&
+            state.IsComplete;
+    }
+
+    private async Task ValidatePersistedRowsAsync(
+        Doc d,
+        Guid frameworkVersionId,
+        CancellationToken ct)
+    {
+        var persisted =
+            await _db.CurriculumPackContentNodes
+                .AsNoTracking()
+                .Where(
+                    x =>
+                        x.FrameworkVersionId ==
+                        frameworkVersionId)
+                .ToArrayAsync(ct);
+
+        var linkCount =
+            await _db.CurriculumPackNodeLinks
+                .AsNoTracking()
+                .CountAsync(
+                    x =>
+                        x.FrameworkVersionId ==
+                        frameworkVersionId,
+                    ct);
+
+        if (persisted.Length != d.NodeCount ||
+            linkCount != d.LinkCount)
+        {
+            throw new InvalidOperationException(
+                $"Persisted rows drift: {d.PackCode}");
+        }
+
+        if (d.PackCode !=
+            MathematicsCurriculumPackRegistry.CommonCoreCode)
+        {
+            return;
+        }
+
+        var officialCount =
+            persisted.Count(
+                x =>
+                    x.IsOfficial &&
+                    (x.NodeKind == "Standard" ||
+                     x.NodeKind == "Outcome"));
+
+        if (officialCount != d.OfficialNodeCount)
+        {
+            throw new InvalidOperationException(
+                "Persisted Common Core official-node count drift.");
+        }
+
+        var expectedIds =
+            d.Nodes.ToDictionary(
+                x => x.Code,
+                x => G(
+                    $"node|{d.PackCode}|{d.VersionCode}|{x.Code}"),
+                StringComparer.Ordinal);
+
+        var persistedByCode =
+            persisted.ToDictionary(
+                x => x.Code,
+                StringComparer.Ordinal);
+
+        if (persistedByCode.Count != d.Nodes.Count)
+        {
+            throw new InvalidOperationException(
+                "Persisted Common Core code-set cardinality drift.");
+        }
+
+        foreach (var expected in d.Nodes)
+        {
+            if (!persistedByCode.TryGetValue(
+                    expected.Code,
+                    out var current))
+            {
+                throw new InvalidOperationException(
+                    $"Persisted Common Core node missing: {expected.Code}");
+            }
+
+            Guid? parentId =
+                expected.ParentCode is null
+                    ? null
+                    : expectedIds[expected.ParentCode];
+
+            if (!PersistedNodeMatchesDocument(
+                    current,
+                    d,
+                    expected,
+                    expectedIds[expected.Code],
+                    parentId,
+                    frameworkVersionId))
+            {
+                throw new InvalidOperationException(
+                    $"Persisted Common Core node drift: {expected.Code}");
+            }
+        }
+    }
+
+    private async Task<bool> TryRepairAcceptedCommonCoreV13Async(
+        Doc d,
+        CurriculumPackImportState state,
+        Guid frameworkVersionId,
+        CancellationToken ct)
+    {
+        if (d.PackCode !=
+                MathematicsCurriculumPackRegistry.CommonCoreCode ||
+            state.FrameworkCode !=
+                MathematicsCurriculumPackRegistry.CommonCoreCode ||
+            state.VersionCode != "CCSSM-2010")
+        {
+            return false;
+        }
+
+        var manifest =
+            LoadCommonCoreIntegrityManifest();
+
+        var legacy =
+            manifest.Legacy;
+
+        var exactLegacyState =
+            state.SourceDigest ==
+                legacy.SourceDigest &&
+            state.ContentDigest ==
+                legacy.ContentDigest &&
+            state.NodeCount ==
+                legacy.NodeCount &&
+            state.OfficialNodeCount ==
+                legacy.OfficialNodeCount &&
+            state.UnitCount ==
+                legacy.UnitCount &&
+            state.LessonCount ==
+                legacy.LessonCount &&
+            state.LinkCount ==
+                legacy.LinkCount &&
+            state.IsComplete;
+
+        if (!exactLegacyState)
+        {
+            return false;
+        }
+
+        if (manifest.PackCode != d.PackCode ||
+            manifest.VersionCode != d.VersionCode ||
+            manifest.CorrectedContentDigest !=
+                d.ContentDigest ||
+            manifest.CorrectedNodeCount !=
+                d.NodeCount ||
+            manifest.CorrectedOfficialNodeCount !=
+                d.OfficialNodeCount ||
+            manifest.CorrectedNodeCount != 458 ||
+            manifest.CorrectedOfficialNodeCount != 392 ||
+            manifest.CorrectedDomainCount != 66 ||
+            manifest.NumberedStandardCount != 384 ||
+            manifest.K8NumberedStandardCount != 228 ||
+            manifest.HighSchoolNumberedStandardCount != 156 ||
+            manifest.TrailingContaminationRepairs != 140 ||
+            legacy.SourceDigest != d.SourceDigest ||
+            legacy.NodeCount != 420 ||
+            legacy.OfficialNodeCount != 360 ||
+            legacy.UnitCount != 0 ||
+            legacy.LessonCount != 0 ||
+            legacy.LinkCount != 0 ||
+            legacy.MissingNodeCodes.Count != 38 ||
+            legacy.ChangedNodeContentHashes.Count != 140)
+        {
+            throw new InvalidOperationException(
+                "Corrected Common Core repair manifest contract drift.");
+        }
+
+        var existing =
+            await _db.CurriculumPackContentNodes
+                .Where(
+                    x =>
+                        x.FrameworkVersionId ==
+                        frameworkVersionId)
+                .ToArrayAsync(ct);
+
+        var existingLinkCount =
+            await _db.CurriculumPackNodeLinks
+                .CountAsync(
+                    x =>
+                        x.FrameworkVersionId ==
+                        frameworkVersionId,
+                    ct);
+
+        if (existing.Length != 420 ||
+            existingLinkCount != 0)
+        {
+            throw new InvalidOperationException(
+                "Legacy Common Core persisted-row fingerprint drift.");
+        }
+
+        var expectedIds =
+            d.Nodes.ToDictionary(
+                x => x.Code,
+                x => G(
+                    $"node|{d.PackCode}|{d.VersionCode}|{x.Code}"),
+                StringComparer.Ordinal);
+
+        var expectedByCode =
+            d.Nodes.ToDictionary(
+                x => x.Code,
+                StringComparer.Ordinal);
+
+        var existingByCode =
+            existing.ToDictionary(
+                x => x.Code,
+                StringComparer.Ordinal);
+
+        var actualMissing =
+            expectedByCode.Keys
+                .Except(
+                    existingByCode.Keys,
+                    StringComparer.Ordinal)
+                .ToHashSet(
+                    StringComparer.Ordinal);
+
+        var expectedMissing =
+            legacy.MissingNodeCodes
+                .ToHashSet(
+                    StringComparer.Ordinal);
+
+        var stale =
+            existingByCode.Keys
+                .Except(
+                    expectedByCode.Keys,
+                    StringComparer.Ordinal)
+                .ToArray();
+
+        if (!expectedMissing.SetEquals(
+                actualMissing) ||
+            stale.Length != 0)
+        {
+            throw new InvalidOperationException(
+                "Legacy Common Core code-set fingerprint drift.");
+        }
+
+        var now =
+            DateTime.UtcNow;
+
+        foreach (var expected in
+                 d.Nodes.OrderBy(x => x.SortOrder))
+        {
+            var expectedId =
+                expectedIds[expected.Code];
+
+            Guid? parentId =
+                expected.ParentCode is null
+                    ? null
+                    : expectedIds[expected.ParentCode];
+
+            if (existingByCode.TryGetValue(
+                    expected.Code,
+                    out var current))
+            {
+                if (!PersistedNodeStaticMetadataMatches(
+                        current,
+                        d,
+                        expected,
+                        expectedId,
+                        parentId,
+                        frameworkVersionId))
+                {
+                    throw new InvalidOperationException(
+                        $"Unexpected legacy Common Core metadata drift: {expected.Code}");
+                }
+
+                if (current.OfficialText ==
+                        expected.OfficialText &&
+                    current.ContentHash ==
+                        expected.ContentHash)
+                {
+                    continue;
+                }
+
+                if (!legacy.ChangedNodeContentHashes
+                        .TryGetValue(
+                            expected.Code,
+                            out var legacyContentHash) ||
+                    current.ContentHash !=
+                        legacyContentHash)
+                {
+                    throw new InvalidOperationException(
+                        $"Unexpected legacy Common Core content drift: {expected.Code}");
+                }
+
+                current.OfficialText =
+                    expected.OfficialText;
+
+                current.ContentHash =
+                    expected.ContentHash;
+
+                current.UpdatedAtUtc =
+                    now;
+
+                continue;
+            }
+
+            _db.CurriculumPackContentNodes.Add(
+                new CurriculumPackContentNode
+                {
+                    Id =
+                        expectedId,
+
+                    FrameworkVersionId =
+                        frameworkVersionId,
+
+                    FrameworkCode =
+                        d.PackCode,
+
+                    VersionCode =
+                        d.VersionCode,
+
+                    NodeKind =
+                        expected.Kind,
+
+                    Code =
+                        expected.Code,
+
+                    ParentId =
+                        parentId,
+
+                    LogicalLevelFrom =
+                        expected.LogicalLevelFrom,
+
+                    LogicalLevelTo =
+                        expected.LogicalLevelTo,
+
+                    NativeLevel =
+                        expected.NativeLevel,
+
+                    Pathway =
+                        expected.Pathway,
+
+                    Title =
+                        expected.Title,
+
+                    OfficialText =
+                        expected.OfficialText,
+
+                    AuthorDescription =
+                        expected.AuthorDescription,
+
+                    SourceAuthority =
+                        expected.SourceAuthority,
+
+                    SourceUrl =
+                        expected.SourceUrl,
+
+                    SourceLocator =
+                        expected.SourceLocator,
+
+                    Attribution =
+                        expected.Attribution,
+
+                    IsOfficial =
+                        expected.IsOfficial,
+
+                    IsActive =
+                        expected.IsActive,
+
+                    SortOrder =
+                        expected.SortOrder,
+
+                    ContentHash =
+                        expected.ContentHash,
+
+                    CreatedAtUtc =
+                        now,
+
+                    UpdatedAtUtc =
+                        now
+                });
+        }
+
+        state.SourceDigest =
+            d.SourceDigest;
+
+        state.ContentDigest =
+            d.ContentDigest;
+
+        state.NodeCount =
+            d.NodeCount;
+
+        state.OfficialNodeCount =
+            d.OfficialNodeCount;
+
+        state.UnitCount =
+            d.UnitCount;
+
+        state.LessonCount =
+            d.LessonCount;
+
+        state.LinkCount =
+            d.LinkCount;
+
+        state.IsComplete =
+            true;
+
+        state.ImportedAtUtc =
+            now;
+
+        await _db.SaveChangesAsync(ct);
+
+        await ValidatePersistedRowsAsync(
+            d,
+            frameworkVersionId,
+            ct);
+
+        return true;
+    }
+
+    private static bool PersistedNodeStaticMetadataMatches(
+        CurriculumPackContentNode current,
+        Doc d,
+        Node expected,
+        Guid expectedId,
+        Guid? expectedParentId,
+        Guid expectedFrameworkVersionId)
+    {
+        return
+            current.Id ==
+                expectedId &&
+
+            current.FrameworkVersionId ==
+                expectedFrameworkVersionId &&
+
+            current.FrameworkCode ==
+                d.PackCode &&
+
+            current.VersionCode ==
+                d.VersionCode &&
+
+            current.NodeKind ==
+                expected.Kind &&
+
+            current.Code ==
+                expected.Code &&
+
+            current.ParentId ==
+                expectedParentId &&
+
+            current.LogicalLevelFrom ==
+                expected.LogicalLevelFrom &&
+
+            current.LogicalLevelTo ==
+                expected.LogicalLevelTo &&
+
+            current.NativeLevel ==
+                expected.NativeLevel &&
+
+            current.Pathway ==
+                expected.Pathway &&
+
+            current.Title ==
+                expected.Title &&
+
+            current.AuthorDescription ==
+                expected.AuthorDescription &&
+
+            current.SourceAuthority ==
+                expected.SourceAuthority &&
+
+            current.SourceUrl ==
+                expected.SourceUrl &&
+
+            current.SourceLocator ==
+                expected.SourceLocator &&
+
+            current.Attribution ==
+                expected.Attribution &&
+
+            current.IsOfficial ==
+                expected.IsOfficial &&
+
+            current.IsActive ==
+                expected.IsActive &&
+
+            current.SortOrder ==
+                expected.SortOrder;
+    }
+
+    private static bool PersistedNodeMatchesDocument(
+        CurriculumPackContentNode current,
+        Doc d,
+        Node expected,
+        Guid expectedId,
+        Guid? expectedParentId,
+        Guid expectedFrameworkVersionId)
+    {
+        return
+            PersistedNodeStaticMetadataMatches(
+                current,
+                d,
+                expected,
+                expectedId,
+                expectedParentId,
+                expectedFrameworkVersionId) &&
+
+            current.OfficialText ==
+                expected.OfficialText &&
+
+            current.ContentHash ==
+                expected.ContentHash;
+    }
+
+    private static CommonCoreIntegrityManifest
+        LoadCommonCoreIntegrityManifest()
+    {
+        var assembly =
+            typeof(MathematicsCurriculumPackRegistry)
+                .Assembly;
+
+        var names =
+            assembly.GetManifestResourceNames()
+                .Where(
+                    x =>
+                        x.EndsWith(
+                            "us-ccss-math.integrity-manifest.json",
+                            StringComparison.OrdinalIgnoreCase))
+                .ToArray();
+
+        if (names.Length != 1)
+        {
+            throw new InvalidOperationException(
+                "Exactly one embedded Common Core integrity manifest is required.");
+        }
+
+        using var stream =
+            assembly.GetManifestResourceStream(
+                names[0])
+            ?? throw new InvalidOperationException(
+                "Cannot open embedded Common Core integrity manifest.");
+
+        return
+            JsonSerializer.Deserialize<CommonCoreIntegrityManifest>(
+                stream,
+                new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive =
+                        true
+                })
+            ?? throw new InvalidOperationException(
+                "Invalid embedded Common Core integrity manifest.");
+    }
+
     private static Guid G(string value)
     {
         var hash = SHA256.HashData(Encoding.UTF8.GetBytes(value));
@@ -276,6 +845,37 @@ public sealed class MathematicsCurriculumPackSeeder
         bytes[6] = (byte)((bytes[6] & 0x0f) | 0x50);
         bytes[8] = (byte)((bytes[8] & 0x3f) | 0x80);
         return new Guid(bytes);
+    }
+
+    private sealed class CommonCoreIntegrityManifest
+    {
+        public int ManifestVersion { get; set; }
+        public string PackCode { get; set; } = "";
+        public string VersionCode { get; set; } = "";
+        public string SourcePdfSha256 { get; set; } = "";
+        public string CorrectedContentDigest { get; set; } = "";
+        public int CorrectedNodeCount { get; set; }
+        public int CorrectedOfficialNodeCount { get; set; }
+        public int CorrectedDomainCount { get; set; }
+        public int NumberedStandardCount { get; set; }
+        public int K8NumberedStandardCount { get; set; }
+        public int HighSchoolNumberedStandardCount { get; set; }
+        public int TrailingContaminationRepairs { get; set; }
+        public CommonCoreLegacyRepair Legacy { get; set; } = new();
+        public Dictionary<string, string> NumberedStandardTextSha256 { get; set; } = [];
+    }
+
+    private sealed class CommonCoreLegacyRepair
+    {
+        public string SourceDigest { get; set; } = "";
+        public string ContentDigest { get; set; } = "";
+        public int NodeCount { get; set; }
+        public int OfficialNodeCount { get; set; }
+        public int UnitCount { get; set; }
+        public int LessonCount { get; set; }
+        public int LinkCount { get; set; }
+        public List<string> MissingNodeCodes { get; set; } = [];
+        public Dictionary<string, string> ChangedNodeContentHashes { get; set; } = [];
     }
 
     private sealed class Doc
