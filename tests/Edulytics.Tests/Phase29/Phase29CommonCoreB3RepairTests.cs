@@ -8,13 +8,25 @@ namespace Edulytics.Tests.Phase29;
 
 public sealed class Phase29CommonCoreB3RepairTests
 {
-    private static readonly string[] AffectedLessonSuffixes =
+    private static readonly string[] AffectedOaLessonSuffixes =
     [
         ":CCSS-1-OA-B-4",
         ":CCSS-1-OA-C-5",
         ":CCSS-1-OA-C-6",
         ":CCSS-1-OA-D-7",
         ":CCSS-1-OA-D-8"
+    ];
+
+    private static readonly string[] AffectedPracticeLessonSuffixes =
+    [
+        ":CCSS-MP-1",
+        ":CCSS-MP-2",
+        ":CCSS-MP-3",
+        ":CCSS-MP-4",
+        ":CCSS-MP-5",
+        ":CCSS-MP-6",
+        ":CCSS-MP-7",
+        ":CCSS-MP-8"
     ];
 
     private static EdulyticsDbContext Db(
@@ -54,9 +66,23 @@ public sealed class Phase29CommonCoreB3RepairTests
             stream);
     }
 
-    private static bool IsAffectedLesson(
+    private static bool IsAffectedOaLesson(
         string code) =>
-        AffectedLessonSuffixes.Any(
+        code.StartsWith(
+            "PED:US-CCSS-MATH:L2:GRADE-1:CORE:",
+            StringComparison.Ordinal) &&
+        AffectedOaLessonSuffixes.Any(
+            suffix =>
+                code.EndsWith(
+                    suffix,
+                    StringComparison.Ordinal));
+
+    private static bool IsAffectedPracticeLesson(
+        string code) =>
+        code.StartsWith(
+            "PED:US-CCSS-MATH:L2:GRADE-1:CORE:",
+            StringComparison.Ordinal) &&
+        AffectedPracticeLessonSuffixes.Any(
             suffix =>
                 code.EndsWith(
                     suffix,
@@ -100,7 +126,7 @@ public sealed class Phase29CommonCoreB3RepairTests
 
     [Fact]
     public async Task
-        AcceptedV13_458_392_UpgradesToV14_459_393_AndRebaselinesOnlyB3AffectedGrade1Lessons()
+        AcceptedV13_458_392_UpgradesToV14_459_393_AndRebaselinesAllB3AffectedGrade1Lessons()
     {
         var name =
             "p29-ccss-b3-v14-" +
@@ -269,7 +295,7 @@ public sealed class Phase29CommonCoreB3RepairTests
                     row.Code];
         }
 
-        var affectedLessons =
+        var existingLessons =
             await db
                 .CurriculumPedagogicalLessons
                 .Where(
@@ -278,20 +304,20 @@ public sealed class Phase29CommonCoreB3RepairTests
                             versionId)
                 .ToArrayAsync();
 
-        affectedLessons =
-            affectedLessons
+        var affectedOaLessons =
+            existingLessons
                 .Where(
                     x =>
-                        IsAffectedLesson(
+                        IsAffectedOaLesson(
                             x.Code))
                 .ToArray();
 
         Assert.Equal(
             5,
-            affectedLessons.Length);
+            affectedOaLessons.Length);
 
         foreach (var row in
-                 affectedLessons)
+                 affectedOaLessons)
         {
             row.SortOrder--;
 
@@ -299,6 +325,32 @@ public sealed class Phase29CommonCoreB3RepairTests
                 PreviousLessonTitle(
                     row.Title);
         }
+
+        var affectedPracticeLessons =
+            existingLessons
+                .Where(
+                    x =>
+                        IsAffectedPracticeLesson(
+                            x.Code))
+                .ToArray();
+
+        Assert.Equal(
+            8,
+            affectedPracticeLessons.Length);
+
+        foreach (var row in
+                 affectedPracticeLessons)
+        {
+            // V13 had one fewer Grade 1 numbered Standard
+            // before the Mathematical Practices. Practice
+            // titles are unit-local and therefore unchanged.
+            row.SortOrder--;
+        }
+
+        Assert.Equal(
+            13,
+            affectedOaLessons.Length +
+            affectedPracticeLessons.Length);
 
         state.SourceDigest =
             previous
@@ -518,6 +570,29 @@ public sealed class Phase29CommonCoreB3RepairTests
                 target.Value.SortOrder,
                 actual.SortOrder);
         }
+
+        var repairedGrade1Practices =
+            repairedLessons
+                .Where(
+                    x =>
+                        IsAffectedPracticeLesson(
+                            x.Key))
+                .OrderBy(
+                    x => x.Value.SortOrder)
+                .ToArray();
+
+        Assert.Equal(
+            8,
+            repairedGrade1Practices.Length);
+
+        Assert.Equal(
+            Enumerable.Range(
+                22,
+                8),
+            repairedGrade1Practices
+                .Select(
+                    x =>
+                        x.Value.SortOrder));
 
         // Prove target state is now idempotent.
         await curriculumSeeder.SeedAsync();
