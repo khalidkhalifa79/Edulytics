@@ -234,6 +234,54 @@ public sealed class PedagogicalLessonBlueprintAlignment
     public int SortOrder { get; set; }
 }
 
+public static class PedagogicalSourceLicensePolicy
+{
+    private static readonly string[] ApprovedLicenses =
+    [
+        "Public Domain",
+        "CC0 1.0",
+        "CC BY 4.0"
+    ];
+
+    /// <summary>
+    /// Fail-closed allowlist for pedagogical source material.
+    ///
+    /// A license appears here only after Edulytics has accepted it
+    /// for royalty-free commercial reuse and adaptation.
+    /// Unknown licenses are deliberately blocked until reviewed.
+    /// </summary>
+    public static IReadOnlyList<string>
+        ApprovedCommercialReuseAndAdaptationLicenses =>
+        ApprovedLicenses;
+
+    public static bool IsApproved(
+        string? sourceLicense)
+    {
+        return
+            !string.IsNullOrWhiteSpace(
+                sourceLicense) &&
+            ApprovedLicenses.Contains(
+                sourceLicense,
+                StringComparer.Ordinal);
+    }
+
+    public static void Validate(
+        string? sourceLicense)
+    {
+        if (IsApproved(
+                sourceLicense))
+        {
+            return;
+        }
+
+        throw new InvalidOperationException(
+            $"Pedagogical source license is not approved " +
+            $"for royalty-free commercial reuse and " +
+            $"adaptation: " +
+            $"{sourceLicense ?? "<null>"}.");
+    }
+}
+
 public static class PedagogicalLessonBlueprintContract
 {
     private static readonly HashSet<string> Roles =
@@ -305,6 +353,9 @@ public static class PedagogicalLessonBlueprintContract
             "SourceRootUrl");
 
         Require(document.SourceLicense, "SourceLicense");
+
+        PedagogicalSourceLicensePolicy.Validate(
+            document.SourceLicense);
 
         Require(
             document.RequiredDigitalAttribution,
