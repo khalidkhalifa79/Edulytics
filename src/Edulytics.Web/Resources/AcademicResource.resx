@@ -146,4 +146,28 @@
   <data name="ErrorAcademicProgramNotFound" xml:space="preserve">
     <value>Select a valid program / curriculum stream.</value>
   </data>
+  <data name="AddProgramToAcademicYear" xml:space="preserve">
+    <value>Add program / stream to academic year</value>
+  </data>
+  <data name="RemoveProgramFromAcademicYear" xml:space="preserve">
+    <value>Remove from this academic year</value>
+  </data>
+  <data name="NoProgramsOfferedForAcademicYear" xml:space="preserve">
+    <value>No programs / curriculum streams are offered for this academic year.</value>
+  </data>
+  <data name="SuccessAcademicProgramOffered" xml:space="preserve">
+    <value>Program / curriculum stream added to the academic year.</value>
+  </data>
+  <data name="SuccessAcademicProgramStopped" xml:space="preserve">
+    <value>Program / curriculum stream removed from the academic year.</value>
+  </data>
+  <data name="ErrorDuplicateAcademicYearProgramOffering" xml:space="preserve">
+    <value>This program / curriculum stream is already offered for this academic year.</value>
+  </data>
+  <data name="ErrorAcademicProgramNotOffered" xml:space="preserve">
+    <value>This program / curriculum stream is not offered for the selected academic year.</value>
+  </data>
+  <data name="ErrorAcademicProgramInUseForAcademicYear" xml:space="preserve">
+    <value>This program / curriculum stream cannot be removed because classes or active curriculum records already use it in this academic year.</value>
+  </data>
 </root>

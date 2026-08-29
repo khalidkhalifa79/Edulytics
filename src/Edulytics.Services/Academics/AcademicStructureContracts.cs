@@ -17,6 +17,9 @@ public enum AcademicStructureErrorCode
     DuplicateGradeLevel,
     DuplicateGradeOrder,
     DuplicateAcademicProgram,
+    DuplicateAcademicYearProgramOffering,
+    AcademicProgramNotOffered,
+    AcademicProgramInUseForAcademicYear,
     DuplicateClassCode,
     DuplicateSubjectCode,
     DuplicateStudentNumber,
@@ -91,6 +94,13 @@ public sealed record AcademicProgramItem(
     bool IsDefault,
     byte[] RowVersion);
 
+public sealed record AcademicYearProgramOfferingItem(
+    Guid Id,
+    Guid AcademicYearId,
+    Guid AcademicProgramId,
+    bool IsOffered,
+    byte[] RowVersion);
+
 public sealed record ClassGroupItem(
     Guid Id,
     Guid AcademicYearId,
@@ -159,6 +169,10 @@ public sealed record AcademicStructureDashboard(
     IReadOnlyList<UserCandidate> StudentAccountCandidates)
 {
     public IReadOnlyList<AcademicProgramItem> AcademicPrograms { get; init; } = [];
+
+    public IReadOnlyList<AcademicYearProgramOfferingItem>
+        AcademicYearProgramOfferings
+    { get; init; } = [];
 }
 
 public sealed record CreateAcademicYearRequest(
@@ -188,6 +202,15 @@ public sealed record CreateAcademicProgramRequest(
     string Name,
     string Code,
     AcademicStructureStatus Status);
+
+public sealed record OfferAcademicProgramRequest(
+    Guid AcademicYearId,
+    string ProgramChoice);
+
+public sealed record StopAcademicProgramOfferingRequest(
+    Guid AcademicYearId,
+    Guid AcademicProgramId,
+    byte[] ExpectedRowVersion);
 
 public sealed record CreateClassGroupRequest(
     Guid AcademicYearId,

@@ -79,8 +79,8 @@ public sealed class Phase29MultiProgramControllerCoverageTests
 
         Assert.IsType<RedirectToActionResult>(
             await controller.CreateAcademicProgram(
+                service.Year.Id,
                 "british",
-                AcademicStructureStatus.Active,
                 CancellationToken.None));
 
         Assert.IsType<RedirectToActionResult>(
@@ -202,8 +202,8 @@ public sealed class Phase29MultiProgramControllerCoverageTests
 
         Assert.IsType<RedirectToActionResult>(
             await controller.CreateAcademicProgram(
+                service.Year.Id,
                 "not-a-valid-program-choice",
-                AcademicStructureStatus.Active,
                 CancellationToken.None));
 
         service.YearResult =

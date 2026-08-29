@@ -44,6 +44,13 @@ public sealed class AcademicStructureRepository : IAcademicStructureRepository
             .OrderBy(x => x.Name)
             .ToArrayAsync(cancellationToken);
 
+        var programOfferings =
+            await _db.AcademicYearProgramOfferings
+                .AsNoTracking()
+                .Where(x => x.SchoolId == schoolId)
+                .OrderByDescending(x => x.CreatedAtUtc)
+                .ToArrayAsync(cancellationToken);
+
         var classes = await _db.ClassGroups.AsNoTracking()
             .Where(x => x.SchoolId == schoolId)
             .OrderBy(x => x.Code)
@@ -72,7 +79,8 @@ public sealed class AcademicStructureRepository : IAcademicStructureRepository
         return new AcademicStructureSnapshot(
             years, terms, grades, classes, subjects, students, assignments, enrollments)
         {
-            AcademicPrograms = programs
+            AcademicPrograms = programs,
+            AcademicYearProgramOfferings = programOfferings
         };
     }
 
@@ -90,6 +98,71 @@ public sealed class AcademicStructureRepository : IAcademicStructureRepository
         Guid schoolId, CancellationToken cancellationToken = default) =>
         _db.AcademicPrograms.SingleOrDefaultAsync(
             x => x.SchoolId == schoolId && x.IsDefault, cancellationToken);
+
+    public Task<AcademicProgram?>
+        GetAcademicProgramByCodeAsync(
+            Guid schoolId,
+            string normalizedCode,
+            CancellationToken cancellationToken = default) =>
+        _db.AcademicPrograms.SingleOrDefaultAsync(
+            x =>
+                x.SchoolId == schoolId &&
+                x.NormalizedCode == normalizedCode,
+            cancellationToken);
+
+    public Task<AcademicYearProgramOffering?>
+        GetAcademicYearProgramOfferingAsync(
+            Guid schoolId,
+            Guid academicYearId,
+            Guid academicProgramId,
+            CancellationToken cancellationToken = default) =>
+        _db.AcademicYearProgramOfferings
+            .SingleOrDefaultAsync(
+                x =>
+                    x.SchoolId == schoolId &&
+                    x.AcademicYearId == academicYearId &&
+                    x.AcademicProgramId == academicProgramId,
+                cancellationToken);
+
+    public Task<bool> AcademicYearProgramIsOfferedAsync(
+        Guid schoolId,
+        Guid academicYearId,
+        Guid academicProgramId,
+        CancellationToken cancellationToken = default) =>
+        _db.AcademicYearProgramOfferings
+            .AnyAsync(
+                x =>
+                    x.SchoolId == schoolId &&
+                    x.AcademicYearId == academicYearId &&
+                    x.AcademicProgramId == academicProgramId &&
+                    x.IsOffered,
+                cancellationToken);
+
+    public async Task<bool> AcademicYearProgramHasUsageAsync(
+        Guid schoolId,
+        Guid academicYearId,
+        Guid academicProgramId,
+        CancellationToken cancellationToken = default)
+    {
+        if (await _db.ClassGroups.AnyAsync(
+                x =>
+                    x.SchoolId == schoolId &&
+                    x.AcademicYearId == academicYearId &&
+                    x.AcademicProgramId == academicProgramId,
+                cancellationToken))
+        {
+            return true;
+        }
+
+        return await _db.SchoolCurriculumAdoptions
+            .AnyAsync(
+                x =>
+                    x.SchoolId == schoolId &&
+                    x.AcademicYearId == academicYearId &&
+                    x.AcademicProgramId == academicProgramId &&
+                    x.IsActive,
+                cancellationToken);
+    }
 
     public Task<GradeLevel?> GetGradeLevelAsync(
         Guid schoolId, Guid id, CancellationToken cancellationToken = default) =>

@@ -13,6 +13,10 @@ public sealed record AcademicStructureSnapshot(
     IReadOnlyList<StudentEnrollment> StudentEnrollments)
 {
     public IReadOnlyList<AcademicProgram> AcademicPrograms { get; init; } = [];
+
+    public IReadOnlyList<AcademicYearProgramOffering>
+        AcademicYearProgramOfferings
+    { get; init; } = [];
 }
 
 public enum AcademicPersistenceError

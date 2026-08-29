@@ -25,6 +25,34 @@ public interface IAcademicStructureRepository
         CancellationToken cancellationToken = default) =>
         Task.FromResult<AcademicProgram?>(null);
 
+    Task<AcademicProgram?> GetAcademicProgramByCodeAsync(
+        Guid schoolId,
+        string normalizedCode,
+        CancellationToken cancellationToken = default) =>
+        Task.FromResult<AcademicProgram?>(null);
+
+    Task<AcademicYearProgramOffering?>
+        GetAcademicYearProgramOfferingAsync(
+            Guid schoolId,
+            Guid academicYearId,
+            Guid academicProgramId,
+            CancellationToken cancellationToken = default) =>
+        Task.FromResult<AcademicYearProgramOffering?>(null);
+
+    Task<bool> AcademicYearProgramIsOfferedAsync(
+        Guid schoolId,
+        Guid academicYearId,
+        Guid academicProgramId,
+        CancellationToken cancellationToken = default) =>
+        Task.FromResult(false);
+
+    Task<bool> AcademicYearProgramHasUsageAsync(
+        Guid schoolId,
+        Guid academicYearId,
+        Guid academicProgramId,
+        CancellationToken cancellationToken = default) =>
+        Task.FromResult(false);
+
     Task<GradeLevel?> GetGradeLevelAsync(
         Guid schoolId,
         Guid id,

@@ -22,6 +22,8 @@ public class EdulyticsDbContext
     public DbSet<Term> Terms => Set<Term>();
     public DbSet<GradeLevel> GradeLevels => Set<GradeLevel>();
     public DbSet<AcademicProgram> AcademicPrograms => Set<AcademicProgram>();
+    public DbSet<AcademicYearProgramOffering> AcademicYearProgramOfferings =>
+        Set<AcademicYearProgramOffering>();
     public DbSet<ClassGroup> ClassGroups => Set<ClassGroup>();
     public DbSet<Subject> Subjects => Set<Subject>();
     public DbSet<StudentProfile> StudentProfiles => Set<StudentProfile>();
@@ -150,6 +152,8 @@ public class EdulyticsDbContext
         builder.ApplyConfiguration(new TermConfiguration());
         builder.ApplyConfiguration(new GradeLevelConfiguration());
         builder.ApplyConfiguration(new AcademicProgramConfiguration());
+        builder.ApplyConfiguration(
+            new AcademicYearProgramOfferingConfiguration());
         builder.ApplyConfiguration(new ClassGroupConfiguration());
         builder.ApplyConfiguration(new SubjectConfiguration());
         builder.ApplyConfiguration(new StudentProfileConfiguration());

@@ -46,6 +46,25 @@ public interface IAcademicStructureService
         CreateAcademicProgramRequest request,
         CancellationToken cancellationToken = default);
 
+    Task<AcademicCommandResult> OfferAcademicProgramAsync(
+        Guid actorUserId,
+        OfferAcademicProgramRequest request,
+        CancellationToken cancellationToken = default) =>
+        Task.FromResult(
+            AcademicCommandResult.Failure(
+                string.Empty,
+                AcademicStructureErrorCode.PersistenceError));
+
+    Task<AcademicCommandResult>
+        StopAcademicProgramOfferingAsync(
+            Guid actorUserId,
+            StopAcademicProgramOfferingRequest request,
+            CancellationToken cancellationToken = default) =>
+        Task.FromResult(
+            AcademicCommandResult.Failure(
+                string.Empty,
+                AcademicStructureErrorCode.PersistenceError));
+
     Task<AcademicCommandResult> CreateClassGroupAsync(
         Guid actorUserId,
         CreateClassGroupRequest request,
