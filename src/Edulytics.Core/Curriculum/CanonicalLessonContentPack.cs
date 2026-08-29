@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using Edulytics.Core.Enums;
 
 namespace Edulytics.Core.Curriculum;
@@ -6,6 +7,22 @@ public enum CurriculumSourceResolutionStatus
 {
     CurrentOfficial = 1,
     PreviousOfficialFallback = 2
+}
+
+public enum PedagogicalSourceType
+{
+    LegacyUnspecified = 0,
+    SchoolAdoptedTextbook = 1,
+    CurrentOfficialTextbook = 2,
+    WidelyUsedPublisherTextbook = 3,
+    OfficialFrameworkOnly = 4
+}
+
+public enum LessonTitleProvenance
+{
+    LegacyUnspecified = 0,
+    PedagogicalSource = 1,
+    EdulyticsDerivedFromOfficialOutcome = 2
 }
 
 /// <summary>
@@ -33,6 +50,20 @@ public sealed class CanonicalLessonContentPackDocument
     public string FallbackReason { get; set; } = string.Empty;
     public string ReviewMethod { get; set; } = string.Empty;
 
+    // Source Policy v2 separates official academic authority from the
+    // pedagogical textbook/material used to structure and explain lessons.
+    public int SourcePolicyVersion { get; set; } = 1;
+    public PedagogicalSourceType PedagogicalSourceType { get; set; } =
+        PedagogicalSourceType.LegacyUnspecified;
+    public string PedagogicalSourceTitle { get; set; } = string.Empty;
+    public string PedagogicalSourcePublisher { get; set; } = string.Empty;
+    public string PedagogicalSourceEdition { get; set; } = string.Empty;
+    public string PedagogicalSourceUrl { get; set; } = string.Empty;
+    public string PedagogicalSourceCheckedAtUtc { get; set; } = string.Empty;
+    public string PedagogicalSourceSelectionReason { get; set; } = string.Empty;
+    public string PedagogicalSourceSelectionEvidence { get; set; } = string.Empty;
+    public string PedagogicalSourceRightsNote { get; set; } = string.Empty;
+
     public CanonicalLessonContentStatus Status { get; set; } =
         CanonicalLessonContentStatus.Draft;
     public string ReviewedBy { get; set; } = string.Empty;
@@ -43,6 +74,9 @@ public sealed class CanonicalLessonContentPackDocument
 public sealed class CanonicalLessonContentPackLesson
 {
     public string LessonCode { get; set; } = string.Empty;
+    public LessonTitleProvenance TitleProvenance { get; set; } =
+        LessonTitleProvenance.LegacyUnspecified;
+    public string TitleSourceReference { get; set; } = string.Empty;
     public List<string> OutcomeCodes { get; set; } = [];
     public List<CanonicalLessonContentPackTranslation> Translations { get; set; } = [];
 }
@@ -61,6 +95,13 @@ public sealed class CanonicalLessonContentPackTranslation
 
 public static class CanonicalLessonContentPackContract
 {
+    private static readonly Regex GenericLessonTitlePattern =
+        new(
+            @"(?:^|\s[—-]\s)(?:Lesson|Lekcja)\s+\d+\s*$",
+            RegexOptions.IgnoreCase |
+            RegexOptions.CultureInvariant |
+            RegexOptions.Compiled);
+
     private static readonly HashSet<string> SupportedCultures =
         new(StringComparer.Ordinal)
         {
@@ -155,6 +196,17 @@ public static class CanonicalLessonContentPackContract
                 "FallbackReason is only valid for PreviousOfficialFallback.");
         }
 
+        if (document.SourcePolicyVersion is < 1 or > 2)
+        {
+            throw new InvalidOperationException(
+                $"Unsupported SourcePolicyVersion: {document.SourcePolicyVersion}.");
+        }
+
+        if (document.SourcePolicyVersion == 2)
+        {
+            ValidatePedagogicalSource(document);
+        }
+
         if (document.ContentVersion.Length > 80)
             throw new InvalidOperationException("ContentVersion exceeds 80 characters.");
 
@@ -184,6 +236,23 @@ public static class CanonicalLessonContentPackContract
         foreach (var lesson in document.Lessons)
         {
             Require(lesson.LessonCode, "LessonCode");
+
+            if (document.SourcePolicyVersion == 2)
+            {
+                if (!Enum.IsDefined(
+                        typeof(LessonTitleProvenance),
+                        lesson.TitleProvenance) ||
+                    lesson.TitleProvenance ==
+                        LessonTitleProvenance.LegacyUnspecified)
+                {
+                    throw new InvalidOperationException(
+                        $"Lesson {lesson.LessonCode} requires explicit TitleProvenance under Source Policy v2.");
+                }
+
+                Require(
+                    lesson.TitleSourceReference,
+                    $"{lesson.LessonCode}:TitleSourceReference");
+            }
 
             if (lesson.LessonCode.Length > 600)
                 throw new InvalidOperationException(
@@ -232,6 +301,17 @@ public static class CanonicalLessonContentPackContract
                 }
 
                 RequireBody(lesson.LessonCode, translation);
+
+                if (document.SourcePolicyVersion == 2 &&
+                    document.Status ==
+                        CanonicalLessonContentStatus.Published &&
+                    GenericLessonTitlePattern.IsMatch(
+                        translation.Title.Trim()))
+                {
+                    throw new InvalidOperationException(
+                        $"Published Source Policy v2 lesson {lesson.LessonCode}:{translation.CultureCode} " +
+                        $"cannot use a generic synthetic title: {translation.Title}.");
+                }
             }
 
             if (document.Status == CanonicalLessonContentStatus.Published &&
@@ -240,6 +320,84 @@ public static class CanonicalLessonContentPackContract
                 throw new InvalidOperationException(
                     $"Published lesson {lesson.LessonCode} requires complete English and Polish content.");
             }
+        }
+    }
+
+    private static void ValidatePedagogicalSource(
+        CanonicalLessonContentPackDocument document)
+    {
+        if (!Enum.IsDefined(
+                typeof(PedagogicalSourceType),
+                document.PedagogicalSourceType) ||
+            document.PedagogicalSourceType ==
+                PedagogicalSourceType.LegacyUnspecified)
+        {
+            throw new InvalidOperationException(
+                "Source Policy v2 requires explicit PedagogicalSourceType.");
+        }
+
+        Require(
+            document.PedagogicalSourceSelectionReason,
+            "PedagogicalSourceSelectionReason");
+
+        Require(
+            document.PedagogicalSourceRightsNote,
+            "PedagogicalSourceRightsNote");
+
+        if (document.PedagogicalSourceType ==
+            PedagogicalSourceType.OfficialFrameworkOnly)
+        {
+            return;
+        }
+
+        Require(
+            document.PedagogicalSourceTitle,
+            "PedagogicalSourceTitle");
+
+        Require(
+            document.PedagogicalSourcePublisher,
+            "PedagogicalSourcePublisher");
+
+        Require(
+            document.PedagogicalSourceEdition,
+            "PedagogicalSourceEdition");
+
+        Require(
+            document.PedagogicalSourceUrl,
+            "PedagogicalSourceUrl");
+
+        Require(
+            document.PedagogicalSourceCheckedAtUtc,
+            "PedagogicalSourceCheckedAtUtc");
+
+        if (!Uri.TryCreate(
+                document.PedagogicalSourceUrl,
+                UriKind.Absolute,
+                out var pedagogicalUri) ||
+            (pedagogicalUri.Scheme != Uri.UriSchemeHttps &&
+             pedagogicalUri.Scheme != Uri.UriSchemeHttp))
+        {
+            throw new InvalidOperationException(
+                $"PedagogicalSourceUrl must be an absolute HTTP/HTTPS URL: " +
+                $"{document.PedagogicalSourceUrl}.");
+        }
+
+        if (!DateTimeOffset.TryParse(
+                document.PedagogicalSourceCheckedAtUtc,
+                out var pedagogicalChecked) ||
+            pedagogicalChecked.Offset != TimeSpan.Zero)
+        {
+            throw new InvalidOperationException(
+                "PedagogicalSourceCheckedAtUtc must be a valid UTC timestamp.");
+        }
+
+        if (document.PedagogicalSourceType is
+            PedagogicalSourceType.SchoolAdoptedTextbook or
+            PedagogicalSourceType.WidelyUsedPublisherTextbook)
+        {
+            Require(
+                document.PedagogicalSourceSelectionEvidence,
+                "PedagogicalSourceSelectionEvidence");
         }
     }
 
