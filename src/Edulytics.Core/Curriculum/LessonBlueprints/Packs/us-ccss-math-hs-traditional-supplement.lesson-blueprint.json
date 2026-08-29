@@ -1,0 +1,565 @@
+{
+  "SchemaVersion": 2,
+  "BlueprintCode": "US-CCSS-MATH:HS:TRAD:SUPPLEMENT",
+  "PackCode": "US-CCSS-MATH",
+  "VersionCode": "CCSSM-2010",
+  "LogicalLevel": 0,
+  "CourseCode": "TRAD-SUPPLEMENT",
+  "LogicalLevelFrom": 10,
+  "LogicalLevelTo": 13,
+  "SequenceAuthority": "EdulyticsOwnedSequence",
+  "SuppressOutcomeFallbackForLogicalRange": true,
+  "NativeLevel": "Traditional Advanced Supplements",
+  "Pathway": "Traditional",
+  "OfficialAuthority": "Common Core State Standards Initiative",
+  "OfficialSourceUrl": "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf",
+  "SourceCheckedAtUtc": "2026-08-29T00:00:00Z",
+  "SourceSelectionReason": "Phase 29 accepted High School pedagogical source strategy.",
+  "SourceSelectionEvidence": "Immutable Phase 29 High School source, placement, evidence, sequence and Blueprint V2 contract locks.",
+  "SemanticGraphSha256": "f61f0c0f51d214a1592080eb3383157c23557fd5fec4261374ec098c466cc38e",
+  "Sources": [
+    {
+      "SourceKey": "SRC01",
+      "SourceType": "Locked pedagogical evidence",
+      "Title": "Illustrative Mathematics",
+      "Publisher": "Illustrative Mathematics",
+      "Edition": "Phase 29 locked source",
+      "RootUrl": "https://im.kendallhunt.com/HS/teachers/3/7/3/index.html",
+      "License": "CC BY 4.0",
+      "RequiredDigitalAttribution": "Illustrative Mathematics, CC BY 4.0.",
+      "RightsNote": "Use restricted to accepted Phase 29 commercial-safe license lock.",
+      "EvidenceUrls": [
+        "https://im.kendallhunt.com/HS/teachers/3/7/3/index.html"
+      ]
+    },
+    {
+      "SourceKey": "SRC02",
+      "SourceType": "Locked pedagogical evidence",
+      "Title": "LibreTexts / OpenStax",
+      "Publisher": "LibreTexts / OpenStax",
+      "Edition": "Phase 29 locked source",
+      "RootUrl": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_%28OpenStax%29/07%3A_Probability/7.06%3A_Probability_with_Permutations_and_Combinations",
+      "License": "CC BY 4.0",
+      "RequiredDigitalAttribution": "LibreTexts / OpenStax, CC BY 4.0.",
+      "RightsNote": "Use restricted to accepted Phase 29 commercial-safe license lock.",
+      "EvidenceUrls": [
+        "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_%28OpenStax%29/07%3A_Probability/7.06%3A_Probability_with_Permutations_and_Combinations"
+      ]
+    },
+    {
+      "SourceKey": "SRC03",
+      "SourceType": "Locked pedagogical evidence",
+      "Title": "LibreTexts / OpenStax",
+      "Publisher": "LibreTexts / OpenStax",
+      "Edition": "Phase 29 locked source",
+      "RootUrl": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_%28OpenStax%29/07%3A_Probability/7.09%3A_Conditional_Probability_and_the_Multiplication_Rule",
+      "License": "CC BY 4.0",
+      "RequiredDigitalAttribution": "LibreTexts / OpenStax, CC BY 4.0.",
+      "RightsNote": "Use restricted to accepted Phase 29 commercial-safe license lock.",
+      "EvidenceUrls": [
+        "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_%28OpenStax%29/07%3A_Probability/7.09%3A_Conditional_Probability_and_the_Multiplication_Rule"
+      ]
+    },
+    {
+      "SourceKey": "SRC04",
+      "SourceType": "Locked pedagogical evidence",
+      "Title": "Mathematics Vision Project",
+      "Publisher": "Mathematics Vision Project",
+      "Edition": "Phase 29 locked source",
+      "RootUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf",
+      "License": "CC BY 4.0",
+      "RequiredDigitalAttribution": "Mathematics Vision Project, CC BY 4.0.",
+      "RightsNote": "Use restricted to accepted Phase 29 commercial-safe license lock.",
+      "EvidenceUrls": [
+        "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf"
+      ]
+    },
+    {
+      "SourceKey": "SRC05",
+      "SourceType": "Locked pedagogical evidence",
+      "Title": "Mathematics Vision Project",
+      "Publisher": "Mathematics Vision Project",
+      "Edition": "Phase 29 locked source",
+      "RootUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+      "License": "CC BY 4.0",
+      "RequiredDigitalAttribution": "Mathematics Vision Project, CC BY 4.0.",
+      "RightsNote": "Use restricted to accepted Phase 29 commercial-safe license lock.",
+      "EvidenceUrls": [
+        "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf"
+      ]
+    },
+    {
+      "SourceKey": "SRC06",
+      "SourceType": "Locked pedagogical evidence",
+      "Title": "Mathematics Vision Project",
+      "Publisher": "Mathematics Vision Project",
+      "Edition": "Phase 29 locked source",
+      "RootUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_3.pdf",
+      "License": "CC BY 4.0",
+      "RequiredDigitalAttribution": "Mathematics Vision Project, CC BY 4.0.",
+      "RightsNote": "Use restricted to accepted Phase 29 commercial-safe license lock.",
+      "EvidenceUrls": [
+        "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_3.pdf"
+      ]
+    }
+  ],
+  "AcquisitionDiagnostics": {
+    "UnitCount": 4,
+    "LessonCount": 11,
+    "OfficialStandardCount": 13,
+    "AddressingCoverageCount": 10,
+    "FormalMappingCount": 13,
+    "LessonsWithoutNumberedGradeReferenceAnyRole": 0,
+    "LessonsWithoutNumberedAddressingStandard": 0,
+    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 0,
+    "MultiStandardLessons": 2
+  },
+  "Units": [
+    {
+      "Number": 1,
+      "UnitCode": "ALG-FUNC",
+      "SortOrder": 10,
+      "Title": "Algebra & Functions Extensions",
+      "LessonCount": 3,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+      "SemanticSha256": "dbeafe8c695173cff3a78bc1e3924d23c5f0b1cb2ed40c5f7c8e92fb28b9d794"
+    },
+    {
+      "Number": 2,
+      "UnitCode": "GEO-TRIG",
+      "SortOrder": 20,
+      "Title": "Geometry & Trigonometry Extensions",
+      "LessonCount": 3,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf",
+      "SemanticSha256": "6b891fe9987b1a5bccb53010239792b7e2940e779b43ff6263a7062459f3acd0"
+    },
+    {
+      "Number": 3,
+      "UnitCode": "NUMBER-QUANTITY",
+      "SortOrder": 30,
+      "Title": "Number & Quantity Extensions",
+      "LessonCount": 1,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+      "SemanticSha256": "3d73a4ced2069ed3b6a939741012ef79d9a1a91c24879d5c6a33e6c042584b5d"
+    },
+    {
+      "Number": 4,
+      "UnitCode": "PROB-DECISION",
+      "SortOrder": 40,
+      "Title": "Probability & Decision Making Extensions",
+      "LessonCount": 4,
+      "SourceUrl": "https://im.kendallhunt.com/HS/teachers/3/7/3/index.html",
+      "SemanticSha256": "a6e34840f0723eb03869a6b5689cdbea1053d3088710ae59127f005b024f7ba8"
+    }
+  ],
+  "Lessons": [
+    {
+      "SourceLessonCode": "MVP-ALG2:M03:T02",
+      "LessonCode": "PED:US-CCSS-MATH:HS:TRAD:SUPPLEMENT:ALG-FUNC:L01",
+      "UnitNumber": 1,
+      "UnitTitle": "Algebra & Functions Extensions",
+      "LessonNumber": 1,
+      "Title": "Pascal's Pride",
+      "SortOrder": 10010,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+      "SemanticSha256": "866606db4f212a0a5475217c48b9760239377f41fd5db2459685e2a35a12f2e0",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "Algebra 2"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CCSS:HSA-APR.C.5",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC05",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+              "SectionOrTask": "3.2 Pascal's Pride",
+              "EvidenceSha256": "d9891c72ea60e5221fc00899c9bf43297f4a25098adfaa86d16d8870a05d34a7",
+              "License": "CC BY 4.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "MVP-ALG2:M05:T05",
+      "LessonCode": "PED:US-CCSS-MATH:HS:TRAD:SUPPLEMENT:ALG-FUNC:L02",
+      "UnitNumber": 1,
+      "UnitTitle": "Algebra & Functions Extensions",
+      "LessonNumber": 2,
+      "Title": "Just Act Rational",
+      "SortOrder": 10020,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+      "SemanticSha256": "e3cc57d3ebcd26cf2a7f2b80796243dff6c858989963604d0cbdf6c2332937fb",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "Algebra 2"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CCSS:HSA-APR.D.7",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC05",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+              "SectionOrTask": "5.5 Just Act Rational",
+              "EvidenceSha256": "d9891c72ea60e5221fc00899c9bf43297f4a25098adfaa86d16d8870a05d34a7",
+              "License": "CC BY 4.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "MVP-MATH3:M07:T07H",
+      "LessonCode": "PED:US-CCSS-MATH:HS:TRAD:SUPPLEMENT:ALG-FUNC:L03",
+      "UnitNumber": 1,
+      "UnitTitle": "Algebra & Functions Extensions",
+      "LessonNumber": 3,
+      "Title": "Double Identity",
+      "SortOrder": 10030,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_3.pdf",
+      "SemanticSha256": "ff190af75c4ea39e6b388fdcd662ff3f4726f3287975c419d1e3107a3fb4e9e7",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "Algebra 2"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CCSS:HSF-TF.C.9",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC06",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_3.pdf",
+              "SectionOrTask": "7.7H Double Identity",
+              "EvidenceSha256": "204d519bd0395de2fcb62c11a3d2d807c52578720223d523fdcea772bdb53ae8",
+              "License": "CC BY 4.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "MVP-GEO:M05:T03",
+      "LessonCode": "PED:US-CCSS-MATH:HS:TRAD:SUPPLEMENT:GEO-TRIG:L01",
+      "UnitNumber": 2,
+      "UnitTitle": "Geometry & Trigonometry Extensions",
+      "LessonNumber": 1,
+      "Title": "Cyclic Polygons",
+      "SortOrder": 20010,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf",
+      "SemanticSha256": "2942b1ca6e63a378968cadf202847833402f0c9356f5dbac17b3aa635a57d195",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "Geometry"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CCSS:HSG-C.A.4",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC04",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf",
+              "SectionOrTask": "5.3 Cyclic Polygons",
+              "EvidenceSha256": "9f897c55ccd21c7a5a8f51a346362e1cc42aee45393bb58a012992faec474be6",
+              "License": "CC BY 4.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "MVP-GEO:M07:T06",
+      "LessonCode": "PED:US-CCSS-MATH:HS:TRAD:SUPPLEMENT:GEO-TRIG:L02",
+      "UnitNumber": 2,
+      "UnitTitle": "Geometry & Trigonometry Extensions",
+      "LessonNumber": 2,
+      "Title": "More Than Right",
+      "SortOrder": 20020,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf",
+      "SemanticSha256": "bfa2c064ea0bf98ae269cf2b3cedc3d697c7ffb856dc784a9bc4aee51f393699",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "Geometry"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CCSS:HSG-SRT.D.10",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC04",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf",
+              "SectionOrTask": "7.6 More Than Right",
+              "EvidenceSha256": "9f897c55ccd21c7a5a8f51a346362e1cc42aee45393bb58a012992faec474be6",
+              "License": "CC BY 4.0"
+            }
+          ]
+        },
+        {
+          "OutcomeCode": "CCSS:HSG-SRT.D.11",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 2,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC04",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf",
+              "SectionOrTask": "7.6 More Than Right",
+              "EvidenceSha256": "9f897c55ccd21c7a5a8f51a346362e1cc42aee45393bb58a012992faec474be6",
+              "License": "CC BY 4.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "MVP-GEO:M07:T08",
+      "LessonCode": "PED:US-CCSS-MATH:HS:TRAD:SUPPLEMENT:GEO-TRIG:L03",
+      "UnitNumber": 2,
+      "UnitTitle": "Geometry & Trigonometry Extensions",
+      "LessonNumber": 3,
+      "Title": "Triangle Areas by Trig",
+      "SortOrder": 20030,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf",
+      "SemanticSha256": "fb83c2da880e0b0a7fb906d4b204de9e100e163d1f8af4e4284a74897df82f2f",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "Geometry"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CCSS:HSG-SRT.D.9",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC04",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf",
+              "SectionOrTask": "7.8 Triangle Areas by Trig",
+              "EvidenceSha256": "9f897c55ccd21c7a5a8f51a346362e1cc42aee45393bb58a012992faec474be6",
+              "License": "CC BY 4.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "MVP-ALG2:M03:T04",
+      "LessonCode": "PED:US-CCSS-MATH:HS:TRAD:SUPPLEMENT:NUMBER-QUANTITY:L01",
+      "UnitNumber": 3,
+      "UnitTitle": "Number & Quantity Extensions",
+      "LessonNumber": 1,
+      "Title": "To Be Determined",
+      "SortOrder": 30010,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+      "SemanticSha256": "7fd163b1fef394d8a7cb748c0605aa42e2101e48eb5bdfa8970da2766ca41f38",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "Algebra 2"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CCSS:HSN-CN.C.8",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC05",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+              "SectionOrTask": "3.4 To Be Determined",
+              "EvidenceSha256": "d9891c72ea60e5221fc00899c9bf43297f4a25098adfaa86d16d8870a05d34a7",
+              "License": "CC BY 4.0"
+            }
+          ]
+        },
+        {
+          "OutcomeCode": "CCSS:HSN-CN.C.9",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 2,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC05",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+              "SectionOrTask": "3.4 To Be Determined",
+              "EvidenceSha256": "d9891c72ea60e5221fc00899c9bf43297f4a25098adfaa86d16d8870a05d34a7",
+              "License": "CC BY 4.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU:HSS-MD.B.6",
+      "LessonCode": "PED:US-CCSS-MATH:HS:TRAD:SUPPLEMENT:PROB-DECISION:L01",
+      "UnitNumber": 4,
+      "UnitTitle": "Probability & Decision Making Extensions",
+      "LessonNumber": 1,
+      "Title": "Fair Decisions with Probability",
+      "SortOrder": 40010,
+      "SourceUrl": "https://im.kendallhunt.com/HS/teachers/3/7/3/index.html",
+      "SemanticSha256": "7965f56999b3e78c8df73a098004d54a1ca40b5d4e273e66ec4bc4b8abc389ad",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "Algebra 2",
+        "Geometry"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CCSS:HSS-MD.B.6",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC01",
+              "SourceFamily": "Illustrative Mathematics",
+              "SourceUrl": "https://im.kendallhunt.com/HS/teachers/3/7/3/index.html",
+              "SectionOrTask": "Lesson 3 — Randomness in Groups",
+              "EvidenceSha256": "dfe4fb5dd0220c870071511e0184fa04c908af3e4692445b84653925af6a3a0f",
+              "License": "CC BY 4.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "MVP-GEO:M08:T01",
+      "LessonCode": "PED:US-CCSS-MATH:HS:TRAD:SUPPLEMENT:PROB-DECISION:L02",
+      "UnitNumber": 4,
+      "UnitTitle": "Probability & Decision Making Extensions",
+      "LessonNumber": 2,
+      "Title": "TB or Not TB",
+      "SortOrder": 40020,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf",
+      "SemanticSha256": "bfaadb330a8cc2caf04b061ea5254908b07c6b49853758aaa9edb72b6c9a016f",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "Algebra 2",
+        "Geometry"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CCSS:HSS-MD.B.7",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC04",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf",
+              "SectionOrTask": "8.1 TB or Not TB",
+              "EvidenceSha256": "9f897c55ccd21c7a5a8f51a346362e1cc42aee45393bb58a012992faec474be6",
+              "License": "CC BY 4.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU:HSS-CP.B.8",
+      "LessonCode": "PED:US-CCSS-MATH:HS:TRAD:SUPPLEMENT:PROB-DECISION:L03",
+      "UnitNumber": 4,
+      "UnitTitle": "Probability & Decision Making Extensions",
+      "LessonNumber": 3,
+      "Title": "Conditional Probability and the Multiplication Rule",
+      "SortOrder": 40030,
+      "SourceUrl": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_%28OpenStax%29/07%3A_Probability/7.09%3A_Conditional_Probability_and_the_Multiplication_Rule",
+      "SemanticSha256": "b3425fdd35a4ee577dca6fc613fb4754964dd4a8c37ca9e435abc4da0d1acbaf",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "Geometry"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CCSS:HSS-CP.B.8",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC03",
+              "SourceFamily": "LibreTexts / OpenStax",
+              "SourceUrl": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_%28OpenStax%29/07%3A_Probability/7.09%3A_Conditional_Probability_and_the_Multiplication_Rule",
+              "SectionOrTask": "Conditional Probability and the Multiplication Rule",
+              "EvidenceSha256": "d108bce36e4e316290a5eca7f95e6332d11bdf95bc621655d61b848aab3fd76e",
+              "License": "CC BY 4.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU:HSS-CP.B.9",
+      "LessonCode": "PED:US-CCSS-MATH:HS:TRAD:SUPPLEMENT:PROB-DECISION:L04",
+      "UnitNumber": 4,
+      "UnitTitle": "Probability & Decision Making Extensions",
+      "LessonNumber": 4,
+      "Title": "Probability with Permutations and Combinations",
+      "SortOrder": 40040,
+      "SourceUrl": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_%28OpenStax%29/07%3A_Probability/7.06%3A_Probability_with_Permutations_and_Combinations",
+      "SemanticSha256": "2d381fd5a861b65bdedbe67397f41226042a53d07c224b6caa2518e3aa9991b1",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "Geometry"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CCSS:HSS-CP.B.9",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC02",
+              "SourceFamily": "LibreTexts / OpenStax",
+              "SourceUrl": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_%28OpenStax%29/07%3A_Probability/7.06%3A_Probability_with_Permutations_and_Combinations",
+              "SectionOrTask": "Probability with Permutations and Combinations",
+              "EvidenceSha256": "0b41090a7630f8636dda24ce626e09975bfea065240024bfc40d766cdc910cdd",
+              "License": "CC BY 4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

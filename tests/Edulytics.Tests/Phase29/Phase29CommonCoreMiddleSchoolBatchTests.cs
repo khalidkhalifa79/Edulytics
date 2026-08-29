@@ -61,7 +61,8 @@ public sealed class Phase29CommonCoreMiddleSchoolBatchTests
             documents.Count(
                 x =>
                     x.PackCode ==
-                    MathematicsCurriculumPackRegistry.CommonCoreCode));
+                    MathematicsCurriculumPackRegistry.CommonCoreCode &&
+                    x.SchemaVersion == 1));
 
         foreach (var spec in Specs)
         {

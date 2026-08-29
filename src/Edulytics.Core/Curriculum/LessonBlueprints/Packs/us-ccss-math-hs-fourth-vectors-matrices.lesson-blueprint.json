@@ -1,0 +1,332 @@
+{
+  "SchemaVersion": 2,
+  "BlueprintCode": "US-CCSS-MATH:HS:FOURTH:VECTOR-MATRIX",
+  "PackCode": "US-CCSS-MATH",
+  "VersionCode": "CCSSM-2010",
+  "LogicalLevel": 0,
+  "CourseCode": "VECTOR-MATRIX",
+  "LogicalLevelFrom": 10,
+  "LogicalLevelTo": 13,
+  "SequenceAuthority": "EdulyticsOwnedSequence",
+  "SuppressOutcomeFallbackForLogicalRange": true,
+  "NativeLevel": "Vectors & Matrices",
+  "Pathway": "Fourth Courses",
+  "OfficialAuthority": "Common Core State Standards Initiative",
+  "OfficialSourceUrl": "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf",
+  "SourceCheckedAtUtc": "2026-08-29T00:00:00Z",
+  "SourceSelectionReason": "Phase 29 accepted High School pedagogical source strategy.",
+  "SourceSelectionEvidence": "Immutable Phase 29 High School source, placement, evidence, sequence and Blueprint V2 contract locks.",
+  "SemanticGraphSha256": "3de388be759e184422a6cde4aba5bd4093914aaa0598c7e1920c3eb03223357d",
+  "Sources": [
+    {
+      "SourceKey": "SRC01",
+      "SourceType": "Locked pedagogical evidence",
+      "Title": "Mathematics Vision Project",
+      "Publisher": "Mathematics Vision Project",
+      "Edition": "Phase 29 locked source",
+      "RootUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+      "License": "CC BY 4.0",
+      "RequiredDigitalAttribution": "Mathematics Vision Project, CC BY 4.0.",
+      "RightsNote": "Use restricted to accepted Phase 29 commercial-safe license lock.",
+      "EvidenceUrls": [
+        "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf"
+      ]
+    }
+  ],
+  "AcquisitionDiagnostics": {
+    "UnitCount": 1,
+    "LessonCount": 5,
+    "OfficialStandardCount": 12,
+    "AddressingCoverageCount": 12,
+    "FormalMappingCount": 12,
+    "LessonsWithoutNumberedGradeReferenceAnyRole": 0,
+    "LessonsWithoutNumberedAddressingStandard": 0,
+    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 0,
+    "MultiStandardLessons": 3
+  },
+  "Units": [
+    {
+      "Number": 1,
+      "UnitCode": "U01",
+      "SortOrder": 10,
+      "Title": "Vectors & Matrices",
+      "LessonCount": 5,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+      "SemanticSha256": "e9c26daa5a6121262f4cd1dcf40e1a559c9838640b3f39206c264b3a12e7d5af"
+    }
+  ],
+  "Lessons": [
+    {
+      "SourceLessonCode": "MVP-MATH1:M08:T07H",
+      "LessonCode": "PED:US-CCSS-MATH:HS:FOURTH:VECTOR-MATRIX:U01:L01",
+      "UnitNumber": 1,
+      "UnitTitle": "Vectors & Matrices",
+      "LessonNumber": 1,
+      "Title": "The Arithmetic of Vectors",
+      "SortOrder": 10010,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+      "SemanticSha256": "d8992df2faeb146dd93db3d6e2724780ffeb98d72ca62ed45b08c65f2b3104b9",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CCSS:HSN-VM.A.1",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC01",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+              "SectionOrTask": "8.7H The Arithmetic of Vectors",
+              "EvidenceSha256": "ded739b9114cfe6a6d44ba224d2a4c7d1fb1a9640f1c61a584901f2cc87b49a0",
+              "License": "CC BY 4.0"
+            }
+          ]
+        },
+        {
+          "OutcomeCode": "CCSS:HSN-VM.A.2",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 2,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC01",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+              "SectionOrTask": "8.7H The Arithmetic of Vectors",
+              "EvidenceSha256": "ded739b9114cfe6a6d44ba224d2a4c7d1fb1a9640f1c61a584901f2cc87b49a0",
+              "License": "CC BY 4.0"
+            }
+          ]
+        },
+        {
+          "OutcomeCode": "CCSS:HSN-VM.A.3",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 3,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC01",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+              "SectionOrTask": "8.7H The Arithmetic of Vectors",
+              "EvidenceSha256": "ded739b9114cfe6a6d44ba224d2a4c7d1fb1a9640f1c61a584901f2cc87b49a0",
+              "License": "CC BY 4.0"
+            }
+          ]
+        },
+        {
+          "OutcomeCode": "CCSS:HSN-VM.B.4",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 4,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC01",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+              "SectionOrTask": "8.7H The Arithmetic of Vectors",
+              "EvidenceSha256": "ded739b9114cfe6a6d44ba224d2a4c7d1fb1a9640f1c61a584901f2cc87b49a0",
+              "License": "CC BY 4.0"
+            }
+          ]
+        },
+        {
+          "OutcomeCode": "CCSS:HSN-VM.B.5",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 5,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC01",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+              "SectionOrTask": "8.7H The Arithmetic of Vectors",
+              "EvidenceSha256": "ded739b9114cfe6a6d44ba224d2a4c7d1fb1a9640f1c61a584901f2cc87b49a0",
+              "License": "CC BY 4.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "MVP-MATH1:M08:T09H",
+      "LessonCode": "PED:US-CCSS-MATH:HS:FOURTH:VECTOR-MATRIX:U01:L02",
+      "UnitNumber": 1,
+      "UnitTitle": "Vectors & Matrices",
+      "LessonNumber": 2,
+      "Title": "The Determinant of a Matrix",
+      "SortOrder": 10020,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+      "SemanticSha256": "84d533fe409f0117503efb671573b99988b5646b1b9147abad9c12bccbdd17b1",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CCSS:HSN-VM.C.10",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC01",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+              "SectionOrTask": "8.9H The Determinant of a Matrix",
+              "EvidenceSha256": "ded739b9114cfe6a6d44ba224d2a4c7d1fb1a9640f1c61a584901f2cc87b49a0",
+              "License": "CC BY 4.0"
+            }
+          ]
+        },
+        {
+          "OutcomeCode": "CCSS:HSN-VM.C.12",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 2,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC01",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+              "SectionOrTask": "8.9H The Determinant of a Matrix",
+              "EvidenceSha256": "ded739b9114cfe6a6d44ba224d2a4c7d1fb1a9640f1c61a584901f2cc87b49a0",
+              "License": "CC BY 4.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "MVP-MATH1:M08:T11H",
+      "LessonCode": "PED:US-CCSS-MATH:HS:FOURTH:VECTOR-MATRIX:U01:L03",
+      "UnitNumber": 1,
+      "UnitTitle": "Vectors & Matrices",
+      "LessonNumber": 3,
+      "Title": "Transformations with Matrices",
+      "SortOrder": 10030,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+      "SemanticSha256": "2648555c41b6f6d5431125a0f0d522d0872dfecb055cdc3515907ec921a89bde",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CCSS:HSN-VM.C.11",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC01",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+              "SectionOrTask": "8.11H Transformations with Matrices",
+              "EvidenceSha256": "ded739b9114cfe6a6d44ba224d2a4c7d1fb1a9640f1c61a584901f2cc87b49a0",
+              "License": "CC BY 4.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "MVP-MATH1:M04:T07H",
+      "LessonCode": "PED:US-CCSS-MATH:HS:FOURTH:VECTOR-MATRIX:U01:L04",
+      "UnitNumber": 1,
+      "UnitTitle": "Vectors & Matrices",
+      "LessonNumber": 4,
+      "Title": "Cafeteria Consumption and Cost",
+      "SortOrder": 10040,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+      "SemanticSha256": "e28b7a71ec54d85da814b6789283f4d3c922d14b55e103ddf8e6cfdccdb914c9",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CCSS:HSN-VM.C.6",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC01",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+              "SectionOrTask": "4.7H Cafeteria Consumption and Cost",
+              "EvidenceSha256": "ded739b9114cfe6a6d44ba224d2a4c7d1fb1a9640f1c61a584901f2cc87b49a0",
+              "License": "CC BY 4.0"
+            }
+          ]
+        },
+        {
+          "OutcomeCode": "CCSS:HSN-VM.C.7",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 2,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC01",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+              "SectionOrTask": "4.7H Cafeteria Consumption and Cost",
+              "EvidenceSha256": "ded739b9114cfe6a6d44ba224d2a4c7d1fb1a9640f1c61a584901f2cc87b49a0",
+              "License": "CC BY 4.0"
+            }
+          ]
+        },
+        {
+          "OutcomeCode": "CCSS:HSN-VM.C.8",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 3,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC01",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+              "SectionOrTask": "4.7H Cafeteria Consumption and Cost",
+              "EvidenceSha256": "ded739b9114cfe6a6d44ba224d2a4c7d1fb1a9640f1c61a584901f2cc87b49a0",
+              "License": "CC BY 4.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "MVP-MATH1:M08:T08H",
+      "LessonCode": "PED:US-CCSS-MATH:HS:FOURTH:VECTOR-MATRIX:U01:L05",
+      "UnitNumber": 1,
+      "UnitTitle": "Vectors & Matrices",
+      "LessonNumber": 5,
+      "Title": "More Arithmetic of Matrices",
+      "SortOrder": 10050,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+      "SemanticSha256": "c458011501d971dc5f84c9508b9d8a06e0fda41877ca99ec02e7c883e692efde",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CCSS:HSN-VM.C.9",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC01",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+              "SectionOrTask": "8.8H More Arithmetic of Matrices",
+              "EvidenceSha256": "ded739b9114cfe6a6d44ba224d2a4c7d1fb1a9640f1c61a584901f2cc87b49a0",
+              "License": "CC BY 4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

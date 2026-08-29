@@ -205,7 +205,11 @@ public sealed class MathematicsPedagogicalLessonSeeder
 
         foreach (var document in blueprints
                      .OrderBy(x => x.PackCode, StringComparer.Ordinal)
-                     .ThenBy(x => x.LogicalLevel)
+                     .ThenBy(
+                         x =>
+                             x.SchemaVersion == 1
+                                 ? x.LogicalLevel
+                                 : x.LogicalLevelFrom)
                      .ThenBy(x => x.BlueprintCode, StringComparer.Ordinal))
         {
             PedagogicalLessonBlueprintContract.Validate(document);
@@ -232,7 +236,14 @@ public sealed class MathematicsPedagogicalLessonSeeder
 
             var outcomeCodes =
                 document.Lessons
-                    .SelectMany(x => x.OutcomeCodes)
+                    .SelectMany(
+                        x =>
+                            document.SchemaVersion == 1
+                                ? x.OutcomeCodes
+                                : x.FormalTargets
+                                    .Select(
+                                        y =>
+                                            y.OutcomeCode))
                     .Distinct(StringComparer.Ordinal)
                     .ToArray();
 
@@ -276,9 +287,17 @@ public sealed class MathematicsPedagogicalLessonSeeder
                     official.NodeKind is not
                         ("Standard" or "Outcome") ||
                     official.LogicalLevelFrom >
-                        document.LogicalLevel ||
+                        (
+                            document.SchemaVersion == 1
+                                ? document.LogicalLevel
+                                : document.LogicalLevelTo
+                        ) ||
                     official.LogicalLevelTo <
-                        document.LogicalLevel)
+                        (
+                            document.SchemaVersion == 1
+                                ? document.LogicalLevel
+                                : document.LogicalLevelFrom
+                        ))
                 {
                     throw new InvalidOperationException(
                         $"Blueprint {document.BlueprintCode} " +
@@ -314,16 +333,28 @@ public sealed class MathematicsPedagogicalLessonSeeder
                         OfficialLessonNodeId = null,
                         Code = lesson.LessonCode,
                         UnitKey =
-                            $"{document.BlueprintCode}:" +
-                            $"U{lesson.UnitNumber:D2}",
+                            document.SchemaVersion == 1
+                                ? $"{document.BlueprintCode}:" +
+                                  $"U{lesson.UnitNumber:D2}"
+                                : $"{document.BlueprintCode}:" +
+                                  document.Units
+                                      .Single(
+                                          x =>
+                                              x.Number ==
+                                              lesson.UnitNumber)
+                                      .UnitCode,
                         UnitTitle =
                             lesson.UnitTitle,
                         Title =
                             lesson.Title,
                         LogicalLevelFrom =
-                            document.LogicalLevel,
+                            document.SchemaVersion == 1
+                                ? document.LogicalLevel
+                                : document.LogicalLevelFrom,
                         LogicalLevelTo =
-                            document.LogicalLevel,
+                            document.SchemaVersion == 1
+                                ? document.LogicalLevel
+                                : document.LogicalLevelTo,
                         NativeLevel =
                             document.NativeLevel,
                         Pathway =
@@ -336,13 +367,36 @@ public sealed class MathematicsPedagogicalLessonSeeder
                             now
                     });
 
-                var mappingSort = 0;
+                IEnumerable<
+                    (string OutcomeCode, int SortOrder)>
+                    formalTargets =
+                        document.SchemaVersion == 1
+                            ? lesson.OutcomeCodes
+                                .Select(
+                                    (
+                                        outcomeCode,
+                                        index
+                                    ) =>
+                                        (
+                                            OutcomeCode:
+                                                outcomeCode,
+                                            SortOrder:
+                                                index + 1
+                                        ))
+                            : lesson.FormalTargets
+                                .OrderBy(
+                                    x => x.SortOrder)
+                                .Select(
+                                    x =>
+                                        (
+                                            OutcomeCode:
+                                                x.OutcomeCode,
+                                            SortOrder:
+                                                x.SortOrder
+                                        ));
 
-                foreach (var outcomeCode in
-                         lesson.OutcomeCodes)
+                foreach (var target in formalTargets)
                 {
-                    mappingSort++;
-
                     expectedMappings.Add(
                         new CurriculumPedagogicalLessonOutcome
                         {
@@ -352,9 +406,9 @@ public sealed class MathematicsPedagogicalLessonSeeder
                                 state.FrameworkVersionId,
                             OutcomeNodeId =
                                 officialByCode[
-                                    outcomeCode].Id,
+                                    target.OutcomeCode].Id,
                             SortOrder =
-                                mappingSort
+                                target.SortOrder
                         });
                 }
             }
@@ -418,16 +472,30 @@ public sealed class MathematicsPedagogicalLessonSeeder
                                 x.VersionCode,
                                 state.VersionCode,
                                 StringComparison.Ordinal) &&
-                            x.LogicalLevel ==
-                                level.LogicalLevel &&
-                            string.Equals(
-                                x.NativeLevel,
-                                level.NativeLabel,
-                                StringComparison.Ordinal) &&
-                            string.Equals(
-                                x.Pathway,
-                                level.Pathway,
-                                StringComparison.Ordinal));
+                            (
+                                (
+                                    x.SchemaVersion == 1 &&
+                                    x.LogicalLevel ==
+                                        level.LogicalLevel &&
+                                    string.Equals(
+                                        x.NativeLevel,
+                                        level.NativeLabel,
+                                        StringComparison.Ordinal) &&
+                                    string.Equals(
+                                        x.Pathway,
+                                        level.Pathway,
+                                        StringComparison.Ordinal)
+                                )
+                                ||
+                                (
+                                    x.SchemaVersion == 2 &&
+                                    x.SuppressOutcomeFallbackForLogicalRange &&
+                                    level.LogicalLevel >=
+                                        x.LogicalLevelFrom &&
+                                    level.LogicalLevel <=
+                                        x.LogicalLevelTo
+                                )
+                            ));
 
                 if (ownedByBlueprint)
                 {

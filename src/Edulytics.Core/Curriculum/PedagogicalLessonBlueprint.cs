@@ -24,6 +24,26 @@ public sealed class PedagogicalLessonBlueprintDocument
 
     public int LogicalLevel { get; set; }
 
+    // Schema V2 course scope. Schema V1 continues to use
+    // LogicalLevel exactly as before.
+    public string CourseCode { get; set; } =
+        string.Empty;
+
+    public int LogicalLevelFrom { get; set; }
+
+    public int LogicalLevelTo { get; set; }
+
+    public string SequenceAuthority { get; set; } =
+        string.Empty;
+
+    public bool SuppressOutcomeFallbackForLogicalRange
+    { get; set; }
+
+    public List<PedagogicalLessonBlueprintSource>
+        Sources
+    { get; set; } =
+        [];
+
     public string NativeLevel { get; set; } =
         string.Empty;
 
@@ -163,6 +183,11 @@ public sealed class PedagogicalLessonBlueprintUnit
 {
     public int Number { get; set; }
 
+    public string UnitCode { get; set; } =
+        string.Empty;
+
+    public int SortOrder { get; set; }
+
     public string Title { get; set; } =
         string.Empty;
 
@@ -212,6 +237,14 @@ public sealed class PedagogicalLessonBlueprintLesson
     /// zero, one, or multiple formal mappings.
     /// </summary>
     public List<string> OutcomeCodes { get; set; } =
+        [];
+
+    public List<string> ApplicableCourses { get; set; } =
+        [];
+
+    public List<PedagogicalLessonBlueprintFormalTarget>
+        FormalTargets
+    { get; set; } =
         [];
 }
 
@@ -319,6 +352,14 @@ public static class PedagogicalLessonBlueprintContract
         PedagogicalLessonBlueprintDocument document)
     {
         MathematicsCurriculumPackRegistry.Validate();
+
+        if (document.SchemaVersion == 2)
+        {
+            PedagogicalLessonBlueprintV2Contract.Validate(
+                document);
+
+            return;
+        }
 
         if (document.SchemaVersion != 1)
         {
@@ -843,8 +884,9 @@ public static class PedagogicalLessonBlueprintRegistry
                 $"{duplicateCode.Key}.");
         }
 
-        var duplicateScope =
+        var duplicateV1Scope =
             documents
+                .Where(x => x.SchemaVersion == 1)
                 .GroupBy(
                     x => (
                         x.PackCode,
@@ -855,10 +897,32 @@ public static class PedagogicalLessonBlueprintRegistry
                 .FirstOrDefault(
                     x => x.Count() != 1);
 
-        if (duplicateScope is not null)
+        if (duplicateV1Scope is not null)
         {
             throw new InvalidOperationException(
-                "Only one blueprint may own a curriculum scope.");
+                "Only one Schema V1 blueprint may own " +
+                "a curriculum scope.");
+        }
+
+        var duplicateV2Scope =
+            documents
+                .Where(x => x.SchemaVersion == 2)
+                .GroupBy(
+                    x => (
+                        x.PackCode,
+                        x.VersionCode,
+                        x.LogicalLevelFrom,
+                        x.LogicalLevelTo,
+                        x.Pathway,
+                        x.CourseCode))
+                .FirstOrDefault(
+                    x => x.Count() != 1);
+
+        if (duplicateV2Scope is not null)
+        {
+            throw new InvalidOperationException(
+                "Only one Schema V2 blueprint may own " +
+                "a course/range scope.");
         }
 
         return documents;
