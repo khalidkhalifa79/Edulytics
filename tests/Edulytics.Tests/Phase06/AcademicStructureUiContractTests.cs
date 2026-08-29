@@ -366,7 +366,23 @@ public sealed class AcademicStructureUiContractTests
             academic);
 
         Assert.Contains(
-            "<div class=\"academic-card academic-form\">",
+            "academic-programs-group",
+            academic);
+
+        Assert.Contains(
+            "academic-programs-context",
+            academic);
+
+        Assert.Contains(
+            "academic-programs-subgroups",
+            academic);
+
+        Assert.Contains(
+            "class=\"academic-card academic-form academic-programs-subgroup\"",
+            academic);
+
+        Assert.Contains(
+            "class=\"academic-card academic-programs-subgroup\"",
             academic);
 
         Assert.Contains(

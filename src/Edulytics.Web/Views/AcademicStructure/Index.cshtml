@@ -224,32 +224,33 @@
     <section id="programs" class="academic-section">
         <h2>@A["AcademicPrograms"]</h2>
 
-        <div class="academic-card academic-form">
-            <label for="program-year-filter">
-                @A["AcademicYear"]
-            </label>
+        <div class="academic-card academic-form academic-programs-group">
+            <div class="academic-form academic-programs-context">
+                <label for="program-year-filter">
+                    @A["AcademicYear"]
+                </label>
 
-            <select id="program-year-filter">
-                @if (Model.AcademicYears.Count == 0)
-                {
-                    <option value="">@A["SelectOption"]</option>
-                }
-                else
-                {
-                    @foreach (var year in Model.AcademicYears)
+                <select id="program-year-filter">
+                    @if (Model.AcademicYears.Count == 0)
                     {
-                        <option value="@year.Id">@year.Name</option>
+                        <option value="">@A["SelectOption"]</option>
                     }
-                }
-            </select>
-        </div>
+                    else
+                    {
+                        @foreach (var year in Model.AcademicYears)
+                        {
+                            <option value="@year.Id">@year.Name</option>
+                        }
+                    }
+                </select>
+            </div>
 
-        <div class="academic-two-column">
+            <div class="academic-two-column academic-programs-subgroups">
             @if (canManageAcademic)
             {
                 <form asp-action="CreateAcademicProgram"
                       method="post"
-                      class="academic-card academic-form">
+                      class="academic-card academic-form academic-programs-subgroup">
 
                     <h3>@A["AddProgramToAcademicYear"]</h3>
 
@@ -308,7 +309,7 @@
                 </form>
             }
 
-            <div class="academic-card">
+            <div class="academic-card academic-programs-subgroup">
                 <table class="academic-table"
                        id="program-year-table">
                     <thead>
@@ -368,6 +369,7 @@
                     @A["NoProgramsOfferedForAcademicYear"]
                 </p>
             </div>
+        </div>
         </div>
     </section>
 

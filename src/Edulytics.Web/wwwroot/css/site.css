@@ -6959,3 +6959,21 @@ body:not(.ed-auth-body):not(.ed-public-body) header .localized-brand-logo,
 @media(max-width:760px){.lesson-content-readonly-grid{grid-template-columns:1fr}}
 
 /* EDULYTICS PHASE 29 PEDAGOGICAL LESSON ARCHITECTURE */
+
+/* Phase 29 — annual Program / Stream grouped context */
+.academic-programs-group {
+    gap: 1rem;
+}
+
+.academic-programs-context {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e9ef;
+}
+
+.academic-programs-subgroups {
+    margin-top: 0;
+}
+
+.academic-programs-subgroup {
+    height: 100%;
+}
