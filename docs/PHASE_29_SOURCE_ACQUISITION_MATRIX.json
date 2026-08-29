@@ -21,8 +21,8 @@
   },
   "nextResearchAndContentTarget": {
     "packCode": "US-CCSS-MATH",
-    "nativeLevel": "Grade 7",
-    "reason": "Common Core Grade 6 now has an exact source-driven pedagogical blueprint; continue the source rollout with Grade 7."
+    "nativeLevel": "Grade 5",
+    "reason": "Common Core Grades 6–8 now form a completed source-driven middle-school family. Kindergarten is outside the current product scope; continue Common Core with the lower-grade source family beginning at Grade 5."
   },
   "curricula": [
     {
@@ -511,12 +511,12 @@
           "pathway": null,
           "officialSourcePeriod": "2026-2027",
           "officialSourceResolution": "CurrentOfficial",
-          "pedagogicalSelectionStatus": "ResearchRequired",
+          "pedagogicalSelectionStatus": "ResolvedExact",
           "pedagogicalSourceType": "WidelyUsedPublisherTextbook",
-          "sourceFamily": "",
-          "selectionEvidence": "",
-          "blockingReason": "Resolve school-adopted textbook first; otherwise record evidence for the selected widely-used Common-Core-aligned pedagogical source.",
-          "note": "Official Common Core Standard alignment remains authoritative regardless of textbook choice."
+          "sourceFamily": "Open Up Resources 6–8 Math / IM 6–8 Math, 2017–2019 CC BY 4.0 lineage",
+          "selectionEvidence": "Authoritative semantic acquisition locked Grade 7: 9 units, 145 lessons, 24/24 official numbered Standards, 199 formal numbered Addressing mappings; semantic graph SHA-256 243f2fc1a433bd8488bb8577579d92d045ac98cb136ae6066b70c659fc85be37.",
+          "blockingReason": "",
+          "note": "Preparation-page roles are the formal alignment authority for the pedagogical blueprint. Only numbered Addressing references become formal mastery mappings. BuildingOn and BuildingTowards are retained as source metadata; clusters/domains are not expanded into invented targets."
         },
         {
           "logicalLevel": 9,
@@ -525,12 +525,12 @@
           "pathway": null,
           "officialSourcePeriod": "2026-2027",
           "officialSourceResolution": "CurrentOfficial",
-          "pedagogicalSelectionStatus": "ResearchRequired",
+          "pedagogicalSelectionStatus": "ResolvedExact",
           "pedagogicalSourceType": "WidelyUsedPublisherTextbook",
-          "sourceFamily": "",
-          "selectionEvidence": "",
-          "blockingReason": "Resolve school-adopted textbook first; otherwise record evidence for the selected widely-used Common-Core-aligned pedagogical source.",
-          "note": "Official Common Core Standard alignment remains authoritative regardless of textbook choice."
+          "sourceFamily": "Open Up Resources 6–8 Math / IM 6–8 Math, 2017–2019 CC BY 4.0 lineage",
+          "selectionEvidence": "Authoritative semantic acquisition locked Grade 8: 9 units, 131 lessons, 28/28 official numbered Standards, 146 formal numbered Addressing mappings; semantic graph SHA-256 cfab43f2bb82317c3366e80ddec79128b1777c2bbbe8d947ec627654b5e21d85.",
+          "blockingReason": "",
+          "note": "Preparation-page roles are the formal alignment authority for the pedagogical blueprint. Only numbered Addressing references become formal mastery mappings. BuildingOn and BuildingTowards are retained as source metadata; clusters/domains are not expanded into invented targets."
         },
         {
           "logicalLevel": 10,

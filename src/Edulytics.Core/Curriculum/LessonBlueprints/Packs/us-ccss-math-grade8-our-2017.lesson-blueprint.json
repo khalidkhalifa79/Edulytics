@@ -1,0 +1,4915 @@
+{
+  "SchemaVersion": 1,
+  "BlueprintCode": "US-CCSS-MATH:G8:OUR-IM-2017",
+  "PackCode": "US-CCSS-MATH",
+  "VersionCode": "CCSSM-2010",
+  "LogicalLevel": 9,
+  "NativeLevel": "Grade 8",
+  "Pathway": null,
+  "OfficialAuthority": "NGA Center / CCSSO",
+  "OfficialSourceUrl": "https://corestandards.org/mathematics-standards/",
+  "PedagogicalSourceType": "WidelyUsedPublisherTextbook",
+  "SourceTitle": "Open Up Resources 6–8 Math / IM 6–8 Math",
+  "SourcePublisher": "Open Up Resources",
+  "SourceEdition": "2017–2019 CC BY 4.0 lineage",
+  "SourceRootUrl": "https://im.kendallhunt.com/MS/teachers/3",
+  "SourceCheckedAtUtc": "2026-08-29T14:34:42Z",
+  "SourceLicense": "CC BY 4.0",
+  "RequiredDigitalAttribution": "Download at openupresources.org",
+  "SourceSelectionReason": "Common Core Grade 6 proved the source-driven middle-school architecture. Grade 8 is part of the same verified Open Up Resources / IM 6–8 source family.",
+  "SourceSelectionEvidence": "Authoritative semantic lock verified 9 units, 131 lessons, 28/28 official numbered Standards and 146 formal numbered Addressing mappings. Preparation pages preserve the role graph; the published Lessons and Standards table is retained as an independent aggregate cross-check.",
+  "SourceEvidenceUrls": [
+    "https://im.kendallhunt.com/MS/teachers/3",
+    "https://im.kendallhunt.com/MS/teachers/3/lessons_and_standards.html",
+    "https://www.openupresources.org/help-support/licensing-questions/"
+  ],
+  "SourceRightsNote": "Pedagogical sequence, lesson titles and standards-alignment metadata are captured with source attribution. Names/logos, covers, iconography, collective graphic design and assessment content are not imported. Edulytics lesson explanations, examples, common mistakes and summaries remain independently authored and reviewed.",
+  "SemanticGraphSha256": "cfab43f2bb82317c3366e80ddec79128b1777c2bbbe8d947ec627654b5e21d85",
+  "AcquisitionDiagnostics": {
+    "UnitCount": 9,
+    "LessonCount": 131,
+    "OfficialStandardCount": 28,
+    "AddressingCoverageCount": 28,
+    "FormalMappingCount": 146,
+    "LessonsWithoutNumberedGradeReferenceAnyRole": 16,
+    "LessonsWithoutNumberedAddressingStandard": 22,
+    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 16,
+    "MultiStandardLessons": 46
+  },
+  "Units": [
+    {
+      "Number": 1,
+      "Title": "Rigid Transformations and Congruence",
+      "LessonCount": 17,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/1/index.html",
+      "SemanticSha256": "98080100ac3ff081198eb5e1046b364d984aac85aa49dc4853c6b8024f5c3acb"
+    },
+    {
+      "Number": 2,
+      "Title": "Dilations, Similarity, and Introducing Slope",
+      "LessonCount": 13,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/2/index.html",
+      "SemanticSha256": "154f223cc26f4d122ba00909167a6962b95bab8b132d2f7dca791d8505b21685"
+    },
+    {
+      "Number": 3,
+      "Title": "Linear Relationships",
+      "LessonCount": 14,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/3/index.html",
+      "SemanticSha256": "b3821a0c7aeef0d121126e9eeb61c73eda6da0d89b7786a60fc92be1cdac1fbf"
+    },
+    {
+      "Number": 4,
+      "Title": "Linear Equations and Linear Systems",
+      "LessonCount": 16,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/4/index.html",
+      "SemanticSha256": "0e98ce94d902379a438994102390a71a249dd298647d86f2e7e9d707516110bc"
+    },
+    {
+      "Number": 5,
+      "Title": "Functions and Volume",
+      "LessonCount": 22,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/5/index.html",
+      "SemanticSha256": "ca94477039f7f49f514a6dd2b87a76b1254553a84919653a99000160c04bddb6"
+    },
+    {
+      "Number": 6,
+      "Title": "Associations in Data",
+      "LessonCount": 11,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/6/index.html",
+      "SemanticSha256": "897cbcda5eaca7080d1393ac4fd1ddbc762e1a8d8730f9c86b3968e6f1fc66cd"
+    },
+    {
+      "Number": 7,
+      "Title": "Exponents and Scientific Notation",
+      "LessonCount": 16,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/7/index.html",
+      "SemanticSha256": "98007faae8730c216828ab36c107d8af5022d4357e057812fe5ce3b160465bcb"
+    },
+    {
+      "Number": 8,
+      "Title": "Pythagorean Theorem and Irrational Numbers",
+      "LessonCount": 16,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/8/index.html",
+      "SemanticSha256": "f456056e39f25457472b89a366527a78ecf2d4e0ce6a6f8241d8dfded49ea14a"
+    },
+    {
+      "Number": 9,
+      "Title": "Putting It All Together",
+      "LessonCount": 6,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/9/index.html",
+      "SemanticSha256": "84fd4146cbbcea6e125cc7529f8651c8590e3d3e828be208b577c84b90d5e907"
+    }
+  ],
+  "Lessons": [
+    {
+      "SourceLessonCode": "8.1.1",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U01:L01",
+      "UnitNumber": 1,
+      "UnitTitle": "Rigid Transformations and Congruence",
+      "LessonNumber": 1,
+      "Title": "Moving in the Plane",
+      "SortOrder": 1,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/1/1/preparation.html",
+      "SemanticSha256": "23f00c0bc9153aa3401b8ad7e749348dfc6688d68d22f048fc2aa81704f86bc3",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.MD.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "8.1.2",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U01:L02",
+      "UnitNumber": 1,
+      "UnitTitle": "Rigid Transformations and Congruence",
+      "LessonNumber": 2,
+      "Title": "Naming the Moves",
+      "SortOrder": 2,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/1/2/preparation.html",
+      "SemanticSha256": "97b118937a0f71debe6d4b24944f7afee7ff95fe3794670b96df0eb4afefc8e9",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.MD.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.1.3",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U01:L03",
+      "UnitNumber": 1,
+      "UnitTitle": "Rigid Transformations and Congruence",
+      "LessonNumber": 3,
+      "Title": "Grid Moves",
+      "SortOrder": 3,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/1/3/preparation.html",
+      "SemanticSha256": "10c7a73343ff2fa7c81444c0b01b0031f5cad6b0b9412d7ab2e96801bbe52eb3",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.1.4",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U01:L04",
+      "UnitNumber": 1,
+      "UnitTitle": "Rigid Transformations and Congruence",
+      "LessonNumber": 4,
+      "Title": "Making the Moves",
+      "SortOrder": 4,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/1/4/preparation.html",
+      "SemanticSha256": "2d75562bc5a6621fef8d44846fdb5c397c05337a0e2c5b5e56d470c73a9e3e73",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.1.5",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U01:L05",
+      "UnitNumber": 1,
+      "UnitTitle": "Rigid Transformations and Congruence",
+      "LessonNumber": 5,
+      "Title": "Coordinate Moves",
+      "SortOrder": 5,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/1/5/preparation.html",
+      "SemanticSha256": "70b41d84f74aa01a3685deb7d17fc1df4ce54d5a18ea52297dbcea719572e02c",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "8.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.G.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.1.6",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U01:L06",
+      "UnitNumber": 1,
+      "UnitTitle": "Rigid Transformations and Congruence",
+      "LessonNumber": 6,
+      "Title": "Describing Transformations",
+      "SortOrder": 6,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/1/6/preparation.html",
+      "SemanticSha256": "3d7673df5b47b519c4b48a697ab920cdbc5b7e9d001e54a064fe4f92021b6c64",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.1",
+        "CCSS:8.G.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.1.7",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U01:L07",
+      "UnitNumber": 1,
+      "UnitTitle": "Rigid Transformations and Congruence",
+      "LessonNumber": 7,
+      "Title": "No Bending or Stretching",
+      "SortOrder": 7,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/1/7/preparation.html",
+      "SemanticSha256": "7c4949b62e2831135ead6e8e4ce9ef6d415a922a55fcf4bfca20005d0486b7c7",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.MD.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.1.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:8.G.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.1.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:8.G.A.1",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.1.8",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U01:L08",
+      "UnitNumber": 1,
+      "UnitTitle": "Rigid Transformations and Congruence",
+      "LessonNumber": 8,
+      "Title": "Rotation Patterns",
+      "SortOrder": 8,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/1/8/preparation.html",
+      "SemanticSha256": "59949df01ac768084cce5453dae953b0e9ea567707df736e2850b72269c9c770",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.1.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:8.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.1.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:8.G.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.G.A.1.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.1.9",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U01:L09",
+      "UnitNumber": 1,
+      "UnitTitle": "Rigid Transformations and Congruence",
+      "LessonNumber": 9,
+      "Title": "Moves in Parallel",
+      "SortOrder": 9,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/1/9/preparation.html",
+      "SemanticSha256": "9f1ae5fd7f59220f364dd89699a08e9132c5c8a6efccbc33ab5b8259105d3ef1",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.G.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.1.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:8.G.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.1.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:8.G.A.1",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.1.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:8.G.A.1",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.1.10",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U01:L10",
+      "UnitNumber": 1,
+      "UnitTitle": "Rigid Transformations and Congruence",
+      "LessonNumber": 10,
+      "Title": "Composing Figures",
+      "SortOrder": 10,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/1/10/preparation.html",
+      "SemanticSha256": "821caccebfab9414414ce447a3964d42824866127e689c6b467f487723cc586a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.1.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:8.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.1.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:8.G.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.1.11",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U01:L11",
+      "UnitNumber": 1,
+      "UnitTitle": "Rigid Transformations and Congruence",
+      "LessonNumber": 11,
+      "Title": "What Is the Same?",
+      "SortOrder": 11,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/1/11/preparation.html",
+      "SemanticSha256": "18be637acd9e5201dbd0b1a25a0bcf890be51143839d924ed24114382d1ffa0b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.1",
+        "CCSS:8.G.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.1.12",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U01:L12",
+      "UnitNumber": 1,
+      "UnitTitle": "Rigid Transformations and Congruence",
+      "LessonNumber": 12,
+      "Title": "Congruent Polygons",
+      "SortOrder": 12,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/1/12/preparation.html",
+      "SemanticSha256": "9ca841ad1b3b732459e8baf6bc84ab5d9bb36216b44840db2680ef39cbde76ac",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.1.13",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U01:L13",
+      "UnitNumber": 1,
+      "UnitTitle": "Rigid Transformations and Congruence",
+      "LessonNumber": 13,
+      "Title": "Congruence",
+      "SortOrder": 13,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/1/13/preparation.html",
+      "SemanticSha256": "28bcf0aefbcc0e8b3b9478b1130550cf37084f73ec8a5333c93c7e45c51a403c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.1.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:8.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.1",
+        "CCSS:8.G.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.1.14",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U01:L14",
+      "UnitNumber": 1,
+      "UnitTitle": "Rigid Transformations and Congruence",
+      "LessonNumber": 14,
+      "Title": "Alternate Interior Angles",
+      "SortOrder": 14,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/1/14/preparation.html",
+      "SemanticSha256": "4cf3c210bad33242d2bc6203912a03c720b3024d5f4ace5a310f6b90327d874c",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.G.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.5",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.1",
+        "CCSS:8.G.A.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.1.15",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U01:L15",
+      "UnitNumber": 1,
+      "UnitTitle": "Rigid Transformations and Congruence",
+      "LessonNumber": 15,
+      "Title": "Adding the Angles in a Triangle",
+      "SortOrder": 15,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/1/15/preparation.html",
+      "SemanticSha256": "250a73ed40fe0c69d38a24bc9a187fc2841d7dba4b7f2ad5677dc2b623fdc530",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.5",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.2",
+        "CCSS:8.G.A.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.1.16",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U01:L16",
+      "UnitNumber": 1,
+      "UnitTitle": "Rigid Transformations and Congruence",
+      "LessonNumber": 16,
+      "Title": "Parallel Lines and the Angles in a Triangle",
+      "SortOrder": 16,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/1/16/preparation.html",
+      "SemanticSha256": "fd9ef7dca7c1bb58b2ab636680327df828f9a6a02bc4b85b290ee0cc1935aa0a",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.NS.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "8.G.A.1.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.5",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.G.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.1.17",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U01:L17",
+      "UnitNumber": 1,
+      "UnitTitle": "Rigid Transformations and Congruence",
+      "LessonNumber": 17,
+      "Title": "Rotate and Tessellate",
+      "SortOrder": 17,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/1/17/preparation.html",
+      "SemanticSha256": "a42dac7b0abbca2bddf2f2b1e0cba8de8cea2cc72d984f58408c0e932f51622d",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.MD.C",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.G.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "8.2.1",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U02:L01",
+      "UnitNumber": 2,
+      "UnitTitle": "Dilations, Similarity, and Introducing Slope",
+      "LessonNumber": 1,
+      "Title": "Projecting and Scaling",
+      "SortOrder": 18,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/2/1/preparation.html",
+      "SemanticSha256": "93dc984ffe7a07ac311498ac3da3c2af903ddcde6c1d3a3f821bf4e8d305be99",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.NS.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "8.2.2",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U02:L02",
+      "UnitNumber": 2,
+      "UnitTitle": "Dilations, Similarity, and Introducing Slope",
+      "LessonNumber": 2,
+      "Title": "Circular Grid",
+      "SortOrder": 19,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/2/2/preparation.html",
+      "SemanticSha256": "059d733cafbdc68b7295732d9ad13807f85836dcd6ec72cc12273e15c1bb35e9",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.MD.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "8.2.3",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U02:L03",
+      "UnitNumber": 2,
+      "UnitTitle": "Dilations, Similarity, and Introducing Slope",
+      "LessonNumber": 3,
+      "Title": "Dilations with no Grid",
+      "SortOrder": 20,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/2/3/preparation.html",
+      "SemanticSha256": "64f4003eaf4924e18bb0b2cdae96d794e56d9335ad3dc3a8d520e59b4e1e2fbd",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "8.2.4",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U02:L04",
+      "UnitNumber": 2,
+      "UnitTitle": "Dilations, Similarity, and Introducing Slope",
+      "LessonNumber": 4,
+      "Title": "Dilations on a Square Grid",
+      "SortOrder": 21,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/2/4/preparation.html",
+      "SemanticSha256": "da94919929a5b160ff8f0312795860b60ac5a51261d97fe3977fa25c466a86c8",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.2.5",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U02:L05",
+      "UnitNumber": 2,
+      "UnitTitle": "Dilations, Similarity, and Introducing Slope",
+      "LessonNumber": 5,
+      "Title": "More Dilations",
+      "SortOrder": 22,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/2/5/preparation.html",
+      "SemanticSha256": "9506f276dbaf0e1f95fb88b73379e9fdead352d2401b834e9fef05d236ba5ca5",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.2.6",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U02:L06",
+      "UnitNumber": 2,
+      "UnitTitle": "Dilations, Similarity, and Introducing Slope",
+      "LessonNumber": 6,
+      "Title": "Similarity",
+      "SortOrder": 23,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/2/6/preparation.html",
+      "SemanticSha256": "44e4e717981f6a953e8ed8a0915c39122a9ff7fcebdd25c863446b8d21955e64",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.NS.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "8.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.2",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.4",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.2",
+        "CCSS:8.G.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.2.7",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U02:L07",
+      "UnitNumber": 2,
+      "UnitTitle": "Dilations, Similarity, and Introducing Slope",
+      "LessonNumber": 7,
+      "Title": "Similar Polygons",
+      "SortOrder": 24,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/2/7/preparation.html",
+      "SemanticSha256": "0d72d9e76b3db88c392a1ead1a7838abcb359cfa07d85e69a2ecc9072ef64949",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.4",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.2",
+        "CCSS:8.G.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.2.8",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U02:L08",
+      "UnitNumber": 2,
+      "UnitTitle": "Dilations, Similarity, and Introducing Slope",
+      "LessonNumber": 8,
+      "Title": "Similar Triangles",
+      "SortOrder": 25,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/2/8/preparation.html",
+      "SemanticSha256": "41bc7faab8ef5a307d9b5800af589a149f98d344fb8162ae3387d97dbb2877af",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.NS.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.RP.A.2.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "8.G.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.5",
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.2.9",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U02:L09",
+      "UnitNumber": 2,
+      "UnitTitle": "Dilations, Similarity, and Introducing Slope",
+      "LessonNumber": 9,
+      "Title": "Side Length Quotients in Similar Triangles",
+      "SortOrder": 26,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/2/9/preparation.html",
+      "SemanticSha256": "41c120fca216d9159cbaf10bdc0ca01ad197c109ed2c95da16402ca1f53fab62",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.RP.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.4",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.2.10",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U02:L10",
+      "UnitNumber": 2,
+      "UnitTitle": "Dilations, Similarity, and Introducing Slope",
+      "LessonNumber": 10,
+      "Title": "Meet Slope",
+      "SortOrder": 27,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/2/10/preparation.html",
+      "SemanticSha256": "c8d1bb5f9fd56c58a4cd719fffa767b0a77bc20c6690035660a0e3ac46800b70",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NF.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "8.G.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.B.6",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.B.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.2.11",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U02:L11",
+      "UnitNumber": 2,
+      "UnitTitle": "Dilations, Similarity, and Introducing Slope",
+      "LessonNumber": 11,
+      "Title": "Writing Equations for Lines",
+      "SortOrder": 28,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/2/11/preparation.html",
+      "SemanticSha256": "eaec1dccba86f87be560ca9161ac3e6613bbff0d9971de132424f437f3889497",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.G.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.RP.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "8.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.B.6",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.B.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.2.12",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U02:L12",
+      "UnitNumber": 2,
+      "UnitTitle": "Dilations, Similarity, and Introducing Slope",
+      "LessonNumber": 12,
+      "Title": "Using Equations for Lines",
+      "SortOrder": 29,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/2/12/preparation.html",
+      "SemanticSha256": "9680f6d85efdde38df2abbfb08c9fdfdbd0e26464694e4be594c8bfdc73d0a94",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.2.13",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U02:L13",
+      "UnitNumber": 2,
+      "UnitTitle": "Dilations, Similarity, and Introducing Slope",
+      "LessonNumber": 13,
+      "Title": "The Shadow Knows",
+      "SortOrder": 30,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/2/13/preparation.html",
+      "SemanticSha256": "f7ef4fd3ce455f3dc80218a5ee755f798551943c878519a5bd9c9e212d509ce4",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.RP.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.G.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.G.A.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.3.1",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U03:L01",
+      "UnitNumber": 3,
+      "UnitTitle": "Linear Relationships",
+      "LessonNumber": 1,
+      "Title": "Understanding Proportional Relationships",
+      "SortOrder": 31,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/3/1/preparation.html",
+      "SemanticSha256": "3cba025f786bcb6bedbe6ed875aae0bd1a090a03447636547b1f32ca5a3f117a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "8.3.2",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U03:L02",
+      "UnitNumber": 3,
+      "UnitTitle": "Linear Relationships",
+      "LessonNumber": 2,
+      "Title": "Graphs of Proportional Relationships",
+      "SortOrder": 32,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/3/2/preparation.html",
+      "SemanticSha256": "fb1783ef0c767f8b9c82a550d5ade2c197fd859583f1bf13d047ee85811a43df",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.RP.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.B.5",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.3.3",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U03:L03",
+      "UnitNumber": 3,
+      "UnitTitle": "Linear Relationships",
+      "LessonNumber": 3,
+      "Title": "Representing Proportional Relationships",
+      "SortOrder": 33,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/3/3/preparation.html",
+      "SemanticSha256": "f8d002e674c1af2dd280a4f330bf529b45a81882113b6c694165b6caf7830585",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.EE.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.NS.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.NS.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.B.5",
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.3.4",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U03:L04",
+      "UnitNumber": 3,
+      "UnitTitle": "Linear Relationships",
+      "LessonNumber": 4,
+      "Title": "Comparing Proportional Relationships",
+      "SortOrder": 34,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/3/4/preparation.html",
+      "SemanticSha256": "378015313140b7756730dccb5efb0a7af3693ab5f63b41798890c6668d39d5b1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.B.5",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.3.5",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U03:L05",
+      "UnitNumber": 3,
+      "UnitTitle": "Linear Relationships",
+      "LessonNumber": 5,
+      "Title": "Introduction to Linear Relationships",
+      "SortOrder": 35,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/3/5/preparation.html",
+      "SemanticSha256": "af4f9338d325097184f629746151a5974f122792fd08e84b034a37184839f993",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.NS.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.RP.A.2.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "8.3.6",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U03:L06",
+      "UnitNumber": 3,
+      "UnitTitle": "Linear Relationships",
+      "LessonNumber": 6,
+      "Title": "More Linear Relationships",
+      "SortOrder": 36,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/3/6/preparation.html",
+      "SemanticSha256": "e3282219b07c730942e511dc116cef2fd18e66452241f502ac8fd33eef4c0b28",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.OA.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.RP.A.2.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "8.3.7",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U03:L07",
+      "UnitNumber": 3,
+      "UnitTitle": "Linear Relationships",
+      "LessonNumber": 7,
+      "Title": "Representations of Linear Relationships",
+      "SortOrder": 37,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/3/7/preparation.html",
+      "SemanticSha256": "dd7a339b37a3e092498dced0395b7b2c20bde92be3a992698868f6c3d2e1b57e",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.MD.C.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "8.3.8",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U03:L08",
+      "UnitNumber": 3,
+      "UnitTitle": "Linear Relationships",
+      "LessonNumber": 8,
+      "Title": "Translating to $y=mx+b$",
+      "SortOrder": 38,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/3/8/preparation.html",
+      "SemanticSha256": "3dfe51c92816b4b4e58c1b5857ca5955ed8d7984fab7e03d5702c1c54a880185",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.3.9",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U03:L09",
+      "UnitNumber": 3,
+      "UnitTitle": "Linear Relationships",
+      "LessonNumber": 9,
+      "Title": "Slopes Don't Have to be Positive",
+      "SortOrder": 39,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/3/9/preparation.html",
+      "SemanticSha256": "b1458d64f69113b225e4ae0389fdbb4fe4252e30abad217a5c1da93044d3b58c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "8.3.10",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U03:L10",
+      "UnitNumber": 3,
+      "UnitTitle": "Linear Relationships",
+      "LessonNumber": 10,
+      "Title": "Calculating Slope",
+      "SortOrder": 40,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/3/10/preparation.html",
+      "SemanticSha256": "223feefde27f9d5d50a6980f5d33c2c0c4c17ee6dedeb72542c321da07071d57",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.NS.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "8.3.11",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U03:L11",
+      "UnitNumber": 3,
+      "UnitTitle": "Linear Relationships",
+      "LessonNumber": 11,
+      "Title": "Equations of All Kinds of Lines",
+      "SortOrder": 41,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/3/11/preparation.html",
+      "SemanticSha256": "f494d18b8f0d3c7419f023c7741180792f78d158fc4553d4531f2ce9609f64de",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.B.6",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.B.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.3.12",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U03:L12",
+      "UnitNumber": 3,
+      "UnitTitle": "Linear Relationships",
+      "LessonNumber": 12,
+      "Title": "Solutions to Linear Equations",
+      "SortOrder": 42,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/3/12/preparation.html",
+      "SemanticSha256": "ec8918c2cbdcbdd30c397a7f94d0f023f08a58a8d80793819b0ab63df950ea57",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.C",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "8.3.13",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U03:L13",
+      "UnitNumber": 3,
+      "UnitTitle": "Linear Relationships",
+      "LessonNumber": 13,
+      "Title": "More Solutions to Linear Equations",
+      "SortOrder": 43,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/3/13/preparation.html",
+      "SemanticSha256": "bea0111a09e20a39f77b85645c069343539a36bd98302c0bfabdb459f4ba66ef",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C.8.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:8.EE.C.8",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.C.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.3.14",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U03:L14",
+      "UnitNumber": 3,
+      "UnitTitle": "Linear Relationships",
+      "LessonNumber": 14,
+      "Title": "Using Linear Relations to Solve Problems",
+      "SortOrder": 44,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/3/14/preparation.html",
+      "SemanticSha256": "a4a27389b293b07f44b4373e0cd4b0778851a66926e4f91ef581412108e049d9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.B.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C.8.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:8.EE.C.8",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.B.6",
+        "CCSS:8.EE.C.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.4.1",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U04:L01",
+      "UnitNumber": 4,
+      "UnitTitle": "Linear Equations and Linear Systems",
+      "LessonNumber": 1,
+      "Title": "Number Puzzles",
+      "SortOrder": 45,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/4/1/preparation.html",
+      "SemanticSha256": "b92eac1a07174af643d7a7bc0a4568ec2a1e10959824fdc2be2b02186c620848",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.NS.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "8.4.2",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U04:L02",
+      "UnitNumber": 4,
+      "UnitTitle": "Linear Equations and Linear Systems",
+      "LessonNumber": 2,
+      "Title": "Keeping the Equation Balanced",
+      "SortOrder": 46,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/4/2/preparation.html",
+      "SemanticSha256": "90e9b4f024ce8205cfb0a453b29a056a9ef91425828f06e78a57315a5f6e2614",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.C",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "8.4.3",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U04:L03",
+      "UnitNumber": 4,
+      "UnitTitle": "Linear Equations and Linear Systems",
+      "LessonNumber": 3,
+      "Title": "Balanced Moves",
+      "SortOrder": 47,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/4/3/preparation.html",
+      "SemanticSha256": "2a9d58b25bda705d5089d0be2ba25e3b20b4e30008f8e94a305af139d7eabadc",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.C.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.4.4",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U04:L04",
+      "UnitNumber": 4,
+      "UnitTitle": "Linear Equations and Linear Systems",
+      "LessonNumber": 4,
+      "Title": "More Balanced Moves",
+      "SortOrder": 48,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/4/4/preparation.html",
+      "SemanticSha256": "6d2befbe9362a18827f9bcc9082f608aa5ea8521c85d32e452fda3d98faa00e7",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.C.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.4.5",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U04:L05",
+      "UnitNumber": 4,
+      "UnitTitle": "Linear Equations and Linear Systems",
+      "LessonNumber": 5,
+      "Title": "Solving Any Linear Equation",
+      "SortOrder": 49,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/4/5/preparation.html",
+      "SemanticSha256": "08c557ed6452bf81b75e51397c90f0a7f8148335f931d11077bf2020893e7b12",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.C.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.4.6",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U04:L06",
+      "UnitNumber": 4,
+      "UnitTitle": "Linear Equations and Linear Systems",
+      "LessonNumber": 6,
+      "Title": "Strategic Solving",
+      "SortOrder": 50,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/4/6/preparation.html",
+      "SemanticSha256": "d512b461d4b555ffb6129e279c1c7d2534f434fab75c87c1bd160f35520a53cf",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.C.7",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C.7.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:8.EE.C.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.4.7",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U04:L07",
+      "UnitNumber": 4,
+      "UnitTitle": "Linear Equations and Linear Systems",
+      "LessonNumber": 7,
+      "Title": "All, Some, or No Solutions",
+      "SortOrder": 51,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/4/7/preparation.html",
+      "SemanticSha256": "75eb4ec2c866003141b8b356e44089aee7e82053942ac3df061115e3abb00d2f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C.7.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:8.EE.C.7",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.C.7.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.4.8",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U04:L08",
+      "UnitNumber": 4,
+      "UnitTitle": "Linear Equations and Linear Systems",
+      "LessonNumber": 8,
+      "Title": "How Many Solutions?",
+      "SortOrder": 52,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/4/8/preparation.html",
+      "SemanticSha256": "0488b29f0013ab9f602497209aa0f176a43e4904cc3975352e3fadad28ae7ec7",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C.7.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:8.EE.C.7",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.4.9",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U04:L09",
+      "UnitNumber": 4,
+      "UnitTitle": "Linear Equations and Linear Systems",
+      "LessonNumber": 9,
+      "Title": "When Are They the Same?",
+      "SortOrder": 53,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/4/9/preparation.html",
+      "SemanticSha256": "f15e008ba2b00478c158f1fa8787d6ef843948c52c705442e97d702c0b198582",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.C.7",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.C.8",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.C.7",
+        "CCSS:8.EE.C.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.4.10",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U04:L10",
+      "UnitNumber": 4,
+      "UnitTitle": "Linear Equations and Linear Systems",
+      "LessonNumber": 10,
+      "Title": "On or Off the Line?",
+      "SortOrder": 54,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/4/10/preparation.html",
+      "SemanticSha256": "f7900107c7eca656659cf0fa07386ae27870637add97ec4a7116d2b348e95a0a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.C.8",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.C.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.4.11",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U04:L11",
+      "UnitNumber": 4,
+      "UnitTitle": "Linear Equations and Linear Systems",
+      "LessonNumber": 11,
+      "Title": "On Both of the Lines",
+      "SortOrder": 55,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/4/11/preparation.html",
+      "SemanticSha256": "c584f60b5d2f468c48779ca1630f7a764711c920e54a57da575d3acb7b18b0f0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.C.8",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.C.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.4.12",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U04:L12",
+      "UnitNumber": 4,
+      "UnitTitle": "Linear Equations and Linear Systems",
+      "LessonNumber": 12,
+      "Title": "Systems of Equations",
+      "SortOrder": 56,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/4/12/preparation.html",
+      "SemanticSha256": "2a15d1e9d0606cc61b5071a47498863316096e18062662560d73262a6b37625f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.C.8",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C.8.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:8.EE.C.8",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C.8.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:8.EE.C.8",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.C.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.4.13",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U04:L13",
+      "UnitNumber": 4,
+      "UnitTitle": "Linear Equations and Linear Systems",
+      "LessonNumber": 13,
+      "Title": "Solving Systems of Equations",
+      "SortOrder": 57,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/4/13/preparation.html",
+      "SemanticSha256": "3105a94e0deed0efbf7ce8bb0bedc43b465e5e4819bfb8eeac85807d899aae7f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.C.8",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C.8.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:8.EE.C.8",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.C.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.4.14",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U04:L14",
+      "UnitNumber": 4,
+      "UnitTitle": "Linear Equations and Linear Systems",
+      "LessonNumber": 14,
+      "Title": "Solving More Systems",
+      "SortOrder": 58,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/4/14/preparation.html",
+      "SemanticSha256": "728d6da7b822c3a7cba069ae9398bc99dad2465d5a58d5f182ffba9d8eb2af0f",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.EE.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.C.8",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.C.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.4.15",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U04:L15",
+      "UnitNumber": 4,
+      "UnitTitle": "Linear Equations and Linear Systems",
+      "LessonNumber": 15,
+      "Title": "Writing Systems of Equations",
+      "SortOrder": 59,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/4/15/preparation.html",
+      "SemanticSha256": "692395d6e5c02e001b5108416b72804a5358f054fc6bb11c486b1a824576b168",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.C.8",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C.8.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:8.EE.C.8",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C.8.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:8.EE.C.8",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.C.8.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.C.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.4.16",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U04:L16",
+      "UnitNumber": 4,
+      "UnitTitle": "Linear Equations and Linear Systems",
+      "LessonNumber": 16,
+      "Title": "Solving Problems with Systems of Equations",
+      "SortOrder": 60,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/4/16/preparation.html",
+      "SemanticSha256": "e745570af13b5753cac30bf4c7ba5246f0c2d7842d78172c3301ce51677d4856",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.EE.C.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.C.8.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:8.EE.C.8",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.C.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.5.1",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U05:L01",
+      "UnitNumber": 5,
+      "UnitTitle": "Functions and Volume",
+      "LessonNumber": 1,
+      "Title": "Inputs and Outputs",
+      "SortOrder": 61,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/5/1/preparation.html",
+      "SemanticSha256": "b0cf410ae56052e2144d1d0afd4c9eafb21c59c93e873fb6b7c8ac0f30ae25cf",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.F.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.F.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.F.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.5.2",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U05:L02",
+      "UnitNumber": 5,
+      "UnitTitle": "Functions and Volume",
+      "LessonNumber": 2,
+      "Title": "Introduction to Functions",
+      "SortOrder": 62,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/5/2/preparation.html",
+      "SemanticSha256": "124f53042718825cc6bb22fda9c740e04cfaee06b2c09365ede14ec3acf38fcc",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.F.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.F.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.F.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.5.3",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U05:L03",
+      "UnitNumber": 5,
+      "UnitTitle": "Functions and Volume",
+      "LessonNumber": 3,
+      "Title": "Equations for Functions",
+      "SortOrder": 63,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/5/3/preparation.html",
+      "SemanticSha256": "c6e395dc64110bca2a5fbe1e875cd25a3b25d6734ad26bd20e13390e95217879",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.F.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.F.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.F.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.5.4",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U05:L04",
+      "UnitNumber": 5,
+      "UnitTitle": "Functions and Volume",
+      "LessonNumber": 4,
+      "Title": "Tables, Equations, and Graphs of Functions",
+      "SortOrder": 64,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/5/4/preparation.html",
+      "SemanticSha256": "6cfa36e123c708e06bfd4605ac9a3666b11f1b51e3d8981e7a3efd382afbee77",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.F.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.F.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.F.A.1",
+        "CCSS:8.F.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.5.5",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U05:L05",
+      "UnitNumber": 5,
+      "UnitTitle": "Functions and Volume",
+      "LessonNumber": 5,
+      "Title": "More Graphs of Functions",
+      "SortOrder": 65,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/5/5/preparation.html",
+      "SemanticSha256": "6e5323bf42c3c62963d5644a93f3bd505a5d7931b8285ab1e075af831041b82c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.F.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.F.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.F.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.F.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.F.A.1",
+        "CCSS:8.F.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.5.6",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U05:L06",
+      "UnitNumber": 5,
+      "UnitTitle": "Functions and Volume",
+      "LessonNumber": 6,
+      "Title": "Even More Graphs of Functions",
+      "SortOrder": 66,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/5/6/preparation.html",
+      "SemanticSha256": "6fdefda2b4470fccdb28deb3f956cbfa43fef63d6c6bdf613d29a860a080f1a9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.F.B.5",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.F.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.5.7",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U05:L07",
+      "UnitNumber": 5,
+      "UnitTitle": "Functions and Volume",
+      "LessonNumber": 7,
+      "Title": "Connecting Representations of Functions",
+      "SortOrder": 67,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/5/7/preparation.html",
+      "SemanticSha256": "3b494f5f6eebe88c8f0b42d29e7d1bce5df4d5015d22d47ce8a776f07c3f5398",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.F.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.F.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.F.A.2",
+        "CCSS:8.F.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.5.8",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U05:L08",
+      "UnitNumber": 5,
+      "UnitTitle": "Functions and Volume",
+      "LessonNumber": 8,
+      "Title": "Linear Functions",
+      "SortOrder": 68,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/5/8/preparation.html",
+      "SemanticSha256": "ec83c07519ff863b56e949b386dacb8cbdd2e0be141afd58f7dba07d0068c87a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.F.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.F.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.F.B.4",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.F.A.2",
+        "CCSS:8.F.A.3",
+        "CCSS:8.F.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.5.9",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U05:L09",
+      "UnitNumber": 5,
+      "UnitTitle": "Functions and Volume",
+      "LessonNumber": 9,
+      "Title": "Linear Models",
+      "SortOrder": 69,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/5/9/preparation.html",
+      "SemanticSha256": "cba247efd80418ae4f6d529e6ccf200a74ce5ae3a24b6c5fbf34e9716a9c680f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.F.B.4",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.F.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.5.10",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U05:L10",
+      "UnitNumber": 5,
+      "UnitTitle": "Functions and Volume",
+      "LessonNumber": 10,
+      "Title": "Piecewise Linear Functions",
+      "SortOrder": 70,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/5/10/preparation.html",
+      "SemanticSha256": "d644a3857927b74e8ec1c4dc1da3cd1050349a174f83bfce8c3189361aac8b57",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.F.B.4",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.F.B.5",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.F.B.4",
+        "CCSS:8.F.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.5.11",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U05:L11",
+      "UnitNumber": 5,
+      "UnitTitle": "Functions and Volume",
+      "LessonNumber": 11,
+      "Title": "Filling Containers",
+      "SortOrder": 71,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/5/11/preparation.html",
+      "SemanticSha256": "f6ccb265bf734e7030b288a187298859aedd96fb86655cdd60efd9873f5502a2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.F.B.4",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.G.C",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.F.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.5.12",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U05:L12",
+      "UnitNumber": 5,
+      "UnitTitle": "Functions and Volume",
+      "LessonNumber": 12,
+      "Title": "How Much Will Fit?",
+      "SortOrder": 72,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/5/12/preparation.html",
+      "SemanticSha256": "9cecd4c3f9f4aa44ed89c4bb118de4adb8e3f45e68e90bfa4d1f7125a7549b5c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.C",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "8.5.13",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U05:L13",
+      "UnitNumber": 5,
+      "UnitTitle": "Functions and Volume",
+      "LessonNumber": 13,
+      "Title": "The Volume of a Cylinder",
+      "SortOrder": 73,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/5/13/preparation.html",
+      "SemanticSha256": "55ae34a5a8b4f3712ca3029b6f394d55acd1e79522432af3ca18d96a8329bcde",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.G.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.C.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.C.9",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.C.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.5.14",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U05:L14",
+      "UnitNumber": 5,
+      "UnitTitle": "Functions and Volume",
+      "LessonNumber": 14,
+      "Title": "Finding Cylinder Dimensions",
+      "SortOrder": 74,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/5/14/preparation.html",
+      "SemanticSha256": "0c7c5472b9ad7f1c064368cb09b70b9b7cdf6ba5fc82244aeee1d786f32c576c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.C.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.C.9",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.C.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.5.15",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U05:L15",
+      "UnitNumber": 5,
+      "UnitTitle": "Functions and Volume",
+      "LessonNumber": 15,
+      "Title": "The Volume of a Cone",
+      "SortOrder": 75,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/5/15/preparation.html",
+      "SemanticSha256": "d812cee89d3377154aa6ec0918c02d3d3f3a12021fd5d53043079b7e3e42d563",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.C.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.C.9",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.C.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.5.16",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U05:L16",
+      "UnitNumber": 5,
+      "UnitTitle": "Functions and Volume",
+      "LessonNumber": 16,
+      "Title": "Finding Cone Dimensions",
+      "SortOrder": 76,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/5/16/preparation.html",
+      "SemanticSha256": "56a5569aaf5e6a0d12213b5661f2e5091fb8c300844a5b34f23f2f4eb5265fb9",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.EE.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.C.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.C.9",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.C.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.5.17",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U05:L17",
+      "UnitNumber": 5,
+      "UnitTitle": "Functions and Volume",
+      "LessonNumber": 17,
+      "Title": "Scaling One Dimension",
+      "SortOrder": 77,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/5/17/preparation.html",
+      "SemanticSha256": "f504a1acc5fd2f9900c7d5b2352c13c111fc93ae6d87c042002ace5f9570e9ab",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.F.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.C.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.C.9",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.F.A.1",
+        "CCSS:8.G.C.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.5.18",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U05:L18",
+      "UnitNumber": 5,
+      "UnitTitle": "Functions and Volume",
+      "LessonNumber": 18,
+      "Title": "Scaling Two Dimensions",
+      "SortOrder": 78,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/5/18/preparation.html",
+      "SemanticSha256": "9581cf4e1517e6e8b244e3c7b5a29048328d2197f68ab2640e1462e8079320ce",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.EE.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.F.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.C.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.C.9",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.F.A.3",
+        "CCSS:8.G.C.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.5.19",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U05:L19",
+      "UnitNumber": 5,
+      "UnitTitle": "Functions and Volume",
+      "LessonNumber": 19,
+      "Title": "Estimating a Hemisphere",
+      "SortOrder": 79,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/5/19/preparation.html",
+      "SemanticSha256": "4cabda88630a166415465da8c1733382352e121ee274e30f40ad5084f4517237",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.C",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.C.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.C.9",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.C.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.5.20",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U05:L20",
+      "UnitNumber": 5,
+      "UnitTitle": "Functions and Volume",
+      "LessonNumber": 20,
+      "Title": "The Volume of a Sphere",
+      "SortOrder": 80,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/5/20/preparation.html",
+      "SemanticSha256": "fa2b455dcc64683d9b4488c25db3c7b53df96214775a8394174cfdfd818c3473",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.C",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.C.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.C.9",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.C.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.5.21",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U05:L21",
+      "UnitNumber": 5,
+      "UnitTitle": "Functions and Volume",
+      "LessonNumber": 21,
+      "Title": "Cylinders, Cones, and Spheres",
+      "SortOrder": 81,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/5/21/preparation.html",
+      "SemanticSha256": "48657265276d7659188714e36faa4fee21468f5ce4046c479306e8ad64507175",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.C.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.C.9",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.C.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.5.22",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U05:L22",
+      "UnitNumber": 5,
+      "UnitTitle": "Functions and Volume",
+      "LessonNumber": 22,
+      "Title": "Volume As a Function of . . .",
+      "SortOrder": 82,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/5/22/preparation.html",
+      "SemanticSha256": "55d0d60ed69a93cc0dacd1acb8367e667a34b022f24e115a7d4ddfae5d66fc6b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.C.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.C.9",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.C.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.6.1",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U06:L01",
+      "UnitNumber": 6,
+      "UnitTitle": "Associations in Data",
+      "LessonNumber": 1,
+      "Title": "Organizing Data",
+      "SortOrder": 83,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/6/1/preparation.html",
+      "SemanticSha256": "49e0ac14e1967dad1e789790f2d1f2ef512959784bbe9bb4825b318f23b9eb8d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.SP.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.SP.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.SP.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.SP.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.6.2",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U06:L02",
+      "UnitNumber": 6,
+      "UnitTitle": "Associations in Data",
+      "LessonNumber": 2,
+      "Title": "Plotting Data",
+      "SortOrder": 84,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/6/2/preparation.html",
+      "SemanticSha256": "34704330181f97c40ff606206e2eaa91495943219614252fb77e5d08b7093d5e",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.SP.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.SP.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.SP.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.SP.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.6.3",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U06:L03",
+      "UnitNumber": 6,
+      "UnitTitle": "Associations in Data",
+      "LessonNumber": 3,
+      "Title": "What a Point in a Scatter Plot Means",
+      "SortOrder": 85,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/6/3/preparation.html",
+      "SemanticSha256": "024828c1559f32f594c404bf071d6348a5e59e47526c155139df6cf197604b45",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.SP.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.SP.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.SP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.SP.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.SP.A.1",
+        "CCSS:8.SP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.6.4",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U06:L04",
+      "UnitNumber": 6,
+      "UnitTitle": "Associations in Data",
+      "LessonNumber": 4,
+      "Title": "Fitting a Line to Data",
+      "SortOrder": 86,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/6/4/preparation.html",
+      "SemanticSha256": "4739a6927fcadc8214fa67c705d1559b3f4b86d28e913830e6b343c5aff80dfa",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.SP.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.SP.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.SP.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.SP.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.SP.A.1",
+        "CCSS:8.SP.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.6.5",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U06:L05",
+      "UnitNumber": 6,
+      "UnitTitle": "Associations in Data",
+      "LessonNumber": 5,
+      "Title": "Describing Trends in Scatter Plots",
+      "SortOrder": 87,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/6/5/preparation.html",
+      "SemanticSha256": "563e62c5a2d2a1a8c8f280e976fab188b1e6e9461de38eeb9d6982528dae0770",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.SP.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.SP.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.SP.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.SP.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.SP.A.1",
+        "CCSS:8.SP.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.6.6",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U06:L06",
+      "UnitNumber": 6,
+      "UnitTitle": "Associations in Data",
+      "LessonNumber": 6,
+      "Title": "The Slope of a Fitted Line",
+      "SortOrder": 88,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/6/6/preparation.html",
+      "SemanticSha256": "7873450167ce51441083693a3d4c918493184dc4e905222e39c093b587d6db9f",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "8.EE.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.SP.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.SP.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.SP.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.SP.A.2",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.SP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.SP.A.3",
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.SP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.SP.A.1",
+        "CCSS:8.SP.A.2",
+        "CCSS:8.SP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.6.7",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U06:L07",
+      "UnitNumber": 6,
+      "UnitTitle": "Associations in Data",
+      "LessonNumber": 7,
+      "Title": "Observing More Patterns in Scatter Plots",
+      "SortOrder": 89,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/6/7/preparation.html",
+      "SemanticSha256": "0c95fd576f4bff251741198277e442f432fef33aea8727f1f9d0937079d3a667",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.SP.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.SP.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.SP.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.6.8",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U06:L08",
+      "UnitNumber": 6,
+      "UnitTitle": "Associations in Data",
+      "LessonNumber": 8,
+      "Title": "Analyzing Bivariate Data",
+      "SortOrder": 90,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/6/8/preparation.html",
+      "SemanticSha256": "13bbfab40293b724da2034f0fe1bb7156960768e3bf3ba358004372290ec4a9e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.SP.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.SP.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.SP.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.SP.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.SP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.SP.A.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.SP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.SP.A.1",
+        "CCSS:8.SP.A.2",
+        "CCSS:8.SP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.6.9",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U06:L09",
+      "UnitNumber": 6,
+      "UnitTitle": "Associations in Data",
+      "LessonNumber": 9,
+      "Title": "Looking for Associations",
+      "SortOrder": 91,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/6/9/preparation.html",
+      "SemanticSha256": "be5b6a0c460f8d89c59e0d742ae56d25ec6e0373420a98a4dc877f8082e299dd",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.SP.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.SP.A.4",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.SP.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.SP.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.6.10",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U06:L10",
+      "UnitNumber": 6,
+      "UnitTitle": "Associations in Data",
+      "LessonNumber": 10,
+      "Title": "Using Data Displays to Find Associations",
+      "SortOrder": 92,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/6/10/preparation.html",
+      "SemanticSha256": "90e79835ab5c8c400e0e93208d85c4cab5ea7fe84d184ee8d9eb345bb623d146",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.SP.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.SP.A.4",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.SP.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.6.11",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U06:L11",
+      "UnitNumber": 6,
+      "UnitTitle": "Associations in Data",
+      "LessonNumber": 11,
+      "Title": "Gone In 30 Seconds",
+      "SortOrder": 93,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/6/11/preparation.html",
+      "SemanticSha256": "413f75d2173d1ff177bda6c9eae5e8823661410c88daade1ac9122748ee6c062",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.SP.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "8.7.1",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U07:L01",
+      "UnitNumber": 7,
+      "UnitTitle": "Exponents and Scientific Notation",
+      "LessonNumber": 1,
+      "Title": "Exponent Review",
+      "SortOrder": 94,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/7/1/preparation.html",
+      "SemanticSha256": "4847bf3bc9283c173aed373636de308defe9f7aceff6d9f00c81c148000f43cd",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.EE.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "8.7.2",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U07:L02",
+      "UnitNumber": 7,
+      "UnitTitle": "Exponents and Scientific Notation",
+      "LessonNumber": 2,
+      "Title": "Multiplying Powers of Ten",
+      "SortOrder": 95,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/7/2/preparation.html",
+      "SemanticSha256": "b1594c60ddb876746366983731ffb73f00d2b6dfb540e79ad77769082203f9f6",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.A.3.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.7.3",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U07:L03",
+      "UnitNumber": 7,
+      "UnitTitle": "Exponents and Scientific Notation",
+      "LessonNumber": 3,
+      "Title": "Powers of Powers of 10",
+      "SortOrder": 96,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/7/3/preparation.html",
+      "SemanticSha256": "987b6cf3bb04602ad7bb05bb4260a45d17b4f6329f68a0260c9d0789cdf9d7a6",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.7.4",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U07:L04",
+      "UnitNumber": 7,
+      "UnitTitle": "Exponents and Scientific Notation",
+      "LessonNumber": 4,
+      "Title": "Dividing Powers of 10",
+      "SortOrder": 97,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/7/4/preparation.html",
+      "SemanticSha256": "6400065091054b6c907e20c88e7263a7dab705ad0975d6f677b2c003504ecfc0",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NF.B.5.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.7.5",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U07:L05",
+      "UnitNumber": 7,
+      "UnitTitle": "Exponents and Scientific Notation",
+      "LessonNumber": 5,
+      "Title": "Negative Exponents with Powers of 10",
+      "SortOrder": 98,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/7/5/preparation.html",
+      "SemanticSha256": "4dc3ca589deeafa2a20aa2e44a1fdc60be6dd5cfdcea95bf9ac5cb01ea0d4213",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.7.6",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U07:L06",
+      "UnitNumber": 7,
+      "UnitTitle": "Exponents and Scientific Notation",
+      "LessonNumber": 6,
+      "Title": "What about Other Bases?",
+      "SortOrder": 99,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/7/6/preparation.html",
+      "SemanticSha256": "47f2cbb32bbfcb51edb802d0f1aa3a174d2746852516f49f4f16483b0cb595f2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.7.7",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U07:L07",
+      "UnitNumber": 7,
+      "UnitTitle": "Exponents and Scientific Notation",
+      "LessonNumber": 7,
+      "Title": "Practice with Rational Bases",
+      "SortOrder": 100,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/7/7/preparation.html",
+      "SemanticSha256": "071123b2c3b9d98ef45d054dd984748eec6dc3a43fad0fd96faba02d98a12283",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.7.8",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U07:L08",
+      "UnitNumber": 7,
+      "UnitTitle": "Exponents and Scientific Notation",
+      "LessonNumber": 8,
+      "Title": "Combining Bases",
+      "SortOrder": 101,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/7/8/preparation.html",
+      "SemanticSha256": "f7c2c6947e5e80264505f7435dbc3aea8ecf48c7f3aceba490c65f1b9aa0e973",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.7.9",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U07:L09",
+      "UnitNumber": 7,
+      "UnitTitle": "Exponents and Scientific Notation",
+      "LessonNumber": 9,
+      "Title": "Describing Large and Small Numbers Using Powers of 10",
+      "SortOrder": 102,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/7/9/preparation.html",
+      "SemanticSha256": "68cb543a71468f42d623bbf9dfe55cd87164223ab6a298056bb17091671b7bdd",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.A.3.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.7.10",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U07:L10",
+      "UnitNumber": 7,
+      "UnitTitle": "Exponents and Scientific Notation",
+      "LessonNumber": 10,
+      "Title": "Representing Large Numbers on the Number Line",
+      "SortOrder": 103,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/7/10/preparation.html",
+      "SemanticSha256": "5d85784be71d37482d0152550c35f25a351fce8d6422d9f0014092cfb264280e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.4",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.A.3",
+        "CCSS:8.EE.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.7.11",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U07:L11",
+      "UnitNumber": 7,
+      "UnitTitle": "Exponents and Scientific Notation",
+      "LessonNumber": 11,
+      "Title": "Representing Small Numbers on the Number Line",
+      "SortOrder": 104,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/7/11/preparation.html",
+      "SemanticSha256": "bfee4abf842b620700a1349a937a73d44e2340634b7a6b13b8277a7471f9c131",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.4",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.A.1",
+        "CCSS:8.EE.A.3",
+        "CCSS:8.EE.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.7.12",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U07:L12",
+      "UnitNumber": 7,
+      "UnitTitle": "Exponents and Scientific Notation",
+      "LessonNumber": 12,
+      "Title": "Applications of Arithmetic with Powers of 10",
+      "SortOrder": 105,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/7/12/preparation.html",
+      "SemanticSha256": "e4d6cc1f861eba67c9264b0781c28b167f672e65fb0eca412b0e01db78b8d355",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.4",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.A.3",
+        "CCSS:8.EE.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.7.13",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U07:L13",
+      "UnitNumber": 7,
+      "UnitTitle": "Exponents and Scientific Notation",
+      "LessonNumber": 13,
+      "Title": "Definition of Scientific Notation",
+      "SortOrder": 106,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/7/13/preparation.html",
+      "SemanticSha256": "c45611c4e75f63333ae2fa958882334d22db29d9e81ee5a3a76767c589012df9",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.4",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.7.14",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U07:L14",
+      "UnitNumber": 7,
+      "UnitTitle": "Exponents and Scientific Notation",
+      "LessonNumber": 14,
+      "Title": "Multiplying, Dividing, and Estimating with Scientific Notation",
+      "SortOrder": 107,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/7/14/preparation.html",
+      "SemanticSha256": "1dfd15ff212328d79126bac7854937763c28d7f4caa0871ce796e0769ba8c0f2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.4",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.A.1",
+        "CCSS:8.EE.A.3",
+        "CCSS:8.EE.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.7.15",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U07:L15",
+      "UnitNumber": 7,
+      "UnitTitle": "Exponents and Scientific Notation",
+      "LessonNumber": 15,
+      "Title": "Adding and Subtracting with Scientific Notation",
+      "SortOrder": 108,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/7/15/preparation.html",
+      "SemanticSha256": "e6d13ad225710a269cd4c4fcb1d938f560a7965b38e8f6822d9a2f68039071c5",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.4",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.7.16",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U07:L16",
+      "UnitNumber": 7,
+      "UnitTitle": "Exponents and Scientific Notation",
+      "LessonNumber": 16,
+      "Title": "Is a Smartphone Smart Enough to Go to the Moon?",
+      "SortOrder": 109,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/7/16/preparation.html",
+      "SemanticSha256": "336a35daf37d05e27952fdd78b261ab8622fdfe6e9d8241b8a14fcd138877157",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.4",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.A.3",
+        "CCSS:8.EE.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.8.1",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U08:L01",
+      "UnitNumber": 8,
+      "UnitTitle": "Pythagorean Theorem and Irrational Numbers",
+      "LessonNumber": 1,
+      "Title": "The Areas of Squares and Their Side Lengths",
+      "SortOrder": 110,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/8/1/preparation.html",
+      "SemanticSha256": "5b2c100896f509ada46ab3d6b18c344a4069eab7c40b35721d9730ba0dcb91cc",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.EE.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.NS.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.NS.A.2",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.G.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.G.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 6
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.NS.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 7
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.NS.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.8.2",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U08:L02",
+      "UnitNumber": 8,
+      "UnitTitle": "Pythagorean Theorem and Irrational Numbers",
+      "LessonNumber": 2,
+      "Title": "Side Lengths and Areas",
+      "SortOrder": 111,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/8/2/preparation.html",
+      "SemanticSha256": "8cbd14dd325cf43b3fd2280939e1c7d2f68c084d1e8e42f12479dcc3ffd5c742",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.G.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.NS.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.NS.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 6
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.8.3",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U08:L03",
+      "UnitNumber": 8,
+      "UnitTitle": "Pythagorean Theorem and Irrational Numbers",
+      "LessonNumber": 3,
+      "Title": "Rational and Irrational Numbers",
+      "SortOrder": 112,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/8/3/preparation.html",
+      "SemanticSha256": "d2bf2b5957c3b1d5b43e9055285b7d12bf4dba9855f726528840373355f6f51a",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NF.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.EE.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.2",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.NS.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.EE.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.NS.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 6
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.8.4",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U08:L04",
+      "UnitNumber": 8,
+      "UnitTitle": "Pythagorean Theorem and Irrational Numbers",
+      "LessonNumber": 4,
+      "Title": "Square Roots on the Number Line",
+      "SortOrder": 113,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/8/4/preparation.html",
+      "SemanticSha256": "98f8d739a24bce9854a5f215b159ab968bafa1cae3955545c29c28b617517b9f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.NS.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.NS.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.A.2",
+        "CCSS:8.NS.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.8.5",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U08:L05",
+      "UnitNumber": 8,
+      "UnitTitle": "Pythagorean Theorem and Irrational Numbers",
+      "LessonNumber": 5,
+      "Title": "Reasoning About Square Roots",
+      "SortOrder": 114,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/8/5/preparation.html",
+      "SemanticSha256": "edaced65d27837ee9dd8b24b22efbb6e41490efd1d61bd2f8717ac7bf46b7e50",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.NS.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.NS.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.A.2",
+        "CCSS:8.NS.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.8.6",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U08:L06",
+      "UnitNumber": 8,
+      "UnitTitle": "Pythagorean Theorem and Irrational Numbers",
+      "LessonNumber": 6,
+      "Title": "Finding Side Lengths of Triangles",
+      "SortOrder": 115,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/8/6/preparation.html",
+      "SemanticSha256": "02708013f5f45ceac2df741def211888bbfdef9873eddc2d6df29b019bc1e82e",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.G.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "8.EE.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.G.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.G.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 6
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "8.8.7",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U08:L07",
+      "UnitNumber": 8,
+      "UnitTitle": "Pythagorean Theorem and Irrational Numbers",
+      "LessonNumber": 7,
+      "Title": "A Proof of the Pythagorean Theorem",
+      "SortOrder": 116,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/8/7/preparation.html",
+      "SemanticSha256": "5a14ae6f9dec0877025edbf7e4b409c23f5cc37dbbbe94f52dd6e6837e23e7b9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.B.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.B.7",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.G.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.B.6",
+        "CCSS:8.G.B.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.8.8",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U08:L08",
+      "UnitNumber": 8,
+      "UnitTitle": "Pythagorean Theorem and Irrational Numbers",
+      "LessonNumber": 8,
+      "Title": "Finding Unknown Side Lengths",
+      "SortOrder": 117,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/8/8/preparation.html",
+      "SemanticSha256": "6d4ca570d61ddd255c35b6edce62e57cfd84b6eca41e0639842dd66e72e1da8d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.B.7",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.G.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.B.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.8.9",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U08:L09",
+      "UnitNumber": 8,
+      "UnitTitle": "Pythagorean Theorem and Irrational Numbers",
+      "LessonNumber": 9,
+      "Title": "The Converse",
+      "SortOrder": 118,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/8/9/preparation.html",
+      "SemanticSha256": "79b65e8a3abb5ce6b44f0924f2afbc4de85f3f891f5d2bffce9f7020fad896d1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.B.6",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.G.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.B.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.8.10",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U08:L10",
+      "UnitNumber": 8,
+      "UnitTitle": "Pythagorean Theorem and Irrational Numbers",
+      "LessonNumber": 10,
+      "Title": "Applications of the Pythagorean Theorem",
+      "SortOrder": 119,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/8/10/preparation.html",
+      "SemanticSha256": "63c768473b3499bb0e99c969cf866fd3e3e0c1c91182ac3880d827b5e803175b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.B.7",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.NS.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.A.2",
+        "CCSS:8.G.B.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.8.11",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U08:L11",
+      "UnitNumber": 8,
+      "UnitTitle": "Pythagorean Theorem and Irrational Numbers",
+      "LessonNumber": 11,
+      "Title": "Finding Distances in the Coordinate Plane",
+      "SortOrder": 120,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/8/11/preparation.html",
+      "SemanticSha256": "cf8d4f46938faa77766e45cc6a1b6c3f5b2621eb72bca553cdf7807f8516abb2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.B.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.B.8",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.G.B.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.B.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.8.12",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U08:L12",
+      "UnitNumber": 8,
+      "UnitTitle": "Pythagorean Theorem and Irrational Numbers",
+      "LessonNumber": 12,
+      "Title": "Edge Lengths and Volumes",
+      "SortOrder": 121,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/8/12/preparation.html",
+      "SemanticSha256": "4b12356acd5197847c0e66d487945b49db8bdf3c0c75a9887f63aaf54cc10db0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.NS.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.NS.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.A.2",
+        "CCSS:8.NS.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.8.13",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U08:L13",
+      "UnitNumber": 8,
+      "UnitTitle": "Pythagorean Theorem and Irrational Numbers",
+      "LessonNumber": 13,
+      "Title": "Cube Roots",
+      "SortOrder": 122,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/8/13/preparation.html",
+      "SemanticSha256": "09d69c0f9af3c2026e4bfcec2bbf635e9223ce0222a863a8b1de7217fe9af4fb",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.EE.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.NS.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.NS.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.EE.A.2",
+        "CCSS:8.NS.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.8.14",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U08:L14",
+      "UnitNumber": 8,
+      "UnitTitle": "Pythagorean Theorem and Irrational Numbers",
+      "LessonNumber": 14,
+      "Title": "Decimal Representations of Rational Numbers",
+      "SortOrder": 123,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/8/14/preparation.html",
+      "SemanticSha256": "d530cd69f0350a66c5523dc4170d54de03545c273377483a17fbb03565762287",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.NS.A.2.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.EE.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.NS.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.NS.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.NS.A.1",
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "8.NS.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.NS.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.8.15",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U08:L15",
+      "UnitNumber": 8,
+      "UnitTitle": "Pythagorean Theorem and Irrational Numbers",
+      "LessonNumber": 15,
+      "Title": "Infinite Decimal Expansions",
+      "SortOrder": 124,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/8/15/preparation.html",
+      "SemanticSha256": "ae3cf9289083f1cbea8007c664622f241d073dbcf2481e5d6793e52f46e26a3e",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.NS.A.2.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.NS.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.NS.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.NS.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.8.16",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U08:L16",
+      "UnitNumber": 8,
+      "UnitTitle": "Pythagorean Theorem and Irrational Numbers",
+      "LessonNumber": 16,
+      "Title": "When Is the Same Size Not the Same Size?",
+      "SortOrder": 125,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/8/16/preparation.html",
+      "SemanticSha256": "e6209567c298ab706fc44cd4832b43d7f0ffaa696a90f9b8e2084427586c8326",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.RP.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.B.7",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.B.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.9.1",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U09:L01",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 1,
+      "Title": "Tessellations of the Plane",
+      "SortOrder": 126,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/9/1/preparation.html",
+      "SemanticSha256": "5cf3b3cef3cf194391005bd7bc9e53c5470430bf8d9c75a4bab693963b0d0455",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "8.9.2",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U09:L02",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 2,
+      "Title": "Regular Tessellations",
+      "SortOrder": 127,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/9/2/preparation.html",
+      "SemanticSha256": "c76f161a45a9df68aa8eeb414768f3c87fcd15ac8d909b1d23f8c8ffbf878f47",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "7.G.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.G.A.5",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.G.A.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.9.3",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U09:L03",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 3,
+      "Title": "Tessellating Polygons",
+      "SortOrder": 128,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/9/3/preparation.html",
+      "SemanticSha256": "5c374b266106f56db0af3cacc090172ea247e513f1007e216d1d9274f4d811ec",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "8.9.4",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U09:L04",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 4,
+      "Title": "What Influences Temperature?",
+      "SortOrder": 129,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/9/4/preparation.html",
+      "SemanticSha256": "27cd1ac654fb62b7215b537ce5e9982b7c3fe797ff7884f0f66756c05d65d50d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:8.F.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.SP.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:8.F.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "8.9.5",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U09:L05",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 5,
+      "Title": "Plotting the Weather",
+      "SortOrder": 130,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/9/5/preparation.html",
+      "SemanticSha256": "2485bffcc3a008c7a1363245b2ce1c6e99a410c3fa4ce630d1c5ec6e9ff2b04d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.SP.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "8.9.6",
+      "LessonCode": "PED:US-CCSS-MATH:G8:U09:L06",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting It All Together",
+      "LessonNumber": 6,
+      "Title": "Using and Interpreting a Mathematical Model",
+      "SortOrder": 131,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/3/9/6/preparation.html",
+      "SemanticSha256": "b7ed5cc5e703ecace6a4ada3298e6f7e7a33d3802b060bdbe74bacd6cedb996c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.F.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "8.SP.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": []
+    }
+  ]
+}
