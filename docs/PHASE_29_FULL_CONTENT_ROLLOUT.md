@@ -90,8 +90,16 @@ Supporting-only lessons are:
 - available as pedagogical context/support for formally aligned lessons.
 
 Common Core currently locks 94 such source-valid supporting lessons.
-Its standalone canonical-content rollout target is therefore 1,496 formally
-aligned lessons out of a 1,590-lesson pedagogical graph.
+
+Kindergarten remains present only in the verified official Common Core
+framework and is outside the Edulytics product lesson scope.
+
+The Common Core product rollout therefore begins at Grade 1 and contains:
+
+- 1,560 in-scope pedagogical lessons;
+- 1,466 standalone canonical-content targets;
+- 94 source-valid supporting-only lessons;
+- 0 Kindergarten product pedagogical lessons.
 
 See `PHASE_29_COMMON_CORE_SUPPORTING_LESSON_POLICY.md`.
 

@@ -461,6 +461,29 @@ public sealed class MathematicsPedagogicalLessonSeeder
 
             foreach (var level in levels)
             {
+                // Edulytics Mathematics product scope begins at Grade 1.
+                //
+                // Common Core Kindergarten remains in the verified official
+                // framework for source integrity, but no Kindergarten
+                // pedagogical product lessons are seeded.
+                //
+                // RemoveStaleLessonsSafelyAsync retires historical fallback
+                // lessons and refuses removal if canonical content references
+                // any stale lesson.
+                if (
+                    string.Equals(
+                        pack.Code,
+                        MathematicsCurriculumPackRegistry.CommonCoreCode,
+                        StringComparison.Ordinal) &&
+                    level.LogicalLevel == 1 &&
+                    string.Equals(
+                        level.NativeLabel,
+                        "Kindergarten",
+                        StringComparison.Ordinal))
+                {
+                    continue;
+                }
+
                 var ownedByBlueprint =
                     blueprints.Any(
                         x =>

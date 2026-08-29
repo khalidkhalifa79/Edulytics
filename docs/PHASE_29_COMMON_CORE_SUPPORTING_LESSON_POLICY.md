@@ -4,8 +4,8 @@
 
 The accepted Common Core pedagogical graph contains:
 
-- 1,590 total pedagogical lessons in the deployed runtime graph;
-- 1,496 lessons with at least one exact accepted formal
+- 1,560 in-scope pedagogical lessons in the deployed product runtime graph;
+- 1,466 lessons with at least one exact accepted formal
   Standard / Learning Outcome mapping;
 - 94 source-valid pedagogical lessons with no formal OutcomeCode.
 
@@ -18,6 +18,23 @@ standard for that lesson.
 Edulytics MUST NOT fabricate an official Standard / Outcome mapping merely
 to make those lessons independently publishable.
 
+## Kindergarten product-scope exclusion
+
+Common Core Kindergarten remains preserved in the verified official
+curriculum framework because it is part of the authoritative source.
+
+It is outside the Edulytics product lesson scope.
+
+Therefore:
+
+- no Kindergarten pedagogical product lessons are seeded;
+- no Kindergarten canonical lesson-content bodies are created;
+- Kindergarten is not exposed as a selectable student curriculum level;
+- Kindergarten is excluded from Phase 29 content denominators;
+- official Kindergarten Standards are not deleted or rewritten.
+
+The product pedagogical rollout begins at **Grade 1**.
+
 ## Canonical-content rule
 
 ### Standalone canonical lesson target
@@ -27,7 +44,7 @@ has at least one exact accepted official Standard / Learning Outcome mapping.
 
 For the current Common Core graph:
 
-- standalone canonical targets: **1,496**.
+- standalone canonical targets: **1,466**.
 
 These lessons must receive the Phase 29 canonical body:
 
@@ -69,13 +86,13 @@ Supporting lessons:
 
 For Common Core Phase 29 content rollout:
 
-- total pedagogical graph = 1,590;
-- standalone canonical-content target = 1,496;
+- in-scope pedagogical product graph = 1,560;
+- standalone canonical-content target = 1,466;
 - supporting-only source lessons = 94.
 
 Common Core content closure therefore requires:
 
-**1,496 / 1,496 standalone canonical targets Production Ready**
+**1,466 / 1,466 standalone canonical targets Production Ready**
 
 plus:
 

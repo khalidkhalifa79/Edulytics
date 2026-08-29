@@ -32,8 +32,8 @@
   },
   "nextResearchAndContentTarget": {
     "packCode": "US-CCSS-MATH",
-    "nativeLevel": "Grade 5",
-    "reason": "Common Core Grades 6–8 now form a completed source-driven middle-school family. Kindergarten is outside the current product scope; continue Common Core with the lower-grade source family beginning at Grade 5."
+    "nativeLevel": "Grade 1",
+    "reason": "Common Core accepted source-driven blueprints are locked for Grades 1-8 and High School. Kindergarten is outside the Edulytics product scope. Begin full canonical lesson-content authoring with Grade 1."
   },
   "curricula": [
     {
@@ -424,12 +424,12 @@
           "pathway": null,
           "officialSourcePeriod": "2026-2027",
           "officialSourceResolution": "CurrentOfficial",
-          "pedagogicalSelectionStatus": "ResearchRequired",
-          "pedagogicalSourceType": "WidelyUsedPublisherTextbook",
+          "pedagogicalSelectionStatus": "OutOfCurrentProductScope",
+          "pedagogicalSourceType": "NotApplicable",
           "sourceFamily": "",
-          "selectionEvidence": "",
-          "blockingReason": "Resolve school-adopted textbook first; otherwise record evidence for the selected widely-used Common-Core-aligned pedagogical source.",
-          "note": "Official Common Core Standard alignment remains authoritative regardless of textbook choice."
+          "selectionEvidence": "Product Owner decision: Kindergarten is outside the Edulytics product scope.",
+          "blockingReason": "",
+          "note": "Official Common Core Kindergarten Standards remain preserved in the verified framework for source integrity. No Kindergarten pedagogical product lessons or canonical lesson-content bodies are seeded or exposed."
         },
         {
           "logicalLevel": 2,
@@ -438,12 +438,12 @@
           "pathway": null,
           "officialSourcePeriod": "2026-2027",
           "officialSourceResolution": "CurrentOfficial",
-          "pedagogicalSelectionStatus": "ResearchRequired",
-          "pedagogicalSourceType": "WidelyUsedPublisherTextbook",
-          "sourceFamily": "",
-          "selectionEvidence": "",
-          "blockingReason": "Resolve school-adopted textbook first; otherwise record evidence for the selected widely-used Common-Core-aligned pedagogical source.",
-          "note": "Official Common Core Standard alignment remains authoritative regardless of textbook choice."
+          "pedagogicalSelectionStatus": "ResolvedExact",
+          "pedagogicalSourceType": "OpenEducationalResource",
+          "sourceFamily": "IM K-5 Math Grade 1 — Illustrative Mathematics / Kendall Hunt, 1st Edition (2021)",
+          "selectionEvidence": "Persistent Grade 1 source-lock graph SHA-256 1e3d264fc9d6b2da2d0b494c3379370d3216b967f497242c912e9a3fc3934eb8; elementary batch source-lock SHA-256 3bf5fba93d0a0288658b1f58949dc3114eaede7bd775816a3e3aa4e47e4ffc9f; 8 units, 146 lessons, 411 formal mappings, 21/21 accepted Grade 1 Standards covered by source Addressing alignments.",
+          "blockingReason": "",
+          "note": "The pedagogical unit/lesson sequence, lesson titles and alignment metadata are captured from the CC BY 4.0 source with attribution. IM/Kendall Hunt names or logos, book-cover artwork, proprietary visual design and assessment content are not imported. Edulytics lesson explanations, worked examples, diagrams, common mistakes and summaries remain independently authored and reviewed."
         },
         {
           "logicalLevel": 3,
@@ -452,12 +452,12 @@
           "pathway": null,
           "officialSourcePeriod": "2026-2027",
           "officialSourceResolution": "CurrentOfficial",
-          "pedagogicalSelectionStatus": "ResearchRequired",
-          "pedagogicalSourceType": "WidelyUsedPublisherTextbook",
-          "sourceFamily": "",
-          "selectionEvidence": "",
-          "blockingReason": "Resolve school-adopted textbook first; otherwise record evidence for the selected widely-used Common-Core-aligned pedagogical source.",
-          "note": "Official Common Core Standard alignment remains authoritative regardless of textbook choice."
+          "pedagogicalSelectionStatus": "ResolvedExact",
+          "pedagogicalSourceType": "OpenEducationalResource",
+          "sourceFamily": "IM K-5 Math Grade 2 — Illustrative Mathematics / Kendall Hunt, 1st Edition (2021)",
+          "selectionEvidence": "Persistent Grade 2 source-lock graph SHA-256 5566fcd85ca099f10cd62021c8d0cd778093b3789fe7f72d2a1b1a1cc6594c74; elementary batch source-lock SHA-256 3bf5fba93d0a0288658b1f58949dc3114eaede7bd775816a3e3aa4e47e4ffc9f; 9 units, 146 lessons, 330 formal mappings, 26/26 accepted Grade 2 Standards covered by source Addressing alignments.",
+          "blockingReason": "",
+          "note": "The pedagogical unit/lesson sequence, lesson titles and alignment metadata are captured from the CC BY 4.0 source with attribution. IM/Kendall Hunt names or logos, book-cover artwork, proprietary visual design and assessment content are not imported. Edulytics lesson explanations, worked examples, diagrams, common mistakes and summaries remain independently authored and reviewed."
         },
         {
           "logicalLevel": 4,
@@ -466,12 +466,12 @@
           "pathway": null,
           "officialSourcePeriod": "2026-2027",
           "officialSourceResolution": "CurrentOfficial",
-          "pedagogicalSelectionStatus": "ResearchRequired",
-          "pedagogicalSourceType": "WidelyUsedPublisherTextbook",
-          "sourceFamily": "",
-          "selectionEvidence": "",
-          "blockingReason": "Resolve school-adopted textbook first; otherwise record evidence for the selected widely-used Common-Core-aligned pedagogical source.",
-          "note": "Official Common Core Standard alignment remains authoritative regardless of textbook choice."
+          "pedagogicalSelectionStatus": "ResolvedExact",
+          "pedagogicalSourceType": "OpenEducationalResource",
+          "sourceFamily": "IM K-5 Math Grade 3 — Illustrative Mathematics / Kendall Hunt, 1st Edition (2021)",
+          "selectionEvidence": "Persistent Grade 3 source-lock graph SHA-256 4ef968a9f5024e97199617425c7b18244886b12285498160e46284a5141648e0; elementary batch source-lock SHA-256 3bf5fba93d0a0288658b1f58949dc3114eaede7bd775816a3e3aa4e47e4ffc9f; 8 units, 143 lessons, 222 formal mappings, 25/25 accepted Grade 3 Standards covered by source Addressing alignments.",
+          "blockingReason": "",
+          "note": "The pedagogical unit/lesson sequence, lesson titles and alignment metadata are captured from the CC BY 4.0 source with attribution. IM/Kendall Hunt names or logos, book-cover artwork, proprietary visual design and assessment content are not imported. Edulytics lesson explanations, worked examples, diagrams, common mistakes and summaries remain independently authored and reviewed."
         },
         {
           "logicalLevel": 5,
@@ -480,12 +480,12 @@
           "pathway": null,
           "officialSourcePeriod": "2026-2027",
           "officialSourceResolution": "CurrentOfficial",
-          "pedagogicalSelectionStatus": "ResearchRequired",
-          "pedagogicalSourceType": "WidelyUsedPublisherTextbook",
-          "sourceFamily": "",
-          "selectionEvidence": "",
-          "blockingReason": "Resolve school-adopted textbook first; otherwise record evidence for the selected widely-used Common-Core-aligned pedagogical source.",
-          "note": "Official Common Core Standard alignment remains authoritative regardless of textbook choice."
+          "pedagogicalSelectionStatus": "ResolvedExact",
+          "pedagogicalSourceType": "OpenEducationalResource",
+          "sourceFamily": "IM K-5 Math Grade 4 — Illustrative Mathematics / Kendall Hunt, 1st Edition (2021)",
+          "selectionEvidence": "Persistent Grade 4 source-lock graph SHA-256 fe06ae8a0daabaa0ad36c8c6f956b2348705bd732873f52c60730731d61c03f1; elementary batch source-lock SHA-256 3bf5fba93d0a0288658b1f58949dc3114eaede7bd775816a3e3aa4e47e4ffc9f; 9 units, 149 lessons, 253 formal mappings, 28/28 accepted Grade 4 Standards covered by source Addressing alignments.",
+          "blockingReason": "",
+          "note": "The pedagogical unit/lesson sequence, lesson titles and alignment metadata are captured from the CC BY 4.0 source with attribution. IM/Kendall Hunt names or logos, book-cover artwork, proprietary visual design and assessment content are not imported. Edulytics lesson explanations, worked examples, diagrams, common mistakes and summaries remain independently authored and reviewed."
         },
         {
           "logicalLevel": 6,
@@ -494,12 +494,12 @@
           "pathway": null,
           "officialSourcePeriod": "2026-2027",
           "officialSourceResolution": "CurrentOfficial",
-          "pedagogicalSelectionStatus": "ResearchRequired",
-          "pedagogicalSourceType": "WidelyUsedPublisherTextbook",
-          "sourceFamily": "",
-          "selectionEvidence": "",
-          "blockingReason": "Resolve school-adopted textbook first; otherwise record evidence for the selected widely-used Common-Core-aligned pedagogical source.",
-          "note": "Official Common Core Standard alignment remains authoritative regardless of textbook choice."
+          "pedagogicalSelectionStatus": "ResolvedExact",
+          "pedagogicalSourceType": "OpenEducationalResource",
+          "sourceFamily": "IM K-5 Math Grade 5 — Illustrative Mathematics / Kendall Hunt, 1st Edition (2021)",
+          "selectionEvidence": "Persistent Grade 5 source-lock graph SHA-256 7d99645b607df03449c2ceb9a64114f51634c1206632f0396ccf3dd1da19d848; elementary batch source-lock SHA-256 3bf5fba93d0a0288658b1f58949dc3114eaede7bd775816a3e3aa4e47e4ffc9f; 8 units, 148 lessons, 210 formal mappings, 26/26 accepted Grade 5 Standards covered by source Addressing alignments.",
+          "blockingReason": "",
+          "note": "The pedagogical unit/lesson sequence, lesson titles and alignment metadata are captured from the CC BY 4.0 source with attribution. IM/Kendall Hunt names or logos, book-cover artwork, proprietary visual design and assessment content are not imported. Edulytics lesson explanations, worked examples, diagrams, common mistakes and summaries remain independently authored and reviewed."
         },
         {
           "logicalLevel": 7,

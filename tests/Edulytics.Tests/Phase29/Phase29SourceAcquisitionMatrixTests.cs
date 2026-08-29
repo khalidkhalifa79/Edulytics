@@ -236,7 +236,7 @@ public sealed class Phase29SourceAcquisitionMatrixTests
     }
 
     [Fact]
-    public void CommonCoreMiddleSchoolIsResolvedAndNextTargetAdvancesToGrade5()
+    public void CommonCoreGradesOneToEightAreResolvedKindergartenIsOutOfScopeAndNextTargetIsGrade1()
     {
         using var document = Load();
 
@@ -257,7 +257,7 @@ public sealed class Phase29SourceAcquisitionMatrixTests
                 .ToArray();
 
         foreach (var grade in
-                 new[] { 6, 7, 8 })
+                 Enumerable.Range(1, 8))
         {
             var scope =
                 scopes.Single(
@@ -279,6 +279,25 @@ public sealed class Phase29SourceAcquisitionMatrixTests
                         .GetString()));
         }
 
+        var kindergarten =
+            scopes.Single(
+                x =>
+                    x.GetProperty("nativeLevel")
+                        .GetString() ==
+                    "Kindergarten");
+
+        Assert.Equal(
+            "OutOfCurrentProductScope",
+            kindergarten.GetProperty(
+                    "pedagogicalSelectionStatus")
+                .GetString());
+
+        Assert.True(
+            string.IsNullOrWhiteSpace(
+                kindergarten.GetProperty(
+                        "blockingReason")
+                    .GetString()));
+
         var next =
             document.RootElement
                 .GetProperty(
@@ -290,7 +309,7 @@ public sealed class Phase29SourceAcquisitionMatrixTests
                 .GetString());
 
         Assert.Equal(
-            "Grade 5",
+            "Grade 1",
             next.GetProperty("nativeLevel")
                 .GetString());
     }

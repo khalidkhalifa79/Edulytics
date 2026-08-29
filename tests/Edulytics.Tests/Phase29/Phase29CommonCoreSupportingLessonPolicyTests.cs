@@ -112,7 +112,7 @@ public sealed class
 
     [Fact]
     public async Task
-        SeededRuntimeGraphLocks1496StandaloneAnd94Supporting()
+        SeededRuntimeGraphExcludesKindergartenAndLocks1466StandaloneAnd94Supporting()
     {
         await using var db =
             CreateDb();
@@ -152,6 +152,35 @@ public sealed class
                     x => x.Id)
                 .ToArrayAsync();
 
+        var kindergartenLessonCount =
+            await db
+                .CurriculumPedagogicalLessons
+                .CountAsync(
+                    x =>
+                        x.FrameworkVersionId ==
+                            versionId &&
+                        x.NativeLevel ==
+                            "Kindergarten");
+
+        var officialKindergartenCount =
+            await db
+                .CurriculumPackContentNodes
+                .CountAsync(
+                    x =>
+                        x.FrameworkVersionId ==
+                            versionId &&
+                        x.FrameworkCode ==
+                            MathematicsCurriculumPackRegistry
+                                .CommonCoreCode &&
+                        x.IsOfficial &&
+                        x.IsActive &&
+                        (
+                            x.NodeKind == "Standard" ||
+                            x.NodeKind == "Outcome"
+                        ) &&
+                        x.LogicalLevelFrom <= 1 &&
+                        x.LogicalLevelTo >= 1);
+
         var mappedLessonIds =
             await db
                 .CurriculumPedagogicalLessonOutcomes
@@ -168,17 +197,25 @@ public sealed class
                 .ToArrayAsync();
 
         Assert.Equal(
-            1590,
+            1560,
             lessonIds.Length);
 
         Assert.Equal(
-            1496,
+            1466,
             mappedLessonIds.Length);
 
         Assert.Equal(
             94,
             lessonIds.Length -
             mappedLessonIds.Length);
+
+        Assert.Equal(
+            0,
+            kindergartenLessonCount);
+
+        Assert.True(
+            officialKindergartenCount > 0,
+            "Official Common Core Kindergarten Standards must remain preserved.");
 
         Assert.True(
             LessonContentPolicy
