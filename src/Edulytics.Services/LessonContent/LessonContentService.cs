@@ -47,13 +47,13 @@ public sealed class LessonContentService : ILessonContentService
                         contentByLesson.TryGetValue(lesson.Id,out var content);
                         return new CanonicalLessonLibraryItem(
                             lesson.Id,lesson.Code,lesson.Title,lesson.UnitTitle,lesson.SortOrder,
-                            content?.Status,content?.PublishedAtUtc,lesson.OfficialOutcomeCount>0);
+                            content?.Status,content?.PublishedAtUtc,LessonContentPolicy.IsStandaloneCanonicalTarget(lesson.OfficialOutcomeCount));
                     }).ToArray();
 
                 return new CanonicalCurriculumLibraryGroup(
                     c.FrameworkVersionId,c.FrameworkName,c.FrameworkVersionName,
                     c.SubjectName,c.SubjectCode,c.GradeName,
-                    items.Length,items.Count(x=>x.Status==CanonicalLessonContentStatus.Published&&x.HasOfficialAlignment),items);
+                    items.Length,items.Count(x=>LessonContentPolicy.IsProductionReady(x.Status,x.HasOfficialAlignment)),items);
             })
             .OrderBy(x=>x.SubjectCode).ThenBy(x=>x.GradeName).ThenBy(x=>x.FrameworkName)
             .ToArray();
@@ -98,7 +98,7 @@ public sealed class LessonContentService : ILessonContentService
             foreach(var lesson in lessons.Where(x=>
                 x.FrameworkVersionId==c.FrameworkVersionId&&
                 InLogicalLevel(x,logicalLevel)&&
-                x.OfficialOutcomeCount>0))
+                LessonContentPolicy.IsStandaloneCanonicalTarget(x.OfficialOutcomeCount)))
             {
                 if(!contentByLesson.TryGetValue(lesson.Id,out var content))continue;
                 var tr=SelectTranslation(content.Translations,cultureCode);
@@ -126,7 +126,7 @@ public sealed class LessonContentService : ILessonContentService
         var lessons=await _lessons.ListPedagogicalLessonsAsync(
             contexts.Select(x=>x.FrameworkVersionId).Distinct().ToArray(),cancellationToken);
         var lesson=lessons.SingleOrDefault(x=>x.Id==lessonId);
-        if(lesson is null||lesson.OfficialOutcomeCount==0)
+        if(lesson is null||!LessonContentPolicy.IsStandaloneCanonicalTarget(lesson.OfficialOutcomeCount))
             return LessonContentQueryResult<StudentLessonDetail>.Failure(LessonContentErrorCode.LessonNotFound);
 
         var c=contexts.FirstOrDefault(x=>

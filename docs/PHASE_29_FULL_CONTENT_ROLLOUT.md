@@ -71,6 +71,30 @@ Every Published lesson must have:
 
 Generic `Lesson 01` shells are not Production Ready.
 
+
+### Supporting pedagogical lessons
+
+A source-valid pedagogical lesson that has no formal official OutcomeCode is
+not automatically an error. It may be retained only when that zero-formal
+state is locked by the accepted pedagogical source blueprint.
+
+Edulytics MUST NOT fabricate an official Standard / Learning Outcome mapping
+to make such a lesson independently publishable.
+
+Supporting-only lessons are:
+
+- preserved in the pedagogical source sequence;
+- excluded from the standalone canonical-content Production Ready denominator;
+- not exposed as independent student curriculum lessons under the current
+  Lesson Content contract;
+- available as pedagogical context/support for formally aligned lessons.
+
+Common Core currently locks 94 such source-valid supporting lessons.
+Its standalone canonical-content rollout target is therefore 1,496 formally
+aligned lessons out of a 1,590-lesson pedagogical graph.
+
+See `PHASE_29_COMMON_CORE_SUPPORTING_LESSON_POLICY.md`.
+
 ## Rollout workstreams
 
 ### 29A — Engine and rendering
