@@ -950,12 +950,9 @@ public sealed class AcademicStructureService : IAcademicStructureService
         if (SingleRole(scope.Actor!.Roles) != RoleNames.SubjectSupervisor)
             return Fail(AcademicStructureErrorCode.AccessDenied);
         var name = Clean(request.Name);
-        var code = NormalizeCode(request.Code);
+        var requestedCode = NormalizeCode(request.Code);
         var validation = ValidateName(name);
         if (validation is not null) return validation;
-
-        if (!ValidCode(code))
-            return Fail(nameof(request.Code), AcademicStructureErrorCode.InvalidCode);
 
         var schoolId = scope.School!.Id;
         var year = await _academic.GetAcademicYearAsync(
@@ -1012,6 +1009,21 @@ public sealed class AcademicStructureService : IAcademicStructureService
         var programId =
             program.Id;
 
+        var entityId =
+            Guid.NewGuid();
+
+        var code =
+            requestedCode.Length == 0
+                ? GenerateInternalClassCode(entityId)
+                : requestedCode;
+
+        if (!ValidCode(code))
+        {
+            return Fail(
+                nameof(request.Code),
+                AcademicStructureErrorCode.InvalidCode);
+        }
+
         if (await _academic.ClassCodeExistsInProgramAsync(
                 schoolId, year.Id, programId, code, cancellationToken: cancellationToken))
             return Fail(nameof(request.Code),
@@ -1019,7 +1031,7 @@ public sealed class AcademicStructureService : IAcademicStructureService
 
         var entity = new ClassGroup
         {
-            Id = Guid.NewGuid(),
+            Id = entityId,
             SchoolId = schoolId,
             AcademicYearId = year.Id,
             AcademicProgramId = programId,
@@ -1073,12 +1085,8 @@ public sealed class AcademicStructureService : IAcademicStructureService
             return Fail(AcademicStructureErrorCode.ConcurrencyConflict);
 
         var name = Clean(request.Name);
-        var code = NormalizeCode(request.Code);
         var validation = ValidateName(name);
         if (validation is not null) return validation;
-
-        if (!ValidCode(code))
-            return Fail(nameof(request.Code), AcademicStructureErrorCode.InvalidCode);
 
         var schoolId = scope.School!.Id;
         var entity = await _academic.GetClassGroupAsync(
@@ -1086,6 +1094,18 @@ public sealed class AcademicStructureService : IAcademicStructureService
 
         if (entity is null)
             return Fail(AcademicStructureErrorCode.ClassGroupNotFound);
+
+        var code =
+            string.IsNullOrWhiteSpace(request.Code)
+                ? entity.Code
+                : NormalizeCode(request.Code);
+
+        if (!ValidCode(code))
+        {
+            return Fail(
+                nameof(request.Code),
+                AcademicStructureErrorCode.InvalidCode);
+        }
 
         var grade = await _academic.GetGradeLevelAsync(
             schoolId, request.GradeLevelId, cancellationToken);
@@ -1782,6 +1802,9 @@ public sealed class AcademicStructureService : IAcademicStructureService
 
     private static bool ValidCode(string value) =>
         value.Length is > 0 and <= 50 && CodePattern.IsMatch(value);
+
+    private static string GenerateInternalClassCode(Guid id) =>
+        $"CLS-{id:N}".ToUpperInvariant();
 
     private static string Clean(string? value) =>
         value?.Trim() ?? string.Empty;

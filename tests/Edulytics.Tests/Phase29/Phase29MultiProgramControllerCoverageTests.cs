@@ -89,7 +89,6 @@ public sealed class Phase29MultiProgramControllerCoverageTests
                 service.Program.Id,
                 service.Grade.Id,
                 "6A",
-                "6A",
                 AcademicStructureStatus.Active,
                 CancellationToken.None));
 
@@ -104,7 +103,6 @@ public sealed class Phase29MultiProgramControllerCoverageTests
                 service.Program.Id,
                 service.Grade.Id,
                 "6A",
-                "6A",
                 AcademicStructureStatus.Active,
                 "bad",
                 CancellationToken.None));
@@ -114,7 +112,6 @@ public sealed class Phase29MultiProgramControllerCoverageTests
                 service.ClassGroup.Id,
                 service.Program.Id,
                 service.Grade.Id,
-                "6A",
                 "6A",
                 AcademicStructureStatus.Active,
                 rowVersion,

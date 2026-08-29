@@ -165,14 +165,22 @@ public sealed class AcademicStructureController : Controller
     [HttpPost("classes")]
     [ValidateAntiForgeryToken]
     public Task<IActionResult> CreateClassGroup(
-        Guid academicYearId, Guid academicProgramId, Guid gradeLevelId, string name, string code,
+        Guid academicYearId,
+        Guid academicProgramId,
+        Guid gradeLevelId,
+        string name,
         AcademicStructureStatus status,
         CancellationToken cancellationToken) =>
         ExecuteAsync(
             id => _academic.CreateClassGroupAsync(
                 id,
                 new CreateClassGroupRequest(
-                    academicYearId, gradeLevelId, name, code, status, academicProgramId),
+                    academicYearId,
+                    gradeLevelId,
+                    name,
+                    string.Empty,
+                    status,
+                    academicProgramId),
                 cancellationToken),
             "SuccessClassCreated");
 
@@ -221,8 +229,12 @@ public sealed class AcademicStructureController : Controller
     [HttpPost("classes/{id:guid}/edit")]
     [ValidateAntiForgeryToken]
     public Task<IActionResult> EditClassGroup(
-        Guid id, Guid academicProgramId, Guid gradeLevelId, string name, string code,
-        AcademicStructureStatus status, string rowVersion,
+        Guid id,
+        Guid academicProgramId,
+        Guid gradeLevelId,
+        string name,
+        AcademicStructureStatus status,
+        string rowVersion,
         CancellationToken cancellationToken)
     {
         if (!TryDecodeRowVersion(rowVersion, out var expected))
@@ -232,7 +244,13 @@ public sealed class AcademicStructureController : Controller
             actorId => _academic.UpdateClassGroupAsync(
                 actorId,
                 new UpdateClassGroupRequest(
-                    id, gradeLevelId, name, code, status, expected, academicProgramId),
+                    id,
+                    gradeLevelId,
+                    name,
+                    string.Empty,
+                    status,
+                    expected,
+                    academicProgramId),
                 cancellationToken),
             "SuccessClassUpdated");
     }
