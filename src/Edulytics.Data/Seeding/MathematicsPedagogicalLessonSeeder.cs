@@ -678,7 +678,15 @@ public sealed class MathematicsPedagogicalLessonSeeder
         {
             if (byId.TryGetValue(row.Id, out var current))
             {
-                EnsureLessonMatches(current, row);
+                if (!TryUpgradeAcceptedCommonCoreGrade1B3Lesson(
+                        current,
+                        row))
+                {
+                    EnsureLessonMatches(
+                        current,
+                        row);
+                }
+
                 continue;
             }
 
@@ -827,6 +835,128 @@ public sealed class MathematicsPedagogicalLessonSeeder
         _db.CurriculumPedagogicalLessonOutcomes.RemoveRange(staleMappings);
         _db.CurriculumPedagogicalLessons.RemoveRange(stale);
         await _db.SaveChangesAsync(ct);
+    }
+
+    private static bool TryUpgradeAcceptedCommonCoreGrade1B3Lesson(
+        CurriculumPedagogicalLesson current,
+        CurriculumPedagogicalLesson expected)
+    {
+        if (!expected.Code.StartsWith(
+                "PED:US-CCSS-MATH:L2:GRADE-1:CORE:",
+                StringComparison.Ordinal))
+        {
+            return false;
+        }
+
+        var affected =
+            expected.Code.EndsWith(
+                ":CCSS-1-OA-B-4",
+                StringComparison.Ordinal) ||
+            expected.Code.EndsWith(
+                ":CCSS-1-OA-C-5",
+                StringComparison.Ordinal) ||
+            expected.Code.EndsWith(
+                ":CCSS-1-OA-C-6",
+                StringComparison.Ordinal) ||
+            expected.Code.EndsWith(
+                ":CCSS-1-OA-D-7",
+                StringComparison.Ordinal) ||
+            expected.Code.EndsWith(
+                ":CCSS-1-OA-D-8",
+                StringComparison.Ordinal);
+
+        if (!affected)
+        {
+            return false;
+        }
+
+        if (current.FrameworkVersionId !=
+                expected.FrameworkVersionId ||
+            current.OfficialLessonNodeId !=
+                expected.OfficialLessonNodeId ||
+            !string.Equals(
+                current.Code,
+                expected.Code,
+                StringComparison.Ordinal) ||
+            !string.Equals(
+                current.UnitKey,
+                expected.UnitKey,
+                StringComparison.Ordinal) ||
+            !string.Equals(
+                current.UnitTitle,
+                expected.UnitTitle,
+                StringComparison.Ordinal) ||
+            current.LogicalLevelFrom !=
+                expected.LogicalLevelFrom ||
+            current.LogicalLevelTo !=
+                expected.LogicalLevelTo ||
+            !string.Equals(
+                current.NativeLevel,
+                expected.NativeLevel,
+                StringComparison.Ordinal) ||
+            !string.Equals(
+                current.Pathway,
+                expected.Pathway,
+                StringComparison.Ordinal) ||
+            current.SortOrder !=
+                expected.SortOrder - 1)
+        {
+            return false;
+        }
+
+        const string marker =
+            " — Lesson ";
+
+        var markerIndex =
+            expected.Title.LastIndexOf(
+                marker,
+                StringComparison.Ordinal);
+
+        if (markerIndex < 0)
+        {
+            return false;
+        }
+
+        var numberStart =
+            markerIndex +
+            marker.Length;
+
+        var currentNumberText =
+            expected.Title[
+                numberStart..];
+
+        if (!int.TryParse(
+                currentNumberText,
+                out var currentNumber) ||
+            currentNumber <= 1)
+        {
+            return false;
+        }
+
+        var historicalTitle =
+            expected.Title[
+                ..numberStart] +
+            (currentNumber - 1)
+                .ToString("D2");
+
+        if (!string.Equals(
+                current.Title,
+                historicalTitle,
+                StringComparison.Ordinal))
+        {
+            return false;
+        }
+
+        current.Title =
+            expected.Title;
+
+        current.SortOrder =
+            expected.SortOrder;
+
+        current.UpdatedAtUtc =
+            DateTime.UtcNow;
+
+        return true;
     }
 
     private static void EnsureLessonMatches(

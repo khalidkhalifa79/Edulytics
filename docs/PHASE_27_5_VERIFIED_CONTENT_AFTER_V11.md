@@ -9,7 +9,7 @@ Digest note:
 
 Persisted verified content:
 - England Mathematics: 436 official items.
-- Common Core Mathematics: the original accepted snapshot recorded 360 official items. Phase 29 authoritative-source auditing later proved that 32 numbered Standards and 6 Domain nodes were missing and that 140 existing numbered Standard texts contained trailing PDF-boundary contamination. The corrected accepted cardinality is 392 official items: 384 numbered Mathematics Standards plus 8 Mathematical Practices.
+- Common Core Mathematics: the original accepted snapshot recorded 360 official items. Phase 29 authoritative-source auditing ultimately proved that 33 numbered Standards and 6 Domain nodes were missing and that 140 existing numbered Standard texts contained trailing PDF-boundary contamination. The final corrected accepted cardinality is 393 official items: 385 numbered Mathematics Standards plus 8 Mathematical Practices.
 - Polish Mathematics: 306 official top-level requirements.
 - UAE Mathematics user-facing version: 2026–2027, Term 1 source catalog across Grades 1–12.
 - UAE Grade 9 Advanced Term 1: 42 real lessons, 6 units and 48 lesson-to-standard links using 22 evidenced UAE MoE standard codes.
