@@ -841,14 +841,17 @@ public sealed class MathematicsPedagogicalLessonSeeder
         CurriculumPedagogicalLesson current,
         CurriculumPedagogicalLesson expected)
     {
+        const string grade1Prefix =
+            "PED:US-CCSS-MATH:L2:GRADE-1:CORE:";
+
         if (!expected.Code.StartsWith(
-                "PED:US-CCSS-MATH:L2:GRADE-1:CORE:",
+                grade1Prefix,
                 StringComparison.Ordinal))
         {
             return false;
         }
 
-        var affected =
+        var oaAffected =
             expected.Code.EndsWith(
                 ":CCSS-1-OA-B-4",
                 StringComparison.Ordinal) ||
@@ -865,7 +868,34 @@ public sealed class MathematicsPedagogicalLessonSeeder
                 ":CCSS-1-OA-D-8",
                 StringComparison.Ordinal);
 
-        if (!affected)
+        var practiceAffected =
+            expected.Code.EndsWith(
+                ":CCSS-MP-1",
+                StringComparison.Ordinal) ||
+            expected.Code.EndsWith(
+                ":CCSS-MP-2",
+                StringComparison.Ordinal) ||
+            expected.Code.EndsWith(
+                ":CCSS-MP-3",
+                StringComparison.Ordinal) ||
+            expected.Code.EndsWith(
+                ":CCSS-MP-4",
+                StringComparison.Ordinal) ||
+            expected.Code.EndsWith(
+                ":CCSS-MP-5",
+                StringComparison.Ordinal) ||
+            expected.Code.EndsWith(
+                ":CCSS-MP-6",
+                StringComparison.Ordinal) ||
+            expected.Code.EndsWith(
+                ":CCSS-MP-7",
+                StringComparison.Ordinal) ||
+            expected.Code.EndsWith(
+                ":CCSS-MP-8",
+                StringComparison.Ordinal);
+
+        if (!oaAffected &&
+            !practiceAffected)
         {
             return false;
         }
@@ -904,51 +934,68 @@ public sealed class MathematicsPedagogicalLessonSeeder
             return false;
         }
 
-        const string marker =
-            " — Lesson ";
-
-        var markerIndex =
-            expected.Title.LastIndexOf(
-                marker,
-                StringComparison.Ordinal);
-
-        if (markerIndex < 0)
+        if (oaAffected)
         {
-            return false;
+            const string marker =
+                " — Lesson ";
+
+            var markerIndex =
+                expected.Title.LastIndexOf(
+                    marker,
+                    StringComparison.Ordinal);
+
+            if (markerIndex < 0)
+            {
+                return false;
+            }
+
+            var numberStart =
+                markerIndex +
+                marker.Length;
+
+            var currentNumberText =
+                expected.Title[
+                    numberStart..];
+
+            if (!int.TryParse(
+                    currentNumberText,
+                    out var currentNumber) ||
+                currentNumber <= 1)
+            {
+                return false;
+            }
+
+            var historicalTitle =
+                expected.Title[
+                    ..numberStart] +
+                (currentNumber - 1)
+                    .ToString("D2");
+
+            if (!string.Equals(
+                    current.Title,
+                    historicalTitle,
+                    StringComparison.Ordinal))
+            {
+                return false;
+            }
+
+            current.Title =
+                expected.Title;
         }
-
-        var numberStart =
-            markerIndex +
-            marker.Length;
-
-        var currentNumberText =
-            expected.Title[
-                numberStart..];
-
-        if (!int.TryParse(
-                currentNumberText,
-                out var currentNumber) ||
-            currentNumber <= 1)
+        else
         {
-            return false;
+            // Adding 1.OA.B.3 increases the Grade 1 global
+            // fallback lesson SortOrder before the eight
+            // Mathematical Practices. Their unit-local titles
+            // remain unchanged.
+            if (!string.Equals(
+                    current.Title,
+                    expected.Title,
+                    StringComparison.Ordinal))
+            {
+                return false;
+            }
         }
-
-        var historicalTitle =
-            expected.Title[
-                ..numberStart] +
-            (currentNumber - 1)
-                .ToString("D2");
-
-        if (!string.Equals(
-                current.Title,
-                historicalTitle,
-                StringComparison.Ordinal))
-        {
-            return false;
-        }
-
-        current.Title =
-            expected.Title;
 
         current.SortOrder =
             expected.SortOrder;

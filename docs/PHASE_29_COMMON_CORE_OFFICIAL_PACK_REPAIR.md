@@ -160,6 +160,10 @@ All existing official-pack nodes retain their deterministic ids.
 
 The pedagogical lesson generated for `CCSS:1.OA.B.3` is new. The five existing Grade 1 OA fallback lessons after that insertion (`1.OA.B.4`, `1.OA.C.5`, `1.OA.C.6`, `1.OA.D.7`, `1.OA.D.8`) retain their deterministic lesson ids and may rebaseline by exactly one title/SortOrder position through a narrowly guarded accepted-history upgrade.
 
+The eight Grade 1 fallback lessons for `CCSS:MP.1` through `CCSS:MP.8` also retain their deterministic lesson ids and titles. Because the Mathematical Practices apply across K–12 and are ordered after the Grade 1 numbered Standards, their Grade 1 fallback `SortOrder` values move forward by exactly one position (`21..28` to `22..29`). The accepted-history upgrade permits only that exact SortOrder transition with all other static lesson metadata unchanged.
+
+Therefore the V13-to-V14 pedagogical transition affects exactly 13 existing Grade 1 lessons: five OA lessons with title/SortOrder rebaseline and eight Mathematical Practice lessons with SortOrder-only rebaseline.
+
 Unrelated pedagogical lesson drift remains rejected.
 
 The already accepted Grade 6, Grade 7 and Grade 8 pedagogical graphs are not rewritten by this repair and are verified after staging deployment.
