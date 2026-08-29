@@ -97,7 +97,8 @@ public sealed class Phase29CommonCoreElementaryBatchTests
                 x =>
                     x.PackCode ==
                     MathematicsCurriculumPackRegistry
-                        .CommonCoreCode));
+                        .CommonCoreCode &&
+                    x.SchemaVersion == 1));
 
         foreach (var spec in Specs)
         {

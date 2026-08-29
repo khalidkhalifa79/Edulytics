@@ -68,20 +68,53 @@ public sealed class Phase29PedagogicalSourceLicensePolicyTests
             blueprints,
             blueprint =>
             {
-                Assert.True(
-                    PedagogicalSourceLicensePolicy
-                        .IsApproved(
-                            blueprint.SourceLicense),
-                    $"{blueprint.BlueprintCode}: " +
-                    $"{blueprint.SourceLicense}");
+                if (blueprint.SchemaVersion == 1)
+                {
+                    Assert.True(
+                        PedagogicalSourceLicensePolicy
+                            .IsApproved(
+                                blueprint.SourceLicense),
+                        $"{blueprint.BlueprintCode}: " +
+                        $"{blueprint.SourceLicense}");
 
-                Assert.False(
-                    string.IsNullOrWhiteSpace(
-                        blueprint
-                            .RequiredDigitalAttribution));
+                    Assert.False(
+                        string.IsNullOrWhiteSpace(
+                            blueprint
+                                .RequiredDigitalAttribution));
+
+                    Assert.NotEmpty(
+                        blueprint.SourceEvidenceUrls);
+
+                    return;
+                }
+
+                Assert.Equal(
+                    2,
+                    blueprint.SchemaVersion);
 
                 Assert.NotEmpty(
-                    blueprint.SourceEvidenceUrls);
+                    blueprint.Sources);
+
+                Assert.All(
+                    blueprint.Sources,
+                    source =>
+                    {
+                        Assert.True(
+                            PedagogicalSourceLicensePolicy
+                                .IsApproved(
+                                    source.License),
+                            $"{blueprint.BlueprintCode}/" +
+                            $"{source.SourceKey}: " +
+                            $"{source.License}");
+
+                        Assert.False(
+                            string.IsNullOrWhiteSpace(
+                                source
+                                    .RequiredDigitalAttribution));
+
+                        Assert.NotEmpty(
+                            source.EvidenceUrls);
+                    });
             });
     }
 

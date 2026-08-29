@@ -1,0 +1,140 @@
+{
+  "SchemaVersion": 2,
+  "BlueprintCode": "US-CCSS-MATH:HS:FOURTH:COMPLEX",
+  "PackCode": "US-CCSS-MATH",
+  "VersionCode": "CCSSM-2010",
+  "LogicalLevel": 0,
+  "CourseCode": "COMPLEX",
+  "LogicalLevelFrom": 10,
+  "LogicalLevelTo": 13,
+  "SequenceAuthority": "EdulyticsOwnedSequence",
+  "SuppressOutcomeFallbackForLogicalRange": true,
+  "NativeLevel": "Complex Numbers",
+  "Pathway": "Fourth Courses",
+  "OfficialAuthority": "Common Core State Standards Initiative",
+  "OfficialSourceUrl": "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf",
+  "SourceCheckedAtUtc": "2026-08-29T00:00:00Z",
+  "SourceSelectionReason": "Phase 29 accepted High School pedagogical source strategy.",
+  "SourceSelectionEvidence": "Immutable Phase 29 High School source, placement, evidence, sequence and Blueprint V2 contract locks.",
+  "SemanticGraphSha256": "f4c2a465d03b421878866730556a432652c262cf88849cbc2035e9251e6aa034",
+  "Sources": [
+    {
+      "SourceKey": "SRC01",
+      "SourceType": "Locked pedagogical evidence",
+      "Title": "Mathematics Vision Project",
+      "Publisher": "Mathematics Vision Project",
+      "Edition": "Phase 29 locked source",
+      "RootUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+      "License": "CC BY 4.0",
+      "RequiredDigitalAttribution": "Mathematics Vision Project, CC BY 4.0.",
+      "RightsNote": "Use restricted to accepted Phase 29 commercial-safe license lock.",
+      "EvidenceUrls": [
+        "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf"
+      ]
+    }
+  ],
+  "AcquisitionDiagnostics": {
+    "UnitCount": 1,
+    "LessonCount": 1,
+    "OfficialStandardCount": 4,
+    "AddressingCoverageCount": 4,
+    "FormalMappingCount": 4,
+    "LessonsWithoutNumberedGradeReferenceAnyRole": 0,
+    "LessonsWithoutNumberedAddressingStandard": 0,
+    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 0,
+    "MultiStandardLessons": 1
+  },
+  "Units": [
+    {
+      "Number": 1,
+      "UnitCode": "U01",
+      "SortOrder": 10,
+      "Title": "Complex Numbers",
+      "LessonCount": 1,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+      "SemanticSha256": "17b12f4ca1144a9a17a74c2ed9f33d4c776bedebc120d0c9a7e09763021c04fb"
+    }
+  ],
+  "Lessons": [
+    {
+      "SourceLessonCode": "MVP-ALG2:M03:T08H",
+      "LessonCode": "PED:US-CCSS-MATH:HS:FOURTH:COMPLEX:U01:L01",
+      "UnitNumber": 1,
+      "UnitTitle": "Complex Numbers",
+      "LessonNumber": 1,
+      "Title": "Complex Computations",
+      "SortOrder": 10010,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+      "SemanticSha256": "9e5fa2bca887a5b4ea055db7167b0ae7d975821336e242bbb561cc88af962a44",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CCSS:HSN-CN.A.3",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC01",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+              "SectionOrTask": "3.8H Complex Computations",
+              "EvidenceSha256": "d9891c72ea60e5221fc00899c9bf43297f4a25098adfaa86d16d8870a05d34a7",
+              "License": "CC BY 4.0"
+            }
+          ]
+        },
+        {
+          "OutcomeCode": "CCSS:HSN-CN.B.4",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 2,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC01",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+              "SectionOrTask": "3.8H Complex Computations",
+              "EvidenceSha256": "d9891c72ea60e5221fc00899c9bf43297f4a25098adfaa86d16d8870a05d34a7",
+              "License": "CC BY 4.0"
+            }
+          ]
+        },
+        {
+          "OutcomeCode": "CCSS:HSN-CN.B.5",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 3,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC01",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+              "SectionOrTask": "3.8H Complex Computations",
+              "EvidenceSha256": "d9891c72ea60e5221fc00899c9bf43297f4a25098adfaa86d16d8870a05d34a7",
+              "License": "CC BY 4.0"
+            }
+          ]
+        },
+        {
+          "OutcomeCode": "CCSS:HSN-CN.B.6",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 4,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC01",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+              "SectionOrTask": "3.8H Complex Computations",
+              "EvidenceSha256": "d9891c72ea60e5221fc00899c9bf43297f4a25098adfaa86d16d8870a05d34a7",
+              "License": "CC BY 4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "SchemaVersion": 2,
+  "BlueprintCode": "US-CCSS-MATH:HS:FOURTH:ADV-TRIG-GEO",
+  "PackCode": "US-CCSS-MATH",
+  "VersionCode": "CCSSM-2010",
+  "LogicalLevel": 0,
+  "CourseCode": "ADV-TRIG-GEO",
+  "LogicalLevelFrom": 10,
+  "LogicalLevelTo": 13,
+  "SequenceAuthority": "EdulyticsOwnedSequence",
+  "SuppressOutcomeFallbackForLogicalRange": true,
+  "NativeLevel": "Advanced Trigonometry & Geometry",
+  "Pathway": "Fourth Courses",
+  "OfficialAuthority": "Common Core State Standards Initiative",
+  "OfficialSourceUrl": "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf",
+  "SourceCheckedAtUtc": "2026-08-29T00:00:00Z",
+  "SourceSelectionReason": "Phase 29 accepted High School pedagogical source strategy.",
+  "SourceSelectionEvidence": "Immutable Phase 29 High School source, placement, evidence, sequence and Blueprint V2 contract locks.",
+  "SemanticGraphSha256": "bd88cf7d5febf95a1af6e41ffdd26985fd5ce6ffcac8f212d5f109f57bf527f1",
+  "Sources": [
+    {
+      "SourceKey": "SRC01",
+      "SourceType": "Locked pedagogical evidence",
+      "Title": "Mathematics Vision Project",
+      "Publisher": "Mathematics Vision Project",
+      "Edition": "Phase 29 locked source",
+      "RootUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf",
+      "License": "CC BY 4.0",
+      "RequiredDigitalAttribution": "Mathematics Vision Project, CC BY 4.0.",
+      "RightsNote": "Use restricted to accepted Phase 29 commercial-safe license lock.",
+      "EvidenceUrls": [
+        "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf"
+      ]
+    },
+    {
+      "SourceKey": "SRC02",
+      "SourceType": "Locked pedagogical evidence",
+      "Title": "Mathematics Vision Project",
+      "Publisher": "Mathematics Vision Project",
+      "Edition": "Phase 29 locked source",
+      "RootUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_3.pdf",
+      "License": "CC BY 4.0",
+      "RequiredDigitalAttribution": "Mathematics Vision Project, CC BY 4.0.",
+      "RightsNote": "Use restricted to accepted Phase 29 commercial-safe license lock.",
+      "EvidenceUrls": [
+        "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_3.pdf"
+      ]
+    }
+  ],
+  "AcquisitionDiagnostics": {
+    "UnitCount": 1,
+    "LessonCount": 5,
+    "OfficialStandardCount": 6,
+    "AddressingCoverageCount": 6,
+    "FormalMappingCount": 6,
+    "LessonsWithoutNumberedGradeReferenceAnyRole": 0,
+    "LessonsWithoutNumberedAddressingStandard": 0,
+    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 0,
+    "MultiStandardLessons": 1
+  },
+  "Units": [
+    {
+      "Number": 1,
+      "UnitCode": "U01",
+      "SortOrder": 10,
+      "Title": "Advanced Trigonometry & Geometry",
+      "LessonCount": 5,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_3.pdf",
+      "SemanticSha256": "2fc1f01ebc2f9502ed514bb6894e842cd436b19bab48af7ca9ceb754d3aa8de8"
+    }
+  ],
+  "Lessons": [
+    {
+      "SourceLessonCode": "MVP-MATH3:M07:T05",
+      "LessonCode": "PED:US-CCSS-MATH:HS:FOURTH:ADV-TRIG-GEO:U01:L01",
+      "UnitNumber": 1,
+      "UnitTitle": "Advanced Trigonometry & Geometry",
+      "LessonNumber": 1,
+      "Title": "Maintaining Your Identity",
+      "SortOrder": 10010,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_3.pdf",
+      "SemanticSha256": "7126d2a8b19134d028aedbc0af4d51ad46fa7eed39a7af1400c27165651105ab",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CCSS:HSF-TF.A.3",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC02",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_3.pdf",
+              "SectionOrTask": "7.5 Maintaining Your Identity",
+              "EvidenceSha256": "204d519bd0395de2fcb62c11a3d2d807c52578720223d523fdcea772bdb53ae8",
+              "License": "CC BY 4.0"
+            }
+          ]
+        },
+        {
+          "OutcomeCode": "CCSS:HSF-TF.A.4",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 2,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC02",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_3.pdf",
+              "SectionOrTask": "7.5 Maintaining Your Identity",
+              "EvidenceSha256": "204d519bd0395de2fcb62c11a3d2d807c52578720223d523fdcea772bdb53ae8",
+              "License": "CC BY 4.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "MVP-MATH3:M07:T08H",
+      "LessonCode": "PED:US-CCSS-MATH:HS:FOURTH:ADV-TRIG-GEO:U01:L02",
+      "UnitNumber": 1,
+      "UnitTitle": "Advanced Trigonometry & Geometry",
+      "LessonNumber": 2,
+      "Title": "The Amazing Inverse Trig Function Race",
+      "SortOrder": 10020,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_3.pdf",
+      "SemanticSha256": "f00ac156d2b307635ce983c4af3a41c93a62c96358aa0f0ce2a01e68f248b1e4",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CCSS:HSF-TF.B.6",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC02",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_3.pdf",
+              "SectionOrTask": "7.8H The Amazing Inverse Trig Function Race",
+              "EvidenceSha256": "204d519bd0395de2fcb62c11a3d2d807c52578720223d523fdcea772bdb53ae8",
+              "License": "CC BY 4.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "MVP-MATH3:M07:T06",
+      "LessonCode": "PED:US-CCSS-MATH:HS:FOURTH:ADV-TRIG-GEO:U01:L03",
+      "UnitNumber": 1,
+      "UnitTitle": "Advanced Trigonometry & Geometry",
+      "LessonNumber": 3,
+      "Title": "Hidden Identities",
+      "SortOrder": 10030,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_3.pdf",
+      "SemanticSha256": "6df1c05b6e49f19cfb8912eb9dc0220cbba31fb35990630d48c8634788b78342",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CCSS:HSF-TF.B.7",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC02",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_3.pdf",
+              "SectionOrTask": "7.6 Hidden Identities",
+              "EvidenceSha256": "204d519bd0395de2fcb62c11a3d2d807c52578720223d523fdcea772bdb53ae8",
+              "License": "CC BY 4.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "MVP-GEO:M05:T12",
+      "LessonCode": "PED:US-CCSS-MATH:HS:FOURTH:ADV-TRIG-GEO:U01:L04",
+      "UnitNumber": 1,
+      "UnitTitle": "Advanced Trigonometry & Geometry",
+      "LessonNumber": 4,
+      "Title": "Cavelieri to the Rescue",
+      "SortOrder": 10040,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf",
+      "SemanticSha256": "f0d2f8e10d78bc1c4ec7a33354a15eb34f603ba1cf26eab8779e03b1e59542e5",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CCSS:HSG-GMD.A.2",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC01",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf",
+              "SectionOrTask": "5.12 Cavelieri to the Rescue",
+              "EvidenceSha256": "9f897c55ccd21c7a5a8f51a346362e1cc42aee45393bb58a012992faec474be6",
+              "License": "CC BY 4.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "MVP-GEO:M06:T10H",
+      "LessonCode": "PED:US-CCSS-MATH:HS:FOURTH:ADV-TRIG-GEO:U01:L05",
+      "UnitNumber": 1,
+      "UnitTitle": "Advanced Trigonometry & Geometry",
+      "LessonNumber": 5,
+      "Title": "Operating on a Shoestring",
+      "SortOrder": 10050,
+      "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf",
+      "SemanticSha256": "75b6a86ec1092ca1cd2ba63d98af3b8b9d715c24baa3af9808f0b98d82e961d5",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CCSS:HSG-GPE.A.3",
+          "EvidenceKind": "PrimarySourceExplicitStandardAlignment",
+          "PublisherSuppliedAlignment": true,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": "SRC01",
+              "SourceFamily": "Mathematics Vision Project",
+              "SourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf",
+              "SectionOrTask": "6.10H Operating on a Shoestring",
+              "EvidenceSha256": "9f897c55ccd21c7a5a8f51a346362e1cc42aee45393bb58a012992faec474be6",
+              "License": "CC BY 4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
