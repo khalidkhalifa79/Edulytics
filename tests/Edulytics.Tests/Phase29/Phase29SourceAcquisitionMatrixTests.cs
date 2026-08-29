@@ -236,7 +236,7 @@ public sealed class Phase29SourceAcquisitionMatrixTests
     }
 
     [Fact]
-    public void NextCorrectiveTarget_AdvancesToCommonCoreGrade7AfterGrade6Resolution()
+    public void CommonCoreMiddleSchoolIsResolvedAndNextTargetAdvancesToGrade5()
     {
         using var document = Load();
 
@@ -250,29 +250,34 @@ public sealed class Phase29SourceAcquisitionMatrixTests
                             .GetString() ==
                         MathematicsCurriculumPackRegistry.CommonCoreCode);
 
-        var gradeSix =
+        var scopes =
             commonCore
                 .GetProperty("scopes")
                 .EnumerateArray()
-                .Single(
+                .ToArray();
+
+        foreach (var grade in
+                 new[] { 6, 7, 8 })
+        {
+            var scope =
+                scopes.Single(
                     x =>
-                        x.GetProperty("logicalLevel")
-                            .GetInt32() == 7 &&
                         x.GetProperty("nativeLevel")
-                            .GetString() == "Grade 6");
+                            .GetString() ==
+                        $"Grade {grade}");
 
-        Assert.Equal(
-            "ResolvedExact",
-            gradeSix
-                .GetProperty(
-                    "pedagogicalSelectionStatus")
-                .GetString());
+            Assert.Equal(
+                "ResolvedExact",
+                scope.GetProperty(
+                        "pedagogicalSelectionStatus")
+                    .GetString());
 
-        Assert.True(
-            string.IsNullOrWhiteSpace(
-                gradeSix
-                    .GetProperty("blockingReason")
-                    .GetString()));
+            Assert.True(
+                string.IsNullOrWhiteSpace(
+                    scope.GetProperty(
+                            "blockingReason")
+                        .GetString()));
+        }
 
         var next =
             document.RootElement
@@ -285,7 +290,7 @@ public sealed class Phase29SourceAcquisitionMatrixTests
                 .GetString());
 
         Assert.Equal(
-            "Grade 7",
+            "Grade 5",
             next.GetProperty("nativeLevel")
                 .GetString());
     }

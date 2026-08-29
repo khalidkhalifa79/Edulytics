@@ -1,4 +1,5 @@
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
 
 namespace Edulytics.Core.Curriculum;
@@ -95,14 +96,14 @@ public sealed class PedagogicalLessonBlueprintDiagnostics
 
     public int LessonCount { get; set; }
 
-    public int OfficialGrade6StandardCount { get; set; }
+    public int OfficialStandardCount { get; set; }
 
     public int AddressingCoverageCount { get; set; }
 
     public int FormalMappingCount { get; set; }
 
     public int
-        LessonsWithoutNumberedGrade6ReferenceAnyRole
+        LessonsWithoutNumberedGradeReferenceAnyRole
     {
         get;
         set;
@@ -123,6 +124,39 @@ public sealed class PedagogicalLessonBlueprintDiagnostics
     }
 
     public int MultiStandardLessons { get; set; }
+
+    // Backward-compatible aliases for the already-merged Grade 6
+    // pilot blueprint. Grade 6 evidence remains byte-for-byte
+    // unchanged by the Grade 7/8 batch.
+    [JsonPropertyName(
+        "OfficialGrade6StandardCount")]
+    public int LegacyOfficialGrade6StandardCount
+    {
+        get;
+        set;
+    }
+
+    [JsonPropertyName(
+        "LessonsWithoutNumberedGrade6ReferenceAnyRole")]
+    public int
+        LegacyLessonsWithoutNumberedGrade6ReferenceAnyRole
+    {
+        get;
+        set;
+    }
+
+    [JsonIgnore]
+    public int EffectiveOfficialStandardCount =>
+        OfficialStandardCount > 0
+            ? OfficialStandardCount
+            : LegacyOfficialGrade6StandardCount;
+
+    [JsonIgnore]
+    public int
+        EffectiveLessonsWithoutNumberedGradeReferenceAnyRole =>
+        LessonsWithoutNumberedGradeReferenceAnyRole > 0
+            ? LessonsWithoutNumberedGradeReferenceAnyRole
+            : LegacyLessonsWithoutNumberedGrade6ReferenceAnyRole;
 }
 
 public sealed class PedagogicalLessonBlueprintUnit
@@ -618,6 +652,25 @@ public static class PedagogicalLessonBlueprintContract
         {
             throw new InvalidOperationException(
                 "Lesson SortOrder must be continuous from 1.");
+        }
+
+        var diagnostics =
+            document.AcquisitionDiagnostics;
+
+        if (diagnostics.UnitCount !=
+                document.Units.Count ||
+            diagnostics.LessonCount !=
+                document.Lessons.Count ||
+            diagnostics.EffectiveOfficialStandardCount <= 0 ||
+            diagnostics.AddressingCoverageCount !=
+                diagnostics.EffectiveOfficialStandardCount ||
+            diagnostics.FormalMappingCount !=
+                document.Lessons.Sum(
+                    x => x.OutcomeCodes.Count))
+        {
+            throw new InvalidOperationException(
+                $"Blueprint acquisition diagnostics drift: " +
+                $"{document.BlueprintCode}.");
         }
     }
 

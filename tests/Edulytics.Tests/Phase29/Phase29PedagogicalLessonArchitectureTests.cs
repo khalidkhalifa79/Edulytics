@@ -222,7 +222,12 @@ public sealed class Phase29PedagogicalLessonArchitectureTests
         var blueprint =
             Assert.Single(
                 PedagogicalLessonBlueprintRegistry
-                    .LoadEmbeddedDocuments());
+                    .LoadEmbeddedDocuments(),
+                x =>
+                    x.PackCode ==
+                        MathematicsCurriculumPackRegistry.CommonCoreCode &&
+                    x.NativeLevel ==
+                        "Grade 6");
 
         var states =
             await db.CurriculumPackImportStates
@@ -373,14 +378,25 @@ public sealed class Phase29PedagogicalLessonArchitectureTests
                         x.FrameworkVersionId ==
                             uaeVersionId));
 
+        var blueprintLessonCodes =
+            PedagogicalLessonBlueprintRegistry
+                .LoadEmbeddedDocuments()
+                .SelectMany(
+                    x => x.Lessons)
+                .Select(
+                    x => x.LessonCode)
+                .Distinct(
+                    StringComparer.Ordinal)
+                .ToArray();
+
         var fallbackLessons =
             await db.CurriculumPedagogicalLessons
                 .Where(
                     x =>
                         x.FrameworkVersionId !=
                             uaeVersionId &&
-                        !gradeSixIds.Contains(
-                            x.Id))
+                        !blueprintLessonCodes.Contains(
+                            x.Code))
                 .ToArrayAsync();
 
         Assert.NotEmpty(
