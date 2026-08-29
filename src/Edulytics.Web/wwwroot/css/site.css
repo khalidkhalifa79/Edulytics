@@ -6977,3 +6977,28 @@ body:not(.ed-auth-body):not(.ed-public-body) header .localized-brand-logo,
 .academic-programs-subgroup {
     height: 100%;
 }
+
+/* Phase 29 — compact annual Program / Stream actions */
+.academic-programs-add-action {
+    justify-self: start;
+    width: fit-content;
+    max-width: 100%;
+    white-space: nowrap;
+}
+
+.academic-programs-remove-action {
+    width: fit-content;
+    max-width: 100%;
+    white-space: nowrap;
+}
+
+@media (max-width: 520px) {
+    .academic-programs-add-action {
+        width: 100%;
+        white-space: normal;
+    }
+
+    .academic-programs-remove-action {
+        white-space: normal;
+    }
+}

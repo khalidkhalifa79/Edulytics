@@ -406,6 +406,63 @@ public sealed class AcademicStructureUiContractTests
             academic);
     }
 
+    [Fact]
+    public void ProgramStreamActions_UseCompactButtonLabelsAndSizing()
+    {
+        var root =
+            FindRepositoryRoot();
+
+        var academic =
+            File.ReadAllText(
+                Path.Combine(
+                    root,
+                    "src/Edulytics.Web/Views/" +
+                    "AcademicStructure/Index.cshtml"));
+
+        var css =
+            File.ReadAllText(
+                Path.Combine(
+                    root,
+                    "src/Edulytics.Web/wwwroot/css/" +
+                    "site.css"));
+
+        Assert.Contains(
+            "@A[\"AddProgramToAcademicYear\"]",
+            academic);
+
+        Assert.Contains(
+            "@A[\"AddProgramButton\"]",
+            academic);
+
+        Assert.Contains(
+            "@A[\"RemoveProgramButton\"]",
+            academic);
+
+        Assert.Contains(
+            "academic-programs-add-action",
+            academic);
+
+        Assert.Contains(
+            "academic-programs-remove-action",
+            academic);
+
+        Assert.Contains(
+            ".academic-programs-add-action",
+            css);
+
+        Assert.Contains(
+            "justify-self: start;",
+            css);
+
+        Assert.Contains(
+            "width: fit-content;",
+            css);
+
+        Assert.Contains(
+            "white-space: nowrap;",
+            css);
+    }
+
     private static string FindRepositoryRoot()
     {
         var directory = new DirectoryInfo(AppContext.BaseDirectory);

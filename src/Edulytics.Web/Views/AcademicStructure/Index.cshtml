@@ -302,9 +302,9 @@
                         }
                     </select>
 
-                    <button class="school-button school-button-primary"
+                    <button class="school-button school-button-primary academic-programs-add-action"
                             type="submit">
-                        @A["AddProgramToAcademicYear"]
+                        @A["AddProgramButton"]
                     </button>
                 </form>
             }
@@ -352,8 +352,8 @@
                                                value="@Convert.ToBase64String(offering.RowVersion)" />
 
                                         <button type="submit"
-                                                class="school-button">
-                                            @A["RemoveProgramFromAcademicYear"]
+                                                class="school-button school-button-small academic-programs-remove-action">
+                                            @A["RemoveProgramButton"]
                                         </button>
                                     </form>
                                 }
