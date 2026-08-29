@@ -15,12 +15,14 @@ namespace Edulytics.Data.Seeding;
 /// UAE keeps its verified official Lesson identities and verified
 /// LessonStandardAlignment links.
 ///
-/// England, Common Core and Poland do not publish verified Lesson nodes in the
-/// accepted pack snapshots. For those packs Edulytics creates a grade/pathway-
-/// specific pedagogical lesson for each applicable official Standard/Outcome.
-/// Each created lesson is mapped directly to that exact official node. This is a
-/// structural, deterministic alignment: no fuzzy text matching and no invented
-/// official relationship.
+/// For a curriculum scope with an accepted source-driven pedagogical blueprint,
+/// Edulytics seeds the real lesson sequence and only the explicit formal
+/// Standard/Outcome targets recorded by that blueprint. A blueprint lesson may
+/// therefore have zero, one, or multiple formal mappings.
+///
+/// Scopes without a resolved blueprint keep the deterministic one-outcome-per-
+/// lesson fallback. No fuzzy text matching or invented official relationship is
+/// permitted.
 /// </summary>
 public sealed class MathematicsPedagogicalLessonSeeder
 {
@@ -61,6 +63,11 @@ public sealed class MathematicsPedagogicalLessonSeeder
 
         var expectedLessons = new List<CurriculumPedagogicalLesson>();
         var expectedMappings = new List<CurriculumPedagogicalLessonOutcome>();
+        var blueprintLessonIds = new HashSet<Guid>();
+
+        var blueprints =
+            PedagogicalLessonBlueprintRegistry
+                .LoadEmbeddedDocuments();
 
         await BuildUaeAsync(
             stateByCode[MathematicsCurriculumPackRegistry.UaeCode],
@@ -68,17 +75,38 @@ public sealed class MathematicsPedagogicalLessonSeeder
             expectedMappings,
             ct);
 
+        await BuildBlueprintLessonsAsync(
+            stateByCode,
+            blueprints,
+            expectedLessons,
+            expectedMappings,
+            blueprintLessonIds,
+            ct);
+
         await BuildOutcomeBackedLessonsAsync(
             stateByCode,
+            blueprints,
             expectedLessons,
             expectedMappings,
             ct);
 
-        ValidateExpectedGraph(expectedLessons, expectedMappings);
+        ValidateExpectedGraph(
+            expectedLessons,
+            expectedMappings,
+            blueprintLessonIds);
 
-        await UpsertLessonsAsync(expectedLessons, ct);
-        await UpsertMappingsAsync(expectedMappings, ct);
-        await RemoveStaleLessonsSafelyAsync(expectedLessons, ct);
+        await UpsertLessonsAsync(
+            expectedLessons,
+            ct);
+
+        await UpsertMappingsAsync(
+            expectedLessons,
+            expectedMappings,
+            ct);
+
+        await RemoveStaleLessonsSafelyAsync(
+            expectedLessons,
+            ct);
     }
 
     private async Task BuildUaeAsync(
@@ -165,8 +193,177 @@ public sealed class MathematicsPedagogicalLessonSeeder
         }
     }
 
+    private async Task BuildBlueprintLessonsAsync(
+        IReadOnlyDictionary<string, CurriculumPackImportState> stateByCode,
+        IReadOnlyCollection<PedagogicalLessonBlueprintDocument> blueprints,
+        ICollection<CurriculumPedagogicalLesson> expectedLessons,
+        ICollection<CurriculumPedagogicalLessonOutcome> expectedMappings,
+        ISet<Guid> blueprintLessonIds,
+        CancellationToken ct)
+    {
+        var now = DateTime.UtcNow;
+
+        foreach (var document in blueprints
+                     .OrderBy(x => x.PackCode, StringComparer.Ordinal)
+                     .ThenBy(x => x.LogicalLevel)
+                     .ThenBy(x => x.BlueprintCode, StringComparer.Ordinal))
+        {
+            PedagogicalLessonBlueprintContract.Validate(document);
+
+            if (!stateByCode.TryGetValue(
+                    document.PackCode,
+                    out var state))
+            {
+                throw new InvalidOperationException(
+                    $"Blueprint pack is not an accepted Mathematics pack: " +
+                    $"{document.PackCode}.");
+            }
+
+            if (!string.Equals(
+                    state.VersionCode,
+                    document.VersionCode,
+                    StringComparison.Ordinal))
+            {
+                throw new InvalidOperationException(
+                    $"Blueprint version drift for {document.BlueprintCode}. " +
+                    $"Accepted={state.VersionCode}, " +
+                    $"blueprint={document.VersionCode}.");
+            }
+
+            var outcomeCodes =
+                document.Lessons
+                    .SelectMany(x => x.OutcomeCodes)
+                    .Distinct(StringComparer.Ordinal)
+                    .ToArray();
+
+            var officialNodes =
+                await _db.CurriculumPackContentNodes
+                    .AsNoTracking()
+                    .Where(x =>
+                        x.FrameworkVersionId ==
+                            state.FrameworkVersionId &&
+                        x.FrameworkCode ==
+                            document.PackCode &&
+                        outcomeCodes.Contains(x.Code))
+                    .ToArrayAsync(ct);
+
+            var officialByCode =
+                officialNodes.ToDictionary(
+                    x => x.Code,
+                    StringComparer.Ordinal);
+
+            if (officialByCode.Count !=
+                outcomeCodes.Length)
+            {
+                var missing =
+                    outcomeCodes
+                        .Except(
+                            officialByCode.Keys,
+                            StringComparer.Ordinal)
+                        .OrderBy(x => x)
+                        .ToArray();
+
+                throw new InvalidOperationException(
+                    $"Blueprint {document.BlueprintCode} " +
+                    $"references missing official outcomes: " +
+                    string.Join(", ", missing));
+            }
+
+            foreach (var official in officialNodes)
+            {
+                if (!official.IsOfficial ||
+                    !official.IsActive ||
+                    official.NodeKind is not
+                        ("Standard" or "Outcome") ||
+                    official.LogicalLevelFrom >
+                        document.LogicalLevel ||
+                    official.LogicalLevelTo <
+                        document.LogicalLevel)
+                {
+                    throw new InvalidOperationException(
+                        $"Blueprint {document.BlueprintCode} " +
+                        $"resolved invalid official outcome: " +
+                        $"{official.Code}.");
+                }
+            }
+
+            foreach (var lesson in document.Lessons
+                         .OrderBy(x => x.SortOrder))
+            {
+                var lessonId =
+                    G(
+                        $"pedagogical-blueprint|" +
+                        $"{state.FrameworkVersionId}|" +
+                        $"{document.BlueprintCode}|" +
+                        $"{lesson.SourceLessonCode}");
+
+                if (!blueprintLessonIds.Add(
+                        lessonId))
+                {
+                    throw new InvalidOperationException(
+                        $"Duplicate deterministic blueprint lesson id: " +
+                        $"{lesson.LessonCode}.");
+                }
+
+                expectedLessons.Add(
+                    new CurriculumPedagogicalLesson
+                    {
+                        Id = lessonId,
+                        FrameworkVersionId =
+                            state.FrameworkVersionId,
+                        OfficialLessonNodeId = null,
+                        Code = lesson.LessonCode,
+                        UnitKey =
+                            $"{document.BlueprintCode}:" +
+                            $"U{lesson.UnitNumber:D2}",
+                        UnitTitle =
+                            lesson.UnitTitle,
+                        Title =
+                            lesson.Title,
+                        LogicalLevelFrom =
+                            document.LogicalLevel,
+                        LogicalLevelTo =
+                            document.LogicalLevel,
+                        NativeLevel =
+                            document.NativeLevel,
+                        Pathway =
+                            document.Pathway,
+                        SortOrder =
+                            lesson.SortOrder,
+                        CreatedAtUtc =
+                            now,
+                        UpdatedAtUtc =
+                            now
+                    });
+
+                var mappingSort = 0;
+
+                foreach (var outcomeCode in
+                         lesson.OutcomeCodes)
+                {
+                    mappingSort++;
+
+                    expectedMappings.Add(
+                        new CurriculumPedagogicalLessonOutcome
+                        {
+                            PedagogicalLessonId =
+                                lessonId,
+                            FrameworkVersionId =
+                                state.FrameworkVersionId,
+                            OutcomeNodeId =
+                                officialByCode[
+                                    outcomeCode].Id,
+                            SortOrder =
+                                mappingSort
+                        });
+                }
+            }
+        }
+    }
+
     private async Task BuildOutcomeBackedLessonsAsync(
         IReadOnlyDictionary<string, CurriculumPackImportState> stateByCode,
+        IReadOnlyCollection<PedagogicalLessonBlueprintDocument> blueprints,
         ICollection<CurriculumPedagogicalLesson> expectedLessons,
         ICollection<CurriculumPedagogicalLessonOutcome> expectedMappings,
         CancellationToken ct)
@@ -210,6 +407,33 @@ public sealed class MathematicsPedagogicalLessonSeeder
 
             foreach (var level in levels)
             {
+                var ownedByBlueprint =
+                    blueprints.Any(
+                        x =>
+                            string.Equals(
+                                x.PackCode,
+                                pack.Code,
+                                StringComparison.Ordinal) &&
+                            string.Equals(
+                                x.VersionCode,
+                                state.VersionCode,
+                                StringComparison.Ordinal) &&
+                            x.LogicalLevel ==
+                                level.LogicalLevel &&
+                            string.Equals(
+                                x.NativeLevel,
+                                level.NativeLabel,
+                                StringComparison.Ordinal) &&
+                            string.Equals(
+                                x.Pathway,
+                                level.Pathway,
+                                StringComparison.Ordinal));
+
+                if (ownedByBlueprint)
+                {
+                    continue;
+                }
+
                 var applicable = officialOutcomes
                     .Where(x =>
                         x.LogicalLevelFrom <= level.LogicalLevel &&
@@ -332,7 +556,8 @@ public sealed class MathematicsPedagogicalLessonSeeder
 
     private static void ValidateExpectedGraph(
         IReadOnlyCollection<CurriculumPedagogicalLesson> lessons,
-        IReadOnlyCollection<CurriculumPedagogicalLessonOutcome> mappings)
+        IReadOnlyCollection<CurriculumPedagogicalLessonOutcome> mappings,
+        IReadOnlySet<Guid> blueprintLessonIds)
     {
         var duplicateLessonIds = lessons
             .GroupBy(x => x.Id)
@@ -375,11 +600,53 @@ public sealed class MathematicsPedagogicalLessonSeeder
             .Where(x => !x.OfficialLessonNodeId.HasValue)
             .ToArray();
 
-        if (nonUaeLessons.Length == 0 ||
-            nonUaeLessons.Any(x => mappingCountByLesson.GetValueOrDefault(x.Id) != 1))
+        var blueprintLessons =
+            nonUaeLessons
+                .Where(
+                    x =>
+                        blueprintLessonIds.Contains(
+                            x.Id))
+                .ToArray();
+
+        if (blueprintLessons.Length !=
+            blueprintLessonIds.Count)
         {
             throw new InvalidOperationException(
-                "Every non-UAE pedagogical lesson must map to exactly one applicable official Standard/Outcome.");
+                "Blueprint lesson identity/cardinality drift.");
+        }
+
+        var fallbackLessons =
+            nonUaeLessons
+                .Where(
+                    x =>
+                        !blueprintLessonIds.Contains(
+                            x.Id))
+                .ToArray();
+
+        if (fallbackLessons.Any(
+                x =>
+                    mappingCountByLesson
+                        .GetValueOrDefault(
+                            x.Id) != 1))
+        {
+            throw new InvalidOperationException(
+                "Every fallback non-UAE pedagogical lesson must map " +
+                "to exactly one applicable official Standard/Outcome.");
+        }
+
+        var duplicateMappings =
+            mappings
+                .GroupBy(
+                    x => (
+                        x.PedagogicalLessonId,
+                        x.OutcomeNodeId))
+                .Where(x => x.Count() != 1)
+                .ToArray();
+
+        if (duplicateMappings.Length != 0)
+        {
+            throw new InvalidOperationException(
+                "Duplicate pedagogical lesson outcome mapping generated.");
         }
 
         if (mappings.Any(m =>
@@ -422,38 +689,89 @@ public sealed class MathematicsPedagogicalLessonSeeder
     }
 
     private async Task UpsertMappingsAsync(
+        IReadOnlyCollection<CurriculumPedagogicalLesson> expectedLessons,
         IReadOnlyCollection<CurriculumPedagogicalLessonOutcome> expected,
         CancellationToken ct)
     {
-        var lessonIds = expected
-            .Select(x => x.PedagogicalLessonId)
-            .Distinct()
-            .ToArray();
+        var lessonIds =
+            expectedLessons
+                .Select(x => x.Id)
+                .Distinct()
+                .ToArray();
 
-        var existing = await _db.CurriculumPedagogicalLessonOutcomes
-            .Where(x => lessonIds.Contains(x.PedagogicalLessonId))
-            .ToArrayAsync(ct);
+        var existing =
+            await _db.CurriculumPedagogicalLessonOutcomes
+                .Where(
+                    x =>
+                        lessonIds.Contains(
+                            x.PedagogicalLessonId))
+                .ToArrayAsync(ct);
 
-        var byKey = existing.ToDictionary(
-            x => (x.PedagogicalLessonId, x.OutcomeNodeId));
+        var expectedKeys =
+            expected
+                .Select(
+                    x => (
+                        x.PedagogicalLessonId,
+                        x.OutcomeNodeId))
+                .ToHashSet();
+
+        var unexpected =
+            existing
+                .Where(
+                    x =>
+                        !expectedKeys.Contains(
+                            (
+                                x.PedagogicalLessonId,
+                                x.OutcomeNodeId
+                            )))
+                .ToArray();
+
+        if (unexpected.Length != 0)
+        {
+            throw new InvalidOperationException(
+                "Unexpected existing pedagogical outcome alignment drift: " +
+                string.Join(
+                    ", ",
+                    unexpected.Select(
+                        x =>
+                            $"{x.PedagogicalLessonId}:" +
+                            $"{x.OutcomeNodeId}")));
+        }
+
+        var byKey =
+            existing.ToDictionary(
+                x => (
+                    x.PedagogicalLessonId,
+                    x.OutcomeNodeId));
 
         foreach (var row in expected)
         {
-            var key = (row.PedagogicalLessonId, row.OutcomeNodeId);
+            var key =
+                (
+                    row.PedagogicalLessonId,
+                    row.OutcomeNodeId
+                );
 
-            if (byKey.TryGetValue(key, out var current))
+            if (byKey.TryGetValue(
+                    key,
+                    out var current))
             {
-                if (current.FrameworkVersionId != row.FrameworkVersionId ||
-                    current.SortOrder != row.SortOrder)
+                if (current.FrameworkVersionId !=
+                        row.FrameworkVersionId ||
+                    current.SortOrder !=
+                        row.SortOrder)
                 {
                     throw new InvalidOperationException(
-                        $"Pedagogical lesson outcome alignment drift: {key.PedagogicalLessonId}:{key.OutcomeNodeId}.");
+                        $"Pedagogical lesson outcome alignment drift: " +
+                        $"{key.PedagogicalLessonId}:" +
+                        $"{key.OutcomeNodeId}.");
                 }
 
                 continue;
             }
 
-            _db.CurriculumPedagogicalLessonOutcomes.Add(row);
+            _db.CurriculumPedagogicalLessonOutcomes
+                .Add(row);
         }
 
         await _db.SaveChangesAsync(ct);

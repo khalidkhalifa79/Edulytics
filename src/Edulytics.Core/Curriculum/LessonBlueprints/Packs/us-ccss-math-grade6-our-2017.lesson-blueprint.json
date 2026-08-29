@@ -1,0 +1,5854 @@
+{
+  "SchemaVersion": 1,
+  "BlueprintCode": "US-CCSS-MATH:G6:OUR-IM-2017",
+  "PackCode": "US-CCSS-MATH",
+  "VersionCode": "CCSSM-2010",
+  "LogicalLevel": 7,
+  "NativeLevel": "Grade 6",
+  "Pathway": null,
+  "OfficialAuthority": "NGA Center / CCSSO",
+  "OfficialSourceUrl": "https://corestandards.org/mathematics-standards/",
+  "PedagogicalSourceType": "WidelyUsedPublisherTextbook",
+  "SourceTitle": "Open Up Resources 6–8 Math / IM 6–8 Math",
+  "SourcePublisher": "Open Up Resources",
+  "SourceEdition": "2017–2019 CC BY 4.0 lineage",
+  "SourceRootUrl": "https://im.kendallhunt.com/MS/teachers/1",
+  "SourceCheckedAtUtc": "2026-08-29T13:11:45Z",
+  "SourceLicense": "CC BY 4.0",
+  "RequiredDigitalAttribution": "Download at openupresources.org",
+  "SourceSelectionReason": "No school-adopted Grade 6 textbook has been supplied. Source Policy v2 therefore uses an evidence-backed widely-used Common-Core-aligned pedagogical source.",
+  "SourceSelectionEvidence": "Exact Grade 6 acquisition verifies 9 units, 147 lessons, the complete role-specific CCSS alignment graph and 29/29 accepted Grade 6 Standards. The source lineage is independently reviewed by EdReports and published under CC BY 4.0.",
+  "SourceEvidenceUrls": [
+    "https://www.openupresources.org/help-support/licensing-questions/",
+    "https://www.edreports.org/reports/detail/open-up-resources-6-8-math-2017/eighth-grade",
+    "https://im.kendallhunt.com/MS/teachers/1"
+  ],
+  "SourceRightsNote": "The pedagogical sequence, lesson titles and alignment metadata are captured with CC BY 4.0 attribution. Open Up Resources and Illustrative Mathematics names/logos, book covers, iconography and collective graphic design are not imported. Assessment content is not imported. Edulytics lesson explanations, worked examples, diagrams, common mistakes and summaries remain independently authored and reviewed.",
+  "SemanticGraphSha256": "edae65cc700ae2b2f3a5a7828275a3ffdded4fbf07759489801e7c4e5059e0e9",
+  "AcquisitionDiagnostics": {
+    "UnitCount": 9,
+    "LessonCount": 147,
+    "OfficialGrade6StandardCount": 29,
+    "AddressingCoverageCount": 29,
+    "FormalMappingCount": 208,
+    "LessonsWithoutNumberedGrade6ReferenceAnyRole": 9,
+    "LessonsWithoutNumberedAddressingStandard": 17,
+    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 10,
+    "MultiStandardLessons": 60
+  },
+  "Units": [
+    {
+      "Number": 1,
+      "Title": "Area and Surface Area",
+      "LessonCount": 19,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/1/index.html",
+      "SemanticSha256": "634a0ae987b795869394d7b1b6b4e9f62968ca36a669c97e0f051260c5462fcd"
+    },
+    {
+      "Number": 2,
+      "Title": "Introducing Ratios",
+      "LessonCount": 17,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/2/index.html",
+      "SemanticSha256": "205a1680002bb6eead12da81dae7e4aafcd6be33dd45999ece58198d03e7a699"
+    },
+    {
+      "Number": 3,
+      "Title": "Unit Rates and Percentages",
+      "LessonCount": 17,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/3/index.html",
+      "SemanticSha256": "09f1b57e6c495d444b18c3110d44dea9ae8d366e81b42a5776a2f5d98f5e8c9a"
+    },
+    {
+      "Number": 4,
+      "Title": "Dividing Fractions",
+      "LessonCount": 17,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/4/index.html",
+      "SemanticSha256": "f78aa253b5915555d0aa47b02add65dc98158a44e2076df8d0eaff7714c1edc0"
+    },
+    {
+      "Number": 5,
+      "Title": "Arithmetic in Base Ten",
+      "LessonCount": 15,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/5/index.html",
+      "SemanticSha256": "1dd9a1192936a3997f6e02fd3544aa5e91d0d9679db884c40d9b6a40242cbe04"
+    },
+    {
+      "Number": 6,
+      "Title": "Expressions and Equations",
+      "LessonCount": 19,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/6/index.html",
+      "SemanticSha256": "9dc673b7fb66047543a493c05e50ec34a2e51a4eb3ae37e4867fcdb2e5ed20be"
+    },
+    {
+      "Number": 7,
+      "Title": "Rational Numbers",
+      "LessonCount": 19,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/7/index.html",
+      "SemanticSha256": "daa1375952dfaf9f7f7be3c2065a4d084271c3b174f2d4950e5d0e8ed6ca7253"
+    },
+    {
+      "Number": 8,
+      "Title": "Data Sets and Distributions",
+      "LessonCount": 18,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/8/index.html",
+      "SemanticSha256": "c028e36e60b3a3f97014d5db4c81640008cb9a858bce4b468740dabd02727a66"
+    },
+    {
+      "Number": 9,
+      "Title": "Putting it All Together",
+      "LessonCount": 6,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/9/index.html",
+      "SemanticSha256": "5e7a504091dbe9b1e1ce76cb98bc8c567d716da45aace744e1674bec993a8b2f"
+    }
+  ],
+  "Lessons": [
+    {
+      "SourceLessonCode": "6.1.1",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U01:L01",
+      "UnitNumber": 1,
+      "UnitTitle": "Area and Surface Area",
+      "LessonNumber": 1,
+      "Title": "Tiling the Plane",
+      "SortOrder": 1,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/1/1/preparation.html",
+      "SemanticSha256": "1508d7414f35f66927215e89dc1978c10d792b4f4c387c4f71c0b051b4ce2deb",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "6.1.2",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U01:L02",
+      "UnitNumber": 1,
+      "UnitTitle": "Area and Surface Area",
+      "LessonNumber": 2,
+      "Title": "Finding Area by Decomposing and Rearranging",
+      "SortOrder": 2,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/1/2/preparation.html",
+      "SemanticSha256": "32689a846b5e8c8da878fa0e41178b00d7eb29d076ad13587335d562e93874ef",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.MD.C.5.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.1.3",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U01:L03",
+      "UnitNumber": 1,
+      "UnitTitle": "Area and Surface Area",
+      "LessonNumber": 3,
+      "Title": "Reasoning to Find Area",
+      "SortOrder": 3,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/1/3/preparation.html",
+      "SemanticSha256": "a483f9ff965baab1cc9337ed9ab5568dadcf5ae4ba4d9a8799ce8704fa6cb2ab",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.MD.C.7.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.1.4",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U01:L04",
+      "UnitNumber": 1,
+      "UnitTitle": "Area and Surface Area",
+      "LessonNumber": 4,
+      "Title": "Parallelograms",
+      "SortOrder": 4,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/1/4/preparation.html",
+      "SemanticSha256": "58a92c96c6187e18f543ced591a71cd93e82fdbebae3cd2ba3a568c1c0f20476",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.G.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.1",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.1.5",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U01:L05",
+      "UnitNumber": 1,
+      "UnitTitle": "Area and Surface Area",
+      "LessonNumber": 5,
+      "Title": "Bases and Heights of Parallelograms",
+      "SortOrder": 5,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/1/5/preparation.html",
+      "SemanticSha256": "8baab61e419339ecc8f21e44c6e23bf869352fbdd563022179e7471e7af69a67",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.2.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.EE.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.A.2",
+        "CCSS:6.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.1.6",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U01:L06",
+      "UnitNumber": 1,
+      "UnitTitle": "Area and Surface Area",
+      "LessonNumber": 6,
+      "Title": "Area of Parallelograms",
+      "SortOrder": 6,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/1/6/preparation.html",
+      "SemanticSha256": "d74f9470fc9fbdd8cafda93be51ef9cce82dd570e3571542ba6d33ce1191e63d",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.OA.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.2.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.EE.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.1",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.A.2",
+        "CCSS:6.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.1.7",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U01:L07",
+      "UnitNumber": 1,
+      "UnitTitle": "Area and Surface Area",
+      "LessonNumber": 7,
+      "Title": "From Parallelograms to Triangles",
+      "SortOrder": 7,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/1/7/preparation.html",
+      "SemanticSha256": "c48981f719d3e88a806b7840343e17221714aafab98f7d55ba4873f0ad24f61b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.1.8",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U01:L08",
+      "UnitNumber": 1,
+      "UnitTitle": "Area and Surface Area",
+      "LessonNumber": 8,
+      "Title": "Area of Triangles",
+      "SortOrder": 8,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/1/8/preparation.html",
+      "SemanticSha256": "352d5c3c820e1623a19c67fab4139c4956fb04b1c75c217dbf899ad546777300",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.1.9",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U01:L09",
+      "UnitNumber": 1,
+      "UnitTitle": "Area and Surface Area",
+      "LessonNumber": 9,
+      "Title": "Formula for the Area of a Triangle",
+      "SortOrder": 9,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/1/9/preparation.html",
+      "SemanticSha256": "25b1eb1deba72e28e3bb4cb8830e150115b08353ed40b71597d1131c2f6e11ee",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.2.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.EE.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.2.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.EE.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.1",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.A.2",
+        "CCSS:6.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.1.10",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U01:L10",
+      "UnitNumber": 1,
+      "UnitTitle": "Area and Surface Area",
+      "LessonNumber": 10,
+      "Title": "Bases and Heights of Triangles",
+      "SortOrder": 10,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/1/10/preparation.html",
+      "SemanticSha256": "7b1366a2aaf4bd19a723bb9666e23436ad8aaf4aca08169c2bfb50b3b59ba5f6",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.2.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.EE.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.A.2",
+        "CCSS:6.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.1.11",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U01:L11",
+      "UnitNumber": 1,
+      "UnitTitle": "Area and Surface Area",
+      "LessonNumber": 11,
+      "Title": "Polygons",
+      "SortOrder": 11,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/1/11/preparation.html",
+      "SemanticSha256": "be3878d630be9aed46a092837b4f74ea124ae9ccde263e328322c0c9b868ee28",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.G.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.1",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.G.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.1.12",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U01:L12",
+      "UnitNumber": 1,
+      "UnitTitle": "Area and Surface Area",
+      "LessonNumber": 12,
+      "Title": "What is Surface Area?",
+      "SortOrder": 12,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/1/12/preparation.html",
+      "SemanticSha256": "e39c2adefb1f95d0f739d0de1c9bf83e4e4890d27046fc2f9cfec56c58536542",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.4",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.G.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.G.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.1.13",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U01:L13",
+      "UnitNumber": 1,
+      "UnitTitle": "Area and Surface Area",
+      "LessonNumber": 13,
+      "Title": "Polyhedra",
+      "SortOrder": 13,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/1/13/preparation.html",
+      "SemanticSha256": "81dc9f137c8a0807335c87e49b42e112d405d86cc8c86c7fc26ba8bad5f6eb02",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.4",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.G.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.G.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.1.14",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U01:L14",
+      "UnitNumber": 1,
+      "UnitTitle": "Area and Surface Area",
+      "LessonNumber": 14,
+      "Title": "Nets and Surface Area",
+      "SortOrder": 14,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/1/14/preparation.html",
+      "SemanticSha256": "197b8104117590454c8238d16a3ae2032663e2d2bce226ec76f2f8870a28289d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.4",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.G.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.1.15",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U01:L15",
+      "UnitNumber": 1,
+      "UnitTitle": "Area and Surface Area",
+      "LessonNumber": 15,
+      "Title": "More Nets, More Surface Area",
+      "SortOrder": 15,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/1/15/preparation.html",
+      "SemanticSha256": "d1d13298390e94d56911b70ad7a34fe1ddb526f1466a829cf6668010396d5236",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.MD.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.4",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.G.A.2",
+        "CCSS:6.G.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.1.16",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U01:L16",
+      "UnitNumber": 1,
+      "UnitTitle": "Area and Surface Area",
+      "LessonNumber": 16,
+      "Title": "Distinguishing Between Surface Area and Volume",
+      "SortOrder": 16,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/1/16/preparation.html",
+      "SemanticSha256": "4781270476a7a63dba7edb2db854e1e72c2569852e6c1cf908dbd30e0daec754",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.MD.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.MD.C",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.MD.C.3.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.MD.C.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.MD.C.5.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 6
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.4",
+          "SortOrder": 7
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.G.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.1.17",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U01:L17",
+      "UnitNumber": 1,
+      "UnitTitle": "Area and Surface Area",
+      "LessonNumber": 17,
+      "Title": "Squares and Cubes",
+      "SortOrder": 17,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/1/17/preparation.html",
+      "SemanticSha256": "2b02d9f72d835b43902713a3c7502daef85a690a52c2daaf0f60c47a40e4ad68",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.MD.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.MD.C.5.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.A.1",
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.EE.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.1.18",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U01:L18",
+      "UnitNumber": 1,
+      "UnitTitle": "Area and Surface Area",
+      "LessonNumber": 18,
+      "Title": "Surface Area of a Cube",
+      "SortOrder": 18,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/1/18/preparation.html",
+      "SemanticSha256": "4daa8e78df2de1e2af3f6c1822113b186edac22561df933e25cd948bdf95a3a4",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.2.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.EE.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.4",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.A.1",
+        "CCSS:6.EE.A.2",
+        "CCSS:6.G.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.1.19",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U01:L19",
+      "UnitNumber": 1,
+      "UnitTitle": "Area and Surface Area",
+      "LessonNumber": 19,
+      "Title": "Designing a Tent",
+      "SortOrder": 19,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/1/19/preparation.html",
+      "SemanticSha256": "1ac0cb8b190d5bff8074bcc28dc4ea019a6a180e9952c2d64ae97b935574d467",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.4",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.G.A.1",
+        "CCSS:6.G.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.2.1",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U02:L01",
+      "UnitNumber": 2,
+      "UnitTitle": "Introducing Ratios",
+      "LessonNumber": 1,
+      "Title": "Introducing Ratios and Ratio Language",
+      "SortOrder": 20,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/2/1/preparation.html",
+      "SemanticSha256": "99a4ef06e3e8da39182b1858764c9df9cd5365e01050122d850b15c39ae67596",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.MD.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.2.2",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U02:L02",
+      "UnitNumber": 2,
+      "UnitTitle": "Introducing Ratios",
+      "LessonNumber": 2,
+      "Title": "Representing Ratios with Diagrams",
+      "SortOrder": 21,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/2/2/preparation.html",
+      "SemanticSha256": "d67f056a382317942bcbe1c2213bca38d906c373c5eac69a557a02d3f1638dc1",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NF.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.2.3",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U02:L03",
+      "UnitNumber": 2,
+      "UnitTitle": "Introducing Ratios",
+      "LessonNumber": 3,
+      "Title": "Recipes",
+      "SortOrder": 22,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/2/3/preparation.html",
+      "SemanticSha256": "51ac585e25159d0b3ba1a8ce9585b219aef7380bf15dc8956e4f375d8c8b0727",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.2.4",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U02:L04",
+      "UnitNumber": 2,
+      "UnitTitle": "Introducing Ratios",
+      "LessonNumber": 4,
+      "Title": "Color Mixtures",
+      "SortOrder": 23,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/2/4/preparation.html",
+      "SemanticSha256": "8282c5621c172b9aebd44d8e3be188f0a916958ba38138713e8a7bf99bfd599d",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.2.5",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U02:L05",
+      "UnitNumber": 2,
+      "UnitTitle": "Introducing Ratios",
+      "LessonNumber": 5,
+      "Title": "Defining Equivalent Ratios",
+      "SortOrder": 24,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/2/5/preparation.html",
+      "SemanticSha256": "377fdda60f068fae1dc553e66e3dc2e68067302be2a5c23e1d4dca0205fae3a3",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.OA",
+          "ReferenceKind": "Domain",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.2.6",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U02:L06",
+      "UnitNumber": 2,
+      "UnitTitle": "Introducing Ratios",
+      "LessonNumber": 6,
+      "Title": "Introducing Double Number Line Diagrams",
+      "SortOrder": 25,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/2/6/preparation.html",
+      "SemanticSha256": "0334344baf48b856ccd3fd245a5060e917bb2e36218bd1681a44c34bc754df5e",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT",
+          "ReferenceKind": "Domain",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.2.7",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U02:L07",
+      "UnitNumber": 2,
+      "UnitTitle": "Introducing Ratios",
+      "LessonNumber": 7,
+      "Title": "Creating Double Number Line Diagrams",
+      "SortOrder": 26,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/2/7/preparation.html",
+      "SemanticSha256": "7617c15db67d7afda97befcec7f9b97f255f7b5e1106419579c52cedddce62fd",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NF",
+          "ReferenceKind": "Domain",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.2.8",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U02:L08",
+      "UnitNumber": 2,
+      "UnitTitle": "Introducing Ratios",
+      "LessonNumber": 8,
+      "Title": "How Much for One?",
+      "SortOrder": 27,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/2/8/preparation.html",
+      "SemanticSha256": "8cd453d732ab002d42ca4e9df781a4cbe30b02a483922b7bffe8b3c525845528",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NBT",
+          "ReferenceKind": "Domain",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.2.9",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U02:L09",
+      "UnitNumber": 2,
+      "UnitTitle": "Introducing Ratios",
+      "LessonNumber": 9,
+      "Title": "Constant Speed",
+      "SortOrder": 28,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/2/9/preparation.html",
+      "SemanticSha256": "149053618dd18d90ab4b591eff692f65899013d4cf6ba797bf8301524eb5546a",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.2.10",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U02:L10",
+      "UnitNumber": 2,
+      "UnitTitle": "Introducing Ratios",
+      "LessonNumber": 10,
+      "Title": "Comparing Situations by Examining Ratios",
+      "SortOrder": 29,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/2/10/preparation.html",
+      "SemanticSha256": "d52696ae7b710396cf316f72ee9a6c31d23bf251f169ba87ab4caa24f0084d62",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.2",
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.2.11",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U02:L11",
+      "UnitNumber": 2,
+      "UnitTitle": "Introducing Ratios",
+      "LessonNumber": 11,
+      "Title": "Representing Ratios with Tables",
+      "SortOrder": 30,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/2/11/preparation.html",
+      "SemanticSha256": "17ef2bb09b1ec3acc54d60a30c7dca7f741717e09182a9a9a6626dfd5f021939",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.OA.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.2.12",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U02:L12",
+      "UnitNumber": 2,
+      "UnitTitle": "Introducing Ratios",
+      "LessonNumber": 12,
+      "Title": "Navigating a Table of Equivalent Ratios",
+      "SortOrder": 31,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/2/12/preparation.html",
+      "SemanticSha256": "52b34594c3da3af47052a556f74262d6a6daa4d1843f14e7ef27f149acbd47e9",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NF",
+          "ReferenceKind": "Domain",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.2.13",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U02:L13",
+      "UnitNumber": 2,
+      "UnitTitle": "Introducing Ratios",
+      "LessonNumber": 13,
+      "Title": "Tables and Double Number Line Diagrams",
+      "SortOrder": 32,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/2/13/preparation.html",
+      "SemanticSha256": "af1273ce3ee002914802184fdea22363245d9113b85af98be57cdd9ae8795fdf",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT",
+          "ReferenceKind": "Domain",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.2.14",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U02:L14",
+      "UnitNumber": 2,
+      "UnitTitle": "Introducing Ratios",
+      "LessonNumber": 14,
+      "Title": "Solving Equivalent Ratio Problems",
+      "SortOrder": 33,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/2/14/preparation.html",
+      "SemanticSha256": "e72f28027d9f86d392dd340e415d9517ed089fd0460a10404477d8f656bf1c28",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.2.15",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U02:L15",
+      "UnitNumber": 2,
+      "UnitTitle": "Introducing Ratios",
+      "LessonNumber": 15,
+      "Title": "Part-Part-Whole Ratios",
+      "SortOrder": 34,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/2/15/preparation.html",
+      "SemanticSha256": "0ebce5c72d1ac0a81c8a48a091e224492db0c9781681584e7e3ff7ec1b118dfe",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.OA.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NF.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.2.16",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U02:L16",
+      "UnitNumber": 2,
+      "UnitTitle": "Introducing Ratios",
+      "LessonNumber": 16,
+      "Title": "Solving More Ratio Problems",
+      "SortOrder": 35,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/2/16/preparation.html",
+      "SemanticSha256": "9232245264ecb66c0258bb3ed4467a19e8608bf68b05963a69740a212a5f6e9f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.2.17",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U02:L17",
+      "UnitNumber": 2,
+      "UnitTitle": "Introducing Ratios",
+      "LessonNumber": 17,
+      "Title": "A Fermi Problem",
+      "SortOrder": 36,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/2/17/preparation.html",
+      "SemanticSha256": "2a4005ccbc912930f2e27e3c20b0c44625cc67d5806ed03fa0ac9171975a0417",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.MD",
+          "ReferenceKind": "Domain",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.MD.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.MD",
+          "ReferenceKind": "Domain",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.3.1",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U03:L01",
+      "UnitNumber": 3,
+      "UnitTitle": "Unit Rates and Percentages",
+      "LessonNumber": 1,
+      "Title": "The Burj Khalifa",
+      "SortOrder": 37,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/3/1/preparation.html",
+      "SemanticSha256": "b0e0b6e13e791e8b8320e6a36c3ee1bfc83181dd17b87765d42d865c2e18048f",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.2",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.3.2",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U03:L02",
+      "UnitNumber": 3,
+      "UnitTitle": "Unit Rates and Percentages",
+      "LessonNumber": 2,
+      "Title": "Anchoring Units of Measurement",
+      "SortOrder": 38,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/3/2/preparation.html",
+      "SemanticSha256": "e768ea2bc1d07af02b9092893bd0dec114feca0d227768b5786b028110849425",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.MD.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.MD.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.RP.A.3.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "6.3.3",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U03:L03",
+      "UnitNumber": 3,
+      "UnitTitle": "Unit Rates and Percentages",
+      "LessonNumber": 3,
+      "Title": "Measuring with Different-Sized Units",
+      "SortOrder": 39,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/3/3/preparation.html",
+      "SemanticSha256": "54964103f50e2714190f140c0a04a61ded80e064e23eac8e419d28829c6de5de",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.MD.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.RP.A.3.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.3.4",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U03:L04",
+      "UnitNumber": 3,
+      "UnitTitle": "Unit Rates and Percentages",
+      "LessonNumber": 4,
+      "Title": "Converting Units",
+      "SortOrder": 40,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/3/4/preparation.html",
+      "SemanticSha256": "ee8a27f9277b6fbfc493649e5ed3efe20ac3da923ce9c633f24925f108b90ffa",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NF.B.4.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.3.5",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U03:L05",
+      "UnitNumber": 3,
+      "UnitTitle": "Unit Rates and Percentages",
+      "LessonNumber": 5,
+      "Title": "Comparing Speeds and Prices",
+      "SortOrder": 41,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/3/5/preparation.html",
+      "SemanticSha256": "af38de3c10389ed6c5b652bfde1ac630613fd5517149aa6f0dd10e4ac83eefaa",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NF.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.2",
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.3.6",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U03:L06",
+      "UnitNumber": 3,
+      "UnitTitle": "Unit Rates and Percentages",
+      "LessonNumber": 6,
+      "Title": "Interpreting Rates",
+      "SortOrder": 42,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/3/6/preparation.html",
+      "SemanticSha256": "0c2e67cccd30da3ac96f7e3804b8a216d98a933638a4ee26456e6a35329f886a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.RP.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.2",
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.3.7",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U03:L07",
+      "UnitNumber": 3,
+      "UnitTitle": "Unit Rates and Percentages",
+      "LessonNumber": 7,
+      "Title": "Equivalent Ratios Have the Same Unit Rates",
+      "SortOrder": 43,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/3/7/preparation.html",
+      "SemanticSha256": "5ea98f94744ac6d1f766cf1d4978ea4004a4acd78b99a0e2432ee6c06c8e7e8c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.2",
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.3.8",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U03:L08",
+      "UnitNumber": 3,
+      "UnitTitle": "Unit Rates and Percentages",
+      "LessonNumber": 8,
+      "Title": "More about Constant Speed",
+      "SortOrder": 44,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/3/8/preparation.html",
+      "SemanticSha256": "a2df6dc4e478907b8ac0c8113486fd75ffed3f633903bc4bd3dcf8523954025d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.3.9",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U03:L09",
+      "UnitNumber": 3,
+      "UnitTitle": "Unit Rates and Percentages",
+      "LessonNumber": 9,
+      "Title": "Solving Rate Problems",
+      "SortOrder": 45,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/3/9/preparation.html",
+      "SemanticSha256": "a5c6d6518055f09b8d1bc5429e4fdfbb71b328fdf203b12e6c82072ac045f07b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.RP.A.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.3.10",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U03:L10",
+      "UnitNumber": 3,
+      "UnitTitle": "Unit Rates and Percentages",
+      "LessonNumber": 10,
+      "Title": "What Are Percentages?",
+      "SortOrder": 46,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/3/10/preparation.html",
+      "SemanticSha256": "a94011b465087723697727e30676426ac93c81d9d7c8c1ca000726056242bd19",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.MD.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.RP.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.RP.A.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.3.11",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U03:L11",
+      "UnitNumber": 3,
+      "UnitTitle": "Unit Rates and Percentages",
+      "LessonNumber": 11,
+      "Title": "Percentages and Double Number Lines",
+      "SortOrder": 47,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/3/11/preparation.html",
+      "SemanticSha256": "9dca2d1947b9d96c65dd6f5f10164120b16cbed4081393bcf12d1c9e09575f0f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.3.12",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U03:L12",
+      "UnitNumber": 3,
+      "UnitTitle": "Unit Rates and Percentages",
+      "LessonNumber": 12,
+      "Title": "Percentages and Tape Diagrams",
+      "SortOrder": 48,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/3/12/preparation.html",
+      "SemanticSha256": "56bbaaa627c51d672caf706ffc9e40fbb119d56270b14c542d92658b6221a416",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.RP.A.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.3.13",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U03:L13",
+      "UnitNumber": 3,
+      "UnitTitle": "Unit Rates and Percentages",
+      "LessonNumber": 13,
+      "Title": "Benchmark Percentages",
+      "SortOrder": 49,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/3/13/preparation.html",
+      "SemanticSha256": "4cf16687ab0ce992844233d5fc9a25c8fac2600b68f2715aa64859f58ab474b2",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NF.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NF.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.RP.A.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.3.14",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U03:L14",
+      "UnitNumber": 3,
+      "UnitTitle": "Unit Rates and Percentages",
+      "LessonNumber": 14,
+      "Title": "Solving Percentage Problems",
+      "SortOrder": 50,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/3/14/preparation.html",
+      "SemanticSha256": "d48ef7fb04dc83bd6bd7de4131377044f433d03224449d29cd9510a046f6fd8b",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.RP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.3.15",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U03:L15",
+      "UnitNumber": 3,
+      "UnitTitle": "Unit Rates and Percentages",
+      "LessonNumber": 15,
+      "Title": "Finding This Percent of That",
+      "SortOrder": 51,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/3/15/preparation.html",
+      "SemanticSha256": "f347baa2ed62206128d102da09c7432f609bb94197e3d3a5fe6f59896eb68082",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.3.16",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U03:L16",
+      "UnitNumber": 3,
+      "UnitTitle": "Unit Rates and Percentages",
+      "LessonNumber": 16,
+      "Title": "Finding the Percentage",
+      "SortOrder": 52,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/3/16/preparation.html",
+      "SemanticSha256": "613b1c037f1ebc56eaa97b15fa996ef705107325ec44500ec7ab9adaa7958119",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.3.17",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U03:L17",
+      "UnitNumber": 3,
+      "UnitTitle": "Unit Rates and Percentages",
+      "LessonNumber": 17,
+      "Title": "Painting a Room",
+      "SortOrder": 53,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/3/17/preparation.html",
+      "SemanticSha256": "2e7694e7f7f33496a66196dd1cda2efcc447b8a1def8a789bb76c1f7c719f4ce",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.MD.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "6.4.1",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U04:L01",
+      "UnitNumber": 4,
+      "UnitTitle": "Dividing Fractions",
+      "LessonNumber": 1,
+      "Title": "Size of Divisor and Size of Quotient",
+      "SortOrder": 54,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/4/1/preparation.html",
+      "SemanticSha256": "0bb22e76ef4b9fc57737f735f6ce16c5bec09122ba15197fe13c8e194a33e9ae",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.NS.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "6.4.2",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U04:L02",
+      "UnitNumber": 4,
+      "UnitTitle": "Dividing Fractions",
+      "LessonNumber": 2,
+      "Title": "Meanings of Division",
+      "SortOrder": 55,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/4/2/preparation.html",
+      "SemanticSha256": "787cae339f7ea6c7c5cd850ca6c71ad5c77133bb842aed5e7ddd7695edf92b66",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.NS.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "6.4.3",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U04:L03",
+      "UnitNumber": 4,
+      "UnitTitle": "Dividing Fractions",
+      "LessonNumber": 3,
+      "Title": "Interpreting Division Situations",
+      "SortOrder": 56,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/4/3/preparation.html",
+      "SemanticSha256": "6f79efef72e9582006083a6aef6bcfa1ef256e62296d8d63ee53b874f7be3845",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.OA.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.NS.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "6.4.4",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U04:L04",
+      "UnitNumber": 4,
+      "UnitTitle": "Dividing Fractions",
+      "LessonNumber": 4,
+      "Title": "How Many Groups? (Part 1)",
+      "SortOrder": 57,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/4/4/preparation.html",
+      "SemanticSha256": "42c3dc42870a3f6cb52bfb144eebba907dc2db1e3dda94db53458c9ec93a0886",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NF.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NF.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.A.1",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.4.5",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U04:L05",
+      "UnitNumber": 4,
+      "UnitTitle": "Dividing Fractions",
+      "LessonNumber": 5,
+      "Title": "How Many Groups? (Part 2)",
+      "SortOrder": 58,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/4/5/preparation.html",
+      "SemanticSha256": "4649b7d6377977da94b962cb2a0980f407463c240e7fa29445de7f57f90933a8",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NF.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.4.6",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U04:L06",
+      "UnitNumber": 4,
+      "UnitTitle": "Dividing Fractions",
+      "LessonNumber": 6,
+      "Title": "Using Diagrams to Find the Number of Groups",
+      "SortOrder": 59,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/4/6/preparation.html",
+      "SemanticSha256": "42e3850d24cfeeb6f11b3c500be59709290db32c0e284477916207ea8cecbd11",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.4.7",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U04:L07",
+      "UnitNumber": 4,
+      "UnitTitle": "Dividing Fractions",
+      "LessonNumber": 7,
+      "Title": "What Fraction of a Group?",
+      "SortOrder": 60,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/4/7/preparation.html",
+      "SemanticSha256": "0b547da1c86deddca076c6875d26c8d8d71456bc45ada0d0ef110b833c38865d",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NF.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.4.8",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U04:L08",
+      "UnitNumber": 4,
+      "UnitTitle": "Dividing Fractions",
+      "LessonNumber": 8,
+      "Title": "How Much in Each Group? (Part 1)",
+      "SortOrder": 61,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/4/8/preparation.html",
+      "SemanticSha256": "4dedfa309cb3c0175d65c129ec8004577fbd909d1019879be1d804d9f7af2eba",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.4.9",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U04:L09",
+      "UnitNumber": 4,
+      "UnitTitle": "Dividing Fractions",
+      "LessonNumber": 9,
+      "Title": "How Much in Each Group? (Part 2)",
+      "SortOrder": 62,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/4/9/preparation.html",
+      "SemanticSha256": "658e35a14df9a828751cc736d3ebbec45cf78ba00d4e5229c768fe3b22b00971",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.NS.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.4.10",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U04:L10",
+      "UnitNumber": 4,
+      "UnitTitle": "Dividing Fractions",
+      "LessonNumber": 10,
+      "Title": "Dividing by Unit and Non-Unit Fractions",
+      "SortOrder": 63,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/4/10/preparation.html",
+      "SemanticSha256": "528c46cfaccc8e6c11d6ddb88dd4bb773bee8415aee34ae936462707cfdaf6c8",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NF.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.4.11",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U04:L11",
+      "UnitNumber": 4,
+      "UnitTitle": "Dividing Fractions",
+      "LessonNumber": 11,
+      "Title": "Using an Algorithm to Divide Fractions",
+      "SortOrder": 64,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/4/11/preparation.html",
+      "SemanticSha256": "6d24a19e71b64d6da55ac83aeae2c83d074a3acc90fe37617b229db7400050d9",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NF.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.4.12",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U04:L12",
+      "UnitNumber": 4,
+      "UnitTitle": "Dividing Fractions",
+      "LessonNumber": 12,
+      "Title": "Fractional Lengths",
+      "SortOrder": 65,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/4/12/preparation.html",
+      "SemanticSha256": "d642fa53ac04ea2084396796dbe1103d6bd49a0a21693dbd3933dcd9f16d88d7",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.OA.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.4.13",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U04:L13",
+      "UnitNumber": 4,
+      "UnitTitle": "Dividing Fractions",
+      "LessonNumber": 13,
+      "Title": "Rectangles with Fractional Side Lengths",
+      "SortOrder": 66,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/4/13/preparation.html",
+      "SemanticSha256": "e7f3d04210ddd6e33ca43bad2cfff3c9ab997471d755c6bd4ebf2d15df8a5d61",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NF.B.4.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.4.14",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U04:L14",
+      "UnitNumber": 4,
+      "UnitTitle": "Dividing Fractions",
+      "LessonNumber": 14,
+      "Title": "Fractional Lengths in Triangles and Prisms",
+      "SortOrder": 67,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/4/14/preparation.html",
+      "SemanticSha256": "010f65b2656a4c205ca3d88e585fee3065d092cd9c9fd5fa1788ab41b318dd25",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.A.1",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.G.A.1",
+        "CCSS:6.G.A.2",
+        "CCSS:6.NS.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.4.15",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U04:L15",
+      "UnitNumber": 4,
+      "UnitTitle": "Dividing Fractions",
+      "LessonNumber": 15,
+      "Title": "Volume of Prisms",
+      "SortOrder": 68,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/4/15/preparation.html",
+      "SemanticSha256": "05c4f6a77a7f96aa4cbb2b9273fd2d550d24263285deced3478b315048470a98",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.G.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.4.16",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U04:L16",
+      "UnitNumber": 4,
+      "UnitTitle": "Dividing Fractions",
+      "LessonNumber": 16,
+      "Title": "Solving Problems Involving Fractions",
+      "SortOrder": 69,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/4/16/preparation.html",
+      "SemanticSha256": "70272af401a3575eeaf67274d41fa40c6457612dc9dd69beb01f6ff93402a7df",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.4.17",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U04:L17",
+      "UnitNumber": 4,
+      "UnitTitle": "Dividing Fractions",
+      "LessonNumber": 17,
+      "Title": "Fitting Boxes into Boxes",
+      "SortOrder": 70,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/4/17/preparation.html",
+      "SemanticSha256": "82894ae469c5e18a7b4339e4bba9b26d769752514afafa9d73ada85581e550fa",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.A.1",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.G.A.2",
+        "CCSS:6.NS.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.5.1",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U05:L01",
+      "UnitNumber": 5,
+      "UnitTitle": "Arithmetic in Base Ten",
+      "LessonNumber": 1,
+      "Title": "Using Decimals in a Shopping Context",
+      "SortOrder": 71,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/5/1/preparation.html",
+      "SemanticSha256": "e3f09b90bfd36a71ba6e4fcd5ab0d7a1e12bc530fcdbc1e8be080653e0f960e3",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "6.5.2",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U05:L02",
+      "UnitNumber": 5,
+      "UnitTitle": "Arithmetic in Base Ten",
+      "LessonNumber": 2,
+      "Title": "Using Diagrams to Represent Addition and Subtraction",
+      "SortOrder": 72,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/5/2/preparation.html",
+      "SemanticSha256": "b4a0f5d355018832976557b9a8df94a79f217d5162c6ff19f59c36e4543aa494",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.B.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.5.3",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U05:L03",
+      "UnitNumber": 5,
+      "UnitTitle": "Arithmetic in Base Ten",
+      "LessonNumber": 3,
+      "Title": "Adding and Subtracting Decimals with Few Non-Zero Digits",
+      "SortOrder": 73,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/5/3/preparation.html",
+      "SemanticSha256": "e2b20a79364a8eca32029fbe410076bfb17734cb6ab9ce61d3c5b44450906010",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.B.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.5.4",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U05:L04",
+      "UnitNumber": 5,
+      "UnitTitle": "Arithmetic in Base Ten",
+      "LessonNumber": 4,
+      "Title": "Adding and Subtracting Decimals with Many Non-Zero Digits",
+      "SortOrder": 74,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/5/4/preparation.html",
+      "SemanticSha256": "bcf2a980f5589972533cf76c25cd0ede59d051b2d72fe37aa5dfb4a468e108ed",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.B.3",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.5.5",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U05:L05",
+      "UnitNumber": 5,
+      "UnitTitle": "Arithmetic in Base Ten",
+      "LessonNumber": 5,
+      "Title": "Decimal Points in Products",
+      "SortOrder": 75,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/5/5/preparation.html",
+      "SemanticSha256": "a41ce4e7418d54027690df8e369a3495902737d6c3001ff3d7f1d07e680fdcf1",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "6.5.6",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U05:L06",
+      "UnitNumber": 5,
+      "UnitTitle": "Arithmetic in Base Ten",
+      "LessonNumber": 6,
+      "Title": "Methods for Multiplying Decimals",
+      "SortOrder": 76,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/5/6/preparation.html",
+      "SemanticSha256": "2824cf752abecea7767d6835c40f110bfbcb1fdc49c0b841b44f1dbc56628c7b",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "6.5.7",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U05:L07",
+      "UnitNumber": 5,
+      "UnitTitle": "Arithmetic in Base Ten",
+      "LessonNumber": 7,
+      "Title": "Using Diagrams to Represent Multiplication",
+      "SortOrder": 77,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/5/7/preparation.html",
+      "SemanticSha256": "eef264be1e59b894394b550145a5a22c0cdcd00e60be2d4e14ac077d40822647",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NBT.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.B.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.5.8",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U05:L08",
+      "UnitNumber": 5,
+      "UnitTitle": "Arithmetic in Base Ten",
+      "LessonNumber": 8,
+      "Title": "Calculating Products of Decimals",
+      "SortOrder": 78,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/5/8/preparation.html",
+      "SemanticSha256": "89ba9819c34ebd4c5a3344e526d77110da659814fe39bf5ccd9eefbe8b74ae86",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.B.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.EE.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.5.9",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U05:L09",
+      "UnitNumber": 5,
+      "UnitTitle": "Arithmetic in Base Ten",
+      "LessonNumber": 9,
+      "Title": "Using the Partial Quotients Method",
+      "SortOrder": 79,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/5/9/preparation.html",
+      "SemanticSha256": "e9aca620e0c1bae4a461a22119e2a702a00caee48c62433f098bc111444530a0",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "6.5.10",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U05:L10",
+      "UnitNumber": 5,
+      "UnitTitle": "Arithmetic in Base Ten",
+      "LessonNumber": 10,
+      "Title": "Using Long Division",
+      "SortOrder": 80,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/5/10/preparation.html",
+      "SemanticSha256": "238be715a1dcada9ba4a9eb392534339f6e6a060ed8fab6b59166fa9273aeee1",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.B.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.EE.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.5.11",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U05:L11",
+      "UnitNumber": 5,
+      "UnitTitle": "Arithmetic in Base Ten",
+      "LessonNumber": 11,
+      "Title": "Dividing Numbers that Result in Decimals",
+      "SortOrder": 81,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/5/11/preparation.html",
+      "SemanticSha256": "20f43c25ee9b819ab95fcdb453ead29d69209a39aed3527c0673e1a5ba6f1f46",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NBT.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.B.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.EE.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.B.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.5.12",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U05:L12",
+      "UnitNumber": 5,
+      "UnitTitle": "Arithmetic in Base Ten",
+      "LessonNumber": 12,
+      "Title": "Dividing Decimals by Whole Numbers",
+      "SortOrder": 82,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/5/12/preparation.html",
+      "SemanticSha256": "92e6c55047333157ae9a62c72d08c8fbd12dbfb81ab9a10281aca09d183bfd88",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.B.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.EE.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.NS.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.5.13",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U05:L13",
+      "UnitNumber": 5,
+      "UnitTitle": "Arithmetic in Base Ten",
+      "LessonNumber": 13,
+      "Title": "Dividing Decimals by Decimals",
+      "SortOrder": 83,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/5/13/preparation.html",
+      "SemanticSha256": "371039129526da7ed72dd220f26a0a50e0bacf568906cb1ab19b9860fbc4b60c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.A.4",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.B.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.B.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.NS.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.NS.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.A.4",
+        "CCSS:6.NS.B.2",
+        "CCSS:6.NS.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.5.14",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U05:L14",
+      "UnitNumber": 5,
+      "UnitTitle": "Arithmetic in Base Ten",
+      "LessonNumber": 14,
+      "Title": "Using Operations on Decimals to Solve Problems",
+      "SortOrder": 84,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/5/14/preparation.html",
+      "SemanticSha256": "bdf0c7cd9d62df4215b6ef40f54e18a489ff1515caf168953c7c29e83dfc918c",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.OA.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.B.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.B.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.B.2",
+        "CCSS:6.NS.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.5.15",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U05:L15",
+      "UnitNumber": 5,
+      "UnitTitle": "Arithmetic in Base Ten",
+      "LessonNumber": 15,
+      "Title": "Making and Measuring Boxes",
+      "SortOrder": 85,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/5/15/preparation.html",
+      "SemanticSha256": "dbe6cdd2a45a6c7e01d5ee0c17821a26202f4c4b7a5813d6c0f47103d37c907b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.B.3",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.6.1",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U06:L01",
+      "UnitNumber": 6,
+      "UnitTitle": "Expressions and Equations",
+      "LessonNumber": 1,
+      "Title": "Tape Diagrams and Equations",
+      "SortOrder": 86,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/6/1/preparation.html",
+      "SemanticSha256": "db3afe8b3e44638994ed6c88ace625db10cdaffa09c377be743d90da450ce4bc",
+      "Alignments": [
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.EE.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.EE.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.EE.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "6.6.2",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U06:L02",
+      "UnitNumber": 6,
+      "UnitTitle": "Expressions and Equations",
+      "LessonNumber": 2,
+      "Title": "Truth and Equations",
+      "SortOrder": 87,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/6/2/preparation.html",
+      "SemanticSha256": "fcb066857a170b0c51276ce3d58e115a34578243b1671932138329adfba800fc",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.EE.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.6.3",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U06:L03",
+      "UnitNumber": 6,
+      "UnitTitle": "Expressions and Equations",
+      "LessonNumber": 3,
+      "Title": "Staying in Balance",
+      "SortOrder": 88,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/6/3/preparation.html",
+      "SemanticSha256": "6e33566ecea6f49e0add4a1e2ab1df89242ed540fb4d3ce7d5e34799e917bb56",
+      "Alignments": [
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.EE.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "6.6.4",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U06:L04",
+      "UnitNumber": 6,
+      "UnitTitle": "Expressions and Equations",
+      "LessonNumber": 4,
+      "Title": "Practice Solving Equations and Representing Situations with Equations",
+      "SortOrder": 89,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/6/4/preparation.html",
+      "SemanticSha256": "8913432b8a5d35780ebfc6ca8bbc74669c1e5440197a3b4a5d540216c9613a0a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.B.6",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.B.7",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.B.3",
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.B.5",
+        "CCSS:6.EE.B.6",
+        "CCSS:6.EE.B.7",
+        "CCSS:6.NS.B.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.6.5",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U06:L05",
+      "UnitNumber": 6,
+      "UnitTitle": "Expressions and Equations",
+      "LessonNumber": 5,
+      "Title": "A New Way to Interpret $a$ over $b$",
+      "SortOrder": 90,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/6/5/preparation.html",
+      "SemanticSha256": "b1e0a748b431c70fda11dfcf7ab11b5f726f905f71f10475dd2e0942de83736b",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.NS.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.NS.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.B.5",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.B.6",
+          "SortOrder": 5
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.B.7",
+          "SortOrder": 6
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.B.5",
+        "CCSS:6.EE.B.6",
+        "CCSS:6.EE.B.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.6.6",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U06:L06",
+      "UnitNumber": 6,
+      "UnitTitle": "Expressions and Equations",
+      "LessonNumber": 6,
+      "Title": "Write Expressions Where Letters Stand for Numbers",
+      "SortOrder": 91,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/6/6/preparation.html",
+      "SemanticSha256": "df144686775d4283e91051195fb6e3ffa86c0a7a4e4d056b96869b3bd70cf778",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.2.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.EE.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.2.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.EE.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.B.6",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.A.2",
+        "CCSS:6.EE.B.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.6.7",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U06:L07",
+      "UnitNumber": 6,
+      "UnitTitle": "Expressions and Equations",
+      "LessonNumber": 7,
+      "Title": "Revisit Percentages",
+      "SortOrder": 92,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/6/7/preparation.html",
+      "SemanticSha256": "c223a4cdc224b637622011389ea686e11931ec4819984e4a522e25185b5d520c",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.RP.A.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.B.6",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.B.7",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.B.6",
+        "CCSS:6.EE.B.7",
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.6.8",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U06:L08",
+      "UnitNumber": 6,
+      "UnitTitle": "Expressions and Equations",
+      "LessonNumber": 8,
+      "Title": "Equal and Equivalent",
+      "SortOrder": 93,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/6/8/preparation.html",
+      "SemanticSha256": "628f249ba94a8dfe22cfaeff68e96b004f9d3edc4f75a2ec5af9fc172eb18926",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.A.4",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.B.5",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.A.4",
+        "CCSS:6.EE.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.6.9",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U06:L09",
+      "UnitNumber": 6,
+      "UnitTitle": "Expressions and Equations",
+      "LessonNumber": 9,
+      "Title": "The Distributive Property, Part 1",
+      "SortOrder": 94,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/6/9/preparation.html",
+      "SemanticSha256": "e3f1177750f8f9c4d5fcface7dedc5d4b36c3e70d79b40d4f88857b5e371917b",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.MD.C.7.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.OA.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.EE.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.EE.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "6.6.10",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U06:L10",
+      "UnitNumber": 6,
+      "UnitTitle": "Expressions and Equations",
+      "LessonNumber": 10,
+      "Title": "The Distributive Property, Part 2",
+      "SortOrder": 95,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/6/10/preparation.html",
+      "SemanticSha256": "5f39c80e3a9563ae67349c44f2ecd8936b2da13d01db35f5873a4894a3685e33",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.A.4",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.A.2",
+        "CCSS:6.EE.A.3",
+        "CCSS:6.EE.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.6.11",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U06:L11",
+      "UnitNumber": 6,
+      "UnitTitle": "Expressions and Equations",
+      "LessonNumber": 11,
+      "Title": "The Distributive Property, Part 3",
+      "SortOrder": 96,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/6/11/preparation.html",
+      "SemanticSha256": "4e8e5541d9f9de47995f27229cfce382f1ef825ed2c8a358a25078b3e3dbc9cf",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.A.4",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.A.2",
+        "CCSS:6.EE.A.3",
+        "CCSS:6.EE.A.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.6.12",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U06:L12",
+      "UnitNumber": 6,
+      "UnitTitle": "Expressions and Equations",
+      "LessonNumber": 12,
+      "Title": "Meaning of Exponents",
+      "SortOrder": 97,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/6/12/preparation.html",
+      "SemanticSha256": "96ce1af9f61623b2a854b8f3f8095813fd99af29ac89140b09294b215223925c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.EE.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.6.13",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U06:L13",
+      "UnitNumber": 6,
+      "UnitTitle": "Expressions and Equations",
+      "LessonNumber": 13,
+      "Title": "Expressions with Exponents",
+      "SortOrder": 98,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/6/13/preparation.html",
+      "SemanticSha256": "7387e869bcc29392ccf5cbdb6c94fd4d8b2216d4ee11135bebb8bda23ac1f3ed",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.A.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.A.1"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.6.14",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U06:L14",
+      "UnitNumber": 6,
+      "UnitTitle": "Expressions and Equations",
+      "LessonNumber": 14,
+      "Title": "Evaluating Expressions with Exponents",
+      "SortOrder": 99,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/6/14/preparation.html",
+      "SemanticSha256": "335628a4cf1106d5821986eed99869bc9232839f461bd371d7440e80ad3919b7",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.2.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.EE.A.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.A.1",
+        "CCSS:6.EE.A.2"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.6.15",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U06:L15",
+      "UnitNumber": 6,
+      "UnitTitle": "Expressions and Equations",
+      "LessonNumber": 15,
+      "Title": "Equivalent Exponential Expressions",
+      "SortOrder": 100,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/6/15/preparation.html",
+      "SemanticSha256": "d9f6ac47e56c4ebdf818c38930529e9a204958f4e74091b6f2f0036dc0437d47",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.2.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.EE.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.B.5",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.A.1",
+        "CCSS:6.EE.A.2",
+        "CCSS:6.EE.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.6.16",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U06:L16",
+      "UnitNumber": 6,
+      "UnitTitle": "Expressions and Equations",
+      "LessonNumber": 16,
+      "Title": "Two Related Quantities, Part 1",
+      "SortOrder": 101,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/6/16/preparation.html",
+      "SemanticSha256": "1c210d965d88d8643e122ecc49df6c9039849eb3dd658f5ba0f41cbdd749eddb",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.C.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.C.9",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.C.9",
+        "CCSS:6.RP.A.1",
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.6.17",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U06:L17",
+      "UnitNumber": 6,
+      "UnitTitle": "Expressions and Equations",
+      "LessonNumber": 17,
+      "Title": "Two Related Quantities, Part 2",
+      "SortOrder": 102,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/6/17/preparation.html",
+      "SemanticSha256": "bb142ea66fe8c883bb4b5cbd3553ce8007387e3bb14209c94aa92097b3750747",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.C.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.C.9",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.C.9",
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.6.18",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U06:L18",
+      "UnitNumber": 6,
+      "UnitTitle": "Expressions and Equations",
+      "LessonNumber": 18,
+      "Title": "More Relationships",
+      "SortOrder": 103,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/6/18/preparation.html",
+      "SemanticSha256": "f3d61cf0a85431cc1aaa205407f8c9e556a00bb22bb5a3f6a37e2c50dfba643f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.C.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.C.9",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.C.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.6.19",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U06:L19",
+      "UnitNumber": 6,
+      "UnitTitle": "Expressions and Equations",
+      "LessonNumber": 19,
+      "Title": "Tables, Equations, and Graphs, Oh My!",
+      "SortOrder": 104,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/6/19/preparation.html",
+      "SemanticSha256": "0dd6c5bce9b9586aff78bcd52641f86e71d70c3ce9a976c7346567a300f4cb09",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.B.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.B.7",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.C.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.C.9",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.A.2",
+        "CCSS:6.EE.B.7",
+        "CCSS:6.EE.C.9"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.7.1",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U07:L01",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Numbers",
+      "LessonNumber": 1,
+      "Title": "Positive and Negative Numbers",
+      "SortOrder": 105,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/7/1/preparation.html",
+      "SemanticSha256": "530ed6920e3b02b122b8a84bfeebdb0dfaf51d2da47cae0039f84eee4aa2b449",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.C.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.C.6",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.C.5",
+        "CCSS:6.NS.C.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.7.2",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U07:L02",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Numbers",
+      "LessonNumber": 2,
+      "Title": "Points on the Number Line",
+      "SortOrder": 106,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/7/2/preparation.html",
+      "SemanticSha256": "2ed2823d045da8876a8ce23843bd415781cc0f357b9a4b39b41843be31d31858",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.NF.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NF.C",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.C.6",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.6.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.NS.C.6",
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.NS.C.6.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.C.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.7.3",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U07:L03",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Numbers",
+      "LessonNumber": 3,
+      "Title": "Comparing Positive and Negative Numbers",
+      "SortOrder": 107,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/7/3/preparation.html",
+      "SemanticSha256": "99e7042f47b06937a4b859aead40b352f32318a5e69eb05b43816d36d5e3b026",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.A.3.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.7.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.NS.C.7",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.7.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.NS.C.7",
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.NS.C.7.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.NS.C.7.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 6
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.7.4",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U07:L04",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Numbers",
+      "LessonNumber": 4,
+      "Title": "Ordering Rational Numbers",
+      "SortOrder": 108,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/7/4/preparation.html",
+      "SemanticSha256": "aa319c8facd773cc41b8bdca1bff90d43009461fdffbb90cd47ca1e523c7092f",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NBT.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.A.3.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.C.6",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.6.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.NS.C.6",
+          "SortOrder": 5
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.C.7",
+          "SortOrder": 6
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.NS.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 7
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.C.6",
+        "CCSS:6.NS.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.7.5",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U07:L05",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Numbers",
+      "LessonNumber": 5,
+      "Title": "Using Negative Numbers to Make Sense of Contexts",
+      "SortOrder": 109,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/7/5/preparation.html",
+      "SemanticSha256": "2a3f0015dba4bc86417e62e4a524ba3c3fc2ea28291e30fdb346e34cdf3f1e5c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.C.5",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.C.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.7.6",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U07:L06",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Numbers",
+      "LessonNumber": 6,
+      "Title": "Absolute Value of Numbers",
+      "SortOrder": 110,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/7/6/preparation.html",
+      "SemanticSha256": "b8f146087c584c61f4018d47f6e16bec0b0ca0c20b6943c284ec5c50beea1b38",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.NF.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NBT.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.7.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.NS.C.7",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.7.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.NS.C.7",
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.NS.C.7.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.7.7",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U07:L07",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Numbers",
+      "LessonNumber": 7,
+      "Title": "Comparing Numbers and Distance from Zero",
+      "SortOrder": 111,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/7/7/preparation.html",
+      "SemanticSha256": "4438dd4462efbeab51f1db5f8ef21211cea9aa3b24c509ba7c2a6ba9c9e6a825",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.C.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.6.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.NS.C.6",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.C.7",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.7.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.NS.C.7",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.C.6",
+        "CCSS:6.NS.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.7.8",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U07:L08",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Numbers",
+      "LessonNumber": 8,
+      "Title": "Writing and Graphing Inequalities",
+      "SortOrder": 112,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/7/8/preparation.html",
+      "SemanticSha256": "145c3fde2b2a6bbfb0e893aec449abf2ca3c1df67b23da62774101b79dcdfabf",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.B.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.B.8",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.7.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.NS.C.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.B.8",
+        "CCSS:6.NS.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.7.9",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U07:L09",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Numbers",
+      "LessonNumber": 9,
+      "Title": "Solutions of Inequalities",
+      "SortOrder": 113,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/7/9/preparation.html",
+      "SemanticSha256": "65d5e0ebfa1fe29b073c7b647cad9c8ec9cd989d543c2bce5e49b707020ab21a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.B.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.B.8",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.7.a",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.NS.C.7",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.B.5",
+        "CCSS:6.EE.B.8",
+        "CCSS:6.NS.C.7"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.7.10",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U07:L10",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Numbers",
+      "LessonNumber": 10,
+      "Title": "Interpreting Inequalities",
+      "SortOrder": 114,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/7/10/preparation.html",
+      "SemanticSha256": "68f934125b45ad298e9de502466ae45e77b65f3b227d7c718f7ee2514fbf82a0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.A.2.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.EE.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.B.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.B.6",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.EE.B.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.EE.B.8",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.EE.A.2",
+        "CCSS:6.EE.B.5",
+        "CCSS:6.EE.B.6",
+        "CCSS:6.EE.B.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.7.11",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U07:L11",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Numbers",
+      "LessonNumber": 11,
+      "Title": "Points on the Coordinate Plane",
+      "SortOrder": 115,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/7/11/preparation.html",
+      "SemanticSha256": "baf7cd06a056c6c43e4980567c0f2016beea80a153f93a0400acb3841b4f1e98",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.6.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.NS.C.6",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.6.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.NS.C.6",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.C.8",
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.NS.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.NS.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 6
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.C.6",
+        "CCSS:6.NS.C.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.7.12",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U07:L12",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Numbers",
+      "LessonNumber": 12,
+      "Title": "Constructing the Coordinate Plane",
+      "SortOrder": 116,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/7/12/preparation.html",
+      "SemanticSha256": "17eb61defb31611797e91794d0ac00afd31c91be8f634cac89b06c888f0c779f",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.6.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.NS.C.6",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.NS.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.C.6"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.7.13",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U07:L13",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Numbers",
+      "LessonNumber": 13,
+      "Title": "Interpreting Points on a Coordinate Plane",
+      "SortOrder": 117,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/7/13/preparation.html",
+      "SemanticSha256": "56c858b859afc599639bc671afe1cf7ad0c09389c404c4976d8bbd9cf3a3dff6",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.NS.C.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.6.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.NS.C.6",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.7.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.NS.C.7",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.C.8",
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.NS.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.C.6",
+        "CCSS:6.NS.C.7",
+        "CCSS:6.NS.C.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.7.14",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U07:L14",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Numbers",
+      "LessonNumber": 14,
+      "Title": "Distances on a Coordinate Plane",
+      "SortOrder": 118,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/7/14/preparation.html",
+      "SemanticSha256": "745378c58290e9cae26c6ed2c7a889fd91885fd03ea9695d29f3d740ebccf642",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.C.6",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.6.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.NS.C.6",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.C.8",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.C.6",
+        "CCSS:6.NS.C.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.7.15",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U07:L15",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Numbers",
+      "LessonNumber": 15,
+      "Title": "Shapes on the Coordinate Plane",
+      "SortOrder": 119,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/7/15/preparation.html",
+      "SemanticSha256": "fbc0a7f69ac8f9ed0516888e169f5f5b9dcf196eff1cf8c6634acf7fa8893586",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.G.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.G.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.6.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.NS.C.6",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.C.8",
+          "SortOrder": 5
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.G.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 6
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.NS.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 7
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.G.A.3",
+        "CCSS:6.NS.C.6",
+        "CCSS:6.NS.C.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.7.16",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U07:L16",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Numbers",
+      "LessonNumber": 16,
+      "Title": "Common Factors",
+      "SortOrder": 120,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/7/16/preparation.html",
+      "SemanticSha256": "9ad7fd0dd3b56043848080ac6ca66476f15b98fde7aba1b89305595f9c474e19",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.B.4",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.7.17",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U07:L17",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Numbers",
+      "LessonNumber": 17,
+      "Title": "Common Multiples",
+      "SortOrder": 121,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/7/17/preparation.html",
+      "SemanticSha256": "05dd8bf3b3c7c902f74b5dc1f40e94b1709383b5a66ab755681d686f7ed00747",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.B.4",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.7.18",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U07:L18",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Numbers",
+      "LessonNumber": 18,
+      "Title": "Using Common Multiples and Common Factors",
+      "SortOrder": 122,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/7/18/preparation.html",
+      "SemanticSha256": "2c1e825256746ac3f856cf615195297f5247a2f43baa2af2d12c9228e0e2fc89",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.B.4",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.7.19",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U07:L19",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Numbers",
+      "LessonNumber": 19,
+      "Title": "Drawing on the Coordinate Plane",
+      "SortOrder": 123,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/7/19/preparation.html",
+      "SemanticSha256": "0f565c40dccb7462534e08bfa7ff3e322b852fa5d3c0e2af3503f78fd85663ee",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.G.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.C.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.C.8",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.G.A.3",
+        "CCSS:6.NS.C.8"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.8.1",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U08:L01",
+      "UnitNumber": 8,
+      "UnitTitle": "Data Sets and Distributions",
+      "LessonNumber": 1,
+      "Title": "Got Data?",
+      "SortOrder": 124,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/8/1/preparation.html",
+      "SemanticSha256": "e3aed11e66864655d5d640e4475db253368532b7ed312f13d83572a55ecdff55",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "2.MD.D.9",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.MD.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.SP.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "6.8.2",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U08:L02",
+      "UnitNumber": 8,
+      "UnitTitle": "Data Sets and Distributions",
+      "LessonNumber": 2,
+      "Title": "Statistical Questions",
+      "SortOrder": 125,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/8/2/preparation.html",
+      "SemanticSha256": "b49383a6caa6492714bc01b9f9591b3355c98a42f8572895a053a76a13ed40d3",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.MD.B.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.SP.A.1",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.5.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.SP.B.5",
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.SP.A.1",
+        "CCSS:6.SP.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.8.3",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U08:L03",
+      "UnitNumber": 8,
+      "UnitTitle": "Data Sets and Distributions",
+      "LessonNumber": 3,
+      "Title": "Representing Data Graphically",
+      "SortOrder": 126,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/8/3/preparation.html",
+      "SemanticSha256": "bac29f249bc5937ae410e1fa49bcfd1e94511fe55c0a296676b9192938026585",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "3.MD.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.SP.A.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.SP.B.4",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.SP.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.SP.A.1",
+        "CCSS:6.SP.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.8.4",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U08:L04",
+      "UnitNumber": 8,
+      "UnitTitle": "Data Sets and Distributions",
+      "LessonNumber": 4,
+      "Title": "Dot Plots",
+      "SortOrder": 127,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/8/4/preparation.html",
+      "SemanticSha256": "a4cfa7690b3ebb8548f47f754c7bd2712ab2432d024426e9db673b431a0d6d55",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.SP.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.SP.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.SP.B.4",
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.SP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.SP.B.5.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 6
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.SP.A.2",
+        "CCSS:6.SP.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.8.5",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U08:L05",
+      "UnitNumber": 8,
+      "UnitTitle": "Data Sets and Distributions",
+      "LessonNumber": 5,
+      "Title": "Using Dot Plots to Answer Statistical Questions",
+      "SortOrder": 128,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/8/5/preparation.html",
+      "SemanticSha256": "e91a4e737cc557306789403485309cddf26bd252371f4221e419d1f8d5710ecc",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.SP.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.SP.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.SP.B.4",
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.SP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.SP.B.5.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 6
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.SP.A.2",
+        "CCSS:6.SP.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.8.6",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U08:L06",
+      "UnitNumber": 8,
+      "UnitTitle": "Data Sets and Distributions",
+      "LessonNumber": 6,
+      "Title": "Interpreting Histograms",
+      "SortOrder": 129,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/8/6/preparation.html",
+      "SemanticSha256": "dc2031bb37e2721ac64f4b8550306083499f6ff6e46802b17e5eb4e56e38492d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.SP.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.SP.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.SP.B.4",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.5.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.SP.B.5",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.SP.A.1",
+        "CCSS:6.SP.A.3",
+        "CCSS:6.SP.B.4",
+        "CCSS:6.SP.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.8.7",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U08:L07",
+      "UnitNumber": 8,
+      "UnitTitle": "Data Sets and Distributions",
+      "LessonNumber": 7,
+      "Title": "Using Histograms to Answer Statistical Questions",
+      "SortOrder": 130,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/8/7/preparation.html",
+      "SemanticSha256": "f6afc69751ec262e794f210430ec7de487f8471d72da85d3f141b7a676ff90b1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.SP.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.SP.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.SP.B.4",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.5.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.SP.B.5",
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.SP.A.1",
+        "CCSS:6.SP.A.2",
+        "CCSS:6.SP.B.4",
+        "CCSS:6.SP.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.8.8",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U08:L08",
+      "UnitNumber": 8,
+      "UnitTitle": "Data Sets and Distributions",
+      "LessonNumber": 8,
+      "Title": "Describing Distributions on Histograms",
+      "SortOrder": 131,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/8/8/preparation.html",
+      "SemanticSha256": "51750010a8bd1c6bbae6ac4b715f902fca32b60dd2e75bc9594f9fe4bb819383",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.SP.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.SP.B.4",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.SP.B.5.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.SP.A.2",
+        "CCSS:6.SP.B.4"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.8.9",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U08:L09",
+      "UnitNumber": 8,
+      "UnitTitle": "Data Sets and Distributions",
+      "LessonNumber": 9,
+      "Title": "Mean",
+      "SortOrder": 132,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/8/9/preparation.html",
+      "SemanticSha256": "49c54ef7b53084a76466227e1c5a5fe16d69a06755736f724f3b26f0f1b3f463",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.OA.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.SP.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.5.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.SP.B.5",
+          "SortOrder": 4
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.SP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.SP.A.3",
+        "CCSS:6.SP.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.8.10",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U08:L10",
+      "UnitNumber": 8,
+      "UnitTitle": "Data Sets and Distributions",
+      "LessonNumber": 10,
+      "Title": "Finding and Interpreting the Mean as the Balance Point",
+      "SortOrder": 133,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/8/10/preparation.html",
+      "SemanticSha256": "167ae32cd600fb247e02c269f6008eb8933cb611c243526f4c6063e79865b361",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.SP.A.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.5.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.SP.B.5",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.SP.A.3",
+        "CCSS:6.SP.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.8.11",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U08:L11",
+      "UnitNumber": 8,
+      "UnitTitle": "Data Sets and Distributions",
+      "LessonNumber": 11,
+      "Title": "Variability and MAD",
+      "SortOrder": 134,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/8/11/preparation.html",
+      "SemanticSha256": "91bb4cad5a40037c202e709d5fa41cc3f146d209e215d470e26a402a6bcaf0c0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.SP.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.SP.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.5.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.SP.B.5",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.SP.A.2",
+        "CCSS:6.SP.A.3",
+        "CCSS:6.SP.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.8.12",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U08:L12",
+      "UnitNumber": 8,
+      "UnitTitle": "Data Sets and Distributions",
+      "LessonNumber": 12,
+      "Title": "Using Mean and MAD to Make Comparisons",
+      "SortOrder": 135,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/8/12/preparation.html",
+      "SemanticSha256": "69f2cd2a43298ef538c25bab46218b52d2ea9e6f271a9732dcb78a58d50d9e19",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.B.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.5.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.SP.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.5.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.SP.B.5",
+          "SortOrder": 3
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.SP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.B.3",
+        "CCSS:6.SP.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.8.13",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U08:L13",
+      "UnitNumber": 8,
+      "UnitTitle": "Data Sets and Distributions",
+      "LessonNumber": 13,
+      "Title": "Median",
+      "SortOrder": 136,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/8/13/preparation.html",
+      "SemanticSha256": "53e7762f31055f4eaa80a182a324aa8c5753c76d8614011dc9951bcc287389b0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.5.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.SP.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.SP.B.5.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.SP.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.8.14",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U08:L14",
+      "UnitNumber": 8,
+      "UnitTitle": "Data Sets and Distributions",
+      "LessonNumber": 14,
+      "Title": "Comparing Mean and Median",
+      "SortOrder": 137,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/8/14/preparation.html",
+      "SemanticSha256": "6e698c4a66dbb9ef418343cc2800edb03496687f350eaf3616349106eafb92b0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.5.b",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.SP.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.5.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.SP.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.5.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.SP.B.5",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.SP.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.8.15",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U08:L15",
+      "UnitNumber": 8,
+      "UnitTitle": "Data Sets and Distributions",
+      "LessonNumber": 15,
+      "Title": "Quartiles and Interquartile Range",
+      "SortOrder": 138,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/8/15/preparation.html",
+      "SemanticSha256": "9624271717b28972f9a64a6abf5d6ee30e032e2eadca98f6465be37e7dd5ecc6",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.5.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.SP.B.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.5.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.SP.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingTowards",
+          "ReferenceCode": "6.SP.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.SP.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.8.16",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U08:L16",
+      "UnitNumber": 8,
+      "UnitTitle": "Data Sets and Distributions",
+      "LessonNumber": 16,
+      "Title": "Box Plots",
+      "SortOrder": 139,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/8/16/preparation.html",
+      "SemanticSha256": "6409d8f142377f98fd894bcce686def99a363084a357f23d40903b477c0ae460",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.SP.B.4",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.5.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.SP.B.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.5.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.SP.B.5",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.SP.B.4",
+        "CCSS:6.SP.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.8.17",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U08:L17",
+      "UnitNumber": 8,
+      "UnitTitle": "Data Sets and Distributions",
+      "LessonNumber": 17,
+      "Title": "Using Box Plots",
+      "SortOrder": 140,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/8/17/preparation.html",
+      "SemanticSha256": "faeb5b008166e1d4ce7ac0b4216da58fa7a298defd0bbef8324ee8b13e6b421a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.SP.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.SP.B.4",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.SP.B.5",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.SP.A.1",
+        "CCSS:6.SP.B.4",
+        "CCSS:6.SP.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.8.18",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U08:L18",
+      "UnitNumber": 8,
+      "UnitTitle": "Data Sets and Distributions",
+      "LessonNumber": 18,
+      "Title": "Using Data to Solve Problems",
+      "SortOrder": 141,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/8/18/preparation.html",
+      "SemanticSha256": "d0942883e4be430dd649f5b8d1065c9ec5b7c1a0d15e6094af0625b900bb53a7",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.SP.A.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.5.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.SP.B.5",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.SP.B.5.d",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.SP.B.5",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.SP.A.2",
+        "CCSS:6.SP.B.5"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.9.1",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U09:L01",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting it All Together",
+      "LessonNumber": 1,
+      "Title": "Fermi Problems",
+      "SortOrder": 142,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/9/1/preparation.html",
+      "SemanticSha256": "2fc636837d83beaf0bf5cdd4b5239d1fc455099e008af591028eaab5398874c2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.G.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "6.9.2",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U09:L02",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting it All Together",
+      "LessonNumber": 2,
+      "Title": "If Our Class Were the World",
+      "SortOrder": 143,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/9/2/preparation.html",
+      "SemanticSha256": "bdbd73bf9cd8e82b6a28b1cb77bd3b9513c4c1b67d0beb1565f4e1c7e9e7de92",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.B",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "6.9.3",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U09:L03",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting it All Together",
+      "LessonNumber": 3,
+      "Title": "Rectangle Madness",
+      "SortOrder": 144,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/9/3/preparation.html",
+      "SemanticSha256": "52e99400da75a4e37dcd9ee7ffc2fa63aa3c4a99a7028bf3dc114712667c1373",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "4.MD.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "5.NF.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 2
+        },
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.NS.B.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.A",
+          "ReferenceKind": "Cluster",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": []
+    },
+    {
+      "SourceLessonCode": "6.9.4",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U09:L04",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting it All Together",
+      "LessonNumber": 4,
+      "Title": "How Do We Choose?",
+      "SortOrder": 145,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/9/4/preparation.html",
+      "SemanticSha256": "2c4cfb265cb897b07e2791bb8629e6df756059e46e61d7f4bdc7e86674e356e8",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.1",
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.9.5",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U09:L05",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting it All Together",
+      "LessonNumber": 5,
+      "Title": "More than Two Choices",
+      "SortOrder": 146,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/9/5/preparation.html",
+      "SemanticSha256": "50b40e0425b2782a9dbf30be9f9e4309d10b6caf06430e1c29e8870c33910c3d",
+      "Alignments": [
+        {
+          "Role": "BuildingOn",
+          "ReferenceCode": "6.RP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "None",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.RP.A.3"
+      ]
+    },
+    {
+      "SourceLessonCode": "6.9.6",
+      "LessonCode": "PED:US-CCSS-MATH:G6:U09:L06",
+      "UnitNumber": 9,
+      "UnitTitle": "Putting it All Together",
+      "LessonNumber": 6,
+      "Title": "Picking Representatives",
+      "SortOrder": 147,
+      "SourceUrl": "https://im.kendallhunt.com/MS/teachers/1/9/6/preparation.html",
+      "SemanticSha256": "c4ce95fe32e6e12cea1ebdc17e0b09c63a6d77007cf6be1c1d3859bd4f963e5b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.NS.B.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.NS.B.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6.RP.A.3.c",
+          "ReferenceKind": "StandardSubpart",
+          "ResolutionKind": "SubpartToAcceptedParent",
+          "OutcomeCode": "CCSS:6.RP.A.3",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CCSS:6.NS.B.3",
+        "CCSS:6.RP.A.2",
+        "CCSS:6.RP.A.3"
+      ]
+    }
+  ]
+}

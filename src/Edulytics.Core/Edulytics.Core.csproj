@@ -10,6 +10,7 @@
     <EmbeddedResource Include="Curriculum/Packs/*.curriculum-pack.json" />
     <EmbeddedResource Include="Curriculum/Packs/*.integrity-manifest.json" />
     <EmbeddedResource Include="Curriculum/LessonContent/Packs/*.lesson-content-pack.json" />
+    <EmbeddedResource Include="Curriculum/LessonBlueprints/Packs/*.lesson-blueprint.json" />
   </ItemGroup>
 
 </Project>

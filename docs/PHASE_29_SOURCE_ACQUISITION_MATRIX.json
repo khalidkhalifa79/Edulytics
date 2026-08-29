@@ -21,8 +21,8 @@
   },
   "nextResearchAndContentTarget": {
     "packCode": "US-CCSS-MATH",
-    "nativeLevel": "Grade 6",
-    "reason": "Current staging exposes generic Grade 6 lesson shells; this is the first corrective lesson-title/content target."
+    "nativeLevel": "Grade 7",
+    "reason": "Common Core Grade 6 now has an exact source-driven pedagogical blueprint; continue the source rollout with Grade 7."
   },
   "curricula": [
     {
@@ -497,12 +497,12 @@
           "pathway": null,
           "officialSourcePeriod": "2026-2027",
           "officialSourceResolution": "CurrentOfficial",
-          "pedagogicalSelectionStatus": "ResearchRequired",
+          "pedagogicalSelectionStatus": "ResolvedExact",
           "pedagogicalSourceType": "WidelyUsedPublisherTextbook",
-          "sourceFamily": "",
-          "selectionEvidence": "",
-          "blockingReason": "Resolve school-adopted textbook first; otherwise record evidence for the selected widely-used Common-Core-aligned pedagogical source.",
-          "note": "Official Common Core Standard alignment remains authoritative regardless of textbook choice."
+          "sourceFamily": "Open Up Resources 6–8 Math / IM 6–8 Math, 2017–2019 CC BY 4.0 lineage",
+          "selectionEvidence": "Durable semantic source acquisition locked the exact Grade 6 sequence: 9 units, 147 lessons, 29/29 accepted Grade 6 Standards, 208 formal Addressing lesson/outcome rows, 17 lessons with no numbered Addressing target, and a stable semantic graph SHA-256 edae65cc700ae2b2f3a5a7828275a3ffdded4fbf07759489801e7c4e5059e0e9.",
+          "blockingReason": "",
+          "note": "Source-driven lesson sequence resolved. Formal mappings use exact numbered Addressing references only. Explicit subparts may resolve to the accepted parent Standard with provenance. BuildingOn, BuildingTowards, clusters and domains are not promoted into invented mastery targets."
         },
         {
           "logicalLevel": 8,

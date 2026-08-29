@@ -236,9 +236,43 @@ public sealed class Phase29SourceAcquisitionMatrixTests
     }
 
     [Fact]
-    public void FirstCorrectiveTarget_RemainsCommonCoreGrade6()
+    public void NextCorrectiveTarget_AdvancesToCommonCoreGrade7AfterGrade6Resolution()
     {
         using var document = Load();
+
+        var commonCore =
+            document.RootElement
+                .GetProperty("curricula")
+                .EnumerateArray()
+                .Single(
+                    x =>
+                        x.GetProperty("packCode")
+                            .GetString() ==
+                        MathematicsCurriculumPackRegistry.CommonCoreCode);
+
+        var gradeSix =
+            commonCore
+                .GetProperty("scopes")
+                .EnumerateArray()
+                .Single(
+                    x =>
+                        x.GetProperty("logicalLevel")
+                            .GetInt32() == 7 &&
+                        x.GetProperty("nativeLevel")
+                            .GetString() == "Grade 6");
+
+        Assert.Equal(
+            "ResolvedExact",
+            gradeSix
+                .GetProperty(
+                    "pedagogicalSelectionStatus")
+                .GetString());
+
+        Assert.True(
+            string.IsNullOrWhiteSpace(
+                gradeSix
+                    .GetProperty("blockingReason")
+                    .GetString()));
 
         var next =
             document.RootElement
@@ -251,7 +285,7 @@ public sealed class Phase29SourceAcquisitionMatrixTests
                 .GetString());
 
         Assert.Equal(
-            "Grade 6",
+            "Grade 7",
             next.GetProperty("nativeLevel")
                 .GetString());
     }
