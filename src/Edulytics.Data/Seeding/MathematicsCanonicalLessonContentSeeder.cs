@@ -178,26 +178,146 @@ public sealed class MathematicsCanonicalLessonContentSeeder
                 $"in {document.PackCode}: {string.Join(", ", missing)}.");
         }
 
+        var lessonIds =
+            persistedLessons
+                .Select(x => x.Id)
+                .ToArray();
+
+        /*
+         * Bulk-load the complete document state before per-lesson validation.
+         *
+         * The previous implementation performed several database round-trips
+         * and SaveChangesAsync for every canonical lesson. With the complete
+         * Common Core rollout that meant thousands of Neon round-trips before
+         * ASP.NET could bind its HTTP port.
+         *
+         * The validation semantics remain fail-closed:
+         * - exact official OutcomeCode equality;
+         * - exact pedagogical lesson identity;
+         * - no silent content-version replacement;
+         * - no status downgrade;
+         * - no silent reviewed-body rewrite;
+         * - no unexpected translation cultures.
+         *
+         * PostgreSQL transaction/advisory-lock behaviour remains owned by
+         * SeedDocumentsAsync. This method simply batches persistence per
+         * canonical content-pack document.
+         */
+
+        var mappingRows =
+            await (
+                from mapping in
+                    _db.CurriculumPedagogicalLessonOutcomes
+                        .AsNoTracking()
+                join node in
+                    _db.CurriculumPackContentNodes
+                        .AsNoTracking()
+                    on mapping.OutcomeNodeId equals node.Id
+                where
+                    mapping.FrameworkVersionId ==
+                        state.FrameworkVersionId &&
+                    lessonIds.Contains(
+                        mapping.PedagogicalLessonId)
+                select new
+                {
+                    mapping.PedagogicalLessonId,
+                    mapping.SortOrder,
+                    node.Code
+                })
+                .ToArrayAsync(ct);
+
+        var outcomesByLessonId =
+            mappingRows
+                .GroupBy(x => x.PedagogicalLessonId)
+                .ToDictionary(
+                    group => group.Key,
+                    group =>
+                        group
+                            .OrderBy(x => x.SortOrder)
+                            .Select(x => x.Code)
+                            .ToArray());
+
+        var expectedContentIdByLessonId =
+            persistedLessons.ToDictionary(
+                lesson => lesson.Id,
+                lesson =>
+                    G(
+                        $"canonical-content|" +
+                        $"{state.FrameworkVersionId}|" +
+                        $"{lesson.Id}"));
+
+        var expectedContentIds =
+            expectedContentIdByLessonId
+                .Values
+                .ToArray();
+
+        var existingContents =
+            await _db.CurriculumLessonContents
+                .Where(
+                    x =>
+                        lessonIds.Contains(
+                            x.PedagogicalLessonId) ||
+                        expectedContentIds.Contains(x.Id))
+                .ToArrayAsync(ct);
+
+        var requestedLessonIdSet =
+            lessonIds.ToHashSet();
+
+        var identityCollision =
+            existingContents
+                .FirstOrDefault(
+                    x =>
+                        !requestedLessonIdSet.Contains(
+                            x.PedagogicalLessonId));
+
+        if (identityCollision is not null)
+        {
+            throw new InvalidOperationException(
+                "Canonical deterministic content identity collision detected.");
+        }
+
+        var contentByLessonId =
+            existingContents.ToDictionary(
+                x => x.PedagogicalLessonId);
+
+        var translationContentIds =
+            existingContents
+                .Select(x => x.Id)
+                .Concat(expectedContentIds)
+                .Distinct()
+                .ToArray();
+
+        var existingTranslations =
+            await _db
+                .CurriculumLessonContentTranslations
+                .Where(
+                    x =>
+                        translationContentIds.Contains(
+                            x.CurriculumLessonContentId))
+                .ToArrayAsync(ct);
+
+        var translationsByContentId =
+            existingTranslations
+                .GroupBy(
+                    x =>
+                        x.CurriculumLessonContentId)
+                .ToDictionary(
+                    group => group.Key,
+                    group => group.ToArray());
+
+        var now = DateTime.UtcNow;
+
         foreach (var sourceLesson in document.Lessons)
         {
-            var lesson = lessonByCode[sourceLesson.LessonCode];
+            var lesson =
+                lessonByCode[sourceLesson.LessonCode];
 
             var actualOutcomeCodes =
-                await (
-                    from mapping in
-                        _db.CurriculumPedagogicalLessonOutcomes
-                            .AsNoTracking()
-                    join node in
-                        _db.CurriculumPackContentNodes
-                            .AsNoTracking()
-                        on mapping.OutcomeNodeId equals node.Id
-                    where
-                        mapping.FrameworkVersionId ==
-                            state.FrameworkVersionId &&
-                        mapping.PedagogicalLessonId == lesson.Id
-                    orderby mapping.SortOrder
-                    select node.Code)
-                .ToArrayAsync(ct);
+                outcomesByLessonId.TryGetValue(
+                    lesson.Id,
+                    out var mappedOutcomeCodes)
+                    ? mappedOutcomeCodes
+                    : Array.Empty<string>();
 
             var expectedOutcomes =
                 sourceLesson.OutcomeCodes.ToHashSet(
@@ -216,158 +336,177 @@ public sealed class MathematicsCanonicalLessonContentSeeder
                     $"actual [{string.Join(", ", actualOutcomes.OrderBy(x => x))}].");
             }
 
-            await UpsertLessonContentAsync(
-                state.FrameworkVersionId,
-                lesson,
-                document,
-                sourceLesson,
-                ct);
-        }
-    }
+            var expectedContentId =
+                expectedContentIdByLessonId[lesson.Id];
 
-    private async Task UpsertLessonContentAsync(
-        Guid frameworkVersionId,
-        CurriculumPedagogicalLesson lesson,
-        CanonicalLessonContentPackDocument document,
-        CanonicalLessonContentPackLesson sourceLesson,
-        CancellationToken ct)
-    {
-        var now = DateTime.UtcNow;
+            if (!contentByLessonId.TryGetValue(
+                    lesson.Id,
+                    out var content))
+            {
+                content =
+                    new CurriculumLessonContent
+                    {
+                        Id = expectedContentId,
+                        FrameworkVersionId =
+                            state.FrameworkVersionId,
+                        PedagogicalLessonId = lesson.Id,
+                        Status = document.Status,
+                        ContentVersion =
+                            document.ContentVersion,
+                        CreatedAtUtc = now,
+                        UpdatedAtUtc = now,
+                        RowVersion = []
+                    };
 
-        var content =
-            await _db.CurriculumLessonContents
-                .SingleOrDefaultAsync(
-                    x => x.PedagogicalLessonId == lesson.Id,
-                    ct);
+                ApplyStatusMetadata(
+                    content,
+                    document.Status,
+                    now);
 
-        if (content is null)
-        {
-            content =
-                new CurriculumLessonContent
+                _db.CurriculumLessonContents.Add(
+                    content);
+
+                contentByLessonId[lesson.Id] =
+                    content;
+            }
+            else
+            {
+                if (content.FrameworkVersionId !=
+                        state.FrameworkVersionId ||
+                    content.PedagogicalLessonId !=
+                        lesson.Id)
                 {
-                    Id = G(
-                        $"canonical-content|{frameworkVersionId}|{lesson.Id}"),
-                    FrameworkVersionId = frameworkVersionId,
-                    PedagogicalLessonId = lesson.Id,
-                    Status = document.Status,
-                    ContentVersion = document.ContentVersion,
-                    CreatedAtUtc = now,
-                    UpdatedAtUtc = now,
-                    RowVersion = []
-                };
+                    throw new InvalidOperationException(
+                        $"Canonical lesson identity drift: " +
+                        $"{sourceLesson.LessonCode}.");
+                }
 
-            ApplyStatusMetadata(content, document.Status, now);
-
-            _db.CurriculumLessonContents.Add(content);
-        }
-        else
-        {
-            if (content.FrameworkVersionId != frameworkVersionId ||
-                content.PedagogicalLessonId != lesson.Id)
-            {
-                throw new InvalidOperationException(
-                    $"Canonical lesson identity drift: {sourceLesson.LessonCode}.");
-            }
-
-            if (!string.Equals(
-                    content.ContentVersion,
-                    document.ContentVersion,
-                    StringComparison.Ordinal))
-            {
-                throw new InvalidOperationException(
-                    $"Refusing silent canonical content-version replacement for " +
-                    $"{sourceLesson.LessonCode}. Existing={content.ContentVersion}, " +
-                    $"incoming={document.ContentVersion}.");
-            }
-
-            if ((int)content.Status > (int)document.Status)
-            {
-                throw new InvalidOperationException(
-                    $"Refusing canonical content status downgrade for " +
-                    $"{sourceLesson.LessonCode}: " +
-                    $"{content.Status} -> {document.Status}.");
-            }
-
-            if (content.Status != document.Status)
-            {
-                content.Status = document.Status;
-                content.UpdatedAtUtc = now;
-            }
-
-            ApplyStatusMetadata(content, document.Status, now);
-        }
-
-        var existingTranslations =
-            await _db.CurriculumLessonContentTranslations
-                .Where(
-                    x =>
-                        x.CurriculumLessonContentId ==
-                            content.Id)
-                .ToArrayAsync(ct);
-
-        var incomingCultures =
-            sourceLesson.Translations
-                .Select(x => x.CultureCode)
-                .ToHashSet(StringComparer.Ordinal);
-
-        var unexpected =
-            existingTranslations
-                .Where(
-                    x => !incomingCultures.Contains(x.CultureCode))
-                .Select(x => x.CultureCode)
-                .ToArray();
-
-        if (unexpected.Length != 0)
-        {
-            throw new InvalidOperationException(
-                $"Canonical translation drift for {sourceLesson.LessonCode}. " +
-                $"Existing unexpected culture(s): {string.Join(", ", unexpected)}.");
-        }
-
-        var existingByCulture =
-            existingTranslations.ToDictionary(
-                x => x.CultureCode,
-                StringComparer.Ordinal);
-
-        foreach (var incoming in sourceLesson.Translations)
-        {
-            if (existingByCulture.TryGetValue(
-                    incoming.CultureCode,
-                    out var current))
-            {
-                EnsureTranslationMatches(
-                    sourceLesson.LessonCode,
-                    current,
-                    incoming);
-
-                continue;
-            }
-
-            _db.CurriculumLessonContentTranslations.Add(
-                new CurriculumLessonContentTranslation
+                if (!string.Equals(
+                        content.ContentVersion,
+                        document.ContentVersion,
+                        StringComparison.Ordinal))
                 {
-                    Id = G(
-                        $"canonical-translation|{content.Id}|{incoming.CultureCode}"),
-                    CurriculumLessonContentId = content.Id,
-                    CultureCode = incoming.CultureCode,
-                    Title = incoming.Title,
-                    Explanation = incoming.Explanation,
-                    KeyConceptsAndRules =
-                        incoming.KeyConceptsAndRules,
-                    WorkedExamples =
-                        incoming.WorkedExamples,
-                    StepByStepSolutions =
-                        incoming.StepByStepSolutions,
-                    CommonMistakes =
-                        incoming.CommonMistakes,
-                    QuickSummary =
-                        incoming.QuickSummary,
-                    CreatedAtUtc = now,
-                    UpdatedAtUtc = now,
-                    RowVersion = []
-                });
+                    throw new InvalidOperationException(
+                        $"Refusing silent canonical content-version replacement for " +
+                        $"{sourceLesson.LessonCode}. " +
+                        $"Existing={content.ContentVersion}, " +
+                        $"incoming={document.ContentVersion}.");
+                }
+
+                if ((int)content.Status >
+                    (int)document.Status)
+                {
+                    throw new InvalidOperationException(
+                        $"Refusing canonical content status downgrade for " +
+                        $"{sourceLesson.LessonCode}: " +
+                        $"{content.Status} -> {document.Status}.");
+                }
+
+                if (content.Status != document.Status)
+                {
+                    content.Status =
+                        document.Status;
+
+                    content.UpdatedAtUtc =
+                        now;
+                }
+
+                ApplyStatusMetadata(
+                    content,
+                    document.Status,
+                    now);
+            }
+
+            var currentTranslations =
+                translationsByContentId
+                    .TryGetValue(
+                        content.Id,
+                        out var currentRows)
+                    ? currentRows
+                    : Array.Empty<
+                        CurriculumLessonContentTranslation>();
+
+            var incomingCultures =
+                sourceLesson.Translations
+                    .Select(x => x.CultureCode)
+                    .ToHashSet(
+                        StringComparer.Ordinal);
+
+            var unexpected =
+                currentTranslations
+                    .Where(
+                        x =>
+                            !incomingCultures.Contains(
+                                x.CultureCode))
+                    .Select(x => x.CultureCode)
+                    .ToArray();
+
+            if (unexpected.Length != 0)
+            {
+                throw new InvalidOperationException(
+                    $"Canonical translation drift for " +
+                    $"{sourceLesson.LessonCode}. " +
+                    $"Existing unexpected culture(s): " +
+                    $"{string.Join(", ", unexpected)}.");
+            }
+
+            var existingByCulture =
+                currentTranslations.ToDictionary(
+                    x => x.CultureCode,
+                    StringComparer.Ordinal);
+
+            foreach (var incoming in
+                     sourceLesson.Translations)
+            {
+                if (existingByCulture.TryGetValue(
+                        incoming.CultureCode,
+                        out var current))
+                {
+                    EnsureTranslationMatches(
+                        sourceLesson.LessonCode,
+                        current,
+                        incoming);
+
+                    continue;
+                }
+
+                _db
+                    .CurriculumLessonContentTranslations
+                    .Add(
+                        new CurriculumLessonContentTranslation
+                        {
+                            Id =
+                                G(
+                                    $"canonical-translation|" +
+                                    $"{content.Id}|" +
+                                    $"{incoming.CultureCode}"),
+                            CurriculumLessonContentId =
+                                content.Id,
+                            CultureCode =
+                                incoming.CultureCode,
+                            Title =
+                                incoming.Title,
+                            Explanation =
+                                incoming.Explanation,
+                            KeyConceptsAndRules =
+                                incoming.KeyConceptsAndRules,
+                            WorkedExamples =
+                                incoming.WorkedExamples,
+                            StepByStepSolutions =
+                                incoming.StepByStepSolutions,
+                            CommonMistakes =
+                                incoming.CommonMistakes,
+                            QuickSummary =
+                                incoming.QuickSummary,
+                            CreatedAtUtc = now,
+                            UpdatedAtUtc = now,
+                            RowVersion = []
+                        });
+            }
         }
 
+        // One persistence boundary per canonical content pack,
+        // instead of one SaveChanges round-trip per lesson.
         await _db.SaveChangesAsync(ct);
     }
 
