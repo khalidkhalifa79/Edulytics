@@ -98,15 +98,16 @@ public sealed class LessonContentService : ILessonContentService
             foreach(var lesson in lessons.Where(x=>
                 x.FrameworkVersionId==c.FrameworkVersionId&&
                 InLogicalLevel(x,logicalLevel)&&
-                LessonContentPolicy.IsStandaloneCanonicalTarget(x.OfficialOutcomeCount)))
+                LessonContentPolicy.IsCanonicalTarget(x.OfficialOutcomeCount)))
             {
                 if(!contentByLesson.TryGetValue(lesson.Id,out var content))continue;
-                var tr=SelectTranslation(content.Translations,cultureCode);
+                var tr=SelectAcademicContent(content.Translations,c.FrameworkCode);
                 if(tr is null)continue;
 
                 result.TryAdd(lesson.Id,new StudentLessonSummary(
                     lesson.Id,tr.Title,lesson.UnitTitle,
-                    c.SubjectName,c.SubjectCode,c.GradeName,c.FrameworkName,lesson.SortOrder));
+                    c.SubjectName,c.SubjectCode,c.GradeName,c.FrameworkName,lesson.SortOrder,
+                    LessonContentPolicy.IsSupporting(lesson.OfficialOutcomeCount)));
             }
         }
 
@@ -126,7 +127,7 @@ public sealed class LessonContentService : ILessonContentService
         var lessons=await _lessons.ListPedagogicalLessonsAsync(
             contexts.Select(x=>x.FrameworkVersionId).Distinct().ToArray(),cancellationToken);
         var lesson=lessons.SingleOrDefault(x=>x.Id==lessonId);
-        if(lesson is null||!LessonContentPolicy.IsStandaloneCanonicalTarget(lesson.OfficialOutcomeCount))
+        if(lesson is null||!LessonContentPolicy.IsCanonicalTarget(lesson.OfficialOutcomeCount))
             return LessonContentQueryResult<StudentLessonDetail>.Failure(LessonContentErrorCode.LessonNotFound);
 
         var c=contexts.FirstOrDefault(x=>
@@ -138,7 +139,7 @@ public sealed class LessonContentService : ILessonContentService
         if(content is null||!LessonContentPolicy.CanExposeCanonicalBody(content.Status))
             return LessonContentQueryResult<StudentLessonDetail>.Failure(LessonContentErrorCode.LessonNotFound);
 
-        var tr=SelectTranslation(content.Translations,cultureCode);
+        var tr=SelectAcademicContent(content.Translations,c.FrameworkCode);
         if(tr is null)return LessonContentQueryResult<StudentLessonDetail>.Failure(LessonContentErrorCode.LessonNotFound);
 
         var outcomes=await _lessons.ListOfficialOutcomesAsync(
@@ -147,7 +148,8 @@ public sealed class LessonContentService : ILessonContentService
         return LessonContentQueryResult<StudentLessonDetail>.Success(new StudentLessonDetail(
             lesson.Id,tr.Title,lesson.UnitTitle,c.SubjectName,c.SubjectCode,c.GradeName,c.FrameworkName,
             tr.Explanation,tr.KeyConceptsAndRules,tr.WorkedExamples,tr.StepByStepSolutions,
-            tr.CommonMistakes,tr.QuickSummary,outcomes,content.PublishedAtUtc??content.UpdatedAtUtc));
+            tr.CommonMistakes,tr.QuickSummary,outcomes,content.PublishedAtUtc??content.UpdatedAtUtc,
+            LessonContentPolicy.IsSupporting(lesson.OfficialOutcomeCount)));
     }
 
     private async Task<LessonContentQueryResult<CanonicalLessonDetail>> BuildStaffDetailAsync(
@@ -167,7 +169,7 @@ public sealed class LessonContentService : ILessonContentService
         var content=(await _lessons.ListCanonicalContentsAsync([lessonId],cancellationToken)).SingleOrDefault();
         CanonicalLessonTranslationRecord? body=null;
         if(content is not null&&LessonContentPolicy.CanExposeCanonicalBody(content.Status))
-            body=SelectTranslation(content.Translations,cultureCode);
+            body=SelectAcademicContent(content.Translations,c.FrameworkCode);
 
         var outcomes=await _lessons.ListOfficialOutcomesAsync(
             lesson.FrameworkVersionId,lesson.Id,cancellationToken);
@@ -218,12 +220,13 @@ public sealed class LessonContentService : ILessonContentService
         return context.GradeOrder;
     }
 
-    private static CanonicalLessonTranslationRecord? SelectTranslation(
-        IReadOnlyList<CanonicalLessonTranslationRecord> translations,string cultureCode)
+    private static CanonicalLessonTranslationRecord? SelectAcademicContent(
+        IReadOnlyList<CanonicalLessonTranslationRecord> translations,string frameworkCode)
     {
-        var c=NormalizeCulture(cultureCode);
-        return translations.FirstOrDefault(x=>NormalizeCulture(x.CultureCode)==c)
-            ??translations.FirstOrDefault(x=>NormalizeCulture(x.CultureCode)=="en");
+        var academicLanguage=MathematicsCurriculumPackRegistry.All
+            .Single(x=>string.Equals(x.Code,frameworkCode,StringComparison.Ordinal))
+            .AcademicLanguage;
+        return translations.FirstOrDefault(x=>NormalizeCulture(x.CultureCode)==NormalizeCulture(academicLanguage));
     }
 
     private static string NormalizeCulture(string cultureCode)

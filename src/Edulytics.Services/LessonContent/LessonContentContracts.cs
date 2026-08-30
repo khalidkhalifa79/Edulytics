@@ -26,9 +26,10 @@ public sealed record CanonicalLessonDetail(
     CanonicalLessonTranslationRecord? Body,IReadOnlyList<LessonOutcomeRecord> Outcomes);
 
 public sealed record StudentLessonSummary(
-    Guid Id,string Title,string TopicName,string SubjectName,string SubjectCode,string GradeName,string FrameworkName,int Order);
+    Guid Id,string Title,string TopicName,string SubjectName,string SubjectCode,string GradeName,string FrameworkName,int Order,
+    bool IsSupporting=false);
 
 public sealed record StudentLessonDetail(
     Guid Id,string Title,string TopicName,string SubjectName,string SubjectCode,string GradeName,string FrameworkName,
     string Explanation,string KeyConceptsAndRules,string WorkedExamples,string StepByStepSolutions,string CommonMistakes,
-    string QuickSummary,IReadOnlyList<LessonOutcomeRecord> Outcomes,DateTime PublishedAtUtc);
+    string QuickSummary,IReadOnlyList<LessonOutcomeRecord> Outcomes,DateTime PublishedAtUtc,bool IsSupporting=false);

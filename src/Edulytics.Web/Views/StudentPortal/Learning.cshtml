@@ -82,6 +82,10 @@ else
                 <article class="student-lesson-card">
                     <span class="student-subject-code">@lesson.SubjectCode</span>
                     <h3>@lesson.Title</h3>
+                    @if (lesson.IsSupporting)
+                    {
+                        <span class="lesson-content-status lesson-content-status--supporting">@L["SupportingLesson"]</span>
+                    }
                     <p>@lesson.TopicName</p>
                     <div class="student-learning-meta">
                         <span>@L["Grade"]: <strong>@lesson.GradeName</strong></span>

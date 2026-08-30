@@ -1,7 +1,7 @@
 {
   "packCode": "US-CCSS-MATH",
   "versionCode": "CCSSM-2010",
-  "contentVersion": "ccss-hs-complex-p29-v1",
+  "contentVersion": "phase29-source-faithful-en-final-v1",
   "sourcePolicyVersion": 2,
   "targetCurriculumPeriod": "2026-2027",
   "sourceCurriculumPeriod": "Common Core State Standards 2010",
@@ -28,35 +28,41 @@
     {
       "lessonCode": "PED:US-CCSS-MATH:HS:FOURTH:COMPLEX:U01:L01",
       "titleProvenance": "PedagogicalSource",
-      "titleSourceReference": "MVP-ALG2:M03:T08H — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+      "titleSourceReference": "MVP-ALG2:M03:T08H — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/a2mod3tnh718.pdf",
       "outcomeCodes": [
         "CCSS:HSN-CN.A.3",
         "CCSS:HSN-CN.B.4",
         "CCSS:HSN-CN.B.5",
         "CCSS:HSN-CN.B.6"
       ],
+      "isSupporting": false,
+      "sourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/a2mod3tnh718.pdf",
+      "sourceLocator": "{\"pdfPagesContainingTitle\": [4, 86, 92], \"section\": \"Complex Computations\"}",
+      "sourceTitle": "Mathematics Vision Project",
+      "sourcePublisher": "Mathematics Vision Project",
+      "sourceEdition": "Phase 29 locked source",
+      "sourceRights": "Use restricted to accepted Phase 29 commercial-safe license lock.",
+      "sourceSha256": "27dac39569fca34f2199b780b425d62ec96e8b30357007fe10da00580eae802d",
+      "canonicalBodySha256": "91fe908cba110b18475af4c5decc530337fedd80f92212b3031151e55f0401e3",
+      "sourceVerifiedAtUtc": "20240713220305",
+      "retrievalUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/a2mod3tnh718.pdf",
+      "retrievalChannel": "INTERNET_ARCHIVE",
+      "retrievalTimestamp": "20240713220305",
+      "adaptationStatus": "SOURCE_FAITHFUL_ADAPTED",
       "translations": [
         {
           "cultureCode": "en",
           "title": "Complex Computations",
-          "explanation": "Complex Computations is an Edulytics lesson in the unit “Complex Numbers”. It is aligned exactly to CCSS:HSN-CN.A.3, CCSS:HSN-CN.B.4, CCSS:HSN-CN.B.5, CCSS:HSN-CN.B.6. The accepted Common Core target text for this lesson states: (+) Find the conjugate of a complex number; use conjugates to find moduli and quotients of c omplex numbers. (+) Represent complex numbers on the complex plane in rectangular and polar f orm (including real and imaginary numbers), and explain why the rectangular and polar forms of a given complex number represent the same number. (+) Represent addition, subtraction, multiplication, and conjugation of c omplex numbers geometrically on the complex plane; use properties of this representation for computation. For example, (–1 + √3 i)3 = 8 because (–1 + √3 i) has modulus 2 and argument 120°. (+) Calculate the distance between numbers in the complex plane as the modulus of the diff erence, and the midpoint of a segment as the average of the numbers at its endpoints. Instructional focus: Students extend arithmetic to numbers of the form a + bi and connect algebraic operations, polynomial equations, and geometric representations. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
-          "keyConceptsAndRules": "Lesson-specific focus: Complex Computations. Use i^2 = -1. Combine real parts with real parts and imaginary parts with imaginary parts. Complex conjugates can produce real products and help rationalize denominators.",
-          "workedExamples": "Example 1: (4+5i)(4+4i) = -4+36i because i²=-1. Example 2: (2+5i)(1+4i) = -18+13i because i²=-1.",
-          "stepByStepSolutions": "Step 1: distribute: 16+16i+20i+20i². Step 2: replace i² with -1, giving 16-20+(16+20)i. Step 3: combine to -4+36i. Step 1: distribute: 2+8i+5i+20i². Step 2: replace i² with -1, giving 2-20+(8+5)i. Step 3: combine to -18+13i.",
-          "commonMistakes": "Lesson-specific focus: Complex Computations. Do not treat i as an ordinary real variable. Reduce powers of i correctly and keep real and imaginary components organized.",
-          "quickSummary": "Lesson-specific focus: Complex Computations. Apply the rules for i, simplify the algebra, write the result in a + bi form when appropriate, and verify by substitution or multiplication."
-        },
-        {
-          "cultureCode": "pl",
-          "title": "Liczby zespolone — Complex Computations",
-          "explanation": "Lekcja „Liczby zespolone — Complex Computations” należy do działu „Complex Numbers” i jest dokładnie powiązana ze standardami CCSS:HSN-CN.A.3, CCSS:HSN-CN.B.4, CCSS:HSN-CN.B.5, CCSS:HSN-CN.B.6. Główny kierunek pracy: Uczeń rozszerza działania na liczby postaci a + bi i łączy rachunek algebraiczny, równania wielomianowe oraz reprezentacje geometryczne. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
-          "keyConceptsAndRules": "Cel tej lekcji: Liczby zespolone — Complex Computations. Korzystaj z i^2 = -1. Łącz osobno części rzeczywiste i urojone. Sprzężenia zespolone mogą dawać iloczyny rzeczywiste i pomagać usuwać liczbę zespoloną z mianownika.",
-          "workedExamples": "Przykład 1: (4+5i)(4+4i) = -4+36i, ponieważ i²=-1. Przykład 2: (2+5i)(1+4i) = -18+13i, ponieważ i²=-1.",
-          "stepByStepSolutions": "Krok 1: wymnóż nawiasy: 16+16i+20i+20i². Krok 2: zastąp i² przez -1. Krok 3: połącz części i otrzymaj -4+36i. Krok 1: wymnóż nawiasy: 2+8i+5i+20i². Krok 2: zastąp i² przez -1. Krok 3: połącz części i otrzymaj -18+13i.",
-          "commonMistakes": "Cel tej lekcji: Liczby zespolone — Complex Computations. Nie traktuj i jak zwykłej zmiennej rzeczywistej. Poprawnie upraszczaj potęgi i i porządkuj osobno części rzeczywiste oraz urojone.",
-          "quickSummary": "Cel tej lekcji: Liczby zespolone — Complex Computations. Zastosuj reguły dla i, uprość rachunek, zapisz wynik w postaci a + bi i sprawdź go przez podstawienie lub mnożenie."
+          "explanation": "termined - A Develop Understanding Task\nSurfacing the need for complex number as solutions for some quadratic equations (A.REI.4,\nN.CN.7, N.CN.8, N.CN.9)\nREADY, SET, GO Homework: Numbers and Operations 3.4\n3.5 My Irrational and Imaginary Friends - A Solidify Understanding Task\nExtending the real and complex number systems (N.RN.3, N.CN.1, N.CN.2, N.CN.7, N.CN.8,\nN.CN.9)\nREADY, SET, GO Homework: Numbers and Operations 3.5\nMathematics Vision Project\nLicensed under the Creative Commons Attribution CC BY 4.0\nmathematicsvisionproject.org\nALGEBRA II // MODULE 3\nNUMBERS AND OPERATIONS\n3.6 Sorry, We're Closed - A Practice Understanding Task\nComparing polynomials and numbers and determining closure under given operations.\n(A.APR.1, F.BF.1b)\nReady, Set, Go Homework: Numbers and Operations 3.6\n3.7H Quadratic Quandaries - A Develop and Solidify Understanding Task\nSolving Quadratic Inequalities (A.SSE.1, A.CED.1, HS Modeling Standard)\nREADY, SET, GO Homework: Numbers and Operations 3.7H",
+          "keyConceptsAndRules": "Let's start by looking at the structure of numbers and polynomials. Consider the number 132. The\nway we write numbers is really a shortcut because:\n132 = 100 + 30 + 2\nE (C) = C H + 3C D − 2C + 10 J(C) = 2C − 1 ℎ(C) = 2C D + 5C − 12 M (C) = −C D − 3C + 4\nStep 1: = (C H + C D − 3C − 5) + (−2C H + C D − 6C − 8)\nStep 2: = (−C H + 2C D − 9C − 13)\nThe question for you is: Is it correct to change all the signs and add when subtracting? What\nmathematical property or relationship can justify this action?\n10. Use the given polynomials to find the specified differences in a-d.\nMathematics Vision Project\nLicensed under the Creative Commons Attribution CC BY 4.0\nmathematicsvisionproject.org\nE (C) = C H + 2C D − 7C − 8 J(C) = −4C − 7 ℎ(C) = 4C D − C − 15 M(C) = −C D + 7C + 4",
+          "workedExamples": "termined - A Develop Understanding Task\nSurfacing the need for complex number as solutions for some quadratic equations (A.REI.4,\nN.CN.7, N.CN.8, N.CN.9)\nREADY, SET, GO Homework: Numbers and Operations 3.4\n3.5 My Irrational and Imaginary Friends - A Solidify Understanding Task\nExtending the real and complex number systems (N.RN.3, N.CN.1, N.CN.2, N.CN.7, N.CN.8,\nN.CN.9)\nREADY, SET, GO Homework: Numbers and Operations 3.5\n3.6 Sorry, We're Closed - A Practice Understanding Task\nComparing polynomials and numbers and determining closure under given operations.\n(A.APR.1, F.BF.1b)\nReady, Set, Go Homework: Numbers and Operations 3.6\n3.7H Quadratic Quandaries - A Develop and Solidify Understanding Task\nSolving Quadratic Inequalities (A.SSE.1, A.CED.1, HS Modeling Standard)\nREADY, SET, GO Homework: Numbers and Operations 3.7H\n3.8H Complex Computations - A Solidify Understanding Task\nRepresenting the arithmetic of complex numbers on the complex plane (N.CN.3, N.CN.4,\nN.CN.5, N.CN.6)\nREADY, SET, GO Homework: Numbers and Operations 3.8H",
+          "stepByStepSolutions": "Step 1: Subtracting polynomials can easily lead to errors if you don't carefully keep track of your\npositive and negative signs.\nStep 2: One way that people avoid this problem is to simply change all the\nsigns of the polynomial being subtracted and then add the two polynomials together.\nStep 3: There are two\ncommon ways of writing this:\nStep 4: The Teaching Cycle:\nLaunch (Whole Group):\nBegin the discussion with the introduction to the task and problem 1.\nStep 5: Help students to see that\nnumbers are structured as the sum of powers of 10 and polynomials are structured as powers of C.\nStep 6: Because of that, operations on polynomials and whole numbers will work similarly.\ndo problem 2 individually, and then check to be sure that the class understands how to write an\nMathematics Vision Project\nLicensed under the Creative Commons Attribution CC BY 4.0\nmathematicsvisionproject.org\nALGEBRA II // MODULE 3\nNUMBERS AND OPERATIONS - 3.1\nStep 8: “analogous” polynomial.\nadding like terms.\nStep 10: They may choose to line up the polynomials as shown with whole numbers or to\nadd them horizontally, but either way, only like terms are added.\nStep 11: They should also notice that the\nexponents don't change when the terms are added.\nStep 12: Ask if this is true of whole numbers.",
+          "commonMistakes": "If students are having difficulty, then ask another student to share ℎ(C) + M(C).\nExplore (Small Groups):\nMonitor students as they work to be sure that they have a strategy that helps them to keep the signs\nstraight in a subtraction problem, since this is the most common error.\nMake any\ncorrections you need and figure out why they are needed so that you won't make the same mistake\ntwice!",
+          "quickSummary": "13. Pascal's Triangle wouldn't be very handy if it only worked to expand powers of ' + 1. There\nmust be a way to use it for other expressions. The table below shows Pascal's Triangle and the\nexpansion of ' + d.\n(' + d)U 1 1\n(' + d)V '+d 1 1\n(' + d)+ ' + + 2d' + d+ 1 2 1\n(' + d)4 ' 4 + 3d' + + 3d+ ' + d4 1 3 3 1\n(' + d)5 ' 5 + 4d' 4 + 6d+ ' + + 3d4 ' + d5 1 4 6 4 1"
         }
       ]
     }
-  ]
+  ],
+  "academicLanguage": "en",
+  "curriculumTranslationRequired": false
 }

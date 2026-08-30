@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Edulytics.Web.Localization;
 using Edulytics.Web.Models;
+using Edulytics.Core.Curriculum;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,6 +14,13 @@ public sealed class HomeController : Controller
     public IActionResult Index()
     {
         return View();
+    }
+
+    [AllowAnonymous]
+    [HttpGet("/legal/content-sources")]
+    public IActionResult ContentSources()
+    {
+        return View(MathematicsCurriculumPackRegistry.All);
     }
 
     [AllowAnonymous]

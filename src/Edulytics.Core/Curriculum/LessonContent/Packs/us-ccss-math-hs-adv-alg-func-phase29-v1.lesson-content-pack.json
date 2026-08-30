@@ -1,7 +1,7 @@
 {
   "packCode": "US-CCSS-MATH",
   "versionCode": "CCSSM-2010",
-  "contentVersion": "ccss-hs-adv-alg-func-p29-v1",
+  "contentVersion": "phase29-source-faithful-en-final-v1",
   "sourcePolicyVersion": 2,
   "targetCurriculumPeriod": "2026-2027",
   "sourceCurriculumPeriod": "Common Core State Standards 2010",
@@ -28,63 +28,73 @@
     {
       "lessonCode": "PED:US-CCSS-MATH:HS:FOURTH:ADV-ALG-FUNC:U01:L01",
       "titleProvenance": "PedagogicalSource",
-      "titleSourceReference": "MVP-ALG2:M10:T06H — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+      "titleSourceReference": "MVP-ALG2:M10:T06H — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/a2mod10tnh718.pdf",
       "outcomeCodes": [
         "CCSS:HSA-REI.C.8",
         "CCSS:HSA-REI.C.9"
       ],
+      "isSupporting": false,
+      "sourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/a2mod10tnh718.pdf",
+      "sourceLocator": "{\"pdfPagesContainingTitle\": [4, 49, 52], \"section\": \"All Systems Go\"}",
+      "sourceTitle": "Mathematics Vision Project",
+      "sourcePublisher": "Mathematics Vision Project",
+      "sourceEdition": "Phase 29 locked source",
+      "sourceRights": "Use restricted to accepted Phase 29 commercial-safe license lock.",
+      "sourceSha256": "87f0872674e13e3f53e4ccc81004cb150eb7a64539879efa9f04f8cd58349e55",
+      "canonicalBodySha256": "17aa9954ae89957a47192ca113f2ddf76ecce80c76506299bff77db99a5d6ace",
+      "sourceVerifiedAtUtc": "20240711231146",
+      "retrievalUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/a2mod10tnh718.pdf",
+      "retrievalChannel": "INTERNET_ARCHIVE",
+      "retrievalTimestamp": "20240711231146",
+      "adaptationStatus": "SOURCE_FAITHFUL_ADAPTED",
       "translations": [
         {
           "cultureCode": "en",
           "title": "All Systems Go",
-          "explanation": "All Systems Go is an Edulytics lesson in the unit “Advanced Algebra & Functions”. It is aligned exactly to CCSS:HSA-REI.C.8, CCSS:HSA-REI.C.9. The accepted Common Core target text for this lesson states: (+) Represent a system of linear equations as a single matrix equation in a vector variable. (+) Find the inverse of a matrix if it exists and use it to solve systems of linear equations (using technology for matrices of dimension 3 × 3 or greater). Instructional focus: Students solve equations, inequalities, and systems by using equivalent reasoning and interpreting solutions as values or intersection points. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
-          "keyConceptsAndRules": "Lesson-specific focus: All Systems Go. Apply the same equivalence-preserving operation to both sides. For inequalities, multiplying or dividing by a negative reverses the inequality sign. A solution to a system must satisfy every equation in the system.",
-          "workedExamples": "Example 1: Solve the system x+y=12 and x-y=-2. Adding equations gives 2x=10, so x=5; then y=7. Example 2: Solve the system x+y=6 and x-y=4. Adding equations gives 2x=10, so x=5; then y=1.",
-          "stepByStepSolutions": "Step 1: add the equations to eliminate y: 2x=10. Step 2: divide by 2 to get x=5. Step 3: substitute into x+y=12: 5+y=12, so y=7. Step 4: verify both original equations. Step 1: add the equations to eliminate y: 2x=10. Step 2: divide by 2 to get x=5. Step 3: substitute into x+y=6: 5+y=6, so y=1. Step 4: verify both original equations.",
-          "commonMistakes": "Lesson-specific focus: All Systems Go. Do not accept an extraneous solution created by squaring, clearing denominators, or other non-reversible steps. Verify solutions in the original relation.",
-          "quickSummary": "Lesson-specific focus: All Systems Go. Transform consistently, solve, and substitute the candidate solution back into the original equation, inequality, or system."
-        },
-        {
-          "cultureCode": "pl",
-          "title": "Układy równań",
-          "explanation": "Lekcja „Układy równań” należy do działu „Advanced Algebra & Functions” i jest dokładnie powiązana ze standardami CCSS:HSA-REI.C.8, CCSS:HSA-REI.C.9. Główny kierunek pracy: Uczeń rozwiązuje równania, nierówności i układy przez przekształcenia równoważne oraz interpretuje rozwiązania jako wartości lub punkty przecięcia. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
-          "keyConceptsAndRules": "Cel tej lekcji: Układy równań. Wykonuj to samo działanie zachowujące równoważność po obu stronach. W nierówności mnożenie lub dzielenie przez liczbę ujemną odwraca znak. Rozwiązanie układu musi spełniać każde równanie.",
-          "workedExamples": "Przykład 1: Rozwiąż układ x+y=12 oraz x-y=-2. Po dodaniu równań: 2x=10, więc x=5; następnie y=7. Przykład 2: Rozwiąż układ x+y=6 oraz x-y=4. Po dodaniu równań: 2x=10, więc x=5; następnie y=1.",
-          "stepByStepSolutions": "Krok 1: dodaj równania i wyeliminuj y: 2x=10. Krok 2: podziel przez 2: x=5. Krok 3: podstaw do x+y=12: y=7. Krok 4: sprawdź oba równania wyjściowe. Krok 1: dodaj równania i wyeliminuj y: 2x=10. Krok 2: podziel przez 2: x=5. Krok 3: podstaw do x+y=6: y=1. Krok 4: sprawdź oba równania wyjściowe.",
-          "commonMistakes": "Cel tej lekcji: Układy równań. Nie przyjmuj rozwiązania pozornego powstałego np. przy podnoszeniu do kwadratu lub usuwaniu mianowników. Sprawdzaj rozwiązania w relacji wyjściowej.",
-          "quickSummary": "Cel tej lekcji: Układy równań. Przekształcaj konsekwentnie, rozwiąż i podstaw otrzymaną wartość do pierwotnego równania, nierówności lub układu."
+          "explanation": "g matrix multiplication in preparation for solving systems of equations using inverse\nmatrices (N.VM.6, N.VM.8)\nREADY, SET, GO Homework: Matrices Revisited 10.2H\n10.3H More Arithmetic of Matrices - A Solidify Understanding Task\nExamining properties of matrix addition and multiplication, including identity and inverse\nproperties (N.VM.8, N.VM.9)\nREADY, SET, GO Homework: Matrices Revisited 10.3H\n10.4H The Determinant of a Matrix - A Develop Understanding Task\nFinding the determinant of a matrix and relating it to the area of a parallelogram (N.VM.10,\nN.VM.12)\nREADY, SET, GO Homework: Matrices Revisited 10.4H\n10.5H Solving Systems with Matrices, Revisited - A Solidify Understanding Task\nSolving a system of linear equations using the multiplicative inverse matrix (A.REI.1)\nREADY, SET, GO Homework: Matrices Revisited 10.5H\nMathematics Vision Project\nLicensed under the Creative Commons Attribution CC BY 4.0\nmathematicsvisionproject.org\nALGEBRA II // MODULE 10H\nMATRICES REVISITED",
+          "keyConceptsAndRules": "Purpose: The purpose of this task is to extend the process of solving linear systems using row\nreduction of matrices to linear systems that include more than two equations and more than two\nunknowns. The row reduction of matrices method for solving systems of equations was introduced\nfor the 2-equation, 2-variable case in the MVP Algebra I Honors curriculum. This task reviews the idea\nof representing a system of equations with an augmented matrix, then row reducing the matrix using\nideas that emerged from students' work with solving systems of equations by elimination:\n• Replace an equation (or a row of the matrix) with a multiple of that equation (or row);\nExample: 3)* → )* .\n• Replace an equation (or a row of the matrix) with the sum or difference of that equation (or\nrow) with a multiple of another equation (or row); Example: 2), + )* → )*\n! − 2$ = 6 2! − 3$ = 9 !−$ = 0\n1. 2. 3.\n3! − $ = 13 ! + 5$ = −28 4! + $ = 9\n2! + 3$ = 2 7! − $ = 14 8! + 5$ = 9\n4. 5. 6.\n−4! − 6$ = −14 ! + 7$ = −48 −! − 5$ = 5\n9. Create a matrix to match each step in the solving of the system of equations given. Also, write a\ndescription of what happened to the equation and the matrix between steps.\n3! + 2$ = 40 3 2 40\nGiven System 0 1 2 3\n! − 7$ = −2 1 −7 −2\nê −345 → 45 ê\n3! + 2$ = 40 2 40\nStep 1 0 ê 1 2 3\n−3! + 21$ = 6 −3 6\nê ê",
+          "workedExamples": "10.3H More Arithmetic of Matrices - A Solidify Understanding Task\nExamining properties of matrix addition and multiplication, including identity and inverse\nproperties (N.VM.8, N.VM.9)\nREADY, SET, GO Homework: Matrices Revisited 10.3H\n10.4H The Determinant of a Matrix - A Develop Understanding Task\nFinding the determinant of a matrix and relating it to the area of a parallelogram (N.VM.10,\nN.VM.12)\nREADY, SET, GO Homework: Matrices Revisited 10.4H\n10.5H Solving Systems with Matrices, Revisited - A Solidify Understanding Task\nSolving a system of linear equations using the multiplicative inverse matrix (A.REI.1)\nREADY, SET, GO Homework: Matrices Revisited 10.5H\n10.6H All Systems Go - A Practice Understanding Task\nSolving systems of linear equations using matrices (A.REI.8, A.REI.9)\nREADY, SET, GO Homework: Matrices Revisited 10.6H\nCC BY Tom Driggers https://flic.kr/p/D7QfcV\n10.1H “Row by Row . . .”\nA Solidify Understanding Task",
+          "stepByStepSolutions": "Step 1: In the MVP Algebra I tasks To Market with Matrices and Solving Systems with Matrices you\nlearned how to solve systems of equations involving two equations and two unknown quantities using\nrow reduction of matrices.\nStep 2: (You may want to review those two tasks before continuing.)\nStep 3: Modify the “row reduction of matrices” strategy so you can use it to solve Carlos and Clarita's\nsystem of three equations using row reduction.\nStep 4: What modifications did you have to make, and\nwhy?\nStep 5: Solve for the unknowns in your story by using row reduction on the given matrix.\nStep 6: Check your\nresults in the story context to make sure they are correct.\nStep 7: Purpose: The purpose of this task is to extend the process of solving linear systems using row\nreduction of matrices to linear systems that include more than two equations and more than two\nunknowns.\nStep 8: The row reduction of matrices method for solving systems of equations was introduced\nfor the 2-equation, 2-variable case in the MVP Algebra I Honors curriculum.\nStep 9: This task reviews the idea\nof representing a system of equations with an augmented matrix, then row reducing the matrix using\nideas that emerged from students' work with solving systems of equations by elimination:\n• Replace an equation (or a row of the matrix) with a multiple of that equation (or row)\nStep 10: Example: 3)* → )* .\nStep 11: • Replace an equation (or a row of the matrix) with the sum or difference of that equation (or\nrow) with a multiple of another equation (or row)\nStep 12: Example: 2), + )* → )*",
+          "commonMistakes": "Common mistake to avoid: ignoring, changing, or misreading this condition from the lesson: g matrix multiplication in preparation for solving systems of equations using inverse\n\nCommon mistake to avoid: ignoring, changing, or misreading this condition from the lesson: matrices (N.VM.6, N.VM.8)\n\nCommon mistake to avoid: ignoring, changing, or misreading this condition from the lesson: READY, SET, GO Homework: Matrices Revisited 10.2H\n\nCommon mistake to avoid: ignoring, changing, or misreading this condition from the lesson: 10.3H More Arithmetic of Matrices - A Solidify Understanding Task\n\nCommon mistake to avoid: ignoring, changing, or misreading this condition from the lesson: Examining properties of matrix addition and multiplication, including identity and inverse\n\nCommon mistake to avoid: ignoring, changing, or misreading this condition from the lesson: properties (N.VM.8, N.VM.9)",
+          "quickSummary": "10.3H More Arithmetic of Matrices\nA Solidify Understanding Task http://commons.wikimedia.org/wiki/File:Matriz_A_po"
         }
       ]
     },
     {
       "lessonCode": "PED:US-CCSS-MATH:HS:FOURTH:ADV-ALG-FUNC:U01:L02",
       "titleProvenance": "PedagogicalSource",
-      "titleSourceReference": "MVP-MATH3:M02:T01 — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_3.pdf",
+      "titleSourceReference": "MVP-MATH3:M02:T01 — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/sec3mod2tn718.pdf",
       "outcomeCodes": [
         "CCSS:HSF-BF.B.5"
       ],
+      "isSupporting": false,
+      "sourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/sec3mod2tn718.pdf",
+      "sourceLocator": "{\"pdfPagesContainingTitle\": [3, 5, 28], \"section\": \"Log Logic\"}",
+      "sourceTitle": "Mathematics Vision Project",
+      "sourcePublisher": "Mathematics Vision Project",
+      "sourceEdition": "Phase 29 locked source",
+      "sourceRights": "Use restricted to accepted Phase 29 commercial-safe license lock.",
+      "sourceSha256": "590d11f4e182141dc1ba220a9824243fc7b60c18793ebefa5f628931b3a54db3",
+      "canonicalBodySha256": "745a23831af32ecb008f24f9520bde58c363e89907f229f3b6d55bb3f8d34d5f",
+      "sourceVerifiedAtUtc": "2026-08-29T00:00:00Z",
+      "retrievalUrl": "https://freekidsbooks.org/wp-content/uploads/2019/11/FKB-UEN-SecondaryMathIII-HONORSStudent-Mod2-LogarithmicFunctions-oer.pdf",
+      "retrievalChannel": "VERIFIED_MIRROR",
+      "retrievalTimestamp": "",
+      "adaptationStatus": "SOURCE_FAITHFUL_ADAPTED",
       "translations": [
         {
           "cultureCode": "en",
           "title": "Log Logic",
-          "explanation": "Log Logic is an Edulytics lesson in the unit “Advanced Algebra & Functions”. It is aligned exactly to CCSS:HSF-BF.B.5. The accepted Common Core target text for this lesson states: (+) Understand the inverse relationship between exponents and logarithms and use this relationship to solve problems involving logarithms and exponents. Instructional focus: Students build new functions from relationships, sequences, transformations, compositions, and inverse processes. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
-          "keyConceptsAndRules": "Lesson-specific focus: Log Logic. Choose a function family that matches the relationship. Transformations change inputs or outputs in predictable ways. Composition substitutes one function into another; an inverse reverses the original mapping on an appropriate domain.",
-          "workedExamples": "Example 1: Let f(x)=2x+4. For x=4, f(4)=12. Solving y=2x+4 for x gives f⁻¹(y)=(y-4)/2; thus f⁻¹(12)=4. Example 2: Let f(x)=2x+4. For x=3, f(3)=10. Solving y=2x+4 for x gives f⁻¹(y)=(y-4)/2; thus f⁻¹(10)=3.",
-          "stepByStepSolutions": "Step 1: evaluate f(4)=2(4)+4=12. Step 2: write y=2x+4. Step 3: subtract 4 and divide by 2: x=(y-4)/2. Step 4: substitute y=12 to recover x=4. Step 1: evaluate f(3)=2(3)+4=10. Step 2: write y=2x+4. Step 3: subtract 4 and divide by 2: x=(y-4)/2. Step 4: substitute y=10 to recover x=3.",
-          "commonMistakes": "Lesson-specific focus: Log Logic. Do not assume every function has an inverse function on its full domain. Track whether a transformation acts inside or outside the function.",
-          "quickSummary": "Lesson-specific focus: Log Logic. Build the rule from the relationship, state its domain, apply transformations or composition carefully, and verify with input-output pairs."
-        },
-        {
-          "cultureCode": "pl",
-          "title": "Logarytmy i ich logika",
-          "explanation": "Lekcja „Logarytmy i ich logika” należy do działu „Advanced Algebra & Functions” i jest dokładnie powiązana ze standardami CCSS:HSF-BF.B.5. Główny kierunek pracy: Uczeń buduje funkcje na podstawie zależności, ciągów, przekształceń, złożeń i procesów odwrotnych. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
-          "keyConceptsAndRules": "Cel tej lekcji: Logarytmy i ich logika. Dobierz rodzinę funkcji do zależności. Przekształcenia zmieniają argumenty lub wartości w przewidywalny sposób. Złożenie polega na podstawieniu jednej funkcji do drugiej, a funkcja odwrotna odwraca przyporządkowanie na odpowiedniej dziedzinie.",
-          "workedExamples": "Przykład 1: Niech f(x)=2x+4. Dla x=4, f(4)=12. Z równania y=2x+4 otrzymujemy f⁻¹(y)=(y-4)/2; więc f⁻¹(12)=4. Przykład 2: Niech f(x)=2x+4. Dla x=3, f(3)=10. Z równania y=2x+4 otrzymujemy f⁻¹(y)=(y-4)/2; więc f⁻¹(10)=3.",
-          "stepByStepSolutions": "Krok 1: f(4)=2(4)+4=12. Krok 2: zapisz y=2x+4. Krok 3: odejmij 4 i podziel przez 2: x=(y-4)/2. Krok 4: dla y=12 odzyskujemy x=4. Krok 1: f(3)=2(3)+4=10. Krok 2: zapisz y=2x+4. Krok 3: odejmij 4 i podziel przez 2: x=(y-4)/2. Krok 4: dla y=10 odzyskujemy x=3.",
-          "commonMistakes": "Cel tej lekcji: Logarytmy i ich logika. Nie zakładaj, że każda funkcja ma funkcję odwrotną na całej dziedzinie. Sprawdzaj, czy przekształcenie działa na argument, czy na wartość funkcji.",
-          "quickSummary": "Cel tej lekcji: Logarytmy i ich logika. Zbuduj regułę z opisanej zależności, określ dziedzinę, ostrożnie zastosuj przekształcenia lub złożenie i sprawdź na parach argument-wartość."
+          "explanation": "SECONDARY\nMATH THREE\nAn Integrated Approach\nThe Mathematics Vision Project\nScott Hendrickson, Joleigh Honey, Barbara Kuehl, Travis Lemon, Janet Sutorius\n© 2018 Mathematics Vision Project\nOriginal work © 2013 in partnership with the Utah State Office of Education\nThis work is licensed under the Creative Commons Attribution CC BY 4.0\nSECONDARY MATH 3 // MODULE 1\nLOGARITHMIC FUNCTIONS\nMODULE 2 - TABLE OF CONTENTS\nFUNCTIONS AND THEIR INVERSES",
+          "keyConceptsAndRules": "Logarithms can be defined for any base used for an exponential function. Base 10 is popular. Using\nbase 10, you can write statements like these:\nName\n- - - Date -\n4. A. log ) <=> B. log-. <-...> C. log 8 <-)8> D. log ? <?>\n-2 -1 0 1 2\nExplain: ____________________________________________________________________________________________________\nName Date\n5. A. log = 16 B. log ) 16 C. log 7 16 D. log-? 16\n-2 -1 0 1 2\n8. A.0log Name )\nB. log 8 54)2 . Date\nlog = 44- 5 E. log ) 2\"\n\"3 1 C. log3\n?6 D.4\n0 1 2 3 4 5\n0 1 2 3 4 5\n00 1-2\n1 22\n-1\n33\n0\n44\n1\n55\n2\nTheMathWorksheetSite.com\n11. log B 1 = 0 for any base, b > 0.\n12. log B C = 1 for any b > 0.",
+          "workedExamples": "2.1 Log Logic - A Develop Understanding Task\nEvaluate and compare logarithmic expressions. (F.BF.5, F.LE.4)\nReady, Set, Go Homework: Logarithmic Functions 2.1\n2.2 Falling Off a Log - A Solidify Understanding Task\nGraph Logarithmic Functions with transformations (F.BF.5, F.IF.7a)\nReady, Set, Go Homework: Logarithmic Functions 2.2\n2.3 Chopping Logs - A Solidify Understanding Task\nSolidifies understanding of properties of logarithms. (F.IF.8, F.LE.4)\nReady, Set, Go Homework: Logarithmic Functions 2.3\n2.4 Log-Arithm-etic - A Practice Understanding Task\nUse Log properties to evaluate expressions (F.IF.8, F.LE.4)\nReady, Set, Go Homework: Logarithmic Functions 2.4\n2.5 Powerful Tens - A Practice Understanding Task\nSolving exponential and logarithmic functions in base 10 using technology. (F.LE.4)\nReady, Set, Go Homework: Logarithmic Functions 2.5",
+          "stepByStepSolutions": "Step 1: https://flic.kr/p/d9epSy\nWe began thinking about logarithms as inverse functions\nfor exponentials in Tracking the Tortoise.\nStep 2: Logarithmic\nfunctions are interesting and useful on their own.\nStep 3: In the\nnext few tasks, we will be working on understanding\nlogarithmic expressions, logarithmic functions, and\nlogarithmic operations on equations.\nStep 4: The next few problems will give you an opportunity to practice thinking about this pattern and\npossibly make a few conjectures about other patterns related to logarithms.\nStep 5: REA DY\nTopic:**Solving*simple*logarithmic*equations*\n*\nFind$the$answer$to$each$logarithmic$equation.$$Then$explain$how$each$equation$supports$the$\nstatement,$“The%answer%to%a%logarithmic%equation%is%always%the%exponent.”%\n$\n1.",
+          "commonMistakes": "2.9H Don't Forget You Login - A Practice Understanding Task\nSolving exponential and logarithmic equations.",
+          "quickSummary": "a) ! = log ' (8)) Equivalent equation: ____________________________________________\nb. ! = log ' (16)) Equivalent equation: ____________________________________________"
         }
       ]
     }
-  ]
+  ],
+  "academicLanguage": "en",
+  "curriculumTranslationRequired": false
 }

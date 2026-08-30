@@ -32,7 +32,23 @@ public sealed class Phase29FullContentRolloutPolicyTests
             rollout);
 
         Assert.Contains(
-            "Phase 29 remains OPEN",
+            "Phase 29 is a LOCAL CLOSURE CANDIDATE",
+            rollout);
+
+        Assert.Contains(
+            "Curriculum content stays in its official/source academic language",
+            rollout);
+
+        Assert.Contains(
+            "Common Core canonical content is English",
+            rollout);
+
+        Assert.Contains(
+            "Phase 30",
+            rollout);
+
+        Assert.Contains(
+            "is NOT STARTED",
             rollout);
 
         Assert.Contains(

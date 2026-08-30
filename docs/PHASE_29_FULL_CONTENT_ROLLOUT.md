@@ -1,11 +1,15 @@
 # Phase 29 — Full Mathematics Lesson Content Rollout
 
-## Decision
+## Current authoritative decision (2026-08-30)
 
-Phase 29 is no longer closed by a pilot-only acceptance.
+Phase 29 is a LOCAL CLOSURE CANDIDATE. Protected PR CI, merge, merged-main CI,
+Render staging, and human browser/content acceptance remain pending. Phase 30
+is NOT STARTED.
 
-Phase 29 remains OPEN until the four Mathematics curriculum tracks have
-completed the supported full-school-stage lesson-content rollout.
+Curriculum content stays in its official/source academic language; Edulytics
+UI localization is independent. Common Core canonical content is English.
+The former Polish Common Core translation requirement is cancelled and not
+applicable. See `architecture/CURRICULUM_LANGUAGE_POLICY.md`.
 
 ## Curriculum tracks
 
@@ -84,10 +88,10 @@ to make such a lesson independently publishable.
 Supporting-only lessons are:
 
 - preserved in the pedagogical source sequence;
-- excluded from the standalone canonical-content Production Ready denominator;
-- not exposed as independent student curriculum lessons under the current
-  Lesson Content contract;
-- available as pedagogical context/support for formally aligned lessons.
+- included in the overall Content Ready denominator;
+- exposed as independent Supporting lessons to authorized staff and enrolled
+  students;
+- rendered with their full canonical body and no fabricated official outcome.
 
 Common Core currently locks 94 such source-valid supporting lessons.
 
@@ -109,16 +113,16 @@ The US Common Core repository candidate is complete only when the automated
 Phase 29 audit proves all of the following simultaneously:
 
 - 1,560 in-scope pedagogical lessons;
-- 1,466 standalone canonical targets represented by Published EN+PL content;
-- 94 source-valid supporting-only lessons excluded from standalone publication;
+- 1,466 officially aligned lessons represented by Published English content;
+- 94 Published English Supporting lessons with zero independent OutcomeCodes;
 - zero Kindergarten product lessons;
 - exact blueprint-to-Standard mappings with no fabricated OutcomeCode;
 - approved OER provenance and traceable review evidence for every content pack;
 - deterministic mathematical verification for generated worked examples;
 - final full regression, PR CI, main CI, automatic staging seed, and staging DB audit.
 
-Repository completion is not by itself Phase 29 closure. England, Poland, and
-UAE full content rollout remain required before Phase 30 may start.
+Overall Common Core Content Ready coverage is **1,560 / 1,560**. The aligned
+count (1,466) is not the readiness denominator. Phase 30 remains not started.
 
 ## Rollout workstreams
 

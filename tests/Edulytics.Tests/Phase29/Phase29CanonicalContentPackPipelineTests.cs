@@ -31,13 +31,11 @@ public sealed class Phase29CanonicalContentPackPipelineTests
     }
 
     [Fact]
-    public void PublishedContentRequiresEnglishPolishAndReviewEvidence()
+    public void PublishedContentRequiresAcademicLanguageAndReviewEvidence()
     {
         var document = ValidDocument();
 
-        document.Lessons[0]
-            .Translations.RemoveAll(
-                x => x.CultureCode == "pl");
+        document.Lessons[0].Translations.Clear();
 
         Assert.Throws<InvalidOperationException>(
             () =>
@@ -577,6 +575,8 @@ public sealed class Phase29CanonicalContentPackPipelineTests
 
             VersionCode = versionCode,
             ContentVersion = "reviewed-v1",
+            AcademicLanguage = "en",
+            CurriculumTranslationRequired = false,
             SourcePolicyVersion = 2,
 
             TargetCurriculumPeriod = "2026-2027",

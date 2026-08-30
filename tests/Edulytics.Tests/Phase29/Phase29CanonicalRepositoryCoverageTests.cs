@@ -381,7 +381,7 @@ public sealed class Phase29LessonContentServiceCoverageTests
 
         var exact = Assert.Single(dashboard.Curricula, x => x.GradeName == "GRADE 6");
         Assert.Equal(2, exact.TotalLessons);
-        Assert.Equal(1, exact.ProductionReadyLessons);
+        Assert.Equal(2, exact.ProductionReadyLessons);
         Assert.Contains(exact.Lessons, x => x.HasOfficialAlignment);
         Assert.Contains(exact.Lessons, x => !x.HasOfficialAlignment);
 
@@ -394,7 +394,7 @@ public sealed class Phase29LessonContentServiceCoverageTests
     }
 
     [Fact]
-    public async Task StaffDetailReturnsPublishedBodyWithCultureFallbackAndOfficialOutcomes()
+    public async Task StaffDetailReturnsCommonCoreAcademicLanguageRegardlessOfUiCulture()
     {
         var schoolId = Guid.NewGuid();
         var actorId = Guid.NewGuid();
@@ -403,8 +403,8 @@ public sealed class Phase29LessonContentServiceCoverageTests
 
         var repo = new FakeLessonRepository
         {
-            StaffContexts = [Context(versionId, "UK-NC-ENG-MATH", "Year 6", 6)],
-            Lessons = [Lesson(lessonId, versionId, 6, 1, 2)],
+            StaffContexts = [Context(versionId, "US-CCSS-MATH", "Grade 6", 7)],
+            Lessons = [Lesson(lessonId, versionId, 7, 1, 2)],
             Contents =
             [
                 Content(
@@ -435,7 +435,7 @@ public sealed class Phase29LessonContentServiceCoverageTests
 
         var polish = await service.GetStaffLessonAsync(actorId, lessonId, "pl-PL");
         Assert.Null(polish.Error);
-        Assert.Equal("Polski tytuł", Assert.IsType<CanonicalLessonTranslationRecord>(polish.Value!.Body).Title);
+        Assert.Equal("English canonical title", Assert.IsType<CanonicalLessonTranslationRecord>(polish.Value!.Body).Title);
 
         repo.Contents =
         [
@@ -449,7 +449,7 @@ public sealed class Phase29LessonContentServiceCoverageTests
     }
 
     [Fact]
-    public async Task StudentListFiltersUnpublishedUnalignedAndWrongGradeLessons()
+    public async Task StudentListIncludesPublishedSupportingAndFiltersDraftAndWrongGrade()
     {
         var schoolId = Guid.NewGuid();
         var actorId = Guid.NewGuid();
@@ -487,9 +487,9 @@ public sealed class Phase29LessonContentServiceCoverageTests
         var result = await service.ListPublishedForStudentAsync(actorId, "");
 
         Assert.Null(result.Error);
-        var lesson = Assert.Single(result.Value!);
-        Assert.Equal(visible, lesson.Id);
-        Assert.Equal("Visible", lesson.Title);
+        Assert.Equal(2, result.Value!.Count);
+        Assert.Contains(result.Value, x => x.Id == visible && !x.IsSupporting);
+        Assert.Contains(result.Value, x => x.Id == unaligned && x.IsSupporting);
     }
 
     [Fact]
@@ -534,7 +534,7 @@ public sealed class Phase29LessonContentServiceCoverageTests
 
         Assert.Null(result.Error);
         var detail = Assert.IsType<StudentLessonDetail>(result.Value);
-        Assert.Equal("Lekcja ucznia", detail.Title);
+        Assert.Equal("Student lesson", detail.Title);
         Assert.Equal(updated, detail.PublishedAtUtc);
         Assert.Single(detail.Outcomes);
     }
@@ -561,8 +561,12 @@ public sealed class Phase29LessonContentServiceCoverageTests
         Assert.Equal(LessonContentErrorCode.LessonNotFound, missingLesson.Error);
 
         repo.Lessons = [Lesson(lessonId, versionId, 6, 1, 0)];
-        var unaligned = await service.GetPublishedForStudentAsync(actorId, lessonId, "en");
-        Assert.Equal(LessonContentErrorCode.LessonNotFound, unaligned.Error);
+        repo.Contents = [Content(versionId, lessonId, CanonicalLessonContentStatus.Published, En("Supporting"))];
+        var supporting = await service.GetPublishedForStudentAsync(actorId, lessonId, "pl-PL");
+        Assert.Null(supporting.Error);
+        Assert.True(supporting.Value!.IsSupporting);
+        Assert.Empty(supporting.Value.Outcomes);
+        Assert.Equal("Supporting", supporting.Value.Title);
 
         repo.Lessons = [Lesson(lessonId, versionId, 7, 1, 1)];
         var wrongGrade = await service.GetPublishedForStudentAsync(actorId, lessonId, "en");
@@ -619,6 +623,28 @@ public sealed class Phase29LessonContentServiceCoverageTests
         repo.Lessons = [Lesson(lessonId, versionId, 7, 1, 1)];
         var wrongGrade = await service.GetStaffLessonAsync(actorId, lessonId, "en");
         Assert.Equal(LessonContentErrorCode.LessonNotFound, wrongGrade.Error);
+    }
+
+    [Fact]
+    public async Task StaffDetailOpensPublishedSupportingBodyWithoutFabricatedOutcomes()
+    {
+        var schoolId = Guid.NewGuid();
+        var actorId = Guid.NewGuid();
+        var versionId = Guid.NewGuid();
+        var lessonId = Guid.NewGuid();
+        var repo = new FakeLessonRepository
+        {
+            StaffContexts = [Context(versionId, "US-CCSS-MATH", "Grade 6", 7)],
+            Lessons = [Lesson(lessonId, versionId, 7, 1, 0)],
+            Contents = [Content(versionId, lessonId, CanonicalLessonContentStatus.Published, En("English supporting body"))]
+        };
+
+        var service = Service(repo, Actor(actorId, schoolId, RoleNames.Teacher), ActiveSchool(schoolId));
+        var result = await service.GetStaffLessonAsync(actorId, lessonId, "pl-PL");
+
+        Assert.Null(result.Error);
+        Assert.Equal("English supporting body", result.Value!.Body!.Title);
+        Assert.Empty(result.Value.Outcomes);
     }
 
     [Fact]

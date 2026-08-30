@@ -76,7 +76,7 @@
                         <span class="lesson-content-coverage-badge">
                             <strong>
                                 @group.ProductionReadyLessons /
-                                @standaloneCount
+                                @group.TotalLessons
                             </strong>
                             @L["ProductionReady"]
                         </span>
@@ -171,73 +171,40 @@
                                             _ => "notstarted"
                                         };
 
-                                @if (isSupporting)
-                                {
-                                    <div class="lesson-content-row
-                                                lesson-content-row--supporting"
-                                         role="listitem">
-                                        <span class="lesson-content-row__order">
-                                            @lesson.SortOrder
-                                        </span>
+                                <a class="lesson-content-row @(isSupporting ? "lesson-content-row--supporting" : "")"
+                                   role="listitem"
+                                   asp-controller="LessonContent"
+                                   asp-action="Detail"
+                                   asp-route-id="@lesson.LessonId">
+                                    <span class="lesson-content-row__order">
+                                        @lesson.SortOrder
+                                    </span>
 
-                                        <span class="lesson-content-row__title">
-                                            @lesson.LessonTitle
+                                    <span class="lesson-content-row__title">
+                                        @lesson.LessonTitle
 
-                                            @if (!string.IsNullOrWhiteSpace(
-                                                    lesson.UnitTitle))
-                                            {
-                                                <small>
-                                                    @lesson.UnitTitle
-                                                </small>
-                                            }
-                                        </span>
+                                        @if (!string.IsNullOrWhiteSpace(lesson.UnitTitle))
+                                        {
+                                            <small>@lesson.UnitTitle</small>
+                                        }
+                                    </span>
 
-                                        <span class="lesson-content-status
-                                                    lesson-content-status--@statusClass">
-                                            @statusText
-                                        </span>
+                                    <span class="lesson-content-status lesson-content-status--@statusClass">
+                                        @statusText
+                                    </span>
 
+                                    @if (isSupporting)
+                                    {
                                         <span class="lesson-content-row__support"
                                               title="@L["SupportingLessonHelp"]"
-                                              aria-label="@L["SupportingLessonHelp"]">
-                                            i
-                                        </span>
-                                    </div>
-                                }
-                                else
-                                {
-                                    <a class="lesson-content-row"
-                                       role="listitem"
-                                       asp-controller="LessonContent"
-                                       asp-action="Detail"
-                                       asp-route-id="@lesson.LessonId">
-                                        <span class="lesson-content-row__order">
-                                            @lesson.SortOrder
-                                        </span>
-
-                                        <span class="lesson-content-row__title">
-                                            @lesson.LessonTitle
-
-                                            @if (!string.IsNullOrWhiteSpace(
-                                                    lesson.UnitTitle))
-                                            {
-                                                <small>
-                                                    @lesson.UnitTitle
-                                                </small>
-                                            }
-                                        </span>
-
-                                        <span class="lesson-content-status
-                                                    lesson-content-status--@statusClass">
-                                            @statusText
-                                        </span>
-
+                                              aria-label="@L["SupportingLessonHelp"]">i</span>
+                                    }
+                                    else
+                                    {
                                         <span class="lesson-content-row__chevron"
-                                              aria-hidden="true">
-                                            →
-                                        </span>
-                                    </a>
-                                }
+                                              aria-hidden="true">→</span>
+                                    }
+                                </a>
                             }
                         </div>
                     }

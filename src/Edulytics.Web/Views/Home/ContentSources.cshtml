@@ -1,0 +1,42 @@
+@model IReadOnlyList<Edulytics.Core.Curriculum.MathematicsCurriculumPackDefinition>
+@using System.Globalization
+@{
+    Layout = "_PublicLayout";
+    var polish = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "pl";
+    ViewData["Title"] = polish ? "Źródła treści i licencje" : "Content sources and licences";
+}
+
+<main class="container py-5">
+    <h1>@ViewData["Title"]</h1>
+    <p>
+        @(polish
+            ? "Ta strona centralnie dokumentuje źródła programów nauczania, wymagane informacje o prawach oraz język treści akademickich. Metadane nie są powtarzane na stronach poszczególnych lekcji."
+            : "This page centrally records curriculum sources, required rights notices, and each curriculum's academic language. This metadata is not repeated on individual lesson pages.")
+    </p>
+
+    @foreach (var pack in Model)
+    {
+        <section class="card my-4">
+            <div class="card-body">
+                <h2 class="h4">@pack.DisplayName</h2>
+                <dl>
+                    <dt>@(polish ? "Język akademicki" : "Academic language")</dt>
+                    <dd><code>@pack.AcademicLanguage</code></dd>
+                    <dt>@(polish ? "Prawa / wymagane oznaczenie" : "Rights / required attribution")</dt>
+                    <dd>@pack.RequiredAttribution</dd>
+                    <dt>@(polish ? "Podstawa ponownego użycia" : "Reuse basis")</dt>
+                    <dd>@pack.EvidenceNote</dd>
+                </dl>
+                <ul>
+                    @foreach (var source in pack.Sources)
+                    {
+                        <li>
+                            <a href="@source.Url" rel="external noreferrer">@source.Purpose</a>
+                            — @source.Authority, @source.VersionLabel
+                        </li>
+                    }
+                </ul>
+            </div>
+        </section>
+    }
+</main>
