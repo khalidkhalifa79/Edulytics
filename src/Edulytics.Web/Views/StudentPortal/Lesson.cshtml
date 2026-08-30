@@ -1,68 +1,24 @@
 @model Edulytics.Services.LessonContent.StudentLessonDetail
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.LessonContentResource> L
+@using Edulytics.Web.Presentation
 @{
     Layout = "_StudentLayout";
     ViewData["Title"] = Model.Title;
-}
-
-<header class="student-page-header">
-    <span class="student-eyebrow">@Model.SubjectCode · @Model.GradeName</span>
-    <h1>@Model.Title</h1>
-    <p>@Model.TopicName · @Model.FrameworkName</p>
-</header>
-
-<div class="student-lesson-detail-meta">
-    <span>@L["PublishedOn"]: @Model.PublishedAtUtc.ToString("yyyy-MM-dd")</span>
-    @if (Model.IsSupporting)
+    var sections = new[]
     {
-        <span class="lesson-content-status lesson-content-status--supporting">@L["SupportingLesson"]</span>
-    }
+        new LessonReaderSection("01", L["Explanation"], "explanation", LessonPresentationParser.Parse(Model.Explanation)),
+        new LessonReaderSection("02", L["KeyConceptsAndRules"], "concepts", LessonPresentationParser.Parse(Model.KeyConceptsAndRules)),
+        new LessonReaderSection("03", L["WorkedExamples"], "examples", LessonPresentationParser.Parse(Model.WorkedExamples)),
+        new LessonReaderSection("04", L["StepByStepSolutions"], "steps", LessonPresentationParser.Parse(Model.StepByStepSolutions, orderedSteps: true)),
+        new LessonReaderSection("05", L["CommonMistakes"], "mistakes", LessonPresentationParser.Parse(Model.CommonMistakes)),
+        new LessonReaderSection("06", L["QuickSummary"], "summary", LessonPresentationParser.Parse(Model.QuickSummary))
+    };
+}
+<div class="lesson-reader lesson-reader--student">
+    <a class="lesson-reader-back" asp-action="Learning"><span aria-hidden="true">←</span> @L["BackToLessons"]</a>
+    <header class="lesson-reader-hero"><div class="lesson-reader-hero__main"><div class="lesson-reader-hero__topline"><span class="student-subject-code">@Model.SubjectCode</span>@if (Model.IsSupporting) { <span class="lesson-content-status lesson-content-status--supporting">@L["SupportingLesson"]</span> }</div><p class="lesson-library-eyebrow">@L["LearningContent"]</p><h1>@Model.Title</h1><p class="lesson-reader-hero__unit">@Model.TopicName</p><div class="lesson-reader-meta"><span><small>@L["Grade"]</small><strong>@Model.GradeName</strong></span><span><small>@L["Framework"]</small><strong>@Model.FrameworkName</strong></span><span><small>@L["PublishedOn"]</small><strong>@Model.PublishedAtUtc.ToString("yyyy-MM-dd")</strong></span></div></div></header>
+    <div class="lesson-reader-layout"><main class="lesson-reader-main">
+        @if (Model.IsSupporting) { <section class="lesson-supporting-message"><span class="lesson-supporting-message__icon" aria-hidden="true">i</span><div><h2>@L["SupportingLesson"]</h2><p>@L["SupportingLessonHelp"]</p></div></section> }
+        @foreach (var section in sections) { <partial name="_LessonReaderSection" model="section" /> }
+    </main><aside class="lesson-reader-sidebar" aria-label="@L["LessonReference"]"><section class="lesson-reader-sidecard"><h2>@L["StandardsReference"]</h2>@if (Model.IsSupporting) { <div class="lesson-content-empty">@L["SupportingLessonHelp"]</div> } else { <div class="lesson-reader-outcomes">@foreach (var outcome in Model.Outcomes) { <article class="lesson-reader-outcome"><strong>@outcome.Code</strong><p>@outcome.Description</p></article> }</div> }</section></aside></div>
 </div>
-
-@if (Model.IsSupporting)
-{
-    <section class="lesson-supporting-message">
-        <h2>@L["SupportingLesson"]</h2>
-        <p>@L["SupportingLessonHelp"]</p>
-    </section>
-}
-else
-{
-    <section class="student-lesson-content-section">
-        <h2>@L["AlignedOutcomes"]</h2>
-        <div class="student-outcome-list">
-            @foreach (var outcome in Model.Outcomes)
-            {
-                <article class="student-outcome-item">
-                    <strong>@outcome.Code</strong>
-                    <span>@outcome.Description</span>
-                </article>
-            }
-        </div>
-    </section>
-}
-
-<section class="student-lesson-content-section">
-    <h2>@L["Explanation"]</h2>
-    <div class="student-lesson-text">@Model.Explanation</div>
-</section>
-<section class="student-lesson-content-section">
-    <h2>@L["KeyConceptsAndRules"]</h2>
-    <div class="student-lesson-text">@Model.KeyConceptsAndRules</div>
-</section>
-<section class="student-lesson-content-section">
-    <h2>@L["WorkedExamples"]</h2>
-    <div class="student-lesson-text">@Model.WorkedExamples</div>
-</section>
-<section class="student-lesson-content-section">
-    <h2>@L["StepByStepSolutions"]</h2>
-    <div class="student-lesson-text">@Model.StepByStepSolutions</div>
-</section>
-<section class="student-lesson-content-section">
-    <h2>@L["CommonMistakes"]</h2>
-    <div class="student-lesson-text">@Model.CommonMistakes</div>
-</section>
-<section class="student-lesson-content-section">
-    <h2>@L["QuickSummary"]</h2>
-    <div class="student-lesson-text">@Model.QuickSummary</div>
-</section>

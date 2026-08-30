@@ -35,17 +35,11 @@
         <div class="lesson-content-topic-stack">
             @foreach (var group in Model.Dashboard.Curricula)
             {
-                var standaloneCount =
+                var officiallyAlignedCount =
                     group.Lessons.Count(x => x.HasOfficialAlignment);
 
                 var supportingCount =
-                    group.Lessons.Count - standaloneCount;
-
-                var incompleteStandalone =
-                    Math.Max(
-                        0,
-                        standaloneCount -
-                        group.ProductionReadyLessons);
+                    group.Lessons.Count - officiallyAlignedCount;
 
                 <section class="lesson-content-topic-card">
                     <header class="lesson-content-topic-card__header">
@@ -73,31 +67,24 @@
                             </div>
                         </div>
 
-                        <span class="lesson-content-coverage-badge">
-                            <strong>
-                                @group.ProductionReadyLessons /
-                                @group.TotalLessons
-                            </strong>
-                            @L["ProductionReady"]
-                        </span>
                     </header>
 
                     <div class="lesson-content-metrics">
                         <div class="lesson-content-metric">
                             <span class="lesson-content-metric__value">
-                                @standaloneCount
+                                @group.TotalLessons
                             </span>
                             <span class="lesson-content-metric__label">
-                                @L["StandaloneLessons"]
+                                @L["TotalLessons"]
                             </span>
                         </div>
 
                         <div class="lesson-content-metric">
                             <span class="lesson-content-metric__value">
-                                @group.ProductionReadyLessons
+                                @officiallyAlignedCount
                             </span>
                             <span class="lesson-content-metric__label">
-                                @L["ProductionReady"]
+                                @L["OfficiallyAligned"]
                             </span>
                         </div>
 
@@ -111,15 +98,6 @@
                             </span>
                         </div>
 
-                        <div class="lesson-content-metric
-                                    lesson-content-metric--incomplete">
-                            <span class="lesson-content-metric__value">
-                                @incompleteStandalone
-                            </span>
-                            <span class="lesson-content-metric__label">
-                                @L["IncompleteStandalone"]
-                            </span>
-                        </div>
                     </div>
 
                     @if (group.Lessons.Count == 0)
@@ -149,7 +127,7 @@
                                                 => L["Verified"].Value,
 
                                             CanonicalLessonContentStatus.Published
-                                                => L["ProductionReady"].Value,
+                                                => L["PublishedLesson"].Value,
 
                                             _ => L["NotStarted"].Value
                                         };

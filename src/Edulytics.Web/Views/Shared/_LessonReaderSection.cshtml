@@ -1,0 +1,56 @@
+@model Edulytics.Web.Presentation.LessonReaderSection
+
+<section class="lesson-learning-section
+                lesson-learning-section--@Model.Kind">
+
+    <header class="lesson-learning-section__header">
+        <span class="lesson-learning-section__number">
+            @Model.Number
+        </span>
+
+        <h2>@Model.Title</h2>
+    </header>
+
+    @if (Model.Kind == "steps")
+    {
+        <ol class="lesson-step-list">
+            @foreach (var item in Model.Items)
+            {
+                <li>
+                    @if (item.IsVisual)
+                    {
+                        <partial name="_LessonInstructionalVisual"
+                                 model="item" />
+                    }
+                    else
+                    {
+                        <div class="lesson-reader-text">
+                            @item.Text
+                        </div>
+                    }
+                </li>
+            }
+        </ol>
+    }
+    else
+    {
+        <div class="lesson-reader-blocks
+                    lesson-reader-blocks--@Model.Kind">
+
+            @foreach (var item in Model.Items)
+            {
+                @if (item.IsVisual)
+                {
+                    <partial name="_LessonInstructionalVisual"
+                             model="item" />
+                }
+                else
+                {
+                    <p class="lesson-reader-text">
+                        @item.Text
+                    </p>
+                }
+            }
+        </div>
+    }
+</section>
