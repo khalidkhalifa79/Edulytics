@@ -6947,7 +6947,6 @@ body:not(.ed-auth-body):not(.ed-public-body) header .localized-brand-logo,
 }
 
 /* EDULYTICS PHASE 29 CANONICAL CONTENT ARCHITECTURE */
-.lesson-content-coverage-badge{display:inline-flex;align-items:center;width:fit-content;padding:.38rem .7rem;border-radius:999px;background:#eef2ff;color:#4c56a9;font-size:.74rem;font-weight:800}
 .lesson-content-row__title{display:grid;gap:.2rem}
 .lesson-content-row__title small{color:#7a8599;font-size:.72rem;font-weight:600}
 .lesson-content-status--verified{background:#eef4ff;color:#365f9c}
@@ -7183,32 +7182,146 @@ body:not(.ed-auth-body):not(.ed-public-body) header .localized-brand-logo,
     font-size: .84rem;
 }
 
-.lesson-content-coverage-badge {
-    flex: 0 0 auto;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: .12rem;
-    padding: .65rem .85rem;
-    border: 1px solid #bfe7cf;
-    border-radius: .8rem;
-    background: var(--lesson-success-soft);
-    color: var(--lesson-success);
-    font-size: .72rem;
-    font-weight: 700;
-    white-space: nowrap;
-}
-
-.lesson-content-coverage-badge strong {
-    font-size: 1rem;
-    line-height: 1.1;
-}
-
 .lesson-content-metrics {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: .75rem;
     padding: 0 1.5rem 1.25rem;
+}
+
+/* phase29-visual-reader-v2 */
+.lesson-reader {
+    max-width: 1180px;
+}
+
+.lesson-reader-hero {
+    padding: clamp(1.4rem, 3vw, 2.2rem);
+    border: 0;
+    border-left: .3rem solid var(--lesson-primary);
+    border-radius: .85rem;
+    box-shadow: none;
+}
+
+.lesson-reader-layout {
+    grid-template-columns: minmax(0, 48rem) minmax(16rem, 20rem);
+    justify-content: center;
+    gap: clamp(1.4rem, 3vw, 2.4rem);
+}
+
+.lesson-learning-section {
+    overflow: visible;
+    margin-bottom: clamp(1.8rem, 4vw, 3rem);
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.lesson-learning-section__header {
+    padding: 0 0 .75rem;
+    border-bottom: 1px solid var(--lesson-border);
+    background: transparent;
+}
+
+.lesson-learning-section__header h2 {
+    font-size: clamp(1.15rem, 2vw, 1.4rem);
+}
+
+.lesson-reader-blocks {
+    display: grid;
+    gap: 1rem;
+    padding: 1.15rem 0 0;
+}
+
+.lesson-reader-text {
+    white-space: pre-line;
+}
+
+.lesson-reader-blocks .lesson-reader-text {
+    max-width: 72ch;
+    margin: 0;
+    color: #334155;
+    font-size: 1rem;
+    line-height: 1.78;
+}
+
+.lesson-reader-blocks--examples > .lesson-reader-text {
+    padding: 1rem 1.1rem;
+    border-left: .22rem solid #8ca3ee;
+    border-radius: 0 .65rem .65rem 0;
+    background: #f8faff;
+}
+
+.lesson-reader-blocks--concepts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.lesson-reader-blocks--concepts > .lesson-reader-text {
+    padding: .8rem 1rem;
+    border-radius: .65rem;
+    background: #f6f8fd;
+}
+
+.lesson-reader-blocks--mistakes {
+    padding: 1rem;
+    border-left: .22rem solid #e8a49e;
+    border-radius: 0 .75rem .75rem 0;
+    background: #fff8f7;
+}
+
+.lesson-reader-blocks--summary {
+    padding: 1rem 1.15rem;
+    border-radius: .75rem;
+    background: #eff9f3;
+}
+
+.lesson-instructional-visual {
+    width: 100%;
+    max-width: 46rem;
+    margin: .45rem auto 1rem;
+    padding: clamp(.75rem, 2vw, 1.2rem);
+    border-radius: .9rem;
+    background: #f8fafc;
+}
+
+.lesson-instructional-visual svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 22rem;
+    font: 600 16px system-ui, sans-serif;
+    color: #334155;
+}
+
+.lesson-instructional-visual figcaption {
+    margin-top: .65rem;
+    color: #59677d;
+    font-size: .82rem;
+    line-height: 1.5;
+}
+
+.visual-line, .visual-mark, .visual-area-grid path, .visual-area-cut {
+    fill: none;
+    stroke: #334155;
+    stroke-width: 4;
+}
+.visual-area-grid rect { fill: #eef2ff; stroke: #3157d5; stroke-width: 3; }
+.visual-area-shape { fill: #dbeafe; stroke: #3157d5; stroke-width: 4; }
+.visual-area-cut { stroke-width: 2; stroke-dasharray: 7 5; }
+.visual-arrow, .visual-graph-line { fill: none; stroke: #3157d5; stroke-width: 5; stroke-linecap: round; }
+
+.lesson-reader-sidebar {
+    top: 1.25rem;
+}
+
+.lesson-reader-sidecard {
+    border: 0;
+    border-left: 2px solid var(--lesson-border);
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.lesson-supporting-message {
+    margin-bottom: 1.5rem;
 }
 
 .lesson-content-metric {
@@ -7241,11 +7354,6 @@ body:not(.ed-auth-body):not(.ed-public-body) header .localized-brand-logo,
 .lesson-content-metric--supporting
 .lesson-content-metric__value {
     color: var(--lesson-support);
-}
-
-.lesson-content-metric--incomplete
-.lesson-content-metric__value {
-    color: var(--lesson-danger);
 }
 
 .lesson-content-list {
@@ -7792,6 +7900,12 @@ a.lesson-content-row:hover
 }
 
 @media (max-width: 720px) {
+    .lesson-reader-blocks--concepts { grid-template-columns: 1fr; }
+    .lesson-instructional-visual { padding: .5rem; }
+    .lesson-step-list { padding-left: 2.2rem; padding-right: 0; }
+}
+
+@media (max-width: 720px) {
     .lesson-library-hero__mark,
     .lesson-reader-hero__symbol {
         display: none;
@@ -7799,10 +7913,6 @@ a.lesson-content-row:hover
 
     .lesson-content-topic-card__header {
         flex-direction: column;
-    }
-
-    .lesson-content-coverage-badge {
-        align-items: flex-start;
     }
 
     .lesson-content-row {
@@ -7867,4 +7977,290 @@ a.lesson-content-row:hover
     .lesson-reader-meta > span {
         min-width: 0;
     }
+}
+
+
+/* phase29-visual-reader-v3 */
+
+.lesson-reader {
+    width: min(100%, 1180px);
+    margin-inline: auto;
+}
+
+.lesson-reader-main {
+    min-width: 0;
+}
+
+.lesson-reader-blocks {
+    display: grid;
+    gap: 1rem;
+}
+
+.lesson-reader-text {
+    max-width: 72ch;
+    margin: 0;
+    color: #334155;
+    font-size: 1rem;
+    line-height: 1.78;
+    overflow-wrap: anywhere;
+}
+
+.lesson-reader-blocks--examples > .lesson-reader-text {
+    padding: 1rem 1.15rem;
+    border-left: .25rem solid #7d92e7;
+    border-radius: 0 .7rem .7rem 0;
+    background: #f8faff;
+}
+
+.lesson-reader-blocks--concepts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.lesson-reader-blocks--concepts > .lesson-reader-text {
+    padding: .95rem 1rem;
+    border: 1px solid #e7eaf4;
+    border-radius: .75rem;
+    background: #f8f9fd;
+}
+
+.lesson-reader-blocks--mistakes {
+    padding: 1rem 1.15rem;
+    border-left: .25rem solid #d9847c;
+    border-radius: 0 .75rem .75rem 0;
+    background: #fff8f7;
+}
+
+.lesson-reader-blocks--summary {
+    padding: 1.05rem 1.2rem;
+    border-radius: .8rem;
+    background: #eff8f2;
+}
+
+.lesson-instructional-visual {
+    width: 100%;
+    max-width: 48rem;
+    margin: .8rem auto 1.25rem;
+    padding: 1rem;
+    border: 1px solid #e4e8f2;
+    border-radius: .9rem;
+    background: #fbfcff;
+}
+
+.lesson-instructional-visual__title {
+    margin-bottom: .5rem;
+    color: #25324a;
+    font-size: .86rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.lesson-instructional-visual svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 25rem;
+    margin-inline: auto;
+    overflow: visible;
+    font-family: inherit;
+}
+
+.lesson-instructional-visual figcaption {
+    max-width: 70ch;
+    margin: .8rem auto 0;
+    color: #657188;
+    font-size: .82rem;
+    line-height: 1.55;
+}
+
+.visual-line,
+.visual-mark,
+.visual-area-cut,
+.visual-grid-line-strong {
+    fill: none;
+    stroke: #334155;
+}
+
+.visual-line {
+    stroke-width: 4;
+    stroke-linecap: round;
+}
+
+.visual-mark {
+    stroke-width: 3;
+}
+
+.visual-grid-line {
+    fill: none;
+    stroke: #d9deea;
+    stroke-width: 1;
+}
+
+.visual-grid-line-strong {
+    stroke-width: 2;
+}
+
+.visual-area-outline,
+.visual-area-fill,
+.visual-geometry-shape {
+    stroke: #3157d5;
+    stroke-width: 3;
+}
+
+.visual-area-outline {
+    fill: #ffffff;
+}
+
+.visual-area-fill {
+    fill: #edf2ff;
+}
+
+.visual-geometry-shape {
+    fill: #edf2ff;
+}
+
+.visual-area-cut {
+    stroke-width: 2;
+}
+
+.visual-arrow {
+    fill: none;
+    stroke: #3157d5;
+    stroke-width: 5;
+    stroke-linecap: round;
+}
+
+.visual-label,
+.visual-axis-label,
+.visual-value,
+.visual-panel-label,
+.visual-measure,
+.visual-concept-label,
+.visual-axis-symbol {
+    fill: #334155;
+}
+
+.visual-label,
+.visual-axis-label,
+.visual-value {
+    font-size: 15px;
+    font-weight: 650;
+}
+
+.visual-panel-label {
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.visual-measure {
+    font-size: 15px;
+    font-weight: 800;
+    fill: #3157d5;
+}
+
+.visual-concept-label {
+    font-size: 16px;
+    font-weight: 750;
+}
+
+.visual-axis-symbol {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.visual-small-note {
+    fill: #7b8496;
+    font-size: 12px;
+}
+
+.lesson-step-list > li::marker {
+    font-weight: 800;
+}
+
+.lesson-reader-sidebar {
+    position: sticky;
+    top: 1.25rem;
+    align-self: start;
+}
+
+@media (max-width: 960px) {
+    .lesson-reader-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .lesson-reader-sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 720px) {
+    .lesson-reader-blocks--concepts {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson-instructional-visual {
+        padding: .55rem;
+    }
+
+    .lesson-instructional-visual figcaption {
+        padding-inline: .35rem;
+    }
+}
+
+/* phase29-visual-reader-v3-razor-safe */
+
+.visual-svg-label,
+.visual-svg-measure,
+.visual-svg-axis-label,
+.visual-svg-value,
+.visual-svg-panel-label,
+.visual-svg-axis-symbol,
+.visual-svg-concept {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 1.2;
+    color: #334155;
+    overflow-wrap: anywhere;
+}
+
+.visual-svg-label {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.visual-svg-measure {
+    font-size: 14px;
+    font-weight: 800;
+    color: #3157d5;
+}
+
+.visual-svg-axis-label {
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.visual-svg-value {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.visual-svg-panel-label {
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.visual-svg-axis-symbol {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.visual-svg-concept {
+    font-size: 15px;
+    font-weight: 750;
 }

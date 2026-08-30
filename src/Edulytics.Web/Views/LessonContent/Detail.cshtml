@@ -1,381 +1,49 @@
 @model Edulytics.Web.ViewModels.LessonContent.LessonContentDetailViewModel
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.LessonContentResource> L
 @using Edulytics.Core.Enums
-
-@functions {
-    private static IReadOnlyList<string> SplitStructuredText(
-        string? value)
-    {
-        if (string.IsNullOrWhiteSpace(value))
-        {
-            return Array.Empty<string>();
-        }
-
-        var normalized =
-            value
-                .Replace("\r\n", "\n")
-                .Replace('\r', '\n')
-                .Trim();
-
-        var pattern =
-            @"(?:\n\s*\n)+|" +
-            @"(?=(?:Step|Krok|Example|Przykład|Mistake|Błąd)" +
-            @"\s+\d+\s*[:.])";
-
-        var parts =
-            System.Text.RegularExpressions.Regex
-                .Split(
-                    normalized,
-                    pattern,
-                    System.Text.RegularExpressions.RegexOptions
-                        .IgnoreCase |
-                    System.Text.RegularExpressions.RegexOptions
-                        .CultureInvariant)
-                .Select(x => x.Trim())
-                .Where(x => !string.IsNullOrWhiteSpace(x))
-                .ToArray();
-
-        return parts.Length == 0
-            ? new[] { normalized }
-            : parts;
-    }
-}
-
+@using Edulytics.Web.Presentation
 @{
     Layout = "_AppLayout";
     ViewData["Title"] = Model.Lesson.LessonTitle;
-
-    var isSupporting =
-        Model.Lesson.Outcomes.Count == 0;
-
-    var statusText =
-        isSupporting
-            ? L["SupportingLesson"].Value
-            : Model.Lesson.Status switch
-            {
-                CanonicalLessonContentStatus.Draft
-                    => L["InPreparation"].Value,
-
-                CanonicalLessonContentStatus.Verified
-                    => L["Verified"].Value,
-
-                CanonicalLessonContentStatus.Published
-                    => L["ProductionReady"].Value,
-
-                _ => L["NotStarted"].Value
-            };
-
-    var statusClass =
-        isSupporting
-            ? "supporting"
-            : Model.Lesson.Status switch
-            {
-                CanonicalLessonContentStatus.Draft
-                    => "draft",
-
-                CanonicalLessonContentStatus.Verified
-                    => "verified",
-
-                CanonicalLessonContentStatus.Published
-                    => "published",
-
-                _ => "notstarted"
-            };
+    var isSupporting = Model.Lesson.Outcomes.Count == 0;
+    var statusText = isSupporting ? L["SupportingLesson"].Value : Model.Lesson.Status switch
+    {
+        CanonicalLessonContentStatus.Draft => L["InPreparation"].Value,
+        CanonicalLessonContentStatus.Verified => L["Verified"].Value,
+        CanonicalLessonContentStatus.Published => L["PublishedLesson"].Value,
+        _ => L["NotStarted"].Value
+    };
+    var statusClass = isSupporting ? "supporting" : Model.Lesson.Status?.ToString().ToLowerInvariant() ?? "notstarted";
+    var body = Model.Lesson.Body;
+    var sections = body is null ? Array.Empty<LessonReaderSection>() : new[]
+    {
+        new LessonReaderSection("01", L["Explanation"], "explanation", LessonPresentationParser.Parse(body.Explanation)),
+        new LessonReaderSection("02", L["KeyConceptsAndRules"], "concepts", LessonPresentationParser.Parse(body.KeyConceptsAndRules)),
+        new LessonReaderSection("03", L["WorkedExamples"], "examples", LessonPresentationParser.Parse(body.WorkedExamples)),
+        new LessonReaderSection("04", L["StepByStepSolutions"], "steps", LessonPresentationParser.Parse(body.StepByStepSolutions, orderedSteps: true)),
+        new LessonReaderSection("05", L["CommonMistakes"], "mistakes", LessonPresentationParser.Parse(body.CommonMistakes)),
+        new LessonReaderSection("06", L["QuickSummary"], "summary", LessonPresentationParser.Parse(body.QuickSummary))
+    };
 }
-
 <div class="lesson-reader">
-    <a class="lesson-reader-back"
-       asp-action="Index">
-        <span aria-hidden="true">←</span>
-        @L["BackToLessons"]
-    </a>
-
-    <header class="lesson-reader-hero">
-        <div class="lesson-reader-hero__main">
-            <div class="lesson-reader-hero__topline">
-                <span class="student-subject-code">
-                    @Model.Lesson.SubjectCode
-                </span>
-
-                <span class="lesson-content-status
-                            lesson-content-status--@statusClass">
-                    @statusText
-                </span>
-            </div>
-
-            <p class="lesson-library-eyebrow">
-                @L["LearningContent"]
-            </p>
-
-            <h1>@Model.Lesson.LessonTitle</h1>
-
-            @if (!string.IsNullOrWhiteSpace(
-                    Model.Lesson.UnitTitle))
-            {
-                <p class="lesson-reader-hero__unit">
-                    @Model.Lesson.UnitTitle
-                </p>
-            }
-
-            <div class="lesson-reader-meta">
-                <span>
-                    <small>@L["Subject"]</small>
-                    <strong>@Model.Lesson.SubjectName</strong>
-                </span>
-
-                <span>
-                    <small>@L["Grade"]</small>
-                    <strong>@Model.Lesson.GradeName</strong>
-                </span>
-
-                <span>
-                    <small>@L["Framework"]</small>
-                    <strong>@Model.Lesson.FrameworkName</strong>
-                </span>
-            </div>
-        </div>
-
-        <div class="lesson-reader-hero__symbol"
-             aria-hidden="true">
-            <span>π</span>
-        </div>
-    </header>
-
+    <a class="lesson-reader-back" asp-action="Index"><span aria-hidden="true">←</span> @L["BackToLessons"]</a>
+    <header class="lesson-reader-hero"><div class="lesson-reader-hero__main">
+        <div class="lesson-reader-hero__topline"><span class="student-subject-code">@Model.Lesson.SubjectCode</span><span class="lesson-content-status lesson-content-status--@statusClass">@statusText</span></div>
+        <p class="lesson-library-eyebrow">@L["LearningContent"]</p><h1>@Model.Lesson.LessonTitle</h1>
+        @if (!string.IsNullOrWhiteSpace(Model.Lesson.UnitTitle)) { <p class="lesson-reader-hero__unit">@Model.Lesson.UnitTitle</p> }
+        <div class="lesson-reader-meta"><span><small>@L["Subject"]</small><strong>@Model.Lesson.SubjectName</strong></span><span><small>@L["Grade"]</small><strong>@Model.Lesson.GradeName</strong></span><span><small>@L["Framework"]</small><strong>@Model.Lesson.FrameworkName</strong></span></div>
+    </div></header>
     <div class="lesson-reader-layout">
         <main class="lesson-reader-main">
-            @if (isSupporting)
-            {
-                <section class="lesson-supporting-message">
-                    <span class="lesson-supporting-message__icon"
-                          aria-hidden="true">
-                        i
-                    </span>
-
-                    <div>
-                        <h2>@L["SupportingLesson"]</h2>
-                        <p>@L["SupportingLessonHelp"]</p>
-                    </div>
-                </section>
-            }
-            @if (Model.Lesson.Body is null)
-            {
-                <div class="lesson-library-notice">
-                    <span class="lesson-library-notice__icon"
-                          aria-hidden="true">
-                        i
-                    </span>
-
-                    <span>
-                        <strong>@statusText</strong>
-                        <br />
-                        @L["ContentPreparationMessage"]
-                    </span>
-                </div>
-            }
-            else
-            {
-                <section class="lesson-learning-section
-                                lesson-learning-section--explanation">
-                    <header class="lesson-learning-section__header">
-                        <span class="lesson-learning-section__number">
-                            01
-                        </span>
-                        <div>
-                            <span class="lesson-learning-section__kicker">
-                                @L["LessonOverview"]
-                            </span>
-                            <h2>@L["Explanation"]</h2>
-                        </div>
-                    </header>
-
-                    <div class="lesson-learning-section__body">
-                        @foreach (var block in
-                            SplitStructuredText(
-                                Model.Lesson.Body.Explanation))
-                        {
-                            <p>@block</p>
-                        }
-                    </div>
-                </section>
-
-                <section class="lesson-learning-section
-                                lesson-learning-section--concepts">
-                    <header class="lesson-learning-section__header">
-                        <span class="lesson-learning-section__number">
-                            02
-                        </span>
-                        <h2>@L["KeyConceptsAndRules"]</h2>
-                    </header>
-
-                    <div class="lesson-concept-grid">
-                        @foreach (var block in
-                            SplitStructuredText(
-                                Model.Lesson.Body.KeyConceptsAndRules))
-                        {
-                            <div class="lesson-concept-card">
-                                <span aria-hidden="true">✓</span>
-                                <p>@block</p>
-                            </div>
-                        }
-                    </div>
-                </section>
-
-                <section class="lesson-learning-section
-                                lesson-learning-section--examples">
-                    <header class="lesson-learning-section__header">
-                        <span class="lesson-learning-section__number">
-                            03
-                        </span>
-                        <h2>@L["WorkedExamples"]</h2>
-                    </header>
-
-                    <div class="lesson-example-stack">
-                        @{
-                            var workedExampleNumber = 0;
-                        }
-
-                        @foreach (var block in
-                            SplitStructuredText(
-                                Model.Lesson.Body.WorkedExamples))
-                        {
-                            workedExampleNumber++;
-
-                            <article class="lesson-example-card">
-                                <span class="lesson-example-card__index">
-                                    @workedExampleNumber
-                                </span>
-
-                                <p>@block</p>
-                            </article>
-                        }
-                    </div>
-                </section>
-
-                <section class="lesson-learning-section
-                                lesson-learning-section--steps">
-                    <header class="lesson-learning-section__header">
-                        <span class="lesson-learning-section__number">
-                            04
-                        </span>
-                        <h2>@L["StepByStepSolutions"]</h2>
-                    </header>
-
-                    <ol class="lesson-step-list">
-                        @foreach (var block in
-                            SplitStructuredText(
-                                Model.Lesson.Body.StepByStepSolutions))
-                        {
-                            <li>
-                                <div>@block</div>
-                            </li>
-                        }
-                    </ol>
-                </section>
-
-                <section class="lesson-learning-section
-                                lesson-learning-section--mistakes">
-                    <header class="lesson-learning-section__header">
-                        <span class="lesson-learning-section__number">
-                            05
-                        </span>
-                        <h2>@L["CommonMistakes"]</h2>
-                    </header>
-
-                    <div class="lesson-mistake-stack">
-                        @foreach (var block in
-                            SplitStructuredText(
-                                Model.Lesson.Body.CommonMistakes))
-                        {
-                            <div class="lesson-mistake-card">
-                                <span class="lesson-mistake-card__mark"
-                                      aria-hidden="true">
-                                    !
-                                </span>
-                                <p>@block</p>
-                            </div>
-                        }
-                    </div>
-                </section>
-
-                <section class="lesson-learning-section
-                                lesson-learning-section--summary">
-                    <header class="lesson-learning-section__header">
-                        <span class="lesson-learning-section__number">
-                            06
-                        </span>
-                        <h2>@L["QuickSummary"]</h2>
-                    </header>
-
-                    <div class="lesson-summary-box">
-                        @foreach (var block in
-                            SplitStructuredText(
-                                Model.Lesson.Body.QuickSummary))
-                        {
-                            <p>@block</p>
-                        }
-                    </div>
-                </section>
-            }
+            @if (isSupporting) { <section class="lesson-supporting-message"><span class="lesson-supporting-message__icon" aria-hidden="true">i</span><div><h2>@L["SupportingLesson"]</h2><p>@L["SupportingLessonHelp"]</p></div></section> }
+            @if (body is null) { <div class="lesson-library-notice"><span class="lesson-library-notice__icon" aria-hidden="true">i</span><span><strong>@statusText</strong><br />@L["ContentPreparationMessage"]</span></div> }
+            else { @foreach (var section in sections) { <partial name="_LessonReaderSection" model="section" /> } }
         </main>
-
-        <aside class="lesson-reader-sidebar">
-            <section class="lesson-reader-sidecard">
-                <h2>@L["OfficialLessonIdentity"]</h2>
-
-                <dl class="lesson-reader-facts">
-                    <div>
-                        <dt>@L["LessonCode"]</dt>
-                        <dd>@Model.Lesson.LessonCode</dd>
-                    </div>
-
-                    <div>
-                        <dt>@L["Unit"]</dt>
-                        <dd>
-                            @(string.IsNullOrWhiteSpace(
-                                Model.Lesson.UnitTitle)
-                                ? "—"
-                                : Model.Lesson.UnitTitle)
-                        </dd>
-                    </div>
-
-                    <div>
-                        <dt>@L["Version"]</dt>
-                        <dd>
-                            @Model.Lesson.FrameworkVersionName
-                        </dd>
-                    </div>
-                </dl>
-            </section>
-
-            <section class="lesson-reader-sidecard">
-                <h2>@L["StandardsReference"]</h2>
-
-                @if (Model.Lesson.Outcomes.Count == 0)
-                {
-                    <div class="lesson-content-empty">
-                        @if (isSupporting)
-                        {
-                            @L["SupportingLessonHelp"]
-                        }
-                        else
-                        {
-                            @L["NoAlignedOutcomes"]
-                        }
-                    </div>
-                }
-                else
-                {
-                    <div class="lesson-reader-outcomes">
-                        @foreach (var outcome in
-                            Model.Lesson.Outcomes)
-                        {
-                            <article class="lesson-reader-outcome">
-                                <strong>@outcome.Code</strong>
-                                <p>@outcome.Description</p>
-                            </article>
-                        }
-                    </div>
-                }
+        <aside class="lesson-reader-sidebar" aria-label="@L["LessonReference"]">
+            <section class="lesson-reader-sidecard"><h2>@L["OfficialLessonIdentity"]</h2><dl class="lesson-reader-facts"><div><dt>@L["LessonCode"]</dt><dd>@Model.Lesson.LessonCode</dd></div><div><dt>@L["Unit"]</dt><dd>@(string.IsNullOrWhiteSpace(Model.Lesson.UnitTitle) ? "—" : Model.Lesson.UnitTitle)</dd></div><div><dt>@L["Version"]</dt><dd>@Model.Lesson.FrameworkVersionName</dd></div></dl></section>
+            <section class="lesson-reader-sidecard"><h2>@L["StandardsReference"]</h2>
+                @if (Model.Lesson.Outcomes.Count == 0) { <div class="lesson-content-empty">@L["SupportingLessonHelp"]</div> }
+                else { <div class="lesson-reader-outcomes">@foreach (var outcome in Model.Lesson.Outcomes) { <article class="lesson-reader-outcome"><strong>@outcome.Code</strong><p>@outcome.Description</p></article> }</div> }
             </section>
         </aside>
     </div>
