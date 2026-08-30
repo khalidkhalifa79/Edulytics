@@ -103,6 +103,23 @@ The Common Core product rollout therefore begins at Grade 1 and contains:
 
 See `PHASE_29_COMMON_CORE_SUPPORTING_LESSON_POLICY.md`.
 
+## Common Core repository content checkpoint
+
+The US Common Core repository candidate is complete only when the automated
+Phase 29 audit proves all of the following simultaneously:
+
+- 1,560 in-scope pedagogical lessons;
+- 1,466 standalone canonical targets represented by Published EN+PL content;
+- 94 source-valid supporting-only lessons excluded from standalone publication;
+- zero Kindergarten product lessons;
+- exact blueprint-to-Standard mappings with no fabricated OutcomeCode;
+- approved OER provenance and traceable review evidence for every content pack;
+- deterministic mathematical verification for generated worked examples;
+- final full regression, PR CI, main CI, automatic staging seed, and staging DB audit.
+
+Repository completion is not by itself Phase 29 closure. England, Poland, and
+UAE full content rollout remain required before Phase 30 may start.
+
 ## Rollout workstreams
 
 ### 29A — Engine and rendering
