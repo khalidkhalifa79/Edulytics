@@ -6,12 +6,12 @@
     ViewData["Title"] = Model.Title;
     var sections = new[]
     {
-        new LessonReaderSection("01", L["Explanation"], "explanation", LessonPresentationParser.Parse(Model.Explanation)),
-        new LessonReaderSection("02", L["KeyConceptsAndRules"], "concepts", LessonPresentationParser.Parse(Model.KeyConceptsAndRules)),
-        new LessonReaderSection("03", L["WorkedExamples"], "examples", LessonPresentationParser.Parse(Model.WorkedExamples)),
-        new LessonReaderSection("04", L["StepByStepSolutions"], "steps", LessonPresentationParser.Parse(Model.StepByStepSolutions, orderedSteps: true)),
-        new LessonReaderSection("05", L["CommonMistakes"], "mistakes", LessonPresentationParser.Parse(Model.CommonMistakes)),
-        new LessonReaderSection("06", L["QuickSummary"], "summary", LessonPresentationParser.Parse(Model.QuickSummary))
+        new LessonReaderSection("01", L["Explanation"], "explanation", LessonPresentationParser.Parse(Model.Explanation, sectionKind: "explanation")),
+        new LessonReaderSection("02", L["KeyConceptsAndRules"], "concepts", LessonPresentationParser.Parse(Model.KeyConceptsAndRules, sectionKind: "concepts")),
+        new LessonReaderSection("03", L["WorkedExamples"], "examples", LessonPresentationParser.Parse(Model.WorkedExamples, sectionKind: "examples")),
+        new LessonReaderSection("04", L["StepByStepSolutions"], "steps", LessonPresentationParser.Parse(Model.StepByStepSolutions, orderedSteps: true, sectionKind: "steps")),
+        new LessonReaderSection("05", L["CommonMistakes"], "mistakes", LessonPresentationParser.Parse(Model.CommonMistakes, sectionKind: "mistakes")),
+        new LessonReaderSection("06", L["QuickSummary"], "summary", LessonPresentationParser.Parse(Model.QuickSummary, sectionKind: "summary"))
     };
 }
 <div class="lesson-reader lesson-reader--student">

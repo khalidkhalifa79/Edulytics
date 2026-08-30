@@ -32,6 +32,31 @@
             }
         </ol>
     }
+    else if (Model.Kind == "summary")
+    {
+        <div class="lesson-reader-blocks
+                    lesson-reader-blocks--summary">
+
+            <ul class="lesson-summary-list">
+                @foreach (var item in Model.Items)
+                {
+                    @if (item.IsVisual)
+                    {
+                        <li class="lesson-summary-list__visual">
+                            <partial name="_LessonInstructionalVisual"
+                                     model="item" />
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+                            @item.Text
+                        </li>
+                    }
+                }
+            </ul>
+        </div>
+    }
     else
     {
         <div class="lesson-reader-blocks
@@ -43,6 +68,18 @@
                 {
                     <partial name="_LessonInstructionalVisual"
                              model="item" />
+                }
+                else if (
+                    Model.Kind == "examples" &&
+                    item.Text is not null &&
+                    System.Text.RegularExpressions.Regex.IsMatch(
+                        item.Text,
+                        @"^Example\s+\d+\s*:?\s*$",
+                        System.Text.RegularExpressions.RegexOptions.IgnoreCase))
+                {
+                    <h3 class="lesson-example-heading">
+                        @item.Text.TrimEnd(':')
+                    </h3>
                 }
                 else
                 {

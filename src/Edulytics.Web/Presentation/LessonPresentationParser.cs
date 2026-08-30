@@ -25,7 +25,50 @@ public sealed record LessonVisualSpec(
     IReadOnlyList<string> SecondaryValues,
     IReadOnlyList<string> Labels,
     IReadOnlyList<string> Measures,
-    string Variant);
+    string Variant)
+{
+    public string Caption =>
+        Type switch
+        {
+            LessonVisualType.MeasuredPath
+                when Labels.Count >= 3 =>
+                $"{Labels[0]} → {Labels[1]} → {Labels[2]}",
+
+            LessonVisualType.DoubleNumberLine
+                when !string.IsNullOrWhiteSpace(PrimaryLabel)
+                     && !string.IsNullOrWhiteSpace(SecondaryLabel) =>
+                $"{PrimaryLabel} and {SecondaryLabel}",
+
+            LessonVisualType.NumberLine =>
+                "Number line representation",
+
+            LessonVisualType.CoordinatePlane =>
+                "Coordinate-plane representation",
+
+            LessonVisualType.AreaDecomposition
+                when Variant == "area-four-panels" =>
+                "Which diagrams use equal-sized square units correctly?",
+
+            LessonVisualType.AreaDecomposition
+                when Variant == "area-tangram" =>
+                "Decompose and rearrange the pieces without changing total area.",
+
+            LessonVisualType.AreaDecomposition =>
+                "Same total area — a different decomposition.",
+
+            LessonVisualType.ArrayOrGrid =>
+                "Array and square-unit representation",
+
+            LessonVisualType.FractionOrRatioBar =>
+                "Segmented bar representation",
+
+            LessonVisualType.GeometricFigure =>
+                "Geometric representation",
+
+            _ =>
+                "Instructional diagram"
+        };
+}
 
 public sealed record LessonPresentationItem(
     string? Text,
@@ -73,6 +116,73 @@ public static class LessonPresentationParser
             RegexOptions.IgnoreCase |
             RegexOptions.CultureInvariant);
 
+    private static readonly Regex PresentationNoiseLineRegex =
+        new(
+            @"^\s*(?:" +
+            @"Supports accessibility for\s*:.*|" +
+            @"Design Principle\(s\)\s*:.*|" +
+            @"Source reasoning\s*/\s*synthesis\s*:?\s*|" +
+            @"Source reasoning\s*:\s*|" +
+            @"Reasoning\s*:\s*|" +
+            @"Digital\s*|" +
+            @"Activity\s*|" +
+            @"Student Facing\s*" +
+            @")$",
+            RegexOptions.IgnoreCase |
+            RegexOptions.CultureInvariant);
+
+    private static readonly Regex TeacherDirectionLineRegex =
+        new(
+            @"^\s*(?:" +
+            @"Before class\b|" +
+            @"Give each\b|" +
+            @"Give students\b|" +
+            @"Invite\b|" +
+            @"Select\b|" +
+            @"As students\b|" +
+            @"Monitor\b|" +
+            @"Tell students\b|" +
+            @"Ask students\b|" +
+            @"Prompt students\b|" +
+            @"Have students\b|" +
+            @"Consider\b|" +
+            @"Display\b|" +
+            @"Record and display\b|" +
+            @"Create a display\b|" +
+            @"Close this conversation\b|" +
+            @"Circulate\b|" +
+            @"Arrange students\b|" +
+            @"If pairs\b|" +
+            @"Classrooms using\b|" +
+            @"Use a physical\b|" +
+            @"If using the applet\b" +
+            @")",
+            RegexOptions.IgnoreCase |
+            RegexOptions.CultureInvariant);
+
+    private static readonly Regex TeacherMaterialLineRegex =
+        new(
+            @"^\s*(?:" +
+            @"Square\s*:\s*\d+\s*|" +
+            @"Small triangles?\s*:\s*\d+\s*|" +
+            @"Medium triangles?\s*:\s*\d+\s*|" +
+            @"Large triangles?\s*:\s*\d+\s*" +
+            @")$",
+            RegexOptions.IgnoreCase |
+            RegexOptions.CultureInvariant);
+
+    private static readonly Regex ExampleScaffoldRegex =
+        new(
+            @"^(?<prefix>\s*Example\s+\d+\s*:)\s*" +
+            @"(?:Student Facing|Activity)\s*$",
+            RegexOptions.IgnoreCase |
+            RegexOptions.CultureInvariant);
+
+    private static readonly Regex SentenceBoundaryRegex =
+        new(
+            @"(?<=[.!?])\s+(?=[A-Z0-9“""])",
+            RegexOptions.CultureInvariant);
+
     private static readonly Regex DescriptionRegex =
         new(
             @"\bDescription\s*:\s*" +
@@ -105,7 +215,8 @@ public static class LessonPresentationParser
 
     public static IReadOnlyList<LessonPresentationItem> Parse(
         string? value,
-        bool orderedSteps = false)
+        bool orderedSteps = false,
+        string sectionKind = "")
     {
         if (string.IsNullOrWhiteSpace(value))
         {
@@ -115,11 +226,18 @@ public static class LessonPresentationParser
         var safe =
             ToPlainStructure(value);
 
+        safe =
+            PrepareLearnerFacingText(
+                safe,
+                sectionKind);
+
         var result =
             new List<LessonPresentationItem>();
 
         foreach (var rawBlock in
-            BlockBoundaryRegex.Split(safe))
+            SplitDisplayBlocks(
+                safe,
+                sectionKind))
         {
             var block =
                 NormalizeText(rawBlock);
@@ -141,6 +259,140 @@ public static class LessonPresentationParser
         }
 
         return result;
+    }
+
+    private static string PrepareLearnerFacingText(
+        string value,
+        string sectionKind)
+    {
+        value =
+            Regex.Replace(
+                value,
+                @"\bDescription\s*:\s*\n+\s*",
+                "Description: ",
+                RegexOptions.IgnoreCase |
+                RegexOptions.CultureInvariant);
+
+        var learnerSections =
+            sectionKind is
+                "explanation" or
+                "concepts" or
+                "examples" or
+                "steps" or
+                "summary";
+
+        var lines =
+            value.Split('\n');
+
+        var result =
+            new List<string>();
+
+        foreach (var sourceLine in lines)
+        {
+            var line =
+                sourceLine.Trim();
+
+            if (line.Length == 0)
+            {
+                result.Add(string.Empty);
+                continue;
+            }
+
+            if (PresentationNoiseLineRegex.IsMatch(line))
+            {
+                continue;
+            }
+
+            var example =
+                ExampleScaffoldRegex.Match(line);
+
+            if (example.Success)
+            {
+                result.Add(
+                    example.Groups["prefix"]
+                        .Value
+                        .Trim());
+
+                continue;
+            }
+
+            if (
+                learnerSections &&
+                TeacherDirectionLineRegex.IsMatch(line))
+            {
+                continue;
+            }
+
+            if (
+                sectionKind == "explanation" &&
+                TeacherMaterialLineRegex.IsMatch(line))
+            {
+                continue;
+            }
+
+            if (
+                sectionKind == "summary" &&
+                line.EndsWith(
+                    "?",
+                    StringComparison.Ordinal))
+            {
+                continue;
+            }
+
+            result.Add(line);
+        }
+
+        return string.Join(
+            '\n',
+            result);
+    }
+
+    private static IEnumerable<string> SplitDisplayBlocks(
+        string value,
+        string sectionKind)
+    {
+        if (string.IsNullOrWhiteSpace(value))
+        {
+            return [];
+        }
+
+        if (sectionKind == "summary")
+        {
+            var compact =
+                NormalizeText(
+                    value.Replace(
+                        '\n',
+                        ' '));
+
+            return SentenceBoundaryRegex
+                .Split(compact)
+                .Select(x => x.Trim())
+                .Where(x => x.Length >= 12)
+                .Distinct(
+                    StringComparer.OrdinalIgnoreCase)
+                .Take(5)
+                .ToArray();
+        }
+
+        if (
+            sectionKind is
+                "explanation" or
+                "concepts" or
+                "examples" or
+                "mistakes")
+        {
+            return value
+                .Split(
+                    '\n',
+                    StringSplitOptions.RemoveEmptyEntries |
+                    StringSplitOptions.TrimEntries)
+                .Where(
+                    x =>
+                        !string.IsNullOrWhiteSpace(x))
+                .ToArray();
+        }
+
+        return BlockBoundaryRegex.Split(value);
     }
 
     public static string ToPlainText(
