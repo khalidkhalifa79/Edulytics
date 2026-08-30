@@ -1,48 +1,248 @@
 @model Edulytics.Web.ViewModels.LessonContent.LessonContentIndexViewModel
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Edulytics.Web.LessonContentResource> L
 @using Edulytics.Core.Enums
-@{ Layout="_AppLayout"; ViewData["Title"]=L["PageTitle"].Value; }
-
-<header class="ed-v3-page-header lesson-content-header"><div>
-<p class="ed-v3-eyebrow">@L["CanonicalLibrary"]</p><h1>@L["PageTitle"]</h1><p>@L["PageSubtitle"]</p>
-</div></header>
-<div class="lesson-content-notice">@L["CanonicalNotice"]</div>
-
-@if(Model.Dashboard.Curricula.Count==0){<div class="lesson-content-empty">@L["NoAdoptedCurricula"]</div>}
-else{
-<div class="lesson-content-topic-stack">
-@foreach(var group in Model.Dashboard.Curricula){
-<section class="lesson-content-topic-card">
-<header class="lesson-content-topic-card__header"><div>
-<span class="student-subject-code">@group.SubjectCode</span><h2>@group.FrameworkName</h2>
-<div class="lesson-content-meta">
-<span>@L["Grade"]: <strong>@group.GradeName</strong></span>
-<span>@L["Version"]: <strong>@group.FrameworkVersionName</strong></span>
-<span>@L["Coverage"]: <strong>@group.ProductionReadyLessons / @group.TotalLessons</strong></span>
-</div></div>
-<span class="lesson-content-coverage-badge">@group.ProductionReadyLessons / @group.TotalLessons @L["ProductionReady"]</span>
-</header>
-@if(group.Lessons.Count==0){<p class="lesson-content-empty">@L["NoCanonicalLessons"]</p>}
-else{
-<div class="lesson-content-list">
-@foreach(var lesson in group.Lessons){
-var statusText=lesson.Status switch{
-CanonicalLessonContentStatus.Draft=>L["InPreparation"].Value,
-CanonicalLessonContentStatus.Verified=>L["Verified"].Value,
-CanonicalLessonContentStatus.Published=>L["ProductionReady"].Value,
-_=>L["NotStarted"].Value};
-var statusClass=lesson.Status switch{
-CanonicalLessonContentStatus.Draft=>"draft",
-CanonicalLessonContentStatus.Verified=>"verified",
-CanonicalLessonContentStatus.Published=>"published",
-_=>"notstarted"};
-<a class="lesson-content-row" asp-controller="LessonContent" asp-action="Detail" asp-route-id="@lesson.LessonId">
-<span class="lesson-content-row__order">@lesson.SortOrder</span>
-<span class="lesson-content-row__title">@lesson.LessonTitle
-@if(!string.IsNullOrWhiteSpace(lesson.UnitTitle)){<small>@lesson.UnitTitle</small>}
-</span>
-<span class="lesson-content-status lesson-content-status--@statusClass">@statusText</span></a>
+@{
+    Layout = "_AppLayout";
+    ViewData["Title"] = L["PageTitle"].Value;
 }
-</div>}
-</section>}
-</div>}
+
+<div class="lesson-library">
+    <header class="lesson-library-hero">
+        <div class="lesson-library-hero__copy">
+            <p class="lesson-library-eyebrow">@L["CanonicalLibrary"]</p>
+            <h1>@L["PageTitle"]</h1>
+            <p class="lesson-library-hero__subtitle">@L["PageSubtitle"]</p>
+        </div>
+
+        <div class="lesson-library-hero__mark" aria-hidden="true">
+            <span>∑</span>
+        </div>
+    </header>
+
+    <div class="lesson-library-notice">
+        <span class="lesson-library-notice__icon" aria-hidden="true">i</span>
+        <span>@L["CanonicalNotice"]</span>
+    </div>
+
+    @if (Model.Dashboard.Curricula.Count == 0)
+    {
+        <div class="lesson-content-empty">
+            @L["NoAdoptedCurricula"]
+        </div>
+    }
+    else
+    {
+        <div class="lesson-content-topic-stack">
+            @foreach (var group in Model.Dashboard.Curricula)
+            {
+                var standaloneCount =
+                    group.Lessons.Count(x => x.HasOfficialAlignment);
+
+                var supportingCount =
+                    group.Lessons.Count - standaloneCount;
+
+                var incompleteStandalone =
+                    Math.Max(
+                        0,
+                        standaloneCount -
+                        group.ProductionReadyLessons);
+
+                <section class="lesson-content-topic-card">
+                    <header class="lesson-content-topic-card__header">
+                        <div class="lesson-content-topic-card__identity">
+                            <span class="student-subject-code">
+                                @group.SubjectCode
+                            </span>
+
+                            <div>
+                                <h2>@group.FrameworkName</h2>
+
+                                <div class="lesson-content-meta">
+                                    <span>
+                                        @L["Grade"]:
+                                        <strong>@group.GradeName</strong>
+                                    </span>
+
+                                    <span>
+                                        @L["Version"]:
+                                        <strong>
+                                            @group.FrameworkVersionName
+                                        </strong>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="lesson-content-coverage-badge">
+                            <strong>
+                                @group.ProductionReadyLessons /
+                                @standaloneCount
+                            </strong>
+                            @L["ProductionReady"]
+                        </span>
+                    </header>
+
+                    <div class="lesson-content-metrics">
+                        <div class="lesson-content-metric">
+                            <span class="lesson-content-metric__value">
+                                @standaloneCount
+                            </span>
+                            <span class="lesson-content-metric__label">
+                                @L["StandaloneLessons"]
+                            </span>
+                        </div>
+
+                        <div class="lesson-content-metric">
+                            <span class="lesson-content-metric__value">
+                                @group.ProductionReadyLessons
+                            </span>
+                            <span class="lesson-content-metric__label">
+                                @L["ProductionReady"]
+                            </span>
+                        </div>
+
+                        <div class="lesson-content-metric
+                                    lesson-content-metric--supporting">
+                            <span class="lesson-content-metric__value">
+                                @supportingCount
+                            </span>
+                            <span class="lesson-content-metric__label">
+                                @L["SupportingLessons"]
+                            </span>
+                        </div>
+
+                        <div class="lesson-content-metric
+                                    lesson-content-metric--incomplete">
+                            <span class="lesson-content-metric__value">
+                                @incompleteStandalone
+                            </span>
+                            <span class="lesson-content-metric__label">
+                                @L["IncompleteStandalone"]
+                            </span>
+                        </div>
+                    </div>
+
+                    @if (group.Lessons.Count == 0)
+                    {
+                        <p class="lesson-content-empty">
+                            @L["NoCanonicalLessons"]
+                        </p>
+                    }
+                    else
+                    {
+                        <div class="lesson-content-list"
+                             role="list">
+                            @foreach (var lesson in group.Lessons)
+                            {
+                                var isSupporting =
+                                    !lesson.HasOfficialAlignment;
+
+                                var statusText =
+                                    isSupporting
+                                        ? L["SupportingLesson"].Value
+                                        : lesson.Status switch
+                                        {
+                                            CanonicalLessonContentStatus.Draft
+                                                => L["InPreparation"].Value,
+
+                                            CanonicalLessonContentStatus.Verified
+                                                => L["Verified"].Value,
+
+                                            CanonicalLessonContentStatus.Published
+                                                => L["ProductionReady"].Value,
+
+                                            _ => L["NotStarted"].Value
+                                        };
+
+                                var statusClass =
+                                    isSupporting
+                                        ? "supporting"
+                                        : lesson.Status switch
+                                        {
+                                            CanonicalLessonContentStatus.Draft
+                                                => "draft",
+
+                                            CanonicalLessonContentStatus.Verified
+                                                => "verified",
+
+                                            CanonicalLessonContentStatus.Published
+                                                => "published",
+
+                                            _ => "notstarted"
+                                        };
+
+                                @if (isSupporting)
+                                {
+                                    <div class="lesson-content-row
+                                                lesson-content-row--supporting"
+                                         role="listitem">
+                                        <span class="lesson-content-row__order">
+                                            @lesson.SortOrder
+                                        </span>
+
+                                        <span class="lesson-content-row__title">
+                                            @lesson.LessonTitle
+
+                                            @if (!string.IsNullOrWhiteSpace(
+                                                    lesson.UnitTitle))
+                                            {
+                                                <small>
+                                                    @lesson.UnitTitle
+                                                </small>
+                                            }
+                                        </span>
+
+                                        <span class="lesson-content-status
+                                                    lesson-content-status--@statusClass">
+                                            @statusText
+                                        </span>
+
+                                        <span class="lesson-content-row__support"
+                                              title="@L["SupportingLessonHelp"]"
+                                              aria-label="@L["SupportingLessonHelp"]">
+                                            i
+                                        </span>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <a class="lesson-content-row"
+                                       role="listitem"
+                                       asp-controller="LessonContent"
+                                       asp-action="Detail"
+                                       asp-route-id="@lesson.LessonId">
+                                        <span class="lesson-content-row__order">
+                                            @lesson.SortOrder
+                                        </span>
+
+                                        <span class="lesson-content-row__title">
+                                            @lesson.LessonTitle
+
+                                            @if (!string.IsNullOrWhiteSpace(
+                                                    lesson.UnitTitle))
+                                            {
+                                                <small>
+                                                    @lesson.UnitTitle
+                                                </small>
+                                            }
+                                        </span>
+
+                                        <span class="lesson-content-status
+                                                    lesson-content-status--@statusClass">
+                                            @statusText
+                                        </span>
+
+                                        <span class="lesson-content-row__chevron"
+                                              aria-hidden="true">
+                                            →
+                                        </span>
+                                    </a>
+                                }
+                            }
+                        </div>
+                    }
+                </section>
+            }
+        </div>
+    }
+</div>
