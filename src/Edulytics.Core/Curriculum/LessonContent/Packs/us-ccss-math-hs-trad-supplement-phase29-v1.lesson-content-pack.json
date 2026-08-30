@@ -1,0 +1,361 @@
+{
+  "packCode": "US-CCSS-MATH",
+  "versionCode": "CCSSM-2010",
+  "contentVersion": "ccss-hs-trad-supplement-p29-v1",
+  "sourcePolicyVersion": 2,
+  "targetCurriculumPeriod": "2026-2027",
+  "sourceCurriculumPeriod": "Common Core State Standards 2010",
+  "sourceVersionLabel": "Common Core State Standards for Mathematics (2010)",
+  "sourceAuthority": "NGA Center / CCSSO",
+  "sourceUrl": "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf",
+  "sourceCheckedAtUtc": "2026-08-29T00:00:00Z",
+  "sourceResolution": "CurrentOfficial",
+  "fallbackReason": "",
+  "pedagogicalSourceType": "OpenEducationalResource",
+  "pedagogicalSourceTitle": "Illustrative Mathematics + LibreTexts / OpenStax + Mathematics Vision Project",
+  "pedagogicalSourcePublisher": "Illustrative Mathematics + LibreTexts / OpenStax + Mathematics Vision Project",
+  "pedagogicalSourceEdition": "Phase 29 locked source",
+  "pedagogicalSourceUrl": "https://im.kendallhunt.com/HS/teachers/3/7/3/index.html",
+  "pedagogicalSourceCheckedAtUtc": "2026-08-29T00:00:00Z",
+  "pedagogicalSourceSelectionReason": "Phase 29 accepted High School pedagogical source strategy.",
+  "pedagogicalSourceSelectionEvidence": "Immutable Phase 29 High School source, placement, evidence, sequence and Blueprint V2 contract locks.",
+  "pedagogicalSourceRightsNote": "Use restricted to accepted Phase 29 commercial-safe license lock.",
+  "reviewMethod": "Exact blueprint-to-Standard alignment validation, approved-license provenance lock, deterministic domain-specific lesson authoring, machine-recomputed worked-example verification, bilingual structural QA, and fail-closed unsupported-family detection.",
+  "status": "Published",
+  "reviewedBy": "Edulytics Curriculum Review — deterministic Phase 29 QA",
+  "reviewEvidence": "Blueprint US-CCSS-MATH:HS:TRAD:SUPPLEMENT (f61f0c0f51d214a1592080eb3383157c23557fd5fec4261374ec098c466cc38e) contains 11 source-driven pedagogical lessons. Exactly 11 have accepted formal Common Core targets and are included in this canonical pack; 0 source-valid supporting-only lessons are deliberately excluded. Each included lesson was bound to its exact blueprint OutcomeCodes/FormalTargets and official CCSS node text. The deterministic Phase 29 authoring pipeline has no generic fallback: unsupported standard families stop generation. Worked examples and step-by-step answers are produced from computed operands and recomputed results, bilingual body fields are structurally audited, and source provenance remains attached to every lesson title.",
+  "lessons": [
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:TRAD:SUPPLEMENT:ALG-FUNC:L01",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "MVP-ALG2:M03:T02 — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+      "outcomeCodes": [
+        "CCSS:HSA-APR.C.5"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "Pascal's Pride",
+          "explanation": "Pascal's Pride is an Edulytics lesson in the unit “Algebra & Functions Extensions”. It is aligned exactly to CCSS:HSA-APR.C.5. The accepted Common Core target text for this lesson states: (+) Know and apply the Binomial Theorem for the expansion of (x + y)n in powers of x and y for a positive integer n, where x and y are any numbers, with coefficients determined for example by Pascal’s Triangle.1 1The Binomial Theorem can be proved by mathematical induction or by a combinatorial argument. Instructional focus: Students perform and interpret operations on polynomials or rational expressions, connecting factors, zeros, identities, and algebraic structure. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: Pascal's Pride. Polynomial operations follow distributive and exponent rules. If p(a)=0, then x-a is a factor under the factor theorem. Rational expressions retain restrictions from their original denominators.",
+          "workedExamples": "Example 1: Expand (x+6)(x+6) to get x²+12x+36; therefore x²+12x+36 factors back to (x+6)(x+6). Example 2: Expand (x+2)(x+2) to get x²+4x+4; therefore x²+4x+4 factors back to (x+2)(x+2).",
+          "stepByStepSolutions": "Step 1: multiply x·x=x². Step 2: outer and inner terms give 6x+6x=12x. Step 3: constants give 6×6=36. Step 4: combine as x²+12x+36 and verify the factorization by re-expanding. Step 1: multiply x·x=x². Step 2: outer and inner terms give 2x+2x=4x. Step 3: constants give 2×2=4. Step 4: combine as x²+4x+4 and verify the factorization by re-expanding.",
+          "commonMistakes": "Lesson-specific focus: Pascal's Pride. Do not discard excluded denominator values after simplifying. Do not assume every apparent cancellation is valid across sums. Verify factors by multiplication or evaluation.",
+          "quickSummary": "Lesson-specific focus: Pascal's Pride. Use algebraic structure to operate or factor, track restrictions, and verify the equivalent form or polynomial relationship."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Wielomiany i wyrażenia wymierne — Pascal's Pride",
+          "explanation": "Lekcja „Wielomiany i wyrażenia wymierne — Pascal's Pride” należy do działu „Algebra & Functions Extensions” i jest dokładnie powiązana ze standardami CCSS:HSA-APR.C.5. Główny kierunek pracy: Uczeń wykonuje i interpretuje działania na wielomianach i wyrażeniach wymiernych, łącząc czynniki, miejsca zerowe, tożsamości i strukturę algebraiczną. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Wielomiany i wyrażenia wymierne — Pascal's Pride. Działania na wielomianach wynikają z rozdzielności i praw potęg. Jeśli p(a)=0, to zgodnie z twierdzeniem o czynniku x-a jest czynnikiem. Wyrażenia wymierne zachowują ograniczenia wynikające z pierwotnych mianowników.",
+          "workedExamples": "Przykład 1: Rozwiń (x+6)(x+6) i otrzymaj x²+12x+36; zatem x²+12x+36 = (x+6)(x+6). Przykład 2: Rozwiń (x+2)(x+2) i otrzymaj x²+4x+4; zatem x²+4x+4 = (x+2)(x+2).",
+          "stepByStepSolutions": "Krok 1: x·x=x². Krok 2: wyrazy mieszane: 6x+6x=12x. Krok 3: 6×6=36. Krok 4: połącz w x²+12x+36 i sprawdź przez ponowne wymnożenie. Krok 1: x·x=x². Krok 2: wyrazy mieszane: 2x+2x=4x. Krok 3: 2×2=4. Krok 4: połącz w x²+4x+4 i sprawdź przez ponowne wymnożenie.",
+          "commonMistakes": "Cel tej lekcji: Wielomiany i wyrażenia wymierne — Pascal's Pride. Po uproszczeniu nie usuwaj ograniczeń dziedziny wynikających z mianowników. Nie skracaj składników przez sumę. Sprawdzaj czynniki przez mnożenie lub obliczenie wartości.",
+          "quickSummary": "Cel tej lekcji: Wielomiany i wyrażenia wymierne — Pascal's Pride. Wykorzystaj strukturę algebraiczną do działań lub rozkładu, zachowaj ograniczenia dziedziny i sprawdź równoważność lub zależność wielomianową."
+        }
+      ]
+    },
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:TRAD:SUPPLEMENT:ALG-FUNC:L02",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "MVP-ALG2:M05:T05 — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+      "outcomeCodes": [
+        "CCSS:HSA-APR.D.7"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "Just Act Rational",
+          "explanation": "Just Act Rational is an Edulytics lesson in the unit “Algebra & Functions Extensions”. It is aligned exactly to CCSS:HSA-APR.D.7. The accepted Common Core target text for this lesson states: (+) Understand that rational expressions form a system analogous to the rational numbers, closed under addition, subtraction, multiplication, and division by a nonzero rational expression; add, subtract, multiply, and divide rational expressions. Instructional focus: Students perform and interpret operations on polynomials or rational expressions, connecting factors, zeros, identities, and algebraic structure. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: Just Act Rational. Polynomial operations follow distributive and exponent rules. If p(a)=0, then x-a is a factor under the factor theorem. Rational expressions retain restrictions from their original denominators.",
+          "workedExamples": "Example 1: Expand (x+4)(x+6) to get x²+10x+24; therefore x²+10x+24 factors back to (x+4)(x+6). Example 2: Expand (x+7)(x+1) to get x²+8x+7; therefore x²+8x+7 factors back to (x+7)(x+1).",
+          "stepByStepSolutions": "Step 1: multiply x·x=x². Step 2: outer and inner terms give 6x+4x=10x. Step 3: constants give 4×6=24. Step 4: combine as x²+10x+24 and verify the factorization by re-expanding. Step 1: multiply x·x=x². Step 2: outer and inner terms give 1x+7x=8x. Step 3: constants give 7×1=7. Step 4: combine as x²+8x+7 and verify the factorization by re-expanding.",
+          "commonMistakes": "Lesson-specific focus: Just Act Rational. Do not discard excluded denominator values after simplifying. Do not assume every apparent cancellation is valid across sums. Verify factors by multiplication or evaluation.",
+          "quickSummary": "Lesson-specific focus: Just Act Rational. Use algebraic structure to operate or factor, track restrictions, and verify the equivalent form or polynomial relationship."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Wielomiany i wyrażenia wymierne — Just Act Rational",
+          "explanation": "Lekcja „Wielomiany i wyrażenia wymierne — Just Act Rational” należy do działu „Algebra & Functions Extensions” i jest dokładnie powiązana ze standardami CCSS:HSA-APR.D.7. Główny kierunek pracy: Uczeń wykonuje i interpretuje działania na wielomianach i wyrażeniach wymiernych, łącząc czynniki, miejsca zerowe, tożsamości i strukturę algebraiczną. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Wielomiany i wyrażenia wymierne — Just Act Rational. Działania na wielomianach wynikają z rozdzielności i praw potęg. Jeśli p(a)=0, to zgodnie z twierdzeniem o czynniku x-a jest czynnikiem. Wyrażenia wymierne zachowują ograniczenia wynikające z pierwotnych mianowników.",
+          "workedExamples": "Przykład 1: Rozwiń (x+4)(x+6) i otrzymaj x²+10x+24; zatem x²+10x+24 = (x+4)(x+6). Przykład 2: Rozwiń (x+7)(x+1) i otrzymaj x²+8x+7; zatem x²+8x+7 = (x+7)(x+1).",
+          "stepByStepSolutions": "Krok 1: x·x=x². Krok 2: wyrazy mieszane: 6x+4x=10x. Krok 3: 4×6=24. Krok 4: połącz w x²+10x+24 i sprawdź przez ponowne wymnożenie. Krok 1: x·x=x². Krok 2: wyrazy mieszane: 1x+7x=8x. Krok 3: 7×1=7. Krok 4: połącz w x²+8x+7 i sprawdź przez ponowne wymnożenie.",
+          "commonMistakes": "Cel tej lekcji: Wielomiany i wyrażenia wymierne — Just Act Rational. Po uproszczeniu nie usuwaj ograniczeń dziedziny wynikających z mianowników. Nie skracaj składników przez sumę. Sprawdzaj czynniki przez mnożenie lub obliczenie wartości.",
+          "quickSummary": "Cel tej lekcji: Wielomiany i wyrażenia wymierne — Just Act Rational. Wykorzystaj strukturę algebraiczną do działań lub rozkładu, zachowaj ograniczenia dziedziny i sprawdź równoważność lub zależność wielomianową."
+        }
+      ]
+    },
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:TRAD:SUPPLEMENT:ALG-FUNC:L03",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "MVP-MATH3:M07:T07H — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_3.pdf",
+      "outcomeCodes": [
+        "CCSS:HSF-TF.C.9"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "Double Identity",
+          "explanation": "Double Identity is an Edulytics lesson in the unit “Algebra & Functions Extensions”. It is aligned exactly to CCSS:HSF-TF.C.9. The accepted Common Core target text for this lesson states: (+) Prove the addition and subtraction formulas for sine, cosine, and tangent and use them t o solve problems. Instructional focus: Students connect angle measure, the unit circle, right-triangle ratios, periodic behavior, and trigonometric identities. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: Double Identity. On the unit circle, cosine and sine give x- and y-coordinates. Radians connect angle measure with arc length. Trigonometric identities must be transformed through valid algebraic steps and domain conditions.",
+          "workedExamples": "Example 1: In a right triangle with legs 5 and 4, the hypotenuse is √(5²+4²)≈6.403. For the angle opposite the side 5, sin θ≈0.781 and cos θ≈0.625. Example 2: In a right triangle with legs 5 and 8, the hypotenuse is √(5²+8²)≈9.434. For the angle opposite the side 5, sin θ≈0.530 and cos θ≈0.848.",
+          "stepByStepSolutions": "Step 1: use the Pythagorean theorem: c=√(25+16)≈6.403. Step 2: relative to the chosen angle, opposite=5, adjacent=4. Step 3: sin θ=5/6.403≈0.781; cos θ=4/6.403≈0.625. Step 4: verify both ratios are between 0 and 1. Step 1: use the Pythagorean theorem: c=√(25+64)≈9.434. Step 2: relative to the chosen angle, opposite=5, adjacent=8. Step 3: sin θ=5/9.434≈0.530; cos θ=8/9.434≈0.848. Step 4: verify both ratios are between 0 and 1.",
+          "commonMistakes": "Lesson-specific focus: Double Identity. Do not mix degrees and radians without conversion. Do not cancel trigonometric sums term by term. Check quadrant signs and domain restrictions.",
+          "quickSummary": "Lesson-specific focus: Double Identity. Identify the angle representation, use the appropriate triangle or unit-circle relationship, calculate, and check sign, period, and units."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Funkcje trygonometryczne — Double Identity",
+          "explanation": "Lekcja „Funkcje trygonometryczne — Double Identity” należy do działu „Algebra & Functions Extensions” i jest dokładnie powiązana ze standardami CCSS:HSF-TF.C.9. Główny kierunek pracy: Uczeń łączy miarę kąta, okrąg jednostkowy, stosunki w trójkącie prostokątnym, okresowość i tożsamości trygonometryczne. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Funkcje trygonometryczne — Double Identity. Na okręgu jednostkowym cosinus i sinus są odpowiednio współrzędnymi x i y. Radiany łączą miarę kąta z długością łuku. Tożsamości trygonometryczne przekształcaj poprawnymi krokami algebraicznymi i z uwzględnieniem dziedziny.",
+          "workedExamples": "Przykład 1: W trójkącie prostokątnym o przyprostokątnych 5 i 4 przeciwprostokątna ma długość √(5²+4²)≈6.403. Dla kąta naprzeciw boku 5: sin θ≈0.781, cos θ≈0.625. Przykład 2: W trójkącie prostokątnym o przyprostokątnych 5 i 8 przeciwprostokątna ma długość √(5²+8²)≈9.434. Dla kąta naprzeciw boku 5: sin θ≈0.530, cos θ≈0.848.",
+          "stepByStepSolutions": "Krok 1: z twierdzenia Pitagorasa c=√(25+16)≈6.403. Krok 2: względem kąta bok naprzeciw ma 5, a przyległy 4. Krok 3: oblicz sin θ≈0.781 i cos θ≈0.625. Krok 4: oba wyniki powinny leżeć między 0 i 1. Krok 1: z twierdzenia Pitagorasa c=√(25+64)≈9.434. Krok 2: względem kąta bok naprzeciw ma 5, a przyległy 8. Krok 3: oblicz sin θ≈0.530 i cos θ≈0.848. Krok 4: oba wyniki powinny leżeć między 0 i 1.",
+          "commonMistakes": "Cel tej lekcji: Funkcje trygonometryczne — Double Identity. Nie mieszaj stopni i radianów bez przeliczenia. Nie skracaj składników sum trygonometrycznych. Sprawdzaj znaki w ćwiartkach i ograniczenia dziedziny.",
+          "quickSummary": "Cel tej lekcji: Funkcje trygonometryczne — Double Identity. Rozpoznaj sposób podania kąta, użyj odpowiedniej relacji w trójkącie lub na okręgu jednostkowym, oblicz i sprawdź znak, okres oraz jednostki."
+        }
+      ]
+    },
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:TRAD:SUPPLEMENT:GEO-TRIG:L01",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "MVP-GEO:M05:T03 — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf",
+      "outcomeCodes": [
+        "CCSS:HSG-C.A.4"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "Cyclic Polygons",
+          "explanation": "Cyclic Polygons is an Edulytics lesson in the unit “Geometry & Trigonometry Extensions”. It is aligned exactly to CCSS:HSG-C.A.4. The accepted Common Core target text for this lesson states: (+) Construct a tangent line from a point outside a given circle to the circle. Instructional focus: Students connect central angles, arcs, chords, tangents, inscribed angles, and circle equations through geometric relationships. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: Cyclic Polygons. A central angle has the same degree measure as its intercepted arc. An inscribed angle measures half its intercepted arc. A radius to a point of tangency is perpendicular to the tangent.",
+          "workedExamples": "Example 1: A central angle of 50° intercepts an arc of 50°. An inscribed angle intercepting that same arc measures 25°. Example 2: A central angle of 120° intercepts an arc of 120°. An inscribed angle intercepting that same arc measures 60°.",
+          "stepByStepSolutions": "Step 1: central-angle measure equals intercepted arc measure, so the arc is 50°. Step 2: an inscribed angle is half its intercepted arc. Step 3: 50/2=25°. Step 4: verify the inscribed angle is smaller than the corresponding central angle. Step 1: central-angle measure equals intercepted arc measure, so the arc is 120°. Step 2: an inscribed angle is half its intercepted arc. Step 3: 120/2=60°. Step 4: verify the inscribed angle is smaller than the corresponding central angle.",
+          "commonMistakes": "Lesson-specific focus: Cyclic Polygons. Do not confuse arc length with arc measure. Do not apply an inscribed-angle relationship to a central angle. Check whether the given line is actually tangent before using perpendicularity.",
+          "quickSummary": "Lesson-specific focus: Cyclic Polygons. Identify the circle elements and intercepted arc, apply the correct angle, length, tangent, or equation relationship, and verify the geometry."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Okręgi — Cyclic Polygons",
+          "explanation": "Lekcja „Okręgi — Cyclic Polygons” należy do działu „Geometry & Trigonometry Extensions” i jest dokładnie powiązana ze standardami CCSS:HSG-C.A.4. Główny kierunek pracy: Uczeń łączy kąty środkowe, łuki, cięciwy, styczne, kąty wpisane i równania okręgu za pomocą zależności geometrycznych. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Okręgi — Cyclic Polygons. Kąt środkowy ma taką samą miarę stopniową jak odpowiadający mu łuk. Kąt wpisany ma miarę równą połowie odpowiedniego łuku. Promień poprowadzony do punktu styczności jest prostopadły do stycznej.",
+          "workedExamples": "Przykład 1: Kąt środkowy 50° wyznacza łuk o mierze 50°. Kąt wpisany oparty na tym samym łuku ma miarę 25°. Przykład 2: Kąt środkowy 120° wyznacza łuk o mierze 120°. Kąt wpisany oparty na tym samym łuku ma miarę 60°.",
+          "stepByStepSolutions": "Krok 1: miara łuku równa się mierze kąta środkowego: 50°. Krok 2: kąt wpisany ma połowę tej miary. Krok 3: 50/2=25°. Krok 4: sprawdź, że kąt wpisany jest mniejszy od środkowego. Krok 1: miara łuku równa się mierze kąta środkowego: 120°. Krok 2: kąt wpisany ma połowę tej miary. Krok 3: 120/2=60°. Krok 4: sprawdź, że kąt wpisany jest mniejszy od środkowego.",
+          "commonMistakes": "Cel tej lekcji: Okręgi — Cyclic Polygons. Nie myl długości łuku z jego miarą kątową. Nie stosuj twierdzenia o kącie wpisanym do kąta środkowego. Sprawdź, czy prosta rzeczywiście jest styczna, zanim użyjesz prostopadłości.",
+          "quickSummary": "Cel tej lekcji: Okręgi — Cyclic Polygons. Rozpoznaj elementy okręgu i odpowiedni łuk, zastosuj właściwą zależność dla kąta, długości, stycznej lub równania i sprawdź geometrię."
+        }
+      ]
+    },
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:TRAD:SUPPLEMENT:GEO-TRIG:L02",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "MVP-GEO:M07:T06 — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf",
+      "outcomeCodes": [
+        "CCSS:HSG-SRT.D.10",
+        "CCSS:HSG-SRT.D.11"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "More Than Right",
+          "explanation": "More Than Right is an Edulytics lesson in the unit “Geometry & Trigonometry Extensions”. It is aligned exactly to CCSS:HSG-SRT.D.10, CCSS:HSG-SRT.D.11. The accepted Common Core target text for this lesson states: (+) Prove the Laws of Sines and Cosines and use them to solve problems. (+) Understand and apply the Law of Sines and the Law of Cosines to find unkno wn measurements in right and non-right triangles (e.g., surveying problems, resultant forces). Instructional focus: Students use dilation, similarity, proportional side relationships, and trigonometric ratios to solve geometric problems. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: More Than Right. Similar figures preserve angle measures and scale corresponding lengths by one factor. In right triangles, sine, cosine, and tangent compare specific side lengths relative to an acute angle.",
+          "workedExamples": "Example 1: In a right triangle with legs 5 and 6, the hypotenuse is √(5²+6²)≈7.810. For the angle opposite the side 5, sin θ≈0.640 and cos θ≈0.768. Example 2: In a right triangle with legs 4 and 9, the hypotenuse is √(4²+9²)≈9.849. For the angle opposite the side 4, sin θ≈0.406 and cos θ≈0.914.",
+          "stepByStepSolutions": "Step 1: use the Pythagorean theorem: c=√(25+36)≈7.810. Step 2: relative to the chosen angle, opposite=5, adjacent=6. Step 3: sin θ=5/7.810≈0.640; cos θ=6/7.810≈0.768. Step 4: verify both ratios are between 0 and 1. Step 1: use the Pythagorean theorem: c=√(16+81)≈9.849. Step 2: relative to the chosen angle, opposite=4, adjacent=9. Step 3: sin θ=4/9.849≈0.406; cos θ=9/9.849≈0.914. Step 4: verify both ratios are between 0 and 1.",
+          "commonMistakes": "Lesson-specific focus: More Than Right. Do not match non-corresponding sides in a proportion. Label opposite, adjacent, and hypotenuse relative to the chosen angle before selecting a trigonometric ratio.",
+          "quickSummary": "Lesson-specific focus: More Than Right. Establish correspondence, choose a similarity or trigonometric relationship, solve, and check that lengths and angles are geometrically possible."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Podobieństwo i trygonometria trójkąta prostokątnego — More Than Right",
+          "explanation": "Lekcja „Podobieństwo i trygonometria trójkąta prostokątnego — More Than Right” należy do działu „Geometry & Trigonometry Extensions” i jest dokładnie powiązana ze standardami CCSS:HSG-SRT.D.10, CCSS:HSG-SRT.D.11. Główny kierunek pracy: Uczeń wykorzystuje jednokładność, podobieństwo, proporcje boków i stosunki trygonometryczne do rozwiązywania problemów geometrycznych. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Podobieństwo i trygonometria trójkąta prostokątnego — More Than Right. Figury podobne zachowują miary kątów, a odpowiadające długości są pomnożone przez ten sam współczynnik skali. W trójkącie prostokątnym sinus, cosinus i tangens porównują odpowiednie boki względem kąta ostrego.",
+          "workedExamples": "Przykład 1: W trójkącie prostokątnym o przyprostokątnych 5 i 6 przeciwprostokątna ma długość √(5²+6²)≈7.810. Dla kąta naprzeciw boku 5: sin θ≈0.640, cos θ≈0.768. Przykład 2: W trójkącie prostokątnym o przyprostokątnych 4 i 9 przeciwprostokątna ma długość √(4²+9²)≈9.849. Dla kąta naprzeciw boku 4: sin θ≈0.406, cos θ≈0.914.",
+          "stepByStepSolutions": "Krok 1: z twierdzenia Pitagorasa c=√(25+36)≈7.810. Krok 2: względem kąta bok naprzeciw ma 5, a przyległy 6. Krok 3: oblicz sin θ≈0.640 i cos θ≈0.768. Krok 4: oba wyniki powinny leżeć między 0 i 1. Krok 1: z twierdzenia Pitagorasa c=√(16+81)≈9.849. Krok 2: względem kąta bok naprzeciw ma 4, a przyległy 9. Krok 3: oblicz sin θ≈0.406 i cos θ≈0.914. Krok 4: oba wyniki powinny leżeć między 0 i 1.",
+          "commonMistakes": "Cel tej lekcji: Podobieństwo i trygonometria trójkąta prostokątnego — More Than Right. Nie zestawiaj w proporcji boków, które sobie nie odpowiadają. Przed wyborem funkcji trygonometrycznej oznacz przyprostokątną naprzeciwległą, przyległą i przeciwprostokątną względem wybranego kąta.",
+          "quickSummary": "Cel tej lekcji: Podobieństwo i trygonometria trójkąta prostokątnego — More Than Right. Ustal odpowiadające elementy, wybierz relację podobieństwa lub trygonometryczną, rozwiąż i sprawdź, czy długości oraz kąty są geometrycznie możliwe."
+        }
+      ]
+    },
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:TRAD:SUPPLEMENT:GEO-TRIG:L03",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "MVP-GEO:M07:T08 — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf",
+      "outcomeCodes": [
+        "CCSS:HSG-SRT.D.9"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "Triangle Areas by Trig",
+          "explanation": "Triangle Areas by Trig is an Edulytics lesson in the unit “Geometry & Trigonometry Extensions”. It is aligned exactly to CCSS:HSG-SRT.D.9. The accepted Common Core target text for this lesson states: (+) Derive the formula A = 1/2 ab sin(C) for the area of a triangle by drawing an auxiliary line from a vertex perpendicular to the opposite side. Instructional focus: Students use dilation, similarity, proportional side relationships, and trigonometric ratios to solve geometric problems. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: Triangle Areas by Trig. Similar figures preserve angle measures and scale corresponding lengths by one factor. In right triangles, sine, cosine, and tangent compare specific side lengths relative to an acute angle.",
+          "workedExamples": "Example 1: In a right triangle with legs 4 and 6, the hypotenuse is √(4²+6²)≈7.211. For the angle opposite the side 4, sin θ≈0.555 and cos θ≈0.832. Example 2: In a right triangle with legs 7 and 8, the hypotenuse is √(7²+8²)≈10.630. For the angle opposite the side 7, sin θ≈0.659 and cos θ≈0.753.",
+          "stepByStepSolutions": "Step 1: use the Pythagorean theorem: c=√(16+36)≈7.211. Step 2: relative to the chosen angle, opposite=4, adjacent=6. Step 3: sin θ=4/7.211≈0.555; cos θ=6/7.211≈0.832. Step 4: verify both ratios are between 0 and 1. Step 1: use the Pythagorean theorem: c=√(49+64)≈10.630. Step 2: relative to the chosen angle, opposite=7, adjacent=8. Step 3: sin θ=7/10.630≈0.659; cos θ=8/10.630≈0.753. Step 4: verify both ratios are between 0 and 1.",
+          "commonMistakes": "Lesson-specific focus: Triangle Areas by Trig. Do not match non-corresponding sides in a proportion. Label opposite, adjacent, and hypotenuse relative to the chosen angle before selecting a trigonometric ratio.",
+          "quickSummary": "Lesson-specific focus: Triangle Areas by Trig. Establish correspondence, choose a similarity or trigonometric relationship, solve, and check that lengths and angles are geometrically possible."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Podobieństwo i trygonometria trójkąta prostokątnego — Triangle Areas by Trig",
+          "explanation": "Lekcja „Podobieństwo i trygonometria trójkąta prostokątnego — Triangle Areas by Trig” należy do działu „Geometry & Trigonometry Extensions” i jest dokładnie powiązana ze standardami CCSS:HSG-SRT.D.9. Główny kierunek pracy: Uczeń wykorzystuje jednokładność, podobieństwo, proporcje boków i stosunki trygonometryczne do rozwiązywania problemów geometrycznych. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Podobieństwo i trygonometria trójkąta prostokątnego — Triangle Areas by Trig. Figury podobne zachowują miary kątów, a odpowiadające długości są pomnożone przez ten sam współczynnik skali. W trójkącie prostokątnym sinus, cosinus i tangens porównują odpowiednie boki względem kąta ostrego.",
+          "workedExamples": "Przykład 1: W trójkącie prostokątnym o przyprostokątnych 4 i 6 przeciwprostokątna ma długość √(4²+6²)≈7.211. Dla kąta naprzeciw boku 4: sin θ≈0.555, cos θ≈0.832. Przykład 2: W trójkącie prostokątnym o przyprostokątnych 7 i 8 przeciwprostokątna ma długość √(7²+8²)≈10.630. Dla kąta naprzeciw boku 7: sin θ≈0.659, cos θ≈0.753.",
+          "stepByStepSolutions": "Krok 1: z twierdzenia Pitagorasa c=√(16+36)≈7.211. Krok 2: względem kąta bok naprzeciw ma 4, a przyległy 6. Krok 3: oblicz sin θ≈0.555 i cos θ≈0.832. Krok 4: oba wyniki powinny leżeć między 0 i 1. Krok 1: z twierdzenia Pitagorasa c=√(49+64)≈10.630. Krok 2: względem kąta bok naprzeciw ma 7, a przyległy 8. Krok 3: oblicz sin θ≈0.659 i cos θ≈0.753. Krok 4: oba wyniki powinny leżeć między 0 i 1.",
+          "commonMistakes": "Cel tej lekcji: Podobieństwo i trygonometria trójkąta prostokątnego — Triangle Areas by Trig. Nie zestawiaj w proporcji boków, które sobie nie odpowiadają. Przed wyborem funkcji trygonometrycznej oznacz przyprostokątną naprzeciwległą, przyległą i przeciwprostokątną względem wybranego kąta.",
+          "quickSummary": "Cel tej lekcji: Podobieństwo i trygonometria trójkąta prostokątnego — Triangle Areas by Trig. Ustal odpowiadające elementy, wybierz relację podobieństwa lub trygonometryczną, rozwiąż i sprawdź, czy długości oraz kąty są geometrycznie możliwe."
+        }
+      ]
+    },
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:TRAD:SUPPLEMENT:NUMBER-QUANTITY:L01",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "MVP-ALG2:M03:T04 — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+      "outcomeCodes": [
+        "CCSS:HSN-CN.C.8",
+        "CCSS:HSN-CN.C.9"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "To Be Determined",
+          "explanation": "To Be Determined is an Edulytics lesson in the unit “Number & Quantity Extensions”. It is aligned exactly to CCSS:HSN-CN.C.8, CCSS:HSN-CN.C.9. The accepted Common Core target text for this lesson states: (+) Extend polynomial identities to the complex numbers. For example, rewrite x2 + 4 as (x + 2i)(x – 2i). (+) Know the Fundamental Theorem of Algebra; show that it is true for quadratic polynomials. Instructional focus: Students extend arithmetic to numbers of the form a + bi and connect algebraic operations, polynomial equations, and geometric representations. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: To Be Determined. Use i^2 = -1. Combine real parts with real parts and imaginary parts with imaginary parts. Complex conjugates can produce real products and help rationalize denominators.",
+          "workedExamples": "Example 1: (6+2i)(1+2i) = 2+14i because i²=-1. Example 2: (3+1i)(5+4i) = 11+17i because i²=-1.",
+          "stepByStepSolutions": "Step 1: distribute: 6+12i+2i+4i². Step 2: replace i² with -1, giving 6-4+(12+2)i. Step 3: combine to 2+14i. Step 1: distribute: 15+12i+5i+4i². Step 2: replace i² with -1, giving 15-4+(12+5)i. Step 3: combine to 11+17i.",
+          "commonMistakes": "Lesson-specific focus: To Be Determined. Do not treat i as an ordinary real variable. Reduce powers of i correctly and keep real and imaginary components organized.",
+          "quickSummary": "Lesson-specific focus: To Be Determined. Apply the rules for i, simplify the algebra, write the result in a + bi form when appropriate, and verify by substitution or multiplication."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Liczby zespolone — To Be Determined",
+          "explanation": "Lekcja „Liczby zespolone — To Be Determined” należy do działu „Number & Quantity Extensions” i jest dokładnie powiązana ze standardami CCSS:HSN-CN.C.8, CCSS:HSN-CN.C.9. Główny kierunek pracy: Uczeń rozszerza działania na liczby postaci a + bi i łączy rachunek algebraiczny, równania wielomianowe oraz reprezentacje geometryczne. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Liczby zespolone — To Be Determined. Korzystaj z i^2 = -1. Łącz osobno części rzeczywiste i urojone. Sprzężenia zespolone mogą dawać iloczyny rzeczywiste i pomagać usuwać liczbę zespoloną z mianownika.",
+          "workedExamples": "Przykład 1: (6+2i)(1+2i) = 2+14i, ponieważ i²=-1. Przykład 2: (3+1i)(5+4i) = 11+17i, ponieważ i²=-1.",
+          "stepByStepSolutions": "Krok 1: wymnóż nawiasy: 6+12i+2i+4i². Krok 2: zastąp i² przez -1. Krok 3: połącz części i otrzymaj 2+14i. Krok 1: wymnóż nawiasy: 15+12i+5i+4i². Krok 2: zastąp i² przez -1. Krok 3: połącz części i otrzymaj 11+17i.",
+          "commonMistakes": "Cel tej lekcji: Liczby zespolone — To Be Determined. Nie traktuj i jak zwykłej zmiennej rzeczywistej. Poprawnie upraszczaj potęgi i i porządkuj osobno części rzeczywiste oraz urojone.",
+          "quickSummary": "Cel tej lekcji: Liczby zespolone — To Be Determined. Zastosuj reguły dla i, uprość rachunek, zapisz wynik w postaci a + bi i sprawdź go przez podstawienie lub mnożenie."
+        }
+      ]
+    },
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:TRAD:SUPPLEMENT:PROB-DECISION:L01",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "EDU:HSS-MD.B.6 — https://im.kendallhunt.com/HS/teachers/3/7/3/index.html",
+      "outcomeCodes": [
+        "CCSS:HSS-MD.B.6"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "Fair Decisions with Probability",
+          "explanation": "Fair Decisions with Probability is an Edulytics lesson in the unit “Probability & Decision Making Extensions”. It is aligned exactly to CCSS:HSS-MD.B.6. The accepted Common Core target text for this lesson states: (+) Use probabilities to make fair decisions (e.g., drawing by lots, using a random number gener ator). Instructional focus: Students use random variables, probability distributions, expected values, and payoff models to compare uncertain decisions. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: Fair Decisions with Probability. A probability distribution assigns probabilities totaling 1. Expected value is the probability-weighted average of possible values; it describes long-run mean outcome, not a guaranteed single result.",
+          "workedExamples": "Example 1: A payoff is +11 with probability 0.5 and -1 with probability 0.5. Expected value = 0.5(11) + 0.5(-1) = 5.00. Example 2: A payoff is +16 with probability 0.4 and -5 with probability 0.6. Expected value = 0.4(16) + 0.6(-5) = 3.40.",
+          "stepByStepSolutions": "Step 1: check probabilities sum to 1: 0.5+0.5=1. Step 2: weight each payoff by its probability. Step 3: add the weighted values to obtain 5.00. Step 4: interpret 5.00 as a long-run average, not a guaranteed one-trial payoff. Step 1: check probabilities sum to 1: 0.4+0.6=1. Step 2: weight each payoff by its probability. Step 3: add the weighted values to obtain 3.40. Step 4: interpret 3.40 as a long-run average, not a guaranteed one-trial payoff.",
+          "commonMistakes": "Lesson-specific focus: Fair Decisions with Probability. Do not interpret expected value as the most likely or guaranteed outcome. Include every relevant outcome and its probability before comparing decisions.",
+          "quickSummary": "Lesson-specific focus: Fair Decisions with Probability. List outcomes and probabilities, verify they form a valid distribution, compute expected values or other requested measures, and interpret the decision criterion."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Fair Decisions with Prawdopodobieństwo",
+          "explanation": "Lekcja „Fair Decisions with Prawdopodobieństwo” należy do działu „Probability & Decision Making Extensions” i jest dokładnie powiązana ze standardami CCSS:HSS-MD.B.6. Główny kierunek pracy: Uczeń wykorzystuje zmienne losowe, rozkłady prawdopodobieństwa, wartości oczekiwane i modele wypłat do porównywania decyzji obarczonych niepewnością. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Fair Decisions with Prawdopodobieństwo. Rozkład prawdopodobieństwa przypisuje prawdopodobieństwa sumujące się do 1. Wartość oczekiwana jest średnią ważoną możliwych wartości i opisuje średni wynik długookresowy, a nie gwarantowany wynik pojedynczej próby.",
+          "workedExamples": "Przykład 1: Wypłata wynosi +11 z prawdopodobieństwem 0.5 i -1 z prawdopodobieństwem 0.5. Wartość oczekiwana = 5.00. Przykład 2: Wypłata wynosi +16 z prawdopodobieństwem 0.4 i -5 z prawdopodobieństwem 0.6. Wartość oczekiwana = 3.40.",
+          "stepByStepSolutions": "Krok 1: prawdopodobieństwa sumują się do 1. Krok 2: pomnóż każdą wypłatę przez jej prawdopodobieństwo. Krok 3: dodaj wartości ważone i otrzymaj 5.00. Krok 4: interpretuj wynik jako średnią długookresową, a nie gwarancję pojedynczej próby. Krok 1: prawdopodobieństwa sumują się do 1. Krok 2: pomnóż każdą wypłatę przez jej prawdopodobieństwo. Krok 3: dodaj wartości ważone i otrzymaj 3.40. Krok 4: interpretuj wynik jako średnią długookresową, a nie gwarancję pojedynczej próby.",
+          "commonMistakes": "Cel tej lekcji: Fair Decisions with Prawdopodobieństwo. Nie interpretuj wartości oczekiwanej jako wyniku najbardziej prawdopodobnego ani gwarantowanego. Przed porównaniem decyzji uwzględnij wszystkie istotne wyniki i ich prawdopodobieństwa.",
+          "quickSummary": "Cel tej lekcji: Fair Decisions with Prawdopodobieństwo. Wypisz wyniki i prawdopodobieństwa, sprawdź poprawność rozkładu, oblicz wartość oczekiwaną lub inne miary i zinterpretuj kryterium decyzji."
+        }
+      ]
+    },
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:TRAD:SUPPLEMENT:PROB-DECISION:L02",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "MVP-GEO:M08:T01 — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf",
+      "outcomeCodes": [
+        "CCSS:HSS-MD.B.7"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "TB or Not TB",
+          "explanation": "TB or Not TB is an Edulytics lesson in the unit “Probability & Decision Making Extensions”. It is aligned exactly to CCSS:HSS-MD.B.7. The accepted Common Core target text for this lesson states: (+) Analyze decisions and strategies using probability concepts (e.g., product t esting, medical testing, pulling a hockey goalie at the end of a game). Instructional focus: Students use random variables, probability distributions, expected values, and payoff models to compare uncertain decisions. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: TB or Not TB. A probability distribution assigns probabilities totaling 1. Expected value is the probability-weighted average of possible values; it describes long-run mean outcome, not a guaranteed single result.",
+          "workedExamples": "Example 1: A payoff is +6 with probability 0.5 and -8 with probability 0.5. Expected value = 0.5(6) + 0.5(-8) = -1.00. Example 2: A payoff is +13 with probability 0.6 and -5 with probability 0.4. Expected value = 0.6(13) + 0.4(-5) = 5.80.",
+          "stepByStepSolutions": "Step 1: check probabilities sum to 1: 0.5+0.5=1. Step 2: weight each payoff by its probability. Step 3: add the weighted values to obtain -1.00. Step 4: interpret -1.00 as a long-run average, not a guaranteed one-trial payoff. Step 1: check probabilities sum to 1: 0.6+0.4=1. Step 2: weight each payoff by its probability. Step 3: add the weighted values to obtain 5.80. Step 4: interpret 5.80 as a long-run average, not a guaranteed one-trial payoff.",
+          "commonMistakes": "Lesson-specific focus: TB or Not TB. Do not interpret expected value as the most likely or guaranteed outcome. Include every relevant outcome and its probability before comparing decisions.",
+          "quickSummary": "Lesson-specific focus: TB or Not TB. List outcomes and probabilities, verify they form a valid distribution, compute expected values or other requested measures, and interpret the decision criterion."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Modele probabilistyczne i podejmowanie decyzji — TB or Not TB",
+          "explanation": "Lekcja „Modele probabilistyczne i podejmowanie decyzji — TB or Not TB” należy do działu „Probability & Decision Making Extensions” i jest dokładnie powiązana ze standardami CCSS:HSS-MD.B.7. Główny kierunek pracy: Uczeń wykorzystuje zmienne losowe, rozkłady prawdopodobieństwa, wartości oczekiwane i modele wypłat do porównywania decyzji obarczonych niepewnością. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Modele probabilistyczne i podejmowanie decyzji — TB or Not TB. Rozkład prawdopodobieństwa przypisuje prawdopodobieństwa sumujące się do 1. Wartość oczekiwana jest średnią ważoną możliwych wartości i opisuje średni wynik długookresowy, a nie gwarantowany wynik pojedynczej próby.",
+          "workedExamples": "Przykład 1: Wypłata wynosi +6 z prawdopodobieństwem 0.5 i -8 z prawdopodobieństwem 0.5. Wartość oczekiwana = -1.00. Przykład 2: Wypłata wynosi +13 z prawdopodobieństwem 0.6 i -5 z prawdopodobieństwem 0.4. Wartość oczekiwana = 5.80.",
+          "stepByStepSolutions": "Krok 1: prawdopodobieństwa sumują się do 1. Krok 2: pomnóż każdą wypłatę przez jej prawdopodobieństwo. Krok 3: dodaj wartości ważone i otrzymaj -1.00. Krok 4: interpretuj wynik jako średnią długookresową, a nie gwarancję pojedynczej próby. Krok 1: prawdopodobieństwa sumują się do 1. Krok 2: pomnóż każdą wypłatę przez jej prawdopodobieństwo. Krok 3: dodaj wartości ważone i otrzymaj 5.80. Krok 4: interpretuj wynik jako średnią długookresową, a nie gwarancję pojedynczej próby.",
+          "commonMistakes": "Cel tej lekcji: Modele probabilistyczne i podejmowanie decyzji — TB or Not TB. Nie interpretuj wartości oczekiwanej jako wyniku najbardziej prawdopodobnego ani gwarantowanego. Przed porównaniem decyzji uwzględnij wszystkie istotne wyniki i ich prawdopodobieństwa.",
+          "quickSummary": "Cel tej lekcji: Modele probabilistyczne i podejmowanie decyzji — TB or Not TB. Wypisz wyniki i prawdopodobieństwa, sprawdź poprawność rozkładu, oblicz wartość oczekiwaną lub inne miary i zinterpretuj kryterium decyzji."
+        }
+      ]
+    },
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:TRAD:SUPPLEMENT:PROB-DECISION:L03",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "EDU:HSS-CP.B.8 — https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_%28OpenStax%29/07%3A_Probability/7.09%3A_Conditional_Probability_and_the_Multiplication_Rule",
+      "outcomeCodes": [
+        "CCSS:HSS-CP.B.8"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "Conditional Probability and the Multiplication Rule",
+          "explanation": "Conditional Probability and the Multiplication Rule is an Edulytics lesson in the unit “Probability & Decision Making Extensions”. It is aligned exactly to CCSS:HSS-CP.B.8. The accepted Common Core target text for this lesson states: (+) Apply the general Multiplication Rule in a uniform probability model, P(A and B) = P(A)P(B|A) = P(B)P(A|B), and interpret the answer in terms of the model. Instructional focus: Students analyze compound events, independence, conditional probability, and counting rules using clearly defined sample spaces. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: Conditional Probability and the Multiplication Rule. P(A|B)=P(A and B)/P(B) when P(B)>0. Independent events satisfy P(A|B)=P(A). Use complements, unions, intersections, permutations, or combinations according to the event structure.",
+          "workedExamples": "Example 1: Among 74 outcomes, event B occurs in 68 and both A and B occur in 12. Then P(A|B)=12/68≈0.176. Example 2: Among 77 outcomes, event B occurs in 58 and both A and B occur in 38. Then P(A|B)=38/58≈0.655.",
+          "stepByStepSolutions": "Step 1: condition on B, reducing the relevant sample space to 68 outcomes. Step 2: within B, 12 outcomes also satisfy A. Step 3: divide 12 by 68 to get 0.176. Step 4: confirm the probability lies between 0 and 1. Step 1: condition on B, reducing the relevant sample space to 58 outcomes. Step 2: within B, 38 outcomes also satisfy A. Step 3: divide 38 by 58 to get 0.655. Step 4: confirm the probability lies between 0 and 1.",
+          "commonMistakes": "Lesson-specific focus: Conditional Probability and the Multiplication Rule. Do not confuse mutually exclusive with independent events. In conditional probability, restrict the sample space to the condition before forming the ratio.",
+          "quickSummary": "Lesson-specific focus: Conditional Probability and the Multiplication Rule. Define the events and sample space, choose the appropriate counting or probability rule, calculate, and interpret the probability in context."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Conditional Prawdopodobieństwo and the Mnożenie Rule",
+          "explanation": "Lekcja „Conditional Prawdopodobieństwo and the Mnożenie Rule” należy do działu „Probability & Decision Making Extensions” i jest dokładnie powiązana ze standardami CCSS:HSS-CP.B.8. Główny kierunek pracy: Uczeń analizuje zdarzenia złożone, niezależność, prawdopodobieństwo warunkowe i reguły zliczania przy jasno określonej przestrzeni zdarzeń. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Conditional Prawdopodobieństwo and the Mnożenie Rule. P(A|B)=P(A i B)/P(B), gdy P(B)>0. Dla zdarzeń niezależnych P(A|B)=P(A). Stosuj dopełnienia, sumy i części wspólne zdarzeń oraz permutacje lub kombinacje zgodnie ze strukturą sytuacji.",
+          "workedExamples": "Przykład 1: Wśród 74 wyników zdarzenie B zachodzi w 68, a A i B jednocześnie w 12. Zatem P(A|B)=12/68≈0.176. Przykład 2: Wśród 77 wyników zdarzenie B zachodzi w 58, a A i B jednocześnie w 38. Zatem P(A|B)=38/58≈0.655.",
+          "stepByStepSolutions": "Krok 1: warunek B ogranicza przestrzeń do 68 wyników. Krok 2: spośród nich 12 spełnia także A. Krok 3: 12/68≈0.176. Krok 4: wynik musi leżeć między 0 i 1. Krok 1: warunek B ogranicza przestrzeń do 58 wyników. Krok 2: spośród nich 38 spełnia także A. Krok 3: 38/58≈0.655. Krok 4: wynik musi leżeć między 0 i 1.",
+          "commonMistakes": "Cel tej lekcji: Conditional Prawdopodobieństwo and the Mnożenie Rule. Nie myl zdarzeń rozłącznych z niezależnymi. W prawdopodobieństwie warunkowym najpierw ogranicz przestrzeń zdarzeń do warunku, a dopiero potem twórz iloraz.",
+          "quickSummary": "Cel tej lekcji: Conditional Prawdopodobieństwo and the Mnożenie Rule. Zdefiniuj zdarzenia i przestrzeń zdarzeń, wybierz właściwą regułę zliczania lub prawdopodobieństwa, oblicz i zinterpretuj wynik w kontekście."
+        }
+      ]
+    },
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:TRAD:SUPPLEMENT:PROB-DECISION:L04",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "EDU:HSS-CP.B.9 — https://math.libretexts.org/Bookshelves/Applied_Mathematics/Contemporary_Mathematics_%28OpenStax%29/07%3A_Probability/7.06%3A_Probability_with_Permutations_and_Combinations",
+      "outcomeCodes": [
+        "CCSS:HSS-CP.B.9"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "Probability with Permutations and Combinations",
+          "explanation": "Probability with Permutations and Combinations is an Edulytics lesson in the unit “Probability & Decision Making Extensions”. It is aligned exactly to CCSS:HSS-CP.B.9. The accepted Common Core target text for this lesson states: (+) Use permutations and combinations to compute probabilities of compound events and solve problems. Instructional focus: Students analyze compound events, independence, conditional probability, and counting rules using clearly defined sample spaces. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: Probability with Permutations and Combinations. P(A|B)=P(A and B)/P(B) when P(B)>0. Independent events satisfy P(A|B)=P(A). Use complements, unions, intersections, permutations, or combinations according to the event structure.",
+          "workedExamples": "Example 1: Among 71 outcomes, event B occurs in 49 and both A and B occur in 41. Then P(A|B)=41/49≈0.837. Example 2: Among 41 outcomes, event B occurs in 34 and both A and B occur in 26. Then P(A|B)=26/34≈0.765.",
+          "stepByStepSolutions": "Step 1: condition on B, reducing the relevant sample space to 49 outcomes. Step 2: within B, 41 outcomes also satisfy A. Step 3: divide 41 by 49 to get 0.837. Step 4: confirm the probability lies between 0 and 1. Step 1: condition on B, reducing the relevant sample space to 34 outcomes. Step 2: within B, 26 outcomes also satisfy A. Step 3: divide 26 by 34 to get 0.765. Step 4: confirm the probability lies between 0 and 1.",
+          "commonMistakes": "Lesson-specific focus: Probability with Permutations and Combinations. Do not confuse mutually exclusive with independent events. In conditional probability, restrict the sample space to the condition before forming the ratio.",
+          "quickSummary": "Lesson-specific focus: Probability with Permutations and Combinations. Define the events and sample space, choose the appropriate counting or probability rule, calculate, and interpret the probability in context."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Prawdopodobieństwo with Permutations and Combinations",
+          "explanation": "Lekcja „Prawdopodobieństwo with Permutations and Combinations” należy do działu „Probability & Decision Making Extensions” i jest dokładnie powiązana ze standardami CCSS:HSS-CP.B.9. Główny kierunek pracy: Uczeń analizuje zdarzenia złożone, niezależność, prawdopodobieństwo warunkowe i reguły zliczania przy jasno określonej przestrzeni zdarzeń. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Prawdopodobieństwo with Permutations and Combinations. P(A|B)=P(A i B)/P(B), gdy P(B)>0. Dla zdarzeń niezależnych P(A|B)=P(A). Stosuj dopełnienia, sumy i części wspólne zdarzeń oraz permutacje lub kombinacje zgodnie ze strukturą sytuacji.",
+          "workedExamples": "Przykład 1: Wśród 71 wyników zdarzenie B zachodzi w 49, a A i B jednocześnie w 41. Zatem P(A|B)=41/49≈0.837. Przykład 2: Wśród 41 wyników zdarzenie B zachodzi w 34, a A i B jednocześnie w 26. Zatem P(A|B)=26/34≈0.765.",
+          "stepByStepSolutions": "Krok 1: warunek B ogranicza przestrzeń do 49 wyników. Krok 2: spośród nich 41 spełnia także A. Krok 3: 41/49≈0.837. Krok 4: wynik musi leżeć między 0 i 1. Krok 1: warunek B ogranicza przestrzeń do 34 wyników. Krok 2: spośród nich 26 spełnia także A. Krok 3: 26/34≈0.765. Krok 4: wynik musi leżeć między 0 i 1.",
+          "commonMistakes": "Cel tej lekcji: Prawdopodobieństwo with Permutations and Combinations. Nie myl zdarzeń rozłącznych z niezależnymi. W prawdopodobieństwie warunkowym najpierw ogranicz przestrzeń zdarzeń do warunku, a dopiero potem twórz iloraz.",
+          "quickSummary": "Cel tej lekcji: Prawdopodobieństwo with Permutations and Combinations. Zdefiniuj zdarzenia i przestrzeń zdarzeń, wybierz właściwą regułę zliczania lub prawdopodobieństwa, oblicz i zinterpretuj wynik w kontekście."
+        }
+      ]
+    }
+  ]
+}
