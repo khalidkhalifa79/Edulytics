@@ -1,0 +1,179 @@
+{
+  "packCode": "US-CCSS-MATH",
+  "versionCode": "CCSSM-2010",
+  "contentVersion": "ccss-hs-prob-decision-p29-v1",
+  "sourcePolicyVersion": 2,
+  "targetCurriculumPeriod": "2026-2027",
+  "sourceCurriculumPeriod": "Common Core State Standards 2010",
+  "sourceVersionLabel": "Common Core State Standards for Mathematics (2010)",
+  "sourceAuthority": "NGA Center / CCSSO",
+  "sourceUrl": "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf",
+  "sourceCheckedAtUtc": "2026-08-29T00:00:00Z",
+  "sourceResolution": "CurrentOfficial",
+  "fallbackReason": "",
+  "pedagogicalSourceType": "OpenEducationalResource",
+  "pedagogicalSourceTitle": "LibreTexts / OpenStax",
+  "pedagogicalSourcePublisher": "LibreTexts / OpenStax",
+  "pedagogicalSourceEdition": "Phase 29 locked source",
+  "pedagogicalSourceUrl": "https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_1e_%28OpenStax%29/04%3A_Discrete_Random_Variables/4.01%3A_Prelude_to_Discrete_Random_Variables",
+  "pedagogicalSourceCheckedAtUtc": "2026-08-29T00:00:00Z",
+  "pedagogicalSourceSelectionReason": "Phase 29 accepted High School pedagogical source strategy.",
+  "pedagogicalSourceSelectionEvidence": "Immutable Phase 29 High School source, placement, evidence, sequence and Blueprint V2 contract locks.",
+  "pedagogicalSourceRightsNote": "Use restricted to accepted Phase 29 commercial-safe license lock.",
+  "reviewMethod": "Exact blueprint-to-Standard alignment validation, approved-license provenance lock, deterministic domain-specific lesson authoring, machine-recomputed worked-example verification, bilingual structural QA, and fail-closed unsupported-family detection.",
+  "status": "Published",
+  "reviewedBy": "Edulytics Curriculum Review — deterministic Phase 29 QA",
+  "reviewEvidence": "Blueprint US-CCSS-MATH:HS:FOURTH:PROB-DECISION (c54fedd306a33483742e16f9fefaf9be096ae217f21a6f1dd61b88ca5e472b90) contains 5 source-driven pedagogical lessons. Exactly 5 have accepted formal Common Core targets and are included in this canonical pack; 0 source-valid supporting-only lessons are deliberately excluded. Each included lesson was bound to its exact blueprint OutcomeCodes/FormalTargets and official CCSS node text. The deterministic Phase 29 authoring pipeline has no generic fallback: unsupported standard families stop generation. Worked examples and step-by-step answers are produced from computed operands and recomputed results, bilingual body fields are structurally audited, and source provenance remains attached to every lesson title.",
+  "lessons": [
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:FOURTH:PROB-DECISION:U01:L01",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "EDU:HSS-MD.A.1 — https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_1e_%28OpenStax%29/04%3A_Discrete_Random_Variables/4.01%3A_Prelude_to_Discrete_Random_Variables",
+      "outcomeCodes": [
+        "CCSS:HSS-MD.A.1"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "Discrete Random Variables and Probability Distributions",
+          "explanation": "Discrete Random Variables and Probability Distributions is an Edulytics lesson in the unit “Probability & Decision Making”. It is aligned exactly to CCSS:HSS-MD.A.1. The accepted Common Core target text for this lesson states: (+) Define a random variable for a quantity of interest by assigning a numerical value to each event in a sample space; graph the corresponding probability distribution using the same graphical displays as for data distributions. Instructional focus: Students use random variables, probability distributions, expected values, and payoff models to compare uncertain decisions. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: Discrete Random Variables and Probability Distributions. A probability distribution assigns probabilities totaling 1. Expected value is the probability-weighted average of possible values; it describes long-run mean outcome, not a guaranteed single result.",
+          "workedExamples": "Example 1: A payoff is +8 with probability 0.4 and -3 with probability 0.6. Expected value = 0.4(8) + 0.6(-3) = 1.40. Example 2: A payoff is +15 with probability 0.5 and -5 with probability 0.5. Expected value = 0.5(15) + 0.5(-5) = 5.00.",
+          "stepByStepSolutions": "Step 1: check probabilities sum to 1: 0.4+0.6=1. Step 2: weight each payoff by its probability. Step 3: add the weighted values to obtain 1.40. Step 4: interpret 1.40 as a long-run average, not a guaranteed one-trial payoff. Step 1: check probabilities sum to 1: 0.5+0.5=1. Step 2: weight each payoff by its probability. Step 3: add the weighted values to obtain 5.00. Step 4: interpret 5.00 as a long-run average, not a guaranteed one-trial payoff.",
+          "commonMistakes": "Lesson-specific focus: Discrete Random Variables and Probability Distributions. Do not interpret expected value as the most likely or guaranteed outcome. Include every relevant outcome and its probability before comparing decisions.",
+          "quickSummary": "Lesson-specific focus: Discrete Random Variables and Probability Distributions. List outcomes and probabilities, verify they form a valid distribution, compute expected values or other requested measures, and interpret the decision criterion."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Discrete Random Variables and Prawdopodobieństwo Distributions",
+          "explanation": "Lekcja „Discrete Random Variables and Prawdopodobieństwo Distributions” należy do działu „Probability & Decision Making” i jest dokładnie powiązana ze standardami CCSS:HSS-MD.A.1. Główny kierunek pracy: Uczeń wykorzystuje zmienne losowe, rozkłady prawdopodobieństwa, wartości oczekiwane i modele wypłat do porównywania decyzji obarczonych niepewnością. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Discrete Random Variables and Prawdopodobieństwo Distributions. Rozkład prawdopodobieństwa przypisuje prawdopodobieństwa sumujące się do 1. Wartość oczekiwana jest średnią ważoną możliwych wartości i opisuje średni wynik długookresowy, a nie gwarantowany wynik pojedynczej próby.",
+          "workedExamples": "Przykład 1: Wypłata wynosi +8 z prawdopodobieństwem 0.4 i -3 z prawdopodobieństwem 0.6. Wartość oczekiwana = 1.40. Przykład 2: Wypłata wynosi +15 z prawdopodobieństwem 0.5 i -5 z prawdopodobieństwem 0.5. Wartość oczekiwana = 5.00.",
+          "stepByStepSolutions": "Krok 1: prawdopodobieństwa sumują się do 1. Krok 2: pomnóż każdą wypłatę przez jej prawdopodobieństwo. Krok 3: dodaj wartości ważone i otrzymaj 1.40. Krok 4: interpretuj wynik jako średnią długookresową, a nie gwarancję pojedynczej próby. Krok 1: prawdopodobieństwa sumują się do 1. Krok 2: pomnóż każdą wypłatę przez jej prawdopodobieństwo. Krok 3: dodaj wartości ważone i otrzymaj 5.00. Krok 4: interpretuj wynik jako średnią długookresową, a nie gwarancję pojedynczej próby.",
+          "commonMistakes": "Cel tej lekcji: Discrete Random Variables and Prawdopodobieństwo Distributions. Nie interpretuj wartości oczekiwanej jako wyniku najbardziej prawdopodobnego ani gwarantowanego. Przed porównaniem decyzji uwzględnij wszystkie istotne wyniki i ich prawdopodobieństwa.",
+          "quickSummary": "Cel tej lekcji: Discrete Random Variables and Prawdopodobieństwo Distributions. Wypisz wyniki i prawdopodobieństwa, sprawdź poprawność rozkładu, oblicz wartość oczekiwaną lub inne miary i zinterpretuj kryterium decyzji."
+        }
+      ]
+    },
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:FOURTH:PROB-DECISION:U01:L02",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "EDU:HSS-MD.A.2 — https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_1e_%28OpenStax%29/04%3A_Discrete_Random_Variables/4.03%3A_Mean_or_Expected_Value_and_Standard_Deviation",
+      "outcomeCodes": [
+        "CCSS:HSS-MD.A.2"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "Expected Value and Long-Run Outcomes",
+          "explanation": "Expected Value and Long-Run Outcomes is an Edulytics lesson in the unit “Probability & Decision Making”. It is aligned exactly to CCSS:HSS-MD.A.2. The accepted Common Core target text for this lesson states: (+) Calculate the expected value of a random variable; interpret it as the mean of the probability distribution. Instructional focus: Students use random variables, probability distributions, expected values, and payoff models to compare uncertain decisions. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: Expected Value and Long-Run Outcomes. A probability distribution assigns probabilities totaling 1. Expected value is the probability-weighted average of possible values; it describes long-run mean outcome, not a guaranteed single result.",
+          "workedExamples": "Example 1: A payoff is +14 with probability 0.8 and -2 with probability 0.2. Expected value = 0.8(14) + 0.2(-2) = 10.80. Example 2: A payoff is +14 with probability 0.3 and -2 with probability 0.7. Expected value = 0.3(14) + 0.7(-2) = 2.80.",
+          "stepByStepSolutions": "Step 1: check probabilities sum to 1: 0.8+0.2=1. Step 2: weight each payoff by its probability. Step 3: add the weighted values to obtain 10.80. Step 4: interpret 10.80 as a long-run average, not a guaranteed one-trial payoff. Step 1: check probabilities sum to 1: 0.3+0.7=1. Step 2: weight each payoff by its probability. Step 3: add the weighted values to obtain 2.80. Step 4: interpret 2.80 as a long-run average, not a guaranteed one-trial payoff.",
+          "commonMistakes": "Lesson-specific focus: Expected Value and Long-Run Outcomes. Do not interpret expected value as the most likely or guaranteed outcome. Include every relevant outcome and its probability before comparing decisions.",
+          "quickSummary": "Lesson-specific focus: Expected Value and Long-Run Outcomes. List outcomes and probabilities, verify they form a valid distribution, compute expected values or other requested measures, and interpret the decision criterion."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Modele probabilistyczne i podejmowanie decyzji — Expected Value and Long-Run Outcomes",
+          "explanation": "Lekcja „Modele probabilistyczne i podejmowanie decyzji — Expected Value and Long-Run Outcomes” należy do działu „Probability & Decision Making” i jest dokładnie powiązana ze standardami CCSS:HSS-MD.A.2. Główny kierunek pracy: Uczeń wykorzystuje zmienne losowe, rozkłady prawdopodobieństwa, wartości oczekiwane i modele wypłat do porównywania decyzji obarczonych niepewnością. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Modele probabilistyczne i podejmowanie decyzji — Expected Value and Long-Run Outcomes. Rozkład prawdopodobieństwa przypisuje prawdopodobieństwa sumujące się do 1. Wartość oczekiwana jest średnią ważoną możliwych wartości i opisuje średni wynik długookresowy, a nie gwarantowany wynik pojedynczej próby.",
+          "workedExamples": "Przykład 1: Wypłata wynosi +14 z prawdopodobieństwem 0.8 i -2 z prawdopodobieństwem 0.2. Wartość oczekiwana = 10.80. Przykład 2: Wypłata wynosi +14 z prawdopodobieństwem 0.3 i -2 z prawdopodobieństwem 0.7. Wartość oczekiwana = 2.80.",
+          "stepByStepSolutions": "Krok 1: prawdopodobieństwa sumują się do 1. Krok 2: pomnóż każdą wypłatę przez jej prawdopodobieństwo. Krok 3: dodaj wartości ważone i otrzymaj 10.80. Krok 4: interpretuj wynik jako średnią długookresową, a nie gwarancję pojedynczej próby. Krok 1: prawdopodobieństwa sumują się do 1. Krok 2: pomnóż każdą wypłatę przez jej prawdopodobieństwo. Krok 3: dodaj wartości ważone i otrzymaj 2.80. Krok 4: interpretuj wynik jako średnią długookresową, a nie gwarancję pojedynczej próby.",
+          "commonMistakes": "Cel tej lekcji: Modele probabilistyczne i podejmowanie decyzji — Expected Value and Long-Run Outcomes. Nie interpretuj wartości oczekiwanej jako wyniku najbardziej prawdopodobnego ani gwarantowanego. Przed porównaniem decyzji uwzględnij wszystkie istotne wyniki i ich prawdopodobieństwa.",
+          "quickSummary": "Cel tej lekcji: Modele probabilistyczne i podejmowanie decyzji — Expected Value and Long-Run Outcomes. Wypisz wyniki i prawdopodobieństwa, sprawdź poprawność rozkładu, oblicz wartość oczekiwaną lub inne miary i zinterpretuj kryterium decyzji."
+        }
+      ]
+    },
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:FOURTH:PROB-DECISION:U01:L03",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "EDU:HSS-MD.A.3 — https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_1e_%28OpenStax%29/04%3A_Discrete_Random_Variables/4.04%3A_Binomial_Distribution",
+      "outcomeCodes": [
+        "CCSS:HSS-MD.A.3"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "Probability Distributions and Expected Value",
+          "explanation": "Probability Distributions and Expected Value is an Edulytics lesson in the unit “Probability & Decision Making”. It is aligned exactly to CCSS:HSS-MD.A.3. The accepted Common Core target text for this lesson states: (+) Develop a probability distribution for a random variable defined for a sample spac e in which theoretical probabilities can be calculated; find the expected value. For example, find the theoretical probability distribution for the number of correct answers obtained by guessing on all five questions of a multiple-choice test where each question has four choices, and find the expected grade under various grading schemes. Instructional focus: Students use random variables, probability distributions, expected values, and payoff models to compare uncertain decisions. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: Probability Distributions and Expected Value. A probability distribution assigns probabilities totaling 1. Expected value is the probability-weighted average of possible values; it describes long-run mean outcome, not a guaranteed single result.",
+          "workedExamples": "Example 1: A payoff is +16 with probability 0.5 and -6 with probability 0.5. Expected value = 0.5(16) + 0.5(-6) = 5.00. Example 2: A payoff is +6 with probability 0.7 and -8 with probability 0.3. Expected value = 0.7(6) + 0.3(-8) = 1.80.",
+          "stepByStepSolutions": "Step 1: check probabilities sum to 1: 0.5+0.5=1. Step 2: weight each payoff by its probability. Step 3: add the weighted values to obtain 5.00. Step 4: interpret 5.00 as a long-run average, not a guaranteed one-trial payoff. Step 1: check probabilities sum to 1: 0.7+0.3=1. Step 2: weight each payoff by its probability. Step 3: add the weighted values to obtain 1.80. Step 4: interpret 1.80 as a long-run average, not a guaranteed one-trial payoff.",
+          "commonMistakes": "Lesson-specific focus: Probability Distributions and Expected Value. Do not interpret expected value as the most likely or guaranteed outcome. Include every relevant outcome and its probability before comparing decisions.",
+          "quickSummary": "Lesson-specific focus: Probability Distributions and Expected Value. List outcomes and probabilities, verify they form a valid distribution, compute expected values or other requested measures, and interpret the decision criterion."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Prawdopodobieństwo Distributions and Expected Value",
+          "explanation": "Lekcja „Prawdopodobieństwo Distributions and Expected Value” należy do działu „Probability & Decision Making” i jest dokładnie powiązana ze standardami CCSS:HSS-MD.A.3. Główny kierunek pracy: Uczeń wykorzystuje zmienne losowe, rozkłady prawdopodobieństwa, wartości oczekiwane i modele wypłat do porównywania decyzji obarczonych niepewnością. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Prawdopodobieństwo Distributions and Expected Value. Rozkład prawdopodobieństwa przypisuje prawdopodobieństwa sumujące się do 1. Wartość oczekiwana jest średnią ważoną możliwych wartości i opisuje średni wynik długookresowy, a nie gwarantowany wynik pojedynczej próby.",
+          "workedExamples": "Przykład 1: Wypłata wynosi +16 z prawdopodobieństwem 0.5 i -6 z prawdopodobieństwem 0.5. Wartość oczekiwana = 5.00. Przykład 2: Wypłata wynosi +6 z prawdopodobieństwem 0.7 i -8 z prawdopodobieństwem 0.3. Wartość oczekiwana = 1.80.",
+          "stepByStepSolutions": "Krok 1: prawdopodobieństwa sumują się do 1. Krok 2: pomnóż każdą wypłatę przez jej prawdopodobieństwo. Krok 3: dodaj wartości ważone i otrzymaj 5.00. Krok 4: interpretuj wynik jako średnią długookresową, a nie gwarancję pojedynczej próby. Krok 1: prawdopodobieństwa sumują się do 1. Krok 2: pomnóż każdą wypłatę przez jej prawdopodobieństwo. Krok 3: dodaj wartości ważone i otrzymaj 1.80. Krok 4: interpretuj wynik jako średnią długookresową, a nie gwarancję pojedynczej próby.",
+          "commonMistakes": "Cel tej lekcji: Prawdopodobieństwo Distributions and Expected Value. Nie interpretuj wartości oczekiwanej jako wyniku najbardziej prawdopodobnego ani gwarantowanego. Przed porównaniem decyzji uwzględnij wszystkie istotne wyniki i ich prawdopodobieństwa.",
+          "quickSummary": "Cel tej lekcji: Prawdopodobieństwo Distributions and Expected Value. Wypisz wyniki i prawdopodobieństwa, sprawdź poprawność rozkładu, oblicz wartość oczekiwaną lub inne miary i zinterpretuj kryterium decyzji."
+        }
+      ]
+    },
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:FOURTH:PROB-DECISION:U01:L04",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "EDU:HSS-MD.A.4 — https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_1e_%28OpenStax%29/04%3A_Discrete_Random_Variables/4.08%3A_Discrete_Distribution_%28Playing_Card_Experiment%29",
+      "outcomeCodes": [
+        "CCSS:HSS-MD.A.4"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "Empirical and Theoretical Probability Distributions",
+          "explanation": "Empirical and Theoretical Probability Distributions is an Edulytics lesson in the unit “Probability & Decision Making”. It is aligned exactly to CCSS:HSS-MD.A.4. The accepted Common Core target text for this lesson states: (+) Develop a probability distribution for a random variable defined for a sample spac e in which probabilities are assigned empirically; find the expected value. For example, find a current data distribution on the number of TV sets per household in the United States, and calculate the expected number of sets per household. How many TV sets would you expect to find in 100 randomly selected households? Instructional focus: Students use random variables, probability distributions, expected values, and payoff models to compare uncertain decisions. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: Empirical and Theoretical Probability Distributions. A probability distribution assigns probabilities totaling 1. Expected value is the probability-weighted average of possible values; it describes long-run mean outcome, not a guaranteed single result.",
+          "workedExamples": "Example 1: A payoff is +20 with probability 0.5 and -8 with probability 0.5. Expected value = 0.5(20) + 0.5(-8) = 6.00. Example 2: A payoff is +5 with probability 0.3 and -1 with probability 0.7. Expected value = 0.3(5) + 0.7(-1) = 0.80.",
+          "stepByStepSolutions": "Step 1: check probabilities sum to 1: 0.5+0.5=1. Step 2: weight each payoff by its probability. Step 3: add the weighted values to obtain 6.00. Step 4: interpret 6.00 as a long-run average, not a guaranteed one-trial payoff. Step 1: check probabilities sum to 1: 0.3+0.7=1. Step 2: weight each payoff by its probability. Step 3: add the weighted values to obtain 0.80. Step 4: interpret 0.80 as a long-run average, not a guaranteed one-trial payoff.",
+          "commonMistakes": "Lesson-specific focus: Empirical and Theoretical Probability Distributions. Do not interpret expected value as the most likely or guaranteed outcome. Include every relevant outcome and its probability before comparing decisions.",
+          "quickSummary": "Lesson-specific focus: Empirical and Theoretical Probability Distributions. List outcomes and probabilities, verify they form a valid distribution, compute expected values or other requested measures, and interpret the decision criterion."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Empirical and Theoretical Prawdopodobieństwo Distributions",
+          "explanation": "Lekcja „Empirical and Theoretical Prawdopodobieństwo Distributions” należy do działu „Probability & Decision Making” i jest dokładnie powiązana ze standardami CCSS:HSS-MD.A.4. Główny kierunek pracy: Uczeń wykorzystuje zmienne losowe, rozkłady prawdopodobieństwa, wartości oczekiwane i modele wypłat do porównywania decyzji obarczonych niepewnością. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Empirical and Theoretical Prawdopodobieństwo Distributions. Rozkład prawdopodobieństwa przypisuje prawdopodobieństwa sumujące się do 1. Wartość oczekiwana jest średnią ważoną możliwych wartości i opisuje średni wynik długookresowy, a nie gwarantowany wynik pojedynczej próby.",
+          "workedExamples": "Przykład 1: Wypłata wynosi +20 z prawdopodobieństwem 0.5 i -8 z prawdopodobieństwem 0.5. Wartość oczekiwana = 6.00. Przykład 2: Wypłata wynosi +5 z prawdopodobieństwem 0.3 i -1 z prawdopodobieństwem 0.7. Wartość oczekiwana = 0.80.",
+          "stepByStepSolutions": "Krok 1: prawdopodobieństwa sumują się do 1. Krok 2: pomnóż każdą wypłatę przez jej prawdopodobieństwo. Krok 3: dodaj wartości ważone i otrzymaj 6.00. Krok 4: interpretuj wynik jako średnią długookresową, a nie gwarancję pojedynczej próby. Krok 1: prawdopodobieństwa sumują się do 1. Krok 2: pomnóż każdą wypłatę przez jej prawdopodobieństwo. Krok 3: dodaj wartości ważone i otrzymaj 0.80. Krok 4: interpretuj wynik jako średnią długookresową, a nie gwarancję pojedynczej próby.",
+          "commonMistakes": "Cel tej lekcji: Empirical and Theoretical Prawdopodobieństwo Distributions. Nie interpretuj wartości oczekiwanej jako wyniku najbardziej prawdopodobnego ani gwarantowanego. Przed porównaniem decyzji uwzględnij wszystkie istotne wyniki i ich prawdopodobieństwa.",
+          "quickSummary": "Cel tej lekcji: Empirical and Theoretical Prawdopodobieństwo Distributions. Wypisz wyniki i prawdopodobieństwa, sprawdź poprawność rozkładu, oblicz wartość oczekiwaną lub inne miary i zinterpretuj kryterium decyzji."
+        }
+      ]
+    },
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:FOURTH:PROB-DECISION:U01:L05",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "EDU:HSS-MD.B.5 — https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_1e_%28OpenStax%29/04%3A_Discrete_Random_Variables/4.03%3A_Mean_or_Expected_Value_and_Standard_Deviation",
+      "outcomeCodes": [
+        "CCSS:HSS-MD.B.5"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "Expected Value in Games and Decisions",
+          "explanation": "Expected Value in Games and Decisions is an Edulytics lesson in the unit “Probability & Decision Making”. It is aligned exactly to CCSS:HSS-MD.B.5. The accepted Common Core target text for this lesson states: (+) Weigh the possible outcomes of a decision by assigning probabilities to pa yoff values and finding expected values. a. Find the expected payoff for a game of chance. For example, find the expected winnings from a state lottery ticket or a game at a fast-food restaurant. b. Evaluate and compare strategies on the basis of expected values. For example, compare a high-deductible versus a low-deductible automobile insurance policy using various, but reasonable, chances of having a minor or a major accident. Instructional focus: Students use random variables, probability distributions, expected values, and payoff models to compare uncertain decisions. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: Expected Value in Games and Decisions. A probability distribution assigns probabilities totaling 1. Expected value is the probability-weighted average of possible values; it describes long-run mean outcome, not a guaranteed single result.",
+          "workedExamples": "Example 1: A payoff is +5 with probability 0.5 and -2 with probability 0.5. Expected value = 0.5(5) + 0.5(-2) = 1.50. Example 2: A payoff is +8 with probability 0.5 and -1 with probability 0.5. Expected value = 0.5(8) + 0.5(-1) = 3.50.",
+          "stepByStepSolutions": "Step 1: check probabilities sum to 1: 0.5+0.5=1. Step 2: weight each payoff by its probability. Step 3: add the weighted values to obtain 1.50. Step 4: interpret 1.50 as a long-run average, not a guaranteed one-trial payoff. Step 1: check probabilities sum to 1: 0.5+0.5=1. Step 2: weight each payoff by its probability. Step 3: add the weighted values to obtain 3.50. Step 4: interpret 3.50 as a long-run average, not a guaranteed one-trial payoff.",
+          "commonMistakes": "Lesson-specific focus: Expected Value in Games and Decisions. Do not interpret expected value as the most likely or guaranteed outcome. Include every relevant outcome and its probability before comparing decisions.",
+          "quickSummary": "Lesson-specific focus: Expected Value in Games and Decisions. List outcomes and probabilities, verify they form a valid distribution, compute expected values or other requested measures, and interpret the decision criterion."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Modele probabilistyczne i podejmowanie decyzji — Expected Value in Games and Decisions",
+          "explanation": "Lekcja „Modele probabilistyczne i podejmowanie decyzji — Expected Value in Games and Decisions” należy do działu „Probability & Decision Making” i jest dokładnie powiązana ze standardami CCSS:HSS-MD.B.5. Główny kierunek pracy: Uczeń wykorzystuje zmienne losowe, rozkłady prawdopodobieństwa, wartości oczekiwane i modele wypłat do porównywania decyzji obarczonych niepewnością. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Modele probabilistyczne i podejmowanie decyzji — Expected Value in Games and Decisions. Rozkład prawdopodobieństwa przypisuje prawdopodobieństwa sumujące się do 1. Wartość oczekiwana jest średnią ważoną możliwych wartości i opisuje średni wynik długookresowy, a nie gwarantowany wynik pojedynczej próby.",
+          "workedExamples": "Przykład 1: Wypłata wynosi +5 z prawdopodobieństwem 0.5 i -2 z prawdopodobieństwem 0.5. Wartość oczekiwana = 1.50. Przykład 2: Wypłata wynosi +8 z prawdopodobieństwem 0.5 i -1 z prawdopodobieństwem 0.5. Wartość oczekiwana = 3.50.",
+          "stepByStepSolutions": "Krok 1: prawdopodobieństwa sumują się do 1. Krok 2: pomnóż każdą wypłatę przez jej prawdopodobieństwo. Krok 3: dodaj wartości ważone i otrzymaj 1.50. Krok 4: interpretuj wynik jako średnią długookresową, a nie gwarancję pojedynczej próby. Krok 1: prawdopodobieństwa sumują się do 1. Krok 2: pomnóż każdą wypłatę przez jej prawdopodobieństwo. Krok 3: dodaj wartości ważone i otrzymaj 3.50. Krok 4: interpretuj wynik jako średnią długookresową, a nie gwarancję pojedynczej próby.",
+          "commonMistakes": "Cel tej lekcji: Modele probabilistyczne i podejmowanie decyzji — Expected Value in Games and Decisions. Nie interpretuj wartości oczekiwanej jako wyniku najbardziej prawdopodobnego ani gwarantowanego. Przed porównaniem decyzji uwzględnij wszystkie istotne wyniki i ich prawdopodobieństwa.",
+          "quickSummary": "Cel tej lekcji: Modele probabilistyczne i podejmowanie decyzji — Expected Value in Games and Decisions. Wypisz wyniki i prawdopodobieństwa, sprawdź poprawność rozkładu, oblicz wartość oczekiwaną lub inne miary i zinterpretuj kryterium decyzji."
+        }
+      ]
+    }
+  ]
+}
