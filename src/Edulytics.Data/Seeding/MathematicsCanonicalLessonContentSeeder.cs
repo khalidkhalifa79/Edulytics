@@ -306,6 +306,11 @@ public sealed class MathematicsCanonicalLessonContentSeeder
                     group => group.ToArray());
 
         var now = DateTime.UtcNow;
+        var isApprovedCommonCoreReplacement =
+            document.PackCode == MathematicsCurriculumPackRegistry.CommonCoreCode &&
+            document.ContentVersion == "phase29-source-faithful-en-final-v1" &&
+            document.AcademicLanguage == "en" &&
+            !document.CurriculumTranslationRequired;
 
         foreach (var sourceLesson in document.Lessons)
         {
@@ -386,11 +391,17 @@ public sealed class MathematicsCanonicalLessonContentSeeder
                         document.ContentVersion,
                         StringComparison.Ordinal))
                 {
-                    throw new InvalidOperationException(
-                        $"Refusing silent canonical content-version replacement for " +
-                        $"{sourceLesson.LessonCode}. " +
-                        $"Existing={content.ContentVersion}, " +
-                        $"incoming={document.ContentVersion}.");
+                    if (!isApprovedCommonCoreReplacement)
+                    {
+                        throw new InvalidOperationException(
+                            $"Refusing silent canonical content-version replacement for " +
+                            $"{sourceLesson.LessonCode}. " +
+                            $"Existing={content.ContentVersion}, " +
+                            $"incoming={document.ContentVersion}.");
+                    }
+
+                    content.ContentVersion = document.ContentVersion;
+                    content.UpdatedAtUtc = now;
                 }
 
                 if ((int)content.Status >
@@ -443,11 +454,17 @@ public sealed class MathematicsCanonicalLessonContentSeeder
 
             if (unexpected.Length != 0)
             {
-                throw new InvalidOperationException(
-                    $"Canonical translation drift for " +
-                    $"{sourceLesson.LessonCode}. " +
-                    $"Existing unexpected culture(s): " +
-                    $"{string.Join(", ", unexpected)}.");
+                if (!isApprovedCommonCoreReplacement)
+                {
+                    throw new InvalidOperationException(
+                        $"Canonical translation drift for " +
+                        $"{sourceLesson.LessonCode}. " +
+                        $"Existing unexpected culture(s): " +
+                        $"{string.Join(", ", unexpected)}.");
+                }
+
+                _db.CurriculumLessonContentTranslations.RemoveRange(
+                    currentTranslations.Where(x => unexpected.Contains(x.CultureCode)));
             }
 
             var existingByCulture =
@@ -462,10 +479,24 @@ public sealed class MathematicsCanonicalLessonContentSeeder
                         incoming.CultureCode,
                         out var current))
                 {
-                    EnsureTranslationMatches(
-                        sourceLesson.LessonCode,
-                        current,
-                        incoming);
+                    if (isApprovedCommonCoreReplacement)
+                    {
+                        current.Title = incoming.Title;
+                        current.Explanation = incoming.Explanation;
+                        current.KeyConceptsAndRules = incoming.KeyConceptsAndRules;
+                        current.WorkedExamples = incoming.WorkedExamples;
+                        current.StepByStepSolutions = incoming.StepByStepSolutions;
+                        current.CommonMistakes = incoming.CommonMistakes;
+                        current.QuickSummary = incoming.QuickSummary;
+                        current.UpdatedAtUtc = now;
+                    }
+                    else
+                    {
+                        EnsureTranslationMatches(
+                            sourceLesson.LessonCode,
+                            current,
+                            incoming);
+                    }
 
                     continue;
                 }

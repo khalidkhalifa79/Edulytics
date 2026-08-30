@@ -54,7 +54,7 @@ These lessons must receive the Phase 29 canonical body:
 - Step-by-Step Solutions;
 - Common Mistakes;
 - Quick Summary;
-- required translations;
+- canonical English academic content;
 - provenance;
 - mathematical verification;
 - curriculum review;
@@ -74,13 +74,10 @@ Supporting lessons:
 
 - remain preserved in the pedagogical sequence and source provenance;
 - do not receive fabricated official mappings;
-- are not standalone canonical-content rollout targets;
-- are not counted in the standalone Production Ready denominator;
-- are not exposed to students as independent curriculum lessons under the
-  current Lesson Content contract;
-- may contribute pedagogical context, prerequisite work, review, warm-up,
-  synthesis, or supporting material to adjacent formally aligned canonical
-  lessons where academically appropriate.
+- receive complete canonical English bodies;
+- are counted in overall Content Ready coverage;
+- appear in staff and enrolled-student navigation and open in both readers;
+- are clearly labelled Supporting and expose no fabricated official outcome.
 
 ## Production Ready denominator
 
@@ -92,7 +89,7 @@ For Common Core Phase 29 content rollout:
 
 Common Core content closure therefore requires:
 
-**1,466 / 1,466 standalone canonical targets Production Ready**
+**1,560 / 1,560 lessons Content Ready**
 
 plus:
 
@@ -102,12 +99,15 @@ with:
 
 - zero fabricated official mappings;
 - zero unexplained zero-formal lessons;
-- zero missing required body sections among standalone targets.
+- zero missing required body sections among all 1,560 lessons.
+
+The separate alignment classification is 1,466 Officially aligned and 94
+Supporting. It must not replace 1,560 as the readiness denominator.
 
 ## Phase boundary
 
 This policy resolves the zero-formal lesson contradiction before full
 Common Core canonical-content generation.
 
-Phase 30 remains blocked until the full Phase 29 rollout and final
-cross-curriculum QA are complete.
+Phase 29 is a LOCAL CLOSURE CANDIDATE subject to the external gates recorded
+under `docs/phase29/`. Phase 30 is NOT STARTED.

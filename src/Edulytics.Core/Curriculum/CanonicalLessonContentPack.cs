@@ -36,6 +36,12 @@ public sealed class CanonicalLessonContentPackDocument
     public string PackCode { get; set; } = string.Empty;
     public string VersionCode { get; set; } = string.Empty;
     public string ContentVersion { get; set; } = string.Empty;
+    /// <summary>
+    /// BCP-47 language of the curriculum's canonical academic content. This
+    /// is deliberately independent from the application's UI culture.
+    /// </summary>
+    public string AcademicLanguage { get; set; } = string.Empty;
+    public bool CurriculumTranslationRequired { get; set; }
 
     // Curriculum authority/provenance.
     // TargetCurriculumPeriod is what Edulytics is serving.
@@ -79,6 +85,20 @@ public sealed class CanonicalLessonContentPackLesson
         LessonTitleProvenance.LegacyUnspecified;
     public string TitleSourceReference { get; set; } = string.Empty;
     public List<string> OutcomeCodes { get; set; } = [];
+    public bool IsSupporting { get; set; }
+    public string SourceUrl { get; set; } = string.Empty;
+    public string SourceLocator { get; set; } = string.Empty;
+    public string SourceTitle { get; set; } = string.Empty;
+    public string SourcePublisher { get; set; } = string.Empty;
+    public string SourceEdition { get; set; } = string.Empty;
+    public string SourceRights { get; set; } = string.Empty;
+    public string SourceSha256 { get; set; } = string.Empty;
+    public string CanonicalBodySha256 { get; set; } = string.Empty;
+    public string SourceVerifiedAtUtc { get; set; } = string.Empty;
+    public string RetrievalUrl { get; set; } = string.Empty;
+    public string RetrievalChannel { get; set; } = string.Empty;
+    public string RetrievalTimestamp { get; set; } = string.Empty;
+    public string AdaptationStatus { get; set; } = string.Empty;
     public List<CanonicalLessonContentPackTranslation> Translations { get; set; } = [];
 }
 
@@ -103,13 +123,6 @@ public static class CanonicalLessonContentPackContract
             RegexOptions.CultureInvariant |
             RegexOptions.Compiled);
 
-    private static readonly HashSet<string> SupportedCultures =
-        new(StringComparer.Ordinal)
-        {
-            "en",
-            "pl"
-        };
-
     public static void Validate(CanonicalLessonContentPackDocument document)
     {
         MathematicsCurriculumPackRegistry.Validate();
@@ -126,6 +139,10 @@ public static class CanonicalLessonContentPackContract
 
         Require(document.VersionCode, "VersionCode");
         Require(document.ContentVersion, "ContentVersion");
+        Require(document.AcademicLanguage, "AcademicLanguage");
+
+        if (!Regex.IsMatch(document.AcademicLanguage, @"^[a-z]{2,3}(?:-[A-Z]{2})?$"))
+            throw new InvalidOperationException("AcademicLanguage must be a normalized BCP-47 language tag.");
 
         Require(
             document.TargetCurriculumPeriod,
@@ -263,11 +280,12 @@ public static class CanonicalLessonContentPackContract
                 throw new InvalidOperationException(
                     $"Duplicate LessonCode: {lesson.LessonCode}.");
 
-            if (lesson.OutcomeCodes.Count == 0 ||
+            if ((!lesson.IsSupporting && lesson.OutcomeCodes.Count == 0) ||
+                (lesson.IsSupporting && lesson.OutcomeCodes.Count != 0) ||
                 lesson.OutcomeCodes.Any(string.IsNullOrWhiteSpace))
             {
                 throw new InvalidOperationException(
-                    $"Lesson {lesson.LessonCode} requires at least one exact OutcomeCode.");
+                    $"Lesson {lesson.LessonCode} must have exact OutcomeCodes when aligned and zero OutcomeCodes when Supporting.");
             }
 
             if (lesson.OutcomeCodes.Count !=
@@ -288,12 +306,6 @@ public static class CanonicalLessonContentPackContract
             foreach (var translation in lesson.Translations)
             {
                 Require(translation.CultureCode, "CultureCode");
-
-                if (!SupportedCultures.Contains(translation.CultureCode))
-                {
-                    throw new InvalidOperationException(
-                        $"Unsupported culture {translation.CultureCode} in {lesson.LessonCode}.");
-                }
 
                 if (!cultures.Add(translation.CultureCode))
                 {
@@ -316,10 +328,10 @@ public static class CanonicalLessonContentPackContract
             }
 
             if (document.Status == CanonicalLessonContentStatus.Published &&
-                !cultures.SetEquals(SupportedCultures))
+                !cultures.Contains(document.AcademicLanguage))
             {
                 throw new InvalidOperationException(
-                    $"Published lesson {lesson.LessonCode} requires complete English and Polish content.");
+                    $"Published lesson {lesson.LessonCode} requires canonical academic content in {document.AcademicLanguage}.");
             }
         }
     }

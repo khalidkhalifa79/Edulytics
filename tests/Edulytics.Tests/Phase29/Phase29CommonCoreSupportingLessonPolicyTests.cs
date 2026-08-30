@@ -230,7 +230,7 @@ public sealed class
 
     [Fact]
     public void
-        ProductionReadyRequiresPublishedAndOfficialAlignment()
+        ProductionReadyIncludesPublishedSupportingContent()
     {
         Assert.True(
             LessonContentPolicy
@@ -240,7 +240,7 @@ public sealed class
                         .Published,
                     true));
 
-        Assert.False(
+        Assert.True(
             LessonContentPolicy
                 .IsProductionReady(
                     Core.Enums

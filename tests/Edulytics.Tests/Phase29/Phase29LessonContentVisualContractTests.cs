@@ -87,9 +87,20 @@ public sealed class
             "lesson-content-row--supporting",
             index);
 
-        Assert.DoesNotContain(
+        var compactIndex =
+            string.Join(
+                " ",
+                index.Split(
+                    (char[]?)null,
+                    StringSplitOptions.RemoveEmptyEntries));
+
+        Assert.Contains(
             "@group.ProductionReadyLessons / @group.TotalLessons",
-            index);
+            compactIndex);
+
+        Assert.DoesNotContain(
+            "@group.ProductionReadyLessons / @standaloneCount",
+            compactIndex);
 
         Assert.Contains(
             "SplitStructuredText",

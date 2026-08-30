@@ -13,20 +13,34 @@
 
 <div class="student-lesson-detail-meta">
     <span>@L["PublishedOn"]: @Model.PublishedAtUtc.ToString("yyyy-MM-dd")</span>
+    @if (Model.IsSupporting)
+    {
+        <span class="lesson-content-status lesson-content-status--supporting">@L["SupportingLesson"]</span>
+    }
 </div>
 
-<section class="student-lesson-content-section">
-    <h2>@L["AlignedOutcomes"]</h2>
-    <div class="student-outcome-list">
-        @foreach (var outcome in Model.Outcomes)
-        {
-            <article class="student-outcome-item">
-                <strong>@outcome.Code</strong>
-                <span>@outcome.Description</span>
-            </article>
-        }
-    </div>
-</section>
+@if (Model.IsSupporting)
+{
+    <section class="lesson-supporting-message">
+        <h2>@L["SupportingLesson"]</h2>
+        <p>@L["SupportingLessonHelp"]</p>
+    </section>
+}
+else
+{
+    <section class="student-lesson-content-section">
+        <h2>@L["AlignedOutcomes"]</h2>
+        <div class="student-outcome-list">
+            @foreach (var outcome in Model.Outcomes)
+            {
+                <article class="student-outcome-item">
+                    <strong>@outcome.Code</strong>
+                    <span>@outcome.Description</span>
+                </article>
+            }
+        </div>
+    </section>
+}
 
 <section class="student-lesson-content-section">
     <h2>@L["Explanation"]</h2>

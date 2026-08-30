@@ -25,22 +25,22 @@ public static class LessonContentPolicy
         CanonicalLessonContentStatus.Published;
 
     /// <summary>
-    /// A pedagogical lesson is a standalone canonical-content target only
-    /// when it has at least one exact accepted official outcome/standard.
-    ///
-    /// A zero-formal lesson may still be a valid source-derived supporting
-    /// lesson, but that classification must first be proven against the
-    /// accepted source blueprint. We never invent an official mapping merely
-    /// to make a supporting lesson independently publishable.
+    /// Exact accepted mappings distinguish aligned lessons from Supporting
+    /// lessons. Both are valid canonical-content targets; Supporting lessons
+    /// deliberately have no independent official OutcomeCodes.
     /// </summary>
     public static bool IsStandaloneCanonicalTarget(
         int officialOutcomeCount) =>
         officialOutcomeCount > 0;
 
+    public static bool IsSupporting(int officialOutcomeCount) =>
+        officialOutcomeCount == 0;
+
+    public static bool IsCanonicalTarget(int officialOutcomeCount) =>
+        officialOutcomeCount >= 0;
+
     public static bool IsProductionReady(
         CanonicalLessonContentStatus? status,
         bool hasOfficialAlignment) =>
-        status ==
-            CanonicalLessonContentStatus.Published &&
-        hasOfficialAlignment;
+        status == CanonicalLessonContentStatus.Published;
 }
