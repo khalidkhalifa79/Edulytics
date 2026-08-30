@@ -8630,3 +8630,163 @@ a.lesson-content-row:hover
         padding: .6rem;
     }
 }
+
+/* phase29-step-number-layout-v5 */
+
+/*
+ * Number and instructional text have independent grid columns.
+ * The number can therefore never cover the first character.
+ */
+
+.lesson-step-list {
+    list-style: none !important;
+    counter-reset: edulytics-step;
+    margin: 0 !important;
+    padding: 1.6rem 1.75rem 1.8rem !important;
+}
+
+.lesson-step-list > li {
+    counter-increment: edulytics-step;
+    position: relative !important;
+
+    display: grid !important;
+    grid-template-columns:
+        2.25rem
+        minmax(0, 1fr) !important;
+
+    column-gap: 1rem !important;
+    align-items: start !important;
+
+    margin: 0 !important;
+    padding: 0 0 1.35rem !important;
+
+    border: 0 !important;
+    border-bottom: 1px solid #edf0f5 !important;
+}
+
+.lesson-step-list > li + li {
+    padding-top: 1.25rem !important;
+}
+
+.lesson-step-list > li:last-child {
+    padding-bottom: 0 !important;
+    border-bottom: 0 !important;
+}
+
+.lesson-step-list > li::marker {
+    content: "" !important;
+}
+
+/*
+ * Explicit first grid column for the blue step number.
+ * Override any previous absolute-position implementation.
+ */
+.lesson-step-list > li::before {
+    content: counter(edulytics-step) !important;
+
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+
+    position: static !important;
+    inset: auto !important;
+    transform: none !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+    min-width: 2.25rem !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: 0 !important;
+    border-radius: 999px !important;
+
+    background: #3157d5 !important;
+    color: #fff !important;
+
+    font-size: .88rem !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+
+    box-sizing: border-box !important;
+    z-index: 2 !important;
+}
+
+/*
+ * All actual step content is forced into column two.
+ */
+.lesson-step-list > li > * {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    transform: none !important;
+}
+
+.lesson-step-list > li > .lesson-reader-text {
+    padding:
+        .2rem
+        0
+        0
+        0 !important;
+
+    line-height: 1.72 !important;
+}
+
+/*
+ * Timeline line remains behind the number,
+ * but cannot enter the content column.
+ */
+.lesson-step-list > li::after {
+    content: "" !important;
+
+    position: absolute !important;
+    left: 1.1rem !important;
+    top: 2.55rem !important;
+    bottom: .2rem !important;
+
+    width: 1px !important;
+    height: auto !important;
+
+    background: #dbe3f4 !important;
+    transform: none !important;
+    z-index: 0 !important;
+}
+
+.lesson-step-list > li:last-child::after {
+    display: none !important;
+}
+
+@media (max-width: 720px) {
+    .lesson-step-list {
+        padding:
+            1.25rem
+            1rem
+            1.4rem !important;
+    }
+
+    .lesson-step-list > li {
+        grid-template-columns:
+            2rem
+            minmax(0, 1fr) !important;
+
+        column-gap: .8rem !important;
+    }
+
+    .lesson-step-list > li::before {
+        width: 2rem !important;
+        height: 2rem !important;
+        min-width: 2rem !important;
+        font-size: .8rem !important;
+    }
+
+    .lesson-step-list > li::after {
+        left: .98rem !important;
+        top: 2.25rem !important;
+    }
+}
