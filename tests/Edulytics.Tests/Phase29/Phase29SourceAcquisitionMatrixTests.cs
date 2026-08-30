@@ -236,7 +236,7 @@ public sealed class Phase29SourceAcquisitionMatrixTests
     }
 
     [Fact]
-    public void CommonCoreGradesOneToEightAreResolvedKindergartenIsOutOfScopeAndNextTargetIsGrade1()
+    public void CommonCoreGradesOneToEightAreResolvedKindergartenIsOutOfScopeAndNextTargetAdvancesToEnglandYear1()
     {
         using var document = Load();
 
@@ -304,12 +304,12 @@ public sealed class Phase29SourceAcquisitionMatrixTests
                     "nextResearchAndContentTarget");
 
         Assert.Equal(
-            MathematicsCurriculumPackRegistry.CommonCoreCode,
+            MathematicsCurriculumPackRegistry.EnglandCode,
             next.GetProperty("packCode")
                 .GetString());
 
         Assert.Equal(
-            "Grade 1",
+            "Year 1",
             next.GetProperty("nativeLevel")
                 .GetString());
     }

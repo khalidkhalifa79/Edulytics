@@ -1,0 +1,180 @@
+{
+  "packCode": "US-CCSS-MATH",
+  "versionCode": "CCSSM-2010",
+  "contentVersion": "ccss-hs-adv-trig-geo-p29-v1",
+  "sourcePolicyVersion": 2,
+  "targetCurriculumPeriod": "2026-2027",
+  "sourceCurriculumPeriod": "Common Core State Standards 2010",
+  "sourceVersionLabel": "Common Core State Standards for Mathematics (2010)",
+  "sourceAuthority": "NGA Center / CCSSO",
+  "sourceUrl": "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf",
+  "sourceCheckedAtUtc": "2026-08-29T00:00:00Z",
+  "sourceResolution": "CurrentOfficial",
+  "fallbackReason": "",
+  "pedagogicalSourceType": "OpenEducationalResource",
+  "pedagogicalSourceTitle": "Mathematics Vision Project",
+  "pedagogicalSourcePublisher": "Mathematics Vision Project",
+  "pedagogicalSourceEdition": "Phase 29 locked source",
+  "pedagogicalSourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf",
+  "pedagogicalSourceCheckedAtUtc": "2026-08-29T00:00:00Z",
+  "pedagogicalSourceSelectionReason": "Phase 29 accepted High School pedagogical source strategy.",
+  "pedagogicalSourceSelectionEvidence": "Immutable Phase 29 High School source, placement, evidence, sequence and Blueprint V2 contract locks.",
+  "pedagogicalSourceRightsNote": "Use restricted to accepted Phase 29 commercial-safe license lock.",
+  "reviewMethod": "Exact blueprint-to-Standard alignment validation, approved-license provenance lock, deterministic domain-specific lesson authoring, machine-recomputed worked-example verification, bilingual structural QA, and fail-closed unsupported-family detection.",
+  "status": "Published",
+  "reviewedBy": "Edulytics Curriculum Review — deterministic Phase 29 QA",
+  "reviewEvidence": "Blueprint US-CCSS-MATH:HS:FOURTH:ADV-TRIG-GEO (bd88cf7d5febf95a1af6e41ffdd26985fd5ce6ffcac8f212d5f109f57bf527f1) contains 5 source-driven pedagogical lessons. Exactly 5 have accepted formal Common Core targets and are included in this canonical pack; 0 source-valid supporting-only lessons are deliberately excluded. Each included lesson was bound to its exact blueprint OutcomeCodes/FormalTargets and official CCSS node text. The deterministic Phase 29 authoring pipeline has no generic fallback: unsupported standard families stop generation. Worked examples and step-by-step answers are produced from computed operands and recomputed results, bilingual body fields are structurally audited, and source provenance remains attached to every lesson title.",
+  "lessons": [
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:FOURTH:ADV-TRIG-GEO:U01:L01",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "MVP-MATH3:M07:T05 — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_3.pdf",
+      "outcomeCodes": [
+        "CCSS:HSF-TF.A.3",
+        "CCSS:HSF-TF.A.4"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "Maintaining Your Identity",
+          "explanation": "Maintaining Your Identity is an Edulytics lesson in the unit “Advanced Trigonometry & Geometry”. It is aligned exactly to CCSS:HSF-TF.A.3, CCSS:HSF-TF.A.4. The accepted Common Core target text for this lesson states: (+) Use special triangles to determine geometrically the values of sine, cosine, tangent f or π/3, π/4 and π/6, and use the unit circle to express the values of sine, cosine, and tangent for π–x, π+x, and 2π–x in terms of their values for x, where x is any real number. (+) Use the unit circle to explain symmetry (odd and even) and periodicity of trigonometric functions. Instructional focus: Students connect angle measure, the unit circle, right-triangle ratios, periodic behavior, and trigonometric identities. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: Maintaining Your Identity. On the unit circle, cosine and sine give x- and y-coordinates. Radians connect angle measure with arc length. Trigonometric identities must be transformed through valid algebraic steps and domain conditions.",
+          "workedExamples": "Example 1: In a right triangle with legs 9 and 4, the hypotenuse is √(9²+4²)≈9.849. For the angle opposite the side 9, sin θ≈0.914 and cos θ≈0.406. Example 2: In a right triangle with legs 3 and 8, the hypotenuse is √(3²+8²)≈8.544. For the angle opposite the side 3, sin θ≈0.351 and cos θ≈0.936.",
+          "stepByStepSolutions": "Step 1: use the Pythagorean theorem: c=√(81+16)≈9.849. Step 2: relative to the chosen angle, opposite=9, adjacent=4. Step 3: sin θ=9/9.849≈0.914; cos θ=4/9.849≈0.406. Step 4: verify both ratios are between 0 and 1. Step 1: use the Pythagorean theorem: c=√(9+64)≈8.544. Step 2: relative to the chosen angle, opposite=3, adjacent=8. Step 3: sin θ=3/8.544≈0.351; cos θ=8/8.544≈0.936. Step 4: verify both ratios are between 0 and 1.",
+          "commonMistakes": "Lesson-specific focus: Maintaining Your Identity. Do not mix degrees and radians without conversion. Do not cancel trigonometric sums term by term. Check quadrant signs and domain restrictions.",
+          "quickSummary": "Lesson-specific focus: Maintaining Your Identity. Identify the angle representation, use the appropriate triangle or unit-circle relationship, calculate, and check sign, period, and units."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Funkcje trygonometryczne — Maintaining Your Identity",
+          "explanation": "Lekcja „Funkcje trygonometryczne — Maintaining Your Identity” należy do działu „Advanced Trigonometry & Geometry” i jest dokładnie powiązana ze standardami CCSS:HSF-TF.A.3, CCSS:HSF-TF.A.4. Główny kierunek pracy: Uczeń łączy miarę kąta, okrąg jednostkowy, stosunki w trójkącie prostokątnym, okresowość i tożsamości trygonometryczne. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Funkcje trygonometryczne — Maintaining Your Identity. Na okręgu jednostkowym cosinus i sinus są odpowiednio współrzędnymi x i y. Radiany łączą miarę kąta z długością łuku. Tożsamości trygonometryczne przekształcaj poprawnymi krokami algebraicznymi i z uwzględnieniem dziedziny.",
+          "workedExamples": "Przykład 1: W trójkącie prostokątnym o przyprostokątnych 9 i 4 przeciwprostokątna ma długość √(9²+4²)≈9.849. Dla kąta naprzeciw boku 9: sin θ≈0.914, cos θ≈0.406. Przykład 2: W trójkącie prostokątnym o przyprostokątnych 3 i 8 przeciwprostokątna ma długość √(3²+8²)≈8.544. Dla kąta naprzeciw boku 3: sin θ≈0.351, cos θ≈0.936.",
+          "stepByStepSolutions": "Krok 1: z twierdzenia Pitagorasa c=√(81+16)≈9.849. Krok 2: względem kąta bok naprzeciw ma 9, a przyległy 4. Krok 3: oblicz sin θ≈0.914 i cos θ≈0.406. Krok 4: oba wyniki powinny leżeć między 0 i 1. Krok 1: z twierdzenia Pitagorasa c=√(9+64)≈8.544. Krok 2: względem kąta bok naprzeciw ma 3, a przyległy 8. Krok 3: oblicz sin θ≈0.351 i cos θ≈0.936. Krok 4: oba wyniki powinny leżeć między 0 i 1.",
+          "commonMistakes": "Cel tej lekcji: Funkcje trygonometryczne — Maintaining Your Identity. Nie mieszaj stopni i radianów bez przeliczenia. Nie skracaj składników sum trygonometrycznych. Sprawdzaj znaki w ćwiartkach i ograniczenia dziedziny.",
+          "quickSummary": "Cel tej lekcji: Funkcje trygonometryczne — Maintaining Your Identity. Rozpoznaj sposób podania kąta, użyj odpowiedniej relacji w trójkącie lub na okręgu jednostkowym, oblicz i sprawdź znak, okres oraz jednostki."
+        }
+      ]
+    },
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:FOURTH:ADV-TRIG-GEO:U01:L02",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "MVP-MATH3:M07:T08H — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_3.pdf",
+      "outcomeCodes": [
+        "CCSS:HSF-TF.B.6"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "The Amazing Inverse Trig Function Race",
+          "explanation": "The Amazing Inverse Trig Function Race is an Edulytics lesson in the unit “Advanced Trigonometry & Geometry”. It is aligned exactly to CCSS:HSF-TF.B.6. The accepted Common Core target text for this lesson states: (+) Understand that restricting a trigonometric function to a domain on which it is alw ays increasing or always decreasing allows its inverse to be constructed. Instructional focus: Students connect angle measure, the unit circle, right-triangle ratios, periodic behavior, and trigonometric identities. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: The Amazing Inverse Trig Function Race. On the unit circle, cosine and sine give x- and y-coordinates. Radians connect angle measure with arc length. Trigonometric identities must be transformed through valid algebraic steps and domain conditions.",
+          "workedExamples": "Example 1: In a right triangle with legs 5 and 6, the hypotenuse is √(5²+6²)≈7.810. For the angle opposite the side 5, sin θ≈0.640 and cos θ≈0.768. Example 2: In a right triangle with legs 9 and 8, the hypotenuse is √(9²+8²)≈12.042. For the angle opposite the side 9, sin θ≈0.747 and cos θ≈0.664.",
+          "stepByStepSolutions": "Step 1: use the Pythagorean theorem: c=√(25+36)≈7.810. Step 2: relative to the chosen angle, opposite=5, adjacent=6. Step 3: sin θ=5/7.810≈0.640; cos θ=6/7.810≈0.768. Step 4: verify both ratios are between 0 and 1. Step 1: use the Pythagorean theorem: c=√(81+64)≈12.042. Step 2: relative to the chosen angle, opposite=9, adjacent=8. Step 3: sin θ=9/12.042≈0.747; cos θ=8/12.042≈0.664. Step 4: verify both ratios are between 0 and 1.",
+          "commonMistakes": "Lesson-specific focus: The Amazing Inverse Trig Function Race. Do not mix degrees and radians without conversion. Do not cancel trigonometric sums term by term. Check quadrant signs and domain restrictions.",
+          "quickSummary": "Lesson-specific focus: The Amazing Inverse Trig Function Race. Identify the angle representation, use the appropriate triangle or unit-circle relationship, calculate, and check sign, period, and units."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "The Amazing Inverse Trig Funkcja Race",
+          "explanation": "Lekcja „The Amazing Inverse Trig Funkcja Race” należy do działu „Advanced Trigonometry & Geometry” i jest dokładnie powiązana ze standardami CCSS:HSF-TF.B.6. Główny kierunek pracy: Uczeń łączy miarę kąta, okrąg jednostkowy, stosunki w trójkącie prostokątnym, okresowość i tożsamości trygonometryczne. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: The Amazing Inverse Trig Funkcja Race. Na okręgu jednostkowym cosinus i sinus są odpowiednio współrzędnymi x i y. Radiany łączą miarę kąta z długością łuku. Tożsamości trygonometryczne przekształcaj poprawnymi krokami algebraicznymi i z uwzględnieniem dziedziny.",
+          "workedExamples": "Przykład 1: W trójkącie prostokątnym o przyprostokątnych 5 i 6 przeciwprostokątna ma długość √(5²+6²)≈7.810. Dla kąta naprzeciw boku 5: sin θ≈0.640, cos θ≈0.768. Przykład 2: W trójkącie prostokątnym o przyprostokątnych 9 i 8 przeciwprostokątna ma długość √(9²+8²)≈12.042. Dla kąta naprzeciw boku 9: sin θ≈0.747, cos θ≈0.664.",
+          "stepByStepSolutions": "Krok 1: z twierdzenia Pitagorasa c=√(25+36)≈7.810. Krok 2: względem kąta bok naprzeciw ma 5, a przyległy 6. Krok 3: oblicz sin θ≈0.640 i cos θ≈0.768. Krok 4: oba wyniki powinny leżeć między 0 i 1. Krok 1: z twierdzenia Pitagorasa c=√(81+64)≈12.042. Krok 2: względem kąta bok naprzeciw ma 9, a przyległy 8. Krok 3: oblicz sin θ≈0.747 i cos θ≈0.664. Krok 4: oba wyniki powinny leżeć między 0 i 1.",
+          "commonMistakes": "Cel tej lekcji: The Amazing Inverse Trig Funkcja Race. Nie mieszaj stopni i radianów bez przeliczenia. Nie skracaj składników sum trygonometrycznych. Sprawdzaj znaki w ćwiartkach i ograniczenia dziedziny.",
+          "quickSummary": "Cel tej lekcji: The Amazing Inverse Trig Funkcja Race. Rozpoznaj sposób podania kąta, użyj odpowiedniej relacji w trójkącie lub na okręgu jednostkowym, oblicz i sprawdź znak, okres oraz jednostki."
+        }
+      ]
+    },
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:FOURTH:ADV-TRIG-GEO:U01:L03",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "MVP-MATH3:M07:T06 — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_3.pdf",
+      "outcomeCodes": [
+        "CCSS:HSF-TF.B.7"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "Hidden Identities",
+          "explanation": "Hidden Identities is an Edulytics lesson in the unit “Advanced Trigonometry & Geometry”. It is aligned exactly to CCSS:HSF-TF.B.7. The accepted Common Core target text for this lesson states: (+) Use inverse functions to solve trigonometric equations that arise in modeling c ontexts; evaluate the solutions using technology, and interpret them in terms of the context.★ Instructional focus: Students connect angle measure, the unit circle, right-triangle ratios, periodic behavior, and trigonometric identities. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: Hidden Identities. On the unit circle, cosine and sine give x- and y-coordinates. Radians connect angle measure with arc length. Trigonometric identities must be transformed through valid algebraic steps and domain conditions.",
+          "workedExamples": "Example 1: In a right triangle with legs 9 and 9, the hypotenuse is √(9²+9²)≈12.728. For the angle opposite the side 9, sin θ≈0.707 and cos θ≈0.707. Example 2: In a right triangle with legs 9 and 9, the hypotenuse is √(9²+9²)≈12.728. For the angle opposite the side 9, sin θ≈0.707 and cos θ≈0.707.",
+          "stepByStepSolutions": "Step 1: use the Pythagorean theorem: c=√(81+81)≈12.728. Step 2: relative to the chosen angle, opposite=9, adjacent=9. Step 3: sin θ=9/12.728≈0.707; cos θ=9/12.728≈0.707. Step 4: verify both ratios are between 0 and 1. Step 1: use the Pythagorean theorem: c=√(81+81)≈12.728. Step 2: relative to the chosen angle, opposite=9, adjacent=9. Step 3: sin θ=9/12.728≈0.707; cos θ=9/12.728≈0.707. Step 4: verify both ratios are between 0 and 1.",
+          "commonMistakes": "Lesson-specific focus: Hidden Identities. Do not mix degrees and radians without conversion. Do not cancel trigonometric sums term by term. Check quadrant signs and domain restrictions.",
+          "quickSummary": "Lesson-specific focus: Hidden Identities. Identify the angle representation, use the appropriate triangle or unit-circle relationship, calculate, and check sign, period, and units."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Funkcje trygonometryczne — Hidden Identities",
+          "explanation": "Lekcja „Funkcje trygonometryczne — Hidden Identities” należy do działu „Advanced Trigonometry & Geometry” i jest dokładnie powiązana ze standardami CCSS:HSF-TF.B.7. Główny kierunek pracy: Uczeń łączy miarę kąta, okrąg jednostkowy, stosunki w trójkącie prostokątnym, okresowość i tożsamości trygonometryczne. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Funkcje trygonometryczne — Hidden Identities. Na okręgu jednostkowym cosinus i sinus są odpowiednio współrzędnymi x i y. Radiany łączą miarę kąta z długością łuku. Tożsamości trygonometryczne przekształcaj poprawnymi krokami algebraicznymi i z uwzględnieniem dziedziny.",
+          "workedExamples": "Przykład 1: W trójkącie prostokątnym o przyprostokątnych 9 i 9 przeciwprostokątna ma długość √(9²+9²)≈12.728. Dla kąta naprzeciw boku 9: sin θ≈0.707, cos θ≈0.707. Przykład 2: W trójkącie prostokątnym o przyprostokątnych 9 i 9 przeciwprostokątna ma długość √(9²+9²)≈12.728. Dla kąta naprzeciw boku 9: sin θ≈0.707, cos θ≈0.707.",
+          "stepByStepSolutions": "Krok 1: z twierdzenia Pitagorasa c=√(81+81)≈12.728. Krok 2: względem kąta bok naprzeciw ma 9, a przyległy 9. Krok 3: oblicz sin θ≈0.707 i cos θ≈0.707. Krok 4: oba wyniki powinny leżeć między 0 i 1. Krok 1: z twierdzenia Pitagorasa c=√(81+81)≈12.728. Krok 2: względem kąta bok naprzeciw ma 9, a przyległy 9. Krok 3: oblicz sin θ≈0.707 i cos θ≈0.707. Krok 4: oba wyniki powinny leżeć między 0 i 1.",
+          "commonMistakes": "Cel tej lekcji: Funkcje trygonometryczne — Hidden Identities. Nie mieszaj stopni i radianów bez przeliczenia. Nie skracaj składników sum trygonometrycznych. Sprawdzaj znaki w ćwiartkach i ograniczenia dziedziny.",
+          "quickSummary": "Cel tej lekcji: Funkcje trygonometryczne — Hidden Identities. Rozpoznaj sposób podania kąta, użyj odpowiedniej relacji w trójkącie lub na okręgu jednostkowym, oblicz i sprawdź znak, okres oraz jednostki."
+        }
+      ]
+    },
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:FOURTH:ADV-TRIG-GEO:U01:L04",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "MVP-GEO:M05:T12 — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf",
+      "outcomeCodes": [
+        "CCSS:HSG-GMD.A.2"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "Cavelieri to the Rescue",
+          "explanation": "Cavelieri to the Rescue is an Edulytics lesson in the unit “Advanced Trigonometry & Geometry”. It is aligned exactly to CCSS:HSG-GMD.A.2. The accepted Common Core target text for this lesson states: (+) Give an informal argument using Cavalieri’s principle for the formulas for the v olume of a sphere and other solid figures. Instructional focus: Students reason about area, volume, cross-sections, and dimensional relationships in two- and three-dimensional figures. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: Cavelieri to the Rescue. Area uses square units and volume uses cubic units. Scaling all lengths by k scales area by k^2 and volume by k^3. Cross-sections depend on the plane cutting the solid.",
+          "workedExamples": "Example 1: A cylinder with radius 4 and height 8 has volume V=πr²h=π(4²)(8)=128π cubic units, about 402.12. Example 2: A cylinder with radius 6 and height 6 has volume V=πr²h=π(6²)(6)=216π cubic units, about 678.58.",
+          "stepByStepSolutions": "Step 1: identify radius r=4 and height h=8. Step 2: square the radius: 4²=16. Step 3: multiply by height: 16×8=128. Step 4: volume is 128π≈402.12 cubic units. Step 1: identify radius r=6 and height h=6. Step 2: square the radius: 6²=36. Step 3: multiply by height: 36×6=216. Step 4: volume is 216π≈678.58 cubic units.",
+          "commonMistakes": "Lesson-specific focus: Cavelieri to the Rescue. Do not use a surface-area formula when volume is requested. Track whether a dimension is radius or diameter and keep units consistent.",
+          "quickSummary": "Lesson-specific focus: Cavelieri to the Rescue. Identify the geometric quantity and dimensions, apply the appropriate formula or scaling relationship, calculate, and state squared or cubed units correctly."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Pomiar geometryczny i wymiar — Cavelieri to the Rescue",
+          "explanation": "Lekcja „Pomiar geometryczny i wymiar — Cavelieri to the Rescue” należy do działu „Advanced Trigonometry & Geometry” i jest dokładnie powiązana ze standardami CCSS:HSG-GMD.A.2. Główny kierunek pracy: Uczeń analizuje pola, objętości, przekroje i zależności wymiarowe figur dwu- i trójwymiarowych. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Pomiar geometryczny i wymiar — Cavelieri to the Rescue. Pole wyraża się w jednostkach kwadratowych, a objętość w sześciennych. Skalowanie wszystkich długości przez k skaluje pole przez k^2, a objętość przez k^3. Przekrój zależy od płaszczyzny przecinającej bryłę.",
+          "workedExamples": "Przykład 1: Walec o promieniu 4 i wysokości 8 ma objętość V=πr²h=128π, czyli około 402.12 jednostek sześciennych. Przykład 2: Walec o promieniu 6 i wysokości 6 ma objętość V=πr²h=216π, czyli około 678.58 jednostek sześciennych.",
+          "stepByStepSolutions": "Krok 1: r=4, h=8. Krok 2: r²=16. Krok 3: 16×8=128. Krok 4: V=128π≈402.12 jednostek sześciennych. Krok 1: r=6, h=6. Krok 2: r²=36. Krok 3: 36×6=216. Krok 4: V=216π≈678.58 jednostek sześciennych.",
+          "commonMistakes": "Cel tej lekcji: Pomiar geometryczny i wymiar — Cavelieri to the Rescue. Nie używaj wzoru na pole powierzchni, gdy pytanie dotyczy objętości. Sprawdzaj, czy podana wielkość jest promieniem czy średnicą, i zachowuj spójne jednostki.",
+          "quickSummary": "Cel tej lekcji: Pomiar geometryczny i wymiar — Cavelieri to the Rescue. Rozpoznaj wielkość geometryczną i wymiary, zastosuj właściwy wzór lub skalowanie, oblicz i poprawnie zapisz jednostki kwadratowe lub sześcienne."
+        }
+      ]
+    },
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:FOURTH:ADV-TRIG-GEO:U01:L05",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "MVP-GEO:M06:T10H — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/2_geometry_framework_overview_and_scope_and_sequence.pdf",
+      "outcomeCodes": [
+        "CCSS:HSG-GPE.A.3"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "Operating on a Shoestring",
+          "explanation": "Operating on a Shoestring is an Edulytics lesson in the unit “Advanced Trigonometry & Geometry”. It is aligned exactly to CCSS:HSG-GPE.A.3. The accepted Common Core target text for this lesson states: (+) Derive the equations of ellipses and hyperbolas given the foci, using the fact tha t the sum or difference of distances from the foci is constant. Instructional focus: Students use coordinates and algebra to describe geometric objects, prove relationships, and calculate distances, slopes, and equations. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: Operating on a Shoestring. Slope represents direction and rate of change. Parallel nonvertical lines have equal slopes; perpendicular nonvertical lines have slopes whose product is -1. Distance and midpoint formulas follow from coordinate differences.",
+          "workedExamples": "Example 1: For A(1,1) and B(3,6), slope = (6-1)/(3-1) = 5/2. Example 2: For A(4,2) and B(6,8), slope = (8-2)/(6-4) = 3/1.",
+          "stepByStepSolutions": "Step 1: y-change is 5=5. Step 2: x-change is 2=2. Step 3: slope is 5/2=5/2. Step 4: keep the subtraction order consistent for both coordinates. Step 1: y-change is 6=6. Step 2: x-change is 2=2. Step 3: slope is 6/2=3/1. Step 4: keep the subtraction order consistent for both coordinates.",
+          "commonMistakes": "Lesson-specific focus: Operating on a Shoestring. Do not divide by zero when a line is vertical. Keep x- and y-differences paired in the same order when calculating slope.",
+          "quickSummary": "Lesson-specific focus: Operating on a Shoestring. Translate the geometry into coordinates, calculate the needed algebraic quantity, and interpret the result as a geometric property."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Geometria analityczna — Operating on a Shoestring",
+          "explanation": "Lekcja „Geometria analityczna — Operating on a Shoestring” należy do działu „Advanced Trigonometry & Geometry” i jest dokładnie powiązana ze standardami CCSS:HSG-GPE.A.3. Główny kierunek pracy: Uczeń wykorzystuje współrzędne i algebrę do opisu obiektów geometrycznych, dowodzenia zależności oraz obliczania odległości, nachyleń i równań. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Geometria analityczna — Operating on a Shoestring. Nachylenie opisuje kierunek i tempo zmian. Równoległe niepionowe proste mają równe współczynniki kierunkowe, a dla prostych prostopadłych ich iloczyn wynosi -1. Wzory na odległość i środek odcinka wynikają z różnic współrzędnych.",
+          "workedExamples": "Przykład 1: Dla A(1,1) i B(3,6) współczynnik kierunkowy = (6-1)/(3-1) = 5/2. Przykład 2: Dla A(4,2) i B(6,8) współczynnik kierunkowy = (8-2)/(6-4) = 3/1.",
+          "stepByStepSolutions": "Krok 1: zmiana y: 5=5. Krok 2: zmiana x: 2=2. Krok 3: nachylenie 5/2=5/2. Krok 4: zachowaj tę samą kolejność odejmowania współrzędnych. Krok 1: zmiana y: 6=6. Krok 2: zmiana x: 2=2. Krok 3: nachylenie 6/2=3/1. Krok 4: zachowaj tę samą kolejność odejmowania współrzędnych.",
+          "commonMistakes": "Cel tej lekcji: Geometria analityczna — Operating on a Shoestring. Nie dziel przez zero dla prostej pionowej. Przy obliczaniu nachylenia zachowaj tę samą kolejność różnic współrzędnych x i y.",
+          "quickSummary": "Cel tej lekcji: Geometria analityczna — Operating on a Shoestring. Przełóż problem geometryczny na współrzędne, oblicz potrzebną wielkość algebraiczną i zinterpretuj wynik jako własność geometryczną."
+        }
+      ]
+    }
+  ]
+}

@@ -15,7 +15,8 @@ public enum PedagogicalSourceType
     SchoolAdoptedTextbook = 1,
     CurrentOfficialTextbook = 2,
     WidelyUsedPublisherTextbook = 3,
-    OfficialFrameworkOnly = 4
+    OfficialFrameworkOnly = 4,
+    OpenEducationalResource = 5
 }
 
 public enum LessonTitleProvenance
@@ -393,7 +394,8 @@ public static class CanonicalLessonContentPackContract
 
         if (document.PedagogicalSourceType is
             PedagogicalSourceType.SchoolAdoptedTextbook or
-            PedagogicalSourceType.WidelyUsedPublisherTextbook)
+            PedagogicalSourceType.WidelyUsedPublisherTextbook or
+            PedagogicalSourceType.OpenEducationalResource)
         {
             Require(
                 document.PedagogicalSourceSelectionEvidence,

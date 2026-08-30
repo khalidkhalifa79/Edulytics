@@ -1,0 +1,90 @@
+{
+  "packCode": "US-CCSS-MATH",
+  "versionCode": "CCSSM-2010",
+  "contentVersion": "ccss-hs-adv-alg-func-p29-v1",
+  "sourcePolicyVersion": 2,
+  "targetCurriculumPeriod": "2026-2027",
+  "sourceCurriculumPeriod": "Common Core State Standards 2010",
+  "sourceVersionLabel": "Common Core State Standards for Mathematics (2010)",
+  "sourceAuthority": "NGA Center / CCSSO",
+  "sourceUrl": "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf",
+  "sourceCheckedAtUtc": "2026-08-29T00:00:00Z",
+  "sourceResolution": "CurrentOfficial",
+  "fallbackReason": "",
+  "pedagogicalSourceType": "OpenEducationalResource",
+  "pedagogicalSourceTitle": "Mathematics Vision Project",
+  "pedagogicalSourcePublisher": "Mathematics Vision Project",
+  "pedagogicalSourceEdition": "Phase 29 locked source",
+  "pedagogicalSourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+  "pedagogicalSourceCheckedAtUtc": "2026-08-29T00:00:00Z",
+  "pedagogicalSourceSelectionReason": "Phase 29 accepted High School pedagogical source strategy.",
+  "pedagogicalSourceSelectionEvidence": "Immutable Phase 29 High School source, placement, evidence, sequence and Blueprint V2 contract locks.",
+  "pedagogicalSourceRightsNote": "Use restricted to accepted Phase 29 commercial-safe license lock.",
+  "reviewMethod": "Exact blueprint-to-Standard alignment validation, approved-license provenance lock, deterministic domain-specific lesson authoring, machine-recomputed worked-example verification, bilingual structural QA, and fail-closed unsupported-family detection.",
+  "status": "Published",
+  "reviewedBy": "Edulytics Curriculum Review — deterministic Phase 29 QA",
+  "reviewEvidence": "Blueprint US-CCSS-MATH:HS:FOURTH:ADV-ALG-FUNC (830761eae62c2e3e2d255343694da20d80df6f699d8cd58090f61b0da89051c6) contains 2 source-driven pedagogical lessons. Exactly 2 have accepted formal Common Core targets and are included in this canonical pack; 0 source-valid supporting-only lessons are deliberately excluded. Each included lesson was bound to its exact blueprint OutcomeCodes/FormalTargets and official CCSS node text. The deterministic Phase 29 authoring pipeline has no generic fallback: unsupported standard families stop generation. Worked examples and step-by-step answers are produced from computed operands and recomputed results, bilingual body fields are structurally audited, and source provenance remains attached to every lesson title.",
+  "lessons": [
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:FOURTH:ADV-ALG-FUNC:U01:L01",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "MVP-ALG2:M10:T06H — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+      "outcomeCodes": [
+        "CCSS:HSA-REI.C.8",
+        "CCSS:HSA-REI.C.9"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "All Systems Go",
+          "explanation": "All Systems Go is an Edulytics lesson in the unit “Advanced Algebra & Functions”. It is aligned exactly to CCSS:HSA-REI.C.8, CCSS:HSA-REI.C.9. The accepted Common Core target text for this lesson states: (+) Represent a system of linear equations as a single matrix equation in a vector variable. (+) Find the inverse of a matrix if it exists and use it to solve systems of linear equations (using technology for matrices of dimension 3 × 3 or greater). Instructional focus: Students solve equations, inequalities, and systems by using equivalent reasoning and interpreting solutions as values or intersection points. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: All Systems Go. Apply the same equivalence-preserving operation to both sides. For inequalities, multiplying or dividing by a negative reverses the inequality sign. A solution to a system must satisfy every equation in the system.",
+          "workedExamples": "Example 1: Solve the system x+y=12 and x-y=-2. Adding equations gives 2x=10, so x=5; then y=7. Example 2: Solve the system x+y=6 and x-y=4. Adding equations gives 2x=10, so x=5; then y=1.",
+          "stepByStepSolutions": "Step 1: add the equations to eliminate y: 2x=10. Step 2: divide by 2 to get x=5. Step 3: substitute into x+y=12: 5+y=12, so y=7. Step 4: verify both original equations. Step 1: add the equations to eliminate y: 2x=10. Step 2: divide by 2 to get x=5. Step 3: substitute into x+y=6: 5+y=6, so y=1. Step 4: verify both original equations.",
+          "commonMistakes": "Lesson-specific focus: All Systems Go. Do not accept an extraneous solution created by squaring, clearing denominators, or other non-reversible steps. Verify solutions in the original relation.",
+          "quickSummary": "Lesson-specific focus: All Systems Go. Transform consistently, solve, and substitute the candidate solution back into the original equation, inequality, or system."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Układy równań",
+          "explanation": "Lekcja „Układy równań” należy do działu „Advanced Algebra & Functions” i jest dokładnie powiązana ze standardami CCSS:HSA-REI.C.8, CCSS:HSA-REI.C.9. Główny kierunek pracy: Uczeń rozwiązuje równania, nierówności i układy przez przekształcenia równoważne oraz interpretuje rozwiązania jako wartości lub punkty przecięcia. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Układy równań. Wykonuj to samo działanie zachowujące równoważność po obu stronach. W nierówności mnożenie lub dzielenie przez liczbę ujemną odwraca znak. Rozwiązanie układu musi spełniać każde równanie.",
+          "workedExamples": "Przykład 1: Rozwiąż układ x+y=12 oraz x-y=-2. Po dodaniu równań: 2x=10, więc x=5; następnie y=7. Przykład 2: Rozwiąż układ x+y=6 oraz x-y=4. Po dodaniu równań: 2x=10, więc x=5; następnie y=1.",
+          "stepByStepSolutions": "Krok 1: dodaj równania i wyeliminuj y: 2x=10. Krok 2: podziel przez 2: x=5. Krok 3: podstaw do x+y=12: y=7. Krok 4: sprawdź oba równania wyjściowe. Krok 1: dodaj równania i wyeliminuj y: 2x=10. Krok 2: podziel przez 2: x=5. Krok 3: podstaw do x+y=6: y=1. Krok 4: sprawdź oba równania wyjściowe.",
+          "commonMistakes": "Cel tej lekcji: Układy równań. Nie przyjmuj rozwiązania pozornego powstałego np. przy podnoszeniu do kwadratu lub usuwaniu mianowników. Sprawdzaj rozwiązania w relacji wyjściowej.",
+          "quickSummary": "Cel tej lekcji: Układy równań. Przekształcaj konsekwentnie, rozwiąż i podstaw otrzymaną wartość do pierwotnego równania, nierówności lub układu."
+        }
+      ]
+    },
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:FOURTH:ADV-ALG-FUNC:U01:L02",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "MVP-MATH3:M02:T01 — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_3.pdf",
+      "outcomeCodes": [
+        "CCSS:HSF-BF.B.5"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "Log Logic",
+          "explanation": "Log Logic is an Edulytics lesson in the unit “Advanced Algebra & Functions”. It is aligned exactly to CCSS:HSF-BF.B.5. The accepted Common Core target text for this lesson states: (+) Understand the inverse relationship between exponents and logarithms and use this relationship to solve problems involving logarithms and exponents. Instructional focus: Students build new functions from relationships, sequences, transformations, compositions, and inverse processes. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: Log Logic. Choose a function family that matches the relationship. Transformations change inputs or outputs in predictable ways. Composition substitutes one function into another; an inverse reverses the original mapping on an appropriate domain.",
+          "workedExamples": "Example 1: Let f(x)=2x+4. For x=4, f(4)=12. Solving y=2x+4 for x gives f⁻¹(y)=(y-4)/2; thus f⁻¹(12)=4. Example 2: Let f(x)=2x+4. For x=3, f(3)=10. Solving y=2x+4 for x gives f⁻¹(y)=(y-4)/2; thus f⁻¹(10)=3.",
+          "stepByStepSolutions": "Step 1: evaluate f(4)=2(4)+4=12. Step 2: write y=2x+4. Step 3: subtract 4 and divide by 2: x=(y-4)/2. Step 4: substitute y=12 to recover x=4. Step 1: evaluate f(3)=2(3)+4=10. Step 2: write y=2x+4. Step 3: subtract 4 and divide by 2: x=(y-4)/2. Step 4: substitute y=10 to recover x=3.",
+          "commonMistakes": "Lesson-specific focus: Log Logic. Do not assume every function has an inverse function on its full domain. Track whether a transformation acts inside or outside the function.",
+          "quickSummary": "Lesson-specific focus: Log Logic. Build the rule from the relationship, state its domain, apply transformations or composition carefully, and verify with input-output pairs."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Logarytmy i ich logika",
+          "explanation": "Lekcja „Logarytmy i ich logika” należy do działu „Advanced Algebra & Functions” i jest dokładnie powiązana ze standardami CCSS:HSF-BF.B.5. Główny kierunek pracy: Uczeń buduje funkcje na podstawie zależności, ciągów, przekształceń, złożeń i procesów odwrotnych. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Logarytmy i ich logika. Dobierz rodzinę funkcji do zależności. Przekształcenia zmieniają argumenty lub wartości w przewidywalny sposób. Złożenie polega na podstawieniu jednej funkcji do drugiej, a funkcja odwrotna odwraca przyporządkowanie na odpowiedniej dziedzinie.",
+          "workedExamples": "Przykład 1: Niech f(x)=2x+4. Dla x=4, f(4)=12. Z równania y=2x+4 otrzymujemy f⁻¹(y)=(y-4)/2; więc f⁻¹(12)=4. Przykład 2: Niech f(x)=2x+4. Dla x=3, f(3)=10. Z równania y=2x+4 otrzymujemy f⁻¹(y)=(y-4)/2; więc f⁻¹(10)=3.",
+          "stepByStepSolutions": "Krok 1: f(4)=2(4)+4=12. Krok 2: zapisz y=2x+4. Krok 3: odejmij 4 i podziel przez 2: x=(y-4)/2. Krok 4: dla y=12 odzyskujemy x=4. Krok 1: f(3)=2(3)+4=10. Krok 2: zapisz y=2x+4. Krok 3: odejmij 4 i podziel przez 2: x=(y-4)/2. Krok 4: dla y=10 odzyskujemy x=3.",
+          "commonMistakes": "Cel tej lekcji: Logarytmy i ich logika. Nie zakładaj, że każda funkcja ma funkcję odwrotną na całej dziedzinie. Sprawdzaj, czy przekształcenie działa na argument, czy na wartość funkcji.",
+          "quickSummary": "Cel tej lekcji: Logarytmy i ich logika. Zbuduj regułę z opisanej zależności, określ dziedzinę, ostrożnie zastosuj przekształcenia lub złożenie i sprawdź na parach argument-wartość."
+        }
+      ]
+    }
+  ]
+}

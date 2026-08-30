@@ -1,0 +1,186 @@
+{
+  "packCode": "US-CCSS-MATH",
+  "versionCode": "CCSSM-2010",
+  "contentVersion": "ccss-hs-vector-matrix-p29-v1",
+  "sourcePolicyVersion": 2,
+  "targetCurriculumPeriod": "2026-2027",
+  "sourceCurriculumPeriod": "Common Core State Standards 2010",
+  "sourceVersionLabel": "Common Core State Standards for Mathematics (2010)",
+  "sourceAuthority": "NGA Center / CCSSO",
+  "sourceUrl": "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf",
+  "sourceCheckedAtUtc": "2026-08-29T00:00:00Z",
+  "sourceResolution": "CurrentOfficial",
+  "fallbackReason": "",
+  "pedagogicalSourceType": "OpenEducationalResource",
+  "pedagogicalSourceTitle": "Mathematics Vision Project",
+  "pedagogicalSourcePublisher": "Mathematics Vision Project",
+  "pedagogicalSourceEdition": "Phase 29 locked source",
+  "pedagogicalSourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+  "pedagogicalSourceCheckedAtUtc": "2026-08-29T00:00:00Z",
+  "pedagogicalSourceSelectionReason": "Phase 29 accepted High School pedagogical source strategy.",
+  "pedagogicalSourceSelectionEvidence": "Immutable Phase 29 High School source, placement, evidence, sequence and Blueprint V2 contract locks.",
+  "pedagogicalSourceRightsNote": "Use restricted to accepted Phase 29 commercial-safe license lock.",
+  "reviewMethod": "Exact blueprint-to-Standard alignment validation, approved-license provenance lock, deterministic domain-specific lesson authoring, machine-recomputed worked-example verification, bilingual structural QA, and fail-closed unsupported-family detection.",
+  "status": "Published",
+  "reviewedBy": "Edulytics Curriculum Review — deterministic Phase 29 QA",
+  "reviewEvidence": "Blueprint US-CCSS-MATH:HS:FOURTH:VECTOR-MATRIX (3de388be759e184422a6cde4aba5bd4093914aaa0598c7e1920c3eb03223357d) contains 5 source-driven pedagogical lessons. Exactly 5 have accepted formal Common Core targets and are included in this canonical pack; 0 source-valid supporting-only lessons are deliberately excluded. Each included lesson was bound to its exact blueprint OutcomeCodes/FormalTargets and official CCSS node text. The deterministic Phase 29 authoring pipeline has no generic fallback: unsupported standard families stop generation. Worked examples and step-by-step answers are produced from computed operands and recomputed results, bilingual body fields are structurally audited, and source provenance remains attached to every lesson title.",
+  "lessons": [
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:FOURTH:VECTOR-MATRIX:U01:L01",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "MVP-MATH1:M08:T07H — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+      "outcomeCodes": [
+        "CCSS:HSN-VM.A.1",
+        "CCSS:HSN-VM.A.2",
+        "CCSS:HSN-VM.A.3",
+        "CCSS:HSN-VM.B.4",
+        "CCSS:HSN-VM.B.5"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "The Arithmetic of Vectors",
+          "explanation": "The Arithmetic of Vectors is an Edulytics lesson in the unit “Vectors & Matrices”. It is aligned exactly to CCSS:HSN-VM.A.1, CCSS:HSN-VM.A.2, CCSS:HSN-VM.A.3, CCSS:HSN-VM.B.4, CCSS:HSN-VM.B.5. The accepted Common Core target text for this lesson states: (+) Recognize vector quantities as having both magnitude and direction. R epresent vector quantities by directed line segments, and use appropriate symbols for vectors and their magnitudes (e.g., v, |v|, ||v||, v). (+) Find the components of a vector by subtracting the coordinates of an initial point fr om the coordinates of a terminal point. (+) Solve problems involving velocity and other quantities that can be r epresented by vectors. (+) Add and subtract vectors. a. Add vectors end-to-end, component-wise, and by the parallelogram rule. Understand that the magnitude of a sum of two vectors is typically not the sum of the magnitudes. b. Given two vectors in magnitude and direction form, determine the magnitude and direction of their sum. c. Understand vector subtraction v – w as v + (–w), where –w is the additive inverse of w, with the same magnitude as w and pointing in the opposite direction. Represent vector subtraction graphically by connecting the tips in the appropriate order, and perform vector subtraction component-wise. (+) Multiply a vector by a scalar. a. Represent scalar multiplication graphically by scaling vectors and possibly reversing their direction; perform scalar multiplication component-wise, e.g., as c(vx, vy) = (cvx, cvy). b. Compute the magnitude of a scalar multiple cv using ||cv|| = |c|v. Compute the direction of cv knowing that when |c|v ≠ 0, the d... Instructional focus: Students represent directed quantities and transformations with vectors or matrices and interpret operations in terms of magnitude, direction, and structure. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: The Arithmetic of Vectors. Vector addition combines components; scalar multiplication scales magnitude and may reverse direction. Matrix operations require compatible dimensions, and matrix multiplication is generally not commutative.",
+          "workedExamples": "Example 1: Add vectors ⟨2,1⟩ and ⟨3,1⟩. The sum is ⟨5,2⟩. Example 2: Add vectors ⟨5,6⟩ and ⟨1,5⟩. The sum is ⟨6,11⟩.",
+          "stepByStepSolutions": "Step 1: add first components: 2+3=5. Step 2: add second components: 1+1=2. Step 3: write the vector ⟨5,2⟩ and interpret its direction and units. Step 1: add first components: 5+1=6. Step 2: add second components: 6+5=11. Step 3: write the vector ⟨6,11⟩ and interpret its direction and units.",
+          "commonMistakes": "Lesson-specific focus: The Arithmetic of Vectors. Do not add vectors or matrices of incompatible dimensions. Do not reverse matrix multiplication order without checking. Interpret components in the coordinate system and units of the model.",
+          "quickSummary": "Lesson-specific focus: The Arithmetic of Vectors. Operate componentwise where appropriate, respect dimensions and order, and interpret the result geometrically or in the model context."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Wektory i macierze — The Arithmetic of Vectors",
+          "explanation": "Lekcja „Wektory i macierze — The Arithmetic of Vectors” należy do działu „Vectors & Matrices” i jest dokładnie powiązana ze standardami CCSS:HSN-VM.A.1, CCSS:HSN-VM.A.2, CCSS:HSN-VM.A.3, CCSS:HSN-VM.B.4, CCSS:HSN-VM.B.5. Główny kierunek pracy: Uczeń przedstawia wielkości skierowane i przekształcenia za pomocą wektorów lub macierzy oraz interpretuje działania przez długość, kierunek i strukturę. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Wektory i macierze — The Arithmetic of Vectors. Dodawanie wektorów odbywa się składowymi; mnożenie przez skalar zmienia długość i może odwrócić zwrot. Działania na macierzach wymagają zgodnych wymiarów, a mnożenie macierzy na ogół nie jest przemienne.",
+          "workedExamples": "Przykład 1: Dodaj wektory ⟨2,1⟩ i ⟨3,1⟩. Suma wynosi ⟨5,2⟩. Przykład 2: Dodaj wektory ⟨5,6⟩ i ⟨1,5⟩. Suma wynosi ⟨6,11⟩.",
+          "stepByStepSolutions": "Krok 1: pierwsze składowe: 2+3=5. Krok 2: drugie składowe: 1+1=2. Krok 3: zapisz ⟨5,2⟩ i zinterpretuj kierunek oraz jednostki. Krok 1: pierwsze składowe: 5+1=6. Krok 2: drugie składowe: 6+5=11. Krok 3: zapisz ⟨6,11⟩ i zinterpretuj kierunek oraz jednostki.",
+          "commonMistakes": "Cel tej lekcji: Wektory i macierze — The Arithmetic of Vectors. Nie dodawaj wektorów ani macierzy o niezgodnych wymiarach. Nie zmieniaj kolejności mnożenia macierzy bez sprawdzenia. Interpretuj składowe w przyjętym układzie współrzędnych i jednostkach.",
+          "quickSummary": "Cel tej lekcji: Wektory i macierze — The Arithmetic of Vectors. Wykonuj działania składowymi tam, gdzie to właściwe, zachowuj zgodność wymiarów i kolejność oraz interpretuj wynik geometrycznie lub w kontekście modelu."
+        }
+      ]
+    },
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:FOURTH:VECTOR-MATRIX:U01:L02",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "MVP-MATH1:M08:T09H — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+      "outcomeCodes": [
+        "CCSS:HSN-VM.C.10",
+        "CCSS:HSN-VM.C.12"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "The Determinant of a Matrix",
+          "explanation": "The Determinant of a Matrix is an Edulytics lesson in the unit “Vectors & Matrices”. It is aligned exactly to CCSS:HSN-VM.C.10, CCSS:HSN-VM.C.12. The accepted Common Core target text for this lesson states: (+) Understand that the zero and identity matrices play a role in matrix addition and multiplica tion similar to the role of 0 and 1 in the real numbers. The determinant of a square matrix is nonzero if and only if the matrix has a multiplicative inverse. (+) Work with 2 × 2 matrices as transformations of the plane, and interpret the absolut e value of the determinant in terms of area. Instructional focus: Students represent directed quantities and transformations with vectors or matrices and interpret operations in terms of magnitude, direction, and structure. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: The Determinant of a Matrix. Vector addition combines components; scalar multiplication scales magnitude and may reverse direction. Matrix operations require compatible dimensions, and matrix multiplication is generally not commutative.",
+          "workedExamples": "Example 1: Add vectors ⟨4,2⟩ and ⟨5,3⟩. The sum is ⟨9,5⟩. Example 2: Add vectors ⟨5,2⟩ and ⟨1,1⟩. The sum is ⟨6,3⟩.",
+          "stepByStepSolutions": "Step 1: add first components: 4+5=9. Step 2: add second components: 2+3=5. Step 3: write the vector ⟨9,5⟩ and interpret its direction and units. Step 1: add first components: 5+1=6. Step 2: add second components: 2+1=3. Step 3: write the vector ⟨6,3⟩ and interpret its direction and units.",
+          "commonMistakes": "Lesson-specific focus: The Determinant of a Matrix. Do not add vectors or matrices of incompatible dimensions. Do not reverse matrix multiplication order without checking. Interpret components in the coordinate system and units of the model.",
+          "quickSummary": "Lesson-specific focus: The Determinant of a Matrix. Operate componentwise where appropriate, respect dimensions and order, and interpret the result geometrically or in the model context."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Wektory i macierze — The Determinant of a Matrix",
+          "explanation": "Lekcja „Wektory i macierze — The Determinant of a Matrix” należy do działu „Vectors & Matrices” i jest dokładnie powiązana ze standardami CCSS:HSN-VM.C.10, CCSS:HSN-VM.C.12. Główny kierunek pracy: Uczeń przedstawia wielkości skierowane i przekształcenia za pomocą wektorów lub macierzy oraz interpretuje działania przez długość, kierunek i strukturę. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Wektory i macierze — The Determinant of a Matrix. Dodawanie wektorów odbywa się składowymi; mnożenie przez skalar zmienia długość i może odwrócić zwrot. Działania na macierzach wymagają zgodnych wymiarów, a mnożenie macierzy na ogół nie jest przemienne.",
+          "workedExamples": "Przykład 1: Dodaj wektory ⟨4,2⟩ i ⟨5,3⟩. Suma wynosi ⟨9,5⟩. Przykład 2: Dodaj wektory ⟨5,2⟩ i ⟨1,1⟩. Suma wynosi ⟨6,3⟩.",
+          "stepByStepSolutions": "Krok 1: pierwsze składowe: 4+5=9. Krok 2: drugie składowe: 2+3=5. Krok 3: zapisz ⟨9,5⟩ i zinterpretuj kierunek oraz jednostki. Krok 1: pierwsze składowe: 5+1=6. Krok 2: drugie składowe: 2+1=3. Krok 3: zapisz ⟨6,3⟩ i zinterpretuj kierunek oraz jednostki.",
+          "commonMistakes": "Cel tej lekcji: Wektory i macierze — The Determinant of a Matrix. Nie dodawaj wektorów ani macierzy o niezgodnych wymiarach. Nie zmieniaj kolejności mnożenia macierzy bez sprawdzenia. Interpretuj składowe w przyjętym układzie współrzędnych i jednostkach.",
+          "quickSummary": "Cel tej lekcji: Wektory i macierze — The Determinant of a Matrix. Wykonuj działania składowymi tam, gdzie to właściwe, zachowuj zgodność wymiarów i kolejność oraz interpretuj wynik geometrycznie lub w kontekście modelu."
+        }
+      ]
+    },
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:FOURTH:VECTOR-MATRIX:U01:L03",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "MVP-MATH1:M08:T11H — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+      "outcomeCodes": [
+        "CCSS:HSN-VM.C.11"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "Transformations with Matrices",
+          "explanation": "Transformations with Matrices is an Edulytics lesson in the unit “Vectors & Matrices”. It is aligned exactly to CCSS:HSN-VM.C.11. The accepted Common Core target text for this lesson states: (+) Multiply a vector (regarded as a matrix with one column) by a matrix of suitable dimensions t o produce another vector. Work with matrices as transformations of vectors. Instructional focus: Students represent directed quantities and transformations with vectors or matrices and interpret operations in terms of magnitude, direction, and structure. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: Transformations with Matrices. Vector addition combines components; scalar multiplication scales magnitude and may reverse direction. Matrix operations require compatible dimensions, and matrix multiplication is generally not commutative.",
+          "workedExamples": "Example 1: Add vectors ⟨6,4⟩ and ⟨1,2⟩. The sum is ⟨7,6⟩. Example 2: Add vectors ⟨6,3⟩ and ⟨5,3⟩. The sum is ⟨11,6⟩.",
+          "stepByStepSolutions": "Step 1: add first components: 6+1=7. Step 2: add second components: 4+2=6. Step 3: write the vector ⟨7,6⟩ and interpret its direction and units. Step 1: add first components: 6+5=11. Step 2: add second components: 3+3=6. Step 3: write the vector ⟨11,6⟩ and interpret its direction and units.",
+          "commonMistakes": "Lesson-specific focus: Transformations with Matrices. Do not add vectors or matrices of incompatible dimensions. Do not reverse matrix multiplication order without checking. Interpret components in the coordinate system and units of the model.",
+          "quickSummary": "Lesson-specific focus: Transformations with Matrices. Operate componentwise where appropriate, respect dimensions and order, and interpret the result geometrically or in the model context."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Przekształcenia with Matrices",
+          "explanation": "Lekcja „Przekształcenia with Matrices” należy do działu „Vectors & Matrices” i jest dokładnie powiązana ze standardami CCSS:HSN-VM.C.11. Główny kierunek pracy: Uczeń przedstawia wielkości skierowane i przekształcenia za pomocą wektorów lub macierzy oraz interpretuje działania przez długość, kierunek i strukturę. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Przekształcenia with Matrices. Dodawanie wektorów odbywa się składowymi; mnożenie przez skalar zmienia długość i może odwrócić zwrot. Działania na macierzach wymagają zgodnych wymiarów, a mnożenie macierzy na ogół nie jest przemienne.",
+          "workedExamples": "Przykład 1: Dodaj wektory ⟨6,4⟩ i ⟨1,2⟩. Suma wynosi ⟨7,6⟩. Przykład 2: Dodaj wektory ⟨6,3⟩ i ⟨5,3⟩. Suma wynosi ⟨11,6⟩.",
+          "stepByStepSolutions": "Krok 1: pierwsze składowe: 6+1=7. Krok 2: drugie składowe: 4+2=6. Krok 3: zapisz ⟨7,6⟩ i zinterpretuj kierunek oraz jednostki. Krok 1: pierwsze składowe: 6+5=11. Krok 2: drugie składowe: 3+3=6. Krok 3: zapisz ⟨11,6⟩ i zinterpretuj kierunek oraz jednostki.",
+          "commonMistakes": "Cel tej lekcji: Przekształcenia with Matrices. Nie dodawaj wektorów ani macierzy o niezgodnych wymiarach. Nie zmieniaj kolejności mnożenia macierzy bez sprawdzenia. Interpretuj składowe w przyjętym układzie współrzędnych i jednostkach.",
+          "quickSummary": "Cel tej lekcji: Przekształcenia with Matrices. Wykonuj działania składowymi tam, gdzie to właściwe, zachowuj zgodność wymiarów i kolejność oraz interpretuj wynik geometrycznie lub w kontekście modelu."
+        }
+      ]
+    },
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:FOURTH:VECTOR-MATRIX:U01:L04",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "MVP-MATH1:M04:T07H — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+      "outcomeCodes": [
+        "CCSS:HSN-VM.C.6",
+        "CCSS:HSN-VM.C.7",
+        "CCSS:HSN-VM.C.8"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "Cafeteria Consumption and Cost",
+          "explanation": "Cafeteria Consumption and Cost is an Edulytics lesson in the unit “Vectors & Matrices”. It is aligned exactly to CCSS:HSN-VM.C.6, CCSS:HSN-VM.C.7, CCSS:HSN-VM.C.8. The accepted Common Core target text for this lesson states: (+) Use matrices to represent and manipulate data, e.g., to represent payoffs or incidenc e relationships in a network. (+) Multiply matrices by scalars to produce new matrices, e.g., as when all of the pa yoffs in a game are doubled. (+) Add, subtract, and multiply matrices of appropriate dimensions. Instructional focus: Students represent directed quantities and transformations with vectors or matrices and interpret operations in terms of magnitude, direction, and structure. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: Cafeteria Consumption and Cost. Vector addition combines components; scalar multiplication scales magnitude and may reverse direction. Matrix operations require compatible dimensions, and matrix multiplication is generally not commutative.",
+          "workedExamples": "Example 1: Add vectors ⟨2,1⟩ and ⟨4,4⟩. The sum is ⟨6,5⟩. Example 2: Add vectors ⟨1,1⟩ and ⟨2,1⟩. The sum is ⟨3,2⟩.",
+          "stepByStepSolutions": "Step 1: add first components: 2+4=6. Step 2: add second components: 1+4=5. Step 3: write the vector ⟨6,5⟩ and interpret its direction and units. Step 1: add first components: 1+2=3. Step 2: add second components: 1+1=2. Step 3: write the vector ⟨3,2⟩ and interpret its direction and units.",
+          "commonMistakes": "Lesson-specific focus: Cafeteria Consumption and Cost. Do not add vectors or matrices of incompatible dimensions. Do not reverse matrix multiplication order without checking. Interpret components in the coordinate system and units of the model.",
+          "quickSummary": "Lesson-specific focus: Cafeteria Consumption and Cost. Operate componentwise where appropriate, respect dimensions and order, and interpret the result geometrically or in the model context."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Wektory i macierze — Cafeteria Consumption and Cost",
+          "explanation": "Lekcja „Wektory i macierze — Cafeteria Consumption and Cost” należy do działu „Vectors & Matrices” i jest dokładnie powiązana ze standardami CCSS:HSN-VM.C.6, CCSS:HSN-VM.C.7, CCSS:HSN-VM.C.8. Główny kierunek pracy: Uczeń przedstawia wielkości skierowane i przekształcenia za pomocą wektorów lub macierzy oraz interpretuje działania przez długość, kierunek i strukturę. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Wektory i macierze — Cafeteria Consumption and Cost. Dodawanie wektorów odbywa się składowymi; mnożenie przez skalar zmienia długość i może odwrócić zwrot. Działania na macierzach wymagają zgodnych wymiarów, a mnożenie macierzy na ogół nie jest przemienne.",
+          "workedExamples": "Przykład 1: Dodaj wektory ⟨2,1⟩ i ⟨4,4⟩. Suma wynosi ⟨6,5⟩. Przykład 2: Dodaj wektory ⟨1,1⟩ i ⟨2,1⟩. Suma wynosi ⟨3,2⟩.",
+          "stepByStepSolutions": "Krok 1: pierwsze składowe: 2+4=6. Krok 2: drugie składowe: 1+4=5. Krok 3: zapisz ⟨6,5⟩ i zinterpretuj kierunek oraz jednostki. Krok 1: pierwsze składowe: 1+2=3. Krok 2: drugie składowe: 1+1=2. Krok 3: zapisz ⟨3,2⟩ i zinterpretuj kierunek oraz jednostki.",
+          "commonMistakes": "Cel tej lekcji: Wektory i macierze — Cafeteria Consumption and Cost. Nie dodawaj wektorów ani macierzy o niezgodnych wymiarach. Nie zmieniaj kolejności mnożenia macierzy bez sprawdzenia. Interpretuj składowe w przyjętym układzie współrzędnych i jednostkach.",
+          "quickSummary": "Cel tej lekcji: Wektory i macierze — Cafeteria Consumption and Cost. Wykonuj działania składowymi tam, gdzie to właściwe, zachowuj zgodność wymiarów i kolejność oraz interpretuj wynik geometrycznie lub w kontekście modelu."
+        }
+      ]
+    },
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:FOURTH:VECTOR-MATRIX:U01:L05",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "MVP-MATH1:M08:T08H — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/introdcution_to_the_materials_math_1.pdf",
+      "outcomeCodes": [
+        "CCSS:HSN-VM.C.9"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "More Arithmetic of Matrices",
+          "explanation": "More Arithmetic of Matrices is an Edulytics lesson in the unit “Vectors & Matrices”. It is aligned exactly to CCSS:HSN-VM.C.9. The accepted Common Core target text for this lesson states: (+) Understand that, unlike multiplication of numbers, matrix multiplication for squar e matrices is not a commutative operation, but still satisfies the associative and distributive properties. Instructional focus: Students represent directed quantities and transformations with vectors or matrices and interpret operations in terms of magnitude, direction, and structure. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: More Arithmetic of Matrices. Vector addition combines components; scalar multiplication scales magnitude and may reverse direction. Matrix operations require compatible dimensions, and matrix multiplication is generally not commutative.",
+          "workedExamples": "Example 1: Add vectors ⟨2,6⟩ and ⟨3,1⟩. The sum is ⟨5,7⟩. Example 2: Add vectors ⟨5,2⟩ and ⟨4,2⟩. The sum is ⟨9,4⟩.",
+          "stepByStepSolutions": "Step 1: add first components: 2+3=5. Step 2: add second components: 6+1=7. Step 3: write the vector ⟨5,7⟩ and interpret its direction and units. Step 1: add first components: 5+4=9. Step 2: add second components: 2+2=4. Step 3: write the vector ⟨9,4⟩ and interpret its direction and units.",
+          "commonMistakes": "Lesson-specific focus: More Arithmetic of Matrices. Do not add vectors or matrices of incompatible dimensions. Do not reverse matrix multiplication order without checking. Interpret components in the coordinate system and units of the model.",
+          "quickSummary": "Lesson-specific focus: More Arithmetic of Matrices. Operate componentwise where appropriate, respect dimensions and order, and interpret the result geometrically or in the model context."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Wektory i macierze — More Arithmetic of Matrices",
+          "explanation": "Lekcja „Wektory i macierze — More Arithmetic of Matrices” należy do działu „Vectors & Matrices” i jest dokładnie powiązana ze standardami CCSS:HSN-VM.C.9. Główny kierunek pracy: Uczeń przedstawia wielkości skierowane i przekształcenia za pomocą wektorów lub macierzy oraz interpretuje działania przez długość, kierunek i strukturę. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Wektory i macierze — More Arithmetic of Matrices. Dodawanie wektorów odbywa się składowymi; mnożenie przez skalar zmienia długość i może odwrócić zwrot. Działania na macierzach wymagają zgodnych wymiarów, a mnożenie macierzy na ogół nie jest przemienne.",
+          "workedExamples": "Przykład 1: Dodaj wektory ⟨2,6⟩ i ⟨3,1⟩. Suma wynosi ⟨5,7⟩. Przykład 2: Dodaj wektory ⟨5,2⟩ i ⟨4,2⟩. Suma wynosi ⟨9,4⟩.",
+          "stepByStepSolutions": "Krok 1: pierwsze składowe: 2+3=5. Krok 2: drugie składowe: 6+1=7. Krok 3: zapisz ⟨5,7⟩ i zinterpretuj kierunek oraz jednostki. Krok 1: pierwsze składowe: 5+4=9. Krok 2: drugie składowe: 2+2=4. Krok 3: zapisz ⟨9,4⟩ i zinterpretuj kierunek oraz jednostki.",
+          "commonMistakes": "Cel tej lekcji: Wektory i macierze — More Arithmetic of Matrices. Nie dodawaj wektorów ani macierzy o niezgodnych wymiarach. Nie zmieniaj kolejności mnożenia macierzy bez sprawdzenia. Interpretuj składowe w przyjętym układzie współrzędnych i jednostkach.",
+          "quickSummary": "Cel tej lekcji: Wektory i macierze — More Arithmetic of Matrices. Wykonuj działania składowymi tam, gdzie to właściwe, zachowuj zgodność wymiarów i kolejność oraz interpretuj wynik geometrycznie lub w kontekście modelu."
+        }
+      ]
+    }
+  ]
+}

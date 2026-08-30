@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "packCode": "US-CCSS-MATH",
+  "versionCode": "CCSSM-2010",
+  "generatorVersion": "p29-ccss-author-v1",
+  "sourcePedagogicalLessons": 1560,
+  "standaloneCanonicalTargets": 1466,
+  "supportingOnlyLessons": 94,
+  "kindergartenProductLessons": 0,
+  "highSchoolSourceLessons": 405,
+  "highSchoolStandaloneCanonicalTargets": 382,
+  "highSchoolSupportingOnlyLessons": 23,
+  "status": "RepositoryCandidateComplete",
+  "publicationPolicy": "Every canonical target is Published only after exact mapping, approved source provenance, deterministic mathematical-example verification, bilingual structural QA, and fail-closed family coverage. Final product closure still requires PR CI, main CI, automatic staging seed, and staging database audit.",
+  "stages": [
+    {
+      "stage": "G1",
+      "sourceLessons": 146,
+      "canonicalLessons": 144,
+      "supportingLessons": 2
+    },
+    {
+      "stage": "G2",
+      "sourceLessons": 146,
+      "canonicalLessons": 143,
+      "supportingLessons": 3
+    },
+    {
+      "stage": "G3",
+      "sourceLessons": 143,
+      "canonicalLessons": 135,
+      "supportingLessons": 8
+    },
+    {
+      "stage": "G4",
+      "sourceLessons": 149,
+      "canonicalLessons": 142,
+      "supportingLessons": 7
+    },
+    {
+      "stage": "G5",
+      "sourceLessons": 148,
+      "canonicalLessons": 143,
+      "supportingLessons": 5
+    },
+    {
+      "stage": "G6",
+      "sourceLessons": 147,
+      "canonicalLessons": 130,
+      "supportingLessons": 17
+    },
+    {
+      "stage": "G7",
+      "sourceLessons": 145,
+      "canonicalLessons": 138,
+      "supportingLessons": 7
+    },
+    {
+      "stage": "G8",
+      "sourceLessons": 131,
+      "canonicalLessons": 109,
+      "supportingLessons": 22
+    },
+    {
+      "stage": "HS:ADV-ALG-FUNC",
+      "sourceLessons": 2,
+      "canonicalLessons": 2,
+      "supportingLessons": 0
+    },
+    {
+      "stage": "HS:ADV-TRIG-GEO",
+      "sourceLessons": 5,
+      "canonicalLessons": 5,
+      "supportingLessons": 0
+    },
+    {
+      "stage": "HS:COMPLEX",
+      "sourceLessons": 1,
+      "canonicalLessons": 1,
+      "supportingLessons": 0
+    },
+    {
+      "stage": "HS:PROB-DECISION",
+      "sourceLessons": 5,
+      "canonicalLessons": 5,
+      "supportingLessons": 0
+    },
+    {
+      "stage": "HS:VECTOR-MATRIX",
+      "sourceLessons": 5,
+      "canonicalLessons": 5,
+      "supportingLessons": 0
+    },
+    {
+      "stage": "HS:ALG1",
+      "sourceLessons": 132,
+      "canonicalLessons": 126,
+      "supportingLessons": 6
+    },
+    {
+      "stage": "HS:ALG2",
+      "sourceLessons": 120,
+      "canonicalLessons": 108,
+      "supportingLessons": 12
+    },
+    {
+      "stage": "HS:GEO",
+      "sourceLessons": 124,
+      "canonicalLessons": 119,
+      "supportingLessons": 5
+    },
+    {
+      "stage": "HS:TRAD-SUPPLEMENT",
+      "sourceLessons": 11,
+      "canonicalLessons": 11,
+      "supportingLessons": 0
+    }
+  ],
+  "contentPackSha256": {
+    "src/Edulytics.Core/Curriculum/LessonContent/Packs/us-ccss-math-g1-phase29-v1.lesson-content-pack.json": "db3cb0fd333892e34edf3f1845a75072761e9ff2108ea8008180bd8532d39029",
+    "src/Edulytics.Core/Curriculum/LessonContent/Packs/us-ccss-math-g2-phase29-v1.lesson-content-pack.json": "53acc7c4869d3637e06fdecddea3a2b9bfe1f162986dbca8d64df20bc4dff0fd",
+    "src/Edulytics.Core/Curriculum/LessonContent/Packs/us-ccss-math-g3-phase29-v1.lesson-content-pack.json": "b29fef22f847a590fcd8aa614700f1d1c9d24b13808b476a3e6e351f130f3c23",
+    "src/Edulytics.Core/Curriculum/LessonContent/Packs/us-ccss-math-g4-phase29-v1.lesson-content-pack.json": "73c1262dd68059c44cbffd544d45d12acd64bf3af32039c0f6973899a3420d56",
+    "src/Edulytics.Core/Curriculum/LessonContent/Packs/us-ccss-math-g5-phase29-v1.lesson-content-pack.json": "4f835e2968614d63ce64c2ef6db4dfda75c3a98e3a3bdc95a88bb3cd3a277a3d",
+    "src/Edulytics.Core/Curriculum/LessonContent/Packs/us-ccss-math-g6-phase29-v1.lesson-content-pack.json": "5bef93959382dee0de60338f936e124fad2be3347fa4588d0f25fb6625010571",
+    "src/Edulytics.Core/Curriculum/LessonContent/Packs/us-ccss-math-g7-phase29-v1.lesson-content-pack.json": "879aa5f5a95535bb57ec68c0410d0ef591a71d43c5323fb1e256f0088740223a",
+    "src/Edulytics.Core/Curriculum/LessonContent/Packs/us-ccss-math-g8-phase29-v1.lesson-content-pack.json": "f93f63388fcc7dfc0986872299e301bfcc9be49db249f0a9018ab18754b357e2",
+    "src/Edulytics.Core/Curriculum/LessonContent/Packs/us-ccss-math-hs-adv-alg-func-phase29-v1.lesson-content-pack.json": "9979bfd028c308716841d016bad39dc5c4145517069651d3cd3df188abe8b0eb",
+    "src/Edulytics.Core/Curriculum/LessonContent/Packs/us-ccss-math-hs-adv-trig-geo-phase29-v1.lesson-content-pack.json": "4dd0d2fffa3df26fb5fd755d36245620c83c0a57f940491beae3fb2d6614e58e",
+    "src/Edulytics.Core/Curriculum/LessonContent/Packs/us-ccss-math-hs-alg1-phase29-v1.lesson-content-pack.json": "0c82e018934e54a723e92cfc87f955f9ff629d14fea9876d606744d4dc1fc018",
+    "src/Edulytics.Core/Curriculum/LessonContent/Packs/us-ccss-math-hs-alg2-phase29-v1.lesson-content-pack.json": "001092f5a733ed44799d7f7a34102a2710afe2521812c0eda025cd1b3fdfe2cd",
+    "src/Edulytics.Core/Curriculum/LessonContent/Packs/us-ccss-math-hs-complex-phase29-v1.lesson-content-pack.json": "e02005a6fa3acb2faa04b0a7abd63d15b931abf9eea21aa8ac804cbb26cf5aab",
+    "src/Edulytics.Core/Curriculum/LessonContent/Packs/us-ccss-math-hs-geo-phase29-v1.lesson-content-pack.json": "84015bbb72b2cc896388f30f68a8540d3bef0df8711e379426396b35b3417ebe",
+    "src/Edulytics.Core/Curriculum/LessonContent/Packs/us-ccss-math-hs-prob-decision-phase29-v1.lesson-content-pack.json": "8c274f5ed04e700027622ac37fac3532bc485b527bf00fc0107dcc218d326037",
+    "src/Edulytics.Core/Curriculum/LessonContent/Packs/us-ccss-math-hs-trad-supplement-phase29-v1.lesson-content-pack.json": "f8997b6b2b3ee4a78b381924ce7c6418bf27dbbf3b107087d5d487da009d61ef",
+    "src/Edulytics.Core/Curriculum/LessonContent/Packs/us-ccss-math-hs-vector-matrix-phase29-v1.lesson-content-pack.json": "b3b57bde5e47970a85fcb9637b1a6f8ce8ae14ed4afe792bde5d06b9aef78aed"
+  }
+}

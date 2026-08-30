@@ -1,0 +1,62 @@
+{
+  "packCode": "US-CCSS-MATH",
+  "versionCode": "CCSSM-2010",
+  "contentVersion": "ccss-hs-complex-p29-v1",
+  "sourcePolicyVersion": 2,
+  "targetCurriculumPeriod": "2026-2027",
+  "sourceCurriculumPeriod": "Common Core State Standards 2010",
+  "sourceVersionLabel": "Common Core State Standards for Mathematics (2010)",
+  "sourceAuthority": "NGA Center / CCSSO",
+  "sourceUrl": "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf",
+  "sourceCheckedAtUtc": "2026-08-29T00:00:00Z",
+  "sourceResolution": "CurrentOfficial",
+  "fallbackReason": "",
+  "pedagogicalSourceType": "OpenEducationalResource",
+  "pedagogicalSourceTitle": "Mathematics Vision Project",
+  "pedagogicalSourcePublisher": "Mathematics Vision Project",
+  "pedagogicalSourceEdition": "Phase 29 locked source",
+  "pedagogicalSourceUrl": "https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+  "pedagogicalSourceCheckedAtUtc": "2026-08-29T00:00:00Z",
+  "pedagogicalSourceSelectionReason": "Phase 29 accepted High School pedagogical source strategy.",
+  "pedagogicalSourceSelectionEvidence": "Immutable Phase 29 High School source, placement, evidence, sequence and Blueprint V2 contract locks.",
+  "pedagogicalSourceRightsNote": "Use restricted to accepted Phase 29 commercial-safe license lock.",
+  "reviewMethod": "Exact blueprint-to-Standard alignment validation, approved-license provenance lock, deterministic domain-specific lesson authoring, machine-recomputed worked-example verification, bilingual structural QA, and fail-closed unsupported-family detection.",
+  "status": "Published",
+  "reviewedBy": "Edulytics Curriculum Review — deterministic Phase 29 QA",
+  "reviewEvidence": "Blueprint US-CCSS-MATH:HS:FOURTH:COMPLEX (f4c2a465d03b421878866730556a432652c262cf88849cbc2035e9251e6aa034) contains 1 source-driven pedagogical lessons. Exactly 1 have accepted formal Common Core targets and are included in this canonical pack; 0 source-valid supporting-only lessons are deliberately excluded. Each included lesson was bound to its exact blueprint OutcomeCodes/FormalTargets and official CCSS node text. The deterministic Phase 29 authoring pipeline has no generic fallback: unsupported standard families stop generation. Worked examples and step-by-step answers are produced from computed operands and recomputed results, bilingual body fields are structurally audited, and source provenance remains attached to every lesson title.",
+  "lessons": [
+    {
+      "lessonCode": "PED:US-CCSS-MATH:HS:FOURTH:COMPLEX:U01:L01",
+      "titleProvenance": "PedagogicalSource",
+      "titleSourceReference": "MVP-ALG2:M03:T08H — https://www.mathematicsvisionproject.org/uploads/1/1/6/3/11636986/3_algebra_ii_framework_overview_and_scope_and_sequence.pdf",
+      "outcomeCodes": [
+        "CCSS:HSN-CN.A.3",
+        "CCSS:HSN-CN.B.4",
+        "CCSS:HSN-CN.B.5",
+        "CCSS:HSN-CN.B.6"
+      ],
+      "translations": [
+        {
+          "cultureCode": "en",
+          "title": "Complex Computations",
+          "explanation": "Complex Computations is an Edulytics lesson in the unit “Complex Numbers”. It is aligned exactly to CCSS:HSN-CN.A.3, CCSS:HSN-CN.B.4, CCSS:HSN-CN.B.5, CCSS:HSN-CN.B.6. The accepted Common Core target text for this lesson states: (+) Find the conjugate of a complex number; use conjugates to find moduli and quotients of c omplex numbers. (+) Represent complex numbers on the complex plane in rectangular and polar f orm (including real and imaginary numbers), and explain why the rectangular and polar forms of a given complex number represent the same number. (+) Represent addition, subtraction, multiplication, and conjugation of c omplex numbers geometrically on the complex plane; use properties of this representation for computation. For example, (–1 + √3 i)3 = 8 because (–1 + √3 i) has modulus 2 and argument 120°. (+) Calculate the distance between numbers in the complex plane as the modulus of the diff erence, and the midpoint of a segment as the average of the numbers at its endpoints. Instructional focus: Students extend arithmetic to numbers of the form a + bi and connect algebraic operations, polynomial equations, and geometric representations. The lesson title and source sequence determine the immediate context, while the official Standard text controls the academic boundary.",
+          "keyConceptsAndRules": "Lesson-specific focus: Complex Computations. Use i^2 = -1. Combine real parts with real parts and imaginary parts with imaginary parts. Complex conjugates can produce real products and help rationalize denominators.",
+          "workedExamples": "Example 1: (4+5i)(4+4i) = -4+36i because i²=-1. Example 2: (2+5i)(1+4i) = -18+13i because i²=-1.",
+          "stepByStepSolutions": "Step 1: distribute: 16+16i+20i+20i². Step 2: replace i² with -1, giving 16-20+(16+20)i. Step 3: combine to -4+36i. Step 1: distribute: 2+8i+5i+20i². Step 2: replace i² with -1, giving 2-20+(8+5)i. Step 3: combine to -18+13i.",
+          "commonMistakes": "Lesson-specific focus: Complex Computations. Do not treat i as an ordinary real variable. Reduce powers of i correctly and keep real and imaginary components organized.",
+          "quickSummary": "Lesson-specific focus: Complex Computations. Apply the rules for i, simplify the algebra, write the result in a + bi form when appropriate, and verify by substitution or multiplication."
+        },
+        {
+          "cultureCode": "pl",
+          "title": "Liczby zespolone — Complex Computations",
+          "explanation": "Lekcja „Liczby zespolone — Complex Computations” należy do działu „Complex Numbers” i jest dokładnie powiązana ze standardami CCSS:HSN-CN.A.3, CCSS:HSN-CN.B.4, CCSS:HSN-CN.B.5, CCSS:HSN-CN.B.6. Główny kierunek pracy: Uczeń rozszerza działania na liczby postaci a + bi i łączy rachunek algebraiczny, równania wielomianowe oraz reprezentacje geometryczne. Tytuł i kolejność pochodzą z zaakceptowanego źródła pedagogicznego, natomiast granice merytoryczne wyznaczają oficjalne standardy Common Core.",
+          "keyConceptsAndRules": "Cel tej lekcji: Liczby zespolone — Complex Computations. Korzystaj z i^2 = -1. Łącz osobno części rzeczywiste i urojone. Sprzężenia zespolone mogą dawać iloczyny rzeczywiste i pomagać usuwać liczbę zespoloną z mianownika.",
+          "workedExamples": "Przykład 1: (4+5i)(4+4i) = -4+36i, ponieważ i²=-1. Przykład 2: (2+5i)(1+4i) = -18+13i, ponieważ i²=-1.",
+          "stepByStepSolutions": "Krok 1: wymnóż nawiasy: 16+16i+20i+20i². Krok 2: zastąp i² przez -1. Krok 3: połącz części i otrzymaj -4+36i. Krok 1: wymnóż nawiasy: 2+8i+5i+20i². Krok 2: zastąp i² przez -1. Krok 3: połącz części i otrzymaj -18+13i.",
+          "commonMistakes": "Cel tej lekcji: Liczby zespolone — Complex Computations. Nie traktuj i jak zwykłej zmiennej rzeczywistej. Poprawnie upraszczaj potęgi i i porządkuj osobno części rzeczywiste oraz urojone.",
+          "quickSummary": "Cel tej lekcji: Liczby zespolone — Complex Computations. Zastosuj reguły dla i, uprość rachunek, zapisz wynik w postaci a + bi i sprawdź go przez podstawienie lub mnożenie."
+        }
+      ]
+    }
+  ]
+}
