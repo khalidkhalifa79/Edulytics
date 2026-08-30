@@ -17,12 +17,12 @@
     var body = Model.Lesson.Body;
     var sections = body is null ? Array.Empty<LessonReaderSection>() : new[]
     {
-        new LessonReaderSection("01", L["Explanation"], "explanation", LessonPresentationParser.Parse(body.Explanation)),
-        new LessonReaderSection("02", L["KeyConceptsAndRules"], "concepts", LessonPresentationParser.Parse(body.KeyConceptsAndRules)),
-        new LessonReaderSection("03", L["WorkedExamples"], "examples", LessonPresentationParser.Parse(body.WorkedExamples)),
-        new LessonReaderSection("04", L["StepByStepSolutions"], "steps", LessonPresentationParser.Parse(body.StepByStepSolutions, orderedSteps: true)),
-        new LessonReaderSection("05", L["CommonMistakes"], "mistakes", LessonPresentationParser.Parse(body.CommonMistakes)),
-        new LessonReaderSection("06", L["QuickSummary"], "summary", LessonPresentationParser.Parse(body.QuickSummary))
+        new LessonReaderSection("01", L["Explanation"], "explanation", LessonPresentationParser.Parse(body.Explanation, sectionKind: "explanation")),
+        new LessonReaderSection("02", L["KeyConceptsAndRules"], "concepts", LessonPresentationParser.Parse(body.KeyConceptsAndRules, sectionKind: "concepts")),
+        new LessonReaderSection("03", L["WorkedExamples"], "examples", LessonPresentationParser.Parse(body.WorkedExamples, sectionKind: "examples")),
+        new LessonReaderSection("04", L["StepByStepSolutions"], "steps", LessonPresentationParser.Parse(body.StepByStepSolutions, orderedSteps: true, sectionKind: "steps")),
+        new LessonReaderSection("05", L["CommonMistakes"], "mistakes", LessonPresentationParser.Parse(body.CommonMistakes, sectionKind: "mistakes")),
+        new LessonReaderSection("06", L["QuickSummary"], "summary", LessonPresentationParser.Parse(body.QuickSummary, sectionKind: "summary"))
     };
 }
 <div class="lesson-reader">
