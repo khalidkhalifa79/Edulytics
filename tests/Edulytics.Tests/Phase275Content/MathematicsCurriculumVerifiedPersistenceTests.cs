@@ -60,7 +60,13 @@ public sealed class MathematicsCurriculumVerifiedPersistenceTests
 
         var states = await db.CurriculumPackImportStates.AsNoTracking().ToListAsync();
         Assert.Equal(4, states.Count);
-        Assert.Equal(436, states.Single(x => x.FrameworkCode == MathematicsCurriculumPackRegistry.EnglandCode).OfficialNodeCount);
+        Assert.Equal(
+            779,
+            states.Single(
+                x =>
+                    x.FrameworkCode ==
+                    MathematicsCurriculumPackRegistry.CambridgeCode)
+                .OfficialNodeCount);
         Assert.Equal(393, states.Single(x => x.FrameworkCode == MathematicsCurriculumPackRegistry.CommonCoreCode).OfficialNodeCount);
         Assert.Equal(306, states.Single(x => x.FrameworkCode == MathematicsCurriculumPackRegistry.PolandCode).OfficialNodeCount);
 

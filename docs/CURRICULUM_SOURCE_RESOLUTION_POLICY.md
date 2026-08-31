@@ -196,3 +196,43 @@ Fallback reason:
 `Product Owner selected the complete verified 2025-2026 Polish curriculum as
 the stable baseline for the current rollout instead of mixing transitional
 2026 curriculum cohorts.`
+
+
+## Cambridge International Mathematics baseline decision
+
+For the current Edulytics international/British Mathematics pathway, the
+Product Owner selected Cambridge International Mathematics as the active
+curriculum family:
+
+- Cambridge Primary Mathematics 0096;
+- Cambridge Lower Secondary Mathematics 0862;
+- Cambridge IGCSE Mathematics 0580;
+- Cambridge International AS & A Level Mathematics 9709.
+
+The verified official-source layer is reference-only.
+
+Therefore:
+
+- official Cambridge copyrighted objective prose is not stored or reproduced;
+- only verified programme/reference identifiers, hierarchy, source locators,
+  source metadata, digests, and other necessary provenance are retained;
+- curriculum academic language is English;
+- UI localization is independent of curriculum academic language;
+- curriculum translation is not performed;
+- identifiers/objectives are never invented;
+- synthetic Cambridge pedagogical lessons are prohibited;
+- Cambridge one-outcome-per-lesson fallback is prohibited;
+- IGCSE Core and Extended are preserved independently;
+- 9709 component/route structure is preserved in the reference graph rather
+  than being fabricated as an official Year 12 / Year 13 syllabus mapping;
+- Edulytics logical levels are application placement scopes, not claims that
+  Cambridge publishes those logical-level mappings;
+- real pedagogical lesson sequencing/content is a separate Phase 29 source and
+  authorship task;
+- historical England/DfE data is retained for auditability but is not
+  automatically remapped to Cambridge.
+
+The accepted source gate records 296 0096 references, 187 0862 references,
+100 0580 Core leaf references, 158 0580 Extended leaf references and 38 9709
+topic/section references, for 779 official/reference identifiers inside 888
+canonical curriculum nodes.

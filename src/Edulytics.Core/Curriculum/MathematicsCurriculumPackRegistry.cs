@@ -5,7 +5,8 @@ public enum CurriculumReuseBasis
     OpenGovernmentLicenceV3 = 1,
     ProductOwnerConfirmedCommercialUseEvidence = 2,
     OfficialGovernmentSourceReference = 3,
-    OfficialLegalOrGovernmentTextReference = 4
+    OfficialLegalOrGovernmentTextReference = 4,
+    CopyrightedOfficialSourceReference = 5
 }
 
 public enum CurriculumTextMode
@@ -69,7 +70,7 @@ public static class MathematicsCurriculumPackHierarchy
 public static class MathematicsCurriculumPackRegistry
 {
     public const string MathematicsSubjectCode = "MATH";
-    public const string EnglandCode = "UK-NC-ENG-MATH";
+    public const string CambridgeCode = "CAMBRIDGE-INTL-MATH";
     public const string CommonCoreCode = "US-CCSS-MATH";
     public const string UaeCode = "UAE-MOE-MATH";
     public const string PolandCode = "PL-NATIONAL-MATH";
@@ -80,49 +81,60 @@ public static class MathematicsCurriculumPackRegistry
     public static IReadOnlyList<MathematicsCurriculumPackDefinition> All { get; } =
     [
         new(
-            EnglandCode,
-            "British / UK Mathematics — England",
-            "GB-ENG",
+            CambridgeCode,
+            "Cambridge International Mathematics",
+            "GB",
             MathematicsSubjectCode,
             "en",
-            CurriculumReuseBasis.OpenGovernmentLicenceV3,
-            CurriculumTextMode.FullOfficialTextPermitted,
-            "DfE Mathematics programmes of study are published under OGL v3.0 except third-party material. Years 12-13 use the separate DfE AS/A-level Mathematics subject-content source.",
-            "Contains public sector information licensed under the Open Government Licence v3.0.",
+            CurriculumReuseBasis.CopyrightedOfficialSourceReference,
+            CurriculumTextMode.OfficialSourceLinked,
+            "Cambridge International Mathematics is reference-only at the official curriculum layer. Edulytics preserves verified programme/reference identifiers and source provenance without reproducing copyrighted Cambridge objective prose. Logical levels are Edulytics product placement scopes and must not be represented as official Cambridge year-by-year syllabus identities.",
+            "Source: Cambridge International Education. Official copyrighted Cambridge objective wording is not reproduced.",
             [
                 new(
-                    "Years 1-11 statutory Mathematics programmes of study",
-                    "UK Department for Education",
-                    "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
-                    "National Curriculum KS1-KS4; updated 28 September 2021",
+                    "Cambridge Primary Mathematics 0096",
+                    "Cambridge International Education",
+                    "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+                    "0096 Curriculum Framework Version 2.1 / June 2025",
                     true),
                 new(
-                    "Years 12-13 post-16 Mathematics subject content",
-                    "UK Department for Education",
-                    "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-                    "AS and A level Mathematics subject content",
+                    "Cambridge Lower Secondary Mathematics 0862",
+                    "Cambridge International Education",
+                    "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-lower-secondary/curriculum/mathematics/",
+                    "0862 Curriculum Framework Version 3.0 / August 2021",
                     true),
                 new(
-                    "Reuse licence",
-                    "The National Archives",
-                    "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
-                    "Open Government Licence v3.0",
+                    "Cambridge IGCSE Mathematics 0580",
+                    "Cambridge International Education",
+                    "https://www.cambridgeinternational.org/Images/662466-2025-2027-syllabus.pdf",
+                    "0580 Syllabus 2025-2027 Version 3",
+                    true),
+                new(
+                    "Cambridge International AS & A Level Mathematics 9709",
+                    "Cambridge International Education",
+                    "https://www.cambridgeinternational.org/Images/697427-2026-2027-syllabus.pdf",
+                    "9709 Syllabus 2026-2027 Version 3",
                     true)
             ],
             [
-                new(1,"Year 1","Key Stage 1",null,true),
-                new(2,"Year 2","Key Stage 1",null,true),
-                new(3,"Year 3","Key Stage 2",null,true),
-                new(4,"Year 4","Key Stage 2",null,true),
-                new(5,"Year 5","Key Stage 2",null,true),
-                new(6,"Year 6","Key Stage 2",null,true),
-                new(7,"Year 7","Key Stage 3",null,true),
-                new(8,"Year 8","Key Stage 3",null,true),
-                new(9,"Year 9","Key Stage 3",null,true),
-                new(10,"Year 10","Key Stage 4",null,true),
-                new(11,"Year 11","Key Stage 4",null,true),
-                new(12,"Year 12","Post-16","AS/A-level Mathematics",true),
-                new(13,"Year 13","Post-16","A-level Mathematics",true)
+                new(1,"Cambridge Primary Stage 1","Cambridge Primary",null,true),
+                new(2,"Cambridge Primary Stage 2","Cambridge Primary",null,true),
+                new(3,"Cambridge Primary Stage 3","Cambridge Primary",null,true),
+                new(4,"Cambridge Primary Stage 4","Cambridge Primary",null,true),
+                new(5,"Cambridge Primary Stage 5","Cambridge Primary",null,true),
+                new(6,"Cambridge Primary Stage 6","Cambridge Primary",null,true),
+
+                new(7,"Cambridge Lower Secondary Stage 7","Cambridge Lower Secondary",null,true),
+                new(8,"Cambridge Lower Secondary Stage 8","Cambridge Lower Secondary",null,true),
+                new(9,"Cambridge Lower Secondary Stage 9","Cambridge Lower Secondary",null,true),
+
+                new(10,"Cambridge IGCSE Mathematics (0580)","Cambridge IGCSE","Core",true),
+                new(10,"Cambridge IGCSE Mathematics (0580)","Cambridge IGCSE","Extended",true),
+                new(11,"Cambridge IGCSE Mathematics (0580)","Cambridge IGCSE","Core",true),
+                new(11,"Cambridge IGCSE Mathematics (0580)","Cambridge IGCSE","Extended",true),
+
+                new(12,"Cambridge International AS Level Mathematics (9709)","Cambridge Advanced","Component/route structure preserved in reference graph",true),
+                new(13,"Cambridge International A Level Mathematics (9709)","Cambridge Advanced","Component/route structure preserved in reference graph",true)
             ]),
 
         new(
@@ -277,7 +289,7 @@ public static class MathematicsCurriculumPackRegistry
     {
         var expected = new HashSet<string>(StringComparer.Ordinal)
         {
-            EnglandCode,
+            CambridgeCode,
             CommonCoreCode,
             UaeCode,
             PolandCode
@@ -334,9 +346,44 @@ public static class MathematicsCurriculumPackRegistry
             throw new InvalidOperationException("UAE must stop at Grade 12.");
         }
 
-        var uk = All.Single(x => x.Code == EnglandCode);
-        if (!uk.Levels.Any(x => x.LogicalLevel == 13 && x.NativeLabel == "Year 13"))
-            throw new InvalidOperationException("England pack must include post-16 Year 13 mapping.");
+        var cambridgePack =
+            All.Single(
+                x => x.Code == CambridgeCode);
+
+        if (cambridgePack.AcademicLanguage != "en" ||
+            cambridgePack.ReuseBasis !=
+                CurriculumReuseBasis.CopyrightedOfficialSourceReference ||
+            cambridgePack.TextMode !=
+                CurriculumTextMode.OfficialSourceLinked ||
+            !Enumerable.Range(1, 13).SequenceEqual(
+                cambridgePack.Levels
+                    .Select(x => x.LogicalLevel)
+                    .Distinct()
+                    .OrderBy(x => x)) ||
+            !cambridgePack.Levels.Any(
+                x =>
+                    x.LogicalLevel == 10 &&
+                    x.Pathway == "Core") ||
+            !cambridgePack.Levels.Any(
+                x =>
+                    x.LogicalLevel == 10 &&
+                    x.Pathway == "Extended") ||
+            !cambridgePack.Levels.Any(
+                x =>
+                    x.LogicalLevel == 13 &&
+                    x.NativeLabel ==
+                        "Cambridge International A Level Mathematics (9709)") ||
+            !new[] { "0096", "0862", "0580", "9709" }.All(
+                code =>
+                    cambridgePack.Sources.Any(
+                        source =>
+                            source.Purpose.Contains(
+                                code,
+                                StringComparison.Ordinal))))
+        {
+            throw new InvalidOperationException(
+                "Cambridge International Mathematics reference-only contract is incomplete.");
+        }
 
         var pl = All.Single(x => x.Code == PolandCode);
         if (!pl.Levels.Any(x =>
@@ -354,8 +401,6 @@ public static class MathematicsLessonBlueprintRegistry
     private static readonly IReadOnlyDictionary<string, string[]> UnitFamilies =
         new Dictionary<string, string[]>(StringComparer.Ordinal)
         {
-            [MathematicsCurriculumPackRegistry.EnglandCode] =
-                ["Number", "Algebra", "RatioAndProportion", "Geometry", "Measurement", "Statistics"],
             [MathematicsCurriculumPackRegistry.CommonCoreCode] =
                 ["CountingAndCardinality", "OperationsAndAlgebraicThinking", "Number", "Geometry", "MeasurementAndData", "Functions", "StatisticsAndProbability"],
             [MathematicsCurriculumPackRegistry.UaeCode] =
@@ -368,7 +413,11 @@ public static class MathematicsLessonBlueprintRegistry
     {
         var result = new List<MathematicsLessonBlueprint>();
 
-        foreach (var pack in MathematicsCurriculumPackRegistry.All)
+        foreach (var pack in MathematicsCurriculumPackRegistry.All
+                     .Where(
+                         x =>
+                             x.Code !=
+                             MathematicsCurriculumPackRegistry.CambridgeCode))
         {
             var units = UnitFamilies[pack.Code];
 
@@ -402,7 +451,11 @@ public static class MathematicsLessonBlueprintRegistry
         if (blueprints.Count == 0)
             throw new InvalidOperationException("Lesson blueprint registry cannot be empty.");
 
-        foreach (var pack in MathematicsCurriculumPackRegistry.All)
+        foreach (var pack in MathematicsCurriculumPackRegistry.All
+                     .Where(
+                         x =>
+                             x.Code !=
+                             MathematicsCurriculumPackRegistry.CambridgeCode))
         {
             if (!blueprints.Any(x => x.PackCode == pack.Code))
                 throw new InvalidOperationException($"Lesson blueprint missing for {pack.Code}");

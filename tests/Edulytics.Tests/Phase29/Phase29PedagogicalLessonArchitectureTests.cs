@@ -450,7 +450,7 @@ public sealed class Phase29PedagogicalLessonArchitectureTests
     }
 
     [Fact]
-    public async Task EnglandYearSixKeepsOutcomeBackedFallback()
+    public async Task CambridgeCreatesNoSyntheticOutcomeBackedFallback()
     {
         await using var db =
             CreateDb();
@@ -468,37 +468,25 @@ public sealed class Phase29PedagogicalLessonArchitectureTests
                 .Where(
                     x =>
                         x.FrameworkCode ==
-                        MathematicsCurriculumPackRegistry
-                            .EnglandCode)
+                        MathematicsCurriculumPackRegistry.CambridgeCode)
                 .Select(
-                    x => x.FrameworkVersionId)
+                    x =>
+                        x.FrameworkVersionId)
                 .SingleAsync();
 
-        var lessons =
+        Assert.False(
             await db.CurriculumPedagogicalLessons
-                .Where(
+                .AnyAsync(
                     x =>
                         x.FrameworkVersionId ==
-                            versionId &&
-                        x.LogicalLevelFrom == 6 &&
-                        x.LogicalLevelTo == 6)
-                .ToArrayAsync();
+                        versionId));
 
-        Assert.True(
-            lessons.Length > 6);
-
-        var ids =
-            lessons
-                .Select(x => x.Id)
-                .ToArray();
-
-        Assert.Equal(
-            lessons.Length,
+        Assert.False(
             await db.CurriculumPedagogicalLessonOutcomes
-                .CountAsync(
+                .AnyAsync(
                     x =>
-                        ids.Contains(
-                            x.PedagogicalLessonId)));
+                        x.FrameworkVersionId ==
+                        versionId));
     }
 
     [Fact]

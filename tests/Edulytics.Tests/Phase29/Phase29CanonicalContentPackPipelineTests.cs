@@ -256,36 +256,18 @@ public sealed class Phase29CanonicalContentPackPipelineTests
                 .SingleAsync(
                     x =>
                         x.FrameworkCode ==
-                        MathematicsCurriculumPackRegistry.EnglandCode);
+                        MathematicsCurriculumPackRegistry.CommonCoreCode);
 
-        var lesson =
-            await db.CurriculumPedagogicalLessons
-                .Where(
-                    x =>
-                        x.FrameworkVersionId ==
-                        state.FrameworkVersionId)
-                .OrderBy(x => x.SortOrder)
-                .FirstAsync();
-
-        var mapping =
-            await db.CurriculumPedagogicalLessonOutcomes
-                .SingleAsync(
-                    x =>
-                        x.PedagogicalLessonId ==
-                        lesson.Id);
-
-        var outcomeCode =
-            await db.CurriculumPackContentNodes
-                .Where(
-                    x => x.Id == mapping.OutcomeNodeId)
-                .Select(x => x.Code)
-                .SingleAsync();
+        var fixture =
+            await SelectSingleMappedLessonFixtureAsync(
+                db,
+                state.FrameworkVersionId);
 
         var document =
             ValidDocument(
                 state.VersionCode,
-                lesson.Code,
-                outcomeCode);
+                fixture.LessonCode,
+                fixture.OutcomeCode);
 
         var seeder =
             new MathematicsCanonicalLessonContentSeeder(
@@ -300,7 +282,7 @@ public sealed class Phase29CanonicalContentPackPipelineTests
                     .ToArrayAsync());
 
         Assert.Equal(
-            lesson.Id,
+            fixture.LessonId,
             content.PedagogicalLessonId);
 
         Assert.Equal(
@@ -315,15 +297,19 @@ public sealed class Phase29CanonicalContentPackPipelineTests
                 .Where(
                     x =>
                         x.CurriculumLessonContentId ==
-                            content.Id)
+                        content.Id)
                 .OrderBy(x => x.CultureCode)
                 .ToArrayAsync();
 
-        Assert.Equal(2, translations.Length);
+        Assert.Equal(
+            2,
+            translations.Length);
 
         Assert.Equal(
             new[] { "en", "pl" },
-            translations.Select(x => x.CultureCode));
+            translations.Select(
+                x =>
+                    x.CultureCode));
     }
 
     [Fact]
@@ -342,21 +328,17 @@ public sealed class Phase29CanonicalContentPackPipelineTests
                 .SingleAsync(
                     x =>
                         x.FrameworkCode ==
-                        MathematicsCurriculumPackRegistry.EnglandCode);
+                        MathematicsCurriculumPackRegistry.CommonCoreCode);
 
-        var lesson =
-            await db.CurriculumPedagogicalLessons
-                .Where(
-                    x =>
-                        x.FrameworkVersionId ==
-                        state.FrameworkVersionId)
-                .OrderBy(x => x.SortOrder)
-                .FirstAsync();
+        var fixture =
+            await SelectSingleMappedLessonFixtureAsync(
+                db,
+                state.FrameworkVersionId);
 
         var document =
             ValidDocument(
                 state.VersionCode,
-                lesson.Code,
+                fixture.LessonCode,
                 "NOT-A-REAL-OFFICIAL-OUTCOME");
 
         var seeder =
@@ -365,7 +347,8 @@ public sealed class Phase29CanonicalContentPackPipelineTests
 
         await Assert.ThrowsAsync<InvalidOperationException>(
             () =>
-                seeder.SeedDocumentsAsync([document]));
+                seeder.SeedDocumentsAsync(
+                    [document]));
 
         Assert.Empty(
             await db.CurriculumLessonContents
@@ -564,6 +547,84 @@ public sealed class Phase29CanonicalContentPackPipelineTests
             });
     }
 
+    private static async Task<(
+        Guid LessonId,
+        string LessonCode,
+        string OutcomeCode)>
+        SelectSingleMappedLessonFixtureAsync(
+            EdulyticsDbContext db,
+            Guid frameworkVersionId)
+    {
+        var mappings =
+            await db.CurriculumPedagogicalLessonOutcomes
+                .Where(
+                    x =>
+                        x.FrameworkVersionId ==
+                        frameworkVersionId)
+                .ToArrayAsync();
+
+        var mappedOnce =
+            mappings
+                .GroupBy(
+                    x =>
+                        x.PedagogicalLessonId)
+                .Where(
+                    group =>
+                        group.Count() == 1)
+                .Select(
+                    group =>
+                        group.Key)
+                .ToHashSet();
+
+        if (mappedOnce.Count == 0)
+        {
+            throw new InvalidOperationException(
+                "Fixture requires a lesson with exactly one formal outcome mapping.");
+        }
+
+        var lessons =
+            await db.CurriculumPedagogicalLessons
+                .Where(
+                    x =>
+                        x.FrameworkVersionId ==
+                        frameworkVersionId)
+                .OrderBy(
+                    x =>
+                        x.SortOrder)
+                .ThenBy(
+                    x =>
+                        x.Code)
+                .ToArrayAsync();
+
+        var lesson =
+            lessons.First(
+                x =>
+                    mappedOnce.Contains(
+                        x.Id));
+
+        var mapping =
+            mappings.Single(
+                x =>
+                    x.PedagogicalLessonId ==
+                    lesson.Id);
+
+        var outcomeCode =
+            await db.CurriculumPackContentNodes
+                .Where(
+                    x =>
+                        x.Id ==
+                        mapping.OutcomeNodeId)
+                .Select(
+                    x =>
+                        x.Code)
+                .SingleAsync();
+
+        return (
+            lesson.Id,
+            lesson.Code,
+            outcomeCode);
+    }
+
     private static CanonicalLessonContentPackDocument ValidDocument(
         string versionCode = "TEST-VERSION",
         string lessonCode = "PED:TEST:LESSON",
@@ -571,7 +632,7 @@ public sealed class Phase29CanonicalContentPackPipelineTests
         new()
         {
             PackCode =
-                MathematicsCurriculumPackRegistry.EnglandCode,
+                MathematicsCurriculumPackRegistry.CommonCoreCode,
 
             VersionCode = versionCode,
             ContentVersion = "reviewed-v1",

@@ -261,7 +261,7 @@ public sealed class Phase29MultiProgramControllerCoverageTests
                 service.Subject.Id,
                 service.Grade.Id,
                 service.Program.Id,
-                "UK-NC-ENG-MATH",
+                "CAMBRIDGE-INTL-MATH",
                 CancellationToken.None));
 
         Assert.IsType<RedirectToActionResult>(
@@ -397,7 +397,7 @@ public sealed class Phase29MultiProgramControllerCoverageTests
                 service.Subject.Id,
                 service.Grade.Id,
                 service.Program.Id,
-                "UK-NC-ENG-MATH",
+                "CAMBRIDGE-INTL-MATH",
                 CancellationToken.None));
     }
 
@@ -722,14 +722,14 @@ public sealed class Phase29MultiProgramControllerCoverageTests
                 {
                     AcademicProgramId = Program.Id,
                     AcademicProgramName = Program.Name,
-                    FrameworkCode = "UK-NC-ENG-MATH",
-                    FrameworkDisplayName = "British / UK Mathematics — England",
+                    FrameworkCode = "CAMBRIDGE-INTL-MATH",
+                    FrameworkDisplayName = "Cambridge International Mathematics",
                     OfficialOutcomes =
                     [
                         new OfficialCurriculumOutcomeOption(
                             contentId,
                             lessonId,
-                            "UK.6.N.1",
+                            "CAM:OUT:0580:C1.15.1",
                             "Official option",
                             "Option",
                             "Number",
@@ -748,16 +748,16 @@ public sealed class Phase29MultiProgramControllerCoverageTests
                     Frameworks =
                     [
                         new CurriculumFrameworkItem(
-                            "UK-NC-ENG-MATH",
-                            "British / UK Mathematics — England")
+                            "CAMBRIDGE-INTL-MATH",
+                            "Cambridge International Mathematics")
                     ],
                     Adoptions =
                     [
                         new CurriculumAdoptionItem(
                             Grade.Id,
                             Subject.Id,
-                            "UK-NC-ENG-MATH",
-                            "British / UK Mathematics — England")
+                            "CAMBRIDGE-INTL-MATH",
+                            "Cambridge International Mathematics")
                         {
                             AcademicProgramId = Program.Id,
                             AcademicProgramName = Program.Name,

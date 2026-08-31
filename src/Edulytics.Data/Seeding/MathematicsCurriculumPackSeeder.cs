@@ -12,7 +12,7 @@ public sealed class MathematicsCurriculumPackSeeder
 {
     private static readonly HashSet<string> Expected =
     [
-        MathematicsCurriculumPackRegistry.EnglandCode,
+        MathematicsCurriculumPackRegistry.CambridgeCode,
         MathematicsCurriculumPackRegistry.CommonCoreCode,
         MathematicsCurriculumPackRegistry.UaeCode,
         MathematicsCurriculumPackRegistry.PolandCode
@@ -40,12 +40,16 @@ public sealed class MathematicsCurriculumPackSeeder
             foreach (var doc in docs.OrderBy(x => x.PackCode, StringComparer.Ordinal))
                 await SeedOneAsync(doc, ct);
 
+            await RetireObsoleteEnglandAsync(ct);
+
             await transaction.CommitAsync(ct);
             return;
         }
 
         foreach (var doc in docs.OrderBy(x => x.PackCode, StringComparer.Ordinal))
             await SeedOneAsync(doc, ct);
+
+        await RetireObsoleteEnglandAsync(ct);
     }
 
     private static List<Doc> Load()
@@ -85,7 +89,18 @@ public sealed class MathematicsCurriculumPackSeeder
         if (d.Links.Any(x => !known.Contains(x.FromCode) || !known.Contains(x.ToCode)))
             throw new InvalidOperationException($"Dangling alignment link: {d.PackCode}");
 
-        var official = d.Nodes.Where(x => x.IsOfficial && (x.Kind == "Standard" || x.Kind == "Outcome")).ToArray();
+        var official =
+            d.Nodes
+                .Where(
+                    x =>
+                        x.IsOfficial &&
+                        (
+                            d.PackCode ==
+                                MathematicsCurriculumPackRegistry.CambridgeCode
+                                ? x.Kind is "Outcome" or "Reference"
+                                : x.Kind is "Standard" or "Outcome"
+                        ))
+                .ToArray();
         if (official.Length != d.OfficialNodeCount)
             throw new InvalidOperationException($"Official count mismatch: {d.PackCode}");
 
@@ -95,8 +110,11 @@ public sealed class MathematicsCurriculumPackSeeder
         if (!full && official.Any(x => !string.IsNullOrWhiteSpace(x.OfficialText)))
             throw new InvalidOperationException($"Source-linked pack leaked full official text: {d.PackCode}");
 
-        if (d.PackCode == MathematicsCurriculumPackRegistry.EnglandCode && d.OfficialNodeCount != 436)
-            throw new InvalidOperationException("England verified count must be 436.");
+        if (d.PackCode ==
+            MathematicsCurriculumPackRegistry.CambridgeCode)
+        {
+            ValidateCambridgeManifest(d);
+        }
         if (d.PackCode == MathematicsCurriculumPackRegistry.CommonCoreCode &&
             (d.SchemaVersion != 14 ||
              d.OfficialNodeCount != 393 ||
@@ -124,6 +142,204 @@ public sealed class MathematicsCurriculumPackSeeder
         {
             throw new InvalidOperationException($"Only verified real lessons may be persisted; synthetic teaching shells are forbidden: {d.PackCode}");
         }
+    }
+
+    private static void ValidateCambridgeManifest(
+        Doc d)
+    {
+        if (d.SchemaVersion != 16 ||
+            d.VersionCode != "CAMBRIDGE-PATHWAY-2026" ||
+            d.TextMode != "OfficialSourceLinked" ||
+            d.ReuseBasis != "CopyrightedOfficialSourceReference" ||
+            d.OfficialNodeCount != 779 ||
+            d.NodeCount != 888 ||
+            d.UnitCount != 0 ||
+            d.LessonCount != 0 ||
+            d.LinkCount != 0)
+        {
+            throw new InvalidOperationException(
+                "Cambridge accepted baseline contract drift.");
+        }
+
+        if (d.Nodes.Any(
+                x =>
+                    !string.IsNullOrWhiteSpace(
+                        x.OfficialText)))
+        {
+            throw new InvalidOperationException(
+                "Cambridge copyrighted official prose must not be persisted.");
+        }
+
+        var assembly =
+            typeof(MathematicsCurriculumPackRegistry)
+                .Assembly;
+
+        var names =
+            assembly
+                .GetManifestResourceNames()
+                .Where(
+                    x =>
+                        x.EndsWith(
+                            "cambridge-intl-math.integrity-manifest.json",
+                            StringComparison.OrdinalIgnoreCase))
+                .ToArray();
+
+        if (names.Length != 1)
+        {
+            throw new InvalidOperationException(
+                "Exactly one Cambridge integrity manifest is required.");
+        }
+
+        using var stream =
+            assembly.GetManifestResourceStream(
+                names[0])
+            ?? throw new InvalidOperationException(
+                "Cambridge integrity manifest cannot be opened.");
+
+        using var document =
+            JsonDocument.Parse(stream);
+
+        var root =
+            document.RootElement;
+
+        var counts =
+            root.GetProperty("Counts");
+
+        var policy =
+            root.GetProperty("Policy");
+
+        if (root.GetProperty("PackCode").GetString() != d.PackCode ||
+            root.GetProperty("VersionCode").GetString() != d.VersionCode ||
+            root.GetProperty("SourceDigest").GetString() != d.SourceDigest ||
+            root.GetProperty("ContentDigest").GetString() != d.ContentDigest ||
+            counts.GetProperty("Primary0096").GetInt32() != 296 ||
+            counts.GetProperty("Lower0862").GetInt32() != 187 ||
+            counts.GetProperty("Igcse0580CoreSections").GetInt32() != 53 ||
+            counts.GetProperty("Igcse0580CoreLeafReferences").GetInt32() != 100 ||
+            counts.GetProperty("Igcse0580ExtendedSections").GetInt32() != 72 ||
+            counts.GetProperty("Igcse0580ExtendedLeafReferences").GetInt32() != 158 ||
+            counts.GetProperty("Alevel9709TopicReferences").GetInt32() != 38 ||
+            counts.GetProperty("OfficialReferenceIdentifiers").GetInt32() != 779 ||
+            counts.GetProperty("Nodes").GetInt32() != 888)
+        {
+            throw new InvalidOperationException(
+                "Cambridge integrity manifest drift.");
+        }
+
+        if (policy.GetProperty("OfficialCambridgeProseStored").GetBoolean() ||
+            policy.GetProperty("CurriculumTranslated").GetBoolean() ||
+            policy.GetProperty("InventedIdentifiers").GetBoolean() ||
+            policy.GetProperty("SyntheticLessons").GetBoolean() ||
+            policy.GetProperty("OutcomeFallbackForCambridge").GetBoolean())
+        {
+            throw new InvalidOperationException(
+                "Cambridge rights/product policy drift.");
+        }
+
+        var codes =
+            d.Nodes
+                .Select(x => x.Code)
+                .ToHashSet(StringComparer.Ordinal);
+
+        foreach (var required in new[]
+        {
+            "CAM:OUT:0580:C1.15.1",
+            "CAM:OUT:0580:C1.15.2",
+            "CAM:OUT:0580:C1.15.3",
+            "CAM:OUT:0580:C4.1.1",
+            "CAM:OUT:0580:C4.1.2",
+            "CAM:OUT:0580:C4.1.3",
+            "CAM:OUT:0580:C8.2.1",
+            "CAM:OUT:0580:C8.2.2",
+            "CAM:OUT:0580:E8.2.1",
+            "CAM:OUT:0580:E8.2.2",
+            "CAM:REF:9709:1.1",
+            "CAM:REF:9709:6.5"
+        })
+        {
+            if (!codes.Contains(required))
+            {
+                throw new InvalidOperationException(
+                    $"Cambridge accepted reference missing: {required}.");
+            }
+        }
+    }
+
+    private async Task RetireObsoleteEnglandAsync(
+        CancellationToken ct)
+    {
+        // Historical platform identity only.
+        //
+        // Existing school data is NOT automatically remapped to Cambridge.
+        // The historical framework is retained for auditability but removed
+        // from the active curriculum surface.
+        const string obsoleteCode =
+            "UK-NC-ENG-MATH";
+
+        var normalized =
+            obsoleteCode.ToUpperInvariant();
+
+        var frameworks =
+            await _db.CurriculumFrameworks
+                .Where(
+                    x =>
+                        x.OwnerSchoolId == null &&
+                        x.NormalizedCode == normalized)
+                .ToArrayAsync(ct);
+
+        if (frameworks.Length == 0)
+        {
+            return;
+        }
+
+        var now =
+            DateTime.UtcNow;
+
+        var frameworkIds =
+            frameworks
+                .Select(x => x.Id)
+                .ToArray();
+
+        var versions =
+            await _db.CurriculumFrameworkVersions
+                .Where(
+                    x =>
+                        frameworkIds.Contains(
+                            x.FrameworkId))
+                .ToArrayAsync(ct);
+
+        var versionIds =
+            versions
+                .Select(x => x.Id)
+                .ToArray();
+
+        var nodes =
+            await _db.CurriculumPackContentNodes
+                .Where(
+                    x =>
+                        versionIds.Contains(
+                            x.FrameworkVersionId))
+                .ToArrayAsync(ct);
+
+        foreach (var framework in frameworks)
+        {
+            framework.IsActive = false;
+            framework.UpdatedAtUtc = now;
+        }
+
+        foreach (var version in versions)
+        {
+            version.IsActive = false;
+            version.UpdatedAtUtc = now;
+        }
+
+        foreach (var node in nodes)
+        {
+            node.IsActive = false;
+            node.UpdatedAtUtc = now;
+        }
+
+        await _db.SaveChangesAsync(ct);
     }
 
     private async Task SeedOneAsync(Doc d, CancellationToken ct)
@@ -325,7 +541,9 @@ public sealed class MathematicsCurriculumPackSeeder
         }
 
         if (d.PackCode !=
-            MathematicsCurriculumPackRegistry.CommonCoreCode)
+                MathematicsCurriculumPackRegistry.CommonCoreCode &&
+            d.PackCode !=
+                MathematicsCurriculumPackRegistry.CambridgeCode)
         {
             return;
         }
@@ -334,13 +552,17 @@ public sealed class MathematicsCurriculumPackSeeder
             persisted.Count(
                 x =>
                     x.IsOfficial &&
-                    (x.NodeKind == "Standard" ||
-                     x.NodeKind == "Outcome"));
+                    (
+                        d.PackCode ==
+                            MathematicsCurriculumPackRegistry.CambridgeCode
+                            ? x.NodeKind is "Outcome" or "Reference"
+                            : x.NodeKind is "Standard" or "Outcome"
+                    ));
 
         if (officialCount != d.OfficialNodeCount)
         {
             throw new InvalidOperationException(
-                "Persisted Common Core official-node count drift.");
+                $"Persisted official-node count drift: {d.PackCode}.");
         }
 
         var expectedIds =
@@ -358,7 +580,7 @@ public sealed class MathematicsCurriculumPackSeeder
         if (persistedByCode.Count != d.Nodes.Count)
         {
             throw new InvalidOperationException(
-                "Persisted Common Core code-set cardinality drift.");
+                $"Persisted code-set cardinality drift: {d.PackCode}.");
         }
 
         foreach (var expected in d.Nodes)
@@ -368,7 +590,7 @@ public sealed class MathematicsCurriculumPackSeeder
                     out var current))
             {
                 throw new InvalidOperationException(
-                    $"Persisted Common Core node missing: {expected.Code}");
+                    $"Persisted node missing for {d.PackCode}: {expected.Code}");
             }
 
             Guid? parentId =
@@ -385,7 +607,7 @@ public sealed class MathematicsCurriculumPackSeeder
                     frameworkVersionId))
             {
                 throw new InvalidOperationException(
-                    $"Persisted Common Core node drift: {expected.Code}");
+                    $"Persisted node drift for {d.PackCode}: {expected.Code}");
             }
         }
     }
