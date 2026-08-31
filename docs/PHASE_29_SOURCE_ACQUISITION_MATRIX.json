@@ -18,7 +18,8 @@
     "approvedPedagogicalSourceLicenses": [
       "Public Domain",
       "CC0 1.0",
-      "CC BY 4.0"
+      "CC BY 4.0",
+      "Open Government Licence v3.0"
     ]
   },
   "countryOverrides": {
@@ -33,7 +34,7 @@
   "nextResearchAndContentTarget": {
     "packCode": "CAMBRIDGE-INTL-MATH",
     "nativeLevel": "Cambridge Primary Stage 1",
-    "reason": "The verified Cambridge International Mathematics reference baseline is established. Continue Phase 29 with lawful real pedagogical source resolution and student-facing lesson-content authoring beginning at Cambridge Primary Stage 1. Phase 30 remains blocked."
+    "reason": "Stage 1 lawful source resolution and content v1 are the active Phase 29 target. Keep Stage 1 as the target until staging browser/manual acceptance is completed; Stage 2 must not begin before that acceptance."
   },
   "curricula": [
     {
@@ -234,12 +235,12 @@
           "pathway": null,
           "officialSourcePeriod": "0096 Curriculum Framework v2.1 / June 2025",
           "officialSourceResolution": "CurrentOfficial",
-          "pedagogicalSelectionStatus": "ResearchRequired",
-          "pedagogicalSourceType": "NotYetSelected",
-          "sourceFamily": "",
-          "selectionEvidence": "Verified Cambridge 0096 curriculum/reference identity. A lawful reviewed pedagogical lesson source has not yet been selected.",
-          "blockingReason": "Resolve lawful pedagogical source provenance and a real reviewed lesson sequence before publishing Cambridge lesson content. Synthetic Cambridge lessons and outcome fallbacks are prohibited.",
-          "note": "Official academic language is English. Cambridge curriculum is reference-only at the official-source layer; copyrighted objective prose is not reproduced."
+          "pedagogicalSelectionStatus": "ResolvedExact",
+          "pedagogicalSourceType": "OpenEducationalResource",
+          "sourceFamily": "UK Department for Education primary mathematics guidance / National Curriculum — OGL v3.0",
+          "selectionEvidence": "DfE Mathematics guidance: year 1 (DfE-00110-2020) and current KS1 National Curriculum Mathematics were license-verified under Open Government Licence v3.0. Edulytics owns the Stage 1 lesson sequence and manually verified all 36 formal mappings against Cambridge 0096 reference identifiers without storing Cambridge objective prose.",
+          "blockingReason": "",
+          "note": "27 explicit English learner-facing lessons. 36 Stage 1 identifiers covered exactly once. TWM.01-TWM.08 remain non-formal in v1. Cambridge outcome fallback remains prohibited. Browser/manual acceptance is required before advancing the research/content target to Stage 2."
         },
         {
           "logicalLevel": 2,
