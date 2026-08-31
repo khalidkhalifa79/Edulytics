@@ -1,0 +1,62 @@
+{
+  "ManifestVersion": 2,
+  "PackCode": "CAMBRIDGE-INTL-MATH",
+  "VersionCode": "CAMBRIDGE-PATHWAY-2026",
+  "InventoryDigestSha256": "5e7f440be2ae214cc7a76db66d3fb745016afa99ac9ec4b50a5ab65b22532322",
+  "SourceDigest": "0d9aaa326fa55658a1ebb09c88f4ec5d822c6c041702932456ab2f7c0f8682a0",
+  "ContentDigest": "194ba203afa5b57de07575e11ce0b3ce6f23bc90957475a4ca6c7cdee6c78c12",
+  "Policy": {
+    "ReuseMode": "REFERENCE_ONLY",
+    "OfficialCambridgeProseStored": false,
+    "CurriculumTranslated": false,
+    "InventedIdentifiers": false,
+    "SyntheticLessons": false,
+    "OutcomeFallbackForCambridge": false,
+    "9709LocatorSemantics": "TOPIC_SECTION_REFERENCE_NOT_OBJECTIVE_CODE"
+  },
+  "Counts": {
+    "Primary0096": 296,
+    "Lower0862": 187,
+    "Igcse0580CoreSections": 53,
+    "Igcse0580ExtendedSections": 72,
+    "Igcse0580CoreLeafReferences": 100,
+    "Igcse0580ExtendedLeafReferences": 158,
+    "Alevel9709TopicReferences": 38,
+    "OfficialReferenceIdentifiers": 779,
+    "Domains": 109,
+    "Nodes": 888,
+    "Units": 0,
+    "Lessons": 0,
+    "Links": 0
+  },
+  "Sources": [
+    {
+      "Programme": "0096",
+      "Name": "Cambridge Primary Mathematics",
+      "Version": "Curriculum Framework Version 2.1 / June 2025",
+      "OfficialAuthorityUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+      "IdentifierAuditStatus": "CURRENT_VERSION_CONFIRMED_SOURCE_AUDITED_IDENTIFIER_SET"
+    },
+    {
+      "Programme": "0862",
+      "Name": "Cambridge Lower Secondary Mathematics",
+      "Version": "Curriculum Framework Version 3.0 / August 2021",
+      "OfficialAuthorityUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-lower-secondary/curriculum/mathematics/",
+      "IdentifierAuditStatus": "CURRENT_VERSION_CONFIRMED_SOURCE_AUDITED_IDENTIFIER_SET"
+    },
+    {
+      "Programme": "0580",
+      "Name": "Cambridge IGCSE Mathematics",
+      "Version": "2025–2027 Syllabus Version 3",
+      "OfficialAuthorityUrl": "https://www.cambridgeinternational.org/Images/662466-2025-2027-syllabus.pdf",
+      "OfficialPdfSha256": "627f8e5dab21605f95b9aceec4a2dcdddf91dce5767d6938d647b38041c6d363"
+    },
+    {
+      "Programme": "9709",
+      "Name": "Cambridge International AS & A Level Mathematics",
+      "Version": "2026–2027 Syllabus Version 3",
+      "OfficialAuthorityUrl": "https://www.cambridgeinternational.org/Images/697427-2026-2027-syllabus.pdf",
+      "OfficialPdfSha256": "dd0131f3cd8d4e3c270e7936cbb909c15f4cb8053f8337b67c16e8ec0b8bc5e5"
+    }
+  ]
+}

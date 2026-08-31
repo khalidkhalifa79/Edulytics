@@ -26,8 +26,8 @@ public sealed class Phase29CanonicalRepositoryCoverageTests
 
         Assert.Equal(ids.FrameworkVersionId, staff.FrameworkVersionId);
         Assert.Equal(ids.AcademicProgramId, staff.AcademicProgramId);
-        Assert.Equal("British Stream", staff.AcademicProgramName);
-        Assert.Equal("UK-NC-ENG-MATH", staff.FrameworkCode);
+        Assert.Equal("Test Stream", staff.AcademicProgramName);
+        Assert.Equal("TEST-MATH", staff.FrameworkCode);
         Assert.Equal("GRADE 6", staff.GradeName);
 
         var lesson = Assert.Single(
@@ -36,7 +36,7 @@ public sealed class Phase29CanonicalRepositoryCoverageTests
 
         Assert.Equal(ids.PedagogicalLessonId, lesson.Id);
         Assert.Null(lesson.OfficialLessonNodeId);
-        Assert.Equal("UK:UNIT:NUMBER", lesson.UnitKey);
+        Assert.Equal("TEST:UNIT:NUMBER", lesson.UnitKey);
         Assert.Equal("Number", lesson.UnitTitle);
         Assert.Equal(1, lesson.OfficialOutcomeCount);
 
@@ -54,8 +54,8 @@ public sealed class Phase29CanonicalRepositoryCoverageTests
                 ids.PedagogicalLessonId));
 
         Assert.Equal(ids.StandardNodeId, outcome.Id);
-        Assert.Equal("UK:6:STD:001", outcome.Code);
-        Assert.Equal("Official standard text", outcome.Description);
+        Assert.Equal("TEST:STD:G6:001", outcome.Code);
+        Assert.Equal("Reference-only standard fixture", outcome.Description);
 
         var student = Assert.Single(
             await repository.ListStudentAdoptionsAsync(
@@ -64,7 +64,7 @@ public sealed class Phase29CanonicalRepositoryCoverageTests
 
         Assert.Equal(ids.GradeLevelId, student.GradeLevelId);
         Assert.Equal(ids.AcademicProgramId, student.AcademicProgramId);
-        Assert.Equal("British Stream", student.AcademicProgramName);
+        Assert.Equal("Test Stream", student.AcademicProgramName);
         Assert.Equal(ids.FrameworkVersionId, student.FrameworkVersionId);
     }
 
@@ -145,9 +145,9 @@ public sealed class Phase29CanonicalRepositoryCoverageTests
         {
             Id = academicProgramId,
             SchoolId = schoolId,
-            Name = "British Stream",
-            Code = "BRITISH",
-            NormalizedCode = "BRITISH",
+            Name = "Test Stream",
+            Code = "TEST",
+            NormalizedCode = "TEST",
             Status = AcademicStructureStatus.Active,
             IsDefault = true,
             CreatedAtUtc = now,
@@ -157,11 +157,11 @@ public sealed class Phase29CanonicalRepositoryCoverageTests
         db.CurriculumFrameworks.Add(new CurriculumFramework
         {
             Id = frameworkId,
-            Code = "UK-NC-ENG-MATH",
-            NormalizedCode = "UK-NC-ENG-MATH",
-            Name = "British / UK Mathematics — England",
+            Code = "TEST-MATH",
+            NormalizedCode = "TEST-MATH",
+            Name = "Repository Test Mathematics",
             CountryCode = "GB",
-            ProviderName = "UK Department for Education",
+            ProviderName = "Test Curriculum Authority",
             IsActive = true,
             CreatedAtUtc = now,
             UpdatedAtUtc = now
@@ -171,9 +171,9 @@ public sealed class Phase29CanonicalRepositoryCoverageTests
         {
             Id = frameworkVersionId,
             FrameworkId = frameworkId,
-            VersionCode = "NC-2021-POST16",
-            NormalizedVersionCode = "NC-2021-POST16",
-            Name = "England Mathematics",
+            VersionCode = "TEST-2026",
+            NormalizedVersionCode = "TEST-2026",
+            Name = "Repository Test Mathematics",
             IsActive = true,
             CreatedAtUtc = now,
             UpdatedAtUtc = now
@@ -198,16 +198,17 @@ public sealed class Phase29CanonicalRepositoryCoverageTests
         {
             Id = standardNodeId,
             FrameworkVersionId = frameworkVersionId,
-            FrameworkCode = "UK-NC-ENG-MATH",
-            VersionCode = "NC-2021-POST16",
+            FrameworkCode = "TEST-MATH",
+            VersionCode = "TEST-2026",
             NodeKind = "Standard",
-            Code = "UK:6:STD:001",
+            Code = "TEST:STD:G6:001",
             LogicalLevelFrom = 6,
             LogicalLevelTo = 6,
-            NativeLevel = "Year 6",
+            NativeLevel = "Grade 6",
             Title = "Standard title",
-            OfficialText = "Official standard text",
-            SourceAuthority = "UK Department for Education",
+            OfficialText = null,
+            AuthorDescription = "Reference-only standard fixture",
+            SourceAuthority = "Test Curriculum Authority",
             SourceUrl = "https://example.test/source",
             SourceLocator = "coverage",
             Attribution = "coverage",
@@ -224,13 +225,13 @@ public sealed class Phase29CanonicalRepositoryCoverageTests
             Id = pedagogicalLessonId,
             FrameworkVersionId = frameworkVersionId,
             OfficialLessonNodeId = null,
-            Code = "PED:UK:6:NUMBER:LESSON-01",
-            UnitKey = "UK:UNIT:NUMBER",
+            Code = "PED:TEST:MATH:G6:L01",
+            UnitKey = "TEST:UNIT:NUMBER",
             UnitTitle = "Number",
-            Title = "Year 6 — Number",
+            Title = "Repository fixture lesson",
             LogicalLevelFrom = 6,
             LogicalLevelTo = 6,
-            NativeLevel = "Year 6",
+            NativeLevel = "Grade 6",
             SortOrder = 1,
             CreatedAtUtc = now,
             UpdatedAtUtc = now
@@ -503,7 +504,7 @@ public sealed class Phase29LessonContentServiceCoverageTests
 
         var repo = new FakeLessonRepository
         {
-            StudentContexts = [Context(versionId, "UK-NC-ENG-MATH", "Year 6", 6)],
+            StudentContexts = [Context(versionId, "UAE-MOE-MATH", "Grade 6", 6)],
             Lessons = [Lesson(lessonId, versionId, 6, 1, 1)],
             Contents =
             [
@@ -549,7 +550,7 @@ public sealed class Phase29LessonContentServiceCoverageTests
 
         var repo = new FakeLessonRepository
         {
-            StudentContexts = [Context(versionId, "UK-NC-ENG-MATH", "Year 6", 6)]
+            StudentContexts = [Context(versionId, "UAE-MOE-MATH", "Grade 6", 6)]
         };
 
         var service = Service(
@@ -609,7 +610,7 @@ public sealed class Phase29LessonContentServiceCoverageTests
 
         var repo = new FakeLessonRepository
         {
-            StaffContexts = [Context(versionId, "UK-NC-ENG-MATH", "Year 6", 6)]
+            StaffContexts = [Context(versionId, "UAE-MOE-MATH", "Grade 6", 6)]
         };
 
         var service = Service(

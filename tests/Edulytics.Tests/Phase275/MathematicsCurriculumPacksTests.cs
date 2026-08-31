@@ -23,7 +23,7 @@ public sealed class MathematicsCurriculumPacksTests
 
         var expected = new[]
         {
-            MathematicsCurriculumPackRegistry.EnglandCode,
+            MathematicsCurriculumPackRegistry.CambridgeCode,
             MathematicsCurriculumPackRegistry.CommonCoreCode,
             MathematicsCurriculumPackRegistry.UaeCode,
             MathematicsCurriculumPackRegistry.PolandCode
@@ -65,14 +65,67 @@ public sealed class MathematicsCurriculumPacksTests
     }
 
     [Fact]
-    public void England_UsesSeparatePost16SourceAndMapsYear13()
+    public void Cambridge_IsReferenceOnlyAndPreservesProgrammePathways()
     {
-        var pack = MathematicsCurriculumPackRegistry.All.Single(
-            x => x.Code == MathematicsCurriculumPackRegistry.EnglandCode);
+        var pack =
+            MathematicsCurriculumPackRegistry.All.Single(
+                x =>
+                    x.Code ==
+                    MathematicsCurriculumPackRegistry.CambridgeCode);
 
-        Assert.Contains(pack.Sources, x => x.Url.Contains("gce-as-and-a-level-mathematics", StringComparison.Ordinal));
-        Assert.Contains(pack.Levels, x => x.LogicalLevel == 13 && x.NativeLabel == "Year 13");
-        Assert.Equal(CurriculumTextMode.FullOfficialTextPermitted, pack.TextMode);
+        Assert.Equal(
+            CurriculumReuseBasis.CopyrightedOfficialSourceReference,
+            pack.ReuseBasis);
+
+        Assert.Equal(
+            CurriculumTextMode.OfficialSourceLinked,
+            pack.TextMode);
+
+        Assert.Equal(
+            "en",
+            pack.AcademicLanguage);
+
+        Assert.Equal(
+            Enumerable.Range(1, 13),
+            pack.Levels
+                .Select(x => x.LogicalLevel)
+                .Distinct()
+                .OrderBy(x => x));
+
+        Assert.Contains(
+            pack.Levels,
+            x =>
+                x.LogicalLevel == 10 &&
+                x.Pathway == "Core");
+
+        Assert.Contains(
+            pack.Levels,
+            x =>
+                x.LogicalLevel == 10 &&
+                x.Pathway == "Extended");
+
+        Assert.Contains(
+            pack.Levels,
+            x =>
+                x.LogicalLevel == 13 &&
+                x.NativeLabel ==
+                    "Cambridge International A Level Mathematics (9709)");
+
+        Assert.All(
+            new[] { "0096", "0862", "0580", "9709" },
+            code =>
+                Assert.Contains(
+                    pack.Sources,
+                    source =>
+                        source.Purpose.Contains(
+                            code,
+                            StringComparison.Ordinal)));
+
+        Assert.DoesNotContain(
+            MathematicsLessonBlueprintRegistry.CreateBlueprints(),
+            x =>
+                x.PackCode ==
+                MathematicsCurriculumPackRegistry.CambridgeCode);
     }
 
     [Fact]
@@ -145,7 +198,11 @@ public sealed class MathematicsCurriculumPacksTests
     {
         var blueprints = MathematicsLessonBlueprintRegistry.CreateBlueprints();
 
-        foreach (var pack in MathematicsCurriculumPackRegistry.All)
+        foreach (var pack in MathematicsCurriculumPackRegistry.All
+                     .Where(
+                         x =>
+                             x.Code !=
+                             MathematicsCurriculumPackRegistry.CambridgeCode))
         {
             var expectedLevels = pack.Levels.Select(x => x.LogicalLevel).Distinct().OrderBy(x => x).ToArray();
             var actualLevels = blueprints

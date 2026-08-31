@@ -21,14 +21,16 @@ namespace Edulytics.Data.Seeding;
 /// therefore have zero, one, or multiple formal mappings.
 ///
 /// Scopes without a resolved blueprint keep the deterministic one-outcome-per-
-/// lesson fallback. No fuzzy text matching or invented official relationship is
-/// permitted.
+/// lesson fallback except Cambridge International Mathematics. Cambridge is
+/// reference-only until reviewed real pedagogical blueprints exist; synthetic
+/// Cambridge fallback lessons are prohibited.
+/// No fuzzy text matching or invented official relationship is permitted.
 /// </summary>
 public sealed class MathematicsPedagogicalLessonSeeder
 {
     private static readonly string[] SupportedCodes =
     [
-        MathematicsCurriculumPackRegistry.EnglandCode,
+        MathematicsCurriculumPackRegistry.CambridgeCode,
         MathematicsCurriculumPackRegistry.CommonCoreCode,
         MathematicsCurriculumPackRegistry.UaeCode,
         MathematicsCurriculumPackRegistry.PolandCode
@@ -425,7 +427,12 @@ public sealed class MathematicsPedagogicalLessonSeeder
         var now = DateTime.UtcNow;
 
         foreach (var pack in MathematicsCurriculumPackRegistry.All
-                     .Where(x => x.Code != MathematicsCurriculumPackRegistry.UaeCode))
+                     .Where(
+                         x =>
+                             x.Code !=
+                                 MathematicsCurriculumPackRegistry.UaeCode &&
+                             x.Code !=
+                                 MathematicsCurriculumPackRegistry.CambridgeCode))
         {
             var state = stateByCode[pack.Code];
 
