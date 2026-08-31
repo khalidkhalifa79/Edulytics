@@ -1,0 +1,958 @@
+{
+  "PackCode": "CAMBRIDGE-INTL-MATH",
+  "VersionCode": "CAMBRIDGE-PATHWAY-2026",
+  "ContentVersion": "phase29-cambridge-primary-stage1-dfe-ogl-v1",
+  "AcademicLanguage": "en",
+  "CurriculumTranslationRequired": false,
+  "TargetCurriculumPeriod": "0096 Curriculum Framework v2.1 / June 2025",
+  "SourceCurriculumPeriod": "0096 Curriculum Framework v2.1 / June 2025",
+  "SourceVersionLabel": "Cambridge Primary Mathematics 0096 Framework v2.1 / June 2025",
+  "SourceAuthority": "Cambridge International Education",
+  "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+  "SourceCheckedAtUtc": "2026-08-31T02:44:01Z",
+  "SourceResolution": "CurrentOfficial",
+  "FallbackReason": "",
+  "ReviewMethod": "Deterministic Phase 29 source-policy validation, explicit 36-code Stage 1 mapping review, learner-facing text review, visual-description validation and full regression.",
+  "SourcePolicyVersion": 2,
+  "PedagogicalSourceType": "OpenEducationalResource",
+  "PedagogicalSourceTitle": "DfE Year 1 Mathematics Guidance plus KS1 National Curriculum Mathematics",
+  "PedagogicalSourcePublisher": "UK Department for Education",
+  "PedagogicalSourceEdition": "DfE-00110-2020 / current KS1 programme of study",
+  "PedagogicalSourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
+  "PedagogicalSourceCheckedAtUtc": "2026-08-31T02:44:01Z",
+  "PedagogicalSourceSelectionReason": "The DfE source set provides lawful primary mathematics pedagogy that can be adapted commercially under OGL v3.0 while Cambridge remains the reference-only academic authority.",
+  "PedagogicalSourceSelectionEvidence": "Official DfE source and OGL terms were retrieved and verified. The 27 lesson sequence is Edulytics-owned, every one of the 36 Stage 1 formal mappings is explicit, and no runtime or fallback mapping is permitted.",
+  "PedagogicalSourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. No government logos or identified third-party copyright material is reproduced.",
+  "Status": "Published",
+  "ReviewedBy": "Edulytics Phase 29 Cambridge Stage 1 content review",
+  "ReviewEvidence": "27 explicit learner-facing lessons; 36 Stage 1 identifiers covered exactly once; zero TWM formal mappings; zero supporting fallbacks; English-only academic body; OGL source proof; 27 local instructional visual descriptions.",
+  "Lessons": [
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L01",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Nc.01, 1Np.01. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Nc.01",
+        "CAM:OUT:0096:1Np.01"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SourceLocator": "Year 1 counting and number representation",
+      "SourceTitle": "Mathematics guidance: year 1",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "DfE-00110-2020 / June 2020",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+      "CanonicalBodySha256": "663da527697cdb33576f082417276f6b92b7bb21e191547efdd1232c83de1f9f",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Count, Touch, and Check",
+          "Explanation": "Counting tells us how many objects are in a group. Give one number word to one object, then move to the next object. The final number word tells the total. Zero is useful too: it tells us that there are no objects in the group. If the same objects are spread out or pushed close together, the number of objects stays the same.",
+          "KeyConceptsAndRules": "Match one number word to one object.\nCount each object once and only once.\nThe last number you say is the total.\nZero means none.\nRearranging a group does not change how many objects are in it.",
+          "WorkedExamples": "A group has 7 counters. Touch one counter for each count: 1, 2, 3, 4, 5, 6, 7. Spread the counters farther apart and count again. There are still 7.\nDescription: A number line with labels: 0, 1, 2, 3, 4, 5, 6, 7.",
+          "StepByStepSolutions": "Step 1: Find the first object and say 1.\nStep 2: Touch or move a different object each time you say the next number.\nStep 3: Stop after every object has been counted once.\nStep 4: Use the last number as the total.\nStep 5: Rearrange the objects and recount to check that the total is unchanged.",
+          "CommonMistakes": "Counting the same object twice makes the total too large.\nSkipping an object makes the total too small.\nThinking a spread-out row contains more objects confuses space with number.\nForgetting that an empty group has a number, zero, makes later number work harder.",
+          "QuickSummary": "One count matches one object. The final count gives the total. Zero represents no objects. A group keeps the same number when its objects are only rearranged."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L02",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Nc.02. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Nc.02"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SourceLocator": "Year 1 quantity recognition and structured representations",
+      "SourceTitle": "Mathematics guidance: year 1",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "DfE-00110-2020 / June 2020",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+      "CanonicalBodySha256": "b7cb2872125e1b8bb481f4da326c6277d1fe80cb86ea3cdad0e05640c7a87a7b",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "See Small Groups Without Counting",
+          "Explanation": "Some small quantities can be recognised at a glance. Familiar arrangements, such as dots on a die or objects arranged in small groups, help your eyes notice a number without counting every item one by one. You can also break a pattern into smaller parts that you already know.",
+          "KeyConceptsAndRules": "Look for a familiar pattern before counting.\nNotice small parts inside the whole pattern.\nUse what you know about those parts to name the total.\nCount afterwards when you want to check.",
+          "WorkedExamples": "Imagine 5 dots arranged like the five on a die: four dots make the corners and one dot is in the centre. You can recognise 5 without saying 1, 2, 3, 4, 5.\nDescription: A grid of squares showing four occupied corner positions and one occupied centre position.",
+          "StepByStepSolutions": "Step 1: Look at the whole arrangement for a moment.\nStep 2: Notice a part you recognise, such as 4 around the outside.\nStep 3: Notice the extra 1 in the centre.\nStep 4: Combine what you see: 4 and 1 make 5.\nStep 5: Count once to confirm if you are unsure.",
+          "CommonMistakes": "Beginning to count immediately can hide useful patterns.\nGuessing without noticing any structure is not the same as recognising a quantity.\nChanging the arrangement may make the same quantity harder to recognise, but it does not change the quantity.",
+          "QuickSummary": "Familiar patterns help you recognise small quantities quickly. Look for known parts, combine them mentally, and count only when you need a check."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L03",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Nc.03. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Nc.03"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SourceLocator": "Year 1 estimation and counting within a small range",
+      "SourceTitle": "Mathematics guidance: year 1",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "DfE-00110-2020 / June 2020",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+      "CanonicalBodySha256": "de27253f4ea2caf5597c314738e4c064ba8bf3a9ea3608188ce646971cf6e9e8",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Estimate, Then Count",
+          "Explanation": "An estimate is a sensible idea of how many objects there might be before you count exactly. Estimating first makes you think about the size of the group. Counting afterwards lets you compare your estimate with the exact total.",
+          "KeyConceptsAndRules": "Estimate before you count.\nKeep the estimate sensible for the size of the group.\nCount each object once to find the exact total.\nCompare the estimate and the exact count without treating a reasonable estimate as a failure.",
+          "WorkedExamples": "You see a small collection of buttons and think there are about 12. After counting carefully, you find 13. The estimate was close and useful.\nDescription: A number line with labels: 0, 5, 10, 12, 13, 15, 20.",
+          "StepByStepSolutions": "Step 1: Look at the whole collection without touching it.\nStep 2: Choose a number that seems close to the amount you see.\nStep 3: Count the objects carefully using one-to-one matching.\nStep 4: Compare your estimate with the exact count.\nStep 5: Think about what helped your estimate become close.",
+          "CommonMistakes": "Counting first and calling the answer an estimate misses the purpose of estimating.\nChoosing a number far outside the possible range is not a useful estimate.\nChanging the estimate while counting turns the estimate into a hidden count.",
+          "QuickSummary": "Estimate first, then count exactly. A useful estimate is sensible and reasonably close; it does not have to equal the exact total."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L04",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Nc.04, 1Nc.06. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Nc.04",
+        "CAM:OUT:0096:1Nc.06"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SourceLocator": "Year 1 counting sequences and pattern language",
+      "SourceTitle": "Mathematics guidance: year 1",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "DfE-00110-2020 / June 2020",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+      "CanonicalBodySha256": "5fb576f054ac3ac9641a9934cddf831022819b182fcbd773024740e4362516f7",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Count On, Back, and Describe a Sequence",
+          "Explanation": "A sequence follows an order. Numbers can move forward or backward, and they can change by a regular step. Objects can also form a sequence when a feature such as colour, shape or size follows a repeating order. Describing what changes helps you predict what comes next.",
+          "KeyConceptsAndRules": "Counting on makes numbers increase.\nCounting back makes numbers decrease.\nA step tells how much the number changes each time.\nWhen describing an object sequence, name the feature that repeats or changes.",
+          "WorkedExamples": "Start at 4 and count on in twos: 4, 6, 8, 10, 12. A colour sequence red, blue, red, blue also has a rule: the two colours alternate.\nDescription: A number line with labels: 0, 2, 4, 6, 8, 10, 12.",
+          "StepByStepSolutions": "Step 1: Identify the starting number or first object.\nStep 2: Decide whether the sequence moves forward, backward or repeats a feature.\nStep 3: Find the step or repeating rule.\nStep 4: Continue the sequence using the same rule.\nStep 5: Say the rule in words to check that every term fits.",
+          "CommonMistakes": "Changing the step halfway through creates a different sequence.\nCounting backward but increasing the numbers reverses the intended direction.\nDescribing only the objects without saying what repeats does not explain the sequence rule.",
+          "QuickSummary": "Sequences follow rules. Numbers can count on or back in regular steps, while object sequences can repeat or change a visible feature."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L05",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Nc.05. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Nc.05"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SourceLocator": "Year 1 counting in twos and odd-number sequences",
+      "SourceTitle": "Mathematics guidance: year 1",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "DfE-00110-2020 / June 2020",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+      "CanonicalBodySha256": "9ce0510039acd5bca53fed7838f1d41cb064b3e74334963b7896724c06eb369a",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Odd and Even Steps",
+          "Explanation": "Even and odd numbers alternate as you count. Starting at 0 and taking steps of 2 lands on even numbers. Starting at 1 and taking steps of 2 lands on odd numbers. This is why odd and even numbers can be thought of as every other number.",
+          "KeyConceptsAndRules": "Even numbers from 0 to 20 appear when you count 0, 2, 4, 6 and continue by twos.\nOdd numbers appear when you count 1, 3, 5, 7 and continue by twos.\nMoving one step changes odd to even or even to odd.",
+          "WorkedExamples": "Starting at 0, every second number is 0, 2, 4, 6, 8, 10. Starting at 1 gives 1, 3, 5, 7, 9.\nDescription: A number line with labels: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.",
+          "StepByStepSolutions": "Step 1: Write or imagine the counting numbers in order.\nStep 2: Begin at 0 and jump over one number each time.\nStep 3: Read the landing numbers as the even sequence.\nStep 4: Begin at 1 and repeat the same two-step pattern.\nStep 5: Read those landing numbers as the odd sequence.",
+          "CommonMistakes": "Thinking that bigger numbers are more likely to be even is incorrect; odd and even alternate forever.\nSkipping two numbers instead of one changes the step from 2 to 3.\nStarting the even sequence at 2 is useful, but remember that 0 is even too.",
+          "QuickSummary": "Odd and even numbers alternate. Count by twos from 0 for evens and by twos from 1 for odds."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L06",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Ni.01. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Ni.01"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SourceLocator": "Year 1 numeral, number-name and number-line work",
+      "SourceTitle": "Mathematics guidance: year 1",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "DfE-00110-2020 / June 2020",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+      "CanonicalBodySha256": "c7c649bab9d884774d789d493f33ac7b63fcc3684835266e2b399a7fe0ae4f20",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Read and Write Numbers to 20",
+          "Explanation": "A number can be spoken, written as a numeral and written as a word. These are different ways to represent the same amount. Connecting the spoken name to the numeral helps you recognise numbers quickly.",
+          "KeyConceptsAndRules": "Say number names in the correct order.\nMatch each spoken number name to its numeral.\nPractise reading numerals in and out of order.\nCheck teen numbers carefully because their names can sound similar.",
+          "WorkedExamples": "The numeral 14 is read as fourteen. The word eighteen represents the numeral 18.\nDescription: A number line with labels: 0, 5, 10, 14, 15, 18, 20.",
+          "StepByStepSolutions": "Step 1: Look at the numeral.\nStep 2: Say its number name aloud.\nStep 3: Write the number name if asked.\nStep 4: Match the numeral or word to its place in the 0-to-20 sequence.\nStep 5: Check that teen numbers have not been reversed or confused.",
+          "CommonMistakes": "Confusing thirteen with thirty changes the number completely.\nWriting 41 when you mean fourteen reverses the digits.\nMemorising a word without connecting it to a quantity can make later number work fragile.",
+          "QuickSummary": "Numbers from 0 to 20 can be spoken, written as numerals and written as number names. All forms should represent the same number."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L07",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Np.02. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Np.02"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SourceLocator": "Year 1 composition and decomposition of teen numbers",
+      "SourceTitle": "Mathematics guidance: year 1",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "DfE-00110-2020 / June 2020",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+      "CanonicalBodySha256": "08f36b8dcb0ee5fbed4690634025c7983d19cbb9132e5d31a53f5df823953fa3",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Make and Break Teen Numbers",
+          "Explanation": "Numbers from 10 to 20 can be built from smaller parts in more than one way. Seeing a teen number as ten and some more is especially useful, but other splits are also possible. Decomposing means breaking a number into parts; composing means putting parts together.",
+          "KeyConceptsAndRules": "The parts must combine to the original whole.\nA teen number can be shown as 10 and some more.\nThe same whole can have several correct decompositions.\nChanging the grouping does not change the total.",
+          "WorkedExamples": "14 can be seen as 10 and 4. It can also be 7 and 7, or 8 and 6. Each pair still makes the whole 14.\nDescription: A grid of squares representing one complete group of 10 and a second group of 4.",
+          "StepByStepSolutions": "Step 1: Choose the teen number you want to build.\nStep 2: Make a group of 10.\nStep 3: Add the extra ones needed to reach the whole.\nStep 4: Try a different split into two parts.\nStep 5: Add the parts mentally or recount to check the whole.",
+          "CommonMistakes": "Forgetting one of the parts changes the whole.\nThinking there is only one correct way to split a number limits flexible number sense.\nTreating 14 as 1 and 4 ignores the values represented by the whole number.",
+          "QuickSummary": "Teen numbers can be composed and decomposed in several ways. Ten-and-some-more is a powerful structure for numbers from 10 to 20."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L08",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Np.03. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Np.03"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SourceLocator": "Year 1 comparison and relative position within 20",
+      "SourceTitle": "Mathematics guidance: year 1",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "DfE-00110-2020 / June 2020",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+      "CanonicalBodySha256": "9eade36e530cb4ae9a7568e35dd5470c4293429b603c86a7cec5e82ddcf2ecfa",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Compare and Order Numbers",
+          "Explanation": "Comparing numbers means deciding which quantity is greater, smaller or equal. A number line helps because numbers farther to the right are larger. Ordering means arranging several numbers from smallest to largest or largest to smallest.",
+          "KeyConceptsAndRules": "Equal quantities have the same number.\nOn a normal number line, values increase from left to right.\nCompare the quantities, not the physical size of written digits or objects.\nCheck every number when ordering a group.",
+          "WorkedExamples": "Compare 7 and 12. Twelve is farther to the right on the number line, so 12 is greater than 7. In ascending order, 4, 9, 12 comes from smallest to largest.\nDescription: A number line with labels: 0, 4, 7, 9, 12, 15, 20.",
+          "StepByStepSolutions": "Step 1: Identify the numbers you are comparing.\nStep 2: Imagine or locate them on a number line.\nStep 3: Decide which lies farther right and which lies farther left.\nStep 4: Use that comparison to arrange all the numbers.\nStep 5: Read the order once more to check the direction.",
+          "CommonMistakes": "A larger-looking group of spread-out objects does not always contain more objects.\nReading an ascending list backwards changes it to descending order.\nComparing only the first digit is not a reliable strategy for every number.",
+          "QuickSummary": "Compare numbers by their quantities and positions in the number sequence. Ordering arranges values consistently from smaller to larger or the reverse."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L09",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Np.04. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Np.04"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SourceLocator": "Year 1 ordinal language and ordered positions",
+      "SourceTitle": "Mathematics guidance: year 1",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "DfE-00110-2020 / June 2020",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+      "CanonicalBodySha256": "5e77d238726690de5d99038a63b11c129cd33de061a7676bb497bd703c59ab70",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Positions in a Line",
+          "Explanation": "Ordinal numbers tell position rather than quantity. First tells who or what is at position 1, second at position 2, and so on. The position depends on where the order begins.",
+          "KeyConceptsAndRules": "Choose the starting end before naming positions.\nUse 1st through 10th to describe order.\nOrdinal position and total quantity answer different questions.\nIf the direction changes, the ordinal positions can change.",
+          "WorkedExamples": "Eight runners stand in a line. Counting from the left, Maya is at position 3, so Maya is third. The runner at position 1 is first.\nDescription: A number line with labels: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.",
+          "StepByStepSolutions": "Step 1: Decide where the ordering starts.\nStep 2: Give the first item position 1st.\nStep 3: Continue 2nd, 3rd, 4th and so on.\nStep 4: Stop at the item whose position you need.\nStep 5: Check that you did not count from the opposite end.",
+          "CommonMistakes": "Saying there are three objects when asked which object is third confuses quantity with position.\nStarting from the wrong end changes the answer.\nSkipping an item shifts every later ordinal position.",
+          "QuickSummary": "Ordinal numbers describe position in an order. Establish the direction first, then use first through tenth consistently."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L10",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Ni.02. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Ni.02"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SourceLocator": "Year 1 addition through combining and counting on",
+      "SourceTitle": "Mathematics guidance: year 1",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "DfE-00110-2020 / June 2020",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+      "CanonicalBodySha256": "7dc7fd37153f6ab3d74f95c90df118a618c689f511a1c92984ae6da83df68809",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Join Groups to Add",
+          "Explanation": "Addition can combine two groups into one total. It can also start with one amount and count on by another amount. Both views describe an increase and should lead to the same total.",
+          "KeyConceptsAndRules": "Combine both groups before finding the total.\nWhen counting on, start from one addend and make the required number of forward steps.\nThe total includes everything from both parts.\nChanging the order of the two parts does not change the total.",
+          "WorkedExamples": "There are 6 red counters and 3 blue counters. Combine them to get 9 counters. You can also start at 6 and count on 3 steps: 7, 8, 9.\nDescription: A number line with labels: 0, 3, 6, 7, 8, 9, 10.",
+          "StepByStepSolutions": "Step 1: Identify the two amounts being joined.\nStep 2: Choose one amount as the starting number.\nStep 3: Count on once for each object in the second amount.\nStep 4: Use the landing number as the total.\nStep 5: Check by imagining both groups combined.",
+          "CommonMistakes": "Counting the starting number as the first jump adds too little or too much.\nForgetting one group gives only a part, not the total.\nMoving backward on the number line models subtraction rather than addition.",
+          "QuickSummary": "Addition joins quantities or counts on from a starting amount. Both models produce one combined total."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L11",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Ni.03. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Ni.03"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SourceLocator": "Year 1 subtraction structures and counting back",
+      "SourceTitle": "Mathematics guidance: year 1",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "DfE-00110-2020 / June 2020",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+      "CanonicalBodySha256": "75fd12ce7757ed9ce690f557d3146bbabf14ceeb1bcb4ea4a1fb3d5c1626b784",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Take Away and Find the Difference",
+          "Explanation": "Subtraction can mean taking some away, counting backward, or comparing two amounts to find their difference. The situation tells you which view is most useful, but each view describes how much remains or how far apart two quantities are.",
+          "KeyConceptsAndRules": "Start with the whole amount when taking away.\nCount back one step for each item removed.\nFor a difference, compare the two quantities and find the gap between them.\nThe answer must fit the story you are solving.",
+          "WorkedExamples": "You have 9 cubes and remove 4. Count back four steps from 9 to reach 5. So 5 cubes remain.\nDescription: A number line with labels: 0, 3, 4, 5, 6, 7, 8, 9, 10.",
+          "StepByStepSolutions": "Step 1: Find the starting amount.\nStep 2: Identify how much is removed or compared.\nStep 3: Count backward or measure the gap.\nStep 4: State the answer with the object or quantity from the problem.\nStep 5: Check by adding the removed amount back when appropriate.",
+          "CommonMistakes": "Starting from the smaller amount in a take-away story changes the problem.\nCounting the starting number as one backward step causes an off-by-one error.\nDifference means the gap between quantities, not always the smaller quantity.",
+          "QuickSummary": "Subtraction can take away, count back or find a difference. Choose the model that matches the situation."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L12",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Ni.04. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Ni.04"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SourceLocator": "Year 1 additive facts and composition of ten",
+      "SourceTitle": "Mathematics guidance: year 1",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "DfE-00110-2020 / June 2020",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+      "CanonicalBodySha256": "9331c505bf903e6c6d05171cb1711f4223b3e208fc7132974933a30e28a19054",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Pairs That Make Ten",
+          "Explanation": "A complement to 10 is the amount needed to complete 10. Knowing these pairs helps addition and subtraction become quicker because 10 is an important anchor number.",
+          "KeyConceptsAndRules": "Two parts are complements to 10 when their total is exactly 10.\nIf one part increases by 1, the other part decreases by 1.\nThe order of the two parts can change without changing the total.",
+          "WorkedExamples": "If one part is 6, the missing part is 4 because 6 and 4 make 10. Other pairs include 7 and 3, 8 and 2, and 9 and 1.\nDescription: A tape diagram showing a whole of 10 split into parts 6 and 4.",
+          "StepByStepSolutions": "Step 1: Start with the whole 10.\nStep 2: Identify the part you already know.\nStep 3: Count on from that part until you reach 10.\nStep 4: Count how many steps were needed.\nStep 5: Check that the two parts total 10.",
+          "CommonMistakes": "Stopping at 9 finds a complement to 9, not to 10.\nCounting the starting number as a step creates an off-by-one answer.\nThinking 6 and 5 are complements to 10 ignores that their total is 11.",
+          "QuickSummary": "Complements to 10 are pairs whose total is 10. Fluent knowledge of these pairs strengthens both addition and subtraction."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L13",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Ni.05. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Ni.05"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SourceLocator": "Year 1 estimation, addition and subtraction checks",
+      "SourceTitle": "Mathematics guidance: year 1",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "DfE-00110-2020 / June 2020",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+      "CanonicalBodySha256": "def029870002dd2ff69b0106c4fc95d596b3a2c7d223f82886ee57de74accecd",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Reasonable Answers Within 20",
+          "Explanation": "Before calculating exactly, you can think about what kind of answer would be reasonable. An estimate helps you notice impossible results. After calculating, compare the exact answer with what you expected.",
+          "KeyConceptsAndRules": "Decide whether the operation should make the amount larger, smaller or compare a gap.\nEstimate a sensible result first.\nCalculate carefully within the 0-to-20 range.\nCheck the exact result against the estimate and the story.",
+          "WorkedExamples": "For 8 + 5, an answer near 13 is sensible. An answer of 3 would not fit an addition that joins two positive groups. Counting on gives the exact result 13.\nDescription: A number line with labels: 0, 5, 8, 10, 13, 15, 20.",
+          "StepByStepSolutions": "Step 1: Read the operation or situation.\nStep 2: Predict whether the answer should rise or fall from the starting amount.\nStep 3: Make a quick estimate.\nStep 4: Calculate the exact answer.\nStep 5: Compare the exact result with the estimate and correct any obvious error.",
+          "CommonMistakes": "Accepting an answer that moves in the wrong direction ignores the meaning of the operation.\nTreating an estimate as the exact answer ends the work too soon.\nRecalculating without asking whether the answer makes sense can repeat the same mistake.",
+          "QuickSummary": "Estimate, calculate and check. A reasonable-answer check uses number sense to catch results that do not fit the operation or context."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L14",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Ni.06. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Ni.06"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SourceLocator": "Year 1 doubles and additive fluency",
+      "SourceTitle": "Mathematics guidance: year 1",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "DfE-00110-2020 / June 2020",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+      "CanonicalBodySha256": "299863e2881a9b0ffa084595faed9296c2cebaf978041371c656d5770d6e9be9",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Double a Number",
+          "Explanation": "A double is made from two equal groups. Double 4 means 4 and another 4, giving 8. Knowing doubles up to double 10 creates useful number facts for later calculations.",
+          "KeyConceptsAndRules": "A double has two equal parts.\nDouble n means n + n.\nBuild or picture two matching groups when a double is unfamiliar.\nCheck that both groups contain the same amount.",
+          "WorkedExamples": "Double 6 is two groups of 6. Combining the groups gives 12.\nDescription: An array with two equal rows of six positions.",
+          "StepByStepSolutions": "Step 1: Identify the number being doubled.\nStep 2: Make a second equal group.\nStep 3: Combine or count both equal groups.\nStep 4: State the total as the double.\nStep 5: Check that neither group has gained or lost an item.",
+          "CommonMistakes": "Adding 2 to a number is not the same as doubling it.\nUsing unequal groups does not represent a double.\nForgetting that double 10 is 20 can happen if doubles are memorised without understanding two equal groups.",
+          "QuickSummary": "Doubling combines two equal groups. Double n is n + n, and the Stage 1 range includes doubles up to double 10."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L15",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Nf.01, 1Nf.02. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Nf.01",
+        "CAM:OUT:0096:1Nf.02"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SourceLocator": "KS1 Year 1 fractions: equal parts and halves",
+      "SourceTitle": "National curriculum in England: mathematics programmes of study",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "Current GOV.UK HTML / updated 28 September 2021",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+      "CanonicalBodySha256": "61f2b4b43794a1ff6dc5405efcc28e94cb246fce56057708f8ec08344beed45e",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Make Two Equal Parts",
+          "Explanation": "A whole can be split into two parts, but the parts are halves only when they are equal. Half can describe one of two equal parts of a shape, an object or a collection. Equal means the two parts represent the same amount.",
+          "KeyConceptsAndRules": "Two parts do not automatically make two halves.\nHalves must be equal in size or amount.\nOne half is one of two equal parts.\nFor a set of objects, both groups must contain the same number.",
+          "WorkedExamples": "Split 8 counters into two equal groups. Each group has 4, so 4 is half of the collection of 8.\nDescription: A fraction bar divided into two equal sections.",
+          "StepByStepSolutions": "Step 1: Start with one whole or one complete collection.\nStep 2: Divide it into exactly two parts.\nStep 3: Compare the two parts.\nStep 4: Adjust them until the parts are equal.\nStep 5: Name either equal part as one half.",
+          "CommonMistakes": "Two unequal pieces are two parts but not two halves.\nCutting a shape into equal-looking regions without checking their size can be misleading.\nFor a collection, unequal group counts cannot both be halves.",
+          "QuickSummary": "A half is one of two equal parts. Equality is the key idea for both shapes and collections."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L16",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Nf.03, 1Nf.04. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Nf.03",
+        "CAM:OUT:0096:1Nf.04"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SourceLocator": "KS1 Year 1 fractions: half of a quantity and two halves as a whole",
+      "SourceTitle": "National curriculum in England: mathematics programmes of study",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "Current GOV.UK HTML / updated 28 September 2021",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+      "CanonicalBodySha256": "f22755f665be8eac39dc00db0f896f65b39ddd99724183b92451e505e0636129",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Find Half and Rebuild the Whole",
+          "Explanation": "Finding half of a whole-number quantity means sharing the quantity into two equal groups and taking one group. The reverse idea is just as important: two matching halves combine to make one whole.",
+          "KeyConceptsAndRules": "To find half, make two equal groups.\nOne group is half of the original quantity.\nTwo equal halves together make the whole.\nIf equal sharing is impossible with whole objects, the quantity does not have a whole-number half.",
+          "WorkedExamples": "Half of 10 is 5 because 10 can be split into 5 and 5. Putting those two halves back together gives 10 again.\nDescription: A fraction bar divided into two equal sections labelled 5 and 5.",
+          "StepByStepSolutions": "Step 1: Count the whole quantity.\nStep 2: Share one item at a time between two groups.\nStep 3: Check that the groups are equal.\nStep 4: Read one group as half of the whole.\nStep 5: Combine both groups again to confirm the original whole.",
+          "CommonMistakes": "Taking away 2 is not the same as finding half.\nUnequal sharing does not produce halves.\nKnowing that half of 10 is 5 without connecting 5 + 5 back to 10 misses the whole-half relationship.",
+          "QuickSummary": "Half acts on a quantity by making two equal groups. One group is half; both halves together rebuild the whole."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L17",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Nm.01. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Nm.01"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SourceLocator": "KS1 Year 1 measurement: recognising local money",
+      "SourceTitle": "National curriculum in England: mathematics programmes of study",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "Current GOV.UK HTML / updated 28 September 2021",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+      "CanonicalBodySha256": "8a63507ffb83baacdc9b92ff3424d54428ec396ecb4fd919f3a2645395bb4314",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Recognise Coins and Notes",
+          "Explanation": "Money looks different in different countries. Learn to recognise the coins or notes used where you live by their printed value, currency symbol, size and other visible features. The printed value matters more than the physical size of a coin.",
+          "KeyConceptsAndRules": "Use the currency that is local to your school or home context.\nRead the printed value and currency symbol carefully.\nDo not assume the physically largest coin has the greatest value.\nKeep value and number of coins as separate ideas.",
+          "WorkedExamples": "Suppose your local set has coins marked 1, 2 and 5. A coin marked 5 represents the value 5 in that currency, even if another coin is physically larger.\nDescription: A number line with labels: 0, 1, 2, 5, 10, 20.",
+          "StepByStepSolutions": "Step 1: Look for the currency symbol or identifying mark.\nStep 2: Read the value printed on the coin or note.\nStep 3: Compare it with known examples from the same currency.\nStep 4: Name the coin or note by its value.\nStep 5: Check the value rather than relying only on colour or size.",
+          "CommonMistakes": "Thinking the biggest coin must have the biggest value can give the wrong answer.\nMixing symbols from different currencies creates an invalid comparison.\nCounting how many coins you see does not tell you the value of each coin.",
+          "QuickSummary": "Recognise local money by its currency features and printed value. Physical size alone does not determine monetary value."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L18",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Gt.01, 1Gt.02. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Gt.01",
+        "CAM:OUT:0096:1Gt.02"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SourceLocator": "KS1 Year 1 measurement: time vocabulary, days and months",
+      "SourceTitle": "National curriculum in England: mathematics programmes of study",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "Current GOV.UK HTML / updated 28 September 2021",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+      "CanonicalBodySha256": "8531caa26a074df333ed59b389f239072be7f9c8398e07b16d3728b975c3c9f5",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Days, Months, and Time Words",
+          "Explanation": "Time can be described using familiar units and words. A day is made of hours, a week contains seven named days, and a year is organised into months. Words such as before, after, yesterday, today and tomorrow help place events in order.",
+          "KeyConceptsAndRules": "The seven days repeat in the same weekly order.\nMonths repeat in the same yearly order.\nUse a time unit that fits the event: seconds or minutes for short events, hours for parts of a day, and days or months for longer periods.\nBefore and after describe order.",
+          "WorkedExamples": "If today is Tuesday, tomorrow is Wednesday and yesterday was Monday. Counting the seven day positions helps track the weekly cycle.\nDescription: A number line with labels: 1, 2, 3, 4, 5, 6, 7.",
+          "StepByStepSolutions": "Step 1: Decide whether the question is about a short time, a day, a week or a month.\nStep 2: Choose the suitable time word or unit.\nStep 3: Place the event before or after another event if needed.\nStep 4: Follow the known order of days or months.\nStep 5: Check that your answer matches the direction of time.",
+          "CommonMistakes": "Using hours to describe the length of a whole month is an impractical unit choice.\nReversing before and after reverses the event order.\nForgetting that the week repeats can make the transition from Sunday to Monday confusing.",
+          "QuickSummary": "Time words and units describe duration and order. Days form a repeating seven-day cycle, and months form the yearly cycle."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L19",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Gt.03. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Gt.03"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SourceLocator": "KS1 Year 1 measurement: hour and half-hour time",
+      "SourceTitle": "National curriculum in England: mathematics programmes of study",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "Current GOV.UK HTML / updated 28 September 2021",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+      "CanonicalBodySha256": "b8bfacbd83f10659a3550f72f4f5edde2ab1b78963769b4d413247a8f17b56f0",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Read O’clock and Half Past",
+          "Explanation": "An hour can be split into two equal half-hours. O’clock means the new hour has just begun. Half past means 30 minutes have passed since the hour began. Thinking of 60 minutes as one whole hour helps connect the two times.",
+          "KeyConceptsAndRules": "One hour contains 60 minutes.\nHalf an hour contains 30 minutes.\nO’clock marks the start of an hour.\nHalf past is 30 minutes after that hour began.",
+          "WorkedExamples": "From 3 o’clock to half past 3, 30 minutes pass. From half past 3 to 4 o’clock, another 30 minutes pass.\nDescription: A number line with labels: 0, 30, 60.",
+          "StepByStepSolutions": "Step 1: Identify the hour being named.\nStep 2: Decide whether the time is exactly on the hour or halfway through it.\nStep 3: For o’clock, use the start of the hour.\nStep 4: For half past, move 30 minutes into the hour.\nStep 5: Check that two half-hours would complete the full 60-minute hour.",
+          "CommonMistakes": "Half past 3 does not mean halfway between the numerals 3 and 4 as numbers; it means halfway through the hour of time.\nCalling 30 minutes a full hour doubles the duration.\nMixing up half past 3 with half past 4 shifts the time by one hour.",
+          "QuickSummary": "O’clock is the start of an hour. Half past is 30 minutes later. Two half-hours make one full hour."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L20",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Gg.01, 1Gg.07. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Gg.01",
+        "CAM:OUT:0096:1Gg.07"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SourceLocator": "KS1 Year 1 geometry: 2D shape properties and orientation",
+      "SourceTitle": "National curriculum in England: mathematics programmes of study",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "Current GOV.UK HTML / updated 28 September 2021",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+      "CanonicalBodySha256": "32da362e8e69ee9e635f3b8dd04ab277b24e1d3cf88ded22a53ddc9e2c488927",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Flat Shapes in Different Orientations",
+          "Explanation": "A 2D shape is flat. You can describe it by features such as the number of sides and whether its boundary is straight or curved. Turning a shape does not change its properties, so a triangle is still a triangle after it is rotated.",
+          "KeyConceptsAndRules": "Describe a shape using properties, not only its name.\nCount sides carefully where the boundary is straight.\nNotice whether boundaries are straight or curved.\nRotation changes orientation, not the shape's defining properties.",
+          "WorkedExamples": "A triangle with three straight sides can point upward, sideways or downward and remain the same triangle. A rectangle remains a rectangle after a half-turn.\nDescription: A triangle beside a rectangle, with each shape shown again after rotation.",
+          "StepByStepSolutions": "Step 1: Look at the boundary of the flat shape.\nStep 2: Count its straight sides or notice curved parts.\nStep 3: Name properties that identify it.\nStep 4: Imagine or perform a rotation.\nStep 5: Compare the properties before and after the turn.",
+          "CommonMistakes": "Calling a rotated square a diamond changes the everyday description but not the mathematical shape.\nUsing colour as a defining property can group unrelated shapes together.\nCounting corners without following the whole boundary can miss a side.",
+          "QuickSummary": "2D shapes are identified by their properties. Rotation may change how a shape looks on the page, but it does not change those properties."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L21",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Gg.03, 1Gg.06. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Gg.03",
+        "CAM:OUT:0096:1Gg.06"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SourceLocator": "KS1 Year 1 geometry: 3D shapes and distinction from 2D shapes",
+      "SourceTitle": "National curriculum in England: mathematics programmes of study",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "Current GOV.UK HTML / updated 28 September 2021",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+      "CanonicalBodySha256": "704f649b8139929343a31cd31d72293355cb57a05a3e6a7aaafe3834a422d1df",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Solid Shapes and Their Faces",
+          "Explanation": "A 3D shape is a solid object with length, width and depth. Its surfaces can include flat faces or curved surfaces. A 2D shape is flat, while a 3D shape occupies space. Looking at the faces of a solid helps connect 2D and 3D geometry without confusing them.",
+          "KeyConceptsAndRules": "2D shapes are flat; 3D shapes are solid.\nA flat face of a 3D object can itself have a familiar 2D shape.\nDescribe solids using faces, edges and whether surfaces are flat or curved.\nDo not identify a whole solid only from one face.",
+          "WorkedExamples": "A cube is a 3D solid. Each flat face of a cube is a square, but one square face is not the whole cube.\nDescription: A rectangle representing one flat face beside a solid-shape outline, illustrating the difference between a flat face and a solid object.",
+          "StepByStepSolutions": "Step 1: Decide whether the object is flat or solid.\nStep 2: If it is solid, look for its faces and edges.\nStep 3: Notice which surfaces are flat and which are curved.\nStep 4: Describe the 2D shape of a flat face when useful.\nStep 5: Keep the face and the complete 3D object distinct.",
+          "CommonMistakes": "Calling a cube a square confuses the whole solid with one of its faces.\nThinking every 3D surface must be flat ignores objects with curved surfaces.\nA drawing of a solid is flat paper, but it can represent a 3D object.",
+          "QuickSummary": "2D shapes are flat and 3D shapes are solid. A 3D object can have flat faces with 2D shapes, as well as edges and sometimes curved surfaces."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L22",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Gp.01. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Gp.01"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SourceLocator": "KS1 Year 1 geometry: position and direction language",
+      "SourceTitle": "National curriculum in England: mathematics programmes of study",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "Current GOV.UK HTML / updated 28 September 2021",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+      "CanonicalBodySha256": "d95b623844daac8d241800cf2742f2394bb9ca2ddb9622715c8fa10de0480459",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Move and Describe Position",
+          "Explanation": "Position words tell where something is, and direction words tell how it moves. Useful language includes above, below, beside, between, in front of, behind, left, right, forward, backward and turn.",
+          "KeyConceptsAndRules": "Position is described relative to something else.\nLeft and right depend on the chosen viewpoint.\nA direction describes movement from one position to another.\nState the reference object when the position could be unclear.",
+          "WorkedExamples": "A toy starts to the left of a box. It moves forward, then turns right and stops beside the box. Each word describes either its location or movement.\nDescription: A rectangle representing a box with a simple path moving from its left side to a position beside it.",
+          "StepByStepSolutions": "Step 1: Identify the starting object and reference point.\nStep 2: Describe the starting position.\nStep 3: Follow one movement instruction at a time.\nStep 4: Update the position after each movement.\nStep 5: Describe the final position relative to the reference object.",
+          "CommonMistakes": "Switching viewpoint halfway through can reverse left and right.\nGiving a direction without a starting point can make the instruction ambiguous.\nAbove and below describe position, while forward and backward normally describe movement.",
+          "QuickSummary": "Position words locate objects relative to references. Direction words describe movement. Keep the viewpoint and reference point clear."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L23",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Gg.02, 1Gg.04, 1Gg.05. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Gg.02",
+        "CAM:OUT:0096:1Gg.04",
+        "CAM:OUT:0096:1Gg.05"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SourceLocator": "KS1 Year 1 measurement: comparing length, mass and capacity",
+      "SourceTitle": "National curriculum in England: mathematics programmes of study",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "Current GOV.UK HTML / updated 28 September 2021",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+      "CanonicalBodySha256": "67beff5163938f7a6ccbda68a1949d52d0ca4c630d9596f6b090e8b3aeee3693",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Compare Length, Mass, and Capacity",
+          "Explanation": "Different measurement ideas answer different questions. Length describes how long or tall something is. Mass describes how heavy or light it is. Capacity describes how much a container can hold. Familiar comparison words let you reason before using exact numbered measurements.",
+          "KeyConceptsAndRules": "Use long, short, longer or shorter for length.\nUse heavy, light, heavier or lighter for mass.\nUse full, empty, more or less when comparing capacity.\nCompare the same kind of quantity with the same kind of quantity.",
+          "WorkedExamples": "A book can be longer than a pencil, while a bottle can be heavier than an empty cup. A large jug may hold more liquid than a small cup.\nDescription: A line with three markings. The first mark is labeled “Start”. The second mark is labeled “Book”. The third mark is labeled “Bottle”. The distance between the first and second mark is labeled 8 cm. The distance between the second and third mark is labeled 5 cm.",
+          "StepByStepSolutions": "Step 1: Decide which property you are comparing: length, mass or capacity.\nStep 2: Observe both objects or containers.\nStep 3: Choose comparison words that fit that property.\nStep 4: Make the comparison in a complete statement.\nStep 5: Check that you have not mixed different measurement ideas.",
+          "CommonMistakes": "A tall object is not automatically heavy.\nA large-looking container does not always have the greatest capacity if its shape is different.\nUsing heavier to compare lengths mixes mass language with length language.",
+          "QuickSummary": "Length, mass and capacity describe different properties. Choose comparison words that match the property you are studying."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L24",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Gg.08. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Gg.08"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SourceLocator": "KS1 measurement instruments and numbered scales",
+      "SourceTitle": "National curriculum in England: mathematics programmes of study",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "Current GOV.UK HTML / updated 28 September 2021",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+      "CanonicalBodySha256": "516c5afab1b64985814986fe2ce28408eaa32dd160a4fa381771abd8ac2eaccd",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Choose the Right Measuring Tool",
+          "Explanation": "Measuring instruments are designed for different quantities. A ruler or tape measures length, a balance or scale measures mass, a measuring container can help with capacity, and a thermometer measures temperature. Many instruments use numbered scales, so choosing the correct tool is the first step toward a meaningful measurement.",
+          "KeyConceptsAndRules": "Match the tool to the property you want to measure.\nRead the numbered scale in its correct direction.\nNotice the unit shown on the instrument when one is provided.\nA precise-looking number is not useful if it came from the wrong instrument.",
+          "WorkedExamples": "To measure the length of a book, choose a ruler rather than a thermometer. To compare the temperature of two places, choose a thermometer rather than a balance.\nDescription: A line with three markings. The first mark is labeled “0”. The second mark is labeled “5”. The third mark is labeled “10”. The distance between the first and second mark is labeled 5 units. The distance between the second and third mark is labeled 5 units.",
+          "StepByStepSolutions": "Step 1: Name the property that needs measuring.\nStep 2: Choose an instrument designed for that property.\nStep 3: Find the numbered scale and its unit if shown.\nStep 4: Locate the reading carefully on the scale.\nStep 5: State the measurement with the correct quantity and unit where appropriate.",
+          "CommonMistakes": "Using a ruler to measure mass cannot give a meaningful mass result.\nIgnoring the unit can make a correct scale reading incomplete.\nStarting from the wrong point on a scale can shift the result.",
+          "QuickSummary": "Choose a measuring tool by the property being measured. Then read its numbered scale carefully and use the appropriate unit."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L25",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Ss.01. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Ss.01"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SourceLocator": "KS1 categorical data and simple questions",
+      "SourceTitle": "National curriculum in England: mathematics programmes of study",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "Current GOV.UK HTML / updated 28 September 2021",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+      "CanonicalBodySha256": "2e595c569a6a5a8c769906796924d88df061e5dd01cae9f6a217d39723caaef3",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Answer Questions About Categories",
+          "Explanation": "Categorical data places items into named groups such as colour, type or choice. Simple questions can be answered by deciding which category an item belongs to and by looking at the information already collected.",
+          "KeyConceptsAndRules": "Choose categories that are clear enough to use consistently.\nPlace each item according to the chosen feature.\nUse the recorded information to answer the question.\nKeep the question focused on the categories in the data.",
+          "WorkedExamples": "Sort six shapes by colour: three are red, two are blue and one is green. The question 'Which shapes are blue?' can be answered directly from the categories.\nDescription: A grid of squares arranged into three groups representing red, blue and green categories.",
+          "StepByStepSolutions": "Step 1: Read the question and identify the category feature.\nStep 2: Look at each item and decide its category.\nStep 3: Group or mark the items consistently.\nStep 4: Use the category information to answer the question.\nStep 5: Check that every item was handled once.",
+          "CommonMistakes": "Changing the category rule halfway through makes the data inconsistent.\nPutting one item into several mutually exclusive categories can distort the result.\nAnswering from memory instead of the recorded categories can miss an item.",
+          "QuickSummary": "Categorical data groups items by a named feature. Clear categories make simple questions easier to answer accurately."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L26",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Ss.02. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Ss.02"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SourceLocator": "KS1 organising and representing categorical data",
+      "SourceTitle": "National curriculum in England: mathematics programmes of study",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "Current GOV.UK HTML / updated 28 September 2021",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+      "CanonicalBodySha256": "46ff71cbb4ecc79a282645f819bc9039b5e61859557d78f1eab65ad3133864a4",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Organise and Show Category Data",
+          "Explanation": "The same category data can be organised in different useful ways. Objects or drawings can show the data directly, while lists, tables and simple diagrams make patterns easier to see. A good representation keeps the categories clear and records every item.",
+          "KeyConceptsAndRules": "Give each category a clear label.\nRecord every item once unless the chosen diagram intentionally allows overlap.\nKeep symbols or blocks consistent.\nChoose a representation that makes the question easy to answer.",
+          "WorkedExamples": "A class records favourite fruit choices: apple 4, banana 3, pear 2. A simple table or block display can show one row for each fruit and its count.\nDescription: A grid of squares organised into three labelled category rows with counts 4, 3 and 2.",
+          "StepByStepSolutions": "Step 1: List the categories.\nStep 2: Count or record the items in each category.\nStep 3: Choose a simple representation such as a list, table, pictogram or block display.\nStep 4: Transfer each category and count carefully.\nStep 5: Compare the representation with the original data to check nothing is missing.",
+          "CommonMistakes": "Using a different symbol value midway through a pictogram changes the meaning.\nLeaving a category unlabeled makes the representation hard to interpret.\nCopying the count incorrectly creates a new data set instead of representing the original one.",
+          "QuickSummary": "Organising categorical data makes it easier to read. Labels, consistent symbols and complete recording keep the representation faithful to the data."
+        }
+      ]
+    },
+    {
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L27",
+      "TitleProvenance": "EdulyticsDerivedFromOfficialOutcome",
+      "TitleSourceReference": "Edulytics-authored title for explicitly reviewed Cambridge Stage 1 mapping: 1Ss.03. No Cambridge objective prose copied.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:1Ss.03"
+      ],
+      "IsSupporting": false,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SourceLocator": "KS1 describing and comparing categorical data",
+      "SourceTitle": "National curriculum in England: mathematics programmes of study",
+      "SourcePublisher": "UK Department for Education",
+      "SourceEdition": "Current GOV.UK HTML / updated 28 September 2021",
+      "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation. No government logos or identified third-party material reused.",
+      "SourceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+      "CanonicalBodySha256": "639f47ac647a09266b4d87402a696d2b5d96779ed29a3858c9d10ac69fcdd5ec",
+      "SourceVerifiedAtUtc": "2026-08-31T02:44:01Z",
+      "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "RetrievalChannel": "HTTPS",
+      "RetrievalTimestamp": "2026-08-31T02:44:01Z",
+      "AdaptationStatus": "Edulytics-authored student-facing adaptation informed by OGL DfE material and manually mapped to Cambridge 0096 Stage 1 reference identifiers. Cambridge objective prose is not reproduced.",
+      "Translations": [
+        {
+          "CultureCode": "en",
+          "Title": "Compare What the Data Shows",
+          "Explanation": "Once categorical data is organised, you can describe what it shows. Words such as more, less, most and least compare category amounts. A conclusion should come from the recorded data rather than from a guess.",
+          "KeyConceptsAndRules": "Use most for the category with the greatest count.\nUse least for the category with the smallest count.\nUse more and less when comparing two category amounts.\nCheck the actual values before stating a conclusion.",
+          "WorkedExamples": "A display shows 6 votes for cats, 4 for dogs and 2 for fish. Cats have the most votes. Fish have the least. Cats have 2 more votes than dogs.\nDescription: A grid of squares organised into three category groups with counts 6, 4 and 2.",
+          "StepByStepSolutions": "Step 1: Read each category label and value.\nStep 2: Find the largest and smallest values.\nStep 3: Compare pairs of categories when asked.\nStep 4: Use most, least, more or less accurately.\nStep 5: State a conclusion that can be checked directly against the data.",
+          "CommonMistakes": "Choosing the visually widest label as the largest category ignores the data values.\nUsing most when two categories are tied may be misleading.\nMaking a conclusion about information that was never recorded goes beyond the data.",
+          "QuickSummary": "Describe category data using comparisons supported by the recorded values. Most, least, more and less help turn a display into a clear conclusion."
+        }
+      ]
+    }
+  ]
+}

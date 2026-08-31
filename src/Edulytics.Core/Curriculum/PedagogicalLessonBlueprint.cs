@@ -273,7 +273,8 @@ public static class PedagogicalSourceLicensePolicy
     [
         "Public Domain",
         "CC0 1.0",
-        "CC BY 4.0"
+        "CC BY 4.0",
+        "Open Government Licence v3.0"
     ];
 
     /// <summary>

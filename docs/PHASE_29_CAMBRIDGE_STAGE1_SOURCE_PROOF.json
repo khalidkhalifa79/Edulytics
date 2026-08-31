@@ -1,0 +1,59 @@
+{
+  "ProofVersion": 1,
+  "PackCode": "CAMBRIDGE-INTL-MATH",
+  "Scope": "Cambridge Primary Stage 1",
+  "CheckedAtUtc": "2026-08-31T02:44:01Z",
+  "AcademicAuthority": {
+    "Authority": "Cambridge International Education",
+    "Programme": "Cambridge Primary Mathematics 0096",
+    "Framework": "Version 2.1 / June 2025",
+    "AuthorityUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+    "Mode": "REFERENCE_ONLY",
+    "OfficialObjectiveProseStored": false,
+    "Stage1IdentifierCount": 36
+  },
+  "PedagogicalSources": [
+    {
+      "Title": "Mathematics guidance: year 1",
+      "Publisher": "UK Department for Education",
+      "Reference": "DfE-00110-2020",
+      "Url": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "Sha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+      "License": "Open Government Licence v3.0"
+    },
+    {
+      "Title": "National curriculum in England: mathematics programmes of study",
+      "Publisher": "UK Department for Education",
+      "Url": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "Sha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+      "License": "Open Government Licence v3.0"
+    },
+    {
+      "Title": "Open Government Licence v3.0",
+      "Publisher": "The National Archives",
+      "Url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "Sha256": "f5b2b9f2af63647cde889fa6c3508f5705925295b74912c68caa28dd37e64aa5"
+    }
+  ],
+  "ReuseDecision": {
+    "CommercialReuseAllowed": true,
+    "AdaptationAllowed": true,
+    "RoyaltyFree": true,
+    "AttributionRequired": true,
+    "Attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+    "GovernmentLogosReused": false,
+    "ThirdPartyExcludedMaterialReused": false
+  },
+  "EdulyticsStage1": {
+    "SequenceAuthority": "EdulyticsOwnedSequence",
+    "LessonCount": 27,
+    "FormalMappingCount": 36,
+    "DistinctOfficialIdentifiers": 36,
+    "ThinkingWorkingMathematicallyFormalMappings": 0,
+    "SupportingLessons": 0,
+    "RuntimeOutcomeFallback": false,
+    "AcademicLanguage": "en",
+    "CurriculumTranslation": false,
+    "LocalInstructionalVisualDescriptions": 27
+  }
+}

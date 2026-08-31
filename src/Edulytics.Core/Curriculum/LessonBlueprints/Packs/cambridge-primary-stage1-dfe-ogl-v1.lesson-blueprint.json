@@ -1,0 +1,1485 @@
+{
+  "SchemaVersion": 2,
+  "BlueprintCode": "CAMBRIDGE-PRIMARY-S1:DFE-OGL-V1",
+  "PackCode": "CAMBRIDGE-INTL-MATH",
+  "VersionCode": "CAMBRIDGE-PATHWAY-2026",
+  "LogicalLevel": 0,
+  "CourseCode": "CAMBRIDGE-PRIMARY-S1",
+  "LogicalLevelFrom": 1,
+  "LogicalLevelTo": 1,
+  "SequenceAuthority": "EdulyticsOwnedSequence",
+  "SuppressOutcomeFallbackForLogicalRange": true,
+  "NativeLevel": "Cambridge Primary Stage 1",
+  "Pathway": null,
+  "OfficialAuthority": "Cambridge International Education",
+  "OfficialSourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+  "PedagogicalSourceType": "OpenEducationalResource",
+  "SourceTitle": "DfE Year 1 Mathematics Guidance plus KS1 National Curriculum Mathematics",
+  "SourcePublisher": "UK Department for Education",
+  "SourceEdition": "DfE-00110-2020 / current KS1 programme of study",
+  "SourceRootUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
+  "SourceCheckedAtUtc": "2026-08-31T02:44:01Z",
+  "SourceLicense": "Open Government Licence v3.0",
+  "RequiredDigitalAttribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+  "SourceSelectionReason": "Cambridge official material remains reference-only. The DfE source set provides lawful, structured primary mathematics pedagogy under OGL v3.0, permitting commercial reuse and adaptation with attribution.",
+  "SourceSelectionEvidence": "Official DfE Year 1 publication DfE-00110-2020 and current National Curriculum Mathematics material were retrieved and license-verified. The Stage 1 sequence and learner-facing text are Edulytics-authored; mappings to Cambridge 0096 identifiers were explicitly reviewed rather than inferred at runtime.",
+  "SourceEvidenceUrls": [
+    "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
+    "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+    "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+    "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+  ],
+  "SourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. No DfE logos or identified third-party copyright material is reproduced. Cambridge identifiers are used only as reference authority; Cambridge objective prose is not stored in this blueprint.",
+  "SemanticGraphSha256": "98fbd4bea709bc9b0ee42eb21bbf01bce8d46192c5d04ef6c335607e7fa86488",
+  "Sources": [
+    {
+      "SourceKey": "DFE-Y1-2020",
+      "SourceType": "GovernmentTeachingGuidance",
+      "Title": "Mathematics guidance: year 1",
+      "Publisher": "UK Department for Education",
+      "Edition": "DfE-00110-2020 / June 2020",
+      "RootUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "License": "Open Government Licence v3.0",
+      "RequiredDigitalAttribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "RightsNote": "OGL v3.0 publication; logos and identified third-party copyright are excluded from reuse.",
+      "EvidenceUrls": [
+        "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
+        "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+      ]
+    },
+    {
+      "SourceKey": "DFE-NC-KS1",
+      "SourceType": "GovernmentStatutoryCurriculum",
+      "Title": "National curriculum in England: mathematics programmes of study",
+      "Publisher": "UK Department for Education",
+      "Edition": "GOV.UK / updated 28 September 2021",
+      "RootUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "License": "Open Government Licence v3.0",
+      "RequiredDigitalAttribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+      "RightsNote": "GOV.UK public-sector information reused under OGL v3.0; no logos or third-party material reused.",
+      "EvidenceUrls": [
+        "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+        "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+      ]
+    }
+  ],
+  "AcquisitionDiagnostics": {
+    "UnitCount": 6,
+    "LessonCount": 27,
+    "OfficialStandardCount": 36,
+    "AddressingCoverageCount": 36,
+    "FormalMappingCount": 36,
+    "LessonsWithoutNumberedGradeReferenceAnyRole": 27,
+    "LessonsWithoutNumberedAddressingStandard": 27,
+    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 27,
+    "MultiStandardLessons": 8
+  },
+  "Units": [
+    {
+      "Number": 1,
+      "UnitCode": "S1-U01-NUMBER-SENSE",
+      "SortOrder": 1,
+      "Title": "Number Sense and Sequences",
+      "LessonCount": 9,
+      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
+      "SemanticSha256": "c930a64e0eb1a61a3b5efc84c76614a80651258a9450347391acea061e5a0247"
+    },
+    {
+      "Number": 2,
+      "UnitCode": "S1-U02-CALCULATION",
+      "SortOrder": 2,
+      "Title": "Addition, Subtraction and Doubles",
+      "LessonCount": 5,
+      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
+      "SemanticSha256": "dfa8bf0c2a32dffc6920837c9c026e247368e3485856512e1abb65148e9a37fa"
+    },
+    {
+      "Number": 3,
+      "UnitCode": "S1-U03-FRACTIONS-MONEY",
+      "SortOrder": 3,
+      "Title": "Fractions and Money",
+      "LessonCount": 3,
+      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
+      "SemanticSha256": "9dc7d7610bd663fcabc9724511ce02435d2561d1c4d4c7466d3df921f5e6e05a"
+    },
+    {
+      "Number": 4,
+      "UnitCode": "S1-U04-TIME",
+      "SortOrder": 4,
+      "Title": "Time",
+      "LessonCount": 2,
+      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
+      "SemanticSha256": "c74ac14a40cb135fc8241c4710f804b6d5683f565175679db82f5443b4bc1fcd"
+    },
+    {
+      "Number": 5,
+      "UnitCode": "S1-U05-SHAPE-MEASURE",
+      "SortOrder": 5,
+      "Title": "Shape, Measure and Position",
+      "LessonCount": 5,
+      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
+      "SemanticSha256": "16b785411ec0c99019642503909e5c0760db4c6a5b3345957c16e384a8e518c6"
+    },
+    {
+      "Number": 6,
+      "UnitCode": "S1-U06-DATA",
+      "SortOrder": 6,
+      "Title": "Categorical Data",
+      "LessonCount": 3,
+      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
+      "SemanticSha256": "23c2f53f5f7466d8f9887cf709289fec198190fdcf43fcdbebcb76a31e796160"
+    }
+  ],
+  "Lessons": [
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L01",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L01",
+      "UnitNumber": 1,
+      "UnitTitle": "Number Sense and Sequences",
+      "LessonNumber": 1,
+      "Title": "Count, Touch, and Check",
+      "SortOrder": 1,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SemanticSha256": "5ecd8946c3944a6ec2d3cc94646221364436bc03df714717fa6f0c2d70611ff3",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Nc.01",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Nc.01; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-Y1-2020",
+              "SourceFamily": "UK Department for Education Mathematics guidance: Year 1",
+              "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+              "SectionOrTask": "Year 1 counting and number representation",
+              "EvidenceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        },
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Np.01",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 2,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Np.01; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-Y1-2020",
+              "SourceFamily": "UK Department for Education Mathematics guidance: Year 1",
+              "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+              "SectionOrTask": "Year 1 counting and number representation",
+              "EvidenceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L02",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L02",
+      "UnitNumber": 1,
+      "UnitTitle": "Number Sense and Sequences",
+      "LessonNumber": 2,
+      "Title": "See Small Groups Without Counting",
+      "SortOrder": 2,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SemanticSha256": "70d4c6b3d3ef926857dbda42267fbfa213438136dc6f9804b7454be4c88953cb",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Nc.02",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Nc.02; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-Y1-2020",
+              "SourceFamily": "UK Department for Education Mathematics guidance: Year 1",
+              "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+              "SectionOrTask": "Year 1 quantity recognition and structured representations",
+              "EvidenceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L03",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L03",
+      "UnitNumber": 1,
+      "UnitTitle": "Number Sense and Sequences",
+      "LessonNumber": 3,
+      "Title": "Estimate, Then Count",
+      "SortOrder": 3,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SemanticSha256": "ce8e20fae6169c73dbb2e08a175bd97ed630b2965c1e51d9aec4d6e5aa61b8a5",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Nc.03",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Nc.03; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-Y1-2020",
+              "SourceFamily": "UK Department for Education Mathematics guidance: Year 1",
+              "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+              "SectionOrTask": "Year 1 estimation and counting within a small range",
+              "EvidenceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L04",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L04",
+      "UnitNumber": 1,
+      "UnitTitle": "Number Sense and Sequences",
+      "LessonNumber": 4,
+      "Title": "Count On, Back, and Describe a Sequence",
+      "SortOrder": 4,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SemanticSha256": "5b1635ae659957e61df8042c5a7916358277c2221a409435922dc3a2ee25a509",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Nc.04",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Nc.04; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-Y1-2020",
+              "SourceFamily": "UK Department for Education Mathematics guidance: Year 1",
+              "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+              "SectionOrTask": "Year 1 counting sequences and pattern language",
+              "EvidenceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        },
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Nc.06",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 2,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Nc.06; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-Y1-2020",
+              "SourceFamily": "UK Department for Education Mathematics guidance: Year 1",
+              "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+              "SectionOrTask": "Year 1 counting sequences and pattern language",
+              "EvidenceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L05",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L05",
+      "UnitNumber": 1,
+      "UnitTitle": "Number Sense and Sequences",
+      "LessonNumber": 5,
+      "Title": "Odd and Even Steps",
+      "SortOrder": 5,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SemanticSha256": "535cc9f0fb2cf80a02515f524d6f843ff6eee8677118b8ab0a235102bd97748d",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Nc.05",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Nc.05; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-Y1-2020",
+              "SourceFamily": "UK Department for Education Mathematics guidance: Year 1",
+              "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+              "SectionOrTask": "Year 1 counting in twos and odd-number sequences",
+              "EvidenceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L06",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L06",
+      "UnitNumber": 1,
+      "UnitTitle": "Number Sense and Sequences",
+      "LessonNumber": 6,
+      "Title": "Read and Write Numbers to 20",
+      "SortOrder": 6,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SemanticSha256": "fda66d14e8af8a380195a173bf5945b8a1b440df1864c6826eafd957190439f0",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Ni.01",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Ni.01; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-Y1-2020",
+              "SourceFamily": "UK Department for Education Mathematics guidance: Year 1",
+              "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+              "SectionOrTask": "Year 1 numeral, number-name and number-line work",
+              "EvidenceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L07",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L07",
+      "UnitNumber": 1,
+      "UnitTitle": "Number Sense and Sequences",
+      "LessonNumber": 7,
+      "Title": "Make and Break Teen Numbers",
+      "SortOrder": 7,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SemanticSha256": "0d6ca1a3b47cebc13ceaafb526a9463c5d168aed75a261e00532a91531ac3285",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Np.02",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Np.02; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-Y1-2020",
+              "SourceFamily": "UK Department for Education Mathematics guidance: Year 1",
+              "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+              "SectionOrTask": "Year 1 composition and decomposition of teen numbers",
+              "EvidenceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L08",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L08",
+      "UnitNumber": 1,
+      "UnitTitle": "Number Sense and Sequences",
+      "LessonNumber": 8,
+      "Title": "Compare and Order Numbers",
+      "SortOrder": 8,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SemanticSha256": "6d723498e874021848d9fd8672c2bc1534294ff76f8bd49a270beb0a9f1fbe8a",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Np.03",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Np.03; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-Y1-2020",
+              "SourceFamily": "UK Department for Education Mathematics guidance: Year 1",
+              "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+              "SectionOrTask": "Year 1 comparison and relative position within 20",
+              "EvidenceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L09",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L09",
+      "UnitNumber": 1,
+      "UnitTitle": "Number Sense and Sequences",
+      "LessonNumber": 9,
+      "Title": "Positions in a Line",
+      "SortOrder": 9,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SemanticSha256": "0812ad515cae82e744aac588aff0f5d92ebc59e49d14b9f60bc3a0a8fff24513",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Np.04",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Np.04; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-Y1-2020",
+              "SourceFamily": "UK Department for Education Mathematics guidance: Year 1",
+              "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+              "SectionOrTask": "Year 1 ordinal language and ordered positions",
+              "EvidenceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L10",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L10",
+      "UnitNumber": 2,
+      "UnitTitle": "Addition, Subtraction and Doubles",
+      "LessonNumber": 1,
+      "Title": "Join Groups to Add",
+      "SortOrder": 10,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SemanticSha256": "5399105c21c39058ff3b4c18d1351e6596d09a6c540cdaff4966233dcebc6741",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Ni.02",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Ni.02; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-Y1-2020",
+              "SourceFamily": "UK Department for Education Mathematics guidance: Year 1",
+              "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+              "SectionOrTask": "Year 1 addition through combining and counting on",
+              "EvidenceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L11",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L11",
+      "UnitNumber": 2,
+      "UnitTitle": "Addition, Subtraction and Doubles",
+      "LessonNumber": 2,
+      "Title": "Take Away and Find the Difference",
+      "SortOrder": 11,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SemanticSha256": "043c32f543904406b57a3e150049038c7da21f9d1fbfa322ee57d67c733255a9",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Ni.03",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Ni.03; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-Y1-2020",
+              "SourceFamily": "UK Department for Education Mathematics guidance: Year 1",
+              "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+              "SectionOrTask": "Year 1 subtraction structures and counting back",
+              "EvidenceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L12",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L12",
+      "UnitNumber": 2,
+      "UnitTitle": "Addition, Subtraction and Doubles",
+      "LessonNumber": 3,
+      "Title": "Pairs That Make Ten",
+      "SortOrder": 12,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SemanticSha256": "54d95b4d9393ab96b7b0e097692b167cfe458fd81bb330a4f793194781917722",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Ni.04",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Ni.04; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-Y1-2020",
+              "SourceFamily": "UK Department for Education Mathematics guidance: Year 1",
+              "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+              "SectionOrTask": "Year 1 additive facts and composition of ten",
+              "EvidenceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L13",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L13",
+      "UnitNumber": 2,
+      "UnitTitle": "Addition, Subtraction and Doubles",
+      "LessonNumber": 4,
+      "Title": "Reasonable Answers Within 20",
+      "SortOrder": 13,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SemanticSha256": "54615b14b33c708f48b61b17c3e8c91177e535ab2afb27731a71b72da77231c5",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Ni.05",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Ni.05; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-Y1-2020",
+              "SourceFamily": "UK Department for Education Mathematics guidance: Year 1",
+              "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+              "SectionOrTask": "Year 1 estimation, addition and subtraction checks",
+              "EvidenceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L14",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L14",
+      "UnitNumber": 2,
+      "UnitTitle": "Addition, Subtraction and Doubles",
+      "LessonNumber": 5,
+      "Title": "Double a Number",
+      "SortOrder": 14,
+      "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+      "SemanticSha256": "25452dcb6f3bd2a494dfc3665496301e5b604c4b4d59c110349baeddf9c0cc0d",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Ni.06",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Ni.06; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-Y1-2020",
+              "SourceFamily": "UK Department for Education Mathematics guidance: Year 1",
+              "SourceUrl": "https://assets.publishing.service.gov.uk/media/600952a5e90e073ed5001da7/Maths_guidance_year_1.pdf",
+              "SectionOrTask": "Year 1 doubles and additive fluency",
+              "EvidenceSha256": "613a8061a354d993c2aed6bfdd6d00c0d15bd3c61dd25c945537dc9d8c33124e",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L15",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L15",
+      "UnitNumber": 3,
+      "UnitTitle": "Fractions and Money",
+      "LessonNumber": 1,
+      "Title": "Make Two Equal Parts",
+      "SortOrder": 15,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SemanticSha256": "474e479eb9ea394134b1f21f644885ebe9b0ac0ea8d78f940845256a05cdadf1",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Nf.01",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Nf.01; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-NC-KS1",
+              "SourceFamily": "UK Department for Education National Curriculum Mathematics KS1",
+              "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+              "SectionOrTask": "KS1 Year 1 fractions: equal parts and halves",
+              "EvidenceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        },
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Nf.02",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 2,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Nf.02; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-NC-KS1",
+              "SourceFamily": "UK Department for Education National Curriculum Mathematics KS1",
+              "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+              "SectionOrTask": "KS1 Year 1 fractions: equal parts and halves",
+              "EvidenceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L16",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L16",
+      "UnitNumber": 3,
+      "UnitTitle": "Fractions and Money",
+      "LessonNumber": 2,
+      "Title": "Find Half and Rebuild the Whole",
+      "SortOrder": 16,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SemanticSha256": "1f95072b3fe6d36a355a0a5462765d9bb48c0fba94fcde054f5614c12b3f8560",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Nf.03",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Nf.03; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-NC-KS1",
+              "SourceFamily": "UK Department for Education National Curriculum Mathematics KS1",
+              "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+              "SectionOrTask": "KS1 Year 1 fractions: half of a quantity and two halves as a whole",
+              "EvidenceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        },
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Nf.04",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 2,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Nf.04; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-NC-KS1",
+              "SourceFamily": "UK Department for Education National Curriculum Mathematics KS1",
+              "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+              "SectionOrTask": "KS1 Year 1 fractions: half of a quantity and two halves as a whole",
+              "EvidenceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L17",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L17",
+      "UnitNumber": 3,
+      "UnitTitle": "Fractions and Money",
+      "LessonNumber": 3,
+      "Title": "Recognise Coins and Notes",
+      "SortOrder": 17,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SemanticSha256": "efe18a051c5e20759e892b4192dc3e5239ee884c23f78eae0c2bce45d9300344",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Nm.01",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Nm.01; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-NC-KS1",
+              "SourceFamily": "UK Department for Education National Curriculum Mathematics KS1",
+              "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+              "SectionOrTask": "KS1 Year 1 measurement: recognising local money",
+              "EvidenceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L18",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L18",
+      "UnitNumber": 4,
+      "UnitTitle": "Time",
+      "LessonNumber": 1,
+      "Title": "Days, Months, and Time Words",
+      "SortOrder": 18,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SemanticSha256": "cdc45c7d13e6c0508243a83e984683ca248d33c10084da2ad06415b5a62e933c",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Gt.01",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Gt.01; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-NC-KS1",
+              "SourceFamily": "UK Department for Education National Curriculum Mathematics KS1",
+              "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+              "SectionOrTask": "KS1 Year 1 measurement: time vocabulary, days and months",
+              "EvidenceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        },
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Gt.02",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 2,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Gt.02; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-NC-KS1",
+              "SourceFamily": "UK Department for Education National Curriculum Mathematics KS1",
+              "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+              "SectionOrTask": "KS1 Year 1 measurement: time vocabulary, days and months",
+              "EvidenceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L19",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L19",
+      "UnitNumber": 4,
+      "UnitTitle": "Time",
+      "LessonNumber": 2,
+      "Title": "Read O’clock and Half Past",
+      "SortOrder": 19,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SemanticSha256": "187ff9dea56c4e96c0837e05a22474968b72e374784a1fa36a52c3f04b569b69",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Gt.03",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Gt.03; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-NC-KS1",
+              "SourceFamily": "UK Department for Education National Curriculum Mathematics KS1",
+              "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+              "SectionOrTask": "KS1 Year 1 measurement: hour and half-hour time",
+              "EvidenceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L20",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L20",
+      "UnitNumber": 5,
+      "UnitTitle": "Shape, Measure and Position",
+      "LessonNumber": 1,
+      "Title": "Flat Shapes in Different Orientations",
+      "SortOrder": 20,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SemanticSha256": "1225d4ceb6ddf5eb48d5d10bebcbdcdf84820c48d9c01f7446e1e855d6378df6",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Gg.01",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Gg.01; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-NC-KS1",
+              "SourceFamily": "UK Department for Education National Curriculum Mathematics KS1",
+              "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+              "SectionOrTask": "KS1 Year 1 geometry: 2D shape properties and orientation",
+              "EvidenceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        },
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Gg.07",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 2,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Gg.07; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-NC-KS1",
+              "SourceFamily": "UK Department for Education National Curriculum Mathematics KS1",
+              "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+              "SectionOrTask": "KS1 Year 1 geometry: 2D shape properties and orientation",
+              "EvidenceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L21",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L21",
+      "UnitNumber": 5,
+      "UnitTitle": "Shape, Measure and Position",
+      "LessonNumber": 2,
+      "Title": "Solid Shapes and Their Faces",
+      "SortOrder": 21,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SemanticSha256": "fdea42a088843c6717e4ce3a5db9f3d03fe933328de997b670a0309cd6ff61f2",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Gg.03",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Gg.03; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-NC-KS1",
+              "SourceFamily": "UK Department for Education National Curriculum Mathematics KS1",
+              "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+              "SectionOrTask": "KS1 Year 1 geometry: 3D shapes and distinction from 2D shapes",
+              "EvidenceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        },
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Gg.06",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 2,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Gg.06; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-NC-KS1",
+              "SourceFamily": "UK Department for Education National Curriculum Mathematics KS1",
+              "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+              "SectionOrTask": "KS1 Year 1 geometry: 3D shapes and distinction from 2D shapes",
+              "EvidenceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L22",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L22",
+      "UnitNumber": 5,
+      "UnitTitle": "Shape, Measure and Position",
+      "LessonNumber": 3,
+      "Title": "Move and Describe Position",
+      "SortOrder": 22,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SemanticSha256": "0c805c5c7521a5a0aa40e185da77406d7919d3f76cf7526ee77ea8e0bbe512ff",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Gp.01",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Gp.01; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-NC-KS1",
+              "SourceFamily": "UK Department for Education National Curriculum Mathematics KS1",
+              "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+              "SectionOrTask": "KS1 Year 1 geometry: position and direction language",
+              "EvidenceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L23",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L23",
+      "UnitNumber": 5,
+      "UnitTitle": "Shape, Measure and Position",
+      "LessonNumber": 4,
+      "Title": "Compare Length, Mass, and Capacity",
+      "SortOrder": 23,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SemanticSha256": "9bdc361b0d5837d643d5214a878183fdbe664327bba27c6c020c85d2a1482d7f",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Gg.02",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Gg.02; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-NC-KS1",
+              "SourceFamily": "UK Department for Education National Curriculum Mathematics KS1",
+              "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+              "SectionOrTask": "KS1 Year 1 measurement: comparing length, mass and capacity",
+              "EvidenceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        },
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Gg.04",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 2,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Gg.04; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-NC-KS1",
+              "SourceFamily": "UK Department for Education National Curriculum Mathematics KS1",
+              "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+              "SectionOrTask": "KS1 Year 1 measurement: comparing length, mass and capacity",
+              "EvidenceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        },
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Gg.05",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 3,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Gg.05; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-NC-KS1",
+              "SourceFamily": "UK Department for Education National Curriculum Mathematics KS1",
+              "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+              "SectionOrTask": "KS1 Year 1 measurement: comparing length, mass and capacity",
+              "EvidenceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L24",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L24",
+      "UnitNumber": 5,
+      "UnitTitle": "Shape, Measure and Position",
+      "LessonNumber": 5,
+      "Title": "Choose the Right Measuring Tool",
+      "SortOrder": 24,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SemanticSha256": "a6d01c195ed093fc6cef6529fb4a75c7b929dfc46f4e6a7bcd444c8710aff58c",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Gg.08",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Gg.08; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-NC-KS1",
+              "SourceFamily": "UK Department for Education National Curriculum Mathematics KS1",
+              "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+              "SectionOrTask": "KS1 measurement instruments and numbered scales",
+              "EvidenceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L25",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L25",
+      "UnitNumber": 6,
+      "UnitTitle": "Categorical Data",
+      "LessonNumber": 1,
+      "Title": "Answer Questions About Categories",
+      "SortOrder": 25,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SemanticSha256": "2d1d28239c9591ecf231cf7e1fa029bfd603563ef17dd2711df77cdc3c9555b4",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Ss.01",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Ss.01; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-NC-KS1",
+              "SourceFamily": "UK Department for Education National Curriculum Mathematics KS1",
+              "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+              "SectionOrTask": "KS1 categorical data and simple questions",
+              "EvidenceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L26",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L26",
+      "UnitNumber": 6,
+      "UnitTitle": "Categorical Data",
+      "LessonNumber": 2,
+      "Title": "Organise and Show Category Data",
+      "SortOrder": 26,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SemanticSha256": "4b0a9f4d7e92be42ea1108182e330f260dc2fa39f3bbb4b74392529d96ccf7d6",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Ss.02",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Ss.02; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-NC-KS1",
+              "SourceFamily": "UK Department for Education National Curriculum Mathematics KS1",
+              "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+              "SectionOrTask": "KS1 organising and representing categorical data",
+              "EvidenceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SourceLessonCode": "EDU-CAM-S1-L27",
+      "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S1:L27",
+      "UnitNumber": 6,
+      "UnitTitle": "Categorical Data",
+      "LessonNumber": 3,
+      "Title": "Compare What the Data Shows",
+      "SortOrder": 27,
+      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+      "SemanticSha256": "64939c155f380e42577974996eea77fc80bed2591846332261203260e76b4b40",
+      "Alignments": [],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "CAMBRIDGE-PRIMARY-S1"
+      ],
+      "FormalTargets": [
+        {
+          "OutcomeCode": "CAM:OUT:0096:1Ss.03",
+          "EvidenceKind": "VerifiedContentCoverage",
+          "PublisherSuppliedAlignment": false,
+          "SortOrder": 1,
+          "EvidenceReferences": [
+            {
+              "SourceKey": null,
+              "SourceFamily": "Cambridge Primary Mathematics 0096 reference-only academic authority",
+              "SourceUrl": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/",
+              "SectionOrTask": "Stage 1 official identifier 1Ss.03; semantic mapping manually reviewed; Cambridge objective prose intentionally not stored.",
+              "EvidenceSha256": null,
+              "License": null
+            },
+            {
+              "SourceKey": "DFE-NC-KS1",
+              "SourceFamily": "UK Department for Education National Curriculum Mathematics KS1",
+              "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study",
+              "SectionOrTask": "KS1 describing and comparing categorical data",
+              "EvidenceSha256": "4a8abf8996a3447c1addb970d5f41f15ec610a8f9acbf934389086689fe2a486",
+              "License": "Open Government Licence v3.0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -10,6 +10,7 @@ public sealed class Phase29PedagogicalSourceLicensePolicyTests
     [InlineData("Public Domain")]
     [InlineData("CC0 1.0")]
     [InlineData("CC BY 4.0")]
+    [InlineData("Open Government Licence v3.0")]
     public void ApprovedLicensesAllowCommercialReuseAndAdaptation(
         string sourceLicense)
     {
@@ -126,8 +127,23 @@ public sealed class Phase29PedagogicalSourceLicensePolicyTests
                 .LoadEmbeddedDocuments()
                 .First();
 
-        blueprint.SourceLicense =
-            "CC BY-NC 4.0";
+        if (blueprint.SchemaVersion == 1)
+        {
+            blueprint.SourceLicense =
+                "CC BY-NC 4.0";
+        }
+        else
+        {
+            Assert.Equal(
+                2,
+                blueprint.SchemaVersion);
+
+            Assert.NotEmpty(
+                blueprint.Sources);
+
+            blueprint.Sources[0].License =
+                "CC BY-NC 4.0";
+        }
 
         var exception =
             Assert.Throws<

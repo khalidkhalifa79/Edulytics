@@ -223,7 +223,7 @@ public sealed class Phase29CambridgeCurriculumBaselineTests
     }
 
     [Fact]
-    public async Task CambridgeSeederIsIdempotentAndCreatesNoSyntheticLessons()
+    public async Task CambridgeSeederIsIdempotentAndCreatesOnlyReviewedStageOneLessons()
     {
         await using var db =
             Db(
@@ -273,19 +273,89 @@ public sealed class Phase29CambridgeCurriculumBaselineTests
         await pedagogical.SeedAsync();
         await pedagogical.SeedAsync();
 
+        var lessons =
+            await db.CurriculumPedagogicalLessons
+                .Where(
+                    x =>
+                        x.FrameworkVersionId ==
+                        state.FrameworkVersionId)
+                .OrderBy(x => x.SortOrder)
+                .ToArrayAsync();
+
+        Assert.Equal(
+            27,
+            lessons.Length);
+
+        Assert.All(
+            lessons,
+            lesson =>
+            {
+                Assert.Equal(
+                    1,
+                    lesson.LogicalLevelFrom);
+
+                Assert.Equal(
+                    1,
+                    lesson.LogicalLevelTo);
+
+                Assert.Equal(
+                    "Cambridge Primary Stage 1",
+                    lesson.NativeLevel);
+
+                Assert.StartsWith(
+                    "PED:CAMBRIDGE-INTL-MATH:S1:",
+                    lesson.Code,
+                    StringComparison.Ordinal);
+            });
+
+        var lessonIds =
+            lessons
+                .Select(x => x.Id)
+                .ToArray();
+
+        var mappings =
+            await (
+                from mapping in
+                    db.CurriculumPedagogicalLessonOutcomes
+                join node in
+                    db.CurriculumPackContentNodes
+                    on mapping.OutcomeNodeId equals node.Id
+                where
+                    mapping.FrameworkVersionId ==
+                        state.FrameworkVersionId &&
+                    lessonIds.Contains(
+                        mapping.PedagogicalLessonId)
+                select node.Code)
+                .ToArrayAsync();
+
+        Assert.Equal(
+            36,
+            mappings.Length);
+
+        Assert.Equal(
+            36,
+            mappings
+                .Distinct(StringComparer.Ordinal)
+                .Count());
+
+        Assert.All(
+            mappings,
+            code =>
+                Assert.StartsWith(
+                    "CAM:OUT:0096:1",
+                    code,
+                    StringComparison.Ordinal));
+
         Assert.False(
             await db.CurriculumPedagogicalLessons
                 .AnyAsync(
                     x =>
                         x.FrameworkVersionId ==
-                        state.FrameworkVersionId));
-
-        Assert.False(
-            await db.CurriculumPedagogicalLessonOutcomes
-                .AnyAsync(
-                    x =>
-                        x.FrameworkVersionId ==
-                        state.FrameworkVersionId));
+                            state.FrameworkVersionId &&
+                        (
+                            x.LogicalLevelFrom != 1 ||
+                            x.LogicalLevelTo != 1
+                        )));
     }
 
     [Fact]
