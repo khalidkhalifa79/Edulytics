@@ -30,7 +30,7 @@ public class RehearsalLessonGenerationTests
         await new MathematicsPedagogicalLessonSeeder(db).SeedAsync();
         var documents = MathematicsCanonicalLessonContentSeeder.LoadEmbeddedDocuments()
             .Where(d => d.Lessons.Any(l => IsRehearsalLesson(l.LessonCode))).ToArray();
-        Assert.Equal(364, documents.Sum(d => d.Lessons.Count));
+        Assert.Equal(525, documents.Sum(d => d.Lessons.Count));
         var codes = documents.SelectMany(d => d.Lessons).Select(l => l.LessonCode).ToArray();
         var ids = await db.CurriculumPedagogicalLessons.Where(l => codes.Contains(l.Code)).Select(l => l.Id).ToArrayAsync();
         var links = await db.CurriculumPedagogicalLessonOutcomes.Where(l => ids.Contains(l.PedagogicalLessonId)).ToArrayAsync();
@@ -117,9 +117,9 @@ public class RehearsalLessonGenerationTests
             .ToDictionaryAsync(x => x.Code, x => x.Id, StringComparer.Ordinal);
 
         Assert.Equal(state.FrameworkVersionId, current.FrameworkVersionId);
-        Assert.Equal(1224, current.NodeCount);
-        Assert.Equal(1114, current.OfficialNodeCount);
-        Assert.Equal(1067, second.Keys.Count(x =>
+        Assert.Equal(1532, current.NodeCount);
+        Assert.Equal(1420, current.OfficialNodeCount);
+        Assert.Equal(1373, second.Keys.Count(x =>
             x.StartsWith("UAE:REF:TEXTBOOK:", StringComparison.Ordinal)));
         Assert.Equal(first, second);
         Assert.Equal(
@@ -144,9 +144,9 @@ public class RehearsalLessonGenerationTests
             .Where(x => x.FrameworkVersionId == state.FrameworkVersionId)
             .ToArrayAsync();
 
-        Assert.Equal(1224, nodes.Length);
+        Assert.Equal(1532, nodes.Length);
         Assert.Equal(
-            1067,
+            1373,
             nodes.Count(x =>
                 x.NodeKind == "Reference" &&
                 x.IsOfficial &&
@@ -169,7 +169,7 @@ public class RehearsalLessonGenerationTests
             .Where(x => x.lesson.OutcomeCodes.Count > 0 &&
                 IsRehearsalLesson(x.lesson.LessonCode))
             .ToArray();
-        Assert.Equal(84, lessons.Length);
+        Assert.Equal(49, lessons.Length);
         foreach (var (document, lesson) in lessons)
         {
             var mappedBody = JsonSerializer.Serialize(lesson.Translations);
@@ -195,7 +195,7 @@ public class RehearsalLessonGenerationTests
             (d.PackCode == "UAE-MOE-MATH" && new[] { 3, 4, 7, 8, 11, 12 }.Contains(d.LogicalLevel) &&
              d.Pathway == (d.LogicalLevel < 5 ? "Common" : "Advanced"))).ToArray();
         Assert.Equal(8, documents.Length);
-        Assert.Equal(364, documents.Sum(d => d.Lessons.Count));
+        Assert.Equal(525, documents.Sum(d => d.Lessons.Count));
         var school = Guid.NewGuid();
         var teacher = Guid.NewGuid();
         var users = Proxy<ISchoolUserRepository>((method, _) => method.Name == "GetActorAsync"

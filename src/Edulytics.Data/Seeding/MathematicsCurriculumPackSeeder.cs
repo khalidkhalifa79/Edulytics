@@ -131,8 +131,8 @@ public sealed class MathematicsCurriculumPackSeeder
         {
             if (d.SchemaVersion != 14 ||
                 d.VersionCode != "MOE-2026-2027-T1" ||
-                d.NodeCount != 1224 ||
-                d.OfficialNodeCount != 1114 ||
+                d.NodeCount != 1532 ||
+                d.OfficialNodeCount != 1420 ||
                 d.UnitCount != 6 ||
                 d.LessonCount != 42 ||
                 d.LinkCount != 48 ||
@@ -692,9 +692,9 @@ public sealed class MathematicsCurriculumPackSeeder
             d.SourceDigest !=
                 "470e9bd35d26931e3c4a2e4666b97a35481c3212b72024060c49dd6160bf776f" ||
             d.ContentDigest !=
-                "a2d0af13d7e9016c5ac9d7b76b9c4c549f5fb3813a9a5ecba8daecdf8a804e6f" ||
-            d.NodeCount != 1224 ||
-            d.OfficialNodeCount != 1114 ||
+                "ff6200142b1eea8f12a7d5ff0fd172259582044359c642aeb3c045e5e8886372" ||
+            d.NodeCount != 1532 ||
+            d.OfficialNodeCount != 1420 ||
             d.UnitCount != 6 ||
             d.LessonCount != 42 ||
             d.LinkCount != 48)

@@ -10,7 +10,7 @@ public sealed class UnifiedPracticeConsolidationTests
         "UAE-MOE-MATH:L04:COMMON";
 
     private const string UaeRoundingLesson =
-        "PED:UAE-MOE-MATH:L4:COMMON:01:02:ROUNDING-TO-POWERS-OF-TEN";
+        "PED:UAE-MOE-MATH:L4:COMMON:02:04";
 
     [Fact]
     public void U1_UaeRoundingLesson_IsReadyVerified()

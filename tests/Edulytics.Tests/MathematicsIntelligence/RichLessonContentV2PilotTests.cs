@@ -112,7 +112,7 @@ public sealed class RichLessonContentV2PilotTests
             .ThenBy(x => x.LessonCode, StringComparer.Ordinal)
             .ToArray();
 
-        Assert.Equal(4839, dossiers.Length);
+        Assert.Equal(5110, dossiers.Length);
         Assert.DoesNotContain(
             dossiers,
             dossier =>

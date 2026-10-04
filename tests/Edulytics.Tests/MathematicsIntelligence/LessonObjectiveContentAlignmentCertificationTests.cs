@@ -8,7 +8,7 @@ namespace Edulytics.Tests.MathematicsIntelligence;
 
 public sealed class LessonObjectiveContentAlignmentCertificationTests
 {
-    private const int ExpectedLessonCount = 4839;
+    private const int ExpectedLessonCount = 5110;
     private const string RunEnvironmentVariable =
         "EDULYTICS_RUN_LESSON_OBJECTIVE_CONTENT_CERTIFICATION";
 

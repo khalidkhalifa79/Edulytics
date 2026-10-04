@@ -9319,6 +9319,1104 @@
         "commonMistake": "Do not choose an operation or representation that conflicts with the lesson target.",
         "summary": "Apply the verified practice family for Dirhams."
       }
+    },
+    {
+      "id": "uae-official-g3g5-auto-algebra-expressions",
+      "titlePatterns": [
+        "^Evaluate Expressions$",
+        "^Hands-on: Numerical Expressions$",
+        "^Understand Expressions$",
+        "^Write Expressions$",
+        "^Write Numerical Expressions$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L3:COMMON:09:05$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:09:06$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:06:01$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:06:03$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:06:05$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:06:06$"
+      ],
+      "skillId": "supporting.algebra.expressions",
+      "mechanic": "ALGEBRA_EXPRESSIONS",
+      "families": [
+        "supporting.algebra.simplify",
+        "supporting.algebra.substitute",
+        "supporting.algebra.expressions.mixed"
+      ],
+      "content": {
+        "concept": "Algebraic expressions represent quantities using variables, coefficients and operations.",
+        "workedExample": "2x+3x−4 simplifies to 5x−4.",
+        "solution": "Collect like terms, preserve unlike terms, and use substitution to check a simplified form.",
+        "commonMistake": "Do not combine unlike terms such as x and x².",
+        "summary": "Use algebraic structure to simplify and evaluate expressions."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-angle-basic",
+      "titlePatterns": [
+        "^Classify Angles$",
+        "^Draw and Measure Angles$",
+        "^Hands-on: Angles$",
+        "^Hands-on: Quadrilateral Sides and Angles$",
+        "^Hands-on: Triangle Sides and Angles$",
+        "^Solve Problems Involving Unknown Angle Measures$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L3:COMMON:13:02$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:14:02$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:14:03$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:14:06$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:12:02$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:12:05$"
+      ],
+      "skillId": "supporting.geometry.angles",
+      "mechanic": "ANGLES",
+      "families": [
+        "supporting.geometry.angle_classify",
+        "supporting.geometry.angle_around_point"
+      ],
+      "content": {
+        "concept": "Angles measure turn; standard angle sums and classifications give exact constraints.",
+        "workedExample": "Angles around a point sum to 360°, and a 120° angle is obtuse.",
+        "solution": "Compare with 90°/180° for classification or subtract known angles from the required full sum.",
+        "commonMistake": "Do not confuse a straight-line total of 180° with a full-turn total of 360°.",
+        "summary": "Use standard angle benchmarks and sums."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-charts-tables",
+      "titlePatterns": [
+        "^Bar Graphs$",
+        "^Bar and Scaled Picture Graphs$",
+        "^Display Measurement Data on a Line Plot$",
+        "^Display and Interpret Data on a Line Plot$",
+        "^Hands-on: Stem-and-Leaf Plots$",
+        "^Line Plots and Analyze Data$",
+        "^Line Plots$",
+        "^Scaled Picture Graphs$",
+        "^Solve Problems Involving Data on a Line Plot$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L3:COMMON:12:02$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:12:03$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:12:04$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:12:05$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:13:10$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:13:11$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:10:01$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:11:10$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:11:11$"
+      ],
+      "skillId": "supporting.statistics.charts",
+      "mechanic": "CHARTS_TABLES",
+      "families": [
+        "supporting.statistics.table_total",
+        "supporting.statistics.charts.mixed"
+      ],
+      "content": {
+        "concept": "Tables and charts encode numerical data using labels, scales and frequencies.",
+        "workedExample": "If category frequencies are 4,7,5,4, the total frequency is 20.",
+        "solution": "Read the scale and labels first, then extract or combine the required values.",
+        "commonMistake": "Do not infer values from bar height without checking the axis scale.",
+        "summary": "Read data displays using their labels and scales."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-circles",
+      "titlePatterns": [
+        "^Circle$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L5:GENERAL:12:04$"
+      ],
+      "skillId": "supporting.geometry.circles_loci",
+      "mechanic": "CIRCLES",
+      "families": [
+        "supporting.geometry.circle_circumference_pi_coefficient",
+        "supporting.geometry.circle_area_pi_coefficient"
+      ],
+      "content": {
+        "concept": "Circle measures use radius with exact multiples of π.",
+        "workedExample": "For radius 5, circumference is 10π and area is 25π.",
+        "solution": "Use C=2πr and A=πr², keeping π exact unless approximation is requested.",
+        "commonMistake": "Do not use diameter in place of radius without converting.",
+        "summary": "Use radius correctly in exact circle formulas."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-collecting-data",
+      "titlePatterns": [
+        "^Collect and Organize Data$",
+        "^Collect and Record Data$",
+        "^Make Predictions from Data$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L3:COMMON:12:01$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:11:01$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:11:04$"
+      ],
+      "skillId": "supporting.statistics.data_collection",
+      "mechanic": "DATA_COLLECTION",
+      "families": [
+        "supporting.statistics.collection_method"
+      ],
+      "content": {
+        "concept": "Data collection distinguishes a whole-population census from a sample and requires a method suited to the question.",
+        "workedExample": "Surveying all 800 students is a census; surveying 80 selected students is a sample.",
+        "solution": "Identify the target population and determine whether all or only part is observed.",
+        "commonMistake": "Do not call a convenience subset a census.",
+        "summary": "Match the collection method to the population and purpose."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-compound-area",
+      "titlePatterns": [
+        "^Area of Composite Figures$",
+        "^Hands-on: Create Composite Figures$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L3:COMMON:14:08$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:12:11$"
+      ],
+      "skillId": "supporting.geometry.area_volume",
+      "mechanic": "COMPOUND_AREA",
+      "families": [
+        "supporting.geometry.compound_area"
+      ],
+      "content": {
+        "concept": "Compound area can be found by splitting a shape into non-overlapping familiar shapes.",
+        "workedExample": "Two rectangles with areas 24 and 15 have total area 39.",
+        "solution": "Partition the shape, calculate each component area, and add without double-counting overlap.",
+        "commonMistake": "Do not count shared or overlapping regions twice.",
+        "summary": "Decompose complex shapes into familiar areas."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-coordinates",
+      "titlePatterns": [
+        "^Hands-on: Locations on a Map$",
+        "^Ordered Pairs$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L5:GENERAL:06:09$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:06:10$"
+      ],
+      "skillId": "supporting.geometry.analytic",
+      "mechanic": "COORDINATE_GEOMETRY",
+      "families": [
+        "supporting.geometry.midpoint",
+        "supporting.geometry.axis_distance",
+        "supporting.geometry.analytic.mixed"
+      ],
+      "content": {
+        "concept": "Coordinate geometry represents position and geometric relationships numerically.",
+        "workedExample": "The midpoint of (2,4) and (8,10) is (5,7).",
+        "solution": "Operate on corresponding coordinates and use differences or averages as required.",
+        "commonMistake": "Do not mix x- and y-coordinates.",
+        "summary": "Use ordered pairs consistently in coordinate calculations."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-decimal-compare-round",
+      "titlePatterns": [
+        "^Order Whole Numbers and Decimals$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L5:GENERAL:01:08$"
+      ],
+      "skillId": "supporting.decimals.core",
+      "mechanic": "DECIMAL_COMPARE_ROUND",
+      "families": [
+        "supporting.decimals.compare",
+        "supporting.decimals.round"
+      ],
+      "content": {
+        "concept": "Decimals can be compared by aligned place values and rounded using the next smaller place.",
+        "workedExample": "4.50 > 4.37, and 4.57 rounds to 5 to the nearest whole number.",
+        "solution": "Write equal decimal places when comparing; use the next digit when rounding.",
+        "commonMistake": "Do not compare decimal digit strings as whole numbers.",
+        "summary": "Align place values before comparing or rounding."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-decimal-operations",
+      "titlePatterns": [
+        "^Adding Decimals Using Fractions$",
+        "^Divide Decimals by Powers of Ten$",
+        "^Divide Decimals by Whole Numbers$",
+        "^Divide Decimals$",
+        "^Estimate Products of Whole Numbers and Decimals$",
+        "^Hands-on: Divide Decimals$",
+        "^Hands-on: Model Decimal Division$",
+        "^Hands-on: Model Decimal Multiplication$",
+        "^Multiply Decimals by Powers of Ten$",
+        "^Multiply Decimals by Whole Numbers$",
+        "^Multiply Decimals$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L4:COMMON:12:04$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:05:01$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:05:03$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:05:04$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:05:05$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:05:06$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:05:10$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:05:11$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:05:12$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:05:13$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:05:14$"
+      ],
+      "skillId": "supporting.decimals.core",
+      "mechanic": "DECIMAL_OPERATIONS",
+      "families": [
+        "supporting.decimals.operation"
+      ],
+      "content": {
+        "concept": "Decimal operations follow whole-number place value while keeping the decimal point aligned.",
+        "workedExample": "3.45 + 1.20 = 4.65.",
+        "solution": "Align decimal points, operate by place value, then check the magnitude.",
+        "commonMistake": "Do not align numbers by their final digit.",
+        "summary": "Align decimal places before operating."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-decimal-place",
+      "titlePatterns": [
+        "^Hands-on: Model Fractions as Decimals$",
+        "^Hands-on: Represent Fractions, Decimals, and Percents$",
+        "^Represent Decimals$",
+        "^Understand Decimal Notation$",
+        "^Write Fractions as Decimals$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L4:COMMON:12:02$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:01:03$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:01:04$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:07:07$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:07:08$"
+      ],
+      "skillId": "supporting.decimals.core",
+      "mechanic": "DECIMAL_PLACE_VALUE",
+      "families": [
+        "supporting.decimals.place_value"
+      ],
+      "content": {
+        "concept": "Decimal places extend place value to tenths, hundredths and smaller powers of ten.",
+        "workedExample": "In 4.37, 3 is the tenths digit and 7 is the hundredths digit.",
+        "solution": "Read decimal positions from left to right after the decimal point.",
+        "commonMistake": "Do not treat 0.4 as smaller than 0.37 because it has fewer digits.",
+        "summary": "Use decimal place value consistently."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-factors-primes",
+      "titlePatterns": [
+        "^Greatest Common Factor$",
+        "^Hands-on: Prime Factorization Patterns$",
+        "^Least Common Multiple$",
+        "^Prime Factorization$",
+        "^Understand Factors of a Number$",
+        "^Understand Multiples$",
+        "^Understand Prime and Composite Numbers$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L4:COMMON:05:01$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:05:02$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:05:03$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:02:01$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:02:02$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:07:02$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:07:05$"
+      ],
+      "skillId": "supporting.number.factors_primes",
+      "mechanic": "FACTORS_PRIMES",
+      "families": [
+        "supporting.number.gcf",
+        "supporting.number.prime_factor",
+        "supporting.number.lcm"
+      ],
+      "content": {
+        "concept": "Factors divide exactly, multiples are repeated products, and primes have exactly two positive factors.",
+        "workedExample": "The greatest common factor of 18 and 24 is 6; the least common multiple is 72.",
+        "solution": "Use factor lists or prime factorisation, then verify divisibility.",
+        "commonMistake": "Do not confuse greatest common factor with least common multiple.",
+        "summary": "Use divisibility and prime structure to reason about factors and multiples."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-fraction-add-subtract",
+      "titlePatterns": [
+        "^Add Fractions with Like Denominators$",
+        "^Add Like Fractions$",
+        "^Add Mixed Numbers$",
+        "^Add Unlike Fractions$",
+        "^Hands-on: Model Adding Mixed Numbers$",
+        "^Hands-on: Model Adding Unlike Fractions$",
+        "^Hands-on: Model Subtracting Unlike Fractions$",
+        "^Multiply Mixed Numbers$",
+        "^Represent Adding Fractions$",
+        "^Represent Adding Mixed Numbers$",
+        "^Represent Subtracting Fractions$",
+        "^Represent Subtracting Mixed Numbers$",
+        "^Solve Problems Involving Mixed Numbers$",
+        "^Subtract Fractions with Like Denominators$",
+        "^Subtract Like Fractions$",
+        "^Subtract Mixed Numbers$",
+        "^Subtract Unlike Fractions$",
+        "^Understand Decomposing Mixed Numbers$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L4:COMMON:09:02$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:09:03$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:09:04$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:09:05$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:10:01$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:10:02$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:10:03$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:10:04$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:10:05$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:10:06$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:08:02$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:08:03$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:08:04$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:08:05$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:08:06$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:08:07$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:08:10$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:08:11$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:08:12$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:09:07$"
+      ],
+      "skillId": "fractions.add_subtract",
+      "mechanic": "FRACTION_ADD_SUBTRACT",
+      "families": [
+        "fractions.add_subtract.common_denominator.build",
+        "fractions.add_subtract.common_denominator.apply"
+      ],
+      "content": {
+        "concept": "Fraction addition and subtraction require common-sized parts.",
+        "workedExample": "2/3 + 1/4 = 8/12 + 3/12 = 11/12.",
+        "solution": "Find a common denominator, rewrite equivalent fractions, combine numerators, and simplify.",
+        "commonMistake": "Do not add denominators.",
+        "summary": "Create common-sized parts before adding or subtracting fractions."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-fraction-multiply-divide",
+      "titlePatterns": [
+        "^Divide Unit Fractions by Whole Numbers$",
+        "^Divide Whole Numbers by Unit Fractions$",
+        "^Estimate Products of Fractions$",
+        "^Fractions and Division$",
+        "^Hands-on: Divide by a Unit Fraction$",
+        "^Hands-on: Fraction of a Number$",
+        "^Hands-on: Model Fraction Multiplication$",
+        "^Multiply Whole Numbers and Fractions$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L5:GENERAL:07:01$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:09:01$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:09:02$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:09:03$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:09:04$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:09:09$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:09:10$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:09:11$"
+      ],
+      "skillId": "supporting.fractions.multiply_divide",
+      "mechanic": "FRACTION_MULTIPLY_DIVIDE",
+      "families": [
+        "supporting.fractions.multiply",
+        "supporting.fractions.divide_whole",
+        "supporting.fractions.simplify"
+      ],
+      "content": {
+        "concept": "Fraction multiplication multiplies parts of parts; division can be represented by multiplying by a reciprocal.",
+        "workedExample": "2/3 × 3/5 = 2/5 after simplifying.",
+        "solution": "Multiply numerators and denominators, or multiply by the reciprocal when dividing, then simplify.",
+        "commonMistake": "Do not add denominators during multiplication.",
+        "summary": "Use exact fraction operations and simplify the result."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-fraction-representation",
+      "titlePatterns": [
+        "^Fractions as Whole Numbers$",
+        "^Part of a Set$",
+        "^Part of a Whole$",
+        "^Solve Problems Involving Fractions$",
+        "^Understand Decomposing Fractions$",
+        "^Unit Fractions$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L3:COMMON:10:01$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:10:02$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:10:03$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:10:07$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:09:01$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:09:06$"
+      ],
+      "skillId": "fractions.represent.interpret",
+      "mechanic": "FRACTION_REPRESENTATION",
+      "families": [
+        "fractions.represent.interpret.fraction_bar"
+      ],
+      "content": {
+        "concept": "A fraction records equal parts using numerator and denominator.",
+        "workedExample": "If 3 of 4 equal parts are shaded, the fraction is 3/4.",
+        "solution": "Count all equal parts for the denominator and selected parts for the numerator.",
+        "commonMistake": "Do not use unequal parts as a fraction model.",
+        "summary": "Fractions describe selected equal parts."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-mean-median-range",
+      "titlePatterns": [
+        "^Hands-on: Mean$",
+        "^Mean$",
+        "^Median and Mode$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L5:GENERAL:11:07$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:11:08$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:11:09$"
+      ],
+      "skillId": "statistics.center_spread.core",
+      "mechanic": "CENTER_SPREAD",
+      "families": [
+        "statistics.center_spread.mean",
+        "statistics.center_spread.median",
+        "statistics.center_spread.range"
+      ],
+      "content": {
+        "concept": "Mean, median and range describe centre and spread in different ways.",
+        "workedExample": "For 2,4,4,7,8 the median is 4 and the range is 6.",
+        "solution": "Order data for median/range; add and divide by count for mean.",
+        "commonMistake": "Do not calculate median before ordering the data.",
+        "summary": "Choose the correct statistic and calculate it from the original data."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-money",
+      "titlePatterns": [
+        "^Solve Problems Involving Money$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L4:COMMON:12:05$"
+      ],
+      "skillId": "supporting.measurement.practical",
+      "mechanic": "MONEY",
+      "families": [
+        "supporting.measurement.money_change"
+      ],
+      "content": {
+        "concept": "Money calculations use exact decimal or minor-unit arithmetic.",
+        "workedExample": "Paying 500 cents for an item costing 365 cents gives 135 cents change.",
+        "solution": "Use one currency unit consistently and subtract cost from amount paid.",
+        "commonMistake": "Do not mix major and minor units without conversion.",
+        "summary": "Keep currency units consistent and verify paid = cost + change."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-non-routine",
+      "titlePatterns": [
+        "^Math Is Explaining and Sharing$",
+        "^Math Is Exploring and Thinking$",
+        "^Math Is Finding Patterns$",
+        "^Math Is In My World$",
+        "^Math Is Mine$",
+        "^Math Is Ours$",
+        "^Represent Comparison Problems$",
+        "^Represent and Solve Multi-Step Problems$",
+        "^Simplest Form$",
+        "^Solve Two-Step Word Problems$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L3:COMMON:09:08$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:01:01$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:01:02$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:01:03$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:01:04$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:01:05$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:01:06$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:03:08$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:04:02$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:07:03$"
+      ],
+      "skillId": "supporting.reasoning.core",
+      "mechanic": "NON_ROUTINE",
+      "families": [
+        "supporting.reasoning.multistep",
+        "supporting.reasoning.verify_identity"
+      ],
+      "content": {
+        "concept": "Non-routine problems require selecting and connecting more than one mathematical step.",
+        "workedExample": "A quantity is doubled and 5 is added to make 23; solving 2x+5=23 gives x=9.",
+        "solution": "Represent the relationships, choose a valid strategy, calculate in a logical sequence, and check the result against all conditions.",
+        "commonMistake": "Do not start calculating before identifying what the quantities represent.",
+        "summary": "Model the conditions, solve systematically, and verify."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-number-compare-order",
+      "titlePatterns": [
+        "^Compare Multi-Digit Numbers$",
+        "^Compare Numbers$",
+        "^Compare and Order Whole Numbers to Millions$",
+        "^Order Numbers$",
+        "^Place the First Digit$",
+        "^Read and Write Numbers to One Million$",
+        "^Understand the Structure of Multi-Digit Numbers$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L3:COMMON:01:02$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:01:03$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:02:01$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:02:02$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:02:03$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:01:02$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:03:09$"
+      ],
+      "skillId": "supporting.number.real",
+      "mechanic": "COMPARE_ORDER",
+      "families": [
+        "supporting.number.compare_order"
+      ],
+      "content": {
+        "concept": "Ordering numbers compares place values from the greatest place to the least.",
+        "workedExample": "Among 347, 374 and 304, the order is 304 < 347 < 374.",
+        "solution": "Compare the highest differing place value, then continue right if needed.",
+        "commonMistake": "Do not compare only the final digit.",
+        "summary": "Compare numbers place by place."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-one-step-formula-equation",
+      "titlePatterns": [
+        "^Inverse Operations$",
+        "^Write Equations$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L3:COMMON:05:05$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:09:07$"
+      ],
+      "skillId": "algebra.linear.solve",
+      "mechanic": "LINEAR_EQUATION",
+      "families": [
+        "algebra.linear.ax_plus_b_equals_c",
+        "algebra.linear.variables_both_sides"
+      ],
+      "content": {
+        "concept": "A linear equation is solved by applying inverse operations while preserving equality.",
+        "workedExample": "3x+5=20 gives x=5.",
+        "solution": "Undo addition/subtraction and multiplication/division in reverse order, then substitute the result back.",
+        "commonMistake": "Do not apply an operation to only one side.",
+        "summary": "Preserve equality while isolating the variable."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-perimeter-area",
+      "titlePatterns": [
+        "^Area and Perimeter$",
+        "^Area of a Rectangle$",
+        "^Hands-on: Area and the Distributive Property$",
+        "^Hands-on: Find Perimeter$",
+        "^Hands-on: Tile Rectangles to Find Area$",
+        "^Hands-on: Understand Area$",
+        "^Measure Area$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L3:COMMON:14:01$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:14:03$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:14:04$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:14:05$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:14:06$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:14:07$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:14:09$"
+      ],
+      "skillId": "geometry.perimeter_area",
+      "mechanic": "PERIMETER_AREA",
+      "families": [
+        "geometry.perimeter_area.rectangle_area",
+        "geometry.perimeter_area.rectangle_perimeter",
+        "geometry.perimeter_area.rectangle_missing_side"
+      ],
+      "content": {
+        "concept": "Perimeter measures boundary length while area measures enclosed surface.",
+        "workedExample": "A rectangle 8 by 5 has perimeter 26 and area 40.",
+        "solution": "Use P=2(l+w) for rectangle perimeter and A=lw for rectangle area, keeping units distinct.",
+        "commonMistake": "Do not use an area formula when the question asks for perimeter.",
+        "summary": "Choose the measure and formula that match the geometric quantity."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-powers-roots",
+      "titlePatterns": [
+        "^Powers and Exponents$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L5:GENERAL:02:03$"
+      ],
+      "skillId": "supporting.indices.roots_standard_form",
+      "mechanic": "POWERS_ROOTS",
+      "families": [
+        "supporting.indices.power_or_root"
+      ],
+      "content": {
+        "concept": "Powers represent repeated multiplication and roots reverse powers.",
+        "workedExample": "3^4=81 and √81=9.",
+        "solution": "Use repeated multiplication for integer powers and identify the positive principal root for square roots.",
+        "commonMistake": "Do not multiply the base by the exponent.",
+        "summary": "Connect powers and roots as inverse operations."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-repeating-patterns",
+      "titlePatterns": [
+        "^Analyze Features of a Pattern$",
+        "^Division Patterns$",
+        "^Graph Patterns$",
+        "^Hands-on: Create Patterns$",
+        "^Multiplication Patterns$",
+        "^Number or Shape Patterns$",
+        "^Patterns in the Multiplication Table$",
+        "^Patterns$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L3:COMMON:06:01$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:05:04$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:05:06$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:02:04$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:03:04$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:06:07$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:06:08$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:06:11$"
+      ],
+      "skillId": "supporting.sequences.core",
+      "mechanic": "REPEATING_PATTERN",
+      "families": [
+        "supporting.sequences.core.mixed"
+      ],
+      "content": {
+        "concept": "A repeating pattern follows a fixed cycle that can be extended predictably.",
+        "workedExample": "In ABCA BCA..., positions repeat every 3 terms.",
+        "solution": "Identify the cycle length and use position within the cycle to determine later terms.",
+        "commonMistake": "Do not assume a pattern from too few terms.",
+        "summary": "Use the repeating cycle to predict terms."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-rounding-estimation",
+      "titlePatterns": [
+        "^Estimate Differences$",
+        "^Estimate Products$",
+        "^Estimate Quotients$",
+        "^Estimate Sums and Differences$",
+        "^Estimate Sums or Differences$",
+        "^Estimate Sums$",
+        "^Round Multi-Digit Numbers$",
+        "^Round to the Nearest Ten$",
+        "^Round to the Nearest Hundred$",
+        "^Round Fractions$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L3:COMMON:01:04$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:01:05$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:02:05$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:03:02$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:03:01$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:06:02$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:07:02$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:02:04$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:02:08$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:03:05$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:04:01$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:05:09$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:08:01$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:08:09$"
+      ],
+      "skillId": "supporting.number.place_value_rounding",
+      "mechanic": "ROUNDING",
+      "families": [
+        "supporting.number.rounding"
+      ],
+      "content": {
+        "concept": "Rounding replaces a number with the nearest multiple of a chosen place value.",
+        "workedExample": "3,476 rounded to the nearest hundred is 3,500 because 3,476 is above the halfway point 3,450.",
+        "solution": "Find the two adjacent multiples of the rounding place, compare with the midpoint, and choose the nearer value.",
+        "commonMistake": "Do not round using the wrong digit position.",
+        "summary": "Use place value and the halfway point to round accurately."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-shape-properties",
+      "titlePatterns": [
+        "^Classify Quadrilaterals$",
+        "^Classify Triangles$",
+        "^Common Attributes of Quadrilaterals$",
+        "^Hands-on: Build Three-Dimensional Figures$",
+        "^Hands-on: Triangles$",
+        "^More Solid Figures$",
+        "^Partition Shapes$",
+        "^Point, Line, Line Segment, and Ray$",
+        "^Solid Figures$",
+        "^Three-Dimensional Figures$",
+        "^Understand Lines, Line Segments, and Rays$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L3:COMMON:13:01$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:13:04$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:13:06$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:13:08$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:13:09$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:13:10$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:14:01$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:14:08$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:12:03$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:12:06$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:12:07$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:12:08$"
+      ],
+      "skillId": "supporting.geometry.properties",
+      "mechanic": "SHAPE_PROPERTIES",
+      "families": [
+        "supporting.geometry.shape_dimension"
+      ],
+      "content": {
+        "concept": "Geometric shapes are classified by dimensions and defining attributes.",
+        "workedExample": "A square is a 2D shape; a cube is a 3D solid.",
+        "solution": "Identify dimension, sides/faces and defining properties, then classify the shape.",
+        "commonMistake": "Do not classify a shape by appearance alone.",
+        "summary": "Use defining geometric attributes."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-time",
+      "titlePatterns": [
+        "^Convert Units of Time$",
+        "^Tell Time to the Minute$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L3:COMMON:11:05$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:13:04$"
+      ],
+      "skillId": "supporting.measurement.practical",
+      "mechanic": "TIME",
+      "families": [
+        "supporting.measurement.time_elapsed"
+      ],
+      "content": {
+        "concept": "Elapsed time is the difference between start and finish times on a consistent time scale.",
+        "workedExample": "From 09:35 to 10:20 is 45 minutes.",
+        "solution": "Convert to minutes or bridge through the hour, then subtract start from end.",
+        "commonMistake": "Do not subtract clock digits as ordinary base-10 numbers.",
+        "summary": "Use 60 minutes per hour when solving time problems."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-unit-conversion",
+      "titlePatterns": [
+        "^Capacity Problems$",
+        "^Convert Metric Capacity Units$",
+        "^Convert Metric Length Units$",
+        "^Convert Metric Mass Units$",
+        "^Hands-on: Estimate and Measure Capacity$",
+        "^Hands-on: Estimate and Measure Mass$",
+        "^Hands-on: Estimate and Measure Metric Mass$",
+        "^Hands-on: Metric Rulers$",
+        "^Mass Problems$",
+        "^Relate Customary Units of Capacity$",
+        "^Relate Customary Units of Weight$",
+        "^Relate Metric Units$",
+        "^Solve More Problems That Involve Units of Measure$",
+        "^Solve Problems That Involve Units of Measure$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L3:COMMON:11:01$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:11:02$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:11:03$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:11:04$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:13:01$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:13:02$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:13:03$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:13:05$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:13:06$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:10:02$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:10:03$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:10:04$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:10:05$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:10:06$"
+      ],
+      "skillId": "supporting.measurement.practical",
+      "mechanic": "UNIT_CONVERSION",
+      "families": [
+        "supporting.measurement.unit_conversion"
+      ],
+      "content": {
+        "concept": "Unit conversion multiplies or divides by a known scale factor between units.",
+        "workedExample": "3 metres equals 300 centimetres because each metre contains 100 centimetres.",
+        "solution": "Identify the conversion factor and direction, then multiply or divide accordingly.",
+        "commonMistake": "Do not use the conversion factor in the wrong direction.",
+        "summary": "Convert units using a consistent multiplicative factor."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-volume",
+      "titlePatterns": [
+        "^Hands-on: Use Models to Find Volume$",
+        "^Volume of Composite Figures$",
+        "^Volume of Prisms$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L5:GENERAL:12:09$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:12:10$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:12:12$"
+      ],
+      "skillId": "supporting.geometry.area_volume",
+      "mechanic": "SOLID_GEOMETRY",
+      "families": [
+        "supporting.geometry.cuboid_volume",
+        "supporting.geometry.surface_area_cuboid"
+      ],
+      "content": {
+        "concept": "Volume measures three-dimensional space and is expressed in cubic units.",
+        "workedExample": "A cuboid 5×4×3 has volume 60 cubic units.",
+        "solution": "Multiply the three perpendicular dimensions for a cuboid and distinguish volume from surface area.",
+        "commonMistake": "Do not use square units for volume.",
+        "summary": "Use three-dimensional dimensions and cubic units."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-whole-addition",
+      "titlePatterns": [
+        "^Add Four-Digit Numbers$",
+        "^Add Three-Digit Numbers$",
+        "^Hands-on: Use Models to Add$",
+        "^Strategies to Add Multi-Digit Numbers$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L3:COMMON:02:06$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:02:07$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:02:08$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:03:02$"
+      ],
+      "skillId": "number.whole.add",
+      "mechanic": "WHOLE_ADD",
+      "families": [
+        "number.whole.add.direct"
+      ],
+      "content": {
+        "concept": "Whole-number addition combines quantities while preserving place value.",
+        "workedExample": "347 + 285 = 632.",
+        "solution": "Align place values, add from right to left, regroup where needed, then check by subtraction.",
+        "commonMistake": "Do not misalign tens, hundreds and units.",
+        "summary": "Add by place value and verify with the inverse operation."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-whole-division",
+      "titlePatterns": [
+        "^Adjust Quotients$",
+        "^Divide 4-Digit Dividends by 1-Digit Divisors$",
+        "^Divide Large Numbers$",
+        "^Divide Multiples of 10, 100, or 1,000$",
+        "^Divide Three- and Four-Digit Numbers$",
+        "^Divide Two-Digit Numbers$",
+        "^Divide by 10$",
+        "^Divide by 11 and 12$",
+        "^Divide by 2$",
+        "^Divide by 3$",
+        "^Divide by 4$",
+        "^Divide by 5$",
+        "^Divide by 6 and 7$",
+        "^Divide by 8 and 9$",
+        "^Divide by Two-Digit Numbers$",
+        "^Divide into Equal Parts$",
+        "^Divide with 0 and 1$",
+        "^Find Equal Shares$",
+        "^Hands-on: Distributive Property and Partial Quotients$",
+        "^Hands-on: Divide with Base-Ten Blocks$",
+        "^Hands-on: Division Models$",
+        "^Hands-on: Model Division Problems$",
+        "^Hands-on: Model Division of Large Numbers$",
+        "^Hands-on: Relate Division to Multiplication$",
+        "^Hands-on: Use Models to Interpret Remainders$",
+        "^Interpret Remainders$",
+        "^Make Sense of a Remainder$",
+        "^Quotients with Zeros$",
+        "^Relate Division to Multiplication$",
+        "^Solve Comparison Problems Using Division$",
+        "^Solve Multi-Step Problems Using Division$",
+        "^Understand Partial Quotients$",
+        "^Understand Remainders$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L3:COMMON:05:01$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:05:02$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:05:04$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:06:03$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:06:05$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:06:09$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:07:02$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:07:05$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:07:08$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:08:03$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:08:06$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:08:09$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:04:04$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:07:01$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:07:03$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:07:04$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:07:05$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:07:06$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:07:07$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:07:08$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:03:01$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:03:02$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:03:03$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:03:06$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:03:07$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:03:08$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:03:10$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:03:11$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:03:12$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:04:02$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:04:03$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:04:04$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:04:05$"
+      ],
+      "skillId": "supporting.number.directed_operations",
+      "mechanic": "WHOLE_DIVIDE",
+      "families": [
+        "supporting.number.divide"
+      ],
+      "content": {
+        "concept": "Whole-number division partitions a quantity into equal groups.",
+        "workedExample": "252 ÷ 7 = 36.",
+        "solution": "Use known multiplication facts or a formal division algorithm and verify divisor × quotient gives the dividend.",
+        "commonMistake": "Do not confuse the divisor with the quotient.",
+        "summary": "Divide into equal groups and check with multiplication."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-whole-multiplication",
+      "titlePatterns": [
+        "^Associative Property$",
+        "^Distributive Property$",
+        "^Hands-on: Decompose Numbers for Multiplication$",
+        "^Hands-on: Double a Known Fact$",
+        "^Hands-on: Model Multiplication Problems$",
+        "^Hands-on: Multiplication as Scaling$",
+        "^Hands-on: Multiply Three Factors$",
+        "^Hands-on: Multiply with Arrays$",
+        "^Hands-on: Partial Products and the Distributive Property$",
+        "^Hands-on: Use Models to Multiply$",
+        "^Multiply 2-Digit by 1-Digit Factors$",
+        "^Multiply Multi-Digit by 1-Digit Factors$",
+        "^Multiply Two 2-Digit Factors$",
+        "^Multiply Two Multiples of 10$",
+        "^Multiply by 0 and 1$",
+        "^Multiply by 10$",
+        "^Multiply by 11 and 12$",
+        "^Multiply by 2$",
+        "^Multiply by 3$",
+        "^Multiply by 4$",
+        "^Multiply by 5$",
+        "^Multiply by 6$",
+        "^Multiply by 7$",
+        "^Multiply by 8$",
+        "^Multiply by 9$",
+        "^Multiply by Multiples of 10$",
+        "^Multiply by Multiples of 10, 100, or 1,000$",
+        "^Multiply by One-Digit Numbers$",
+        "^Multiply by Two-Digit Numbers$",
+        "^Properties of Multiplication$",
+        "^Solve Comparison Problems Using Multiplication$",
+        "^Solve Multi-Step Problems Involving Multiplication$",
+        "^Understand Comparing with Multiplication$",
+        "^Use the Distributive Property to Multiply$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L3:COMMON:04:01$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:04:03$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:06:02$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:06:04$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:06:07$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:06:08$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:07:01$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:07:03$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:07:04$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:07:07$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:08:01$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:08:02$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:08:04$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:08:05$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:08:08$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:09:01$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:09:02$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:09:03$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:09:04$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:04:01$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:04:03$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:06:01$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:06:03$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:06:04$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:06:05$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:06:06$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:06:07$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:06:08$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:02:06$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:02:07$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:02:09$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:02:10$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:05:02$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:05:08$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:09:08$"
+      ],
+      "skillId": "supporting.number.directed_operations",
+      "mechanic": "WHOLE_MULTIPLY",
+      "families": [
+        "supporting.number.multiply"
+      ],
+      "content": {
+        "concept": "Whole-number multiplication scales one quantity by another.",
+        "workedExample": "36 × 7 = 252.",
+        "solution": "Use place-value partitioning or a formal algorithm and verify by dividing the product by one factor.",
+        "commonMistake": "Do not lose a place-value zero in multi-digit multiplication.",
+        "summary": "Multiply using place value and check with division."
+      }
+    },
+    {
+      "id": "uae-official-g3g5-auto-whole-subtraction",
+      "titlePatterns": [
+        "^Hands-on: Subtract with Regrouping$",
+        "^Strategies to Subtract Multi-Digit Numbers$",
+        "^Subtract Four-Digit Numbers$",
+        "^Subtract Three-Digit Numbers$",
+        "^Subtract with Renaming$",
+        "^Subtract with Zeros$"
+      ],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L3:COMMON:03:04$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:03:05$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:03:06$",
+        "^PED:UAE-MOE-MATH:L3:COMMON:03:07$",
+        "^PED:UAE-MOE-MATH:L4:COMMON:03:05$",
+        "^PED:UAE-MOE-MATH:L5:GENERAL:08:13$"
+      ],
+      "skillId": "number.whole.subtract",
+      "mechanic": "WHOLE_SUBTRACT",
+      "families": [
+        "number.whole.subtract.direct"
+      ],
+      "content": {
+        "concept": "Whole-number subtraction finds a difference while preserving place value.",
+        "workedExample": "632 − 285 = 347.",
+        "solution": "Align place values, subtract from right to left, regroup where needed, then check by addition.",
+        "commonMistake": "Do not subtract the smaller digit from the larger digit independently when regrouping is required.",
+        "summary": "Subtract by place value and verify with addition."
+      }
     }
   ]
 }

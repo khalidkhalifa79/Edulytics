@@ -115,8 +115,8 @@ public sealed class RichLessonExternalHelpTests
     public void Phase8A_RoundingLesson_ResolvesReviewedEmbeddedVideo()
     {
         var help = RichLessonExternalHelpRegistry.Resolve(
-            "PED:UAE-MOE-MATH:L4:COMMON:01:02:ROUNDING-TO-POWERS-OF-TEN",
-            "Rounding to powers of ten",
+            "PED:UAE-MOE-MATH:L4:COMMON:02:04",
+            "Round Multi-Digit Numbers",
             "en");
 
         var video = Assert.Single(help.ApprovedVideos);
