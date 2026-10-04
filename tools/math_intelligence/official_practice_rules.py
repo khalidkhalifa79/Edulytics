@@ -388,7 +388,7 @@ def load_reviewed_official_rule_mappings(
                     )
                     continue
 
-            if all(
+            if outcomes and all(
                 resolution is not None
                 for resolution in resolved_outcomes
             ):

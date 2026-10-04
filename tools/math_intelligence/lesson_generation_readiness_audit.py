@@ -301,16 +301,24 @@ def audit() -> dict[str, Any]:
             capabilities,
             families,
         )
+        mapping_source = "" if mapping is None else str(mapping.get("sourceType") or "")
+        lesson_source = str(skill.get("sourceType") or semantic.get("sourceType") or "Unknown")
         reviewed_official_mapping = bool(
             mapping
-            and str(mapping.get("sourceType") or "") in {
-                "OfficialReviewedExactCodeRule",
-                "OfficialReviewedExactTitleRule",
-                "OfficialReviewedUniqueTitleRule",
-                "OfficialReviewedCanonicalEvidence",
-                "OfficialOutcomeRule",
-                "PolishOfficialOutcomeMap",
-            }
+            and (
+                mapping_source in {
+                    "OfficialReviewedExactCodeRule",
+                    "OfficialReviewedExactTitleRule",
+                    "OfficialReviewedUniqueTitleRule",
+                    "OfficialReviewedCanonicalEvidence",
+                    "OfficialOutcomeRule",
+                    "PolishOfficialOutcomeMap",
+                }
+                or (
+                    lesson_source == "OfficialMapped"
+                    and mapping_source == "SupportingRule"
+                )
+            )
         )
         readiness, reasons = decide(
             skill_status,

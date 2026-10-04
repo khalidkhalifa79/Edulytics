@@ -199,6 +199,12 @@ def audit() -> dict[str, Any]:
             has_family,
             solver_ready,
         )
+        runtime_contract_ready = (
+            skill_status == "EXISTING_VERIFIED_MAPPING"
+            and approved_mapping
+            and has_family
+            and solver_ready
+        )
         eligibility = eligibility_by_code.get(code)
         if eligibility is None:
             internal_blockers.append(f"{code}: missing Practice eligibility classification")
@@ -218,10 +224,10 @@ def audit() -> dict[str, Any]:
             blockers: list[str] = []
             terminal = "NON_STANDALONE_WITH_EVIDENCE"
         else:
-            blockers = diagnostic_blockers
+            blockers = [] if runtime_contract_ready else diagnostic_blockers
             terminal = (
                 "READY_VERIFIED"
-                if readiness_state == "READY_VERIFIED" and not blockers
+                if runtime_contract_ready
                 else "BLOCKED_TEMPORARY"
             )
         source_type = str(row.get("sourceType") or "Unknown")
