@@ -292,27 +292,61 @@
       }
     },
     {
-      "id": "uae-official-reference-fallback-g11-advanced-u5",
+      "id": "uae-g11-advanced-u5-linear-systems",
       "titlePatterns": [],
       "codePatterns": [
         "^PED:UAE-MOE-MATH:L11:ADVANCED:05:01:MULTIVARIABLE-LINEAR-SYSTEMS-AND-ELEMENTARY-ROW-OPERATIONS$",
-        "^PED:UAE-MOE-MATH:L11:ADVANCED:05:03:SOLVING-LINEAR-SYSTEMS-USING-INVERSES-AND-CRAMER-S-RULE$",
-        "^PED:UAE-MOE-MATH:L11:ADVANCED:05:04:PARTIAL-FRACTIONS$",
-        "^PED:UAE-MOE-MATH:L11:ADVANCED:05:05:LINEAR-PROGRAMMING$"
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:05:03:SOLVING-LINEAR-SYSTEMS-USING-INVERSES-AND-CRAMER-S-RULE$"
       ],
-      "skillId": "supporting.algebra.expressions",
-      "mechanic": "ALGEBRA_EXPRESSIONS",
+      "skillId": "supporting.algebra.equations",
+      "mechanic": "SIMULTANEOUS",
       "families": [
-        "supporting.algebra.simplify",
-        "supporting.algebra.substitute",
-        "supporting.algebra.expressions.mixed"
+        "supporting.algebra.simultaneous"
       ],
       "content": {
-        "concept": "Algebraic expressions represent quantities using variables, coefficients and operations.",
-        "workedExample": "2x+3x−4 simplifies to 5x−4.",
-        "solution": "Collect like terms, preserve unlike terms, and use substitution to check a simplified form.",
-        "commonMistake": "Do not combine unlike terms such as x and x².",
-        "summary": "Use algebraic structure to simplify and evaluate expressions."
+        "concept": "A linear system requires values that satisfy every equation simultaneously.",
+        "workedExample": "x+y=9 and x-y=3 gives x=6, y=3.",
+        "solution": "Use elimination or an equivalent exact system method, solve for both variables, and verify in every original equation.",
+        "commonMistake": "Do not accept values that satisfy only one equation.",
+        "summary": "Solve the system and verify the complete solution."
+      }
+    },
+    {
+      "id": "uae-g11-advanced-u5-partial-fractions",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:05:04:PARTIAL-FRACTIONS$"
+      ],
+      "skillId": "supporting.algebra.expressions",
+      "mechanic": "ALGEBRAIC_FRACTION",
+      "families": [
+        "supporting.algebra.algebraic_fraction"
+      ],
+      "content": {
+        "concept": "Rational algebra works with complete numerator and denominator expressions under exact division and domain restrictions.",
+        "workedExample": "Evaluate and simplify an algebraic fraction without cancelling across addition.",
+        "solution": "Respect denominator restrictions, simplify complete factors, and verify the resulting rational value.",
+        "commonMistake": "Do not cancel terms across addition or ignore a zero denominator.",
+        "summary": "Manipulate rational expressions as exact algebraic fractions."
+      }
+    },
+    {
+      "id": "uae-g11-advanced-u5-linear-programming",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:05:05:LINEAR-PROGRAMMING$"
+      ],
+      "skillId": "supporting.algebra.systems_inequalities",
+      "mechanic": "LINEAR_PROGRAMMING",
+      "families": [
+        "supporting.algebra.linear_programming.vertex_optimum"
+      ],
+      "content": {
+        "concept": "Linear programming maximizes or minimizes a linear objective over a feasible region defined by linear inequalities.",
+        "workedExample": "For x>=0, y>=0, x+y<=6 and objective 3x+2y, compare feasible vertices; the maximum is 18 at (6,0).",
+        "solution": "Identify the feasible vertices, evaluate the linear objective at each, and choose the required optimum.",
+        "commonMistake": "Do not optimize the objective without checking feasibility of the candidate point.",
+        "summary": "Evaluate the objective on feasible vertices to obtain the linear-programming optimum."
       }
     },
     {

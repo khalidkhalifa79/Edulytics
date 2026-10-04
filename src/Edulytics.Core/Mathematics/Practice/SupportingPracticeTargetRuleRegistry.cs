@@ -124,6 +124,37 @@ public static class SupportingPracticeTargetRuleRegistry
                value.EndsWith("$", StringComparison.Ordinal);
     }
 
+    private static bool TryResolveReviewedExactCode(
+        string? lessonCode,
+        out SupportingPracticeTargetRule? rule)
+    {
+        var code = (lessonCode ?? string.Empty).Trim();
+        if (code.Length == 0)
+        {
+            rule = null;
+            return false;
+        }
+
+        var matches = Rules.Value
+            .Where(candidate =>
+                candidate.TitlePatterns.Count == 0 &&
+                candidate.CodePatterns.Any(pattern =>
+                    IsReviewedExactTitlePattern(pattern.ToString()) &&
+                    pattern.IsMatch(code)))
+            .Select(candidate => candidate.Rule)
+            .DistinctBy(candidate => candidate.Id, StringComparer.Ordinal)
+            .ToArray();
+
+        if (matches.Length == 1)
+        {
+            rule = matches[0];
+            return true;
+        }
+
+        rule = null;
+        return false;
+    }
+
     /// <summary>
     /// Resolves an official lesson only when the reviewed target-rule registry
     /// yields one unambiguous target. An anchored exact-title match wins when
@@ -135,6 +166,9 @@ public static class SupportingPracticeTargetRuleRegistry
         string? title,
         out SupportingPracticeTargetRule? rule)
     {
+        if (TryResolveReviewedExactCode(lessonCode, out rule))
+            return true;
+
         if (TryResolveReviewedExactTitle(lessonCode, title, out rule))
             return true;
 
