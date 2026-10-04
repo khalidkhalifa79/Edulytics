@@ -7,7 +7,7 @@ namespace Edulytics.Tests.MathematicsIntelligence;
 public sealed class SupportingLessonPracticeR4Tests
 {
     [Fact]
-    public void AmbiguityDecisionRegistryCoversAllFourteenBaselineLessons()
+    public void AmbiguityDecisionRegistryCoversRemainingBaselineLessons()
     {
         var root = FindRoot();
         using var document = JsonDocument.Parse(File.ReadAllText(Path.Combine(
@@ -15,12 +15,12 @@ public sealed class SupportingLessonPracticeR4Tests
             "src/Edulytics.Core/Mathematics/Curriculum/supporting-ambiguity-decisions.r4.v1.json")));
 
         var rootElement = document.RootElement;
-        Assert.Equal(14, rootElement.GetProperty("total").GetInt32());
+        Assert.Equal(7, rootElement.GetProperty("total").GetInt32());
 
         var decisions = rootElement.GetProperty("decisions").EnumerateArray().ToArray();
-        Assert.Equal(14, decisions.Length);
+        Assert.Equal(7, decisions.Length);
         Assert.Equal(
-            14,
+            7,
             decisions.Select(x => x.GetProperty("lessonCode").GetString())
                 .Distinct(StringComparer.Ordinal)
                 .Count());

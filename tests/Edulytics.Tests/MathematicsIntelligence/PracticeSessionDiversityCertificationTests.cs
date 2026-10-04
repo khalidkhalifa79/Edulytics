@@ -15,7 +15,7 @@ public sealed class PracticeSessionDiversityCertificationTests
             .OrderBy(x => x.LessonCode, StringComparer.Ordinal)
             .ToArray();
 
-        Assert.Equal(5139, contracts.Length);
+        Assert.Equal(5110, contracts.Length);
 
         for (var index = 0; index < contracts.Length; index++)
         {

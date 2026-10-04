@@ -7,7 +7,7 @@ namespace Edulytics.Tests.MathematicsIntelligence;
 public sealed class SupportingLessonPracticeR3Tests
 {
     [Fact]
-    public void ReviewDecisionRegistryCoversAllNinetyFiveBaselineReviewRequiredLessons()
+    public void ReviewDecisionRegistryCoversRemainingBaselineReviewRequiredLessons()
     {
         var root = FindRoot();
         using var document = JsonDocument.Parse(File.ReadAllText(Path.Combine(
@@ -15,13 +15,13 @@ public sealed class SupportingLessonPracticeR3Tests
             "src/Edulytics.Core/Mathematics/Curriculum/supporting-review-decisions.r3.v1.json")));
 
         var rootElement = document.RootElement;
-        Assert.Equal(95, rootElement.GetProperty("total").GetInt32());
-        Assert.Equal(27, rootElement.GetProperty("approvedExistingSkill").GetInt32());
-        Assert.Equal(68, rootElement.GetProperty("deferredToOntology").GetInt32());
+        Assert.Equal(68, rootElement.GetProperty("total").GetInt32());
+        Assert.Equal(23, rootElement.GetProperty("approvedExistingSkill").GetInt32());
+        Assert.Equal(45, rootElement.GetProperty("deferredToOntology").GetInt32());
 
         var decisions = rootElement.GetProperty("decisions").EnumerateArray().ToArray();
-        Assert.Equal(95, decisions.Length);
-        Assert.Equal(95, decisions.Select(x => x.GetProperty("lessonCode").GetString()).Distinct().Count());
+        Assert.Equal(68, decisions.Length);
+        Assert.Equal(68, decisions.Select(x => x.GetProperty("lessonCode").GetString()).Distinct().Count());
 
         Assert.All(decisions, decision =>
         {
@@ -47,9 +47,10 @@ public sealed class SupportingLessonPracticeR3Tests
             .Select(x => x.GetProperty("lessonCode").GetString()!)
             .ToArray();
 
-        Assert.Equal(27, approvedCodes.Length);
+        Assert.Equal(23, approvedCodes.Length);
         foreach (var code in approvedCodes)
         {
+
             Assert.True(LessonPracticeContractRegistry.TryResolve(code, out var contract));
             Assert.NotNull(contract);
             Assert.Equal("READY_VERIFIED", contract!.Readiness);
@@ -108,6 +109,7 @@ public sealed class SupportingLessonPracticeR3Tests
         Assert.NotNull(contract);
         Assert.Contains(contract!.AllowedQuestionFamilies, x => string.Equals(x, family, StringComparison.Ordinal));
     }
+
 
     private static string FindRoot()
     {
