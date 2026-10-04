@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "reviewVersion": "supporting-ambiguity-r4-v1",
-  "population": "14 baseline AMBIGUOUS Supporting lessons",
-  "total": 14,
+  "population": "7 baseline AMBIGUOUS Supporting lessons after UAE official-curriculum rebuild",
+  "total": 7,
   "decisions": [
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:S3:3F-4:BUILD",
@@ -91,136 +91,6 @@
       "terminalState": "READY_VERIFIED",
       "blocker": null,
       "rationale": "Primary skill is algebra.relationships.two_unknowns; whole-number addition/subtraction is prerequisite only. R6 target-specific worked evidence now supplies two independent relationships and verifies both equations."
-    },
-    {
-      "lessonCode": "PED:UAE-MOE-MATH:L3:COMMON:02:03:COMPARE-FRACTIONS",
-      "primarySkills": [
-        "fractions.compare.unlike_denominators"
-      ],
-      "secondarySkills": [
-        "fractions.equivalent"
-      ],
-      "prerequisiteSkills": [],
-      "allowedQuestionFamilies": [
-        "fractions.compare.unlike.common_denominator"
-      ],
-      "terminalState": "READY_VERIFIED",
-      "blocker": null,
-      "rationale": "Mentioned skills were classified by instructional role. Only Primary skills authorize Practice; Secondary and Prerequisite skills may support the reasoning but cannot replace the lesson target."
-    },
-    {
-      "lessonCode": "PED:UAE-MOE-MATH:L3:COMMON:02:04:ADD-AND-SUBTRACT-RELATED-FRACTIONS",
-      "primarySkills": [
-        "fractions.add_subtract"
-      ],
-      "secondarySkills": [
-        "fractions.equivalent"
-      ],
-      "prerequisiteSkills": [
-        "number.whole.add_subtract"
-      ],
-      "allowedQuestionFamilies": [
-        "fractions.add_subtract.related.build",
-        "fractions.add_subtract.related.apply"
-      ],
-      "terminalState": "READY_VERIFIED",
-      "blocker": null,
-      "rationale": "Mentioned skills were classified by instructional role. Only Primary skills authorize Practice; Secondary and Prerequisite skills may support the reasoning but cannot replace the lesson target."
-    },
-    {
-      "lessonCode": "PED:UAE-MOE-MATH:L4:COMMON:02:02:ADD-AND-SUBTRACT-FRACTIONS",
-      "primarySkills": [
-        "fractions.add_subtract"
-      ],
-      "secondarySkills": [
-        "fractions.equivalent"
-      ],
-      "prerequisiteSkills": [
-        "number.whole.add_subtract"
-      ],
-      "allowedQuestionFamilies": [
-        "fractions.add_subtract.common_denominator.build",
-        "fractions.add_subtract.common_denominator.apply"
-      ],
-      "terminalState": "READY_VERIFIED",
-      "blocker": null,
-      "rationale": "Mentioned skills were classified by instructional role. Only Primary skills authorize Practice; Secondary and Prerequisite skills may support the reasoning but cannot replace the lesson target."
-    },
-    {
-      "lessonCode": "PED:UAE-MOE-MATH:L5:ADVANCED:02:02:ADD-AND-SUBTRACT-FRACTIONS",
-      "primarySkills": [
-        "fractions.add_subtract"
-      ],
-      "secondarySkills": [
-        "fractions.equivalent"
-      ],
-      "prerequisiteSkills": [
-        "number.whole.add_subtract"
-      ],
-      "allowedQuestionFamilies": [
-        "fractions.add_subtract.common_denominator.build",
-        "fractions.add_subtract.common_denominator.apply"
-      ],
-      "terminalState": "READY_VERIFIED",
-      "blocker": null,
-      "rationale": "Mentioned skills were classified by instructional role. Only Primary skills authorize Practice; Secondary and Prerequisite skills may support the reasoning but cannot replace the lesson target."
-    },
-    {
-      "lessonCode": "PED:UAE-MOE-MATH:L5:GENERAL:02:02:ADD-AND-SUBTRACT-FRACTIONS",
-      "primarySkills": [
-        "fractions.add_subtract"
-      ],
-      "secondarySkills": [
-        "fractions.equivalent"
-      ],
-      "prerequisiteSkills": [
-        "number.whole.add_subtract"
-      ],
-      "allowedQuestionFamilies": [
-        "fractions.add_subtract.common_denominator.build",
-        "fractions.add_subtract.common_denominator.apply"
-      ],
-      "terminalState": "READY_VERIFIED",
-      "blocker": null,
-      "rationale": "Mentioned skills were classified by instructional role. Only Primary skills authorize Practice; Secondary and Prerequisite skills may support the reasoning but cannot replace the lesson target."
-    },
-    {
-      "lessonCode": "PED:UAE-MOE-MATH:L6:ADVANCED:02:02:ADD-AND-SUBTRACT-UNLIKE-FRACTIONS",
-      "primarySkills": [
-        "fractions.add_subtract"
-      ],
-      "secondarySkills": [
-        "fractions.equivalent"
-      ],
-      "prerequisiteSkills": [
-        "number.whole.add_subtract"
-      ],
-      "allowedQuestionFamilies": [
-        "fractions.add_subtract.common_denominator.build",
-        "fractions.add_subtract.common_denominator.apply"
-      ],
-      "terminalState": "READY_VERIFIED",
-      "blocker": null,
-      "rationale": "Mentioned skills were classified by instructional role. Only Primary skills authorize Practice; Secondary and Prerequisite skills may support the reasoning but cannot replace the lesson target."
-    },
-    {
-      "lessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:02:02:ADD-AND-SUBTRACT-UNLIKE-FRACTIONS",
-      "primarySkills": [
-        "fractions.add_subtract"
-      ],
-      "secondarySkills": [
-        "fractions.equivalent"
-      ],
-      "prerequisiteSkills": [
-        "number.whole.add_subtract"
-      ],
-      "allowedQuestionFamilies": [
-        "fractions.add_subtract.common_denominator.build",
-        "fractions.add_subtract.common_denominator.apply"
-      ],
-      "terminalState": "READY_VERIFIED",
-      "blocker": null,
-      "rationale": "Mentioned skills were classified by instructional role. Only Primary skills authorize Practice; Secondary and Prerequisite skills may support the reasoning but cannot replace the lesson target."
     },
     {
       "lessonCode": "PED:US-CCSS-MATH:G4:U02:L02",
