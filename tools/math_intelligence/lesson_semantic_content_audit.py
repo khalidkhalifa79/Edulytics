@@ -188,9 +188,9 @@ def load_effective_snapshot() -> tuple[dict[str, dict[str, Any]], list[str]]:
             continue
         by_code[lesson_code] = row
 
-    if len(by_code) != 4453:
+    if len(by_code) != 5110:
         errors.append(
-            f"Effective learner-content snapshot expected 4453 lessons, got {len(by_code)}."
+            f"Effective learner-content snapshot expected 5110 lessons, got {len(by_code)}."
         )
 
     return by_code, errors
@@ -270,7 +270,21 @@ def audit() -> dict[str, Any]:
                 if effective_row is not None
                 else get_case(lesson, "OutcomeCodes", "outcomeCodes", default=[])
             )
-            source_type = "OfficialMapped" if outcomes else "PedagogicalUnmapped"
+            official_reference = normalize_space(
+                effective_row.get("officialReferenceCode")
+                if effective_row is not None
+                else get_case(
+                    lesson,
+                    "OfficialReferenceCode",
+                    "officialReferenceCode",
+                    default="",
+                )
+            )
+            source_type = (
+                "OfficialMapped"
+                if outcomes or official_reference
+                else "PedagogicalUnmapped"
+            )
             supporting_rule = (
                 match_supporting_rule(lesson_code, title, supporting_rules)
                 if not outcomes or effective_content_version == "supporting-practice-remediation-v1"

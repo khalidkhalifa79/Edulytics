@@ -701,7 +701,11 @@ public static class LessonPracticeContractRegistry
 
     private static LessonPracticeContract[] BuildAllEntries()
     {
-        var byLesson = Entries.ToDictionary(x => x.LessonCode, StringComparer.Ordinal);
+        var byLesson = Entries
+            .Where(x => !x.LessonCode.StartsWith(
+                "PED:UAE-MOE-MATH:",
+                StringComparison.Ordinal))
+            .ToDictionary(x => x.LessonCode, StringComparer.Ordinal);
         foreach (var projected in LessonPracticeContractProjection.Load())
         {
             // Hand-authored contracts remain authoritative where they already exist.

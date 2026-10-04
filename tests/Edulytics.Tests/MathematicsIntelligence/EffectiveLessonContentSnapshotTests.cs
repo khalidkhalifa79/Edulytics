@@ -32,7 +32,10 @@ public sealed class EffectiveLessonContentSnapshotTests
                         reviewEvidence = document.ReviewEvidence,
                         reviewMethod = document.ReviewMethod,
                         outcomeCodes = lesson.OutcomeCodes,
-                        isSupporting = lesson.OutcomeCodes.Count == 0,
+                        officialReferenceCode = lesson.OfficialReferenceCode,
+                        isSupporting =
+                            lesson.OutcomeCodes.Count == 0 &&
+                            string.IsNullOrWhiteSpace(lesson.OfficialReferenceCode),
                         translations = lesson.Translations.Select(translation => new
                         {
                             cultureCode = translation.CultureCode,
