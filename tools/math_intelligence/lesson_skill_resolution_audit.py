@@ -385,21 +385,6 @@ def audit() -> dict[str, Any]:
                     "evidence": existing.get("evidence") or [],
                 } for skill in clean_list(existing.get("primarySkills"))]
                 diagnostics = ["Existing explicit lesson-skill mapping takes precedence over candidate resolution."]
-            elif supporting_mapping:
-                status = "EXISTING_VERIFIED_MAPPING"
-                candidates = [{
-                    "skillId": skill,
-                    "score": None,
-                    "titleMatched": True,
-                    "evidence": [{
-                        "type": "ReviewedSupportingRule",
-                        "ruleId": supporting_mapping.get("supportingPracticeRuleId"),
-                        "signal": fields["title"],
-                    }],
-                } for skill in clean_list(supporting_mapping.get("primarySkills"))]
-                diagnostics = [
-                    "Reviewed Supporting Practice target rule supplies an approved exact lesson-skill mapping."
-                ]
             elif official_mapping:
                 status = "EXISTING_VERIFIED_MAPPING"
                 official_source = str(
@@ -438,6 +423,21 @@ def audit() -> dict[str, Any]:
                         else "Reviewed official lesson evidence supplies an approved exact Practice mapping."
                     )
                 ]
+            elif supporting_mapping:
+                status = "EXISTING_VERIFIED_MAPPING"
+                candidates = [{
+                    "skillId": skill,
+                    "score": None,
+                    "titleMatched": True,
+                    "evidence": [{
+                        "type": "ReviewedSupportingRule",
+                        "ruleId": supporting_mapping.get("supportingPracticeRuleId"),
+                        "signal": fields["title"],
+                    }],
+                } for skill in clean_list(supporting_mapping.get("primarySkills"))]
+                diagnostics = [
+                    "Reviewed Supporting Practice target rule supplies an approved exact lesson-skill mapping."
+                ]
             else:
                 candidates = [
                     candidate
@@ -470,10 +470,10 @@ def audit() -> dict[str, Any]:
     # A complete Supporting rollout is intentionally fail-closed: every
     # outcome-unmapped canonical lesson must be covered by either an explicit
     # mapping or a reviewed Supporting target rule.
-    explicitly_mapped = set(mappings)
+    covered_by_non_supporting_mapping = set(mappings) | set(official_mappings)
     unmatched_after_explicit = [
         row for row in unmatched_supporting
-        if row["lessonCode"] not in explicitly_mapped
+        if row["lessonCode"] not in covered_by_non_supporting_mapping
     ]
     blockers.extend(
         f"Supporting Practice target rule missing for {row['lessonCode']}: {row['title']}"
