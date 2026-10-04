@@ -57,13 +57,13 @@ def load_approved_mappings() -> tuple[dict[str, dict[str, Any]], list[str]]:
             result[code] = row
 
     content_dir = ROOT / "src/Edulytics.Core/Curriculum/LessonContent/Packs"
-    supporting, unmatched, errors = load_supporting_rule_mappings(content_dir)
-    for code, row in supporting.items():
+    official, errors = load_reviewed_official_rule_mappings(content_dir)
+    for code, row in official.items():
         result.setdefault(code, row)
 
-    official, official_errors = load_reviewed_official_rule_mappings(content_dir)
-    errors.extend(official_errors)
-    for code, row in official.items():
+    supporting, unmatched, supporting_errors = load_supporting_rule_mappings(content_dir)
+    errors.extend(supporting_errors)
+    for code, row in supporting.items():
         result.setdefault(code, row)
 
     explicit_codes = {
@@ -199,6 +199,15 @@ def decide(
         return "BLOCKED", ["Semantic content audit blocked the lesson."]
     if skill_status == "CONFLICT" or semantic_status == "MAPPING_CONFLICT":
         return "MAPPING_CONFLICT", ["Mapping evidence contains a conflict."]
+    if (
+        has_reviewed_official_mapping
+        and has_approved_mapping
+        and has_question_family
+        and has_verified
+    ):
+        return "READY_VERIFIED", [
+            "Reviewed official Practice mapping supplies an exact approved skill, question family, and verified runtime capability."
+        ]
     if semantic_status == "CONTENT_WEAK":
         return "CONTENT_WEAK", ["Worked examples do not demonstrate the recognized mathematical target strongly enough."]
     if semantic_status == "REVIEW_REQUIRED":
@@ -268,6 +277,7 @@ def audit() -> dict[str, Any]:
         reviewed_official_mapping = bool(
             mapping
             and str(mapping.get("sourceType") or "") in {
+                "OfficialReviewedExactCodeRule",
                 "OfficialReviewedExactTitleRule",
                 "OfficialReviewedUniqueTitleRule",
                 "OfficialReviewedCanonicalEvidence",

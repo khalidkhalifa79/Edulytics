@@ -35,7 +35,7 @@ def normalize_space(value: Any) -> str:
 
 
 def normalize_title(title: str) -> str:
-    value = re.sub(r"\s*[â€”-]\s*advanced reasoning\s*$", "", title or "", flags=re.I)
+    value = re.sub(r"\s*[—-]\s*advanced reasoning\s*$", "", title or "", flags=re.I)
     value = re.sub(r":\s*(?:build the idea|reason and apply)\s*$", "", value, flags=re.I)
     value = re.sub(r"^\s*consolidating\s+", "", value, flags=re.I)
     return normalize_space(value)
@@ -231,19 +231,7 @@ def load_rule_mappings(content_dir: Path) -> tuple[dict[str, dict[str, Any]], li
             outcomes = clean_list(
                 get_case(lesson, "OutcomeCodes", "outcomeCodes", default=[])
             )
-            official_reference = str(
-                get_case(
-                    lesson,
-                    "OfficialReferenceCode",
-                    "officialReferenceCode",
-                    default="",
-                )
-                or ""
-            ).strip()
-            is_supporting = bool(
-                get_case(lesson, "IsSupporting", "isSupporting", default=False)
-            )
-            if outcomes or official_reference or not is_supporting:
+            if outcomes:
                 continue
 
             translation = choose_translation(lesson, academic_language)
