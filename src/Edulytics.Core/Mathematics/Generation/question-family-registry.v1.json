@@ -4840,6 +4840,24 @@
       "lessonPracticeRouting": true
     },
     {
+      "id": "supporting.algebra.linear_programming.vertex_optimum",
+      "version": 1,
+      "skillId": "supporting.algebra.systems_inequalities",
+      "requiredCapabilities": [
+        "lesson.practice.exact.generate",
+        "lesson.practice.exact.verify"
+      ],
+      "answerType": "exact_scalar",
+      "verificationPolicy": "independent-feasible-vertex-objective-recompute-from-original-parameters",
+      "representations": [
+        "symbolic",
+        "inequality"
+      ],
+      "status": "ShadowVerified",
+      "productionRouting": false,
+      "lessonPracticeRouting": true
+    },
+    {
       "id": "supporting.sequences.skip_count",
       "version": 1,
       "skillId": "supporting.sequences.core",

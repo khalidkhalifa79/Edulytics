@@ -732,10 +732,10 @@ public sealed class MathematicsCurriculumPackSeeder
             .ToArray();
 
         // The accepted 402-node pack differs from the rebuild only through
-        // obsolete textbook SourceCatalog/Reference rows. Core domains,
-        // standards, units, lessons, and alignment links are immutable.
-        if (retained.Length != 186 ||
-            stale.Length != 216 ||
+        // obsolete textbook SourceCatalog/Reference rows. The accepted 402-node
+        // baseline shares exactly 131 codes with the rebuilt pack; 271 rows are stale.
+        if (retained.Length != 131 ||
+            stale.Length != 271 ||
             stale.Any(x =>
                 x.NodeKind is not ("SourceCatalog" or "Reference") ||
                 !(x.Code.StartsWith("UAE:CATALOG:", StringComparison.Ordinal) ||

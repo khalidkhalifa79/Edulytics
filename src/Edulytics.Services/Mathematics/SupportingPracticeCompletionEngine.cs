@@ -40,6 +40,7 @@ internal static class SupportingPracticeCompletionEngine
             "supporting.algebra.factor",
             "supporting.algebra.simplify",
             "supporting.algebra.simultaneous",
+            "supporting.algebra.linear_programming.vertex_optimum",
             "supporting.algebra.quadratic_larger_root",
             "supporting.functions.evaluate",
             "supporting.functions.composite",
@@ -173,6 +174,7 @@ internal static class SupportingPracticeCompletionEngine
             "supporting.algebra.factor" => AlgebraFactor(random, scale),
             "supporting.algebra.simplify" => AlgebraSimplify(random, scale),
             "supporting.algebra.simultaneous" => Simultaneous(random, scale),
+            "supporting.algebra.linear_programming.vertex_optimum" => LinearProgramming(random, scale),
             "supporting.algebra.quadratic_larger_root" => QuadraticRoot(random, scale),
             "supporting.functions.evaluate" => FunctionEvaluate(random, scale),
             "supporting.functions.composite" => FunctionComposite(random, scale),
@@ -293,6 +295,8 @@ internal static class SupportingPracticeCompletionEngine
                 $"{p["a"] + p["b"]}x{Signed(p["c"])}",
             "supporting.algebra.simultaneous" =>
                 FormatPair(p["x"], p["y"]),
+            "supporting.algebra.linear_programming.vertex_optimum" =>
+                (p["limit"] * Math.Max(p["xCoefficient"], p["yCoefficient"])).ToString(CultureInfo.InvariantCulture),
             "supporting.algebra.quadratic_larger_root" =>
                 Math.Max(p["r1"], p["r2"]).ToString(CultureInfo.InvariantCulture),
             "supporting.functions.evaluate" =>
@@ -1907,6 +1911,20 @@ internal static class SupportingPracticeCompletionEngine
             $"Round {value} to the nearest {place}.",
             "Compare with the midpoint between adjacent multiples of the rounding place.",
             ("mode", mode), ("left", 1), ("right", 1), ("value", value), ("place", place));
+    }
+
+    private static Problem LinearProgramming(Random r, int s)
+    {
+        var limit = r.Next(3, 8 + s * 2);
+        var xCoefficient = r.Next(2, 6 + s);
+        var yCoefficient = r.Next(1, xCoefficient);
+        return P(
+            "supporting.algebra.linear_programming.vertex_optimum",
+            $"Maximize P={xCoefficient}x+{yCoefficient}y subject to x≥0, y≥0, and x+y≤{limit}. Find the maximum value of P.",
+            "The feasible vertices are (0,0), (limit,0), and (0,limit). Evaluate the objective at each vertex and select the greatest value.",
+            ("limit", limit),
+            ("xCoefficient", xCoefficient),
+            ("yCoefficient", yCoefficient));
     }
 
     private static Problem Optimization(Random r, int s)

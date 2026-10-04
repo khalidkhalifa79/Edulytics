@@ -2,6 +2,7 @@
 
 
 using Edulytics.Core.Curriculum;
+using Edulytics.Core.Mathematics.Practice;
 
 namespace Edulytics.Tests.MathematicsIntelligence;
 
@@ -85,6 +86,34 @@ public sealed class UaeOfficialReferenceCoverageTests
                         lesson.OutcomeCodes.Count > 0 ||
                         !string.IsNullOrWhiteSpace(lesson.OfficialReferenceCode));
                 });
+        }
+    }
+
+
+    [Fact]
+    public void UaeAdvancedUnit5_UsesReviewedTopicSpecificPracticeContracts()
+    {
+        var expected = new Dictionary<string, (string Mechanic, string Family)>
+        {
+            ["PED:UAE-MOE-MATH:L11:ADVANCED:05:01:MULTIVARIABLE-LINEAR-SYSTEMS-AND-ELEMENTARY-ROW-OPERATIONS"] =
+                ("SIMULTANEOUS", "supporting.algebra.simultaneous"),
+            ["PED:UAE-MOE-MATH:L11:ADVANCED:05:03:SOLVING-LINEAR-SYSTEMS-USING-INVERSES-AND-CRAMER-S-RULE"] =
+                ("SIMULTANEOUS", "supporting.algebra.simultaneous"),
+            ["PED:UAE-MOE-MATH:L11:ADVANCED:05:04:PARTIAL-FRACTIONS"] =
+                ("ALGEBRAIC_FRACTION", "supporting.algebra.algebraic_fraction"),
+            ["PED:UAE-MOE-MATH:L11:ADVANCED:05:05:LINEAR-PROGRAMMING"] =
+                ("LINEAR_PROGRAMMING", "supporting.algebra.linear_programming.vertex_optimum")
+        };
+
+        foreach (var (lessonCode, target) in expected)
+        {
+            Assert.True(LessonPracticeContractRegistry.TryResolve(lessonCode, out var contract));
+            Assert.NotNull(contract);
+            Assert.Equal(target.Mechanic, contract!.Mechanic);
+            Assert.Contains(target.Family, contract.AllowedQuestionFamilies);
+            Assert.DoesNotContain(
+                "supporting.algebra.expressions.mixed",
+                contract.AllowedQuestionFamilies);
         }
     }
 
