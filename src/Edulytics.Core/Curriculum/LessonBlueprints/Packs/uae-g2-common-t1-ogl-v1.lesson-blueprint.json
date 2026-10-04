@@ -13,94 +13,152 @@
   "SourcePublisher": "UK Department for Education",
   "SourceEdition": "Primary Mathematics guidance / current GOV.UK publication",
   "SourceRootUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-  "SourceCheckedAtUtc": "2026-09-01T00:00:00Z",
+  "SourceCheckedAtUtc": "2026-10-04T00:00:00Z",
   "SourceLicense": "Open Government Licence v3.0",
   "RequiredDigitalAttribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
   "SourceSelectionReason": "The official curriculum source remains the academic authority. Edulytics uses open DfE Mathematics material only as lawful pedagogical scaffolding for independently authored lesson explanations where official copyrighted or source-linked prose is not reproduced.",
-  "SourceSelectionEvidence": "This scope contains 22 Edulytics-authored supporting lessons across 5 units. No formal outcome mapping is claimed without explicit source evidence; every formal OutcomeCodes collection is empty.",
+  "SourceSelectionEvidence": "Grade 2 Common rebuilt from the locally verified 2026-2027 UAE Student Edition table of contents, Units 1-12. Exact unit and lesson order comes from the textbook; no synthetic Supporting lessons are retained.",
   "SourceEvidenceUrls": [
-    "https://minhaji.moe.gov.ae/",
-    "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-    "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
-    "https://uae.afedne.com/ShoICzdl4zwc",
-    "https://uae.afedne.com/Sho0lAEsdKX9",
-    "https://uae.afedne.com/ShoZoiqH9daN"
+    "https://minhaji.moe.gov.ae/"
   ],
   "SourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. Official UAE Ministry of Education wording is not reproduced. Edulytics learner-facing bodies are independently authored.",
-  "SemanticGraphSha256": "d940ee8f037c7eece3da941ea0b31c523283cbe2df20b2a3be70b3ad1f771e30",
+  "SemanticGraphSha256": "7b7dd1f9146fae2c717709ebcf784781d81306371c3007a59f30404fcc3e8c8b",
   "AcquisitionDiagnostics": {
-    "UnitCount": 5,
-    "LessonCount": 14,
+    "UnitCount": 12,
+    "LessonCount": 99,
     "OfficialStandardCount": 0,
     "AddressingCoverageCount": 0,
     "FormalMappingCount": 0,
-    "LessonsWithoutNumberedGradeReferenceAnyRole": 22,
-    "LessonsWithoutNumberedAddressingStandard": 22,
-    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 22,
+    "LessonsWithoutNumberedGradeReferenceAnyRole": 0,
+    "LessonsWithoutNumberedAddressingStandard": 99,
+    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 99,
     "MultiStandardLessons": 0
   },
   "Units": [
     {
       "Number": 1,
-      "UnitCode": "UAE-G2-COMMON-T1-OGL-V1:U01",
+      "UnitCode": "UAE-G2-COMMON:U01",
       "SortOrder": 1,
-      "Title": "Number and Place Value",
-      "LessonCount": 7,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "e9d04dd6ca4c38fc1c15c5c19528527f9f4de3c2a94efe35983607ea88dfde77"
+      "Title": "Apply Addition and Subtraction Concepts",
+      "LessonCount": 13,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "eacaf21c0de4704e3c7573101642da3822f4a4f16ca2e61c389e247a85594e92"
     },
     {
       "Number": 2,
-      "UnitCode": "UAE-G2-COMMON-T1-OGL-V1:U02",
+      "UnitCode": "UAE-G2-COMMON:U02",
       "SortOrder": 2,
-      "Title": "Multiplication and Division",
-      "LessonCount": 3,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "cda3de5dacbad8fc8a77a3b5ea789598ca14baeab528c719edc694cef2177890"
+      "Title": "Number Patterns",
+      "LessonCount": 7,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "a6b8f59c4f230163f35549824b15deab01795ab77b64d782054c15fe817767b3"
     },
     {
       "Number": 3,
-      "UnitCode": "UAE-G2-COMMON-T1-OGL-V1:U03",
+      "UnitCode": "UAE-G2-COMMON:U03",
       "SortOrder": 3,
-      "Title": "Fractions",
-      "LessonCount": 1,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "a075c4989484a3f3d7091508c5179add5d88483124f8c283c474dba5e24b22e5"
+      "Title": "Add Two-Digit Numbers",
+      "LessonCount": 7,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "353735b3eaaf882605b45dea7dbfede144b68d4240ff86911a9de30bea5e9dc1"
     },
     {
       "Number": 4,
-      "UnitCode": "UAE-G2-COMMON-T1-OGL-V1:U04",
+      "UnitCode": "UAE-G2-COMMON:U04",
       "SortOrder": 4,
-      "Title": "Measurement",
-      "LessonCount": 1,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "2a79b71905b0e288b6c0b3fa325509b67896367905cbde52e149830be33e8a03"
+      "Title": "Subtract Two-Digit Numbers",
+      "LessonCount": 9,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "4ace40ed7f2e6143c1681fb9c7952ad43c0fd375cd2d60a76bdb16f376827a2d"
     },
     {
       "Number": 5,
-      "UnitCode": "UAE-G2-COMMON-T1-OGL-V1:U05",
+      "UnitCode": "UAE-G2-COMMON:U05",
       "SortOrder": 5,
-      "Title": "Geometry and Data",
-      "LessonCount": 2,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "4024c018b7a16f51d7be6f925c7f732269a0fb165af84f99f48a9fd8fbcfc68f"
+      "Title": "Place Value to 1,000",
+      "LessonCount": 8,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "92d84b492424b68b232e663a7d1cc06ccaa73092beddca75ed665a8afcb472d3"
+    },
+    {
+      "Number": 6,
+      "UnitCode": "UAE-G2-COMMON:U06",
+      "SortOrder": 6,
+      "Title": "Add Three-Digit Numbers",
+      "LessonCount": 8,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "9e1fe700908a1534522a7fad136a971698b8a724e3ea03af270528e9527a3ed0"
+    },
+    {
+      "Number": 7,
+      "UnitCode": "UAE-G2-COMMON:U07",
+      "SortOrder": 7,
+      "Title": "Subtract Three-Digit Numbers",
+      "LessonCount": 9,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "9dbf209270c88f3c95c96b345fdc062dfab446c94f6fdd2a943b92d05a563864"
+    },
+    {
+      "Number": 8,
+      "UnitCode": "UAE-G2-COMMON:U08",
+      "SortOrder": 8,
+      "Title": "Analyze Data",
+      "LessonCount": 8,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "69d4e60c7e0f754586919b0566539b0c97272175a69371f0771b10b404af699b"
+    },
+    {
+      "Number": 9,
+      "UnitCode": "UAE-G2-COMMON:U09",
+      "SortOrder": 9,
+      "Title": "Time",
+      "LessonCount": 9,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "f2f8fd8405318211286818180ff0c2e8f5f4ce66c7fd79e96ce0444c734510f2"
+    },
+    {
+      "Number": 10,
+      "UnitCode": "UAE-G2-COMMON:U10",
+      "SortOrder": 10,
+      "Title": "Geometric Shapes and Equal Shares",
+      "LessonCount": 8,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "5937a6e8ac9064c7ac4ced708d75fd1d265c35de9122cb84636154d8710e5d41"
+    },
+    {
+      "Number": 11,
+      "UnitCode": "UAE-G2-COMMON:U11",
+      "SortOrder": 11,
+      "Title": "Metric Lengths and Volumes",
+      "LessonCount": 8,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "f89b717143e7da3ded6a3545020216180ac1ea0e2a27b89eaf3d2ddf487abb43"
+    },
+    {
+      "Number": 12,
+      "UnitCode": "UAE-G2-COMMON:U12",
+      "SortOrder": 12,
+      "Title": "Money",
+      "LessonCount": 5,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "f231ce30269e012cd302fe18fa5680a9c9fe5e70d841201d8a3d59009e145c3f"
     }
   ],
   "Lessons": [
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U01:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:01:01:PLACE-VALUE-TO-HUNDREDS",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:01:01",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Place Value",
+      "UnitTitle": "Apply Addition and Subtraction Concepts",
       "LessonNumber": 1,
-      "Title": "Place value to hundreds",
+      "Title": "Add Using Addition",
       "SortOrder": 1,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "a2f22c075148ba9fb53f1b8154cc43b68081760029f10219eddaaef10495bef6",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "680223357664e776a4569b3fe576bd49e83b64866d1d15f179e6ebb43ae9756e",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:01:01",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L01",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -112,22 +170,22 @@
         "UAE-G2-COMMON-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:01:01"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U01:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:01:02:COMPARE-AND-ORDER-THREE-DIGIT-NUMBERS",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:01:02",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Place Value",
+      "UnitTitle": "Apply Addition and Subtraction Concepts",
       "LessonNumber": 2,
-      "Title": "Compare and order three-digit numbers",
+      "Title": "Add by Counting On",
       "SortOrder": 2,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "300a38d189545d249d984a0049e9fa32180cdc2c7e924fa769cf1c23ccf4514c",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "5432eab0bf891d3ad8daa1e04552b355f1e96035d58b7242767a8b8c5333a09c",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:01:02",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L02",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -139,22 +197,22 @@
         "UAE-G2-COMMON-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:01:02"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U01:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:01:03:ODD-AND-EVEN-NUMBERS",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:01:03",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Place Value",
+      "UnitTitle": "Apply Addition and Subtraction Concepts",
       "LessonNumber": 3,
-      "Title": "Odd and even numbers",
+      "Title": "Doubles and Near Doubles",
       "SortOrder": 3,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "c38e2bcc8a9680515f23e892a97809851c24037bffb3927b9100a961927fc380",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "90ea9d8fdf1dbce8bbea07c7a12972ceb3db0d0140efce8b5c15c1ecb388b97c",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:01:03",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L03",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -166,22 +224,22 @@
         "UAE-G2-COMMON-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:01:03"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U01:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:01:04:MENTAL-ADDITION",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:01:04",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Place Value",
+      "UnitTitle": "Apply Addition and Subtraction Concepts",
       "LessonNumber": 4,
-      "Title": "Mental addition",
+      "Title": "Make 10 to Add",
       "SortOrder": 4,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "c3b56da50430af2ff3bccf2d31d1b8a5c700b958507aee3213758f50f554e32e",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "d2581880b0c42b951d43300089372de1bb0d395c5506762f879bbca9a90fe1d1",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:01:04",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L04",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -193,22 +251,22 @@
         "UAE-G2-COMMON-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:01:04"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U01:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:01:05:MENTAL-SUBTRACTION",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:01:05",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Place Value",
+      "UnitTitle": "Apply Addition and Subtraction Concepts",
       "LessonNumber": 5,
-      "Title": "Mental subtraction",
+      "Title": "Add Three Numbers Horizontally and Vertically",
       "SortOrder": 5,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "05733ef9ce448db42b4f871f797643e51f126cabbca176a3198a1171578ade78",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "584143a5eb9f11bed4f172c310c906861804e6a2ca4e7db62570e4c0d81909dc",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:01:05",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L05",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -220,22 +278,22 @@
         "UAE-G2-COMMON-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:01:05"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U01:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:01:06:COLUMN-ADDITION-FOUNDATIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:01:06",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Place Value",
+      "UnitTitle": "Apply Addition and Subtraction Concepts",
       "LessonNumber": 6,
-      "Title": "Column addition foundations",
+      "Title": "Problem Solving: Write a Number Sentence",
       "SortOrder": 6,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "d665d883e94bdc26cce58a69ca8cbc2def39d5faee9b1298cfc6833382088d03",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "5c37bbcd8429764d01a76356268d3bf57d50e23d5efc91b691ef79f87aa22dfc",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:01:06",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L06",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -247,22 +305,22 @@
         "UAE-G2-COMMON-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:01:06"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L06"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U01:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:01:07:COLUMN-SUBTRACTION-FOUNDATIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:01:07",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Place Value",
+      "UnitTitle": "Apply Addition and Subtraction Concepts",
       "LessonNumber": 7,
-      "Title": "Column subtraction foundations",
+      "Title": "Subtract by Counting Back",
       "SortOrder": 7,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "6df2d51db136e38769ae9719f5a46985d04cc5b304741f714d089ba6110e8ea6",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "718e0e50d6bfa438321898db08fa191d2e2054d7281d23c0e7ecb0a2703ac4e4",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:01:07",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L07",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -274,22 +332,184 @@
         "UAE-G2-COMMON-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:01:07"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L07"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U01:L08",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:01:08",
+      "UnitNumber": 1,
+      "UnitTitle": "Apply Addition and Subtraction Concepts",
+      "LessonNumber": 8,
+      "Title": "Subtract All and Subtract Zero",
+      "SortOrder": 8,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "c725ee0efbb974389a2d24734ba2e31fac8c2567b745add0b3da8d86f8108329",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L08",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L08"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U01:L09",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:01:09",
+      "UnitNumber": 1,
+      "UnitTitle": "Apply Addition and Subtraction Concepts",
+      "LessonNumber": 9,
+      "Title": "Subtract Using Doubles",
+      "SortOrder": 9,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "9d3182b348b0b87381c7ff76371f4f09d217e701f1d66119ae51d597556e7c0d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L09",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L09"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U01:L10",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:01:10",
+      "UnitNumber": 1,
+      "UnitTitle": "Apply Addition and Subtraction Concepts",
+      "LessonNumber": 10,
+      "Title": "Relate Addition and Subtraction",
+      "SortOrder": 10,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "fbed8cfcc6b2c19054c4821faea0bbadc851ce50fb275cf85f4e62d7e43eeae5",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L10",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L10"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U01:L11",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:01:11",
+      "UnitNumber": 1,
+      "UnitTitle": "Apply Addition and Subtraction Concepts",
+      "LessonNumber": 11,
+      "Title": "Missing Addends",
+      "SortOrder": 11,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "9279d9c16105d6305b325f22333ca09564f459a6fca9d8cf2a5a0e25fc0ed023",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L11",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L11"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U01:L12",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:01:12",
+      "UnitNumber": 1,
+      "UnitTitle": "Apply Addition and Subtraction Concepts",
+      "LessonNumber": 12,
+      "Title": "Fact Families",
+      "SortOrder": 12,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "c76e54eb63fa2a1aad00ce661f0657beeae715de239bdf77cd2c6f92de52b10f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L12",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L12"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U01:L13",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:01:13",
+      "UnitNumber": 1,
+      "UnitTitle": "Apply Addition and Subtraction Concepts",
+      "LessonNumber": 13,
+      "Title": "Two-Step Word Problems with One-Digit Numbers",
+      "SortOrder": 13,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "efaf304e765893127fec6091125225322464ea3337e4d85d36f95881e55b2424",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L13",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U01:L13"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U02:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:02:01:EQUAL-GROUPS",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:02:01",
       "UnitNumber": 2,
-      "UnitTitle": "Multiplication and Division",
+      "UnitTitle": "Number Patterns",
       "LessonNumber": 1,
-      "Title": "Equal groups",
-      "SortOrder": 8,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "57c1aad0cf47bcfc83f3cf75fee9a988a46a2f54b6ac3f317aee1ab9ddec719c",
+      "Title": "Skip Count by 2s, 5s, and 10s on a Hundred Chart",
+      "SortOrder": 14,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "d3911f74c7f484ec97e1c17716c2a8bc368a52b84dadd565e58f027080559ea6",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:02:01",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U02:L01",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -301,22 +521,22 @@
         "UAE-G2-COMMON-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:02:01"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U02:L01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U02:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:02:02:ARRAYS-AND-MULTIPLICATION",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:02:02",
       "UnitNumber": 2,
-      "UnitTitle": "Multiplication and Division",
+      "UnitTitle": "Number Patterns",
       "LessonNumber": 2,
-      "Title": "Arrays and multiplication",
-      "SortOrder": 9,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "5471257af54d4d20e9f390b83737e1b03b83f287e531d95a4fba03e0b6ad0053",
+      "Title": "Skip Count by 2s, 5s, and 10s Using Equal Groups",
+      "SortOrder": 15,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "191024c92f48f9e282578182004059e6e5fff01159ce01ab1eca8decd2e70f26",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:02:02",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U02:L02",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -328,22 +548,76 @@
         "UAE-G2-COMMON-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:02:02"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U02:L02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U02:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:02:03",
+      "UnitNumber": 2,
+      "UnitTitle": "Number Patterns",
+      "LessonNumber": 3,
+      "Title": "Problem Solving: Find a Pattern",
+      "SortOrder": 16,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "a6974726dba40c896f009bb1729023ebf92858a3cf8601c61b1aa5f186150122",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U02:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U02:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U02:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:02:04",
+      "UnitNumber": 2,
+      "UnitTitle": "Number Patterns",
+      "LessonNumber": 4,
+      "Title": "Repeated Addition with Equal Groups",
+      "SortOrder": 17,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "337cec6437a554265c1f4d32a1cd404261bc2a3fbaae542c7f76e8ced33ff993",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U02:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U02:L04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U02:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:02:05:TWOS-FIVES-AND-TENS-FACTS",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:02:05",
       "UnitNumber": 2,
-      "UnitTitle": "Multiplication and Division",
+      "UnitTitle": "Number Patterns",
       "LessonNumber": 5,
-      "Title": "Twos, fives and tens facts",
-      "SortOrder": 10,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "e55d408b09aaa736a717be2d6d3fa1f61b414729d0ab99a945ee155065757ce4",
+      "Title": "Repeated Addition with Arrays",
+      "SortOrder": 18,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "4a2288f0bb73ad24cbd6d62b5b7bb5ea78cb1263d74a154d09f58f9c026da53c",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:02:05",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U02:L05",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -355,22 +629,76 @@
         "UAE-G2-COMMON-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:02:05"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U02:L05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U02:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:02:06",
+      "UnitNumber": 2,
+      "UnitTitle": "Number Patterns",
+      "LessonNumber": 6,
+      "Title": "Even and Odd Numbers",
+      "SortOrder": 19,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "b913659396fc9e64f819946358b90997e7efca0476892a1e6f083d89ae225e04",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U02:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U02:L06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U02:L07",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:02:07",
+      "UnitNumber": 2,
+      "UnitTitle": "Number Patterns",
+      "LessonNumber": 7,
+      "Title": "Add Equal Addends",
+      "SortOrder": 20,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "f7577b2ed55cedae6dcbd26e9aa674278e26967af08431cbbfb91100a26d30c9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U02:L07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U02:L07"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U03:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:03:01:HALVES-THIRDS-AND-QUARTERS",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:03:01",
       "UnitNumber": 3,
-      "UnitTitle": "Fractions",
+      "UnitTitle": "Add Two-Digit Numbers",
       "LessonNumber": 1,
-      "Title": "Halves, thirds and quarters",
-      "SortOrder": 11,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "12188f4518fb04a23a59673ef39513bd300847f282bc0067b91cb14f45f7cf4a",
+      "Title": "Add by Decomposing Numbers",
+      "SortOrder": 21,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "1c4af08994a4d4ee8f9e4c4dc080883c20764700203e4925afeac0279200751d",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:03:01",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U03:L01",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -382,22 +710,238 @@
         "UAE-G2-COMMON-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:03:01"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U03:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U03:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:03:02",
+      "UnitNumber": 3,
+      "UnitTitle": "Add Two-Digit Numbers",
+      "LessonNumber": 2,
+      "Title": "Add by Regrouping Ones as Tens",
+      "SortOrder": 22,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "c64cab4b3320287763b59ed3871435eb32992911b6b3e1e66da7c26d9b73d312",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U03:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U03:L02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U03:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:03:03",
+      "UnitNumber": 3,
+      "UnitTitle": "Add Two-Digit Numbers",
+      "LessonNumber": 3,
+      "Title": "Add One-Digit and Two-Digit Numbers with Regrouping",
+      "SortOrder": 23,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "ccbc28b17c241b51501a021b0c801e5438199ba7664a827f63ba705b5837ad57",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U03:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U03:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U03:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:03:04",
+      "UnitNumber": 3,
+      "UnitTitle": "Add Two-Digit Numbers",
+      "LessonNumber": 4,
+      "Title": "Add Two-Digit Numbers",
+      "SortOrder": 24,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "943f6505f180b5682bdc19ee88615bf82c64ad840295df20593f6cff9a16dbca",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U03:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U03:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U03:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:03:05",
+      "UnitNumber": 3,
+      "UnitTitle": "Add Two-Digit Numbers",
+      "LessonNumber": 5,
+      "Title": "Vertical Addition of Two-Digit Numbers",
+      "SortOrder": 25,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "3f2a3c693f1d8d8e2a0a7b59dc4fdca35f5199a7693145b3515fc9589a59cc3c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U03:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U03:L05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U03:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:03:06",
+      "UnitNumber": 3,
+      "UnitTitle": "Add Two-Digit Numbers",
+      "LessonNumber": 6,
+      "Title": "Add Three and Four Two-Digit Numbers",
+      "SortOrder": 26,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "4dc466c7d07d9c2e43fb9e51b229a711dfcca49c0f9269639f87c500e485512f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U03:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U03:L06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U03:L07",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:03:07",
+      "UnitNumber": 3,
+      "UnitTitle": "Add Two-Digit Numbers",
+      "LessonNumber": 7,
+      "Title": "Problem Solving: Make a Model",
+      "SortOrder": 27,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "33faf5cb028fc674105d683138c920ce17b6042a2a107de3b3d6dcb325b0e08e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U03:L07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U03:L07"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U04:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:04:01",
+      "UnitNumber": 4,
+      "UnitTitle": "Subtract Two-Digit Numbers",
+      "LessonNumber": 1,
+      "Title": "Two-Digit Fact Relationships",
+      "SortOrder": 28,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "2e6a36880d8cf0bd721dd4c4c77c499b13594956feb739edd40fe5027cfcddc8",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U04:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U04:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U04:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:04:02",
+      "UnitNumber": 4,
+      "UnitTitle": "Subtract Two-Digit Numbers",
+      "LessonNumber": 2,
+      "Title": "Subtract by Decomposing Numbers",
+      "SortOrder": 29,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "c3f0d0ab23750d52201ada040a48a298bcbf10b270ad06b0dbf88775425dc563",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U04:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U04:L02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U04:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:04:03:TIME-INTERVALS",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:04:03",
       "UnitNumber": 4,
-      "UnitTitle": "Measurement",
+      "UnitTitle": "Subtract Two-Digit Numbers",
       "LessonNumber": 3,
-      "Title": "Time intervals",
-      "SortOrder": 12,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "0898b3ab9417d4e8e188c54b7780a8e82b7603713084d628c47219fb86bad7ee",
+      "Title": "Subtract by Regrouping Tens as Ones",
+      "SortOrder": 30,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "e0a008ac5599421dfa46b50c43ccbf049ca56514fbad889ff09962acbc57c16b",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:04:03",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U04:L03",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -409,22 +953,184 @@
         "UAE-G2-COMMON-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:04:03"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U04:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U04:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:04:04",
+      "UnitNumber": 4,
+      "UnitTitle": "Subtract Two-Digit Numbers",
+      "LessonNumber": 4,
+      "Title": "Subtract a One-Digit Number from a Two-Digit Number",
+      "SortOrder": 31,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "de9915ee8a2081455f94a80d81e275e6d028038afa8ca3b3b84f35e11c56c449",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U04:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U04:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U04:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:04:05",
+      "UnitNumber": 4,
+      "UnitTitle": "Subtract Two-Digit Numbers",
+      "LessonNumber": 5,
+      "Title": "Subtract Two-Digit Numbers",
+      "SortOrder": 32,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "c149dc26abda33f57e0e030b4ffadfea9d72e8d9c51fd4c5e2bfffa1117bcf37",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U04:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U04:L05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U04:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:04:06",
+      "UnitNumber": 4,
+      "UnitTitle": "Subtract Two-Digit Numbers",
+      "LessonNumber": 6,
+      "Title": "Vertical Subtraction of Two-Digit Numbers",
+      "SortOrder": 33,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "761c204c474055440e59aa74df4d01ec8f4e86ddfe52c24176b2c31d3e1a1906",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U04:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U04:L06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U04:L07",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:04:07",
+      "UnitNumber": 4,
+      "UnitTitle": "Subtract Two-Digit Numbers",
+      "LessonNumber": 7,
+      "Title": "Check Subtraction",
+      "SortOrder": 34,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "465eeef4741a2b98455e824bcbfe44bc23d8484b5579cdb4ae134f283b4a7b4e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U04:L07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U04:L07"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U04:L08",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:04:08",
+      "UnitNumber": 4,
+      "UnitTitle": "Subtract Two-Digit Numbers",
+      "LessonNumber": 8,
+      "Title": "Problem Solving: Write a Number Sentence",
+      "SortOrder": 35,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "44c6e466523f5c92f540a5dd8f49fd1de62ac35af8b0c882f8a4243ddfcef2d9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U04:L08",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U04:L08"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U04:L09",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:04:09",
+      "UnitNumber": 4,
+      "UnitTitle": "Subtract Two-Digit Numbers",
+      "LessonNumber": 9,
+      "Title": "Two-Step Word Problems",
+      "SortOrder": 36,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "e577ad32cb9cc2efd528e8c62560b31ae99629aecf66cfb31a1cb316a52769c2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U04:L09",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U04:L09"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U05:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:05:01:2D-AND-3D-SHAPE-PROPERTIES",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:05:01",
       "UnitNumber": 5,
-      "UnitTitle": "Geometry and Data",
+      "UnitTitle": "Place Value to 1,000",
       "LessonNumber": 1,
-      "Title": "2D and 3D shape properties",
-      "SortOrder": 13,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "d71be4a06d2a29ca2d86768bf0b49839b07fb0ba9160d763f02895424d51d2ba",
+      "Title": "Hundreds",
+      "SortOrder": 37,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "4d6e1a5a35d8206a81a456c4261fd55acc35e9694eca435aab309e55b73af833",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:05:01",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U05:L01",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -436,22 +1142,49 @@
         "UAE-G2-COMMON-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:05:01"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U05:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U05:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:05:02",
+      "UnitNumber": 5,
+      "UnitTitle": "Place Value to 1,000",
+      "LessonNumber": 2,
+      "Title": "Hundreds, Tens, and Ones",
+      "SortOrder": 38,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "d96807b7fef1e6fb58c2495f510b7e709b6f885e58ce129c41e55b6ec70c03b0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U05:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U05:L02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U05:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:05:03:TABLES-PICTOGRAMS-AND-BAR-CHARTS",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:05:03",
       "UnitNumber": 5,
-      "UnitTitle": "Geometry and Data",
+      "UnitTitle": "Place Value to 1,000",
       "LessonNumber": 3,
-      "Title": "Tables, pictograms and bar charts",
-      "SortOrder": 14,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "666125b7a67cbe841b3b73126c8e9178a7f73fb371f5beeccf866ea66d38c3dd",
+      "Title": "Place Value to 1,000",
+      "SortOrder": 39,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "8d12f7cd5f03254147df568fc1ce63ed54d2e63dfb3526cae20a2b9ed64e3336",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:05:03",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U05:L03",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -463,7 +1196,1627 @@
         "UAE-G2-COMMON-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:05:03"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U05:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U05:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:05:04",
+      "UnitNumber": 5,
+      "UnitTitle": "Place Value to 1,000",
+      "LessonNumber": 4,
+      "Title": "Problem Solving: Use Logical Reasoning",
+      "SortOrder": 40,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "7561e9aff368e0b033675624169bd3f347d55de45814ac8f8e6449a5db7ca629",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U05:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U05:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U05:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:05:05",
+      "UnitNumber": 5,
+      "UnitTitle": "Place Value to 1,000",
+      "LessonNumber": 5,
+      "Title": "Read and Write Numbers to 1,000",
+      "SortOrder": 41,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "73ad7cdc8ccbfce5bc112c287b986d8d535f8682bee2152550a85d72bb8bd178",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U05:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U05:L05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U05:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:05:06",
+      "UnitNumber": 5,
+      "UnitTitle": "Place Value to 1,000",
+      "LessonNumber": 6,
+      "Title": "Count by 5s, 10s, and 100s",
+      "SortOrder": 42,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "b775610894a0a1942a10908216bcf73e8c98b65e44bcb9ffab08625344d78813",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U05:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U05:L06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U05:L07",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:05:07",
+      "UnitNumber": 5,
+      "UnitTitle": "Place Value to 1,000",
+      "LessonNumber": 7,
+      "Title": "Compare Numbers to 1,000",
+      "SortOrder": 43,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "839d5c592e75f9b1c075c0d129224c6d62795927476d43524504d7e268be701e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U05:L07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U05:L07"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U05:L08",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:05:08",
+      "UnitNumber": 5,
+      "UnitTitle": "Place Value to 1,000",
+      "LessonNumber": 8,
+      "Title": "Ordinal Numbers",
+      "SortOrder": 44,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "ad5919fa0688f2dba08742f241303060ac547a7115f5324e9200703073739176",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U05:L08",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U05:L08"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U06:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:06:01",
+      "UnitNumber": 6,
+      "UnitTitle": "Add Three-Digit Numbers",
+      "LessonNumber": 1,
+      "Title": "Make a Hundred to Add",
+      "SortOrder": 45,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "e06fc39acaf248a65cc714bc5faaf36e2885d8decb22d2e1b44fc6976e4956e8",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U06:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U06:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U06:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:06:02",
+      "UnitNumber": 6,
+      "UnitTitle": "Add Three-Digit Numbers",
+      "LessonNumber": 2,
+      "Title": "Add Hundreds",
+      "SortOrder": 46,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "2a96e038d3a5a206f7975402639416904994e2936745e53f30e3c907557afc2e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U06:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U06:L02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U06:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:06:03",
+      "UnitNumber": 6,
+      "UnitTitle": "Add Three-Digit Numbers",
+      "LessonNumber": 3,
+      "Title": "Mentally Add 10 or 100",
+      "SortOrder": 47,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "0145df220347c88588cb189f3346f8e97ea9c209c0c7180c8a6cc6c5760375dd",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U06:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U06:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U06:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:06:04",
+      "UnitNumber": 6,
+      "UnitTitle": "Add Three-Digit Numbers",
+      "LessonNumber": 4,
+      "Title": "Regroup Ones to Add",
+      "SortOrder": 48,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "f42f3b05c2f6403db13587f393ea55d0748b723ebffc929bf6f068362c3583cb",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U06:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U06:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U06:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:06:05",
+      "UnitNumber": 6,
+      "UnitTitle": "Add Three-Digit Numbers",
+      "LessonNumber": 5,
+      "Title": "Regroup Tens to Add",
+      "SortOrder": 49,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "441e1c761d0cb2810bdc48e53721eb97289b7236039ea802490ee03a18c1b0d7",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U06:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U06:L05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U06:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:06:06",
+      "UnitNumber": 6,
+      "UnitTitle": "Add Three-Digit Numbers",
+      "LessonNumber": 6,
+      "Title": "Add Three-Digit Numbers",
+      "SortOrder": 50,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "c45ab01406af55887c971e9b3b7f42f5387213a673befcea131290a20aee7fd7",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U06:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U06:L06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U06:L07",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:06:07",
+      "UnitNumber": 6,
+      "UnitTitle": "Add Three-Digit Numbers",
+      "LessonNumber": 7,
+      "Title": "Rewrite a Three-Digit Addition Problem",
+      "SortOrder": 51,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "cd80d8ab835ddfca831062d02c725e311157797370ae4be83593827dfcae03e4",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U06:L07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U06:L07"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U06:L08",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:06:08",
+      "UnitNumber": 6,
+      "UnitTitle": "Add Three-Digit Numbers",
+      "LessonNumber": 8,
+      "Title": "Problem Solving: Guess, Check, and Revise",
+      "SortOrder": 52,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "5574315d3348581765c42769afa215da03e57a4413317a305e1c44ab6974691c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U06:L08",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U06:L08"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U07:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:07:01",
+      "UnitNumber": 7,
+      "UnitTitle": "Subtract Three-Digit Numbers",
+      "LessonNumber": 1,
+      "Title": "Decompose Hundreds to Subtract",
+      "SortOrder": 53,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "ce6eb9003615a38bce4c4888aec2eb56f15e96170c80ee5ba66b2f6c44840e37",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U07:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U07:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U07:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:07:02",
+      "UnitNumber": 7,
+      "UnitTitle": "Subtract Three-Digit Numbers",
+      "LessonNumber": 2,
+      "Title": "Subtract Hundreds",
+      "SortOrder": 54,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "b472d841c3c0c9f379348910cfc6831f08306e3b32186f1d82f4bbc985c6fdfe",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U07:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U07:L02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U07:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:07:03",
+      "UnitNumber": 7,
+      "UnitTitle": "Subtract Three-Digit Numbers",
+      "LessonNumber": 3,
+      "Title": "Mentally Subtract 10 or 100",
+      "SortOrder": 55,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "e68a37e585bc5bbebd8a746c9dc14504e765f640d05b4b9d8d49f7e5c296f68c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U07:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U07:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U07:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:07:04",
+      "UnitNumber": 7,
+      "UnitTitle": "Subtract Three-Digit Numbers",
+      "LessonNumber": 4,
+      "Title": "Regroup Tens",
+      "SortOrder": 56,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "7d4e160c109a66ad46d13d08ad19e3adf4281f0439153ed95f2a9fc93f2cc01b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U07:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U07:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U07:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:07:05",
+      "UnitNumber": 7,
+      "UnitTitle": "Subtract Three-Digit Numbers",
+      "LessonNumber": 5,
+      "Title": "Regroup Hundreds",
+      "SortOrder": 57,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "c47c817f295e7932d52d515a264160514eb7b3aa887b83483354ada2e2f3a855",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U07:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U07:L05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U07:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:07:06",
+      "UnitNumber": 7,
+      "UnitTitle": "Subtract Three-Digit Numbers",
+      "LessonNumber": 6,
+      "Title": "Subtract Three-Digit Numbers",
+      "SortOrder": 58,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "051c30d322999e6d5f406167ca98ee765b4486ad0a5f6731491b917e701ede12",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U07:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U07:L06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U07:L07",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:07:07",
+      "UnitNumber": 7,
+      "UnitTitle": "Subtract Three-Digit Numbers",
+      "LessonNumber": 7,
+      "Title": "Rewrite Three-Digit Subtraction Problems",
+      "SortOrder": 59,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "91d50ca5225695c943e3fa3227b0d1a547ed962fb8d6eb32a5f4264231bd8d71",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U07:L07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U07:L07"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U07:L08",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:07:08",
+      "UnitNumber": 7,
+      "UnitTitle": "Subtract Three-Digit Numbers",
+      "LessonNumber": 8,
+      "Title": "Problem Solving: Write a Number Sentence",
+      "SortOrder": 60,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "48144c1a7a0d6d2829fab35a0584944d0d69daa4a206f2d3dec23beb574b38a1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U07:L08",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U07:L08"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U07:L09",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:07:09",
+      "UnitNumber": 7,
+      "UnitTitle": "Subtract Three-Digit Numbers",
+      "LessonNumber": 9,
+      "Title": "Subtract Across Zeros",
+      "SortOrder": 61,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "99961a6c64b0ac2c3ad56f967f83971ad8fd8726f030d07a5ab6e1f2ed3451dd",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U07:L09",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U07:L09"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U08:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:08:01",
+      "UnitNumber": 8,
+      "UnitTitle": "Analyze Data",
+      "LessonNumber": 1,
+      "Title": "Conduct a Survey",
+      "SortOrder": 62,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "c9046cb35de5e04bafb3fb2d8f365dab1f6cd697f6bd7dfd88b3f0d133636ef9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U08:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U08:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U08:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:08:02",
+      "UnitNumber": 8,
+      "UnitTitle": "Analyze Data",
+      "LessonNumber": 2,
+      "Title": "Make Picture Graphs",
+      "SortOrder": 63,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "df13cda6be81b4b27cc40ad6358352249ca523922b22faa9b1e6ae025c486f12",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U08:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U08:L02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U08:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:08:03",
+      "UnitNumber": 8,
+      "UnitTitle": "Analyze Data",
+      "LessonNumber": 3,
+      "Title": "Analyze Picture Graphs",
+      "SortOrder": 64,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "14b2c6b1efd33afcc7f1c88ceafb8857440c0110049de4ae1c20eeca372fe8af",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U08:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U08:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U08:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:08:04",
+      "UnitNumber": 8,
+      "UnitTitle": "Analyze Data",
+      "LessonNumber": 4,
+      "Title": "Make Bar Graphs",
+      "SortOrder": 65,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "bb287f03137e5920764edd66d874ae816f1a40dbce9c4f2550a2a35b90dbf2df",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U08:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U08:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U08:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:08:05",
+      "UnitNumber": 8,
+      "UnitTitle": "Analyze Data",
+      "LessonNumber": 5,
+      "Title": "Analyze Bar Graphs",
+      "SortOrder": 66,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "310199f0a5e3714aa7d77aa0013d9399751350f5a2ff701080d49bbe54898aaf",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U08:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U08:L05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U08:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:08:06",
+      "UnitNumber": 8,
+      "UnitTitle": "Analyze Data",
+      "LessonNumber": 6,
+      "Title": "Problem Solving: Make a Table",
+      "SortOrder": 67,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "1cd1699aa70cf2de464d06b1a57711ab8f3000446f84f36f20dcb64d9dfde7e5",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U08:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U08:L06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U08:L07",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:08:07",
+      "UnitNumber": 8,
+      "UnitTitle": "Analyze Data",
+      "LessonNumber": 7,
+      "Title": "Make Line Plots",
+      "SortOrder": 68,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "04b25164b4c41b1f8d4782dced907ff20bcc906a480f6992940938e3f031ada8",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U08:L07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U08:L07"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U08:L08",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:08:08",
+      "UnitNumber": 8,
+      "UnitTitle": "Analyze Data",
+      "LessonNumber": 8,
+      "Title": "Analyze Line Plots",
+      "SortOrder": 69,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "baa774c6850e96fb890af17f10bd4bcb8bd3a0bc8f1eaf620117a48fc19d21e4",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U08:L08",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U08:L08"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U09:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:09:01",
+      "UnitNumber": 9,
+      "UnitTitle": "Time",
+      "LessonNumber": 1,
+      "Title": "Time to the Hour",
+      "SortOrder": 70,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "100e0c1c7edd8b9c5897a6e035f094544e970cd63123dcceeebf38fa657b639e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U09:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U09:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U09:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:09:02",
+      "UnitNumber": 9,
+      "UnitTitle": "Time",
+      "LessonNumber": 2,
+      "Title": "Time to the Half Hour",
+      "SortOrder": 71,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "cfe4b3e4d8cca8b28facea3bf250104197ac6f44be51dbec49e9c11baa8548ba",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U09:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U09:L02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U09:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:09:03",
+      "UnitNumber": 9,
+      "UnitTitle": "Time",
+      "LessonNumber": 3,
+      "Title": "Problem Solving: Find a Pattern",
+      "SortOrder": 72,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "bdf3d3d70c2e5d1cbf44f5c5a2aebe7303f3f41ee695023aded01e2b2e9fb9c5",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U09:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U09:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U09:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:09:04",
+      "UnitNumber": 9,
+      "UnitTitle": "Time",
+      "LessonNumber": 4,
+      "Title": "Time to the Quarter Hour",
+      "SortOrder": 73,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "11f61a5e3ad1c1c2331f3837dba938a01c53ca54594bbb01706cfa154b15cb8b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U09:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U09:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U09:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:09:05",
+      "UnitNumber": 9,
+      "UnitTitle": "Time",
+      "LessonNumber": 5,
+      "Title": "Time in Five-Minute Intervals",
+      "SortOrder": 74,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "bb19b1a1d72f5eeb6ea7e31c47c1019a628ccfe0667cc1480922a51d1efc80f0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U09:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U09:L05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U09:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:09:06",
+      "UnitNumber": 9,
+      "UnitTitle": "Time",
+      "LessonNumber": 6,
+      "Title": "A.M. and P.M.",
+      "SortOrder": 75,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "68b31229cbb6bcec34170386b499b46d6a724bf68c6f89d35cfeebfd6c87cdf9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U09:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U09:L06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U09:L07",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:09:07",
+      "UnitNumber": 9,
+      "UnitTitle": "Time",
+      "LessonNumber": 7,
+      "Title": "Time Relationships",
+      "SortOrder": 76,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "ef9a4eb71acc0e2a186e5583429120e38492a432f40d7db342f40bb92a866036",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U09:L07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U09:L07"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U09:L08",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:09:08",
+      "UnitNumber": 9,
+      "UnitTitle": "Time",
+      "LessonNumber": 8,
+      "Title": "Use a Calendar",
+      "SortOrder": 77,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "eb953d724479555d5c99e80f54b37f4aa41d18d28a99315fff5a16737256160d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U09:L08",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U09:L08"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U09:L09",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:09:09",
+      "UnitNumber": 9,
+      "UnitTitle": "Time",
+      "LessonNumber": 9,
+      "Title": "Units of Time",
+      "SortOrder": 78,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "331b4709d2aeebeac822b9a8074b228baf2a56cd4c29c5b62ca05e0747f078a4",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U09:L09",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U09:L09"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U10:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:10:01",
+      "UnitNumber": 10,
+      "UnitTitle": "Geometric Shapes and Equal Shares",
+      "LessonNumber": 1,
+      "Title": "Two-Dimensional Shapes",
+      "SortOrder": 79,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "283960507c9d221ec33eab0bd503d4fdca6dbe16681d8efab2d051883738f47c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U10:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U10:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U10:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:10:02",
+      "UnitNumber": 10,
+      "UnitTitle": "Geometric Shapes and Equal Shares",
+      "LessonNumber": 2,
+      "Title": "Sides and Angles",
+      "SortOrder": 80,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "f19064dd854e43449a6b0ae94c705970af22ca6a3d4cae93f2a13690b1f9de0c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U10:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U10:L02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U10:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:10:03",
+      "UnitNumber": 10,
+      "UnitTitle": "Geometric Shapes and Equal Shares",
+      "LessonNumber": 3,
+      "Title": "Problem Solving: Draw a Diagram",
+      "SortOrder": 81,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "f892f92d7e8896136e3e0483a10c70b557a3bb70afa55f703be442f9074935b9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U10:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U10:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U10:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:10:04",
+      "UnitNumber": 10,
+      "UnitTitle": "Geometric Shapes and Equal Shares",
+      "LessonNumber": 4,
+      "Title": "Three-Dimensional Shapes",
+      "SortOrder": 82,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "c6532fb74284c29b3bcefed6485cbad4812d78c5341c3e7f90737ebe8cbfe071",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U10:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U10:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U10:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:10:05",
+      "UnitNumber": 10,
+      "UnitTitle": "Geometric Shapes and Equal Shares",
+      "LessonNumber": 5,
+      "Title": "Faces, Edges, and Vertices",
+      "SortOrder": 83,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "d2635d5b108e26b75d794105590a4b4c3377e7a87c53578baddd96153ca812d2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U10:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U10:L05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U10:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:10:06",
+      "UnitNumber": 10,
+      "UnitTitle": "Geometric Shapes and Equal Shares",
+      "LessonNumber": 6,
+      "Title": "Relate Two- and Three-Dimensional Shapes",
+      "SortOrder": 84,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "00cb084f40076a5dc4f6789f96b47d8a48215b29f5c06f54b182711fec857d7f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U10:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U10:L06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U10:L07",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:10:07",
+      "UnitNumber": 10,
+      "UnitTitle": "Geometric Shapes and Equal Shares",
+      "LessonNumber": 7,
+      "Title": "Halves, Thirds, and Fourths",
+      "SortOrder": 85,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "a00fecc2eb410f098219596607a7d02ccbe9332a332bae2e1216e177d08d4bf7",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U10:L07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U10:L07"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U10:L08",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:10:08",
+      "UnitNumber": 10,
+      "UnitTitle": "Geometric Shapes and Equal Shares",
+      "LessonNumber": 8,
+      "Title": "Area",
+      "SortOrder": 86,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "0a10fc4928290776ef900c89d96a9a95279b6021cc8209bab24b85e9eea8d90f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U10:L08",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U10:L08"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U11:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:11:01",
+      "UnitNumber": 11,
+      "UnitTitle": "Metric Lengths and Volumes",
+      "LessonNumber": 1,
+      "Title": "Centimeters and Meters",
+      "SortOrder": 87,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "712dca4f58c446845b8f2a15139b9b1db4e7cf811c3b0ed7a38adc1299f5846b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U11:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U11:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U11:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:11:02",
+      "UnitNumber": 11,
+      "UnitTitle": "Metric Lengths and Volumes",
+      "LessonNumber": 2,
+      "Title": "Choose and Use Metric Tools",
+      "SortOrder": 88,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "07c1eafc83a0a2d0b8d0240bf02e898cd5d575f1d56810c32b5388d4be81b9c5",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U11:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U11:L02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U11:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:11:03",
+      "UnitNumber": 11,
+      "UnitTitle": "Metric Lengths and Volumes",
+      "LessonNumber": 3,
+      "Title": "Compare Metric Lengths",
+      "SortOrder": 89,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "16524c80f1113f4ce151192277e2fb91d61601c213ce3b311dbd39e5edafc2c3",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U11:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U11:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U11:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:11:04",
+      "UnitNumber": 11,
+      "UnitTitle": "Metric Lengths and Volumes",
+      "LessonNumber": 4,
+      "Title": "Relate Centimeters and Meters",
+      "SortOrder": 90,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "0d8a37a3b92731d22fe71219c64bdf1e4ce26d41a6af33b368d6e80e42db3ae5",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U11:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U11:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U11:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:11:05",
+      "UnitNumber": 11,
+      "UnitTitle": "Metric Lengths and Volumes",
+      "LessonNumber": 5,
+      "Title": "Measure on a Number Line",
+      "SortOrder": 91,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "588e3c02085e90af73666e64198349e4e81685c0e877f51d351e11f9c7586af9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U11:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U11:L05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U11:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:11:06",
+      "UnitNumber": 11,
+      "UnitTitle": "Metric Lengths and Volumes",
+      "LessonNumber": 6,
+      "Title": "Measurement Data",
+      "SortOrder": 92,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "0d96234c5a545e5971a49c9ae0d3cd3ca7818482e4a5ceaa7990711414829795",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U11:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U11:L06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U11:L07",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:11:07",
+      "UnitNumber": 11,
+      "UnitTitle": "Metric Lengths and Volumes",
+      "LessonNumber": 7,
+      "Title": "Liquid Volume",
+      "SortOrder": 93,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "75d491b327b5aa9adc9c8cb4eaccc7db8126f7378ee0bd7b0d61d734e63aa903",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U11:L07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U11:L07"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U11:L08",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:11:08",
+      "UnitNumber": 11,
+      "UnitTitle": "Metric Lengths and Volumes",
+      "LessonNumber": 8,
+      "Title": "Metric Units of Liquid Volume",
+      "SortOrder": 94,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "de40bf86786b0ac7445b9ec3a5763e1cba4db1075669870d33ca17097cf9ed26",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U11:L08",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U11:L08"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U12:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:12:01",
+      "UnitNumber": 12,
+      "UnitTitle": "Money",
+      "LessonNumber": 1,
+      "Title": "1-, 5-, and 10-Fils Coins",
+      "SortOrder": 95,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "4f31c652efff1a1bcb016c69f99147549472be6a9d5b89c8428fee0f63f90754",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U12:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U12:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U12:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:12:02",
+      "UnitNumber": 12,
+      "UnitTitle": "Money",
+      "LessonNumber": 2,
+      "Title": "25-Fils Coin",
+      "SortOrder": 96,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "2d341c33453201c526ae351eb40d1914061948ced4d2f90584f69e40f6993edc",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U12:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U12:L02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U12:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:12:03",
+      "UnitNumber": 12,
+      "UnitTitle": "Money",
+      "LessonNumber": 3,
+      "Title": "Count Coins",
+      "SortOrder": 97,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "99e2975a50ef1caa40f1a8271744ccac27cab726eeb7009596cc562917cca15d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U12:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U12:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U12:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:12:04",
+      "UnitNumber": 12,
+      "UnitTitle": "Money",
+      "LessonNumber": 4,
+      "Title": "Problem Solving: Act It Out",
+      "SortOrder": 98,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "8c82a63cc2793f92524187b4a98fd8172f98345d099ed00a4c6b4ce6d1a60a7a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U12:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U12:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U12:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:12:05",
+      "UnitNumber": 12,
+      "UnitTitle": "Money",
+      "LessonNumber": 5,
+      "Title": "Dirhams",
+      "SortOrder": 99,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "ad2edca5fbcde82b7d98215d604070b2dfe3ecede578969dc5d7a3e9227d058c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U12:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G2-COMMON-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:ANNUAL:U12:L05"
     }
   ]
 }

@@ -56,7 +56,7 @@ public sealed class CanonicalLessonContentMaterializerTests
                 x => (x.Fingerprint, x.Version),
                 StringComparer.Ordinal);
 
-        Assert.Equal(4666, before.Count);
+        Assert.Equal(4839, before.Count);
         Assert.Equal(before, after);
     }
 

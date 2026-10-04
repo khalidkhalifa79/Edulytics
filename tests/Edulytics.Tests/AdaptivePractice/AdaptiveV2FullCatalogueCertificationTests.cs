@@ -8,7 +8,7 @@ namespace Edulytics.Tests.MathematicsIntelligence.AdaptivePractice;
 
 public sealed class AdaptiveV2FullCatalogueCertificationTests
 {
-    private const int ExpectedLessonCount = 4666;
+    private const int ExpectedLessonCount = 4839;
     private const string RunEnvironmentVariable =
         "EDULYTICS_RUN_FULL_ADAPTIVE_V2_CERTIFICATION";
 
