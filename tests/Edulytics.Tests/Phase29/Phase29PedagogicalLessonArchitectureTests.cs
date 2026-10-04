@@ -376,7 +376,7 @@ public sealed class Phase29PedagogicalLessonArchitectureTests
                                 node.NodeKind == "Lesson")));
 
         Assert.Equal(
-            265,
+            894,
             await db.CurriculumPedagogicalLessons
                 .CountAsync(
                     x =>
@@ -390,7 +390,7 @@ public sealed class Phase29PedagogicalLessonArchitectureTests
                                 node.NodeKind == "Reference")));
 
         Assert.Equal(
-            123,
+            83,
             await db.CurriculumPedagogicalLessonOutcomes
                 .CountAsync(
                     x =>

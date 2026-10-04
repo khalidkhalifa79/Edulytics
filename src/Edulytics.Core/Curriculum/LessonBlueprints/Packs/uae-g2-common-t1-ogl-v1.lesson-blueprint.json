@@ -30,7 +30,7 @@
   "SemanticGraphSha256": "d940ee8f037c7eece3da941ea0b31c523283cbe2df20b2a3be70b3ad1f771e30",
   "AcquisitionDiagnostics": {
     "UnitCount": 5,
-    "LessonCount": 22,
+    "LessonCount": 14,
     "OfficialStandardCount": 0,
     "AddressingCoverageCount": 0,
     "FormalMappingCount": 0,
@@ -54,7 +54,7 @@
       "UnitCode": "UAE-G2-COMMON-T1-OGL-V1:U02",
       "SortOrder": 2,
       "Title": "Multiplication and Division",
-      "LessonCount": 5,
+      "LessonCount": 3,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "cda3de5dacbad8fc8a77a3b5ea789598ca14baeab528c719edc694cef2177890"
     },
@@ -63,7 +63,7 @@
       "UnitCode": "UAE-G2-COMMON-T1-OGL-V1:U03",
       "SortOrder": 3,
       "Title": "Fractions",
-      "LessonCount": 3,
+      "LessonCount": 1,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "a075c4989484a3f3d7091508c5179add5d88483124f8c283c474dba5e24b22e5"
     },
@@ -72,7 +72,7 @@
       "UnitCode": "UAE-G2-COMMON-T1-OGL-V1:U04",
       "SortOrder": 4,
       "Title": "Measurement",
-      "LessonCount": 4,
+      "LessonCount": 1,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "2a79b71905b0e288b6c0b3fa325509b67896367905cbde52e149830be33e8a03"
     },
@@ -81,7 +81,7 @@
       "UnitCode": "UAE-G2-COMMON-T1-OGL-V1:U05",
       "SortOrder": 5,
       "Title": "Geometry and Data",
-      "LessonCount": 3,
+      "LessonCount": 2,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "4024c018b7a16f51d7be6f925c7f732269a0fb165af84f99f48a9fd8fbcfc68f"
     }
@@ -331,47 +331,13 @@
       "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:02:02"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U02:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:02:03:DIVISION-AS-SHARING",
-      "UnitNumber": 2,
-      "UnitTitle": "Multiplication and Division",
-      "LessonNumber": 3,
-      "Title": "Division as sharing",
-      "SortOrder": 10,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "47e8dac65ccb4cf9a583c27ef6e28d2c70ecd2c9977582940b9879279322cfa6",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G2-COMMON-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U02:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:02:04:DIVISION-AS-GROUPING",
-      "UnitNumber": 2,
-      "UnitTitle": "Multiplication and Division",
-      "LessonNumber": 4,
-      "Title": "Division as grouping",
-      "SortOrder": 11,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "cce8c309a4dac297ad9b6b2c8958c834f90c38ebe31028b44a96f3443cc70f2f",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G2-COMMON-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U02:L05",
       "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:02:05:TWOS-FIVES-AND-TENS-FACTS",
       "UnitNumber": 2,
       "UnitTitle": "Multiplication and Division",
       "LessonNumber": 5,
       "Title": "Twos, fives and tens facts",
-      "SortOrder": 12,
+      "SortOrder": 10,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "e55d408b09aaa736a717be2d6d3fa1f61b414729d0ab99a945ee155065757ce4",
       "Alignments": [
@@ -398,7 +364,7 @@
       "UnitTitle": "Fractions",
       "LessonNumber": 1,
       "Title": "Halves, thirds and quarters",
-      "SortOrder": 13,
+      "SortOrder": 11,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "12188f4518fb04a23a59673ef39513bd300847f282bc0067b91cb14f45f7cf4a",
       "Alignments": [
@@ -419,81 +385,13 @@
       "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:03:01"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U03:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:03:02:FRACTIONS-OF-QUANTITIES",
-      "UnitNumber": 3,
-      "UnitTitle": "Fractions",
-      "LessonNumber": 2,
-      "Title": "Fractions of quantities",
-      "SortOrder": 14,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "8afb24802359636114a63fc4f933de616ea96abbd53cd985f505967daec72826",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G2-COMMON-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U03:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:03:03:EQUIVALENT-SIMPLE-FRACTIONS",
-      "UnitNumber": 3,
-      "UnitTitle": "Fractions",
-      "LessonNumber": 3,
-      "Title": "Equivalent simple fractions",
-      "SortOrder": 15,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "6b5c04ec95ae3232d3f8cd4d1cf9b234a9bd29dee45c26c9b4c9d0dd9a34d8c1",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G2-COMMON-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U04:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:04:01:LENGTH-AND-PERIMETER",
-      "UnitNumber": 4,
-      "UnitTitle": "Measurement",
-      "LessonNumber": 1,
-      "Title": "Length and perimeter",
-      "SortOrder": 16,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "385b4ac27711af6a419171651936161b295350866a3404758fec20cbaab5c26f",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G2-COMMON-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U04:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:04:02:MASS-AND-CAPACITY",
-      "UnitNumber": 4,
-      "UnitTitle": "Measurement",
-      "LessonNumber": 2,
-      "Title": "Mass and capacity",
-      "SortOrder": 17,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "8d43cce43ea8ffaa3148a43f3f60b4e4a48f2a4039bf590fb328b08e7213ec1d",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G2-COMMON-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U04:L03",
       "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:04:03:TIME-INTERVALS",
       "UnitNumber": 4,
       "UnitTitle": "Measurement",
       "LessonNumber": 3,
       "Title": "Time intervals",
-      "SortOrder": 18,
+      "SortOrder": 12,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "0898b3ab9417d4e8e188c54b7780a8e82b7603713084d628c47219fb86bad7ee",
       "Alignments": [
@@ -514,30 +412,13 @@
       "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:04:03"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U04:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:04:04:MONEY-CALCULATIONS",
-      "UnitNumber": 4,
-      "UnitTitle": "Measurement",
-      "LessonNumber": 4,
-      "Title": "Money calculations",
-      "SortOrder": 19,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "fd6c4e1a78d7c1ac0092c9d52953219a95a0ef784b32f4653171c37d3d91d1e2",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G2-COMMON-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U05:L01",
       "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:05:01:2D-AND-3D-SHAPE-PROPERTIES",
       "UnitNumber": 5,
       "UnitTitle": "Geometry and Data",
       "LessonNumber": 1,
       "Title": "2D and 3D shape properties",
-      "SortOrder": 20,
+      "SortOrder": 13,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "d71be4a06d2a29ca2d86768bf0b49839b07fb0ba9160d763f02895424d51d2ba",
       "Alignments": [
@@ -558,30 +439,13 @@
       "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G2:COMMON:T1:EDU:05:01"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U05:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:05:02:TURNS-AND-DIRECTION",
-      "UnitNumber": 5,
-      "UnitTitle": "Geometry and Data",
-      "LessonNumber": 2,
-      "Title": "Turns and direction",
-      "SortOrder": 21,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "899715132517143eaa76a5728edf5aec299e5f0dfa160c7400d60fc79804dce0",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G2-COMMON-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L2:COMMON:U05:L03",
       "LessonCode": "PED:UAE-MOE-MATH:L2:COMMON:05:03:TABLES-PICTOGRAMS-AND-BAR-CHARTS",
       "UnitNumber": 5,
       "UnitTitle": "Geometry and Data",
       "LessonNumber": 3,
       "Title": "Tables, pictograms and bar charts",
-      "SortOrder": 22,
+      "SortOrder": 14,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "666125b7a67cbe841b3b73126c8e9178a7f73fb371f5beeccf866ea66d38c3dd",
       "Alignments": [

@@ -13,30 +13,28 @@
   "SourcePublisher": "UK Department for Education",
   "SourceEdition": "Primary Mathematics guidance / current GOV.UK publication",
   "SourceRootUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-  "SourceCheckedAtUtc": "2026-09-01T00:00:00Z",
+  "SourceCheckedAtUtc": "2026-10-04T00:00:00Z",
   "SourceLicense": "Open Government Licence v3.0",
   "RequiredDigitalAttribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
   "SourceSelectionReason": "The official curriculum source remains the academic authority. Edulytics uses open DfE Mathematics material only as lawful pedagogical scaffolding for independently authored lesson explanations where official copyrighted or source-linked prose is not reproduced.",
-  "SourceSelectionEvidence": "This scope contains 30 Edulytics-authored supporting lessons across 5 units. No formal outcome mapping is claimed without explicit source evidence; every formal OutcomeCodes collection is empty.",
+  "SourceSelectionEvidence": "UAE Grade 6 General rebuilt from the locally verified UAE Reveal Math Course 1 Student Edition used for the 2025-2026 curriculum; lesson sequence cross-checked against the publisher table of contents. Grade 6 Advanced is intentionally absent because the current UAE Grade 6 curriculum has no Advanced pathway.",
   "SourceEvidenceUrls": [
     "https://minhaji.moe.gov.ae/",
-    "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-    "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
-    "https://uae.afedne.com/ShojlDKwQXUm",
-    "https://uae.afedne.com/ShoGHwAO6Igq",
-    "https://uae.afedne.com/ShovTAA8ni1y"
+    "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+    "https://almanahj.com/ae/6math2",
+    "https://almanahj.com/ae/6math3"
   ],
-  "SourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. Official UAE Ministry of Education wording is not reproduced. Edulytics learner-facing bodies are independently authored.",
-  "SemanticGraphSha256": "bc068c85ef4f4a0b7b5566be9a2b32f600a06117e6e3d878788092206d5eb2bc",
+  "SourceRightsNote": "Official UAE textbook evidence is used only for lesson scope, ordering and reference provenance. Edulytics learner-facing explanations are independently authored and do not reproduce textbook prose.",
+  "SemanticGraphSha256": "51ba1ff442a5ac80080a03d4656b739912abafc6c2aecbbaf2eba4b41ed3fc3d",
   "AcquisitionDiagnostics": {
-    "UnitCount": 5,
-    "LessonCount": 30,
+    "UnitCount": 10,
+    "LessonCount": 59,
     "OfficialStandardCount": 0,
     "AddressingCoverageCount": 0,
     "FormalMappingCount": 0,
-    "LessonsWithoutNumberedGradeReferenceAnyRole": 30,
-    "LessonsWithoutNumberedAddressingStandard": 30,
-    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 30,
+    "LessonsWithoutNumberedGradeReferenceAnyRole": 0,
+    "LessonsWithoutNumberedAddressingStandard": 59,
+    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 59,
     "MultiStandardLessons": 0
   },
   "Units": [
@@ -44,63 +42,108 @@
       "Number": 1,
       "UnitCode": "UAE-G6-GENERAL-T1-OGL-V1:U01",
       "SortOrder": 1,
-      "Title": "Number",
-      "LessonCount": 7,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "0b9f4fa7a5543544dea729048664f375b2d65ff62ffad21e6fc3cac2a5549750"
+      "Title": "Ratios and Rates",
+      "LessonCount": 8,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "56d7a898ea67353f39fb4d5563001adaf5055094367ea1c53d7cbcb851086c5c"
     },
     {
       "Number": 2,
       "UnitCode": "UAE-G6-GENERAL-T1-OGL-V1:U02",
       "SortOrder": 2,
-      "Title": "Fractions, Decimals and Percentages",
-      "LessonCount": 7,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "1922eeb8be3a460475bcb3771bc450b3d59ed6ea9e2759ae27d959017578e803"
+      "Title": "Fractions, Decimals, and Percents",
+      "LessonCount": 6,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "4163c3c424e621291599a7b8fb3d9624b1806b38d045a6ee65a800e9f6833778"
     },
     {
       "Number": 3,
       "UnitCode": "UAE-G6-GENERAL-T1-OGL-V1:U03",
       "SortOrder": 3,
-      "Title": "Ratio and Algebra",
-      "LessonCount": 6,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "f81e370f6115af16acad3f1fed6127bd4cf7a51b4077fd30f21c6652dc1b53bb"
+      "Title": "Compute with Multi-Digit Numbers and Fractions",
+      "LessonCount": 5,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "41143ce7a3ad5791a7e7ed48c5dcd71d7df53db6bb9373707af38680ff92c64c"
     },
     {
       "Number": 4,
       "UnitCode": "UAE-G6-GENERAL-T1-OGL-V1:U04",
       "SortOrder": 4,
-      "Title": "Geometry and Measure",
-      "LessonCount": 6,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "a0cddfffa4ac9222d64dbf08bbda322e07a2dfde751349769d413c72a9dba89a"
+      "Title": "Integers, Rational Numbers, and the Coordinate Plane",
+      "LessonCount": 7,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "6f4fc7a2347b0dad1afec0fa17f471d7d636b7c2742508ae020ef06fb54b3bd6"
     },
     {
       "Number": 5,
       "UnitCode": "UAE-G6-GENERAL-T1-OGL-V1:U05",
       "SortOrder": 5,
-      "Title": "Statistics",
+      "Title": "Numerical and Algebraic Expressions",
+      "LessonCount": 7,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "e8e4577c1f5d7996d8ab504dadf01270f5f5bc1a0a7dc2be33022230c482d0e0"
+    },
+    {
+      "Number": 6,
+      "UnitCode": "UAE-G6-GENERAL-T1-OGL-V1:U06",
+      "SortOrder": 6,
+      "Title": "Equations and Inequalities",
+      "LessonCount": 6,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "b9a43869a9c39185f706704c108deb8342fac316e14416827e8910d28d716350"
+    },
+    {
+      "Number": 7,
+      "UnitCode": "UAE-G6-GENERAL-T1-OGL-V1:U07",
+      "SortOrder": 7,
+      "Title": "Relationships Between Two Variables",
       "LessonCount": 4,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "152d318317189b0cc898a3e687d4e5c39a963d424ad1dc935aea082079aec05e"
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "d99f447fbaec300ad135697686b497e3b2c0fd6eb3fa19623e3f2d1cf9ad8dc3"
+    },
+    {
+      "Number": 8,
+      "UnitCode": "UAE-G6-GENERAL-T1-OGL-V1:U08",
+      "SortOrder": 8,
+      "Title": "Area",
+      "LessonCount": 5,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "af94ea1e7295b79a5296ab15daf32f042cc4689d619a11b8a045866be033bb5d"
+    },
+    {
+      "Number": 9,
+      "UnitCode": "UAE-G6-GENERAL-T1-OGL-V1:U09",
+      "SortOrder": 9,
+      "Title": "Volume and Surface Area",
+      "LessonCount": 4,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "c1ce2986ff4560a0eb6fbf5343fb0be016fe8691ada61e702cbf3e3bfc5c87ea"
+    },
+    {
+      "Number": 10,
+      "UnitCode": "UAE-G6-GENERAL-T1-OGL-V1:U10",
+      "SortOrder": 10,
+      "Title": "Statistical Measures and Displays",
+      "LessonCount": 7,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "e2deb711feb4acc142a6c471f3868295d3f68c1ad770866e0390599f0d9cec11"
     }
   ],
   "Lessons": [
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U01:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:01:01:LARGE-INTEGERS-AND-DECIMALS",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:01:01:UNDERSTAND-RATIOS",
       "UnitNumber": 1,
-      "UnitTitle": "Number",
+      "UnitTitle": "Ratios and Rates",
       "LessonNumber": 1,
-      "Title": "Large integers and decimals",
+      "Title": "Understand Ratios",
       "SortOrder": 1,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "98f360291b2cebc8b6f20c473289e13971daac7c8ed05305fc6d589a5c063471",
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "199cb516afdae43b717be68ad5e4cf5e79e350efde602e1f27571fab52ab06f1",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:01:01",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:01:01",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -112,22 +155,22 @@
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:01:01"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:01:01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U01:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:01:02:NEGATIVE-NUMBERS",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:01:02:TABLES-OF-EQUIVALENT-RATIOS",
       "UnitNumber": 1,
-      "UnitTitle": "Number",
+      "UnitTitle": "Ratios and Rates",
       "LessonNumber": 2,
-      "Title": "Negative numbers",
+      "Title": "Tables of Equivalent Ratios",
       "SortOrder": 2,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "6c48f7de7c61fb512519c8e426d4db779a91bf952b76a34148f0d7701670b893",
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "344db969d185df2090c28ec47fe9943d4d4d6bf97fb524adbf542a852e7d3d0f",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:01:02",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:01:02",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -139,22 +182,22 @@
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:01:02"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:01:02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U01:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:01:03:FACTORS-MULTIPLES-AND-PRIMES",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:01:03:GRAPHS-OF-EQUIVALENT-RATIOS",
       "UnitNumber": 1,
-      "UnitTitle": "Number",
+      "UnitTitle": "Ratios and Rates",
       "LessonNumber": 3,
-      "Title": "Factors, multiples and primes",
+      "Title": "Graphs of Equivalent Ratios",
       "SortOrder": 3,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "7026649ae52a693aa76ee11d909eb55fe382ee183970af5305968c1b16eef410",
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "ee164440daa2348776e0253bb0f410585d34637e42dc1265255cbbc91de6de26",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:01:03",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:01:03",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -166,22 +209,22 @@
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:01:03"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:01:03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U01:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:01:04:COMMON-FACTORS-AND-COMMON-MULTIPLES",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:01:04:COMPARE-RATIO-RELATIONSHIPS",
       "UnitNumber": 1,
-      "UnitTitle": "Number",
+      "UnitTitle": "Ratios and Rates",
       "LessonNumber": 4,
-      "Title": "Common factors and common multiples",
+      "Title": "Compare Ratio Relationships",
       "SortOrder": 4,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "86996c5d075df3981d8ac8ec9483d4620601edf1fca4f116389ca703fbc7240f",
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "eed7d01f59b8ddbaf741a959bbb6436ef3ce016105b79097e7e86b38a57fd690",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:01:04",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:01:04",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -193,22 +236,22 @@
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:01:04"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:01:04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U01:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:01:05:ORDER-OF-OPERATIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:01:05:SOLVE-RATIO-PROBLEMS",
       "UnitNumber": 1,
-      "UnitTitle": "Number",
+      "UnitTitle": "Ratios and Rates",
       "LessonNumber": 5,
-      "Title": "Order of operations",
+      "Title": "Solve Ratio Problems",
       "SortOrder": 5,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "a79ff1e153deb2e7aa44a8faca04ea770139eb292529de2f07c01d69b97d923d",
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "8ceab07b12418cc551332081b209711df7e3393811af539e90f9e8aba5ec2540",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:01:05",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:01:05",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -220,39 +263,49 @@
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:01:05"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:01:05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U01:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:01:06:LONG-MULTIPLICATION",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:01:06:CONVERT-CUSTOMARY-MEASUREMENT-UNITS",
       "UnitNumber": 1,
-      "UnitTitle": "Number",
+      "UnitTitle": "Ratios and Rates",
       "LessonNumber": 6,
-      "Title": "Long multiplication",
+      "Title": "Convert Customary Measurement Units",
       "SortOrder": 6,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "f5b116bfcaf2db43a49b9bbdd6a7cebd2601616c7451815f0e459f6f8cda8710",
-      "Alignments": [],
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "a6590e3dc4d169781b95aed4403208c01bc61abe24837bf04e589800936afb28",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:01:06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:01:06"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U01:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:01:07:LONG-DIVISION",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:01:07:UNDERSTAND-RATES-AND-UNIT-RATES",
       "UnitNumber": 1,
-      "UnitTitle": "Number",
+      "UnitTitle": "Ratios and Rates",
       "LessonNumber": 7,
-      "Title": "Long division",
+      "Title": "Understand Rates and Unit Rates",
       "SortOrder": 7,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "4f4c8f87a2ceb999475942f2c88cd29df127d9c54d971529eb769f8aa9174e0a",
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "d65ccf70cdd9be4c37083459dceb5dfb4606a2b1ca626336a9bc9db3914a8058",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:01:07",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:01:07",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -264,73 +317,130 @@
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:01:07"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:01:07"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U01:L08",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:01:08:SOLVE-RATE-PROBLEMS",
+      "UnitNumber": 1,
+      "UnitTitle": "Ratios and Rates",
+      "LessonNumber": 8,
+      "Title": "Solve Rate Problems",
+      "SortOrder": 8,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "8f13930927558faa5a456bffbb790cb1f6bfcea51049936d4a827389d13e2c79",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:01:08",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:01:08"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U02:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:02:01:SIMPLIFYING-FRACTIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:02:01:UNDERSTAND-PERCENTS",
       "UnitNumber": 2,
-      "UnitTitle": "Fractions, Decimals and Percentages",
+      "UnitTitle": "Fractions, Decimals, and Percents",
       "LessonNumber": 1,
-      "Title": "Simplifying fractions",
-      "SortOrder": 8,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "1741e8f93d831410af08d22d201f351d377a59cbf7fd2f9342e8665ff3f8690c",
-      "Alignments": [],
+      "Title": "Understand Percents",
+      "SortOrder": 9,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "5265ea91be9d08d20fe079ee8cb1d74b99d7ab28cf95aa2b36ddfed349e554b2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:02:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:02:01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U02:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:02:02:ADD-AND-SUBTRACT-UNLIKE-FRACTIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:02:02:PERCENTS-GREATER-THAN-100-AND-LESS-THAN-1",
       "UnitNumber": 2,
-      "UnitTitle": "Fractions, Decimals and Percentages",
+      "UnitTitle": "Fractions, Decimals, and Percents",
       "LessonNumber": 2,
-      "Title": "Add and subtract unlike fractions",
-      "SortOrder": 9,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "8e63a06a21173773e1639379058d221abe6372030119eb8545edbfa20e6d76d7",
-      "Alignments": [],
+      "Title": "Percents Greater Than 100% and Less Than 1%",
+      "SortOrder": 10,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "57ad2ded7db1b55e0af7514b0ae7c3fac6444f8e3941bb2700480158fa85e35e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:02:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:02:02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U02:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:02:03:MULTIPLY-FRACTIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:02:03:RELATE-FRACTIONS-DECIMALS-AND-PERCENTS",
       "UnitNumber": 2,
-      "UnitTitle": "Fractions, Decimals and Percentages",
+      "UnitTitle": "Fractions, Decimals, and Percents",
       "LessonNumber": 3,
-      "Title": "Multiply fractions",
-      "SortOrder": 10,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "ee08bf43abf2285659bf2aa785d8ce29207638abef1239b87052a03173c81be2",
-      "Alignments": [],
+      "Title": "Relate Fractions, Decimals, and Percents",
+      "SortOrder": 11,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "ae3871e8bf6936b5d0dd72784edf862b4d5d1639ae10de0a6afb1fe43b047ef2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:02:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:02:03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U02:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:02:04:DIVIDE-FRACTIONS-BY-WHOLE-NUMBERS",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:02:04:FIND-THE-PERCENT-OF-A-NUMBER",
       "UnitNumber": 2,
-      "UnitTitle": "Fractions, Decimals and Percentages",
+      "UnitTitle": "Fractions, Decimals, and Percents",
       "LessonNumber": 4,
-      "Title": "Divide fractions by whole numbers",
-      "SortOrder": 11,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "a28697cb07895d61dd8f3e03f8bcfa4e4a3e2e1f3f4eb8d50ab687817e5cb2f3",
+      "Title": "Find the Percent of a Number",
+      "SortOrder": 12,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "582d427aec2ad1d99b0591585b4956570836446f5a0b60951b3a3103e4c4c1ea",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:02:04",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:02:04",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -342,22 +452,22 @@
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:02:04"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:02:04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U02:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:02:05:DECIMAL-OPERATIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:02:05:ESTIMATE-THE-PERCENT-OF-A-NUMBER",
       "UnitNumber": 2,
-      "UnitTitle": "Fractions, Decimals and Percentages",
+      "UnitTitle": "Fractions, Decimals, and Percents",
       "LessonNumber": 5,
-      "Title": "Decimal operations",
-      "SortOrder": 12,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "7486f32dade09711efb10b129549cfba6d6a3005bc06c337f8bf317e7f14590a",
+      "Title": "Estimate the Percent of a Number",
+      "SortOrder": 13,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "d63c42cf6af6163a6e586e9254db035b381b3cfa4d4dde36173ef0bbd7732ab2",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:02:05",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:02:05",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -369,22 +479,22 @@
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:02:05"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:02:05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U02:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:02:06:PERCENTAGE-OF-AN-AMOUNT",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:02:06:FIND-THE-WHOLE",
       "UnitNumber": 2,
-      "UnitTitle": "Fractions, Decimals and Percentages",
+      "UnitTitle": "Fractions, Decimals, and Percents",
       "LessonNumber": 6,
-      "Title": "Percentage of an amount",
-      "SortOrder": 13,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "78fe598e5a0342dd7f0e767e3eb07a2506b0a99b54c66a203f39f603ca980f7c",
+      "Title": "Find the Whole",
+      "SortOrder": 14,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "d98c885548873ec310d91952602ce8f47baf84a1eabcf337c129a6a68e64a0d4",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:02:06",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:02:06",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -396,39 +506,22 @@
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:02:06"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U02:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:02:07:PERCENTAGE-CHANGE",
-      "UnitNumber": 2,
-      "UnitTitle": "Fractions, Decimals and Percentages",
-      "LessonNumber": 7,
-      "Title": "Percentage change",
-      "SortOrder": 14,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "24d631c982b624703fb72d4e47ac2bd0abff847d3ecd78bfac1a6bff11fd952d",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G6-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:02:06"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U03:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:03:01:RATIO-NOTATION",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:03:01:DIVIDE-MULTI-DIGIT-WHOLE-NUMBERS",
       "UnitNumber": 3,
-      "UnitTitle": "Ratio and Algebra",
+      "UnitTitle": "Compute with Multi-Digit Numbers and Fractions",
       "LessonNumber": 1,
-      "Title": "Ratio notation",
+      "Title": "Divide Multi-Digit Whole Numbers",
       "SortOrder": 15,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "0e4e903420d0b0a4ae7ed29aa129732afe24f6fa01adc94f2ce6cb5a61565f84",
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "0a28b26011b23006653378a2794a6b0d338fee8141fa05e08bedd109a1f0060a",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:03:01",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:03:01",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -440,22 +533,22 @@
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:03:01"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:03:01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U03:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:03:02:EQUIVALENT-RATIOS",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:03:02:COMPUTE-WITH-MULTI-DIGIT-DECIMALS",
       "UnitNumber": 3,
-      "UnitTitle": "Ratio and Algebra",
+      "UnitTitle": "Compute with Multi-Digit Numbers and Fractions",
       "LessonNumber": 2,
-      "Title": "Equivalent ratios",
+      "Title": "Compute with Multi-Digit Decimals",
       "SortOrder": 16,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "6d616cd5024b7881dce4d62021a63ba2f4ada277be6226a8ee7bd9d95b8eba4d",
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "0a6a13978ef3079801e05439cf243ece08740698b2b469f824cb501ac5c638f5",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:03:02",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:03:02",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -467,22 +560,22 @@
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:03:02"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:03:02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U03:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:03:03:UNITARY-METHOD",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:03:03:DIVIDE-WHOLE-NUMBERS-BY-FRACTIONS",
       "UnitNumber": 3,
-      "UnitTitle": "Ratio and Algebra",
+      "UnitTitle": "Compute with Multi-Digit Numbers and Fractions",
       "LessonNumber": 3,
-      "Title": "Unitary method",
+      "Title": "Divide Whole Numbers by Fractions",
       "SortOrder": 17,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "e1bfc3aed4cb7dd5dc639ae26fccdf97f0eb3f699f1961f5174d07940372ce67",
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "d3e24bae558f7a678c0187144e2ca6e5f8f63a2500e67109e34c64e94fb9a904",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:03:03",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:03:03",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -494,22 +587,22 @@
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:03:03"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:03:03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U03:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:03:04:FORMULAS",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:03:04:DIVIDE-FRACTIONS-BY-FRACTIONS",
       "UnitNumber": 3,
-      "UnitTitle": "Ratio and Algebra",
+      "UnitTitle": "Compute with Multi-Digit Numbers and Fractions",
       "LessonNumber": 4,
-      "Title": "Formulas",
+      "Title": "Divide Fractions by Fractions",
       "SortOrder": 18,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "6bdff4cbe8661929d44aedf0e5375a750794f67a89af4e321b03c6b84b49d3a9",
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "dac262e9e20ffd6651b35622554df7ddbfe1fbce371ece530ddd20a05fb9deeb",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:03:04",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:03:04",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -521,39 +614,22 @@
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:03:04"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:03:04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U03:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:03:05:SEQUENCES",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:03:05:DIVIDE-WITH-WHOLE-AND-MIXED-NUMBERS",
       "UnitNumber": 3,
-      "UnitTitle": "Ratio and Algebra",
+      "UnitTitle": "Compute with Multi-Digit Numbers and Fractions",
       "LessonNumber": 5,
-      "Title": "Sequences",
+      "Title": "Divide with Whole and Mixed Numbers",
       "SortOrder": 19,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "5de9520f8c530fa99348312e062e93bbac349ad457f7d33241228192f4751746",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G6-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U03:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:03:06:ONE-STEP-EQUATIONS",
-      "UnitNumber": 3,
-      "UnitTitle": "Ratio and Algebra",
-      "LessonNumber": 6,
-      "Title": "One-step equations",
-      "SortOrder": 20,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "5271a9caf4603709fb427a309dd1efe811f22640b9f2d94b374fa32afc196002",
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "2ede9c4e0d07c0a40ac283fabe573995e19f94e828dcf544730c7ec082efe40e",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:03:06",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:03:05",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -565,39 +641,49 @@
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:03:06"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:REVEAL:03:05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U04:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:04:01:ANGLES-IN-POLYGONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:04:01:REPRESENT-INTEGERS",
       "UnitNumber": 4,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Integers, Rational Numbers, and the Coordinate Plane",
       "LessonNumber": 1,
-      "Title": "Angles in polygons",
-      "SortOrder": 21,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "6af3e1d57b728d129ac0dc4b8195194d8cf14d8dc1861ba0ed7f58dde9703b07",
-      "Alignments": [],
+      "Title": "Represent Integers",
+      "SortOrder": 20,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "50592ae405569a89edf99f906f76384812c332333f3f528f767bf908dfb43d1b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:04:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:04:01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U04:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:04:02:AREA-OF-TRIANGLES-AND-PARALLELOGRAMS",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:04:02:OPPOSITES-AND-ABSOLUTE-VALUE",
       "UnitNumber": 4,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Integers, Rational Numbers, and the Coordinate Plane",
       "LessonNumber": 2,
-      "Title": "Area of triangles and parallelograms",
-      "SortOrder": 22,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "30cabefb509c0f368b2f2cfc4d870e72a1c56422f4bda096e884d0900048e272",
+      "Title": "Opposites and Absolute Value",
+      "SortOrder": 21,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "8086af2587b053d9311403cc32fb4685c134abfad83faca72ed2e211c5fde722",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:04:02",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:04:02",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -609,39 +695,49 @@
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:04:02"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:04:02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U04:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:04:03:AREA-OF-COMPOUND-SHAPES",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:04:03:COMPARE-AND-ORDER-INTEGERS",
       "UnitNumber": 4,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Integers, Rational Numbers, and the Coordinate Plane",
       "LessonNumber": 3,
-      "Title": "Area of compound shapes",
-      "SortOrder": 23,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "0961b33c8dbd6b644a37b88d9c9fb3e0a05f685997764aaba4da1d11ba207d59",
-      "Alignments": [],
+      "Title": "Compare and Order Integers",
+      "SortOrder": 22,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "83f2315bb3ad6864df71953ab52933ba4da8cdbe0043f9d6b8b39956934021f0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:04:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:04:03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U04:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:04:04:VOLUME-OF-CUBOIDS",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:04:04:RATIONAL-NUMBERS",
       "UnitNumber": 4,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Integers, Rational Numbers, and the Coordinate Plane",
       "LessonNumber": 4,
-      "Title": "Volume of cuboids",
-      "SortOrder": 24,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "b8efabadaa9bfca18315860cec2254fa5ad7e5256f300a920d64ee6bf9e34021",
+      "Title": "Rational Numbers",
+      "SortOrder": 23,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "78b8a4d5077b33c1ca822c36b969cdeb549f1a9d723b9f3e1252060e48ac5915",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:04:04",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:04:04",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -653,22 +749,22 @@
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:04:04"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:04:04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U04:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:04:05:COORDINATES-IN-FOUR-QUADRANTS",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:04:05:THE-COORDINATE-PLANE",
       "UnitNumber": 4,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Integers, Rational Numbers, and the Coordinate Plane",
       "LessonNumber": 5,
-      "Title": "Coordinates in four quadrants",
-      "SortOrder": 25,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "b2d26685ee4140d81aebad43650f542723cbc418eecffa79517d95e30ec7b127",
+      "Title": "The Coordinate Plane",
+      "SortOrder": 24,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "7b87f5f21d92dc4c289a80e651e26ccb2b6d68b2d061d2b19c449310b0311e33",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:04:05",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:04:05",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -680,22 +776,22 @@
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:04:05"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:04:05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U04:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:04:06:TRANSFORMATIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:04:06:GRAPH-REFLECTIONS-OF-POINTS",
       "UnitNumber": 4,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Integers, Rational Numbers, and the Coordinate Plane",
       "LessonNumber": 6,
-      "Title": "Transformations",
-      "SortOrder": 26,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "e4968a08c9e1637d212fe2b328d0de183a5c035003f45a88337dea5cc786fbc8",
+      "Title": "Graph Reflections of Points",
+      "SortOrder": 25,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "9f7f0988a8f659113e66d7e88221ba947a6ca82b51efa3bae3dc5ff23aed9f50",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:04:06",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:04:06",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -707,22 +803,49 @@
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:04:06"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:04:06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U04:L07",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:04:07:ABSOLUTE-VALUE-AND-DISTANCE",
+      "UnitNumber": 4,
+      "UnitTitle": "Integers, Rational Numbers, and the Coordinate Plane",
+      "LessonNumber": 7,
+      "Title": "Absolute Value and Distance",
+      "SortOrder": 26,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "7757d6de3c8550be8c9c2fe628e3d9573f55a2af2cee771a9efc3e3a7ead3062",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:04:07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:04:07"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U05:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:05:01:MEAN-MEDIAN-MODE-AND-RANGE",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:05:01:POWERS-AND-EXPONENTS",
       "UnitNumber": 5,
-      "UnitTitle": "Statistics",
+      "UnitTitle": "Numerical and Algebraic Expressions",
       "LessonNumber": 1,
-      "Title": "Mean, median, mode and range",
+      "Title": "Powers and Exponents",
       "SortOrder": 27,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "60b826e5d46ba440a566304a23a79856e950dec8e5b15ad03c6f18daf54f063d",
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "175d786dfc4ce44c069a2fb924010ba41596d2022912d2f8bf729a07bb490044",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:05:01",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:05:01",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -734,56 +857,22 @@
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:05:01"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:05:01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U05:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:05:02:PIE-CHARTS",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:05:02:NUMERICAL-EXPRESSIONS",
       "UnitNumber": 5,
-      "UnitTitle": "Statistics",
+      "UnitTitle": "Numerical and Algebraic Expressions",
       "LessonNumber": 2,
-      "Title": "Pie charts",
+      "Title": "Numerical Expressions",
       "SortOrder": 28,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "d9fca1d1b201f602b18bad7c25d40fca0bd66a109e1a1535a285296586eacb09",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G6-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U05:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:05:03:LINE-GRAPHS",
-      "UnitNumber": 5,
-      "UnitTitle": "Statistics",
-      "LessonNumber": 3,
-      "Title": "Line graphs",
-      "SortOrder": 29,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "0d698e6f56b8edb40fab52a26c061c10966512b703f69aa6925595ab129ab0d7",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G6-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U05:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:05:04:INTERPRETING-DATA",
-      "UnitNumber": 5,
-      "UnitTitle": "Statistics",
-      "LessonNumber": 4,
-      "Title": "Interpreting data",
-      "SortOrder": 30,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "4d26690b2afc5bcdc9ca140423ba426a522cdaa85a99282286075e1417c4f896",
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "e94459226016c9d19ba6c88648a0dc6f3259dc8ffe0cf98136632b482c3eae4c",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:05:04",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:05:02",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -795,7 +884,844 @@
         "UAE-G6-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T1:EDU:05:04"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:05:02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U05:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:05:03:WRITE-ALGEBRAIC-EXPRESSIONS",
+      "UnitNumber": 5,
+      "UnitTitle": "Numerical and Algebraic Expressions",
+      "LessonNumber": 3,
+      "Title": "Write Algebraic Expressions",
+      "SortOrder": 29,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "91e13e7f9fdd5632fdcd87255096f5528417098d40f68c09cfc2b5551ac60e83",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:05:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:05:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U05:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:05:04:EVALUATE-ALGEBRAIC-EXPRESSIONS",
+      "UnitNumber": 5,
+      "UnitTitle": "Numerical and Algebraic Expressions",
+      "LessonNumber": 4,
+      "Title": "Evaluate Algebraic Expressions",
+      "SortOrder": 30,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "d38ab4caa07fe9523dbd8f413b5b83d0ac54e2a5080f91ecabd64f565378f6d1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:05:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:05:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U05:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:05:05:FACTORS-AND-MULTIPLES",
+      "UnitNumber": 5,
+      "UnitTitle": "Numerical and Algebraic Expressions",
+      "LessonNumber": 5,
+      "Title": "Factors and Multiples",
+      "SortOrder": 31,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "10a75c8c8e6c76522c69f929392106941db7905952bcd6ceead5a6b2844f2b04",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:05:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:05:05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U05:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:05:06:USE-THE-DISTRIBUTIVE-PROPERTY",
+      "UnitNumber": 5,
+      "UnitTitle": "Numerical and Algebraic Expressions",
+      "LessonNumber": 6,
+      "Title": "Use the Distributive Property",
+      "SortOrder": 32,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "295064ab24df38c424ca908d41cc2e5ceb65ede1cc8bd8280804c477e10d4e6b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:05:06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:05:06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U05:L07",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:05:07:EQUIVALENT-ALGEBRAIC-EXPRESSIONS",
+      "UnitNumber": 5,
+      "UnitTitle": "Numerical and Algebraic Expressions",
+      "LessonNumber": 7,
+      "Title": "Equivalent Algebraic Expressions",
+      "SortOrder": 33,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "8b1cf75b590a2654a8801c4a602dcdb2a9f5c2b82b8ecd140f071bda90031b50",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:05:07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:05:07"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U06:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:06:01:USE-SUBSTITUTION-TO-SOLVE-ONE-STEP-EQUATIONS",
+      "UnitNumber": 6,
+      "UnitTitle": "Equations and Inequalities",
+      "LessonNumber": 1,
+      "Title": "Use Substitution to Solve One-Step Equations",
+      "SortOrder": 34,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "115b3e8860dea9969f73bb6fc8b666ca2b269cbc2ec1bb0353aa432fe4dd2ab4",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:06:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:06:01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U06:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:06:02:ONE-STEP-ADDITION-EQUATIONS",
+      "UnitNumber": 6,
+      "UnitTitle": "Equations and Inequalities",
+      "LessonNumber": 2,
+      "Title": "One-Step Addition Equations",
+      "SortOrder": 35,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "a1023277cd1bc1ffe79fac7a459e721207b85cb6e01349bd3a9439eace35c44f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:06:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:06:02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U06:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:06:03:ONE-STEP-SUBTRACTION-EQUATIONS",
+      "UnitNumber": 6,
+      "UnitTitle": "Equations and Inequalities",
+      "LessonNumber": 3,
+      "Title": "One-Step Subtraction Equations",
+      "SortOrder": 36,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "1a2ed253d0c437182ebb1184ea51347808d5b12fb83c8a5340dc0f306a8e3d09",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:06:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:06:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U06:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:06:04:ONE-STEP-MULTIPLICATION-EQUATIONS",
+      "UnitNumber": 6,
+      "UnitTitle": "Equations and Inequalities",
+      "LessonNumber": 4,
+      "Title": "One-Step Multiplication Equations",
+      "SortOrder": 37,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "a0fe160d9e8672c75a89e4f04df4447243a8db3bb7e2fe12877d999423010cf0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:06:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:06:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U06:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:06:05:ONE-STEP-DIVISION-EQUATIONS",
+      "UnitNumber": 6,
+      "UnitTitle": "Equations and Inequalities",
+      "LessonNumber": 5,
+      "Title": "One-Step Division Equations",
+      "SortOrder": 38,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "c3b5e856759f31a24a55c435b6971fe18c972b41495471520570893100c5c7c1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:06:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:06:05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U06:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:06:06:INEQUALITIES",
+      "UnitNumber": 6,
+      "UnitTitle": "Equations and Inequalities",
+      "LessonNumber": 6,
+      "Title": "Inequalities",
+      "SortOrder": 39,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "da6666b602202cc0cb2ba2af57da83020f1f5c1cb0cb3325401fdbb488957e8d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:06:06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:06:06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U07:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:07:01:RELATIONSHIPS-BETWEEN-TWO-VARIABLES",
+      "UnitNumber": 7,
+      "UnitTitle": "Relationships Between Two Variables",
+      "LessonNumber": 1,
+      "Title": "Relationships Between Two Variables",
+      "SortOrder": 40,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "1cac7a7fd5f4cadfa53b1cd34c5281664a766c93c774a46e3b46ab358e944818",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:07:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:07:01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U07:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:07:02:WRITE-EQUATIONS-TO-REPRESENT-RELATIONSHIPS-REPRESENTED-IN-TABLES",
+      "UnitNumber": 7,
+      "UnitTitle": "Relationships Between Two Variables",
+      "LessonNumber": 2,
+      "Title": "Write Equations to Represent Relationships Represented in Tables",
+      "SortOrder": 41,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "38dc54be832c18b503e7011436e9e1750ce12a377a53253fb7823264924e06df",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:07:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:07:02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U07:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:07:03:GRAPHS-OF-RELATIONSHIPS",
+      "UnitNumber": 7,
+      "UnitTitle": "Relationships Between Two Variables",
+      "LessonNumber": 3,
+      "Title": "Graphs of Relationships",
+      "SortOrder": 42,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "4e982f7089cb8298ec636f7128f1b9ccdfa2afbd2e796d9aa62d95eb5f9a42a9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:07:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:07:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U07:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:07:04:MULTIPLE-REPRESENTATIONS",
+      "UnitNumber": 7,
+      "UnitTitle": "Relationships Between Two Variables",
+      "LessonNumber": 4,
+      "Title": "Multiple Representations",
+      "SortOrder": 43,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "8050384b641be0e8b259c53529eed3ec46db5dc297128d64dda9a79ce592236f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:07:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T2:REVEAL:07:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U08:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:08:01:AREA-OF-PARALLELOGRAMS",
+      "UnitNumber": 8,
+      "UnitTitle": "Area",
+      "LessonNumber": 1,
+      "Title": "Area of Parallelograms",
+      "SortOrder": 44,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "ff3af15fffaddd9797fa7a54ee01fccc5eb2aa61bba38bb273a80a7682a7428c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:08:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:08:01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U08:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:08:02:AREA-OF-TRIANGLES",
+      "UnitNumber": 8,
+      "UnitTitle": "Area",
+      "LessonNumber": 2,
+      "Title": "Area of Triangles",
+      "SortOrder": 45,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "955c36efb53eb3914e552ee75d7bc242238d3b4e2b4976ec843ee0acf7231987",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:08:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:08:02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U08:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:08:03:AREA-OF-TRAPEZOIDS",
+      "UnitNumber": 8,
+      "UnitTitle": "Area",
+      "LessonNumber": 3,
+      "Title": "Area of Trapezoids",
+      "SortOrder": 46,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "1da96579e50153d3b5a6f35dbe0bca5911e98fd17eb32e03b82ecbaf28c74202",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:08:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:08:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U08:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:08:04:AREA-OF-REGULAR-POLYGONS",
+      "UnitNumber": 8,
+      "UnitTitle": "Area",
+      "LessonNumber": 4,
+      "Title": "Area of Regular Polygons",
+      "SortOrder": 47,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "64665d6b13e19c41c4d49fb73c913dbf2f70dc5184284246df3abd7eecb32ee1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:08:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:08:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U08:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:08:05:POLYGONS-ON-THE-COORDINATE-PLANE",
+      "UnitNumber": 8,
+      "UnitTitle": "Area",
+      "LessonNumber": 5,
+      "Title": "Polygons on the Coordinate Plane",
+      "SortOrder": 48,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "ba6447a522104e8f0f40489cc39673caedf508550f3175d6eac5019a5a797d22",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:08:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:08:05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U09:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:09:01:VOLUME-OF-RECTANGULAR-PRISMS",
+      "UnitNumber": 9,
+      "UnitTitle": "Volume and Surface Area",
+      "LessonNumber": 1,
+      "Title": "Volume of Rectangular Prisms",
+      "SortOrder": 49,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "d64d8e88a44cbb9b8362e985e68b76892ea0e95d2171043a32c2dd307e46f008",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:09:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:09:01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U09:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:09:02:SURFACE-AREA-OF-RECTANGULAR-PRISMS",
+      "UnitNumber": 9,
+      "UnitTitle": "Volume and Surface Area",
+      "LessonNumber": 2,
+      "Title": "Surface Area of Rectangular Prisms",
+      "SortOrder": 50,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "02b58ccca69bf94ad745b82b11b0f70e7d1196133c5b594c27a8deeb02d58d2e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:09:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:09:02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U09:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:09:03:SURFACE-AREA-OF-TRIANGULAR-PRISMS",
+      "UnitNumber": 9,
+      "UnitTitle": "Volume and Surface Area",
+      "LessonNumber": 3,
+      "Title": "Surface Area of Triangular Prisms",
+      "SortOrder": 51,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "73ac9541755e6d923f0dbeb62ee22a8d68500d86f33fc390f1a77b4daf1acb42",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:09:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:09:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U09:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:09:04:SURFACE-AREA-OF-PYRAMIDS",
+      "UnitNumber": 9,
+      "UnitTitle": "Volume and Surface Area",
+      "LessonNumber": 4,
+      "Title": "Surface Area of Pyramids",
+      "SortOrder": 52,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "8efbacbe2f2961b32b03babb1fb85e53e0d01a4d43edadaf958a4e968b233c7a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:09:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:09:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U10:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:10:01:STATISTICAL-QUESTIONS",
+      "UnitNumber": 10,
+      "UnitTitle": "Statistical Measures and Displays",
+      "LessonNumber": 1,
+      "Title": "Statistical Questions",
+      "SortOrder": 53,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "6bbd317536abed9ba4ab3be9f1c5d197b51649e6dc6dc96112c9862050810653",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:10:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:10:01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U10:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:10:02:DOT-PLOTS-AND-HISTOGRAMS",
+      "UnitNumber": 10,
+      "UnitTitle": "Statistical Measures and Displays",
+      "LessonNumber": 2,
+      "Title": "Dot Plots and Histograms",
+      "SortOrder": 54,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "a596c31f75d6b975c336245a83d90826b4fa6601d64212e46a3c8d712e920550",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:10:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:10:02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U10:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:10:03:MEASURES-OF-CENTER",
+      "UnitNumber": 10,
+      "UnitTitle": "Statistical Measures and Displays",
+      "LessonNumber": 3,
+      "Title": "Measures of Center",
+      "SortOrder": 55,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "1148e83c7fb112f0da0f9ae43f69820de61395562211695b5c9314da2ef8ba31",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:10:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:10:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U10:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:10:04:INTERQUARTILE-RANGE-AND-BOX-PLOTS",
+      "UnitNumber": 10,
+      "UnitTitle": "Statistical Measures and Displays",
+      "LessonNumber": 4,
+      "Title": "Interquartile Range and Box Plots",
+      "SortOrder": 56,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "dbf322382a921ef21e800880b576670aa48cf060caa85b92d785c66f3c13ac7c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:10:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:10:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U10:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:10:05:MEAN-ABSOLUTE-DEVIATION",
+      "UnitNumber": 10,
+      "UnitTitle": "Statistical Measures and Displays",
+      "LessonNumber": 5,
+      "Title": "Mean Absolute Deviation",
+      "SortOrder": 57,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "553d19e70f35eb92f9645f8bec49f5d69e267dbcd591c8872ff52540ca27bb6f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:10:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:10:05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U10:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:10:06:OUTLIERS",
+      "UnitNumber": 10,
+      "UnitTitle": "Statistical Measures and Displays",
+      "LessonNumber": 6,
+      "Title": "Outliers",
+      "SortOrder": 58,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "2b411d2a2ae0873f185f34806a0ef920638827ddd98207c96368f28815346f32",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:10:06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:10:06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L6:GENERAL:U10:L07",
+      "LessonCode": "PED:UAE-MOE-MATH:L6:GENERAL:10:07:INTERPRET-GRAPHICAL-DISPLAYS",
+      "UnitNumber": 10,
+      "UnitTitle": "Statistical Measures and Displays",
+      "LessonNumber": 7,
+      "Title": "Interpret Graphical Displays",
+      "SortOrder": 59,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "ae863be8a50f055b54f1c7f1babc7da5de00ddf613f8743eff635cbf55019bcf",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:10:07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G6-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G6:GENERAL:T3:REVEAL:10:07"
     }
   ]
 }

@@ -31,7 +31,7 @@
   "SemanticGraphSha256": "abea7f5d33d52cc2cb4c03abf0ef214dd4b90eddc489464673648fd31e992b01",
   "AcquisitionDiagnostics": {
     "UnitCount": 5,
-    "LessonCount": 23,
+    "LessonCount": 18,
     "OfficialStandardCount": 8,
     "AddressingCoverageCount": 8,
     "FormalMappingCount": 15,
@@ -46,7 +46,7 @@
       "UnitCode": "UAE-G3-COMMON-T1-OGL-V1:U01",
       "SortOrder": 1,
       "Title": "Number and Calculation",
-      "LessonCount": 8,
+      "LessonCount": 6,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "cee4a322e016a2b202391874cda874da79ff8fbc166ae1c9c117702df558cbb6"
     },
@@ -64,7 +64,7 @@
       "UnitCode": "UAE-G3-COMMON-T1-OGL-V1:U03",
       "SortOrder": 3,
       "Title": "Measurement",
-      "LessonCount": 4,
+      "LessonCount": 3,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "926db8730f4d571dbff28998d12780dced5e5c48888ac0be366ddf0c1bd46e53"
     },
@@ -73,7 +73,7 @@
       "UnitCode": "UAE-G3-COMMON-T1-OGL-V1:U04",
       "SortOrder": 4,
       "Title": "Geometry",
-      "LessonCount": 4,
+      "LessonCount": 2,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "140422de5b80620e2889226fb0776851718f90f9f34877d2e57754eaacd67a87"
     },
@@ -256,47 +256,13 @@
       "FormalTargets": []
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L3:COMMON:U01:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L3:COMMON:01:07:WRITTEN-MULTIPLICATION",
-      "UnitNumber": 1,
-      "UnitTitle": "Number and Calculation",
-      "LessonNumber": 7,
-      "Title": "Written multiplication",
-      "SortOrder": 7,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "311534b6f516f0dc67f0e02011489d1dee4225e63695988af87a150e2333b9a6",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G3-COMMON-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L3:COMMON:U01:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L3:COMMON:01:08:WRITTEN-DIVISION-FOUNDATIONS",
-      "UnitNumber": 1,
-      "UnitTitle": "Number and Calculation",
-      "LessonNumber": 8,
-      "Title": "Written division foundations",
-      "SortOrder": 8,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "7bdfcb5a8a47d6fd13ffced19289ccf66a9a31b69976831f196e8faa708d7e65",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G3-COMMON-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L3:COMMON:U02:L01",
       "LessonCode": "PED:UAE-MOE-MATH:L3:COMMON:02:01:FRACTIONS-ON-A-NUMBER-LINE",
       "UnitNumber": 2,
       "UnitTitle": "Fractions",
       "LessonNumber": 1,
       "Title": "Fractions on a number line",
-      "SortOrder": 9,
+      "SortOrder": 7,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "f10257eefcc51107cfea3fc79f5f963145487794ac01240d68839abccba7cda2",
       "Alignments": [
@@ -324,7 +290,7 @@
       "UnitTitle": "Fractions",
       "LessonNumber": 2,
       "Title": "Equivalent fractions",
-      "SortOrder": 10,
+      "SortOrder": 8,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "74501ba21b9816dad4a26035a38365d7679f6e152100a8df7515d43ff148e970",
       "Alignments": [
@@ -352,7 +318,7 @@
       "UnitTitle": "Fractions",
       "LessonNumber": 3,
       "Title": "Compare fractions",
-      "SortOrder": 11,
+      "SortOrder": 9,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "0bdbffef40731b03a03477b398b03f0ee19b2ade687b2433b2afed181b5440c2",
       "Alignments": [
@@ -380,7 +346,7 @@
       "UnitTitle": "Fractions",
       "LessonNumber": 4,
       "Title": "Add and subtract related fractions",
-      "SortOrder": 12,
+      "SortOrder": 10,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "a30d3d673ed0bd36ea701e84562184693dbdb983385dce1487d05ff58de5906a",
       "Alignments": [
@@ -408,7 +374,7 @@
       "UnitTitle": "Measurement",
       "LessonNumber": 1,
       "Title": "Perimeter",
-      "SortOrder": 13,
+      "SortOrder": 11,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "689329ae1dc473f50ffdb23307a65131089bcfe2e1a4f48a1a61c69d6ad0e082",
       "Alignments": [
@@ -436,7 +402,7 @@
       "UnitTitle": "Measurement",
       "LessonNumber": 2,
       "Title": "Area by counting squares",
-      "SortOrder": 14,
+      "SortOrder": 12,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "846f2c07c24c108c2733780bff1b0b63d0bdd41143e6abe784f6703a08aae599",
       "Alignments": [
@@ -464,7 +430,7 @@
       "UnitTitle": "Measurement",
       "LessonNumber": 3,
       "Title": "Time and timetables",
-      "SortOrder": 15,
+      "SortOrder": 13,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "5c561f2bad018d3083c15cc2ab9f7ca897e91a750345583f05fef07a8075517b",
       "Alignments": [
@@ -486,30 +452,13 @@
       "FormalTargets": []
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L3:COMMON:U03:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L3:COMMON:03:04:MONEY-AND-CHANGE",
-      "UnitNumber": 3,
-      "UnitTitle": "Measurement",
-      "LessonNumber": 4,
-      "Title": "Money and change",
-      "SortOrder": 16,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "ed7badc31d18e62efffa70a73ff2891e3c3f72d3b25fc2010296de5b729a23d8",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G3-COMMON-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L3:COMMON:U04:L01",
       "LessonCode": "PED:UAE-MOE-MATH:L3:COMMON:04:01:ANGLES-AS-TURNS",
       "UnitNumber": 4,
       "UnitTitle": "Geometry",
       "LessonNumber": 1,
       "Title": "Angles as turns",
-      "SortOrder": 17,
+      "SortOrder": 14,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "3610f0e37ceeaff1c2745216bd5246f687f63700fb732a862e5db4974d45ecce",
       "Alignments": [
@@ -530,30 +479,13 @@
       "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G3:COMMON:T1:EDU:04:01"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L3:COMMON:U04:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L3:COMMON:04:02:PARALLEL-AND-PERPENDICULAR-LINES",
-      "UnitNumber": 4,
-      "UnitTitle": "Geometry",
-      "LessonNumber": 2,
-      "Title": "Parallel and perpendicular lines",
-      "SortOrder": 18,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "ffe519afb80d8b9d25933a973b863de7fe72d2762f7e6c8c8498d30e0a41658e",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G3-COMMON-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L3:COMMON:U04:L03",
       "LessonCode": "PED:UAE-MOE-MATH:L3:COMMON:04:03:TRIANGLES-AND-QUADRILATERALS",
       "UnitNumber": 4,
       "UnitTitle": "Geometry",
       "LessonNumber": 3,
       "Title": "Triangles and quadrilaterals",
-      "SortOrder": 19,
+      "SortOrder": 15,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "eb4a46527e3582329f67dbab017ba95d50ab59e0691619baf53fa9d40f88cf46",
       "Alignments": [
@@ -574,30 +506,13 @@
       "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G3:COMMON:T1:EDU:04:03"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L3:COMMON:U04:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L3:COMMON:04:04:SYMMETRY",
-      "UnitNumber": 4,
-      "UnitTitle": "Geometry",
-      "LessonNumber": 4,
-      "Title": "Symmetry",
-      "SortOrder": 20,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "80778a00ce42e6c3539061d97023497773375933af4a2c2bd9d754797f26f253",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G3-COMMON-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L3:COMMON:U05:L01",
       "LessonCode": "PED:UAE-MOE-MATH:L3:COMMON:05:01:BAR-CHARTS",
       "UnitNumber": 5,
       "UnitTitle": "Data",
       "LessonNumber": 1,
       "Title": "Bar charts",
-      "SortOrder": 21,
+      "SortOrder": 16,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "afbde7c8111353bd0d9a51aa664ed538bcfb5411e74b5154c070f4ff6180cfa4",
       "Alignments": [
@@ -625,7 +540,7 @@
       "UnitTitle": "Data",
       "LessonNumber": 2,
       "Title": "Tables and scales",
-      "SortOrder": 22,
+      "SortOrder": 17,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "03139d25c427993d17b67576bd7d2945951f7ba13a9bdd08ab3b9b7a9efeb70c",
       "Alignments": [
@@ -653,7 +568,7 @@
       "UnitTitle": "Data",
       "LessonNumber": 3,
       "Title": "Interpreting data",
-      "SortOrder": 23,
+      "SortOrder": 18,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "6c9fcc86a99493f0a9a8733081c7e7bd15a679ad9da01a9723c7ee719edcee2a",
       "Alignments": [

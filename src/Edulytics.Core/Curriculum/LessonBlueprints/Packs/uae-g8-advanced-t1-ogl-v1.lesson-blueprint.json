@@ -13,30 +13,27 @@
   "SourcePublisher": "UK Department for Education",
   "SourceEdition": "Key Stage 3 Mathematics programme of study / current GOV.UK publication",
   "SourceRootUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-  "SourceCheckedAtUtc": "2026-09-01T00:00:00Z",
+  "SourceCheckedAtUtc": "2026-10-04T00:00:00Z",
   "SourceLicense": "Open Government Licence v3.0",
   "RequiredDigitalAttribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
   "SourceSelectionReason": "The official curriculum source remains the academic authority. Edulytics uses open DfE Mathematics material only as lawful pedagogical scaffolding for independently authored lesson explanations where official copyrighted or source-linked prose is not reproduced.",
-  "SourceSelectionEvidence": "Reviewed direct mappings to 15 existing accepted UAE MoE numbered standards cover 17 lessons. The remaining 22 lessons are Supporting. Official code identities and grade/pathway scopes are unchanged; standard meanings were checked against the MoE Strands and Standards Summary.",
+  "SourceSelectionEvidence": "UAE Grade 8 Advanced rebuilt from locally verified UAE Edition Student Books. The UAE annual contents establish Units 1-12; current local Term 2 evidence begins at Unit 5 and the UAE Edition Term 3 book explicitly identifies Units 9-12, fixing the term boundaries.",
   "SourceEvidenceUrls": [
     "https://minhaji.moe.gov.ae/",
-    "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-    "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
-    "https://uae.afedne.com/ShoGmdRiEYQC",
-    "https://uae.afedne.com/ShoYCsmqO1qo",
-    "https://www.scribd.com/document/826281797/Strands-and-Standards-Summary-MAT"
+    "https://almanahj.com/ae/8math2",
+    "https://almanahj.com/ae/8math3"
   ],
-  "SourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. Official UAE Ministry of Education wording is not reproduced. Edulytics learner-facing bodies are independently authored.",
-  "SemanticGraphSha256": "d5989fb7a599c76db178aba9eaf895feaebd4bc0926cd1315992da6bba470e8c",
+  "SourceRightsNote": "Official UAE textbook evidence is used only for scope, title, order and reference provenance. Learner-facing explanations are independently authored by Edulytics.",
+  "SemanticGraphSha256": "3f0d2acc3ce839cd3038e99de3be5cfa0d27330153b22d03b50de82e3d4930e1",
   "AcquisitionDiagnostics": {
-    "UnitCount": 5,
-    "LessonCount": 39,
-    "OfficialStandardCount": 15,
-    "AddressingCoverageCount": 15,
-    "FormalMappingCount": 17,
-    "LessonsWithoutNumberedGradeReferenceAnyRole": 22,
-    "LessonsWithoutNumberedAddressingStandard": 22,
-    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 22,
+    "UnitCount": 12,
+    "LessonCount": 77,
+    "OfficialStandardCount": 0,
+    "AddressingCoverageCount": 0,
+    "FormalMappingCount": 0,
+    "LessonsWithoutNumberedGradeReferenceAnyRole": 0,
+    "LessonsWithoutNumberedAddressingStandard": 77,
+    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 77,
     "MultiStandardLessons": 0
   },
   "Units": [
@@ -44,63 +41,126 @@
       "Number": 1,
       "UnitCode": "UAE-G8-ADVANCED-T1-OGL-V1:U01",
       "SortOrder": 1,
-      "Title": "Number and Proportional Reasoning",
-      "LessonCount": 8,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "11c027b1a7a482687e2c80905332350c07ea9db925655ecb03d81c8759e7205a"
+      "Title": "Real Numbers",
+      "LessonCount": 10,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "f72a767bd59f9a78fae0d2efda164464b6d86a5bee4418cc90538d7e44b329d6"
     },
     {
       "Number": 2,
       "UnitCode": "UAE-G8-ADVANCED-T1-OGL-V1:U02",
       "SortOrder": 2,
-      "Title": "Algebra",
-      "LessonCount": 10,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "c031eb20e22b9ebb19ca98fc0f107c7aac0df2735984f7b1318b1f188911e437"
+      "Title": "Equations with One Variable",
+      "LessonCount": 5,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "5eff0eeb65e0c03f729bf2d2b1a019640be7fe4f7fdd9ec16acd228a073bafc3"
     },
     {
       "Number": 3,
       "UnitCode": "UAE-G8-ADVANCED-T1-OGL-V1:U03",
       "SortOrder": 3,
-      "Title": "Geometry and Measure",
+      "Title": "Equations with Two Variables",
       "LessonCount": 8,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "04901043a6b01b79886a9e45ef847a5fe6546d8197f79c5895a24595398f6869"
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "b76d180e063974cd37c7bd7df526cdafc073381942d035f6e2720d2caed106f3"
     },
     {
       "Number": 4,
       "UnitCode": "UAE-G8-ADVANCED-T1-OGL-V1:U04",
       "SortOrder": 4,
-      "Title": "Statistics and Probability",
-      "LessonCount": 8,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "4e11cef15e903da4d2b7662c2a000004a0924586ca78fc110a4a182333c677df"
+      "Title": "Functions",
+      "LessonCount": 9,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "5c5e8720fbd10e56611ae701d518436c5d760bf59d773851ac8cf596b65fa8e5"
     },
     {
       "Number": 5,
       "UnitCode": "UAE-G8-ADVANCED-T1-OGL-V1:U05",
       "SortOrder": 5,
-      "Title": "Advanced Reasoning",
+      "Title": "Triangles and the Pythagorean Theorem",
+      "LessonCount": 7,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "9a8b2fffaf9c310bbda682e6a926bea2f9bd4eefe91180f6d00f57a79f8cf83c"
+    },
+    {
+      "Number": 6,
+      "UnitCode": "UAE-G8-ADVANCED-T1-OGL-V1:U06",
+      "SortOrder": 6,
+      "Title": "Transformations",
+      "LessonCount": 4,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "b36bcf7e9485147e1fcc63fbea39e466637da8f978502524d7f8436bc1d1f845"
+    },
+    {
+      "Number": 7,
+      "UnitCode": "UAE-G8-ADVANCED-T1-OGL-V1:U07",
+      "SortOrder": 7,
+      "Title": "Congruence and Similarity",
+      "LessonCount": 7,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "d8c4cf439f4f39aec47a1b26ab519ddef718fb7f17432eccbe05311f5d8e11bf"
+    },
+    {
+      "Number": 8,
+      "UnitCode": "UAE-G8-ADVANCED-T1-OGL-V1:U08",
+      "SortOrder": 8,
+      "Title": "Volume and Surface Area",
+      "LessonCount": 6,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "de8e34f16d7f96f100c06f2f14040295043297fb68b14dbb851ac95f7989049d"
+    },
+    {
+      "Number": 9,
+      "UnitCode": "UAE-G8-ADVANCED-T1-OGL-V1:U09",
+      "SortOrder": 9,
+      "Title": "Scatter Plots and Data Analysis",
+      "LessonCount": 6,
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "88b856a41a756cb397f313e5bef5479d4f9f2ce2402c88ef225b94ef2fba84d9"
+    },
+    {
+      "Number": 10,
+      "UnitCode": "UAE-G8-ADVANCED-T1-OGL-V1:U10",
+      "SortOrder": 10,
+      "Title": "Tools of Geometry",
+      "LessonCount": 4,
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "5afaf0b8a2d7b73464df7bf3b95f80a6ac1cc33aafb102a3b814f8ce6e2a86ec"
+    },
+    {
+      "Number": 11,
+      "UnitCode": "UAE-G8-ADVANCED-T1-OGL-V1:U11",
+      "SortOrder": 11,
+      "Title": "Quadrilaterals",
+      "LessonCount": 6,
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "b1af481031120d89b638598024f441a43dc90319f365fcf158c0c01f6f8cec4e"
+    },
+    {
+      "Number": 12,
+      "UnitCode": "UAE-G8-ADVANCED-T1-OGL-V1:U12",
+      "SortOrder": 12,
+      "Title": "Set Theory",
       "LessonCount": 5,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "c7c5263c0156da42d4290fe364050df652c1ad9c700083d911af54a157a5cf49"
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "565635be1e6768b1b22b6de5a1f56280eacd674b824967b5e0250ecf996a3254"
     }
   ],
   "Lessons": [
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U01:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:01:01:INTEGERS-AND-DIRECTED-NUMBER",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:01:01:RATIONAL-NUMBERS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Real Numbers",
       "LessonNumber": 1,
-      "Title": "Integers and directed number — advanced reasoning",
+      "Title": "Rational Numbers",
       "SortOrder": 1,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "d65d6553b1018083aaf2f0e78a6d65c6e67a5bb3401a6086007cb227522195b3",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "6a82094092932a5d51b3242bafbd0435dc20bfd42633ac323d619ab7b3d449b0",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:01:01",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:01:01",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -112,39 +172,49 @@
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:01:01"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:01:01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U01:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:01:02:FRACTIONS-AND-MIXED-NUMBERS",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:01:02:POWERS-AND-EXPONENTS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Real Numbers",
       "LessonNumber": 2,
-      "Title": "Fractions and mixed numbers — advanced reasoning",
+      "Title": "Powers and Exponents",
       "SortOrder": 2,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "14f95a4072d9c905c478aea860d4cb522147fbd085c3dfd91c2d1559b76d3235",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "387a13d412d8ab92c694b9287a8df59249681540ab3d6e7ee1293ac32ba07183",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:01:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:01:02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U01:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:01:03:DECIMALS-AND-ROUNDING",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:01:03:MULTIPLYING-AND-DIVIDING-MONOMIALS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Real Numbers",
       "LessonNumber": 3,
-      "Title": "Decimals and rounding — advanced reasoning",
+      "Title": "Multiplying and Dividing Monomials",
       "SortOrder": 3,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "368c9dbbd4f68ffae81429dffc4aa762206d7c25c3bad9dac1c68baa5ff696a8",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "8e5f1f03e9de7efaa1d3be66d0cbcd46424bcd0a33b7dff42fff2a67f5026024",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:01:03",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:01:03",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -156,124 +226,103 @@
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:01:03"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:01:03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U01:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:01:04:PERCENTAGES",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:01:04:POWERS-OF-MONOMIALS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Real Numbers",
       "LessonNumber": 4,
-      "Title": "Percentages — advanced reasoning",
+      "Title": "Powers of Monomials",
       "SortOrder": 4,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "615f590b7ba8424f704671b43be3dede3c8020e89787d216fac548d1a4ab14fa",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "6ec94aef2cec42a00ee26426d07fbfc8de456e50a5048c8cf46aeab2fa4d6aac",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:STD:MAT.1.07.02",
-          "ReferenceKind": "NumberedStandard",
-          "ResolutionKind": "ExactAcceptedStandard",
-          "OutcomeCode": "UAE:STD:MAT.1.07.02",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:01:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
           "SortOrder": 1
         }
       ],
-      "OutcomeCodes": [
-        "UAE:STD:MAT.1.07.02"
-      ],
+      "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:01:04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U01:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:01:05:RATIO-AND-PROPORTION",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:01:05:NEGATIVE-EXPONENTS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Real Numbers",
       "LessonNumber": 5,
-      "Title": "Ratio and proportion — advanced reasoning",
+      "Title": "Negative Exponents",
       "SortOrder": 5,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "e74351a6988f078e927fb7ca82119a0f7f3b49f12052377d74d7db0473074268",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "4cd1a83342d392d71975d6405f41a4750069c279b9fcfce8b89e80483239889f",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:STD:MAT.1.07.03",
-          "ReferenceKind": "NumberedStandard",
-          "ResolutionKind": "ExactAcceptedStandard",
-          "OutcomeCode": "UAE:STD:MAT.1.07.03",
-          "SortOrder": 1
-        },
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:01:05",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:01:05",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
-          "SortOrder": 2
+          "SortOrder": 1
         }
       ],
-      "OutcomeCodes": [
-        "UAE:STD:MAT.1.07.03"
-      ],
+      "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:01:05"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:01:05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U01:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:01:06:RATES-AND-UNIT-RATES",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:01:06:SCIENTIFIC-NOTATION",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Real Numbers",
       "LessonNumber": 6,
-      "Title": "Rates and unit rates — advanced reasoning",
+      "Title": "Scientific Notation",
       "SortOrder": 6,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "c0050628129a94e247c1b59113a0c2b65975f04f95e15ae8bd3674a90bb13736",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "2a8c6ec9f162951e50b76195c091fb723cccdacd311dca4b610a043efcc71057",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:STD:MAT.1.07.01",
-          "ReferenceKind": "NumberedStandard",
-          "ResolutionKind": "ExactAcceptedStandard",
-          "OutcomeCode": "UAE:STD:MAT.1.07.01",
-          "SortOrder": 1
-        },
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:01:06",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:01:06",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
-          "SortOrder": 2
+          "SortOrder": 1
         }
       ],
-      "OutcomeCodes": [
-        "UAE:STD:MAT.1.07.01"
-      ],
+      "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:01:06"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:01:06"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U01:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:01:07:POWERS-AND-ROOTS",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:01:07:COMPUTING-WITH-SCIENTIFIC-NOTATION",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Real Numbers",
       "LessonNumber": 7,
-      "Title": "Powers and roots — advanced reasoning",
+      "Title": "Computing with Scientific Notation",
       "SortOrder": 7,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "064e47d944b0d0c872ab6fe32e72fa3e501b8a73b6259151c9b3dbcfc365ab65",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "6a429b7863c9439d8a8ad58bf4dd8a80d9ae8b51c9dd61d874619c447ef9eba3",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:01:07",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:01:07",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -285,22 +334,22 @@
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:01:07"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:01:07"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U01:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:01:08:STANDARD-FORM-AND-ESTIMATION",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:01:08:ROOTS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Real Numbers",
       "LessonNumber": 8,
-      "Title": "Standard form and estimation — advanced reasoning",
+      "Title": "Roots",
       "SortOrder": 8,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "d3e91916537109c6a56682e16170a4d123a3f7c88edfb5bb8d187af37336533c",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "6eb0eec7d7a27502bf13edaa006dd3b4ff28c736c2c7b5b0b9ecbd270976bc99",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:01:08",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:01:08",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -312,336 +361,211 @@
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:01:08"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:01:08"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U01:L09",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:01:09:ESTIMATING-ROOTS",
+      "UnitNumber": 1,
+      "UnitTitle": "Real Numbers",
+      "LessonNumber": 9,
+      "Title": "Estimating Roots",
+      "SortOrder": 9,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "5aa46200f74e9e8df3ade2841ffd5ae3984febf2e9246b5e32e43a3dd1056995",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:01:09",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:01:09"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U01:L10",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:01:10:COMPARING-REAL-NUMBERS",
+      "UnitNumber": 1,
+      "UnitTitle": "Real Numbers",
+      "LessonNumber": 10,
+      "Title": "Comparing Real Numbers",
+      "SortOrder": 10,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "1143e02495f52c6105a82dbcbca932b11e26e3f7738b2cb0f1c3a9bb4a81b0aa",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:01:10",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:01:10"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U02:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:02:01:ALGEBRAIC-EXPRESSIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:02:01:SOLVING-EQUATIONS-WITH-RATIONAL-COEFFICIENTS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Equations with One Variable",
       "LessonNumber": 1,
-      "Title": "Algebraic expressions — advanced reasoning",
-      "SortOrder": 9,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "35de074734d02c90b52f78b82b2d7ca214d0de9cbefe60f01da3293f57b001cd",
+      "Title": "Solving Equations with Rational Coefficients",
+      "SortOrder": 11,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "a779ee0733a48b3516de41e75860a2eb8da02f649ece6fed2997c98c17b30135",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:STD:MAT.2.02.03",
-          "ReferenceKind": "NumberedStandard",
-          "ResolutionKind": "ExactAcceptedStandard",
-          "OutcomeCode": "UAE:STD:MAT.2.02.03",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:02:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
           "SortOrder": 1
         }
       ],
-      "OutcomeCodes": [
-        "UAE:STD:MAT.2.02.03"
-      ],
+      "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:02:01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U02:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:02:02:SUBSTITUTION",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:02:02:SOLVING-TWO-STEP-EQUATIONS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Equations with One Variable",
       "LessonNumber": 2,
-      "Title": "Substitution — advanced reasoning",
-      "SortOrder": 10,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "72105e243cfeb8640ce684b471fc3fe2457162a0e7a7a47bcb9a0096b30f1ee2",
+      "Title": "Solving Two-Step Equations",
+      "SortOrder": 12,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "de4ef70b531651870ba1ea493d09157d875ef3fc35a9adeb8db0122ae510af7e",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:STD:MAT.2.02.03",
-          "ReferenceKind": "NumberedStandard",
-          "ResolutionKind": "ExactAcceptedStandard",
-          "OutcomeCode": "UAE:STD:MAT.2.02.03",
-          "SortOrder": 1
-        },
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:02:02",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:02:02",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
-          "SortOrder": 2
+          "SortOrder": 1
         }
       ],
-      "OutcomeCodes": [
-        "UAE:STD:MAT.2.02.03"
-      ],
+      "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:02:02"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:02:02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U02:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:02:03:EXPANDING-BRACKETS",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:02:03:WRITING-TWO-STEP-EQUATIONS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Equations with One Variable",
       "LessonNumber": 3,
-      "Title": "Expanding brackets — advanced reasoning",
-      "SortOrder": 11,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "3297b828784005b03288cfa2683363eba23640f0f23201fe54c4421bd7c978c8",
+      "Title": "Writing Two-Step Equations",
+      "SortOrder": 13,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "cb962a23e35edbe5463b31004cec3f6850ef523d60cbed23d4e17a70cc96f6b9",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:STD:MAT.2.02.02",
-          "ReferenceKind": "NumberedStandard",
-          "ResolutionKind": "ExactAcceptedStandard",
-          "OutcomeCode": "UAE:STD:MAT.2.02.02",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:02:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
           "SortOrder": 1
         }
       ],
-      "OutcomeCodes": [
-        "UAE:STD:MAT.2.02.02"
-      ],
+      "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:02:03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U02:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:02:04:FACTORISING-EXPRESSIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:02:04:SOLVING-EQUATIONS-WITH-VARIABLES-ON-EACH-SIDE",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Equations with One Variable",
       "LessonNumber": 4,
-      "Title": "Factorising expressions — advanced reasoning",
-      "SortOrder": 12,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "260fe1d6dfb318e8cd305231cb5a885fa2f8be391db42d2ffb535528a0164a2a",
+      "Title": "Solving Equations with Variables on Each Side",
+      "SortOrder": 14,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "8f9afcfc9dbe343b875ddf2b223a13b1b7197f519f4acbf5a10ae1a1a0f93ad7",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:STD:MAT.2.02.02",
-          "ReferenceKind": "NumberedStandard",
-          "ResolutionKind": "ExactAcceptedStandard",
-          "OutcomeCode": "UAE:STD:MAT.2.02.02",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:02:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
           "SortOrder": 1
         }
       ],
-      "OutcomeCodes": [
-        "UAE:STD:MAT.2.02.02"
-      ],
+      "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:02:04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U02:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:02:05:LINEAR-EQUATIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:02:05:SOLVING-MULTI-STEP-EQUATIONS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Equations with One Variable",
       "LessonNumber": 5,
-      "Title": "Linear equations — advanced reasoning",
-      "SortOrder": 13,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "b4acce4d86b8772c54825c7aede1d9245d2e786a5fb62ad3bd1328ad466acf42",
+      "Title": "Solving Multi-Step Equations",
+      "SortOrder": 15,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "a8d7fbd6e4c8f531371325846d737cf7893c5d1a5816d35fc25aaf64c0ea3bd6",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:STD:MAT.2.02.04",
-          "ReferenceKind": "NumberedStandard",
-          "ResolutionKind": "ExactAcceptedStandard",
-          "OutcomeCode": "UAE:STD:MAT.2.02.04",
-          "SortOrder": 1
-        },
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:02:05",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:02:05",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
-          "SortOrder": 2
-        }
-      ],
-      "OutcomeCodes": [
-        "UAE:STD:MAT.2.02.04"
-      ],
-      "ApplicableCourses": [
-        "UAE-G8-ADVANCED-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:02:05"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U02:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:02:06:INEQUALITIES",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 6,
-      "Title": "Inequalities — advanced reasoning",
-      "SortOrder": 14,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "4d84f54ae50e067d3d16a24d9963075976bd4b2871a3d47e2747f7e5bacdfcb4",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:STD:MAT.2.02.05",
-          "ReferenceKind": "NumberedStandard",
-          "ResolutionKind": "ExactAcceptedStandard",
-          "OutcomeCode": "UAE:STD:MAT.2.02.05",
           "SortOrder": 1
         }
       ],
-      "OutcomeCodes": [
-        "UAE:STD:MAT.2.02.05"
-      ],
-      "ApplicableCourses": [
-        "UAE-G8-ADVANCED-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U02:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:02:07:SEQUENCES",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 7,
-      "Title": "Sequences — advanced reasoning",
-      "SortOrder": 15,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "38724bc0f86c2f75b2ab287a06def200342bf57ffa7cf4af50123171b3537d3e",
-      "Alignments": [],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U02:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:02:08:COORDINATES-AND-STRAIGHT-LINE-GRAPHS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 8,
-      "Title": "Coordinates and straight-line graphs — advanced reasoning",
-      "SortOrder": 16,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "ec086c58b92affd0bd50ef4a1e8a78c038d103dfca75e1021dfdaee676d4f377",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:STD:MAT.2.02.08",
-          "ReferenceKind": "NumberedStandard",
-          "ResolutionKind": "ExactAcceptedStandard",
-          "OutcomeCode": "UAE:STD:MAT.2.02.08",
-          "SortOrder": 1
-        },
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:02:08",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 2
-        }
-      ],
-      "OutcomeCodes": [
-        "UAE:STD:MAT.2.02.08"
-      ],
-      "ApplicableCourses": [
-        "UAE-G8-ADVANCED-T1-OGL-V1"
-      ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:02:08"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U02:L09",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:02:09:SIMULTANEOUS-EQUATIONS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 9,
-      "Title": "Simultaneous equations — advanced reasoning",
-      "SortOrder": 17,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "bd44eaa0731aa49e49a79fbd8cb9d493e3326d0f4eed578ba470ba6005ce9f02",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:STD:MAT.2.02.10",
-          "ReferenceKind": "NumberedStandard",
-          "ResolutionKind": "ExactAcceptedStandard",
-          "OutcomeCode": "UAE:STD:MAT.2.02.10",
-          "SortOrder": 1
-        },
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:02:09",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 2
-        }
-      ],
-      "OutcomeCodes": [
-        "UAE:STD:MAT.2.02.10"
-      ],
-      "ApplicableCourses": [
-        "UAE-G8-ADVANCED-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:02:09"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U02:L10",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:02:10:LINEAR-MODELLING",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 10,
-      "Title": "Linear modelling — advanced reasoning",
-      "SortOrder": 18,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "5e4ba345286063485f2ffe5d7461f438574d64a205a67414452d955b97ec24c2",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:STD:MAT.2.02.19",
-          "ReferenceKind": "NumberedStandard",
-          "ResolutionKind": "ExactAcceptedStandard",
-          "OutcomeCode": "UAE:STD:MAT.2.02.19",
-          "SortOrder": 1
-        },
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:02:10",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 2
-        }
-      ],
-      "OutcomeCodes": [
-        "UAE:STD:MAT.2.02.19"
-      ],
-      "ApplicableCourses": [
-        "UAE-G8-ADVANCED-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:02:10"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:02:05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U03:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:03:01:ANGLE-RELATIONSHIPS",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:03:01:CONSTANT-RATE-OF-CHANGE",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Equations with Two Variables",
       "LessonNumber": 1,
-      "Title": "Angle relationships — advanced reasoning",
-      "SortOrder": 19,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "d8fbadc9dcb7c2520abf27bc677aec7a0231e1debd2c8a008c2c68b027a452d2",
+      "Title": "Constant Rate of Change",
+      "SortOrder": 16,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "c3f2183d2d22715d1fd9c50141aa99f64b02f73b30b37ed5f2098b1939196509",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:03:01",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:03:01",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -653,141 +577,130 @@
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:03:01"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:03:01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U03:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:03:02:POLYGONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:03:02:SLOPE",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Equations with Two Variables",
       "LessonNumber": 2,
-      "Title": "Polygons — advanced reasoning",
-      "SortOrder": 20,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "8635814bcb6200c14679f7af6702d85ffb81801f334f4d1fded652386d11fe09",
-      "Alignments": [],
+      "Title": "Slope",
+      "SortOrder": 17,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "e55974d0def0679eb570e50736ec0eac8d85c8fb3f66cb09c461f21cdf96415e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:03:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:03:02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U03:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:03:03:CONGRUENCE-AND-SIMILARITY",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:03:03:EQUATIONS-IN-Y-MX-FORM",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Equations with Two Variables",
       "LessonNumber": 3,
-      "Title": "Congruence and similarity — advanced reasoning",
-      "SortOrder": 21,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "7ec2b52910319afc0bf8a05ccb8be92c992522ea620ddd5f13af783027dc2172",
+      "Title": "Equations in y = mx Form",
+      "SortOrder": 18,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "8641bd7418d3242d7a3f930a053070cd4db59e981fedf635ce6a8a94760bfec5",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:STD:MAT.3.05.02",
-          "ReferenceKind": "NumberedStandard",
-          "ResolutionKind": "ExactAcceptedStandard",
-          "OutcomeCode": "UAE:STD:MAT.3.05.02",
-          "SortOrder": 1
-        },
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:03:03",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:03:03",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
-          "SortOrder": 2
+          "SortOrder": 1
         }
       ],
-      "OutcomeCodes": [
-        "UAE:STD:MAT.3.05.02"
-      ],
+      "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:03:03"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:03:03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U03:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:03:04:TRANSFORMATIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:03:04:SLOPE-INTERCEPT-FORM",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Equations with Two Variables",
       "LessonNumber": 4,
-      "Title": "Transformations — advanced reasoning",
-      "SortOrder": 22,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "65f948ea5226a7223436095103dfa4fab83c93f69be283389a65e295135389be",
+      "Title": "Slope-Intercept Form",
+      "SortOrder": 19,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "bebb7cc196bb77728ec198ef795c40892e31748c03c27fc74bf8ed46f590928c",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:STD:MAT.3.05.01",
-          "ReferenceKind": "NumberedStandard",
-          "ResolutionKind": "ExactAcceptedStandard",
-          "OutcomeCode": "UAE:STD:MAT.3.05.01",
-          "SortOrder": 1
-        },
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:03:04",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:03:04",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
-          "SortOrder": 2
+          "SortOrder": 1
         }
       ],
-      "OutcomeCodes": [
-        "UAE:STD:MAT.3.05.01"
-      ],
+      "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:03:04"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:03:04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U03:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:03:05:PERIMETER-AND-AREA",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:03:05:GRAPHING-A-LINE-USING-INTERCEPTS",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Equations with Two Variables",
       "LessonNumber": 5,
-      "Title": "Perimeter and area — advanced reasoning",
-      "SortOrder": 23,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "aa2a19ef86706e3b6c7d543d1ace641d5b1328bbf2ed39339e648cd7af690368",
+      "Title": "Graphing a Line Using Intercepts",
+      "SortOrder": 20,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "39e537e6ec5c34e2bfc4eb1a37929d13a8e297f507704b5e7a6df592348203f5",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:STD:MAT.3.02.10",
-          "ReferenceKind": "NumberedStandard",
-          "ResolutionKind": "ExactAcceptedStandard",
-          "OutcomeCode": "UAE:STD:MAT.3.02.10",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:03:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
           "SortOrder": 1
         }
       ],
-      "OutcomeCodes": [
-        "UAE:STD:MAT.3.02.10"
-      ],
+      "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:03:05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U03:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:03:06:SURFACE-AREA-AND-VOLUME",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:03:06:WRITING-LINEAR-EQUATIONS",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Equations with Two Variables",
       "LessonNumber": 6,
-      "Title": "Surface area and volume — advanced reasoning",
-      "SortOrder": 24,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "678d23bbc167cde507cc1447188b993e31e2aa0160b6a0ed796cde303c3f795a",
+      "Title": "Writing Linear Equations",
+      "SortOrder": 21,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "8b5d731a2075ffdb600bfc2cf53010ffab659947c71fff891b685382d7671ac7",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:03:06",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:03:06",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -799,76 +712,76 @@
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:03:06"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:03:06"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U03:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:03:07:PYTHAGORAS-THEOREM",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:03:07:SOLVING-SYSTEMS-OF-EQUATIONS-BY-GRAPHING",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Equations with Two Variables",
       "LessonNumber": 7,
-      "Title": "Pythagoras theorem — advanced reasoning",
-      "SortOrder": 25,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "b8da8eb3c38b58b9d542292ba8513fed40c738c885bdbaa2b536f9ca4fc1e250",
+      "Title": "Solving Systems of Equations by Graphing",
+      "SortOrder": 22,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "a79aec2d684ed7468e6ff18c6a8469626457a49da835355149f1c6a50516130a",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:STD:MAT.3.08.02",
-          "ReferenceKind": "NumberedStandard",
-          "ResolutionKind": "ExactAcceptedStandard",
-          "OutcomeCode": "UAE:STD:MAT.3.08.02",
-          "SortOrder": 1
-        },
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:03:07",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:03:07",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
-          "SortOrder": 2
+          "SortOrder": 1
         }
       ],
-      "OutcomeCodes": [
-        "UAE:STD:MAT.3.08.02"
-      ],
+      "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:03:07"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:03:07"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U03:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:03:08:CONSTRUCTIONS-AND-LOCI",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:03:08:SOLVING-SYSTEMS-OF-EQUATIONS-ALGEBRAICALLY",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Equations with Two Variables",
       "LessonNumber": 8,
-      "Title": "Constructions and loci — advanced reasoning",
-      "SortOrder": 26,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "c36882b3efc6e4f098522f795d4b82b4dd8dd17641b67d023549157a1b75a49a",
-      "Alignments": [],
+      "Title": "Solving Systems of Equations Algebraically",
+      "SortOrder": 23,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "a2a574323145a2a02b2c4f468a4f08c6342fe80f80e525b1c47531ff65b73e23",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:03:08",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:03:08"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U04:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:04:01:COLLECTING-DATA",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:04:01:REPRESENTING-RELATIONS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Functions",
       "LessonNumber": 1,
-      "Title": "Collecting data — advanced reasoning",
-      "SortOrder": 27,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "95aee342d8606dac920723590e40e9a3e7fda93e521225af8fefbd88d4e9a67e",
+      "Title": "Representing Relations",
+      "SortOrder": 24,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "a9a001df2f592fab941580364dc3234221b9d66ceafdc9d3572ab33d5baf9bee",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:04:01",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:04:01",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -880,22 +793,22 @@
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:04:01"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:04:01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U04:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:04:02:TABLES-AND-CHARTS",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:04:02:RELATIONS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Functions",
       "LessonNumber": 2,
-      "Title": "Tables and charts — advanced reasoning",
-      "SortOrder": 28,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "b82f975585583426e84b0d796871d5009c18d1c1662bc7930b0fa284a84a98b3",
+      "Title": "Relations",
+      "SortOrder": 25,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "dd03c24ae21eccbd9d27d03e4ea3410aad43303722ba9ca0e214803e432a6329",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:04:02",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:04:02",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -907,144 +820,211 @@
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:04:02"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:04:02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U04:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:04:03:MEAN-MEDIAN-AND-RANGE",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:04:03:FUNCTIONS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Functions",
       "LessonNumber": 3,
-      "Title": "Mean, median and range — advanced reasoning",
-      "SortOrder": 29,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "078f12aaa11785e853b4e8e445c639ba798e6f9652e03799c1633a40224a1667",
-      "Alignments": [],
+      "Title": "Functions",
+      "SortOrder": 26,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "8eb90d0f970d3a6368a8a631f2983622752228e6adfd07d94ec6e99f9bf18d4a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:04:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:04:03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U04:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:04:04:SCATTER-GRAPHS",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:04:04:LINEAR-FUNCTIONS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Functions",
       "LessonNumber": 4,
-      "Title": "Scatter graphs — advanced reasoning",
-      "SortOrder": 30,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "c1407dbefa2cb36109d02922668e10eea938013ca913f19955a5ea95879789c8",
+      "Title": "Linear Functions",
+      "SortOrder": 27,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "b336a39393334c5f1ba417b6244767320dcd45c0fdf9d4284337a798df68c98c",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:STD:MAT.4.02.05",
-          "ReferenceKind": "NumberedStandard",
-          "ResolutionKind": "ExactAcceptedStandard",
-          "OutcomeCode": "UAE:STD:MAT.4.02.05",
-          "SortOrder": 1
-        },
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:04:04",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:04:04",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
-          "SortOrder": 2
+          "SortOrder": 1
         }
       ],
-      "OutcomeCodes": [
-        "UAE:STD:MAT.4.02.05"
-      ],
+      "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:04:04"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:04:04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U04:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:04:05:EXPERIMENTAL-PROBABILITY",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:04:05:COMPARING-PROPERTIES-OF-FUNCTIONS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Functions",
       "LessonNumber": 5,
-      "Title": "Experimental probability — advanced reasoning",
-      "SortOrder": 31,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "e75ec0d8b8cf0a145b344db3c73aac7c60295f4fff190e213e18fd5ec7060646",
-      "Alignments": [],
+      "Title": "Comparing Properties of Functions",
+      "SortOrder": 28,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "5e7d48dbde2c9a4ac9035d5103a57b777dcd5064fc0ddd6a6d02dd34fc2196fd",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:04:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:04:05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U04:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:04:06:THEORETICAL-PROBABILITY",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:04:06:CONSTRUCTING-FUNCTIONS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Functions",
       "LessonNumber": 6,
-      "Title": "Theoretical probability — advanced reasoning",
-      "SortOrder": 32,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "30b929a101b28a93ec8e6812b170b3aa5a1a29ddc2e6c87570d0b9ee2edbb60d",
-      "Alignments": [],
+      "Title": "Constructing Functions",
+      "SortOrder": 29,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "930998ee79c87773ec449ccf7afe05a88551cd67b0c91d23b38ca2a37f7525ae",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:04:06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:04:06"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U04:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:04:07:SAMPLE-SPACES",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:04:07:LINEAR-AND-NONLINEAR-FUNCTIONS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Functions",
       "LessonNumber": 7,
-      "Title": "Sample spaces — advanced reasoning",
-      "SortOrder": 33,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "680043628e4983e4aa536d7f24d47113c8b9c2285d6705347065c5454f7e9ab8",
-      "Alignments": [],
+      "Title": "Linear and Nonlinear Functions",
+      "SortOrder": 30,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "0305eb3b5c794de9b1e9bd435792ebc73474f8a530c9a957ee10b2691357a7b7",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:04:07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:04:07"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U04:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:04:08:COMPARING-DISTRIBUTIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:04:08:QUADRATIC-FUNCTIONS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Functions",
       "LessonNumber": 8,
-      "Title": "Comparing distributions — advanced reasoning",
-      "SortOrder": 34,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "8d0f1e0a3f82501a91a3f7eacfdc6dfc7b6453185ff9a11224cc0ad923364f27",
-      "Alignments": [],
+      "Title": "Quadratic Functions",
+      "SortOrder": 31,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "4b78da2070ca44f864d06ba9f1d7157cb962ae6a4e1aae8b75b36a8e584f576a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:04:08",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:04:08"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U04:L09",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:04:09:QUALITATIVE-GRAPHS",
+      "UnitNumber": 4,
+      "UnitTitle": "Functions",
+      "LessonNumber": 9,
+      "Title": "Qualitative Graphs",
+      "SortOrder": 32,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "e8e8b727d46822c4315be1ab565e244b7c9ecf0e91bc1f1efa4ae185a3d67599",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:04:09",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:UAEED:04:09"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U05:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:05:01:MULTI-STEP-ALGEBRAIC-MODELLING",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:05:01:LINES",
       "UnitNumber": 5,
-      "UnitTitle": "Advanced Reasoning",
+      "UnitTitle": "Triangles and the Pythagorean Theorem",
       "LessonNumber": 1,
-      "Title": "Multi-step algebraic modelling — advanced reasoning",
-      "SortOrder": 35,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "e6abddf6e22a34b1851189ca98bf7e928bd10e0a17ab568d73d86f99c3168557",
+      "Title": "Lines",
+      "SortOrder": 33,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "12d548386d3e39d7f373e42ef17ec8af2a3436a490aefd5440c216fbcc3e30ff",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:05:01",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:05:01",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -1056,22 +1036,22 @@
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:05:01"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:05:01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U05:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:05:02:PROOF-AND-JUSTIFICATION",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:05:02:GEOMETRIC-PROOF",
       "UnitNumber": 5,
-      "UnitTitle": "Advanced Reasoning",
+      "UnitTitle": "Triangles and the Pythagorean Theorem",
       "LessonNumber": 2,
-      "Title": "Proof and justification — advanced reasoning",
-      "SortOrder": 36,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "0b7536db5c7c54794528128f22a5612f0ab28205d126fda9c96c662eea4945fe",
+      "Title": "Geometric Proof",
+      "SortOrder": 34,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "83c6fdeffbfa5c64aa9320ffbedd8f2d634cf3249a05fee7f6e624ada98d39c4",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:05:02",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:05:02",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -1083,39 +1063,49 @@
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:05:02"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:05:02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U05:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:05:03:NON-ROUTINE-PROBLEM-SOLVING",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:05:03:ANGLES-OF-TRIANGLES",
       "UnitNumber": 5,
-      "UnitTitle": "Advanced Reasoning",
+      "UnitTitle": "Triangles and the Pythagorean Theorem",
       "LessonNumber": 3,
-      "Title": "Non-routine problem solving — advanced reasoning",
-      "SortOrder": 37,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "366581e9158928e242f8b2664b622834269ce7c6f39d8034be75dd03fa497ca0",
-      "Alignments": [],
+      "Title": "Angles of Triangles",
+      "SortOrder": 35,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "192226c579564e896f5d0b120a7b108a0b3fb94e1c29e2f76c7c8873a8551e88",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:05:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:05:03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U05:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:05:04:SURDS-AND-EXACT-VALUES",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:05:04:POLYGONS-AND-ANGLES",
       "UnitNumber": 5,
-      "UnitTitle": "Advanced Reasoning",
+      "UnitTitle": "Triangles and the Pythagorean Theorem",
       "LessonNumber": 4,
-      "Title": "Surds and exact values — advanced reasoning",
-      "SortOrder": 38,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "de03760394e154e32bea8b97d9188bcd4abab881f7273823fb6dc3b06dba9e97",
+      "Title": "Polygons and Angles",
+      "SortOrder": 36,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "2691243519ce7b7d73529d54ca7553fe21e5d263f4f8235e98b1ba6b0b1a3174",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:05:04",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:05:04",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -1127,22 +1117,22 @@
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:05:04"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:05:04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U05:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:05:05:ADVANCED-FUNCTIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:05:05:THE-PYTHAGOREAN-THEOREM",
       "UnitNumber": 5,
-      "UnitTitle": "Advanced Reasoning",
+      "UnitTitle": "Triangles and the Pythagorean Theorem",
       "LessonNumber": 5,
-      "Title": "Advanced functions",
-      "SortOrder": 39,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "e0107d86b9995d8d69e7c316c3a87152a7c1050faf386f0039365898e2db50f7",
+      "Title": "The Pythagorean Theorem",
+      "SortOrder": 37,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "ae07e17ea84954b9d80e911fc48e4148b2ad09ffd3facd767ebab4f6dae2217b",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:05:05",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:05:05",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -1154,7 +1144,1087 @@
         "UAE-G8-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T1:EDU:05:05"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:05:05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U05:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:05:06:USING-THE-PYTHAGOREAN-THEOREM",
+      "UnitNumber": 5,
+      "UnitTitle": "Triangles and the Pythagorean Theorem",
+      "LessonNumber": 6,
+      "Title": "Using the Pythagorean Theorem",
+      "SortOrder": 38,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "5b19867f6e722905d2c3e9749285372dd810579b6c51a41c1166830a4277a343",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:05:06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:05:06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U05:L07",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:05:07:DISTANCE-ON-THE-COORDINATE-PLANE",
+      "UnitNumber": 5,
+      "UnitTitle": "Triangles and the Pythagorean Theorem",
+      "LessonNumber": 7,
+      "Title": "Distance on the Coordinate Plane",
+      "SortOrder": 39,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "e23858188289e2a660403d20dc4272f21c53bfbba85707d9c24e792793aabd90",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:05:07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:05:07"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U06:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:06:01:TRANSLATIONS",
+      "UnitNumber": 6,
+      "UnitTitle": "Transformations",
+      "LessonNumber": 1,
+      "Title": "Translations",
+      "SortOrder": 40,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "a7c651a13d4f00cf95ca4e72296951ad3a94be497d06008e48ee6687ac12f775",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:06:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:06:01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U06:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:06:02:REFLECTIONS",
+      "UnitNumber": 6,
+      "UnitTitle": "Transformations",
+      "LessonNumber": 2,
+      "Title": "Reflections",
+      "SortOrder": 41,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "97984fb602cd07c0a3b72b9101ac3083d74e6e8eedff1459d4cfd3fe76eb2056",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:06:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:06:02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U06:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:06:03:ROTATIONS",
+      "UnitNumber": 6,
+      "UnitTitle": "Transformations",
+      "LessonNumber": 3,
+      "Title": "Rotations",
+      "SortOrder": 42,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "f0cefa71c898faf73951caa9cafe1cb9bb524d1e8e237207dd40d707ac95af23",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:06:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:06:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U06:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:06:04:DILATIONS",
+      "UnitNumber": 6,
+      "UnitTitle": "Transformations",
+      "LessonNumber": 4,
+      "Title": "Dilations",
+      "SortOrder": 43,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "b31230cf0854556197921a7120d26a82a3fab71882d25634fb2d14dfd84a149a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:06:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:06:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U07:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:07:01:CONGRUENCE-AND-TRANSFORMATIONS",
+      "UnitNumber": 7,
+      "UnitTitle": "Congruence and Similarity",
+      "LessonNumber": 1,
+      "Title": "Congruence and Transformations",
+      "SortOrder": 44,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "a7c5a2a5481b07cd29353d26c23e7a79d4b503e2851948594cc1c57b2b0a2d70",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:07:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:07:01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U07:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:07:02:CONGRUENCE",
+      "UnitNumber": 7,
+      "UnitTitle": "Congruence and Similarity",
+      "LessonNumber": 2,
+      "Title": "Congruence",
+      "SortOrder": 45,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "8115d84affee2ea5718f3480a630158e0f07bf0cd7b6a7cb66e5efb676c2bf9e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:07:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:07:02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U07:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:07:03:SIMILARITY-AND-TRANSFORMATIONS",
+      "UnitNumber": 7,
+      "UnitTitle": "Congruence and Similarity",
+      "LessonNumber": 3,
+      "Title": "Similarity and Transformations",
+      "SortOrder": 46,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "699dac1c56751ef33cdfb6d6bccc07f791dc229d057e2473fa082c7109dbb89e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:07:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:07:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U07:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:07:04:PROPERTIES-OF-SIMILAR-POLYGONS",
+      "UnitNumber": 7,
+      "UnitTitle": "Congruence and Similarity",
+      "LessonNumber": 4,
+      "Title": "Properties of Similar Polygons",
+      "SortOrder": 47,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "caba9596a4243bc5c05b380851e13b42d22b214bfad6fce0e8c28d8aee32ed07",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:07:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:07:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U07:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:07:05:SIMILAR-TRIANGLES-AND-INDIRECT-MEASUREMENT",
+      "UnitNumber": 7,
+      "UnitTitle": "Congruence and Similarity",
+      "LessonNumber": 5,
+      "Title": "Similar Triangles and Indirect Measurement",
+      "SortOrder": 48,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "c9479440204b89b7ba6fc9a2512fd10d813ad265d2a36686399755c96a941541",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:07:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:07:05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U07:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:07:06:SLOPES-AND-SIMILAR-TRIANGLES",
+      "UnitNumber": 7,
+      "UnitTitle": "Congruence and Similarity",
+      "LessonNumber": 6,
+      "Title": "Slopes and Similar Triangles",
+      "SortOrder": 49,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "7babac343d4c8461da4c76b6a851bcff54f02ed9a613ab481be9d863a913eb5a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:07:06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:07:06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U07:L07",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:07:07:AREA-AND-PERIMETER-OF-SIMILAR-FIGURES",
+      "UnitNumber": 7,
+      "UnitTitle": "Congruence and Similarity",
+      "LessonNumber": 7,
+      "Title": "Area and Perimeter of Similar Figures",
+      "SortOrder": 50,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "0abd5012f7b5274253fcaf7d1c88cebc8616c2499fe5df4aa84a33434e95a081",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:07:07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:07:07"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U08:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:08:01:VOLUME-OF-CYLINDERS",
+      "UnitNumber": 8,
+      "UnitTitle": "Volume and Surface Area",
+      "LessonNumber": 1,
+      "Title": "Volume of Cylinders",
+      "SortOrder": 51,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "389973c25ffb08b7cce9a50f116c0de67f9f71bdd93d859c7e349cb5cee2513c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:08:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:08:01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U08:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:08:02:VOLUME-OF-CONES",
+      "UnitNumber": 8,
+      "UnitTitle": "Volume and Surface Area",
+      "LessonNumber": 2,
+      "Title": "Volume of Cones",
+      "SortOrder": 52,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "b60ef5c9a37f4f534cfdf1559db56b314d0dc5c81c1389cde2f5e8e67fd23de6",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:08:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:08:02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U08:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:08:03:VOLUME-OF-SPHERES",
+      "UnitNumber": 8,
+      "UnitTitle": "Volume and Surface Area",
+      "LessonNumber": 3,
+      "Title": "Volume of Spheres",
+      "SortOrder": 53,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "9852f5565590d9027a7f005c51cf3200f47b798c1fb3a87184608023d1707ae4",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:08:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:08:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U08:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:08:04:SURFACE-AREA-OF-CYLINDERS",
+      "UnitNumber": 8,
+      "UnitTitle": "Volume and Surface Area",
+      "LessonNumber": 4,
+      "Title": "Surface Area of Cylinders",
+      "SortOrder": 54,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "a453e1f5a483e17c33e6fb6f640e60695bec0aff65d7a1fc5a1cb83d4cebe439",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:08:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:08:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U08:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:08:05:SURFACE-AREA-OF-CONES",
+      "UnitNumber": 8,
+      "UnitTitle": "Volume and Surface Area",
+      "LessonNumber": 5,
+      "Title": "Surface Area of Cones",
+      "SortOrder": 55,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "0abf227f3e9c768f79be647e538bb9317b4c2289dd0a0ab487360afef0761d6d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:08:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:08:05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U08:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:08:06:CHANGES-IN-DIMENSIONS",
+      "UnitNumber": 8,
+      "UnitTitle": "Volume and Surface Area",
+      "LessonNumber": 6,
+      "Title": "Changes in Dimensions",
+      "SortOrder": 56,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "ca3881942c63e2f7e0355ee601ba2566b89ccc6ed106c20f46baec4acd9fdb97",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:08:06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T2:UAEED:08:06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U09:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:09:01:SCATTER-PLOTS",
+      "UnitNumber": 9,
+      "UnitTitle": "Scatter Plots and Data Analysis",
+      "LessonNumber": 1,
+      "Title": "Scatter Plots",
+      "SortOrder": 57,
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "009e2199f3db612b254fda030640e5e03b6646e0a8415d9bf074c3c052a97ef2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:09:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:09:01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U09:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:09:02:LINES-OF-BEST-FIT",
+      "UnitNumber": 9,
+      "UnitTitle": "Scatter Plots and Data Analysis",
+      "LessonNumber": 2,
+      "Title": "Lines of Best Fit",
+      "SortOrder": 58,
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "ebed553415fc220a78253b1ad60d8cc8e38c559360e87c10372d84c33d074372",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:09:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:09:02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U09:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:09:03:TWO-WAY-TABLES",
+      "UnitNumber": 9,
+      "UnitTitle": "Scatter Plots and Data Analysis",
+      "LessonNumber": 3,
+      "Title": "Two-Way Tables",
+      "SortOrder": 59,
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "c687e20e0c3291153e6c7eb481cf6c40a044978dbf4fda082fd4aaa78fef6575",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:09:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:09:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U09:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:09:04:DESCRIPTIVE-STATISTICS",
+      "UnitNumber": 9,
+      "UnitTitle": "Scatter Plots and Data Analysis",
+      "LessonNumber": 4,
+      "Title": "Descriptive Statistics",
+      "SortOrder": 60,
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "76a59c08fb1d367092536064618fdca3f580503a65a516c43287e74ead3e0ab0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:09:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:09:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U09:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:09:05:MEASURES-OF-VARIABILITY",
+      "UnitNumber": 9,
+      "UnitTitle": "Scatter Plots and Data Analysis",
+      "LessonNumber": 5,
+      "Title": "Measures of Variability",
+      "SortOrder": 61,
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "0eb4af17b9e39ce9a997e73b31a49d72cf9b5c6d038d12dc2c28b82d8393ebbd",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:09:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:09:05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U09:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:09:06:ANALYZING-DATA-DISTRIBUTIONS",
+      "UnitNumber": 9,
+      "UnitTitle": "Scatter Plots and Data Analysis",
+      "LessonNumber": 6,
+      "Title": "Analyzing Data Distributions",
+      "SortOrder": 62,
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "968b7e11e88809727cb4bfa772763b52cf5d566ec8999596827e1b1cdf767d16",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:09:06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:09:06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U10:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:10:01:POINTS-LINES-AND-PLANES",
+      "UnitNumber": 10,
+      "UnitTitle": "Tools of Geometry",
+      "LessonNumber": 1,
+      "Title": "Points, Lines, and Planes",
+      "SortOrder": 63,
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "ffef4b0f7fe88bc2075b8c3a0ad0c2e3103e8a3bdfbf7184bbd452caeeb1a073",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:10:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:10:01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U10:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:10:02:LINEAR-MEASURE",
+      "UnitNumber": 10,
+      "UnitTitle": "Tools of Geometry",
+      "LessonNumber": 2,
+      "Title": "Linear Measure",
+      "SortOrder": 64,
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "286eb4c93f6b8b5072f446be388b6205f2d66dbb8df21547ef050b46ddfd8fda",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:10:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:10:02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U10:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:10:03:DISTANCE-AND-MIDPOINTS",
+      "UnitNumber": 10,
+      "UnitTitle": "Tools of Geometry",
+      "LessonNumber": 3,
+      "Title": "Distance and Midpoints",
+      "SortOrder": 65,
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "4a8dc39096706c6304b29c05b47381cb841433a8471e8ba3358bb3f63ec9b1a4",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:10:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:10:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U10:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:10:04:PROVING-RELATIONSHIPS-BETWEEN-SEGMENTS",
+      "UnitNumber": 10,
+      "UnitTitle": "Tools of Geometry",
+      "LessonNumber": 4,
+      "Title": "Proving Relationships Between Segments",
+      "SortOrder": 66,
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "73fe9f5fc491d0bb82d4fae517dd26563a060dc111ef45180076509dec2862d1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:10:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:10:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U11:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:11:01:ANGLES-OF-POLYGONS",
+      "UnitNumber": 11,
+      "UnitTitle": "Quadrilaterals",
+      "LessonNumber": 1,
+      "Title": "Angles of Polygons",
+      "SortOrder": 67,
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "9deaaacf05c4a72f7ebd7d400c8f780462798430ef279f225cd325afca4de30c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:11:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:11:01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U11:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:11:02:PARALLELOGRAMS",
+      "UnitNumber": 11,
+      "UnitTitle": "Quadrilaterals",
+      "LessonNumber": 2,
+      "Title": "Parallelograms",
+      "SortOrder": 68,
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "be281026074ce29236585d052b9ebf72a26aa147b09a989505cb9dba6eb74838",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:11:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:11:02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U11:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:11:03:TESTS-FOR-PARALLELOGRAMS",
+      "UnitNumber": 11,
+      "UnitTitle": "Quadrilaterals",
+      "LessonNumber": 3,
+      "Title": "Tests for Parallelograms",
+      "SortOrder": 69,
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "68a5764d8e4932b321cfc8fdf465367ff09445c38b65840efd5f0e4fc749c4f3",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:11:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:11:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U11:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:11:04:RECTANGLES",
+      "UnitNumber": 11,
+      "UnitTitle": "Quadrilaterals",
+      "LessonNumber": 4,
+      "Title": "Rectangles",
+      "SortOrder": 70,
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "4cf9a187cd151e51dc3d5eae796f2f52f10ca87ef85ec32f562d9d93713da708",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:11:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:11:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U11:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:11:05:RHOMBI-AND-SQUARES",
+      "UnitNumber": 11,
+      "UnitTitle": "Quadrilaterals",
+      "LessonNumber": 5,
+      "Title": "Rhombi and Squares",
+      "SortOrder": 71,
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "9a8fb8f77d4b575c974e21b7efedd86cedc97ff1fd11a0c84ad6f6446f788ecf",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:11:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:11:05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U11:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:11:06:TRAPEZOIDS-AND-KITES",
+      "UnitNumber": 11,
+      "UnitTitle": "Quadrilaterals",
+      "LessonNumber": 6,
+      "Title": "Trapezoids and Kites",
+      "SortOrder": 72,
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "cb77bc1e5ad666360343e057a89413530e3c9204798405923a96442bed932842",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:11:06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:11:06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U12:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:12:01:INTRODUCTION-TO-SET-THEORY",
+      "UnitNumber": 12,
+      "UnitTitle": "Set Theory",
+      "LessonNumber": 1,
+      "Title": "Introduction to Set Theory",
+      "SortOrder": 73,
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "338468acaf4c9ce3a36f017d462f75fbb8d6c298264e110730b913ea6776327d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:12:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:12:01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U12:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:12:02:SUBSETS-AND-OPERATIONS-ON-SETS",
+      "UnitNumber": 12,
+      "UnitTitle": "Set Theory",
+      "LessonNumber": 2,
+      "Title": "Subsets and Operations on Sets",
+      "SortOrder": 74,
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "1ce92b14603f15c17b54db068b263e355e55dec021d19167326c625c940204e5",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:12:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:12:02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U12:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:12:03:USING-VENN-DIAGRAMS-TO-STUDY-SET-OPERATIONS",
+      "UnitNumber": 12,
+      "UnitTitle": "Set Theory",
+      "LessonNumber": 3,
+      "Title": "Using Venn Diagrams to Study Set Operations",
+      "SortOrder": 75,
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "9e0fe9bee54e86c1add7e79db3392ee9d3c05165d6bb25ee4fbd716d30c7c60b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:12:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:12:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U12:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:12:04:USING-SETS-TO-SOLVE-PROBLEMS",
+      "UnitNumber": 12,
+      "UnitTitle": "Set Theory",
+      "LessonNumber": 4,
+      "Title": "Using Sets to Solve Problems",
+      "SortOrder": 76,
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "f8b6b7ed42c57ab115c29b6ec732ae1261d724db7a7285ae163c7aeac91db030",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:12:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:12:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L8:ADVANCED:U12:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L8:ADVANCED:12:05:INFINITE-SETS",
+      "UnitNumber": 12,
+      "UnitTitle": "Set Theory",
+      "LessonNumber": 5,
+      "Title": "Infinite Sets",
+      "SortOrder": 77,
+      "SourceUrl": "https://almanahj.com/ae/8math3",
+      "SemanticSha256": "5f6124b3314039a9b2f2a01a9215e523be1514e0b580904e850e168e44d61848",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:12:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G8-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G8:ADVANCED:T3:UAEED:12:05"
     }
   ]
 }

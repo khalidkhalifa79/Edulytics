@@ -13,29 +13,28 @@
   "SourcePublisher": "UK Department for Education",
   "SourceEdition": "Key Stage 3 Mathematics programme of study / current GOV.UK publication",
   "SourceRootUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-  "SourceCheckedAtUtc": "2026-09-01T00:00:00Z",
+  "SourceCheckedAtUtc": "2026-10-04T00:00:00Z",
   "SourceLicense": "Open Government Licence v3.0",
   "RequiredDigitalAttribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
   "SourceSelectionReason": "The official curriculum source remains the academic authority. Edulytics uses open DfE Mathematics material only as lawful pedagogical scaffolding for independently authored lesson explanations where official copyrighted or source-linked prose is not reproduced.",
-  "SourceSelectionEvidence": "This scope contains 32 Edulytics-authored supporting lessons across 4 units. No formal outcome mapping is claimed without explicit source evidence; every formal OutcomeCodes collection is empty.",
+  "SourceSelectionEvidence": "UAE Grade 7 General rebuilt from the locally verified UAE Student Edition sequence; local General and Advanced book TOCs match the Reveal Math Course 2 lesson sequence. Publisher TOC is used as a clean cross-check for lesson titles and order.",
   "SourceEvidenceUrls": [
     "https://minhaji.moe.gov.ae/",
-    "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-    "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
-    "https://uae.afedne.com/ShoTqehr0bon",
-    "https://uae.afedne.com/ShoaGZjhsPH5"
+    "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+    "https://almanahj.com/ae/7math2",
+    "https://almanahj.com/ae/7math3"
   ],
-  "SourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. Official UAE Ministry of Education wording is not reproduced. Edulytics learner-facing bodies are independently authored.",
-  "SemanticGraphSha256": "f190913d42621888f17b3c48eb22062b18b59aa3366f65a27db6cb0c83e1f954",
+  "SourceRightsNote": "Official UAE textbook evidence is used only for scope, ordering and reference provenance. Learner-facing explanations are independently authored by Edulytics.",
+  "SemanticGraphSha256": "ba1ac5e21792865f0bf189684f794dea305a0d21825055169df47140177df421",
   "AcquisitionDiagnostics": {
-    "UnitCount": 4,
-    "LessonCount": 32,
+    "UnitCount": 11,
+    "LessonCount": 62,
     "OfficialStandardCount": 0,
     "AddressingCoverageCount": 0,
     "FormalMappingCount": 0,
-    "LessonsWithoutNumberedGradeReferenceAnyRole": 32,
-    "LessonsWithoutNumberedAddressingStandard": 32,
-    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 32,
+    "LessonsWithoutNumberedGradeReferenceAnyRole": 0,
+    "LessonsWithoutNumberedAddressingStandard": 62,
+    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 62,
     "MultiStandardLessons": 0
   },
   "Units": [
@@ -43,54 +42,117 @@
       "Number": 1,
       "UnitCode": "UAE-G7-GENERAL-T1-OGL-V1:U01",
       "SortOrder": 1,
-      "Title": "Number and Proportional Reasoning",
-      "LessonCount": 8,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "ad10f010d0bafc34fb0efd1f0a9a7073d7b7ee88159db71a4347fe84adc61038"
+      "Title": "Proportional Relationships",
+      "LessonCount": 6,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "a0df9f5887b82a0260068894bb013ae880ef61981b9ec5e85aac6ff4d2094c59"
     },
     {
       "Number": 2,
       "UnitCode": "UAE-G7-GENERAL-T1-OGL-V1:U02",
       "SortOrder": 2,
-      "Title": "Algebra",
-      "LessonCount": 8,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "2cf1f101380001f31d0acc8832bf3c9f1bf77a4d0c12fdf91254f72851c60b59"
+      "Title": "Solve Percent Problems",
+      "LessonCount": 7,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "78e1c5bc6821f0bd3cfe0e67cbc56f6409d67c2c3b12d9e0a1c8a1f822971bab"
     },
     {
       "Number": 3,
       "UnitCode": "UAE-G7-GENERAL-T1-OGL-V1:U03",
       "SortOrder": 3,
-      "Title": "Geometry and Measure",
-      "LessonCount": 8,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "3ef52003d98e88627b2ae8785e5ef0c361342460cff8f4918079f40103c9828d"
+      "Title": "Operations with Integers",
+      "LessonCount": 5,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "c98e6589ba714452d8a40d55034ae1b555c546725c3609154fbe5a1265265efd"
     },
     {
       "Number": 4,
       "UnitCode": "UAE-G7-GENERAL-T1-OGL-V1:U04",
       "SortOrder": 4,
-      "Title": "Statistics and Probability",
-      "LessonCount": 8,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "b867b50d76116fdeb60cb258367fda9e6599f5b14724d6240a788dfeec8eee58"
+      "Title": "Operations with Rational Numbers",
+      "LessonCount": 6,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "2854fed7e0536b8bbfb197f54873536bed8af13993cc4c70505c8e256bdd264e"
+    },
+    {
+      "Number": 5,
+      "UnitCode": "UAE-G7-GENERAL-T1-OGL-V1:U05",
+      "SortOrder": 5,
+      "Title": "Simplify Algebraic Expressions",
+      "LessonCount": 5,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "df678339ff532a9661db46d60827d49f37d2e68e8456a736e011d7e07e499450"
+    },
+    {
+      "Number": 6,
+      "UnitCode": "UAE-G7-GENERAL-T1-OGL-V1:U06",
+      "SortOrder": 6,
+      "Title": "Write and Solve Equations",
+      "LessonCount": 5,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "788d5cfa4f41adc0561677310cff1ee351d4520ebd4f4e5e3f4ea453fc05b001"
+    },
+    {
+      "Number": 7,
+      "UnitCode": "UAE-G7-GENERAL-T1-OGL-V1:U07",
+      "SortOrder": 7,
+      "Title": "Write and Solve Inequalities",
+      "LessonCount": 6,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "d126810486938fac7e027fc100552c5d7ad22c6c8f5d615e9e2014e68ae21348"
+    },
+    {
+      "Number": 8,
+      "UnitCode": "UAE-G7-GENERAL-T1-OGL-V1:U08",
+      "SortOrder": 8,
+      "Title": "Geometric Figures",
+      "LessonCount": 5,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "7ea5676ed680330018e911aa9a2b12729792dfe035f4b95d2e2bc9bad9641caf"
+    },
+    {
+      "Number": 9,
+      "UnitCode": "UAE-G7-GENERAL-T1-OGL-V1:U09",
+      "SortOrder": 9,
+      "Title": "Measure Figures",
+      "LessonCount": 6,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "8f530c359f241a19c037f10b2d3b51a072a9cedfbc7a776dd4c16e60c4c360f8"
+    },
+    {
+      "Number": 10,
+      "UnitCode": "UAE-G7-GENERAL-T1-OGL-V1:U10",
+      "SortOrder": 10,
+      "Title": "Probability",
+      "LessonCount": 6,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "1cbc5ef1c801aa51394eee0a3631de7e61a21cdcb16d6fddafc64381395a2cee"
+    },
+    {
+      "Number": 11,
+      "UnitCode": "UAE-G7-GENERAL-T1-OGL-V1:U11",
+      "SortOrder": 11,
+      "Title": "Sampling and Statistics",
+      "LessonCount": 5,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "6fb3838172986fc953624fd833ec0433fb556c5c301fa36d6418ca6f5218383d"
     }
   ],
   "Lessons": [
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U01:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:01:01:INTEGERS-AND-DIRECTED-NUMBER",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:01:01:UNIT-RATES-INVOLVING-RATIOS-OF-FRACTIONS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Proportional Relationships",
       "LessonNumber": 1,
-      "Title": "Integers and directed number",
+      "Title": "Unit Rates Involving Ratios of Fractions",
       "SortOrder": 1,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "819e80130c5ce8b5a9be268d10d585ab1f36f5206dea0372d8ae0e84327e58d5",
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "eb9acd4db00f651119e8a69b72bd555df6161052c6cc2f92f5252fac21649f1d",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:01:01",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:01:01",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -102,22 +164,22 @@
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:01:01"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:01:01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U01:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:01:02:FRACTIONS-AND-MIXED-NUMBERS",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:01:02:UNDERSTAND-PROPORTIONAL-RELATIONSHIPS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Proportional Relationships",
       "LessonNumber": 2,
-      "Title": "Fractions and mixed numbers",
+      "Title": "Understand Proportional Relationships",
       "SortOrder": 2,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "ffa125ecc623a58382cf7593f4831cc98f5dfee74d9d1104e95c84f89463cc16",
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "595671879c067a68a85494b93e3c64a39d12e40accbd79bd9daf1f0cdf8c0d7b",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:01:02",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:01:02",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -129,39 +191,49 @@
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:01:02"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:01:02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U01:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:01:03:DECIMALS-AND-ROUNDING",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:01:03:TABLES-OF-PROPORTIONAL-RELATIONSHIPS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Proportional Relationships",
       "LessonNumber": 3,
-      "Title": "Decimals and rounding",
+      "Title": "Tables of Proportional Relationships",
       "SortOrder": 3,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "a906db436cf15a9303532a47c653532dcffaa5122383aa822c9fd502cf349ceb",
-      "Alignments": [],
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "fded91bcc99c110663537bda9f4bb3a81c37d6fc39c7273aed53f8f8f0bf4be8",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:01:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:01:03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U01:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:01:04:PERCENTAGES",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:01:04:GRAPHS-OF-PROPORTIONAL-RELATIONSHIPS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Proportional Relationships",
       "LessonNumber": 4,
-      "Title": "Percentages",
+      "Title": "Graphs of Proportional Relationships",
       "SortOrder": 4,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "ee3f3300f7e348c0ec6f476568b4ac7564a7db52ab9909360d7cdadba3e70318",
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "44c10eb7882d1756c05117b5dc329481cd133d85f94c4a35252446cf116c51cb",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:01:04",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:01:04",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -173,22 +245,22 @@
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:01:04"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:01:04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U01:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:01:05:RATIO-AND-PROPORTION",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:01:05:EQUATIONS-OF-PROPORTIONAL-RELATIONSHIPS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Proportional Relationships",
       "LessonNumber": 5,
-      "Title": "Ratio and proportion",
+      "Title": "Equations of Proportional Relationships",
       "SortOrder": 5,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "c29f2b56508e97354fdc03e9a4cd3ab438c7acdb2fcc36ed5e31deff04ce1e66",
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "d54c3cf3cee2245f967e7102c1b0e9e4904b2e7beca1117fbbb4ce5772496f0b",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:01:05",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:01:05",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -200,22 +272,22 @@
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:01:05"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:01:05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U01:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:01:06:RATES-AND-UNIT-RATES",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:01:06:SOLVE-PROBLEMS-INVOLVING-PROPORTIONAL-RELATIONSHIPS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Proportional Relationships",
       "LessonNumber": 6,
-      "Title": "Rates and unit rates",
+      "Title": "Solve Problems Involving Proportional Relationships",
       "SortOrder": 6,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "ea939dc4d8c282ef3a2669b2d69e85ef8d17c7d77b68f050ec7a79569f14117d",
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "7376bec5d0483ed0cf7cdd0c71457ff826b879e41fdcc28518fe21b613a4d232",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:01:06",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:01:06",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -227,56 +299,22 @@
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:01:06"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U01:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:01:07:POWERS-AND-ROOTS",
-      "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
-      "LessonNumber": 7,
-      "Title": "Powers and roots",
-      "SortOrder": 7,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "6f2912b5d68a83a0f173429a14252c61620ebc186f50b0a32c2242144b48ea74",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G7-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U01:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:01:08:STANDARD-FORM-AND-ESTIMATION",
-      "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
-      "LessonNumber": 8,
-      "Title": "Standard form and estimation",
-      "SortOrder": 8,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "eb8ba7c8e452522b769f8f466818e9267f26310bca9ceb366820e200fcb02104",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G7-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:01:06"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U02:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:02:01:ALGEBRAIC-EXPRESSIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:02:01:PERCENT-OF-CHANGE",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Solve Percent Problems",
       "LessonNumber": 1,
-      "Title": "Algebraic expressions",
-      "SortOrder": 9,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "c9e0761f4edf687c0500171841e30e5731974451cdebe76e1741cb796a750985",
+      "Title": "Percent of Change",
+      "SortOrder": 7,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "261d52b143d386a314f7e77055c9a2aef0ccfae0abb827295dfc4f063fe60439",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:02:01",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:02:01",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -288,39 +326,49 @@
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:02:01"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:02:01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U02:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:02:02:SUBSTITUTION",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:02:02:TAX",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Solve Percent Problems",
       "LessonNumber": 2,
-      "Title": "Substitution",
-      "SortOrder": 10,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "ae6322cd4c78e7786c0ccfde9500776439823fa000c8c85e81ac3101258610cd",
-      "Alignments": [],
+      "Title": "Tax",
+      "SortOrder": 8,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "5e2bba7c6db2af7dadd9066995c3d64854a0bb0ec7d8bfe658966e58dda72444",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:02:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:02:02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U02:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:02:03:EXPANDING-BRACKETS",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:02:03:TIPS-AND-MARKUPS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Solve Percent Problems",
       "LessonNumber": 3,
-      "Title": "Expanding brackets",
-      "SortOrder": 11,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "f026fb14d0d798d9bfff41b5f390d2e035bef1da3bd3a24b5dacf3052f4fd11c",
+      "Title": "Tips and Markups",
+      "SortOrder": 9,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "c32846ed50a1d774eb751c28ce03a300fa8e7521b1fcb1c4d1e74372bee21dff",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:02:03",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:02:03",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -332,22 +380,22 @@
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:02:03"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:02:03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U02:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:02:04:FACTORISING-EXPRESSIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:02:04:DISCOUNTS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Solve Percent Problems",
       "LessonNumber": 4,
-      "Title": "Factorising expressions",
-      "SortOrder": 12,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "ef688ab96b85b8da6c176b1b744e2aaaff40360d600b05ca536f088a11192698",
+      "Title": "Discounts",
+      "SortOrder": 10,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "fc1383784fe99597900b7c635bb0ba72ca23746f49528607ff3e2ade64d7ca96",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:02:04",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:02:04",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -359,22 +407,22 @@
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:02:04"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:02:04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U02:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:02:05:LINEAR-EQUATIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:02:05:INTEREST",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Solve Percent Problems",
       "LessonNumber": 5,
-      "Title": "Linear equations",
-      "SortOrder": 13,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "fdef4df2a09e07c6cbece8b4144f2adbcc8af584a2b15abb87f1fc55410a3cb7",
+      "Title": "Interest",
+      "SortOrder": 11,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "e5cdd0d614958aaee6e28d7fc2fbbc6dfdde6dabb7498c23d1d61a2e0113c086",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:02:05",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:02:05",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -386,22 +434,22 @@
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:02:05"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:02:05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U02:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:02:06:INEQUALITIES",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:02:06:COMMISSION-AND-FEES",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Solve Percent Problems",
       "LessonNumber": 6,
-      "Title": "Inequalities",
-      "SortOrder": 14,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "4a64dc8d04b9e6b465bcb346e653548c0eae60dbd98dfb7fa26b3c1c6fa55fdf",
+      "Title": "Commission and Fees",
+      "SortOrder": 12,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "10863eb0d0efefb9fc5bfd1ca5e9d76c7e91e60aa762278a93ad15db10225617",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:02:06",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:02:06",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -413,56 +461,49 @@
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:02:06"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:02:06"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U02:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:02:07:SEQUENCES",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:02:07:PERCENT-ERROR",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Solve Percent Problems",
       "LessonNumber": 7,
-      "Title": "Sequences",
-      "SortOrder": 15,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "e24047bd4b525a88dde6dc0108e0b4f62239adc8edfbd53c42ed72bf37c2fab7",
-      "Alignments": [],
+      "Title": "Percent Error",
+      "SortOrder": 13,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "0e5458c32d3d284808e4e39f832a35fb29c239be62d52c8f8f812fccaa016404",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:02:07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U02:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:02:08:COORDINATES-AND-STRAIGHT-LINE-GRAPHS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 8,
-      "Title": "Coordinates and straight-line graphs",
-      "SortOrder": 16,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "85b4972bc4c06eb2db9c6d71c739186c422944cbb72bba9251d9c5f2b85de2df",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G7-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:02:07"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U03:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:03:01:ANGLE-RELATIONSHIPS",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:03:01:ADD-INTEGERS",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Operations with Integers",
       "LessonNumber": 1,
-      "Title": "Angle relationships",
-      "SortOrder": 17,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "f60d4e60e78cac67b17051f08df9bf50d04976f0a7ca08c16b2596b6e4b36eb1",
+      "Title": "Add Integers",
+      "SortOrder": 14,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "a122bcc1e259f0248bb57688a9a18489d26bc26c3937c5a03f3faa1dfb4308b0",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:03:01",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:03:01",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -474,73 +515,103 @@
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:03:01"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:03:01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U03:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:03:02:POLYGONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:03:02:SUBTRACT-INTEGERS",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Operations with Integers",
       "LessonNumber": 2,
-      "Title": "Polygons",
-      "SortOrder": 18,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "6b6b7be1e931f80d300fe7f1db84d897ad2e4c2a244d2310010daef556c1eb35",
-      "Alignments": [],
+      "Title": "Subtract Integers",
+      "SortOrder": 15,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "9dec817e4f4305940abc4d85412c188bfeb1a1fb79554191cf98de00997ee57a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:03:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:03:02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U03:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:03:03:CONGRUENCE-AND-SIMILARITY",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:03:03:MULTIPLY-INTEGERS",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Operations with Integers",
       "LessonNumber": 3,
-      "Title": "Congruence and similarity",
-      "SortOrder": 19,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "7b5b4b33e5e4cf4f6f2e3006a5c0c114fe0bc62d06c5473b6f6254e7f160765a",
-      "Alignments": [],
+      "Title": "Multiply Integers",
+      "SortOrder": 16,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "74784fe1b8d242bd78140677da6da356229b674dde2794b7929117f512354470",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:03:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:03:03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U03:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:03:04:TRANSFORMATIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:03:04:DIVIDE-INTEGERS",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Operations with Integers",
       "LessonNumber": 4,
-      "Title": "Transformations",
-      "SortOrder": 20,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "a27daf35bf71885331bd76284480c8b123a019ddbc339147817ddbd273296094",
-      "Alignments": [],
+      "Title": "Divide Integers",
+      "SortOrder": 17,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "c132155592794ce4698c5f1750998a0bdee1aa6e338e7ae868dfaa0dc0fc1013",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:03:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:03:04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U03:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:03:05:PERIMETER-AND-AREA",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:03:05:APPLY-INTEGER-OPERATIONS",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Operations with Integers",
       "LessonNumber": 5,
-      "Title": "Perimeter and area",
-      "SortOrder": 21,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "ef05499f0eb5c96cab96b4cedd743f21a72c5ae62e316e97fe631a2c9aa8ac62",
+      "Title": "Apply Integer Operations",
+      "SortOrder": 18,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "efe5c46c97ee3917c2d0cf1d9c305d2bad9fd4c0e93b7f215ed03521d3162768",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:03:05",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:03:05",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -552,83 +623,22 @@
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:03:05"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U03:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:03:06:SURFACE-AREA-AND-VOLUME",
-      "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 6,
-      "Title": "Surface area and volume",
-      "SortOrder": 22,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "263f7e04d71d7a0a83ab6aa70b9ef8e0b24601e600a2d1b1c8f480dd0ebec81a",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:03:06",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 1
-        }
-      ],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G7-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:03:06"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U03:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:03:07:PYTHAGORAS-THEOREM",
-      "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 7,
-      "Title": "Pythagoras theorem",
-      "SortOrder": 23,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "214ddb353f8529deaa57d47e984018a65bcc740fced432d544a680579333bd80",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G7-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U03:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:03:08:CONSTRUCTIONS-AND-LOCI",
-      "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 8,
-      "Title": "Constructions and loci",
-      "SortOrder": 24,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "29e7fad4aeeb2d9ea327c62b077fd88bf6a1b557911478ed7b1a78c89622e872",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G7-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:03:05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U04:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:04:01:COLLECTING-DATA",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:04:01:RATIONAL-NUMBERS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Operations with Rational Numbers",
       "LessonNumber": 1,
-      "Title": "Collecting data",
-      "SortOrder": 25,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "80aa3c7b7d38f0d49ab4aa526a864d0a107ebb3859d8446e14ffbb0d539be859",
+      "Title": "Rational Numbers",
+      "SortOrder": 19,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "6030c3f931aa941cb36c5df6cbfe2041801ad6700127c446fc6cb4ce693e326a",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:04:01",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:04:01",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -640,39 +650,49 @@
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:04:01"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:04:01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U04:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:04:02:TABLES-AND-CHARTS",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:04:02:ADD-RATIONAL-NUMBERS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Operations with Rational Numbers",
       "LessonNumber": 2,
-      "Title": "Tables and charts",
-      "SortOrder": 26,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "34329b73a966cc9c64f9caa5ad1caa68aac5ed11db375b6410991b94d1311cfe",
-      "Alignments": [],
+      "Title": "Add Rational Numbers",
+      "SortOrder": 20,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "c52a62c0e1e79de9c78d65c55745f16c14e95000bc552773af56e01658f9afe4",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:04:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:04:02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U04:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:04:03:MEAN-MEDIAN-AND-RANGE",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:04:03:SUBTRACT-RATIONAL-NUMBERS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Operations with Rational Numbers",
       "LessonNumber": 3,
-      "Title": "Mean, median and range",
-      "SortOrder": 27,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "2dc71b8e16a7255cabf7839481b4e6902122e73e37ca62ecdaa217e6a98969f0",
+      "Title": "Subtract Rational Numbers",
+      "SortOrder": 21,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "2c4f0e611ecf5f8671e170e9a3bab51208e345d88ab601b60931dae1a1f90160",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:04:03",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:04:03",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -684,39 +704,49 @@
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:04:03"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:04:03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U04:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:04:04:SCATTER-GRAPHS",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:04:04:MULTIPLY-RATIONAL-NUMBERS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Operations with Rational Numbers",
       "LessonNumber": 4,
-      "Title": "Scatter graphs",
-      "SortOrder": 28,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "dc173021e0b7263a495d58f1befe23561555edfc5dc399714711fef810348fee",
-      "Alignments": [],
+      "Title": "Multiply Rational Numbers",
+      "SortOrder": 22,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "62a77c431385dc347d6f64539670be22be429b8ef1a736f607455d33df44efd2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:04:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:04:04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U04:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:04:05:EXPERIMENTAL-PROBABILITY",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:04:05:DIVIDE-RATIONAL-NUMBERS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Operations with Rational Numbers",
       "LessonNumber": 5,
-      "Title": "Experimental probability",
-      "SortOrder": 29,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "acba1d04a6f285772343cd89efce376b1d56a2be47bcde143ecb5694bed49ea6",
+      "Title": "Divide Rational Numbers",
+      "SortOrder": 23,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "1ed961b96204b2b840cb2422833c6a84c4ffde462d507f530720f2b2e02e1a8e",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:04:05",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:04:05",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -728,22 +758,184 @@
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:04:05"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:04:05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U04:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:04:06:THEORETICAL-PROBABILITY",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:04:06:APPLY-RATIONAL-NUMBERS-OPERATIONS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Operations with Rational Numbers",
       "LessonNumber": 6,
-      "Title": "Theoretical probability",
+      "Title": "Apply Rational Numbers Operations",
+      "SortOrder": 24,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "6d00b8aa136869bfc96f62990ae684f4dc154bb0513051f471084bd6aba79722",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:04:06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:REVEAL:04:06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U05:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:05:01:SIMPLIFY-ALGEBRAIC-EXPRESSIONS",
+      "UnitNumber": 5,
+      "UnitTitle": "Simplify Algebraic Expressions",
+      "LessonNumber": 1,
+      "Title": "Simplify Algebraic Expressions",
+      "SortOrder": 25,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "44f4ed8b2ef47f8b7f189aca8077c0a72df3cd575562261876fca75b1c507300",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:05:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:05:01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U05:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:05:02:ADD-LINEAR-EXPRESSIONS",
+      "UnitNumber": 5,
+      "UnitTitle": "Simplify Algebraic Expressions",
+      "LessonNumber": 2,
+      "Title": "Add Linear Expressions",
+      "SortOrder": 26,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "632ca80767404098e6c97e9e8ec8e47f9974b9664288c4824b621671e41e4d44",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:05:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:05:02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U05:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:05:03:SUBTRACT-LINEAR-EXPRESSIONS",
+      "UnitNumber": 5,
+      "UnitTitle": "Simplify Algebraic Expressions",
+      "LessonNumber": 3,
+      "Title": "Subtract Linear Expressions",
+      "SortOrder": 27,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "70ac6a6396fda30ffa23ba81c272b845a38be4736a8baebd858448394f2d6663",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:05:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:05:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U05:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:05:04:FACTOR-LINEAR-EXPRESSIONS",
+      "UnitNumber": 5,
+      "UnitTitle": "Simplify Algebraic Expressions",
+      "LessonNumber": 4,
+      "Title": "Factor Linear Expressions",
+      "SortOrder": 28,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "03b344c5049cf4bb98682b0dc21f68cad52a46e0ad154ad7e3a66fff56d766fc",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:05:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:05:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U05:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:05:05:COMBINE-OPERATIONS-WITH-LINEAR-EXPRESSIONS",
+      "UnitNumber": 5,
+      "UnitTitle": "Simplify Algebraic Expressions",
+      "LessonNumber": 5,
+      "Title": "Combine Operations with Linear Expressions",
+      "SortOrder": 29,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "1b7391b452fdad254edad8ae093db5f0826006e81a598531d76902cf9d382597",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:05:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:05:05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U06:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:06:01:WRITE-AND-SOLVE-ONE-STEP-EQUATIONS",
+      "UnitNumber": 6,
+      "UnitTitle": "Write and Solve Equations",
+      "LessonNumber": 1,
+      "Title": "Write and Solve One-Step Equations",
       "SortOrder": 30,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "082bdee3f20b35aada447e357873663dd2ee4bd68b46cfa4f311cf3cb800508f",
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "af15be2389638a269474493b2c06cbad7c33a1ecfe345d279a2c3dba0db902cd",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:04:06",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:06:01",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -755,22 +947,22 @@
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:04:06"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:06:01"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U04:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:04:07:SAMPLE-SPACES",
-      "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
-      "LessonNumber": 7,
-      "Title": "Sample spaces",
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U06:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:06:02:SOLVE-TWO-STEP-EQUATIONS-PX-Q-R",
+      "UnitNumber": 6,
+      "UnitTitle": "Write and Solve Equations",
+      "LessonNumber": 2,
+      "Title": "Solve Two-Step Equations: px + q = r",
       "SortOrder": 31,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "c49cb1caf32bf3071b0cb58e2bc07db013d35f3aa143f3294ed32957ea4067e3",
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "88592ae5f389d90b693307013f0d084bdef9aae0efc593633ecb3b90d509dc05",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:04:07",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:06:02",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -782,22 +974,22 @@
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:04:07"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:06:02"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U04:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:04:08:COMPARING-DISTRIBUTIONS",
-      "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
-      "LessonNumber": 8,
-      "Title": "Comparing distributions",
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U06:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:06:03:WRITE-AND-SOLVE-TWO-STEP-EQUATIONS-PX-Q-R",
+      "UnitNumber": 6,
+      "UnitTitle": "Write and Solve Equations",
+      "LessonNumber": 3,
+      "Title": "Write and Solve Two-Step Equations: px + q = r",
       "SortOrder": 32,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "f26f6626086801c15ead5a157849018bebc7ea891a31d68fa837dd16e9c97c7e",
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "6426b1379425786a31a5d3be0bae0f0e21d2a4ba31a1b51986cf5c3bfe197a64",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:04:08",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:06:03",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -809,7 +1001,817 @@
         "UAE-G7-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T1:EDU:04:08"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:06:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U06:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:06:04:SOLVE-TWO-STEP-EQUATIONS-P-X-Q-R",
+      "UnitNumber": 6,
+      "UnitTitle": "Write and Solve Equations",
+      "LessonNumber": 4,
+      "Title": "Solve Two-Step Equations: p(x + q) = r",
+      "SortOrder": 33,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "99a0b41ce323961b9db1a2b988a128a10ee62cb4bb2419d13f668bdef2bd3faa",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:06:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:06:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U06:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:06:05:WRITE-AND-SOLVE-TWO-STEP-EQUATIONS-P-X-Q-R",
+      "UnitNumber": 6,
+      "UnitTitle": "Write and Solve Equations",
+      "LessonNumber": 5,
+      "Title": "Write and Solve Two-Step Equations: p(x + q) = r",
+      "SortOrder": 34,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "d5f1273351a861b485753c5e4b7b99448ed84207c5028e28a81db12582b4f5be",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:06:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:06:05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U07:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:07:01:SOLVE-ONE-STEP-ADDITION-AND-SUBTRACTION-INEQUALITIES",
+      "UnitNumber": 7,
+      "UnitTitle": "Write and Solve Inequalities",
+      "LessonNumber": 1,
+      "Title": "Solve One-Step Addition and Subtraction Inequalities",
+      "SortOrder": 35,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "4bce1183d66412250fb9360564f1313d74d8c041e6943cdeda97433e67e39436",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:07:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:07:01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U07:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:07:02:WRITE-AND-SOLVE-ONE-STEP-ADDITION-AND-SUBTRACTION-INEQUALITIES",
+      "UnitNumber": 7,
+      "UnitTitle": "Write and Solve Inequalities",
+      "LessonNumber": 2,
+      "Title": "Write and Solve One-Step Addition and Subtraction Inequalities",
+      "SortOrder": 36,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "9c1ef68233aacdef694ed1b314628f4d2484adb090170e5a8f129eab1decf501",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:07:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:07:02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U07:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:07:03:SOLVE-ONE-STEP-MULTIPLICATION-AND-DIVISION-INEQUALITIES-WITH-POSITIVE-COEFFICIENTS",
+      "UnitNumber": 7,
+      "UnitTitle": "Write and Solve Inequalities",
+      "LessonNumber": 3,
+      "Title": "Solve One-Step Multiplication and Division Inequalities with Positive Coefficients",
+      "SortOrder": 37,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "c2f7a39dae781b5d177de604921cae692739b176fcd13dc9f64ff0465dd646de",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:07:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:07:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U07:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:07:04:SOLVE-ONE-STEP-MULTIPLICATION-AND-DIVISION-INEQUALITIES-WITH-NEGATIVE-COEFFICIENTS",
+      "UnitNumber": 7,
+      "UnitTitle": "Write and Solve Inequalities",
+      "LessonNumber": 4,
+      "Title": "Solve One-Step Multiplication and Division Inequalities with Negative Coefficients",
+      "SortOrder": 38,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "26f61d5abc5fa8fc6ecdd161ffef41bc09f09f0c3c30c6a7514d1aa652c994d5",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:07:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:07:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U07:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:07:05:WRITE-AND-SOLVE-ONE-STEP-MULTIPLICATION-AND-DIVISION-INEQUALITIES",
+      "UnitNumber": 7,
+      "UnitTitle": "Write and Solve Inequalities",
+      "LessonNumber": 5,
+      "Title": "Write and Solve One-Step Multiplication and Division Inequalities",
+      "SortOrder": 39,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "e65870edad18a6838be24faaa792671549e7b0ffc4a31cfd38a86e546cab95d9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:07:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:07:05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U07:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:07:06:WRITE-AND-SOLVE-TWO-STEP-INEQUALITIES",
+      "UnitNumber": 7,
+      "UnitTitle": "Write and Solve Inequalities",
+      "LessonNumber": 6,
+      "Title": "Write and Solve Two-Step Inequalities",
+      "SortOrder": 40,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "1dceb26952738e52a7c86a41e71959f24f65e14aff4b4c1a87dfabbbc8804003",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:07:06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T2:REVEAL:07:06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U08:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:08:01:VERTICAL-AND-ADJACENT-ANGLES",
+      "UnitNumber": 8,
+      "UnitTitle": "Geometric Figures",
+      "LessonNumber": 1,
+      "Title": "Vertical and Adjacent Angles",
+      "SortOrder": 41,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "dff81e660f11d9d7e00a3f03fb262e23d84bec885b38e5f32571e37618e78d50",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:08:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:08:01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U08:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:08:02:COMPLEMENTARY-AND-SUPPLEMENTARY-ANGLES",
+      "UnitNumber": 8,
+      "UnitTitle": "Geometric Figures",
+      "LessonNumber": 2,
+      "Title": "Complementary and Supplementary Angles",
+      "SortOrder": 42,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "d68e7a01f474e53dbefa6deede75f273f826f832876308b5265efda5fb118fc2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:08:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:08:02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U08:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:08:03:TRIANGLES",
+      "UnitNumber": 8,
+      "UnitTitle": "Geometric Figures",
+      "LessonNumber": 3,
+      "Title": "Triangles",
+      "SortOrder": 43,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "0609fafb75b13233d01e4c357713928801de5b21f8005f91290fdb632dc59b91",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:08:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:08:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U08:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:08:04:SCALE-DRAWINGS",
+      "UnitNumber": 8,
+      "UnitTitle": "Geometric Figures",
+      "LessonNumber": 4,
+      "Title": "Scale Drawings",
+      "SortOrder": 44,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "751d76891d65901b02144cc4719cee58bd15657f85eccf06f84d13b15102e27e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:08:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:08:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U08:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:08:05:THREE-DIMENSIONAL-FIGURES",
+      "UnitNumber": 8,
+      "UnitTitle": "Geometric Figures",
+      "LessonNumber": 5,
+      "Title": "Three-Dimensional Figures",
+      "SortOrder": 45,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "516b221e842faa1f9b922be7e5e81a5cdcaab02ace144a9c4670b289dae709d0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:08:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:08:05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U09:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:09:01:CIRCUMFERENCE-OF-CIRCLES",
+      "UnitNumber": 9,
+      "UnitTitle": "Measure Figures",
+      "LessonNumber": 1,
+      "Title": "Circumference of Circles",
+      "SortOrder": 46,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "8218324d0595087356cd0408ecc2f4f8f1239cb59b73e6480cb856583792b195",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:09:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:09:01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U09:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:09:02:AREA-OF-CIRCLES",
+      "UnitNumber": 9,
+      "UnitTitle": "Measure Figures",
+      "LessonNumber": 2,
+      "Title": "Area of Circles",
+      "SortOrder": 47,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "3dae56dbfb3201d1d179f34e1a971d210d27f418ede360ec6fe4cd9a28b45dd8",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:09:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:09:02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U09:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:09:03:AREA-OF-COMPOSITE-FIGURES",
+      "UnitNumber": 9,
+      "UnitTitle": "Measure Figures",
+      "LessonNumber": 3,
+      "Title": "Area of Composite Figures",
+      "SortOrder": 48,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "ac7a78f55db0673de868cc3e1cc08593fb12b393fa90b904ec26d4fbafaf9df1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:09:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:09:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U09:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:09:04:VOLUME",
+      "UnitNumber": 9,
+      "UnitTitle": "Measure Figures",
+      "LessonNumber": 4,
+      "Title": "Volume",
+      "SortOrder": 49,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "daf0ca3da50ee882c671f7e7582ba72cdb4ac1e5eb4af7627aeeff7fb0104bac",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:09:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:09:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U09:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:09:05:SURFACE-AREA",
+      "UnitNumber": 9,
+      "UnitTitle": "Measure Figures",
+      "LessonNumber": 5,
+      "Title": "Surface Area",
+      "SortOrder": 50,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "7ca8be372b18e7adbf08f5674ca9f76816b6f23e6f76c859a6f29f3b299e9d9d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:09:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:09:05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U09:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:09:06:VOLUME-AND-SURFACE-AREA-OF-COMPOSITE-FIGURES",
+      "UnitNumber": 9,
+      "UnitTitle": "Measure Figures",
+      "LessonNumber": 6,
+      "Title": "Volume and Surface Area of Composite Figures",
+      "SortOrder": 51,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "491c85ec7673cc430ed15afd1c8e935726cd3d7dc4028382b2685c44c3db4b0b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:09:06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:09:06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U10:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:10:01:FIND-LIKELIHOODS",
+      "UnitNumber": 10,
+      "UnitTitle": "Probability",
+      "LessonNumber": 1,
+      "Title": "Find Likelihoods",
+      "SortOrder": 52,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "4104253230be776bc4948ef87ab1a17e61d9b0db4899ccd302071ac9d82748bb",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:10:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:10:01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U10:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:10:02:RELATIVE-FREQUENCY-OF-SIMPLE-EVENTS",
+      "UnitNumber": 10,
+      "UnitTitle": "Probability",
+      "LessonNumber": 2,
+      "Title": "Relative Frequency of Simple Events",
+      "SortOrder": 53,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "8fcd75ec190d89aa4b8b018c0d9e09f6356d3669c96234e516f9f76c38be6385",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:10:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:10:02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U10:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:10:03:THEORETICAL-PROBABILITY-OF-SIMPLE-EVENTS",
+      "UnitNumber": 10,
+      "UnitTitle": "Probability",
+      "LessonNumber": 3,
+      "Title": "Theoretical Probability of Simple Events",
+      "SortOrder": 54,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "cfbeeb02679b15ab98a433935dc314ca87e9f6b00527e5d05b8aba97d0c83b65",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:10:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:10:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U10:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:10:04:COMPARE-PROBABILITIES-OF-SIMPLE-EVENTS",
+      "UnitNumber": 10,
+      "UnitTitle": "Probability",
+      "LessonNumber": 4,
+      "Title": "Compare Probabilities of Simple Events",
+      "SortOrder": 55,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "7c939a224ff143c7a2ee5679adc05cd0ce84933d2dd680b32e23f49aa2518fc1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:10:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:10:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U10:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:10:05:PROBABILITY-OF-COMPOUND-EVENTS",
+      "UnitNumber": 10,
+      "UnitTitle": "Probability",
+      "LessonNumber": 5,
+      "Title": "Probability of Compound Events",
+      "SortOrder": 56,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "f863b71b04bbed39d87eee6deea8835096a3605145941dd3c232f069f1e6e62b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:10:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:10:05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U10:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:10:06:SIMULATE-CHANCE-EVENTS",
+      "UnitNumber": 10,
+      "UnitTitle": "Probability",
+      "LessonNumber": 6,
+      "Title": "Simulate Chance Events",
+      "SortOrder": 57,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "0c5b3f0aeb04c0d722eae001ac5a1961813c466f9bb011ad82f3bb3adb3b229c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:10:06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:10:06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U11:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:11:01:BIASED-AND-UNBIASED-SAMPLES",
+      "UnitNumber": 11,
+      "UnitTitle": "Sampling and Statistics",
+      "LessonNumber": 1,
+      "Title": "Biased and Unbiased Samples",
+      "SortOrder": 58,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "1932e66649f150c25adbdbfefcfef764e92b9a205a1bd527f0b3152521e980a8",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:11:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:11:01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U11:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:11:02:MAKE-PREDICTIONS",
+      "UnitNumber": 11,
+      "UnitTitle": "Sampling and Statistics",
+      "LessonNumber": 2,
+      "Title": "Make Predictions",
+      "SortOrder": 59,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "a847d9423cbcc5e45e51ec3b3da817f83117c52341926a12cac372f2db50dbe9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:11:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:11:02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U11:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:11:03:GENERATE-MULTIPLE-SAMPLES",
+      "UnitNumber": 11,
+      "UnitTitle": "Sampling and Statistics",
+      "LessonNumber": 3,
+      "Title": "Generate Multiple Samples",
+      "SortOrder": 60,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "1ab90069cb7c4ef278628d881eedad3a954305bc00d1239ca8d748f4b4a188b7",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:11:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:11:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U11:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:11:04:COMPARE-TWO-POPULATIONS",
+      "UnitNumber": 11,
+      "UnitTitle": "Sampling and Statistics",
+      "LessonNumber": 4,
+      "Title": "Compare Two Populations",
+      "SortOrder": 61,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "1b7e964c8c56b8b1b26e1c9efede949da42e2fb9f9bd82d0fff41c9e6e000679",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:11:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:11:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L7:GENERAL:U11:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L7:GENERAL:11:05:ASSESS-VISUAL-OVERLAP",
+      "UnitNumber": 11,
+      "UnitTitle": "Sampling and Statistics",
+      "LessonNumber": 5,
+      "Title": "Assess Visual Overlap",
+      "SortOrder": 62,
+      "SourceUrl": "https://www.mheducation.com/unitas/school/explore/sites/reveal-math/toc-brochure-6-8.pdf",
+      "SemanticSha256": "2b3869f35c31838a0c23c7454e31b1425c6863db07266653c7dd1ffdb4393e75",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:11:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G7-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G7:GENERAL:T3:REVEAL:11:05"
     }
   ]
 }

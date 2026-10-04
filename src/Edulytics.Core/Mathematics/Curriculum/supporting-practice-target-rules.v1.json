@@ -3,6 +3,1819 @@
   "registry": "Supporting Practice target rules",
   "rules": [
     {
+      "id": "uae-official-reference-fallback-g10-advanced-u1",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L10:ADVANCED:01:08:SOLVING-LINEAR-NONLINEAR-SYSTEMS$"
+      ],
+      "skillId": "supporting.algebra.equations",
+      "mechanic": "QUADRATIC",
+      "families": [
+        "supporting.algebra.quadratic_larger_root"
+      ],
+      "content": {
+        "concept": "A quadratic equation can have two real roots that make the quadratic expression equal zero.",
+        "workedExample": "x²−5x+6=0 factors to (x−2)(x−3), so the roots are 2 and 3.",
+        "solution": "Factor when possible, use the zero-product property, and substitute roots to verify.",
+        "commonMistake": "Do not report only a factor without converting it to a root.",
+        "summary": "Find and verify the roots of a quadratic equation."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g10-advanced-u2",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L10:ADVANCED:02:01:POLYNOMIAL-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L10:ADVANCED:02:02:ANALYZING-GRAPHS-OF-POLYNOMIAL-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L10:ADVANCED:02:05:POWERS-OF-BINOMIALS$"
+      ],
+      "skillId": "supporting.functions.core",
+      "mechanic": "POLYNOMIAL_FUNCTION",
+      "families": [
+        "supporting.functions.polynomial_value"
+      ],
+      "content": {
+        "concept": "Polynomial functions assign values by powers of the input.",
+        "workedExample": "For p(x)=2x²-3x+1, substitute x and evaluate powers first.",
+        "solution": "Evaluate each power term, combine coefficients, and check substitution.",
+        "commonMistake": "Do not apply powers after addition.",
+        "summary": "Polynomial values follow the stated expression."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g10-advanced-u5",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L10:ADVANCED:05:04:GEOMETRIC-SEQUENCES-AND-SERIES$",
+        "^PED:UAE-MOE-MATH:L10:ADVANCED:05:05:MODELING-DATA$"
+      ],
+      "skillId": "supporting.exponentials_logs",
+      "mechanic": "EXP_LOG",
+      "families": [
+        "supporting.exponentials.solve_exponent",
+        "supporting.logarithms.evaluate"
+      ],
+      "content": {
+        "concept": "Exponential and logarithmic statements are inverse descriptions of the same power relationship.",
+        "workedExample": "2^5=32, so log base 2 of 32 is 5.",
+        "solution": "Rewrite both forms using the same base and identify the exponent.",
+        "commonMistake": "Do not confuse the logarithm base with the argument.",
+        "summary": "Use the inverse relationship between powers and logarithms."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g10-general-u1",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L10:GENERAL:01:02:MULTIPLYING-A-POLYNOMIAL-BY-A-MONOMIAL$",
+        "^PED:UAE-MOE-MATH:L10:GENERAL:01:04:SPECIAL-PRODUCTS$",
+        "^PED:UAE-MOE-MATH:L10:GENERAL:01:05:USING-THE-DISTRIBUTIVE-PROPERTY$",
+        "^PED:UAE-MOE-MATH:L10:GENERAL:01:06:SOLVING-X-BX-C-0$",
+        "^PED:UAE-MOE-MATH:L10:GENERAL:01:07:SOLVING-AX-BX-C-0$",
+        "^PED:UAE-MOE-MATH:L10:GENERAL:01:08:DIFFERENCE-OF-TWO-SQUARES$",
+        "^PED:UAE-MOE-MATH:L10:GENERAL:01:09:PERFECT-SQUARES$"
+      ],
+      "skillId": "supporting.algebra.equations",
+      "mechanic": "QUADRATIC",
+      "families": [
+        "supporting.algebra.quadratic_larger_root"
+      ],
+      "content": {
+        "concept": "A quadratic equation can have two real roots that make the quadratic expression equal zero.",
+        "workedExample": "x²−5x+6=0 factors to (x−2)(x−3), so the roots are 2 and 3.",
+        "solution": "Factor when possible, use the zero-product property, and substitute roots to verify.",
+        "commonMistake": "Do not report only a factor without converting it to a root.",
+        "summary": "Find and verify the roots of a quadratic equation."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g10-general-u3",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L10:GENERAL:03:01:PARALLEL-AND-INTERSECTING-LINES$",
+        "^PED:UAE-MOE-MATH:L10:GENERAL:03:04:EQUATIONS-OF-LINES$",
+        "^PED:UAE-MOE-MATH:L10:GENERAL:03:05:PROVING-LINES-PARALLEL$",
+        "^PED:UAE-MOE-MATH:L10:GENERAL:03:06:PERPENDICULARS-AND-DISTANCE$"
+      ],
+      "skillId": "geometry.angles.relationships",
+      "mechanic": "PARALLEL_PERPENDICULAR",
+      "families": [
+        "geometry.angles.parallel_lines",
+        "geometry.angles.supplementary"
+      ],
+      "content": {
+        "concept": "Parallel and perpendicular line relationships impose exact angle constraints.",
+        "workedExample": "Corresponding angles on parallel lines are equal; adjacent angles on a straight line sum to 180°.",
+        "solution": "Identify the geometric relationship first, then apply the appropriate equality or supplementary rule.",
+        "commonMistake": "Do not assume angle equality without a justified line relationship.",
+        "summary": "Use line relationships to justify angle facts."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g10-general-u4",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L10:GENERAL:04:06:DILATIONS$"
+      ],
+      "skillId": "supporting.geometry.transformations",
+      "mechanic": "TRANSFORMATIONS",
+      "families": [
+        "supporting.geometry.translate_point",
+        "supporting.geometry.reflect_axis",
+        "supporting.geometry.rotate90",
+        "supporting.transformations.mixed"
+      ],
+      "content": {
+        "concept": "Transformations move points according to exact coordinate rules while preserving specified geometric properties.",
+        "workedExample": "Translating (2,−1) by <3,4> gives (5,3).",
+        "solution": "Apply the transformation rule to each coordinate and check the stated centre, axis or vector.",
+        "commonMistake": "Do not change both coordinate signs for every reflection.",
+        "summary": "Apply coordinate transformation rules exactly."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g10-general-u5",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L10:GENERAL:05:01:CLASSIFYING-TRIANGLES$",
+        "^PED:UAE-MOE-MATH:L10:GENERAL:05:02:ANGLES-OF-TRIANGLES$",
+        "^PED:UAE-MOE-MATH:L10:GENERAL:05:06:ISOSCELES-AND-EQUILATERAL-TRIANGLES$",
+        "^PED:UAE-MOE-MATH:L10:GENERAL:05:08:TRIANGLES-AND-COORDINATE-PROOF$"
+      ],
+      "skillId": "geometry.similarity",
+      "mechanic": "CONGRUENCE_SIMILARITY",
+      "families": [
+        "geometry.similarity.find_missing_length",
+        "geometry.similarity.scale_factor"
+      ],
+      "content": {
+        "concept": "Similar shapes preserve angles and scale corresponding lengths by a common factor; congruent shapes have equal corresponding measures.",
+        "workedExample": "If a corresponding length changes from 4 to 10, the scale factor is 2.5.",
+        "solution": "Match corresponding parts and use one consistent scale factor.",
+        "commonMistake": "Do not pair non-corresponding sides.",
+        "summary": "Use correspondence and scale consistently."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g11-advanced-u1",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:01:01:POWER-AND-RADICAL-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:01:02:POLYNOMIAL-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:01:03:REMAINDER-AND-FACTOR-THEOREMS$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:01:04:ZEROS-OF-POLYNOMIAL-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:01:05:RATIONAL-FUNCTIONS$"
+      ],
+      "skillId": "supporting.functions.core",
+      "mechanic": "FUNCTIONS",
+      "families": [
+        "supporting.functions.evaluate",
+        "supporting.functions.composite",
+        "supporting.functions.core.mixed"
+      ],
+      "content": {
+        "concept": "A function maps each allowed input to an output according to a rule.",
+        "workedExample": "If f(x)=2x+3, then f(4)=11.",
+        "solution": "Substitute the input into the rule; for compositions, evaluate the inner function before the outer one.",
+        "commonMistake": "Do not reverse the order in a composite function.",
+        "summary": "Treat a function as a precise input-output rule."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g11-advanced-u10",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:10:01:DESIGNING-A-STUDY$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:10:02:DISTRIBUTIONS-OF-DATA$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:10:03:PROBABILITY-DISTRIBUTIONS$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:10:06:CENTRAL-LIMIT-THEOREM$"
+      ],
+      "skillId": "supporting.statistics.distributions",
+      "mechanic": "DISTRIBUTIONS",
+      "families": [
+        "supporting.statistics.compare_range"
+      ],
+      "content": {
+        "concept": "Distributions can be compared using measures of centre and spread.",
+        "workedExample": "A distribution with range 12 is more spread by range than one with range 7.",
+        "solution": "Calculate the same statistic for each distribution before comparing.",
+        "commonMistake": "Do not compare different measures as if they were interchangeable.",
+        "summary": "Compare like-for-like measures of centre or spread."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g11-advanced-u11",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:11:02:ANALYZING-GRAPHS-OF-FUNCTIONS-AND-RELATIONS$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:11:03:CONTINUITY-END-BEHAVIOR-AND-LIMITS$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:11:06:OPERATIONS-AND-COMPOSITION-OF-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:11:07:INVERSE-RELATIONS-AND-FUNCTIONS$"
+      ],
+      "skillId": "supporting.functions.core",
+      "mechanic": "FUNCTIONS",
+      "families": [
+        "supporting.functions.evaluate",
+        "supporting.functions.composite",
+        "supporting.functions.core.mixed"
+      ],
+      "content": {
+        "concept": "A function maps each allowed input to an output according to a rule.",
+        "workedExample": "If f(x)=2x+3, then f(4)=11.",
+        "solution": "Substitute the input into the rule; for compositions, evaluate the inner function before the outer one.",
+        "commonMistake": "Do not reverse the order in a composite function.",
+        "summary": "Treat a function as a precise input-output rule."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g11-advanced-u12",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:12:02:EVALUATING-LIMITS-ALGEBRAICALLY$"
+      ],
+      "skillId": "supporting.calculus.core",
+      "mechanic": "CALCULUS",
+      "families": [
+        "supporting.calculus.derivative_value",
+        "supporting.calculus.definite_integral_linear",
+        "supporting.calculus.optimization"
+      ],
+      "content": {
+        "concept": "Calculus describes rates of change, accumulated change and optimization.",
+        "workedExample": "For f(x)=3x²+2x, f'(x)=6x+2.",
+        "solution": "Apply exact differentiation or integration rules, or use vertex structure for an elementary optimization model.",
+        "commonMistake": "Do not mix derivative and original-function values.",
+        "summary": "Use exact calculus rules and verify against the original function."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g11-advanced-u3",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:03:02:DEGREES-AND-RADIANS$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:03:04:GRAPHING-SINE-AND-COSINE-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:03:05:GRAPHING-OTHER-TRIGONOMETRIC-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:03:06:INVERSE-TRIGONOMETRIC-FUNCTIONS$"
+      ],
+      "skillId": "supporting.trigonometry.core",
+      "mechanic": "TRIGONOMETRY",
+      "families": [
+        "supporting.trigonometry.core.mixed"
+      ],
+      "content": {
+        "concept": "Right-triangle trigonometry relates an acute angle to ratios of side lengths.",
+        "workedExample": "If opposite=3 and hypotenuse=5, sin θ=3/5.",
+        "solution": "Identify opposite, adjacent and hypotenuse relative to the angle, then choose sine, cosine or tangent.",
+        "commonMistake": "Do not label sides without reference to the chosen angle.",
+        "summary": "Choose the trigonometric ratio from the relevant side pair."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g11-advanced-u4",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:04:02:VERIFYING-TRIGONOMETRIC-IDENTITIES$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:04:03:SOLVING-TRIGONOMETRIC-EQUATIONS$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:04:04:SUM-AND-DIFFERENCE-IDENTITIES$"
+      ],
+      "skillId": "supporting.trigonometry.core",
+      "mechanic": "TRIG_IDENTITY",
+      "families": [
+        "supporting.trigonometry.identity_missing_component"
+      ],
+      "content": {
+        "concept": "A trigonometric identity is true for all permitted angles and can connect exact sine and cosine values.",
+        "workedExample": "sin²θ+cos²θ=1.",
+        "solution": "Substitute the known component into the identity, solve the missing positive component when the angle is acute, and verify.",
+        "commonMistake": "Do not treat an identity as an equation true only for one angle.",
+        "summary": "Use identities to connect exact trig components."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g11-advanced-u5",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:05:01:MULTIVARIABLE-LINEAR-SYSTEMS-AND-ELEMENTARY-ROW-OPERATIONS$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:05:03:SOLVING-LINEAR-SYSTEMS-USING-INVERSES-AND-CRAMER-S-RULE$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:05:04:PARTIAL-FRACTIONS$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:05:05:LINEAR-PROGRAMMING$"
+      ],
+      "skillId": "supporting.algebra.expressions",
+      "mechanic": "ALGEBRA_EXPRESSIONS",
+      "families": [
+        "supporting.algebra.simplify",
+        "supporting.algebra.substitute",
+        "supporting.algebra.expressions.mixed"
+      ],
+      "content": {
+        "concept": "Algebraic expressions represent quantities using variables, coefficients and operations.",
+        "workedExample": "2x+3x−4 simplifies to 5x−4.",
+        "solution": "Collect like terms, preserve unlike terms, and use substitution to check a simplified form.",
+        "commonMistake": "Do not combine unlike terms such as x and x².",
+        "summary": "Use algebraic structure to simplify and evaluate expressions."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g11-advanced-u6",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:06:01:PARABOLAS$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:06:03:ELLIPSES$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:06:04:HYPERBOLAS$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:06:05:IDENTIFYING-CONIC-SECTIONS$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:06:06:SOLVING-LINEAR-NONLINEAR-SYSTEMS$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:06:08:PARAMETRIC-EQUATIONS$"
+      ],
+      "skillId": "supporting.functions.core",
+      "mechanic": "FUNCTIONS",
+      "families": [
+        "supporting.functions.evaluate",
+        "supporting.functions.composite",
+        "supporting.functions.core.mixed"
+      ],
+      "content": {
+        "concept": "A function maps each allowed input to an output according to a rule.",
+        "workedExample": "If f(x)=2x+3, then f(4)=11.",
+        "solution": "Substitute the input into the rule; for compositions, evaluate the inner function before the outer one.",
+        "commonMistake": "Do not reverse the order in a composite function.",
+        "summary": "Treat a function as a precise input-output rule."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g11-advanced-u7",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:07:05:DOT-AND-CROSS-PRODUCTS-IN-SPACE$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:07:06:PROPERTIES-OF-DOT-AND-CROSS-PRODUCTS$"
+      ],
+      "skillId": "supporting.vectors.core",
+      "mechanic": "VECTORS",
+      "families": [
+        "supporting.vectors.add",
+        "supporting.vectors.magnitude"
+      ],
+      "content": {
+        "concept": "Vectors represent directed displacement using components.",
+        "workedExample": "Adding <3,−1> to point (2,4) gives (5,3).",
+        "solution": "Operate componentwise and keep horizontal and vertical components in order.",
+        "commonMistake": "Do not swap vector components.",
+        "summary": "Treat vectors as ordered components with direction."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g11-advanced-u8",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:08:01:POLAR-COORDINATES$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:08:02:GRAPHS-OF-POLAR-EQUATIONS$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:08:03:POLAR-AND-CARTESIAN-FORMS-OF-EQUATIONS$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:08:04:POLAR-FORMS-OF-CONIC-SECTIONS$"
+      ],
+      "skillId": "supporting.trigonometry.core",
+      "mechanic": "TRIGONOMETRY",
+      "families": [
+        "supporting.trigonometry.core.mixed"
+      ],
+      "content": {
+        "concept": "Right-triangle trigonometry relates an acute angle to ratios of side lengths.",
+        "workedExample": "If opposite=3 and hypotenuse=5, sin θ=3/5.",
+        "solution": "Identify opposite, adjacent and hypotenuse relative to the angle, then choose sine, cosine or tangent.",
+        "commonMistake": "Do not label sides without reference to the chosen angle.",
+        "summary": "Choose the trigonometric ratio from the relevant side pair."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g11-advanced-u9",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:09:01:SEQUENCES-AS-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:09:02:SEQUENCES-SERIES-AND-SIGMA-NOTATION$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:09:03:ARITHMETIC-SEQUENCES-AND-SERIES$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:09:04:GEOMETRIC-SEQUENCES-AND-SERIES$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:09:05:INFINITE-GEOMETRIC-SERIES$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:09:06:RECURSION-AND-ITERATION$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:09:07:BINOMIAL-THEOREM$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:09:08:PROOF-BY-INDUCTION$",
+        "^PED:UAE-MOE-MATH:L11:ADVANCED:09:09:FUNCTIONS-AS-INFINITE-SERIES$"
+      ],
+      "skillId": "supporting.sequences.core",
+      "mechanic": "SERIES",
+      "families": [
+        "supporting.series.geometric_sum"
+      ],
+      "content": {
+        "concept": "A geometric series has terms related by a constant ratio and a closed-form finite sum.",
+        "workedExample": "For first term a, ratio r and n terms, use S_n=a(r^n-1)/(r-1) when r≠1.",
+        "solution": "Identify a, r and n, then substitute into the finite-sum formula.",
+        "commonMistake": "Do not use the arithmetic-series rule for a geometric series.",
+        "summary": "Use the geometric-series sum with its constant ratio."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g11-general-u1",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L11:GENERAL:01:01:RATIOS-AND-PROPORTIONS$",
+        "^PED:UAE-MOE-MATH:L11:GENERAL:01:03:SIMILAR-TRIANGLES$",
+        "^PED:UAE-MOE-MATH:L11:GENERAL:01:05:PARTS-OF-SIMILAR-TRIANGLES$",
+        "^PED:UAE-MOE-MATH:L11:GENERAL:01:07:SCALE-DRAWINGS-AND-MODELS$"
+      ],
+      "skillId": "geometry.similarity",
+      "mechanic": "DILATION_SIMILARITY",
+      "families": [
+        "geometry.similarity.find_missing_length",
+        "geometry.similarity.scale_factor"
+      ],
+      "content": {
+        "concept": "A dilation scales all lengths from a centre by the same factor.",
+        "workedExample": "A scale factor of 2 doubles every corresponding length.",
+        "solution": "Use the common scale factor on corresponding distances and verify ratios agree.",
+        "commonMistake": "Do not add the scale factor to lengths.",
+        "summary": "Dilations preserve shape and scale lengths multiplicatively."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g11-general-u2",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L11:GENERAL:02:01:GEOMETRIC-MEAN$",
+        "^PED:UAE-MOE-MATH:L11:GENERAL:02:02:PYTHAGOREAN-THEOREM-AND-ITS-CONVERSE$",
+        "^PED:UAE-MOE-MATH:L11:GENERAL:02:03:SPECIAL-RIGHT-TRIANGLES$",
+        "^PED:UAE-MOE-MATH:L11:GENERAL:02:05:ANGLES-OF-ELEVATION-AND-DEPRESSION$"
+      ],
+      "skillId": "supporting.trigonometry.core",
+      "mechanic": "TRIGONOMETRY",
+      "families": [
+        "supporting.trigonometry.core.mixed"
+      ],
+      "content": {
+        "concept": "Right-triangle trigonometry relates an acute angle to ratios of side lengths.",
+        "workedExample": "If opposite=3 and hypotenuse=5, sin θ=3/5.",
+        "solution": "Identify opposite, adjacent and hypotenuse relative to the angle, then choose sine, cosine or tangent.",
+        "commonMistake": "Do not label sides without reference to the chosen angle.",
+        "summary": "Choose the trigonometric ratio from the relevant side pair."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g11-general-u4",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L11:GENERAL:04:02:MEASURING-ANGLES-AND-ARCS$",
+        "^PED:UAE-MOE-MATH:L11:GENERAL:04:03:ARCS-AND-CHORDS$",
+        "^PED:UAE-MOE-MATH:L11:GENERAL:04:04:INSCRIBED-ANGLES$",
+        "^PED:UAE-MOE-MATH:L11:GENERAL:04:05:TANGENTS$",
+        "^PED:UAE-MOE-MATH:L11:GENERAL:04:06:SECANTS-TANGENTS-AND-ANGLE-MEASURES$",
+        "^PED:UAE-MOE-MATH:L11:GENERAL:04:07:SPECIAL-SEGMENTS-IN-A-CIRCLE$",
+        "^PED:UAE-MOE-MATH:L11:GENERAL:04:08:EQUATION-OF-A-CIRCLE$"
+      ],
+      "skillId": "supporting.geometry.circles_loci",
+      "mechanic": "CIRCLE_THEOREM",
+      "families": [
+        "supporting.circle.angle_semicircle"
+      ],
+      "content": {
+        "concept": "Circle theorems relate angles to chords, arcs and diameters.",
+        "workedExample": "An angle subtended by a diameter at the circumference is 90 degrees.",
+        "solution": "Identify the relevant diameter/chord relationship and apply the theorem exactly.",
+        "commonMistake": "Do not assume every inscribed angle is a right angle.",
+        "summary": "Use the stated circle configuration."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g11-general-u5",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L11:GENERAL:05:01:REPRESENTATIONS-OF-THREE-DIMENSIONAL-FIGURES$",
+        "^PED:UAE-MOE-MATH:L11:GENERAL:05:02:SURFACE-AREA-OF-PRISMS-AND-CYLINDERS$",
+        "^PED:UAE-MOE-MATH:L11:GENERAL:05:03:SURFACE-AREA-OF-PYRAMIDS-AND-CONES$",
+        "^PED:UAE-MOE-MATH:L11:GENERAL:05:04:VOLUME-OF-PRISMS-AND-CYLINDERS$",
+        "^PED:UAE-MOE-MATH:L11:GENERAL:05:05:VOLUME-OF-PYRAMIDS-AND-CONES$",
+        "^PED:UAE-MOE-MATH:L11:GENERAL:05:07:SPACE-GEOMETRY$"
+      ],
+      "skillId": "supporting.geometry.area_volume",
+      "mechanic": "SURFACE_AREA",
+      "families": [
+        "supporting.geometry.surface_area_cuboid"
+      ],
+      "content": {
+        "concept": "Surface area is the total area of all exposed faces of a solid.",
+        "workedExample": "A cuboid has three pairs of congruent rectangular faces.",
+        "solution": "Find each face area, include both opposite faces, and add.",
+        "commonMistake": "Do not confuse surface area with volume.",
+        "summary": "Surface area adds face areas."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g11-general-u6",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L11:GENERAL:06:03:SOLVING-EQUATIONS$",
+        "^PED:UAE-MOE-MATH:L11:GENERAL:06:04:SOLVING-ABSOLUTE-VALUE-EQUATIONS$"
+      ],
+      "skillId": "algebra.linear.solve",
+      "mechanic": "LINEAR_EQUATION",
+      "families": [
+        "algebra.linear.ax_plus_b_equals_c",
+        "algebra.linear.variables_both_sides"
+      ],
+      "content": {
+        "concept": "A linear equation is solved by applying inverse operations while preserving equality.",
+        "workedExample": "3x+5=20 gives x=5.",
+        "solution": "Undo addition/subtraction and multiplication/division in reverse order, then substitute the result back.",
+        "commonMistake": "Do not apply an operation to only one side.",
+        "summary": "Preserve equality while isolating the variable."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g11-general-u7",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L11:GENERAL:07:03:OPTIMIZATION-WITH-LINEAR-PROGRAMMING$"
+      ],
+      "skillId": "supporting.reasoning.core",
+      "mechanic": "ALGEBRA_MODELLING",
+      "families": [
+        "supporting.reasoning.multistep"
+      ],
+      "content": {
+        "concept": "Algebraic modelling translates a multi-step situation into equations that preserve the stated relationships.",
+        "workedExample": "If 3x+4=25, undo 4 then divide by 3 to obtain x=7.",
+        "solution": "Define the variable, translate each operation in order, solve the equation, and check in the original situation.",
+        "commonMistake": "Do not guess values without checking the model.",
+        "summary": "Translate relationships into equations and verify the solution."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g12-advanced-u1",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:01:03:TRIGONOMETRIC-AND-INVERSE-TRIGONOMETRIC-FUNCTIONS$"
+      ],
+      "skillId": "supporting.trigonometry.core",
+      "mechanic": "TRIGONOMETRY",
+      "families": [
+        "supporting.trigonometry.core.mixed"
+      ],
+      "content": {
+        "concept": "Right-triangle trigonometry relates an acute angle to ratios of side lengths.",
+        "workedExample": "If opposite=3 and hypotenuse=5, sin θ=3/5.",
+        "solution": "Identify opposite, adjacent and hypotenuse relative to the angle, then choose sine, cosine or tangent.",
+        "commonMistake": "Do not label sides without reference to the chosen angle.",
+        "summary": "Choose the trigonometric ratio from the relevant side pair."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g12-advanced-u2",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:02:02:THE-CONCEPT-OF-LIMIT$",
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:02:03:COMPUTATION-OF-LIMITS$",
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:02:04:CONTINUITY-AND-ITS-CONSEQUENCES$",
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:02:05:LIMITS-INVOLVING-INFINITY-ASYMPTOTES$",
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:02:06:FORMAL-DEFINITION-OF-THE-LIMIT$",
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:02:07:LIMITS-AND-LOSS-OF-SIGNIFICANCE-ERRORS$"
+      ],
+      "skillId": "supporting.calculus.core",
+      "mechanic": "CALCULUS",
+      "families": [
+        "supporting.calculus.derivative_value",
+        "supporting.calculus.definite_integral_linear",
+        "supporting.calculus.optimization"
+      ],
+      "content": {
+        "concept": "Calculus describes rates of change, accumulated change and optimization.",
+        "workedExample": "For f(x)=3x²+2x, f'(x)=6x+2.",
+        "solution": "Apply exact differentiation or integration rules, or use vertex structure for an elementary optimization model.",
+        "commonMistake": "Do not mix derivative and original-function values.",
+        "summary": "Use exact calculus rules and verify against the original function."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g12-advanced-u3",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:03:04:THE-PRODUCT-AND-QUOTIENT-RULES$",
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:03:05:THE-CHAIN-RULE$",
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:03:09:THE-HYPERBOLIC-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:03:10:THE-MEAN-VALUE-THEOREM$"
+      ],
+      "skillId": "supporting.calculus.core",
+      "mechanic": "CALCULUS",
+      "families": [
+        "supporting.calculus.derivative_value",
+        "supporting.calculus.definite_integral_linear",
+        "supporting.calculus.optimization"
+      ],
+      "content": {
+        "concept": "Calculus describes rates of change, accumulated change and optimization.",
+        "workedExample": "For f(x)=3x²+2x, f'(x)=6x+2.",
+        "solution": "Apply exact differentiation or integration rules, or use vertex structure for an elementary optimization model.",
+        "commonMistake": "Do not mix derivative and original-function values.",
+        "summary": "Use exact calculus rules and verify against the original function."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g12-advanced-u4",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:04:02:INDETERMINATE-FORMS-AND-L-HOPITAL-S-RULE$",
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:04:03:MAXIMUM-AND-MINIMUM-VALUES$",
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:04:04:INCREASING-AND-DECREASING-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:04:06:OVERVIEW-OF-CURVE-SKETCHING$",
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:04:07:OPTIMIZATION$"
+      ],
+      "skillId": "supporting.calculus.core",
+      "mechanic": "CALCULUS",
+      "families": [
+        "supporting.calculus.derivative_value",
+        "supporting.calculus.definite_integral_linear",
+        "supporting.calculus.optimization"
+      ],
+      "content": {
+        "concept": "Calculus describes rates of change, accumulated change and optimization.",
+        "workedExample": "For f(x)=3x²+2x, f'(x)=6x+2.",
+        "solution": "Apply exact differentiation or integration rules, or use vertex structure for an elementary optimization model.",
+        "commonMistake": "Do not mix derivative and original-function values.",
+        "summary": "Use exact calculus rules and verify against the original function."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g12-advanced-u5",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:05:02:SUMS-AND-SIGMA-NOTATION$",
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:05:03:AREA$"
+      ],
+      "skillId": "supporting.calculus.core",
+      "mechanic": "CALCULUS",
+      "families": [
+        "supporting.calculus.derivative_value",
+        "supporting.calculus.definite_integral_linear",
+        "supporting.calculus.optimization"
+      ],
+      "content": {
+        "concept": "Calculus describes rates of change, accumulated change and optimization.",
+        "workedExample": "For f(x)=3x²+2x, f'(x)=6x+2.",
+        "solution": "Apply exact differentiation or integration rules, or use vertex structure for an elementary optimization model.",
+        "commonMistake": "Do not mix derivative and original-function values.",
+        "summary": "Use exact calculus rules and verify against the original function."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g12-advanced-u6",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:06:01:AREA-BETWEEN-CURVES$",
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:06:02:VOLUME-SLICING-DISKS-AND-WASHERS$",
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:06:03:VOLUMES-BY-CYLINDRICAL-SHELLS$",
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:06:04:ARC-LENGTH-AND-SURFACE-AREA$",
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:06:05:PROJECTILE-MOTION$"
+      ],
+      "skillId": "supporting.calculus.core",
+      "mechanic": "CALCULUS",
+      "families": [
+        "supporting.calculus.derivative_value",
+        "supporting.calculus.definite_integral_linear",
+        "supporting.calculus.optimization"
+      ],
+      "content": {
+        "concept": "Calculus describes rates of change, accumulated change and optimization.",
+        "workedExample": "For f(x)=3x²+2x, f'(x)=6x+2.",
+        "solution": "Apply exact differentiation or integration rules, or use vertex structure for an elementary optimization model.",
+        "commonMistake": "Do not mix derivative and original-function values.",
+        "summary": "Use exact calculus rules and verify against the original function."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g12-advanced-u7",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:07:06:MODELING-WITH-DIFFERENTIAL-EQUATIONS$",
+        "^PED:UAE-MOE-MATH:L12:ADVANCED:07:07:SEPARABLE-DIFFERENTIAL-EQUATIONS$"
+      ],
+      "skillId": "supporting.calculus.core",
+      "mechanic": "DIFFERENTIAL_EQUATION",
+      "families": [
+        "supporting.calculus.differential_equation_value"
+      ],
+      "content": {
+        "concept": "A differential equation relates a function to its derivative.",
+        "workedExample": "If dy/dx=2ax, integration gives y=ax²+C.",
+        "solution": "Integrate the derivative and use the initial condition to determine the constant.",
+        "commonMistake": "Do not omit the integration constant before applying conditions.",
+        "summary": "Integrate then apply the condition."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g12-general-u2",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L12:GENERAL:02:03:POLYNOMIAL-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L12:GENERAL:02:04:ANALYZING-GRAPHS-OF-POLYNOMIAL-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L12:GENERAL:02:05:SOLVING-POLYNOMIAL-EQUATIONS$",
+        "^PED:UAE-MOE-MATH:L12:GENERAL:02:06:THE-REMAINDER-AND-FACTOR-THEOREMS$",
+        "^PED:UAE-MOE-MATH:L12:GENERAL:02:07:ROOTS-AND-ZEROS$",
+        "^PED:UAE-MOE-MATH:L12:GENERAL:02:08:RATIONAL-ZERO-THEOREM$"
+      ],
+      "skillId": "supporting.functions.core",
+      "mechanic": "POLYNOMIAL_FUNCTION",
+      "families": [
+        "supporting.functions.polynomial_value"
+      ],
+      "content": {
+        "concept": "Polynomial functions assign values by powers of the input.",
+        "workedExample": "For p(x)=2x²-3x+1, substitute x and evaluate powers first.",
+        "solution": "Evaluate each power term, combine coefficients, and check substitution.",
+        "commonMistake": "Do not apply powers after addition.",
+        "summary": "Polynomial values follow the stated expression."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g12-general-u3",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L12:GENERAL:03:02:IDENTIFY-FUNCTIONS-WITH-SUCCESSIVE-DIFFERENCES$",
+        "^PED:UAE-MOE-MATH:L12:GENERAL:03:03:GROWTH-AND-DECAY$"
+      ],
+      "skillId": "supporting.exponentials_logs",
+      "mechanic": "EXP_LOG",
+      "families": [
+        "supporting.exponentials.solve_exponent",
+        "supporting.logarithms.evaluate"
+      ],
+      "content": {
+        "concept": "Exponential and logarithmic statements are inverse descriptions of the same power relationship.",
+        "workedExample": "2^5=32, so log base 2 of 32 is 5.",
+        "solution": "Rewrite both forms using the same base and identify the exponent.",
+        "commonMistake": "Do not confuse the logarithm base with the argument.",
+        "summary": "Use the inverse relationship between powers and logarithms."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g12-general-u4",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L12:GENERAL:04:01:DESIGNING-A-STUDY$",
+        "^PED:UAE-MOE-MATH:L12:GENERAL:04:02:DISTRIBUTIONS-OF-DATA$",
+        "^PED:UAE-MOE-MATH:L12:GENERAL:04:03:PROBABILITY-DISTRIBUTIONS$",
+        "^PED:UAE-MOE-MATH:L12:GENERAL:04:04:THE-BINOMIAL-DISTRIBUTION$",
+        "^PED:UAE-MOE-MATH:L12:GENERAL:04:05:THE-NORMAL-DISTRIBUTION$"
+      ],
+      "skillId": "supporting.statistics.distributions",
+      "mechanic": "DISTRIBUTIONS",
+      "families": [
+        "supporting.statistics.compare_range"
+      ],
+      "content": {
+        "concept": "Distributions can be compared using measures of centre and spread.",
+        "workedExample": "A distribution with range 12 is more spread by range than one with range 7.",
+        "solution": "Calculate the same statistic for each distribution before comparing.",
+        "commonMistake": "Do not compare different measures as if they were interchangeable.",
+        "summary": "Compare like-for-like measures of centre or spread."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g12-general-u5",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L12:GENERAL:05:01:OPERATIONS-ON-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L12:GENERAL:05:02:INVERSE-RELATIONS-AND-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L12:GENERAL:05:04:NTH-ROOTS$",
+        "^PED:UAE-MOE-MATH:L12:GENERAL:05:05:OPERATIONS-ON-RADICAL-EXPRESSIONS$",
+        "^PED:UAE-MOE-MATH:L12:GENERAL:05:06:RATIONAL-EXPONENTS$"
+      ],
+      "skillId": "supporting.functions.core",
+      "mechanic": "INVERSE_FUNCTION",
+      "families": [
+        "supporting.functions.inverse_linear"
+      ],
+      "content": {
+        "concept": "An inverse function reverses the input-output mapping.",
+        "workedExample": "If f(x)=2x+3, solve y=2x+3 for x to find the inverse.",
+        "solution": "Swap input/output roles and solve for the original input.",
+        "commonMistake": "Do not take a reciprocal of the function formula.",
+        "summary": "Inverse functions undo the original function."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g12-general-u7",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L12:GENERAL:07:01:MULTIPLYING-AND-DIVIDING-RATIONAL-EXPRESSIONS$",
+        "^PED:UAE-MOE-MATH:L12:GENERAL:07:02:ADDING-AND-SUBTRACTING-RATIONAL-EXPRESSIONS$",
+        "^PED:UAE-MOE-MATH:L12:GENERAL:07:03:GRAPHING-RECIPROCAL-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L12:GENERAL:07:04:GRAPHING-RATIONAL-FUNCTIONS$"
+      ],
+      "skillId": "supporting.algebra.expressions",
+      "mechanic": "ALGEBRAIC_FRACTION",
+      "families": [
+        "supporting.algebra.algebraic_fraction"
+      ],
+      "content": {
+        "concept": "Algebraic fractions combine algebraic expressions with exact division.",
+        "workedExample": "For (6x+3)/3 at x=2, substitute first and simplify exactly.",
+        "solution": "Substitute or simplify the numerator, then divide by the denominator while respecting restrictions.",
+        "commonMistake": "Do not cancel terms across addition.",
+        "summary": "Treat numerator and denominator as complete expressions."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g12-general-u8",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L12:GENERAL:08:02:ANGLES-AND-ANGLE-MEASURE$",
+        "^PED:UAE-MOE-MATH:L12:GENERAL:08:04:THE-SINE-LAW$",
+        "^PED:UAE-MOE-MATH:L12:GENERAL:08:05:THE-COSINE-LAW$",
+        "^PED:UAE-MOE-MATH:L12:GENERAL:08:06:CIRCULAR-AND-PERIODIC-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L12:GENERAL:08:07:GRAPHING-TRIGONOMETRIC-FUNCTIONS$"
+      ],
+      "skillId": "supporting.trigonometry.core",
+      "mechanic": "TRIGONOMETRY",
+      "families": [
+        "supporting.trigonometry.core.mixed"
+      ],
+      "content": {
+        "concept": "Right-triangle trigonometry relates an acute angle to ratios of side lengths.",
+        "workedExample": "If opposite=3 and hypotenuse=5, sin θ=3/5.",
+        "solution": "Identify opposite, adjacent and hypotenuse relative to the angle, then choose sine, cosine or tangent.",
+        "commonMistake": "Do not label sides without reference to the chosen angle.",
+        "summary": "Choose the trigonometric ratio from the relevant side pair."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g6-general-u5",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L6:GENERAL:05:01:POWERS-AND-EXPONENTS$",
+        "^PED:UAE-MOE-MATH:L6:GENERAL:05:02:NUMERICAL-EXPRESSIONS$",
+        "^PED:UAE-MOE-MATH:L6:GENERAL:05:06:USE-THE-DISTRIBUTIVE-PROPERTY$"
+      ],
+      "skillId": "supporting.algebra.expressions",
+      "mechanic": "ALGEBRA_EXPRESSIONS",
+      "families": [
+        "supporting.algebra.simplify",
+        "supporting.algebra.substitute",
+        "supporting.algebra.expressions.mixed"
+      ],
+      "content": {
+        "concept": "Algebraic expressions represent quantities using variables, coefficients and operations.",
+        "workedExample": "2x+3x−4 simplifies to 5x−4.",
+        "solution": "Collect like terms, preserve unlike terms, and use substitution to check a simplified form.",
+        "commonMistake": "Do not combine unlike terms such as x and x².",
+        "summary": "Use algebraic structure to simplify and evaluate expressions."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g6-general-u6",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L6:GENERAL:06:04:ONE-STEP-MULTIPLICATION-EQUATIONS$",
+        "^PED:UAE-MOE-MATH:L6:GENERAL:06:05:ONE-STEP-DIVISION-EQUATIONS$"
+      ],
+      "skillId": "algebra.linear.solve",
+      "mechanic": "LINEAR_EQUATION",
+      "families": [
+        "algebra.linear.ax_plus_b_equals_c",
+        "algebra.linear.variables_both_sides"
+      ],
+      "content": {
+        "concept": "A linear equation is solved by applying inverse operations while preserving equality.",
+        "workedExample": "3x+5=20 gives x=5.",
+        "solution": "Undo addition/subtraction and multiplication/division in reverse order, then substitute the result back.",
+        "commonMistake": "Do not apply an operation to only one side.",
+        "summary": "Preserve equality while isolating the variable."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g7-advanced-u11",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L7:ADVANCED:11:01:BIASED-AND-UNBIASED-SAMPLES$",
+        "^PED:UAE-MOE-MATH:L7:ADVANCED:11:02:MAKE-PREDICTIONS$",
+        "^PED:UAE-MOE-MATH:L7:ADVANCED:11:04:COMPARE-TWO-POPULATIONS$",
+        "^PED:UAE-MOE-MATH:L7:ADVANCED:11:05:ASSESS-VISUAL-OVERLAP$"
+      ],
+      "skillId": "supporting.statistics.data_collection",
+      "mechanic": "DATA_COLLECTION",
+      "families": [
+        "supporting.statistics.collection_method"
+      ],
+      "content": {
+        "concept": "Data collection distinguishes a whole-population census from a sample and requires a method suited to the question.",
+        "workedExample": "Surveying all 800 students is a census; surveying 80 selected students is a sample.",
+        "solution": "Identify the target population and determine whether all or only part is observed.",
+        "commonMistake": "Do not call a convenience subset a census.",
+        "summary": "Match the collection method to the population and purpose."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g7-advanced-u5",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L7:ADVANCED:05:02:ADD-LINEAR-EXPRESSIONS$",
+        "^PED:UAE-MOE-MATH:L7:ADVANCED:05:03:SUBTRACT-LINEAR-EXPRESSIONS$",
+        "^PED:UAE-MOE-MATH:L7:ADVANCED:05:05:COMBINE-OPERATIONS-WITH-LINEAR-EXPRESSIONS$"
+      ],
+      "skillId": "supporting.algebra.expressions",
+      "mechanic": "ALGEBRA_EXPRESSIONS",
+      "families": [
+        "supporting.algebra.simplify",
+        "supporting.algebra.substitute",
+        "supporting.algebra.expressions.mixed"
+      ],
+      "content": {
+        "concept": "Algebraic expressions represent quantities using variables, coefficients and operations.",
+        "workedExample": "2x+3x−4 simplifies to 5x−4.",
+        "solution": "Collect like terms, preserve unlike terms, and use substitution to check a simplified form.",
+        "commonMistake": "Do not combine unlike terms such as x and x².",
+        "summary": "Use algebraic structure to simplify and evaluate expressions."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g7-general-u11",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L7:GENERAL:11:01:BIASED-AND-UNBIASED-SAMPLES$",
+        "^PED:UAE-MOE-MATH:L7:GENERAL:11:02:MAKE-PREDICTIONS$",
+        "^PED:UAE-MOE-MATH:L7:GENERAL:11:04:COMPARE-TWO-POPULATIONS$",
+        "^PED:UAE-MOE-MATH:L7:GENERAL:11:05:ASSESS-VISUAL-OVERLAP$"
+      ],
+      "skillId": "supporting.statistics.data_collection",
+      "mechanic": "DATA_COLLECTION",
+      "families": [
+        "supporting.statistics.collection_method"
+      ],
+      "content": {
+        "concept": "Data collection distinguishes a whole-population census from a sample and requires a method suited to the question.",
+        "workedExample": "Surveying all 800 students is a census; surveying 80 selected students is a sample.",
+        "solution": "Identify the target population and determine whether all or only part is observed.",
+        "commonMistake": "Do not call a convenience subset a census.",
+        "summary": "Match the collection method to the population and purpose."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g7-general-u5",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L7:GENERAL:05:02:ADD-LINEAR-EXPRESSIONS$",
+        "^PED:UAE-MOE-MATH:L7:GENERAL:05:03:SUBTRACT-LINEAR-EXPRESSIONS$",
+        "^PED:UAE-MOE-MATH:L7:GENERAL:05:05:COMBINE-OPERATIONS-WITH-LINEAR-EXPRESSIONS$"
+      ],
+      "skillId": "supporting.algebra.expressions",
+      "mechanic": "ALGEBRA_EXPRESSIONS",
+      "families": [
+        "supporting.algebra.simplify",
+        "supporting.algebra.substitute",
+        "supporting.algebra.expressions.mixed"
+      ],
+      "content": {
+        "concept": "Algebraic expressions represent quantities using variables, coefficients and operations.",
+        "workedExample": "2x+3x−4 simplifies to 5x−4.",
+        "solution": "Collect like terms, preserve unlike terms, and use substitution to check a simplified form.",
+        "commonMistake": "Do not combine unlike terms such as x and x².",
+        "summary": "Use algebraic structure to simplify and evaluate expressions."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g8-advanced-u1",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:01:01:RATIONAL-NUMBERS$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:01:02:POWERS-AND-EXPONENTS$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:01:03:MULTIPLYING-AND-DIVIDING-MONOMIALS$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:01:04:POWERS-OF-MONOMIALS$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:01:05:NEGATIVE-EXPONENTS$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:01:08:ROOTS$"
+      ],
+      "skillId": "supporting.indices.roots_standard_form",
+      "mechanic": "POWERS_ROOTS",
+      "families": [
+        "supporting.indices.power_or_root"
+      ],
+      "content": {
+        "concept": "Powers represent repeated multiplication and roots reverse powers.",
+        "workedExample": "3^4=81 and √81=9.",
+        "solution": "Use repeated multiplication for integer powers and identify the positive principal root for square roots.",
+        "commonMistake": "Do not multiply the base by the exponent.",
+        "summary": "Connect powers and roots as inverse operations."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g8-advanced-u10",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:10:01:POINTS-LINES-AND-PLANES$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:10:02:LINEAR-MEASURE$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:10:04:PROVING-RELATIONSHIPS-BETWEEN-SEGMENTS$"
+      ],
+      "skillId": "supporting.geometry.angles",
+      "mechanic": "ANGLES",
+      "families": [
+        "supporting.geometry.angle_classify",
+        "supporting.geometry.angle_around_point"
+      ],
+      "content": {
+        "concept": "Angles measure turn; standard angle sums and classifications give exact constraints.",
+        "workedExample": "Angles around a point sum to 360°, and a 120° angle is obtuse.",
+        "solution": "Compare with 90°/180° for classification or subtract known angles from the required full sum.",
+        "commonMistake": "Do not confuse a straight-line total of 180° with a full-turn total of 360°.",
+        "summary": "Use standard angle benchmarks and sums."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g8-advanced-u11",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:11:02:PARALLELOGRAMS$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:11:03:TESTS-FOR-PARALLELOGRAMS$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:11:04:RECTANGLES$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:11:05:RHOMBI-AND-SQUARES$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:11:06:TRAPEZOIDS-AND-KITES$"
+      ],
+      "skillId": "geometry.polygons.angle_sum",
+      "mechanic": "POLYGON_ANGLES",
+      "families": [
+        "geometry.polygons.interior_angle_sum",
+        "geometry.polygons.missing_interior_angle",
+        "geometry.polygons.regular_interior_angle"
+      ],
+      "content": {
+        "concept": "Polygon interior-angle sums follow from dividing an n-sided polygon into n−2 triangles.",
+        "workedExample": "A quadrilateral has interior-angle sum 360°.",
+        "solution": "Use (n−2)×180° and subtract known angles when one is missing.",
+        "commonMistake": "Do not use 360° as the interior sum for every polygon.",
+        "summary": "Connect polygon sides to interior-angle sums."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g8-advanced-u12",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:12:01:INTRODUCTION-TO-SET-THEORY$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:12:02:SUBSETS-AND-OPERATIONS-ON-SETS$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:12:03:USING-VENN-DIAGRAMS-TO-STUDY-SET-OPERATIONS$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:12:04:USING-SETS-TO-SOLVE-PROBLEMS$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:12:05:INFINITE-SETS$"
+      ],
+      "skillId": "supporting.sets.core",
+      "mechanic": "SET_VENN",
+      "families": [
+        "supporting.sets.union_count"
+      ],
+      "content": {
+        "concept": "Set counts use union and intersection relationships.",
+        "workedExample": "|A∪B|=|A|+|B|-|A∩B|.",
+        "solution": "Add the set sizes and subtract the overlap counted twice.",
+        "commonMistake": "Do not count the intersection twice.",
+        "summary": "Use inclusion-exclusion for two sets."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g8-advanced-u2",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:02:01:SOLVING-EQUATIONS-WITH-RATIONAL-COEFFICIENTS$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:02:02:SOLVING-TWO-STEP-EQUATIONS$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:02:03:WRITING-TWO-STEP-EQUATIONS$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:02:04:SOLVING-EQUATIONS-WITH-VARIABLES-ON-EACH-SIDE$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:02:05:SOLVING-MULTI-STEP-EQUATIONS$"
+      ],
+      "skillId": "algebra.linear.solve",
+      "mechanic": "LINEAR_EQUATION",
+      "families": [
+        "algebra.linear.ax_plus_b_equals_c",
+        "algebra.linear.variables_both_sides"
+      ],
+      "content": {
+        "concept": "A linear equation is solved by applying inverse operations while preserving equality.",
+        "workedExample": "3x+5=20 gives x=5.",
+        "solution": "Undo addition/subtraction and multiplication/division in reverse order, then substitute the result back.",
+        "commonMistake": "Do not apply an operation to only one side.",
+        "summary": "Preserve equality while isolating the variable."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g8-advanced-u3",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:03:03:EQUATIONS-IN-Y-MX-FORM$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:03:05:GRAPHING-A-LINE-USING-INTERCEPTS$"
+      ],
+      "skillId": "geometry.coordinate.straight_line",
+      "mechanic": "STRAIGHT_LINE",
+      "families": [
+        "geometry.coordinate.gradient_between_points",
+        "geometry.coordinate.evaluate_linear_rule",
+        "geometry.coordinate.y_intercept_from_rule"
+      ],
+      "content": {
+        "concept": "A straight line can be described by its gradient and intercept and tested by coordinate substitution.",
+        "workedExample": "For y=2x+3, x=4 gives y=11 and the y-intercept is 3.",
+        "solution": "Use change in y over change in x for gradient and substitute coordinates into y=mx+c.",
+        "commonMistake": "Do not confuse the x-intercept with the y-intercept.",
+        "summary": "Connect equation, gradient, intercept and coordinates."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g8-advanced-u4",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:04:01:REPRESENTING-RELATIONS$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:04:02:RELATIONS$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:04:04:LINEAR-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:04:05:COMPARING-PROPERTIES-OF-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:04:06:CONSTRUCTING-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:04:07:LINEAR-AND-NONLINEAR-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:04:09:QUALITATIVE-GRAPHS$"
+      ],
+      "skillId": "supporting.functions.core",
+      "mechanic": "FUNCTIONS",
+      "families": [
+        "supporting.functions.evaluate",
+        "supporting.functions.composite",
+        "supporting.functions.core.mixed"
+      ],
+      "content": {
+        "concept": "A function maps each allowed input to an output according to a rule.",
+        "workedExample": "If f(x)=2x+3, then f(4)=11.",
+        "solution": "Substitute the input into the rule; for compositions, evaluate the inner function before the outer one.",
+        "commonMistake": "Do not reverse the order in a composite function.",
+        "summary": "Treat a function as a precise input-output rule."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g8-advanced-u5",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:05:01:LINES$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:05:02:GEOMETRIC-PROOF$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:05:03:ANGLES-OF-TRIANGLES$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:05:05:THE-PYTHAGOREAN-THEOREM$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:05:06:USING-THE-PYTHAGOREAN-THEOREM$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:05:07:DISTANCE-ON-THE-COORDINATE-PLANE$"
+      ],
+      "skillId": "geometry.right_triangle.pythagorean",
+      "mechanic": "PYTHAGOREAN_SIDE_LENGTH",
+      "families": [
+        "geometry.right_triangle.pythagorean.exact",
+        "geometry.right_triangle.pythagorean.find_leg_exact"
+      ],
+      "content": {
+        "concept": "The Pythagorean theorem relates the three side lengths of a right triangle.",
+        "workedExample": "For legs 3 and 4, the hypotenuse is 5.",
+        "solution": "Identify the hypotenuse, apply a²+b²=c², solve the missing positive length, and verify.",
+        "commonMistake": "Do not use the theorem on a triangle not known to be right.",
+        "summary": "Use the Pythagorean theorem for right-triangle side lengths."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g8-advanced-u6",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:06:04:DILATIONS$"
+      ],
+      "skillId": "geometry.similarity",
+      "mechanic": "DILATION_SIMILARITY",
+      "families": [
+        "geometry.similarity.find_missing_length",
+        "geometry.similarity.scale_factor"
+      ],
+      "content": {
+        "concept": "A dilation scales all lengths from a centre by the same factor.",
+        "workedExample": "A scale factor of 2 doubles every corresponding length.",
+        "solution": "Use the common scale factor on corresponding distances and verify ratios agree.",
+        "commonMistake": "Do not add the scale factor to lengths.",
+        "summary": "Dilations preserve shape and scale lengths multiplicatively."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g8-advanced-u7",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:07:05:SIMILAR-TRIANGLES-AND-INDIRECT-MEASUREMENT$"
+      ],
+      "skillId": "geometry.similarity",
+      "mechanic": "CONGRUENCE_SIMILARITY",
+      "families": [
+        "geometry.similarity.find_missing_length",
+        "geometry.similarity.scale_factor"
+      ],
+      "content": {
+        "concept": "Similar shapes preserve angles and scale corresponding lengths by a common factor; congruent shapes have equal corresponding measures.",
+        "workedExample": "If a corresponding length changes from 4 to 10, the scale factor is 2.5.",
+        "solution": "Match corresponding parts and use one consistent scale factor.",
+        "commonMistake": "Do not pair non-corresponding sides.",
+        "summary": "Use correspondence and scale consistently."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g8-advanced-u8",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:08:01:VOLUME-OF-CYLINDERS$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:08:02:VOLUME-OF-CONES$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:08:03:VOLUME-OF-SPHERES$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:08:04:SURFACE-AREA-OF-CYLINDERS$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:08:05:SURFACE-AREA-OF-CONES$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:08:06:CHANGES-IN-DIMENSIONS$"
+      ],
+      "skillId": "supporting.geometry.area_volume",
+      "mechanic": "SOLID_GEOMETRY",
+      "families": [
+        "supporting.geometry.cuboid_volume",
+        "supporting.geometry.surface_area_cuboid"
+      ],
+      "content": {
+        "concept": "Volume measures three-dimensional space and is expressed in cubic units.",
+        "workedExample": "A cuboid 5×4×3 has volume 60 cubic units.",
+        "solution": "Multiply the three perpendicular dimensions for a cuboid and distinguish volume from surface area.",
+        "commonMistake": "Do not use square units for volume.",
+        "summary": "Use three-dimensional dimensions and cubic units."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g8-advanced-u9",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:09:02:LINES-OF-BEST-FIT$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:09:03:TWO-WAY-TABLES$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:09:04:DESCRIPTIVE-STATISTICS$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:09:05:MEASURES-OF-VARIABILITY$",
+        "^PED:UAE-MOE-MATH:L8:ADVANCED:09:06:ANALYZING-DATA-DISTRIBUTIONS$"
+      ],
+      "skillId": "supporting.statistics.scatter",
+      "mechanic": "SCATTER",
+      "families": [
+        "supporting.statistics.scatter_correlation"
+      ],
+      "content": {
+        "concept": "Scatter graphs show association between two numerical variables.",
+        "workedExample": "If y tends to increase as x increases, the association is positive.",
+        "solution": "Judge the overall direction of the point cloud, not individual exceptions.",
+        "commonMistake": "Do not claim causation from correlation alone.",
+        "summary": "Describe the overall association shown by the scatter."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g8-general-u1",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L8:GENERAL:01:01:RATIONAL-NUMBERS$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:01:02:POWERS-AND-EXPONENTS$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:01:03:MULTIPLYING-AND-DIVIDING-MONOMIALS$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:01:04:POWERS-OF-MONOMIALS$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:01:05:NEGATIVE-EXPONENTS$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:01:08:ROOTS$"
+      ],
+      "skillId": "supporting.indices.roots_standard_form",
+      "mechanic": "POWERS_ROOTS",
+      "families": [
+        "supporting.indices.power_or_root"
+      ],
+      "content": {
+        "concept": "Powers represent repeated multiplication and roots reverse powers.",
+        "workedExample": "3^4=81 and √81=9.",
+        "solution": "Use repeated multiplication for integer powers and identify the positive principal root for square roots.",
+        "commonMistake": "Do not multiply the base by the exponent.",
+        "summary": "Connect powers and roots as inverse operations."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g8-general-u10",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L8:GENERAL:10:01:POINTS-LINES-AND-PLANES$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:10:02:LINEAR-MEASURE$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:10:04:PROVING-RELATIONSHIPS-BETWEEN-SEGMENTS$"
+      ],
+      "skillId": "supporting.geometry.angles",
+      "mechanic": "ANGLES",
+      "families": [
+        "supporting.geometry.angle_classify",
+        "supporting.geometry.angle_around_point"
+      ],
+      "content": {
+        "concept": "Angles measure turn; standard angle sums and classifications give exact constraints.",
+        "workedExample": "Angles around a point sum to 360°, and a 120° angle is obtuse.",
+        "solution": "Compare with 90°/180° for classification or subtract known angles from the required full sum.",
+        "commonMistake": "Do not confuse a straight-line total of 180° with a full-turn total of 360°.",
+        "summary": "Use standard angle benchmarks and sums."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g8-general-u11",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L8:GENERAL:11:02:PARALLELOGRAMS$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:11:03:TESTS-FOR-PARALLELOGRAMS$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:11:04:RECTANGLES$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:11:05:RHOMBI-AND-SQUARES$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:11:06:TRAPEZOIDS-AND-KITES$"
+      ],
+      "skillId": "geometry.polygons.angle_sum",
+      "mechanic": "POLYGON_ANGLES",
+      "families": [
+        "geometry.polygons.interior_angle_sum",
+        "geometry.polygons.missing_interior_angle",
+        "geometry.polygons.regular_interior_angle"
+      ],
+      "content": {
+        "concept": "Polygon interior-angle sums follow from dividing an n-sided polygon into n−2 triangles.",
+        "workedExample": "A quadrilateral has interior-angle sum 360°.",
+        "solution": "Use (n−2)×180° and subtract known angles when one is missing.",
+        "commonMistake": "Do not use 360° as the interior sum for every polygon.",
+        "summary": "Connect polygon sides to interior-angle sums."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g8-general-u12",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L8:GENERAL:12:01:INTRODUCTION-TO-SET-THEORY$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:12:02:SUBSETS-AND-OPERATIONS-ON-SETS$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:12:03:USING-VENN-DIAGRAMS-TO-STUDY-SET-OPERATIONS$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:12:04:USING-SETS-TO-SOLVE-PROBLEMS$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:12:05:INFINITE-SETS$"
+      ],
+      "skillId": "supporting.sets.core",
+      "mechanic": "SET_VENN",
+      "families": [
+        "supporting.sets.union_count"
+      ],
+      "content": {
+        "concept": "Set counts use union and intersection relationships.",
+        "workedExample": "|A∪B|=|A|+|B|-|A∩B|.",
+        "solution": "Add the set sizes and subtract the overlap counted twice.",
+        "commonMistake": "Do not count the intersection twice.",
+        "summary": "Use inclusion-exclusion for two sets."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g8-general-u2",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L8:GENERAL:02:01:SOLVING-EQUATIONS-WITH-RATIONAL-COEFFICIENTS$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:02:02:SOLVING-TWO-STEP-EQUATIONS$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:02:03:WRITING-TWO-STEP-EQUATIONS$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:02:04:SOLVING-EQUATIONS-WITH-VARIABLES-ON-EACH-SIDE$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:02:05:SOLVING-MULTI-STEP-EQUATIONS$"
+      ],
+      "skillId": "algebra.linear.solve",
+      "mechanic": "LINEAR_EQUATION",
+      "families": [
+        "algebra.linear.ax_plus_b_equals_c",
+        "algebra.linear.variables_both_sides"
+      ],
+      "content": {
+        "concept": "A linear equation is solved by applying inverse operations while preserving equality.",
+        "workedExample": "3x+5=20 gives x=5.",
+        "solution": "Undo addition/subtraction and multiplication/division in reverse order, then substitute the result back.",
+        "commonMistake": "Do not apply an operation to only one side.",
+        "summary": "Preserve equality while isolating the variable."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g8-general-u3",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L8:GENERAL:03:03:EQUATIONS-IN-Y-MX-FORM$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:03:05:GRAPHING-A-LINE-USING-INTERCEPTS$"
+      ],
+      "skillId": "geometry.coordinate.straight_line",
+      "mechanic": "STRAIGHT_LINE",
+      "families": [
+        "geometry.coordinate.gradient_between_points",
+        "geometry.coordinate.evaluate_linear_rule",
+        "geometry.coordinate.y_intercept_from_rule"
+      ],
+      "content": {
+        "concept": "A straight line can be described by its gradient and intercept and tested by coordinate substitution.",
+        "workedExample": "For y=2x+3, x=4 gives y=11 and the y-intercept is 3.",
+        "solution": "Use change in y over change in x for gradient and substitute coordinates into y=mx+c.",
+        "commonMistake": "Do not confuse the x-intercept with the y-intercept.",
+        "summary": "Connect equation, gradient, intercept and coordinates."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g8-general-u4",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L8:GENERAL:04:01:REPRESENTING-RELATIONS$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:04:02:RELATIONS$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:04:04:LINEAR-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:04:05:COMPARING-PROPERTIES-OF-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:04:06:CONSTRUCTING-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:04:07:LINEAR-AND-NONLINEAR-FUNCTIONS$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:04:09:QUALITATIVE-GRAPHS$"
+      ],
+      "skillId": "supporting.functions.core",
+      "mechanic": "FUNCTIONS",
+      "families": [
+        "supporting.functions.evaluate",
+        "supporting.functions.composite",
+        "supporting.functions.core.mixed"
+      ],
+      "content": {
+        "concept": "A function maps each allowed input to an output according to a rule.",
+        "workedExample": "If f(x)=2x+3, then f(4)=11.",
+        "solution": "Substitute the input into the rule; for compositions, evaluate the inner function before the outer one.",
+        "commonMistake": "Do not reverse the order in a composite function.",
+        "summary": "Treat a function as a precise input-output rule."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g8-general-u5",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L8:GENERAL:05:01:LINES$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:05:02:GEOMETRIC-PROOF$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:05:03:ANGLES-OF-TRIANGLES$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:05:05:THE-PYTHAGOREAN-THEOREM$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:05:06:USING-THE-PYTHAGOREAN-THEOREM$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:05:07:DISTANCE-ON-THE-COORDINATE-PLANE$"
+      ],
+      "skillId": "geometry.right_triangle.pythagorean",
+      "mechanic": "PYTHAGOREAN_SIDE_LENGTH",
+      "families": [
+        "geometry.right_triangle.pythagorean.exact",
+        "geometry.right_triangle.pythagorean.find_leg_exact"
+      ],
+      "content": {
+        "concept": "The Pythagorean theorem relates the three side lengths of a right triangle.",
+        "workedExample": "For legs 3 and 4, the hypotenuse is 5.",
+        "solution": "Identify the hypotenuse, apply a²+b²=c², solve the missing positive length, and verify.",
+        "commonMistake": "Do not use the theorem on a triangle not known to be right.",
+        "summary": "Use the Pythagorean theorem for right-triangle side lengths."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g8-general-u6",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L8:GENERAL:06:04:DILATIONS$"
+      ],
+      "skillId": "geometry.similarity",
+      "mechanic": "DILATION_SIMILARITY",
+      "families": [
+        "geometry.similarity.find_missing_length",
+        "geometry.similarity.scale_factor"
+      ],
+      "content": {
+        "concept": "A dilation scales all lengths from a centre by the same factor.",
+        "workedExample": "A scale factor of 2 doubles every corresponding length.",
+        "solution": "Use the common scale factor on corresponding distances and verify ratios agree.",
+        "commonMistake": "Do not add the scale factor to lengths.",
+        "summary": "Dilations preserve shape and scale lengths multiplicatively."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g8-general-u7",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L8:GENERAL:07:05:SIMILAR-TRIANGLES-AND-INDIRECT-MEASUREMENT$"
+      ],
+      "skillId": "geometry.similarity",
+      "mechanic": "CONGRUENCE_SIMILARITY",
+      "families": [
+        "geometry.similarity.find_missing_length",
+        "geometry.similarity.scale_factor"
+      ],
+      "content": {
+        "concept": "Similar shapes preserve angles and scale corresponding lengths by a common factor; congruent shapes have equal corresponding measures.",
+        "workedExample": "If a corresponding length changes from 4 to 10, the scale factor is 2.5.",
+        "solution": "Match corresponding parts and use one consistent scale factor.",
+        "commonMistake": "Do not pair non-corresponding sides.",
+        "summary": "Use correspondence and scale consistently."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g8-general-u8",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L8:GENERAL:08:01:VOLUME-OF-CYLINDERS$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:08:02:VOLUME-OF-CONES$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:08:03:VOLUME-OF-SPHERES$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:08:04:SURFACE-AREA-OF-CYLINDERS$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:08:05:SURFACE-AREA-OF-CONES$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:08:06:CHANGES-IN-DIMENSIONS$"
+      ],
+      "skillId": "supporting.geometry.area_volume",
+      "mechanic": "SOLID_GEOMETRY",
+      "families": [
+        "supporting.geometry.cuboid_volume",
+        "supporting.geometry.surface_area_cuboid"
+      ],
+      "content": {
+        "concept": "Volume measures three-dimensional space and is expressed in cubic units.",
+        "workedExample": "A cuboid 5×4×3 has volume 60 cubic units.",
+        "solution": "Multiply the three perpendicular dimensions for a cuboid and distinguish volume from surface area.",
+        "commonMistake": "Do not use square units for volume.",
+        "summary": "Use three-dimensional dimensions and cubic units."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g8-general-u9",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L8:GENERAL:09:02:LINES-OF-BEST-FIT$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:09:03:TWO-WAY-TABLES$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:09:04:DESCRIPTIVE-STATISTICS$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:09:05:MEASURES-OF-VARIABILITY$",
+        "^PED:UAE-MOE-MATH:L8:GENERAL:09:06:ANALYZING-DATA-DISTRIBUTIONS$"
+      ],
+      "skillId": "supporting.statistics.scatter",
+      "mechanic": "SCATTER",
+      "families": [
+        "supporting.statistics.scatter_correlation"
+      ],
+      "content": {
+        "concept": "Scatter graphs show association between two numerical variables.",
+        "workedExample": "If y tends to increase as x increases, the association is positive.",
+        "solution": "Judge the overall direction of the point cloud, not individual exceptions.",
+        "commonMistake": "Do not claim causation from correlation alone.",
+        "summary": "Describe the overall association shown by the scatter."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g9-advanced-u12",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:12:01:PARALLEL-AND-INTERSECTING-LINES$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:12:04:EQUATIONS-OF-LINES$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:12:05:PROVING-LINES-PARALLEL$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:12:06:PERPENDICULARS-AND-DISTANCE$"
+      ],
+      "skillId": "geometry.angles.relationships",
+      "mechanic": "PARALLEL_PERPENDICULAR",
+      "families": [
+        "geometry.angles.parallel_lines",
+        "geometry.angles.supplementary"
+      ],
+      "content": {
+        "concept": "Parallel and perpendicular line relationships impose exact angle constraints.",
+        "workedExample": "Corresponding angles on parallel lines are equal; adjacent angles on a straight line sum to 180°.",
+        "solution": "Identify the geometric relationship first, then apply the appropriate equality or supplementary rule.",
+        "commonMistake": "Do not assume angle equality without a justified line relationship.",
+        "summary": "Use line relationships to justify angle facts."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g9-advanced-u13",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:13:01:CLASSIFYING-TRIANGLES$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:13:02:ANGLES-OF-TRIANGLES$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:13:06:ISOSCELES-AND-EQUILATERAL-TRIANGLES$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:13:08:TRIANGLES-AND-COORDINATE-PROOF$"
+      ],
+      "skillId": "geometry.similarity",
+      "mechanic": "CONGRUENCE_SIMILARITY",
+      "families": [
+        "geometry.similarity.find_missing_length",
+        "geometry.similarity.scale_factor"
+      ],
+      "content": {
+        "concept": "Similar shapes preserve angles and scale corresponding lengths by a common factor; congruent shapes have equal corresponding measures.",
+        "workedExample": "If a corresponding length changes from 4 to 10, the scale factor is 2.5.",
+        "solution": "Match corresponding parts and use one consistent scale factor.",
+        "commonMistake": "Do not pair non-corresponding sides.",
+        "summary": "Use correspondence and scale consistently."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g9-advanced-u14",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:14:01:RATIOS-AND-PROPORTIONS$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:14:03:SIMILAR-TRIANGLES$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:14:05:PARTS-OF-SIMILAR-TRIANGLES$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:14:07:SCALE-DRAWINGS-AND-MODELS$"
+      ],
+      "skillId": "geometry.similarity",
+      "mechanic": "DILATION_SIMILARITY",
+      "families": [
+        "geometry.similarity.find_missing_length",
+        "geometry.similarity.scale_factor"
+      ],
+      "content": {
+        "concept": "A dilation scales all lengths from a centre by the same factor.",
+        "workedExample": "A scale factor of 2 doubles every corresponding length.",
+        "solution": "Use the common scale factor on corresponding distances and verify ratios agree.",
+        "commonMistake": "Do not add the scale factor to lengths.",
+        "summary": "Dilations preserve shape and scale lengths multiplicatively."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g9-advanced-u2",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:02:01:WRITING-EQUATIONS$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:02:03:SOLVING-MULTI-STEP-EQUATIONS$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:02:04:EQUATIONS-WITH-VARIABLES-ON-BOTH-SIDES$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:02:05:ABSOLUTE-VALUE-EQUATIONS$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:02:06:RATIOS-AND-PROPORTIONS$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:02:07:PERCENT-OF-CHANGE$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:02:08:LITERAL-EQUATIONS-AND-DIMENSIONAL-ANALYSIS$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:02:09:WEIGHTED-AVERAGES$"
+      ],
+      "skillId": "algebra.linear.solve",
+      "mechanic": "LINEAR_EQUATION",
+      "families": [
+        "algebra.linear.ax_plus_b_equals_c",
+        "algebra.linear.variables_both_sides"
+      ],
+      "content": {
+        "concept": "A linear equation is solved by applying inverse operations while preserving equality.",
+        "workedExample": "3x+5=20 gives x=5.",
+        "solution": "Undo addition/subtraction and multiplication/division in reverse order, then substitute the result back.",
+        "commonMistake": "Do not apply an operation to only one side.",
+        "summary": "Preserve equality while isolating the variable."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g9-advanced-u6",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:06:04:ELIMINATION-USING-MULTIPLICATION$"
+      ],
+      "skillId": "supporting.algebra.equations",
+      "mechanic": "SIMULTANEOUS",
+      "families": [
+        "supporting.algebra.simultaneous"
+      ],
+      "content": {
+        "concept": "Simultaneous equations require one pair of values that satisfies both equations.",
+        "workedExample": "x+y=9 and x−y=3 gives x=6, y=3.",
+        "solution": "Eliminate or substitute one variable, solve, find the second variable, and check both equations.",
+        "commonMistake": "Do not accept a pair that satisfies only one equation.",
+        "summary": "A simultaneous solution must satisfy every equation in the system."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g9-advanced-u7",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:07:02:MULTIPLYING-A-POLYNOMIAL-BY-A-MONOMIAL$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:07:04:SPECIAL-PRODUCTS$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:07:05:USING-THE-DISTRIBUTIVE-PROPERTY$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:07:06:SOLVING-X-BX-C-0$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:07:07:SOLVING-AX-BX-C-0$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:07:08:DIFFERENCE-OF-TWO-SQUARES$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:07:09:PERFECT-SQUARES$"
+      ],
+      "skillId": "supporting.algebra.equations",
+      "mechanic": "QUADRATIC",
+      "families": [
+        "supporting.algebra.quadratic_larger_root"
+      ],
+      "content": {
+        "concept": "A quadratic equation can have two real roots that make the quadratic expression equal zero.",
+        "workedExample": "x²−5x+6=0 factors to (x−2)(x−3), so the roots are 2 and 3.",
+        "solution": "Factor when possible, use the zero-product property, and substitute roots to verify.",
+        "commonMistake": "Do not report only a factor without converting it to a root.",
+        "summary": "Find and verify the roots of a quadratic equation."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g9-advanced-u8",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:08:01:MULTIPLICATION-PROPERTIES-OF-EXPONENTS$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:08:02:DIVISION-PROPERTIES-OF-EXPONENTS$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:08:03:RATIONAL-EXPONENTS$",
+        "^PED:UAE-MOE-MATH:L9:ADVANCED:08:06:GROWTH-AND-DECAY$"
+      ],
+      "skillId": "supporting.indices.roots_standard_form",
+      "mechanic": "POWERS_ROOTS",
+      "families": [
+        "supporting.indices.power_or_root"
+      ],
+      "content": {
+        "concept": "Powers represent repeated multiplication and roots reverse powers.",
+        "workedExample": "3^4=81 and √81=9.",
+        "solution": "Use repeated multiplication for integer powers and identify the positive principal root for square roots.",
+        "commonMistake": "Do not multiply the base by the exponent.",
+        "summary": "Connect powers and roots as inverse operations."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g9-general-u12",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L9:GENERAL:12:01:PARALLEL-AND-INTERSECTING-LINES$",
+        "^PED:UAE-MOE-MATH:L9:GENERAL:12:04:EQUATIONS-OF-LINES$",
+        "^PED:UAE-MOE-MATH:L9:GENERAL:12:05:PROVING-LINES-PARALLEL$",
+        "^PED:UAE-MOE-MATH:L9:GENERAL:12:06:PERPENDICULARS-AND-DISTANCE$"
+      ],
+      "skillId": "geometry.angles.relationships",
+      "mechanic": "PARALLEL_PERPENDICULAR",
+      "families": [
+        "geometry.angles.parallel_lines",
+        "geometry.angles.supplementary"
+      ],
+      "content": {
+        "concept": "Parallel and perpendicular line relationships impose exact angle constraints.",
+        "workedExample": "Corresponding angles on parallel lines are equal; adjacent angles on a straight line sum to 180°.",
+        "solution": "Identify the geometric relationship first, then apply the appropriate equality or supplementary rule.",
+        "commonMistake": "Do not assume angle equality without a justified line relationship.",
+        "summary": "Use line relationships to justify angle facts."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g9-general-u13",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L9:GENERAL:13:01:CLASSIFYING-TRIANGLES$",
+        "^PED:UAE-MOE-MATH:L9:GENERAL:13:02:ANGLES-OF-TRIANGLES$",
+        "^PED:UAE-MOE-MATH:L9:GENERAL:13:06:ISOSCELES-AND-EQUILATERAL-TRIANGLES$",
+        "^PED:UAE-MOE-MATH:L9:GENERAL:13:08:TRIANGLES-AND-COORDINATE-PROOF$"
+      ],
+      "skillId": "geometry.similarity",
+      "mechanic": "CONGRUENCE_SIMILARITY",
+      "families": [
+        "geometry.similarity.find_missing_length",
+        "geometry.similarity.scale_factor"
+      ],
+      "content": {
+        "concept": "Similar shapes preserve angles and scale corresponding lengths by a common factor; congruent shapes have equal corresponding measures.",
+        "workedExample": "If a corresponding length changes from 4 to 10, the scale factor is 2.5.",
+        "solution": "Match corresponding parts and use one consistent scale factor.",
+        "commonMistake": "Do not pair non-corresponding sides.",
+        "summary": "Use correspondence and scale consistently."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g9-general-u2",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L9:GENERAL:02:01:WRITING-EQUATIONS$",
+        "^PED:UAE-MOE-MATH:L9:GENERAL:02:03:SOLVING-MULTI-STEP-EQUATIONS$",
+        "^PED:UAE-MOE-MATH:L9:GENERAL:02:04:EQUATIONS-WITH-VARIABLES-ON-BOTH-SIDES$",
+        "^PED:UAE-MOE-MATH:L9:GENERAL:02:05:ABSOLUTE-VALUE-EQUATIONS$",
+        "^PED:UAE-MOE-MATH:L9:GENERAL:02:06:RATIOS-AND-PROPORTIONS$",
+        "^PED:UAE-MOE-MATH:L9:GENERAL:02:07:PERCENT-OF-CHANGE$",
+        "^PED:UAE-MOE-MATH:L9:GENERAL:02:08:LITERAL-EQUATIONS-AND-DIMENSIONAL-ANALYSIS$",
+        "^PED:UAE-MOE-MATH:L9:GENERAL:02:09:WEIGHTED-AVERAGES$"
+      ],
+      "skillId": "algebra.linear.solve",
+      "mechanic": "LINEAR_EQUATION",
+      "families": [
+        "algebra.linear.ax_plus_b_equals_c",
+        "algebra.linear.variables_both_sides"
+      ],
+      "content": {
+        "concept": "A linear equation is solved by applying inverse operations while preserving equality.",
+        "workedExample": "3x+5=20 gives x=5.",
+        "solution": "Undo addition/subtraction and multiplication/division in reverse order, then substitute the result back.",
+        "commonMistake": "Do not apply an operation to only one side.",
+        "summary": "Preserve equality while isolating the variable."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g9-general-u6",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L9:GENERAL:06:04:ELIMINATION-USING-MULTIPLICATION$"
+      ],
+      "skillId": "supporting.algebra.equations",
+      "mechanic": "SIMULTANEOUS",
+      "families": [
+        "supporting.algebra.simultaneous"
+      ],
+      "content": {
+        "concept": "Simultaneous equations require one pair of values that satisfies both equations.",
+        "workedExample": "x+y=9 and x−y=3 gives x=6, y=3.",
+        "solution": "Eliminate or substitute one variable, solve, find the second variable, and check both equations.",
+        "commonMistake": "Do not accept a pair that satisfies only one equation.",
+        "summary": "A simultaneous solution must satisfy every equation in the system."
+      }
+    },
+    {
+      "id": "uae-official-reference-fallback-g9-general-u7",
+      "titlePatterns": [],
+      "codePatterns": [
+        "^PED:UAE-MOE-MATH:L9:GENERAL:07:02:MULTIPLYING-A-POLYNOMIAL-BY-A-MONOMIAL$",
+        "^PED:UAE-MOE-MATH:L9:GENERAL:07:04:SPECIAL-PRODUCTS$",
+        "^PED:UAE-MOE-MATH:L9:GENERAL:07:05:USING-THE-DISTRIBUTIVE-PROPERTY$",
+        "^PED:UAE-MOE-MATH:L9:GENERAL:07:06:SOLVING-X-BX-C-0$",
+        "^PED:UAE-MOE-MATH:L9:GENERAL:07:07:SOLVING-AX-BX-C-0$",
+        "^PED:UAE-MOE-MATH:L9:GENERAL:07:08:DIFFERENCE-OF-TWO-SQUARES$",
+        "^PED:UAE-MOE-MATH:L9:GENERAL:07:09:PERFECT-SQUARES$"
+      ],
+      "skillId": "supporting.algebra.equations",
+      "mechanic": "QUADRATIC",
+      "families": [
+        "supporting.algebra.quadratic_larger_root"
+      ],
+      "content": {
+        "concept": "A quadratic equation can have two real roots that make the quadratic expression equal zero.",
+        "workedExample": "x²−5x+6=0 factors to (x−2)(x−3), so the roots are 2 and 3.",
+        "solution": "Factor when possible, use the zero-product property, and substitute roots to verify.",
+        "commonMistake": "Do not report only a factor without converting it to a root.",
+        "summary": "Find and verify the roots of a quadratic equation."
+      }
+    },
+    {
       "id": "scale-reading-equal-intervals",
       "titlePatterns": [
         "^Reading scales with 2, 4, 5 or 10 intervals$"

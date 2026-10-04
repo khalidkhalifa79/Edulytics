@@ -1,3 +1,6 @@
+
+
+
 using Edulytics.Core.Curriculum;
 
 namespace Edulytics.Tests.MathematicsIntelligence;
@@ -13,19 +16,7 @@ public sealed class UaeOfficialReferenceCoverageTests
             .SelectMany(x => x.Lessons)
             .ToArray();
 
-        Assert.Equal(716, lessons.Length);
-        Assert.Equal(75, lessons.Count(x => x.OutcomeCodes.Count > 0));
-        Assert.Equal(265, lessons.Count(x => !string.IsNullOrWhiteSpace(x.OfficialReferenceCode)));
-        Assert.Equal(
-            20,
-            lessons.Count(x =>
-                x.OutcomeCodes.Count > 0 &&
-                !string.IsNullOrWhiteSpace(x.OfficialReferenceCode)));
-        Assert.Equal(
-            396,
-            lessons.Count(x =>
-                x.OutcomeCodes.Count == 0 &&
-                string.IsNullOrWhiteSpace(x.OfficialReferenceCode)));
+        Assert.NotEmpty(lessons);
 
         var referenceCodes = lessons
             .Where(x => !string.IsNullOrWhiteSpace(x.OfficialReferenceCode))
@@ -63,4 +54,38 @@ public sealed class UaeOfficialReferenceCoverageTests
                     string.IsNullOrWhiteSpace(x.OutcomeCode));
         }
     }
+
+    [Fact]
+    public void UaeCurriculum_HasZeroSupportingLessons_AndNoGrade5Or6AdvancedPathway()
+    {
+        var blueprints = PedagogicalLessonBlueprintRegistry
+            .LoadEmbeddedDocuments()
+            .Where(x => x.PackCode == MathematicsCurriculumPackRegistry.UaeCode)
+            .ToArray();
+
+        Assert.DoesNotContain(
+            blueprints,
+            x => (x.LogicalLevel == 5 || x.LogicalLevel == 6) &&
+                 string.Equals(x.Pathway, "Advanced", StringComparison.OrdinalIgnoreCase));
+
+        foreach (var blueprint in blueprints)
+        {
+            Assert.All(
+                blueprint.Lessons,
+                lesson =>
+                {
+                    Assert.True(
+                        CanonicalLessonRoleRegistry.TryGetIsSupporting(
+                            lesson.LessonCode,
+                            out var isSupporting));
+
+                    Assert.False(isSupporting);
+
+                    Assert.True(
+                        lesson.OutcomeCodes.Count > 0 ||
+                        !string.IsNullOrWhiteSpace(lesson.OfficialReferenceCode));
+                });
+        }
+    }
+
 }

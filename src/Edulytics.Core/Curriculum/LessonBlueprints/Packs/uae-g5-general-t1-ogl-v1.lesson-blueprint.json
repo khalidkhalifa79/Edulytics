@@ -30,7 +30,7 @@
   "SemanticGraphSha256": "e456285eb786ce7655e5569950d5eef3e7796ab04de39139d706dec50f332223",
   "AcquisitionDiagnostics": {
     "UnitCount": 5,
-    "LessonCount": 25,
+    "LessonCount": 17,
     "OfficialStandardCount": 0,
     "AddressingCoverageCount": 0,
     "FormalMappingCount": 0,
@@ -45,7 +45,7 @@
       "UnitCode": "UAE-G5-GENERAL-T1-OGL-V1:U01",
       "SortOrder": 1,
       "Title": "Number",
-      "LessonCount": 7,
+      "LessonCount": 6,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "b1707447167bdb53e9280065e5dadf9e0aee44ac6fc7b8cd985a73a5502254d6"
     },
@@ -63,7 +63,7 @@
       "UnitCode": "UAE-G5-GENERAL-T1-OGL-V1:U03",
       "SortOrder": 3,
       "Title": "Ratio and Proportion",
-      "LessonCount": 3,
+      "LessonCount": 1,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "c628c1851f8d381969953b612d43dbc8aa32dc77e9c332a96c6225e5c20ff9bd"
     },
@@ -72,7 +72,7 @@
       "UnitCode": "UAE-G5-GENERAL-T1-OGL-V1:U04",
       "SortOrder": 4,
       "Title": "Geometry and Measure",
-      "LessonCount": 6,
+      "LessonCount": 1,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "ff3f52f7a5b3a11fcb98dc4521c101298ea9c4780a286a634e9000052b159f86"
     },
@@ -115,30 +115,13 @@
       "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G5:GENERAL:T1:EDU:01:01"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L5:GENERAL:U01:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L5:GENERAL:01:02:NEGATIVE-NUMBERS-IN-CONTEXT",
-      "UnitNumber": 1,
-      "UnitTitle": "Number",
-      "LessonNumber": 2,
-      "Title": "Negative numbers in context",
-      "SortOrder": 2,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "7c3fcf064cbdb2beae8028df04f8390432e35bf28d0504f07b32475db80b6ad4",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G5-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L5:GENERAL:U01:L03",
       "LessonCode": "PED:UAE-MOE-MATH:L5:GENERAL:01:03:PRIME-NUMBERS-AND-FACTORS",
       "UnitNumber": 1,
       "UnitTitle": "Number",
       "LessonNumber": 3,
       "Title": "Prime numbers and factors",
-      "SortOrder": 3,
+      "SortOrder": 2,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "523eba06f6925fc5150a7ee8c8a43743cb15a6a0c528c931670818f0eb889053",
       "Alignments": [
@@ -165,7 +148,7 @@
       "UnitTitle": "Number",
       "LessonNumber": 4,
       "Title": "Multiples and divisibility",
-      "SortOrder": 4,
+      "SortOrder": 3,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "b6625b427b6c1afe7f2671c90ced2d241bc4ee76c6ddbd6e72cef13b59bb80ef",
       "Alignments": [
@@ -192,7 +175,7 @@
       "UnitTitle": "Number",
       "LessonNumber": 5,
       "Title": "Formal multiplication",
-      "SortOrder": 5,
+      "SortOrder": 4,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "1b763515a445db09898a691289a632c61376284d18b5cc89dbcf86a2379360c8",
       "Alignments": [
@@ -219,7 +202,7 @@
       "UnitTitle": "Number",
       "LessonNumber": 6,
       "Title": "Formal division",
-      "SortOrder": 6,
+      "SortOrder": 5,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "8f6560c3b5da95437165a649e9adf72c573625937e779732e96961bf6164a75e",
       "Alignments": [
@@ -246,7 +229,7 @@
       "UnitTitle": "Number",
       "LessonNumber": 7,
       "Title": "Order of operations",
-      "SortOrder": 7,
+      "SortOrder": 6,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "ce79c49b866fe86493c066acb15dee7cf8e2de4c9a78aaf227696b9adc0253b2",
       "Alignments": [
@@ -273,7 +256,7 @@
       "UnitTitle": "Fractions, Decimals and Percentages",
       "LessonNumber": 1,
       "Title": "Equivalent fractions",
-      "SortOrder": 8,
+      "SortOrder": 7,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "336130af2805b500a7bf99d801e5d1c873bddd9fca902d960f95d402cfdb6fb3",
       "Alignments": [
@@ -300,7 +283,7 @@
       "UnitTitle": "Fractions, Decimals and Percentages",
       "LessonNumber": 2,
       "Title": "Add and subtract fractions",
-      "SortOrder": 9,
+      "SortOrder": 8,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "9e7f2bc15701ea1e6cdf1675d363d20ae76e7aa9edfe8f1ad17b205000e9cb75",
       "Alignments": [
@@ -327,7 +310,7 @@
       "UnitTitle": "Fractions, Decimals and Percentages",
       "LessonNumber": 3,
       "Title": "Multiply fractions by whole numbers",
-      "SortOrder": 10,
+      "SortOrder": 9,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "60b125559f3c289b782f456620e4987db1e6fb59a11c0c220717559edb566901",
       "Alignments": [
@@ -354,7 +337,7 @@
       "UnitTitle": "Fractions, Decimals and Percentages",
       "LessonNumber": 4,
       "Title": "Decimals and place value",
-      "SortOrder": 11,
+      "SortOrder": 10,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "7640d01749469bfe640d8f18426e7b64104866c81a637763bd05669d559a3a64",
       "Alignments": [
@@ -381,7 +364,7 @@
       "UnitTitle": "Fractions, Decimals and Percentages",
       "LessonNumber": 5,
       "Title": "Percentages as hundredths",
-      "SortOrder": 12,
+      "SortOrder": 11,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "ca16b4b3aa3d715eab55f1313db8e3718fdbc6e82c7208cd5fddf37ebb9b4054",
       "Alignments": [
@@ -408,7 +391,7 @@
       "UnitTitle": "Fractions, Decimals and Percentages",
       "LessonNumber": 6,
       "Title": "Fraction-decimal-percentage equivalence",
-      "SortOrder": 13,
+      "SortOrder": 12,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "271ed2b7e6fbe5c3235948d0fd42d1402724df239c9b3e9967f0bab38aa0e1fd",
       "Alignments": [
@@ -435,7 +418,7 @@
       "UnitTitle": "Ratio and Proportion",
       "LessonNumber": 1,
       "Title": "Scaling quantities",
-      "SortOrder": 14,
+      "SortOrder": 13,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "d4c118931d8f9d7a3cda8fe92b4e4fb086b13bd173f2e3dc1e07b37fce31721e",
       "Alignments": [
@@ -456,98 +439,13 @@
       "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G5:GENERAL:T1:EDU:03:01"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L5:GENERAL:U03:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L5:GENERAL:03:02:SIMPLE-RATIO",
-      "UnitNumber": 3,
-      "UnitTitle": "Ratio and Proportion",
-      "LessonNumber": 2,
-      "Title": "Simple ratio",
-      "SortOrder": 15,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "5e4c93ca942d76977d723cf55b7460693dd7d76d5c5feaac40e7cf39ec9abbfd",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G5-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L5:GENERAL:U03:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L5:GENERAL:03:03:UNIT-RATE",
-      "UnitNumber": 3,
-      "UnitTitle": "Ratio and Proportion",
-      "LessonNumber": 3,
-      "Title": "Unit rate",
-      "SortOrder": 16,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "036501d30f8d6fd1765b6799258b79e6b08bb7ea37ca12167246d6f135612c7a",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G5-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L5:GENERAL:U04:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L5:GENERAL:04:01:ANGLES-AROUND-A-POINT",
-      "UnitNumber": 4,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 1,
-      "Title": "Angles around a point",
-      "SortOrder": 17,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "b5edcc7132b341110da8483f6f3e5200a1f010b61acf64a40dd37dd0217e9b3e",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G5-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L5:GENERAL:U04:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L5:GENERAL:04:02:AREA-OF-TRIANGLES",
-      "UnitNumber": 4,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 2,
-      "Title": "Area of triangles",
-      "SortOrder": 18,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "53ad0d174d129c768d527efe4bb9f730a3ca57a572fe41942c7bd4b6b1c13566",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G5-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L5:GENERAL:U04:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L5:GENERAL:04:03:AREA-OF-PARALLELOGRAMS",
-      "UnitNumber": 4,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 3,
-      "Title": "Area of parallelograms",
-      "SortOrder": 19,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "228f2225a710ba25b9ed40a10ef09791ea1c0f7a7679e4b5937428b4ff2775b9",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G5-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L5:GENERAL:U04:L04",
       "LessonCode": "PED:UAE-MOE-MATH:L5:GENERAL:04:04:VOLUME-BY-CUBES",
       "UnitNumber": 4,
       "UnitTitle": "Geometry and Measure",
       "LessonNumber": 4,
       "Title": "Volume by cubes",
-      "SortOrder": 20,
+      "SortOrder": 14,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "028a436e62ce6519e9f58b689a4d8dc1bb4c789348606b94eea8b5c8864682c4",
       "Alignments": [
@@ -568,47 +466,13 @@
       "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G5:GENERAL:T1:EDU:04:04"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L5:GENERAL:U04:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L5:GENERAL:04:05:COORDINATES-AND-TRANSLATION",
-      "UnitNumber": 4,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 5,
-      "Title": "Coordinates and translation",
-      "SortOrder": 21,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "88b6a6d6a3c7d8d95ec50edf77e5308e21077a01ba0d350b514666b29b070c3c",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G5-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L5:GENERAL:U04:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L5:GENERAL:04:06:REFLECTION",
-      "UnitNumber": 4,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 6,
-      "Title": "Reflection",
-      "SortOrder": 22,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "5f7b1d408f9284f06aa7200848056f9eb7468a507329436004350a4138d87e41",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G5-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L5:GENERAL:U05:L01",
       "LessonCode": "PED:UAE-MOE-MATH:L5:GENERAL:05:01:LINE-GRAPHS",
       "UnitNumber": 5,
       "UnitTitle": "Statistics",
       "LessonNumber": 1,
       "Title": "Line graphs",
-      "SortOrder": 23,
+      "SortOrder": 15,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "5a772e10c6d1a78723dc0eb01f97473d32384171f5e91a623f5b2558853f725c",
       "Alignments": [
@@ -635,7 +499,7 @@
       "UnitTitle": "Statistics",
       "LessonNumber": 2,
       "Title": "Averages from small data sets",
-      "SortOrder": 24,
+      "SortOrder": 16,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "3662dd75a1c51ff40c00c0ffb9e639d34090539f63713455abc9d65ecc9aaf82",
       "Alignments": [
@@ -662,7 +526,7 @@
       "UnitTitle": "Statistics",
       "LessonNumber": 3,
       "Title": "Interpreting tables",
-      "SortOrder": 25,
+      "SortOrder": 17,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "6fd1ee8a43bece1aeb8105d8617fafbc8d007575fcc542b9b55b621527133bf0",
       "Alignments": [

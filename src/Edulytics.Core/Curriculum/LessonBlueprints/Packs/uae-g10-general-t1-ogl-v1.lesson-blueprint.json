@@ -13,188 +13,269 @@
   "SourcePublisher": "UK Department for Education",
   "SourceEdition": "GCSE Mathematics subject content / current GOV.UK publication",
   "SourceRootUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-  "SourceCheckedAtUtc": "2026-09-01T00:00:00Z",
+  "SourceCheckedAtUtc": "2026-10-04T00:00:00Z",
   "SourceLicense": "Open Government Licence v3.0",
   "RequiredDigitalAttribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
   "SourceSelectionReason": "The official curriculum source remains the academic authority. Edulytics uses open DfE Mathematics material only as lawful pedagogical scaffolding for independently authored lesson explanations where official copyrighted or source-linked prose is not reproduced.",
-  "SourceSelectionEvidence": "This scope contains 40 Edulytics-authored supporting lessons across 4 units. No formal outcome mapping is claimed without explicit source evidence; every formal OutcomeCodes collection is empty.",
+  "SourceSelectionEvidence": "Verified UAE Grade 10 General Student Edition TOC. The UAE Student Edition is used for exact annual unit/lesson scope. Where 2025-2026 term structure differs or is incomplete, this is recorded as PreviousOfficialFallback rather than inventing mappings.",
   "SourceEvidenceUrls": [
-    "https://minhaji.moe.gov.ae/",
-    "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-    "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
-    "https://uae.afedne.com/ShopW0GIPgdv",
-    "https://uae.afedne.com/ShoysvVstnq7",
-    "https://uae.afedne.com/ShoLXdvsAaPP",
-    "https://uae.afedne.com/ShoSRm1l5RVL"
+    "https://minhaji.moe.gov.ae/"
   ],
   "SourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. Official UAE Ministry of Education wording is not reproduced. Edulytics learner-facing bodies are independently authored.",
-  "SemanticGraphSha256": "df5db7770d2fd03ea93ef4e6deae9298669ff0c815713b2fbcdfb9d872d73789",
+  "SemanticGraphSha256": "0d7d72c67079cb64cbf167cc7f2c5b1a868aec371ccf5694fdc4ada9533e9dd7",
   "AcquisitionDiagnostics": {
-    "UnitCount": 4,
-    "LessonCount": 40,
+    "UnitCount": 7,
+    "LessonCount": 48,
     "OfficialStandardCount": 0,
     "AddressingCoverageCount": 0,
     "FormalMappingCount": 0,
-    "LessonsWithoutNumberedGradeReferenceAnyRole": 40,
-    "LessonsWithoutNumberedAddressingStandard": 40,
-    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 40,
+    "LessonsWithoutNumberedGradeReferenceAnyRole": 0,
+    "LessonsWithoutNumberedAddressingStandard": 48,
+    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 48,
     "MultiStandardLessons": 0
   },
   "Units": [
     {
       "Number": 1,
-      "UnitCode": "UAE-G10-GENERAL-T1-OGL-V1:U01",
+      "UnitCode": "UAE-G10-GENERAL:U01",
       "SortOrder": 1,
-      "Title": "Number and Proportional Reasoning",
-      "LessonCount": 8,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "93bce0384d4a00d953bce05c8830d23a54311c45bb07e033b169ad66cc474839"
+      "Title": "Quadratic Expressions and Equations",
+      "LessonCount": 9,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "71786cbb9dcb24aa38df658662b652cae330fd3fc9620b0e9a89945385625521"
     },
     {
       "Number": 2,
-      "UnitCode": "UAE-G10-GENERAL-T1-OGL-V1:U02",
+      "UnitCode": "UAE-G10-GENERAL:U02",
       "SortOrder": 2,
-      "Title": "Algebra",
-      "LessonCount": 14,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "93258b6e3335f355a783aa97f96b17c516fc7da1e2441710483cc4e0c20ba43e"
+      "Title": "Exponents and Radicals",
+      "LessonCount": 6,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "2a128d46fc3acc959dae64df1c980fc81f06a30e95dfbc366a0d1fa0bacbcc52"
     },
     {
       "Number": 3,
-      "UnitCode": "UAE-G10-GENERAL-T1-OGL-V1:U03",
+      "UnitCode": "UAE-G10-GENERAL:U03",
       "SortOrder": 3,
-      "Title": "Geometry and Measure",
-      "LessonCount": 9,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "50279ce248d124e6a21daff5c7bde1c50a30b0846bfd761531161a0cd0c7d3e5"
+      "Title": "Parallel and Perpendicular Lines",
+      "LessonCount": 6,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "14cb80ee835d9913eb96c1a558c25799e8d2f5af83557841d75f5b168db3bda6"
     },
     {
       "Number": 4,
-      "UnitCode": "UAE-G10-GENERAL-T1-OGL-V1:U04",
+      "UnitCode": "UAE-G10-GENERAL:U04",
       "SortOrder": 4,
-      "Title": "Statistics and Probability",
+      "Title": "Transformations and Symmetry",
+      "LessonCount": 6,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "dcff1928f48064d431fd0733b10b86da7b06bd29478188ea59be01e7de2c4c08"
+    },
+    {
+      "Number": 5,
+      "UnitCode": "UAE-G10-GENERAL:U05",
+      "SortOrder": 5,
+      "Title": "Congruent Triangles",
       "LessonCount": 9,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "25e05c336fc202e4be4afb3ca24d68482208936c53ea2938b22ff0e9b93d17ab"
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "fc4620433550bdb663025122e612054bb1eaefe027c9b0478c1c675fbb3b78ff"
+    },
+    {
+      "Number": 6,
+      "UnitCode": "UAE-G10-GENERAL:U06",
+      "SortOrder": 6,
+      "Title": "Relationships in Triangles",
+      "LessonCount": 6,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "5f280efe47e380350ea7b576f7bdefce96a7010f003bea2e3744d222949ae806"
+    },
+    {
+      "Number": 7,
+      "UnitCode": "UAE-G10-GENERAL:U07",
+      "SortOrder": 7,
+      "Title": "Quadrilaterals",
+      "LessonCount": 6,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "14c7180b89ede9a65206596f396e1ddc5d3d2978864572dd2a432bcf82fc1ceb"
     }
   ],
   "Lessons": [
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U01:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:01:01:INTEGERS-AND-DIRECTED-NUMBER",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:01:01:ADDING-AND-SUBTRACTING-POLYNOMIALS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Quadratic Expressions and Equations",
       "LessonNumber": 1,
-      "Title": "Integers and directed number",
+      "Title": "Adding and Subtracting Polynomials",
       "SortOrder": 1,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "807dfe0845d64b410553e84d931b13e65affeb3f39a93bf53b64531a23cd18fd",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "3373991d4328be6ef044cbd03a6dee426788068212642c2af672bde64a0f4e1a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U01:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U01:L01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U01:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:01:02:FRACTIONS-AND-MIXED-NUMBERS",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:01:02:MULTIPLYING-A-POLYNOMIAL-BY-A-MONOMIAL",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Quadratic Expressions and Equations",
       "LessonNumber": 2,
-      "Title": "Fractions and mixed numbers",
+      "Title": "Multiplying a Polynomial by a Monomial",
       "SortOrder": 2,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "96fb63cb01842d0b590667e12cb9d8bf72cd3408677b8dee13c06a576c56e854",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "d7246d7298e82e4c98e69716651074dc03e2ba97ac3e97e45e687b2e1c822c79",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U01:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U01:L02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U01:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:01:03:DECIMALS-AND-ROUNDING",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:01:03:MULTIPLYING-POLYNOMIALS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Quadratic Expressions and Equations",
       "LessonNumber": 3,
-      "Title": "Decimals and rounding",
+      "Title": "Multiplying Polynomials",
       "SortOrder": 3,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "e1f2b7806a0988456a45c1b992030e6cf8238dfaeb7de07e13a0472c6320e924",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "7de9ec72f6f9c5e7a816694dd3e27b1770edd1d91094f2c5d48616c2e6eb6c9f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U01:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U01:L03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U01:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:01:04:PERCENTAGES",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:01:04:SPECIAL-PRODUCTS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Quadratic Expressions and Equations",
       "LessonNumber": 4,
-      "Title": "Percentages",
+      "Title": "Special Products",
       "SortOrder": 4,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "657875651b82a036d76077c3e6f323d36a40aa46e6e45e59703b077403c34318",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "d8cba2d05e00a91044ff89b9f982255bc2b1fc083ee4e9287e8fdd0c021b820a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U01:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U01:L04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U01:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:01:05:RATIO-AND-PROPORTION",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:01:05:USING-THE-DISTRIBUTIVE-PROPERTY",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Quadratic Expressions and Equations",
       "LessonNumber": 5,
-      "Title": "Ratio and proportion",
+      "Title": "Using the Distributive Property",
       "SortOrder": 5,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "9d28d8702349a2b115bf7f5d0a3543471c175f0518f66b69ffff776de195ccbf",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "4278a9a7c85b950d438c9bd1a39f7494e232551b550f9001a0d68c4a9defdb16",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U01:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U01:L05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U01:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:01:06:RATES-AND-UNIT-RATES",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:01:06:SOLVING-X-BX-C-0",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Quadratic Expressions and Equations",
       "LessonNumber": 6,
-      "Title": "Rates and unit rates",
+      "Title": "Solving x² + bx + c = 0",
       "SortOrder": 6,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "760b704cae5bc222a2892e26e108b964590ba9663d201470c8db87a57420ee6c",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "3b428783aa005b29e285402c6d3ca58c38ca448ca0d900db64214f91f344fd40",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U01:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U01:L06"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U01:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:01:07:POWERS-AND-ROOTS",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:01:07:SOLVING-AX-BX-C-0",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Quadratic Expressions and Equations",
       "LessonNumber": 7,
-      "Title": "Powers and roots",
+      "Title": "Solving ax² + bx + c = 0",
       "SortOrder": 7,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "e7aa0a6b79eb1a33c816c3001d20a7a8b8955731ced0921cafb96daef72229f9",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "e0276b144c80b8f92f2889002c1c24daf1df05d398e88ace111d419f9bae0dff",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:T1:EDU:01:07",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U01:L07",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -206,22 +287,22 @@
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:T1:EDU:01:07"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U01:L07"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U01:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:01:08:STANDARD-FORM-AND-ESTIMATION",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:01:08:DIFFERENCE-OF-TWO-SQUARES",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Quadratic Expressions and Equations",
       "LessonNumber": 8,
-      "Title": "Standard form and estimation",
+      "Title": "Difference of Two Squares",
       "SortOrder": 8,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "42767b5650f681f161a1b91685472de473546e0299414055aa128f54d92cf548",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "42c5725c4a7279cc25f2836b503c31d0c731acda0210de793c013ef75f38e752",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:T1:EDU:01:08",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U01:L08",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -233,73 +314,130 @@
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:T1:EDU:01:08"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U01:L08"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U01:L09",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:01:09:PERFECT-SQUARES",
+      "UnitNumber": 1,
+      "UnitTitle": "Quadratic Expressions and Equations",
+      "LessonNumber": 9,
+      "Title": "Perfect Squares",
+      "SortOrder": 9,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "c562324ef358caa9d58abf6a06a9595a5b41023cd17fef5b7fa60ad77265a5d0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U01:L09",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U01:L09"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U02:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:02:01:ALGEBRAIC-EXPRESSIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:02:01:MULTIPLICATION-PROPERTIES-OF-EXPONENTS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Exponents and Radicals",
       "LessonNumber": 1,
-      "Title": "Algebraic expressions",
-      "SortOrder": 9,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "3a61a62238f04be43d8fc4d75348909b5e42b0dd761e88fb62a8b169c983342d",
-      "Alignments": [],
+      "Title": "Multiplication Properties of Exponents",
+      "SortOrder": 10,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "9e2204180a2031fdb4f39397717e3bb27f9800c269e11909848c326e09d50621",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U02:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U02:L01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U02:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:02:02:SUBSTITUTION",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:02:02:DIVISION-PROPERTIES-OF-EXPONENTS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Exponents and Radicals",
       "LessonNumber": 2,
-      "Title": "Substitution",
-      "SortOrder": 10,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "af0d95162bc1257f97ef0b175f65b1e7c12d65b4d23eedc2af01741bb3249d34",
-      "Alignments": [],
+      "Title": "Division Properties of Exponents",
+      "SortOrder": 11,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "71f9e2c96e43cb4e0edd863d3380147764b110b71c6a5ecb922a3cfcb5ab68ba",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U02:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U02:L02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U02:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:02:03:EXPANDING-BRACKETS",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:02:03:RATIONAL-EXPONENTS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Exponents and Radicals",
       "LessonNumber": 3,
-      "Title": "Expanding brackets",
-      "SortOrder": 11,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "45d85492714dac75f8e93f6ee6dc9af241d9130874c817ea7912e55bee51683c",
-      "Alignments": [],
+      "Title": "Rational Exponents",
+      "SortOrder": 12,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "65ca5da09c4f770a157ee3435b2b840d4bfe5fb864c2b03f54a5e06211fe5de1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U02:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U02:L03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U02:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:02:04:FACTORISING-EXPRESSIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:02:04:SCIENTIFIC-NOTATION",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Exponents and Radicals",
       "LessonNumber": 4,
-      "Title": "Factorising expressions",
-      "SortOrder": 12,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "6cbdd2100fd42b33d19071f35ad0ffa0a892e05bba8b7e27954d79bcb2ce3197",
+      "Title": "Scientific Notation",
+      "SortOrder": 13,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "8b10c7f2d4b1031387d339b4cdf653cacbde1aa75aca2dcb3fa7c76b12e6837d",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:T1:EDU:02:04",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U02:L04",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -311,73 +449,49 @@
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:T1:EDU:02:04"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U02:L04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U02:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:02:05:LINEAR-EQUATIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:02:05:SIMPLIFYING-RADICAL-EXPRESSIONS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Exponents and Radicals",
       "LessonNumber": 5,
-      "Title": "Linear equations",
-      "SortOrder": 13,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "d2bca4ae11ddd1a0911dd80a400e90d32e00abd59292287415c1973abde52889",
-      "Alignments": [],
+      "Title": "Simplifying Radical Expressions",
+      "SortOrder": 14,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "23e32dffc03629e407a18871c2140827900ce66cc71e332cea04e9983a4cb0c6",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U02:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U02:L05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U02:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:02:06:INEQUALITIES",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:02:06:OPERATIONS-WITH-RADICAL-EXPRESSIONS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Exponents and Radicals",
       "LessonNumber": 6,
-      "Title": "Inequalities",
-      "SortOrder": 14,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "90002fd6c274b0c4d085b47f322bfa3054248449ab806e38341acd0ff2a1d065",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U02:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:02:07:SEQUENCES",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 7,
-      "Title": "Sequences",
+      "Title": "Operations with Radical Expressions",
       "SortOrder": 15,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "28f67aa9c09138fcb3eb1f7d6098d7e5cc93fa703a0db6d71a97240fcdaae930",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U02:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:02:08:COORDINATES-AND-STRAIGHT-LINE-GRAPHS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 8,
-      "Title": "Coordinates and straight-line graphs",
-      "SortOrder": 16,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "c36cf2ce1ba73e26946c386b1c687cdb686311773b4d30f36bd2e34fc3b13c93",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "5db31bb38575d629727a8153e189ac25230a691d4b7642232d6732130dc08ba4",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:T1:EDU:02:08",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U02:L06",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -389,154 +503,22 @@
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:T1:EDU:02:08"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U02:L09",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:02:09:SIMULTANEOUS-EQUATIONS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 9,
-      "Title": "Simultaneous equations",
-      "SortOrder": 17,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "ef8ea698c12e6c64b701fa7220edbfd4df1131c2c8a1697ecb07db1ef68d2a86",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U02:L10",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:02:10:LINEAR-MODELLING",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 10,
-      "Title": "Linear modelling",
-      "SortOrder": 18,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "72648bc82d3a0cbe658cf075f34f944a8b50d4e7ada1f57207af7b4f0a7e1091",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:T1:EDU:02:10",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 1
-        }
-      ],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:T1:EDU:02:10"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U02:L11",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:02:11:QUADRATIC-EXPRESSIONS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 11,
-      "Title": "Quadratic expressions",
-      "SortOrder": 19,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "9dce721eed943f42559e2511b2504398b6f58e9a387e6b0942e460f81b673550",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:T1:EDU:02:11",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 1
-        }
-      ],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:T1:EDU:02:11"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U02:L12",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:02:12:FUNCTIONS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 12,
-      "Title": "Functions",
-      "SortOrder": 20,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "1dfc6c291f67f9eea6acc29c0482a0fa04b8db3faaac63c3a3de97b8c2fd81f8",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U02:L13",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:02:13:QUADRATIC-EQUATIONS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 13,
-      "Title": "Quadratic equations",
-      "SortOrder": 21,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "3fe69d9d6a6900cd4554aeefe0b5b8077670627eb6de0e1a31af4ed02ea698a5",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:T1:EDU:02:13",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 1
-        }
-      ],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:T1:EDU:02:13"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U02:L14",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:02:14:POLYNOMIAL-GRAPHS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 14,
-      "Title": "Polynomial graphs",
-      "SortOrder": 22,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "a3c0744b447dbea8ded79e3dc33b600a125791b924e9f7b31a3d297a79051539",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U02:L06"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U03:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:03:01:ANGLE-RELATIONSHIPS",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:03:01:PARALLEL-AND-INTERSECTING-LINES",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Parallel and Perpendicular Lines",
       "LessonNumber": 1,
-      "Title": "Angle relationships",
-      "SortOrder": 23,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "74d3418febed1851c8ef4e05690c2fac58d50410d06f0da3f0e952c73ccddcdd",
+      "Title": "Parallel and Intersecting Lines",
+      "SortOrder": 16,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "b29f23ecdf8db3734e8f7d36cb61ef955a2a660cdb8187863191e8ab56cdbbb4",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:T1:EDU:03:01",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U03:L01",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -548,22 +530,22 @@
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:T1:EDU:03:01"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U03:L01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U03:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:03:02:POLYGONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:03:02:ANGLES-AND-PARALLEL-LINES",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Parallel and Perpendicular Lines",
       "LessonNumber": 2,
-      "Title": "Polygons",
-      "SortOrder": 24,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "d1111b105ee70f2aeb729376c4e014f3741d365c0d41f72a6b774df6e1afff19",
+      "Title": "Angles and Parallel Lines",
+      "SortOrder": 17,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "0e705974a6bb2cf17ce1317bde365944219b096ef3847d5eac5f4fb600f9d5d7",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:T1:EDU:03:02",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U03:L02",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -575,22 +557,22 @@
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:T1:EDU:03:02"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U03:L02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U03:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:03:03:CONGRUENCE-AND-SIMILARITY",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:03:03:SLOPE-OF-A-LINE",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Parallel and Perpendicular Lines",
       "LessonNumber": 3,
-      "Title": "Congruence and similarity",
-      "SortOrder": 25,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "1e12fbcc5f5345ac53f2bd68afce5dc385b688a5006438da5d0aec174c29b1f2",
+      "Title": "Slope of a Line",
+      "SortOrder": 18,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "294068e0c8d809b1d848cc85b423430d3a6b6900d02078e1a779357d93831183",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:T1:EDU:03:03",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U03:L03",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -602,22 +584,22 @@
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:T1:EDU:03:03"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U03:L03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U03:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:03:04:TRANSFORMATIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:03:04:EQUATIONS-OF-LINES",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Parallel and Perpendicular Lines",
       "LessonNumber": 4,
-      "Title": "Transformations",
-      "SortOrder": 26,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "c744e646f6dd8e5d81a5a6ec140daf0dd363cd65aef16a21122afd754cf8a63d",
+      "Title": "Equations of Lines",
+      "SortOrder": 19,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "96631b78eef8e8fe1775c7420562a9c581fd1c42d4ffa6623474a4e432d3c170",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:T1:EDU:03:04",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U03:L04",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -629,22 +611,22 @@
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:T1:EDU:03:04"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U03:L04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U03:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:03:05:PERIMETER-AND-AREA",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:03:05:PROVING-LINES-PARALLEL",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Parallel and Perpendicular Lines",
       "LessonNumber": 5,
-      "Title": "Perimeter and area",
-      "SortOrder": 27,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "35439c3f4f76d186ffed6b903c04b111364f71efaaaee3ff340bd48f41ba7f52",
+      "Title": "Proving Lines Parallel",
+      "SortOrder": 20,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "73c9d7b629b02496673f621345e53a9ee63e775587b102705aea156819f0c589",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:T1:EDU:03:05",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U03:L05",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -656,228 +638,763 @@
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:T1:EDU:03:05"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U03:L05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U03:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:03:06:SURFACE-AREA-AND-VOLUME",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:03:06:PERPENDICULARS-AND-DISTANCE",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Parallel and Perpendicular Lines",
       "LessonNumber": 6,
-      "Title": "Surface area and volume",
-      "SortOrder": 28,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "b460286d0faf4de890611d524318542ac8815445a9fb2395ae95eeaba8ba914f",
-      "Alignments": [],
+      "Title": "Perpendiculars and Distance",
+      "SortOrder": 21,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "e5ab5ef060a7f9a902757f332741330db35ebbc2055f4df00b7f8ad5dd01cdc2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U03:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U03:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:03:07:PYTHAGORAS-THEOREM",
-      "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 7,
-      "Title": "Pythagoras theorem",
-      "SortOrder": 29,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "cd239f93dd8128895858a34fc81bd377455ef6c1529c961f3b8f22458fd2ca14",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U03:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:03:08:CONSTRUCTIONS-AND-LOCI",
-      "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 8,
-      "Title": "Constructions and loci",
-      "SortOrder": 30,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "fdfa8aedeede14a1ca7e779379a131d0a36144ba1f359e3ea5a27fc176722934",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U03:L09",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:03:09:TRIGONOMETRIC-RATIOS",
-      "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 9,
-      "Title": "Trigonometric ratios",
-      "SortOrder": 31,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "0d51035a108715a675cdd816c16c219e9a44b40a2e8156cc74e9e7d5c99e54e5",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U03:L06"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U04:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:04:01:COLLECTING-DATA",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:04:01:REFLECTIONS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Transformations and Symmetry",
       "LessonNumber": 1,
-      "Title": "Collecting data",
-      "SortOrder": 32,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "716f885c75fc4e81e23014b4ff90ac58babb485adcae5c1573427a052fb563a8",
-      "Alignments": [],
+      "Title": "Reflections",
+      "SortOrder": 22,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "5abc29a5ecfd0ed9d17135b2c16ce363b4fb40ba06e5d4510f03e1f8818f7d77",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U04:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U04:L01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U04:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:04:02:TABLES-AND-CHARTS",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:04:02:TRANSLATIONS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Transformations and Symmetry",
       "LessonNumber": 2,
-      "Title": "Tables and charts",
-      "SortOrder": 33,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "aca8a96b9877658eeae30c346fc94c43cb49f51f57d26e7156fd41eec8b9afce",
-      "Alignments": [],
+      "Title": "Translations",
+      "SortOrder": 23,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "f6da26b903b814727229c7fa708df324c8850d87bd5fb98e27b1950ab84e3eff",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U04:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U04:L02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U04:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:04:03:MEAN-MEDIAN-AND-RANGE",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:04:03:ROTATIONS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Transformations and Symmetry",
       "LessonNumber": 3,
-      "Title": "Mean, median and range",
-      "SortOrder": 34,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "994b9a0eb5aeff39bf9a9ccffbfbd193a5471bbdcafb9ccce1bdba13172a2934",
-      "Alignments": [],
+      "Title": "Rotations",
+      "SortOrder": 24,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "c6655ebad1a447b17008f341c0da7fa6dea668b0082560fe1016e6cae57f3b44",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U04:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U04:L03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U04:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:04:04:SCATTER-GRAPHS",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:04:04:COMPOSITIONS-OF-TRANSFORMATIONS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Transformations and Symmetry",
       "LessonNumber": 4,
-      "Title": "Scatter graphs",
-      "SortOrder": 35,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "0df4a33428c7982926db4770352b3d7f03dd5e6ddc00e77b6f67a5733f01a0c6",
-      "Alignments": [],
+      "Title": "Compositions of Transformations",
+      "SortOrder": 25,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "8576076040520819c24c4fd4093b5d82f240fbfb1c5b897fc64203262ebdb0dd",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U04:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U04:L04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U04:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:04:05:EXPERIMENTAL-PROBABILITY",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:04:05:SYMMETRY",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Transformations and Symmetry",
       "LessonNumber": 5,
-      "Title": "Experimental probability",
-      "SortOrder": 36,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "d6aa109e07b6cc1e58b207eeba53a5d0c1404f3ecf5704906a2ad7b3d8d1bd97",
-      "Alignments": [],
+      "Title": "Symmetry",
+      "SortOrder": 26,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "a0909237476b68dbe78949490d5e99952769791398718f37351bbbbe5e2acce7",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U04:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U04:L05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U04:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:04:06:THEORETICAL-PROBABILITY",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:04:06:DILATIONS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Transformations and Symmetry",
       "LessonNumber": 6,
-      "Title": "Theoretical probability",
-      "SortOrder": 37,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "5cad251cd59558b33067ca8cf27e26388ac4f233934019720db5f9bd7964eb0e",
-      "Alignments": [],
+      "Title": "Dilations",
+      "SortOrder": 27,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "d1a14e7d52b8e7315803eeef7fa6acdb11f8a249aa1612f1d76d8498153bd8ce",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U04:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U04:L06"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U04:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:04:07:SAMPLE-SPACES",
-      "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U05:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:05:01:CLASSIFYING-TRIANGLES",
+      "UnitNumber": 5,
+      "UnitTitle": "Congruent Triangles",
+      "LessonNumber": 1,
+      "Title": "Classifying Triangles",
+      "SortOrder": 28,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "3cb0e03f4d2943d1f60e4b23de931f7633f2b0dba5f2175f3d459cc621714289",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U05:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U05:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U05:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:05:02:ANGLES-OF-TRIANGLES",
+      "UnitNumber": 5,
+      "UnitTitle": "Congruent Triangles",
+      "LessonNumber": 2,
+      "Title": "Angles of Triangles",
+      "SortOrder": 29,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "97c035ff725b94e81bdd22f5b66fb31d6e3c12f6418a03d8e18a54274e10377d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U05:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U05:L02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U05:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:05:03:CONGRUENT-TRIANGLES",
+      "UnitNumber": 5,
+      "UnitTitle": "Congruent Triangles",
+      "LessonNumber": 3,
+      "Title": "Congruent Triangles",
+      "SortOrder": 30,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "95b57c6c2dee4aac30c1426509ed89c6776ae0b645bfc34d01f0f947162e34ac",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U05:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U05:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U05:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:05:04:PROVING-CONGRUENCE-SSS-AND-SAS",
+      "UnitNumber": 5,
+      "UnitTitle": "Congruent Triangles",
+      "LessonNumber": 4,
+      "Title": "Proving Congruence: SSS and SAS",
+      "SortOrder": 31,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "c936aa0e15ca7f65ef942f5721f8a534d25009671cc1416e9899082e4e4f1cd2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U05:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U05:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U05:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:05:05:PROVING-CONGRUENCE-ASA-AND-AAS",
+      "UnitNumber": 5,
+      "UnitTitle": "Congruent Triangles",
+      "LessonNumber": 5,
+      "Title": "Proving Congruence: ASA and AAS",
+      "SortOrder": 32,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "34c45d8a936a3b517ddfa535562f82e5df6eb27ecf20ae6ac2558a9994cb6d05",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U05:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U05:L05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U05:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:05:06:ISOSCELES-AND-EQUILATERAL-TRIANGLES",
+      "UnitNumber": 5,
+      "UnitTitle": "Congruent Triangles",
+      "LessonNumber": 6,
+      "Title": "Isosceles and Equilateral Triangles",
+      "SortOrder": 33,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "a3304de50c81a5bd4ec197912d7c0a9a451fae4a6f2ec726e62d26548e2642d3",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U05:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U05:L06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U05:L07",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:05:07:CONGRUENCE-TRANSFORMATIONS",
+      "UnitNumber": 5,
+      "UnitTitle": "Congruent Triangles",
       "LessonNumber": 7,
-      "Title": "Sample spaces",
-      "SortOrder": 38,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "f3dc8451c4ee09c1596a612b4d976aa8999cdc8d59a893d9bc780ae6e80c87ba",
-      "Alignments": [],
+      "Title": "Congruence Transformations",
+      "SortOrder": 34,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "970073159e3b120bd035a655dd2374a26d6d0f59bc3fbb420f5c9c3a68aa8b5c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U05:L07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U05:L07"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U04:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:04:08:COMPARING-DISTRIBUTIONS",
-      "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U05:L08",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:05:08:TRIANGLES-AND-COORDINATE-PROOF",
+      "UnitNumber": 5,
+      "UnitTitle": "Congruent Triangles",
       "LessonNumber": 8,
-      "Title": "Comparing distributions",
-      "SortOrder": 39,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "e6cb69884ad6b742366c413cc029fdefb3aa5edeca6e58fa276b466ec4647377",
-      "Alignments": [],
+      "Title": "Triangles and Coordinate Proof",
+      "SortOrder": 35,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "1f262e23a529718abac159d58dfb370d3e3e1944e1e860c05d6dffc2c9e6cd3e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U05:L08",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U05:L08"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U04:L09",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:04:09:TREE-DIAGRAMS",
-      "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U05:L09",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:05:09:AREA-OF-PARALLELOGRAMS-AND-TRIANGLES",
+      "UnitNumber": 5,
+      "UnitTitle": "Congruent Triangles",
       "LessonNumber": 9,
-      "Title": "Tree diagrams",
-      "SortOrder": 40,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "bfc70b67d03ea854dae68025014874f0d9a35eb554426116ac242a0a9e9fe8c2",
-      "Alignments": [],
+      "Title": "Area of Parallelograms and Triangles",
+      "SortOrder": 36,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "8365fb02ecd0a164f295bf392c71f6e84e779a8b24fab35906841742170b7a03",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U05:L09",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U05:L09"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U06:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:06:01:PERPENDICULAR-BISECTORS",
+      "UnitNumber": 6,
+      "UnitTitle": "Relationships in Triangles",
+      "LessonNumber": 1,
+      "Title": "Perpendicular Bisectors",
+      "SortOrder": 37,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "0912094ab9fdb45d59bb5e90f34b9924b55f4fa2a6bbafcc0977939ef60e5eae",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U06:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U06:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U06:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:06:02:MEDIANS-AND-ALTITUDES-OF-TRIANGLES",
+      "UnitNumber": 6,
+      "UnitTitle": "Relationships in Triangles",
+      "LessonNumber": 2,
+      "Title": "Medians and Altitudes of Triangles",
+      "SortOrder": 38,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "fe82c6ffb9782ad8b98ee917d6f0a1fe176306f586a065026181e91146e0ae7f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U06:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U06:L02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U06:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:06:03:INEQUALITIES-IN-ONE-TRIANGLE",
+      "UnitNumber": 6,
+      "UnitTitle": "Relationships in Triangles",
+      "LessonNumber": 3,
+      "Title": "Inequalities in One Triangle",
+      "SortOrder": 39,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "1c818d2c1d96e8d1c3b979dc51161a28d1d89b497c308de4eeb7315537a52603",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U06:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U06:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U06:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:06:04:INDIRECT-PROOF",
+      "UnitNumber": 6,
+      "UnitTitle": "Relationships in Triangles",
+      "LessonNumber": 4,
+      "Title": "Indirect Proof",
+      "SortOrder": 40,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "fe06fb1f06bf5e83310c77066f00be221d45b788d0f9b4746481c80dc95b36f0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U06:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U06:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U06:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:06:05:TRIANGLE-INEQUALITY",
+      "UnitNumber": 6,
+      "UnitTitle": "Relationships in Triangles",
+      "LessonNumber": 5,
+      "Title": "Triangle Inequality",
+      "SortOrder": 41,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "869945a2a1a15a588aafbbcf5cceb62a81fbdfaf9de174819abcb9441ed491ec",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U06:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U06:L05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U06:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:06:06:INEQUALITIES-IN-TWO-TRIANGLES",
+      "UnitNumber": 6,
+      "UnitTitle": "Relationships in Triangles",
+      "LessonNumber": 6,
+      "Title": "Inequalities in Two Triangles",
+      "SortOrder": 42,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "8791abd7752a262064ae584c2c7cd6115b85a4c727e516a9ab90c6183adce7f1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U06:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U06:L06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U07:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:07:01:ANGLES-OF-POLYGONS",
+      "UnitNumber": 7,
+      "UnitTitle": "Quadrilaterals",
+      "LessonNumber": 1,
+      "Title": "Angles of Polygons",
+      "SortOrder": 43,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "a22ca14e253a25635f1ecad6daebecb6abfe4f3bfc5393deed983e78744a435c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U07:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U07:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U07:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:07:02:PARALLELOGRAMS",
+      "UnitNumber": 7,
+      "UnitTitle": "Quadrilaterals",
+      "LessonNumber": 2,
+      "Title": "Parallelograms",
+      "SortOrder": 44,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "84dec221a62cb4af0142e6b83542927956f856e74b62064a3b1966dade1e1299",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U07:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U07:L02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U07:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:07:03:TESTS-FOR-PARALLELOGRAMS",
+      "UnitNumber": 7,
+      "UnitTitle": "Quadrilaterals",
+      "LessonNumber": 3,
+      "Title": "Tests for Parallelograms",
+      "SortOrder": 45,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "b982f13ecc8aa3ee0cf03bafb71aa9681ed3fbcedfa0829e4dc16560d44d5822",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U07:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U07:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U07:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:07:04:RECTANGLES",
+      "UnitNumber": 7,
+      "UnitTitle": "Quadrilaterals",
+      "LessonNumber": 4,
+      "Title": "Rectangles",
+      "SortOrder": 46,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "5a08a7cb5caa56f65fbcfeebf984fa5c54be73a0472354119a30645b07c11dae",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U07:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U07:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U07:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:07:05:RHOMBI-AND-SQUARES",
+      "UnitNumber": 7,
+      "UnitTitle": "Quadrilaterals",
+      "LessonNumber": 5,
+      "Title": "Rhombi and Squares",
+      "SortOrder": 47,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "3bff96106a23931da9c07113f1a511e6c2b3627fa87625b15254bb5ae095c274",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U07:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U07:L05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:GENERAL:U07:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:GENERAL:07:06:TRAPEZOIDS-AND-KITES",
+      "UnitNumber": 7,
+      "UnitTitle": "Quadrilaterals",
+      "LessonNumber": 6,
+      "Title": "Trapezoids and Kites",
+      "SortOrder": 48,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "eb8c8ad8a83e81dcf771b732fad185cd1620f1bf5922b5acb3a07a6b801f1a0a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U07:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:GENERAL:ANNUAL:U07:L06"
     }
   ]
 }

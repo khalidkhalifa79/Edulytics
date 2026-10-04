@@ -1,0 +1,489 @@
+{
+  "SchemaVersion": 1,
+  "PackCode": "UAE-MOE-MATH",
+  "Grade": 12,
+  "Pathway": "General",
+  "TargetCurriculumPeriod": "2026-2027",
+  "ResolutionNote": "2026-2027 Term 1 is current and confirms Units 1-3. The complete annual structure here is the fully verified 2025-2026 UAE curriculum retained as PreviousOfficialFallback for not-yet-published 2026-2027 later-term scope. No lesson is labelled Supporting.",
+  "CurrentTermEvidence": {
+    "Term": "T1",
+    "Period": "2026-2027",
+    "Url": "https://uae.afedne.com/library/file/459/%D9%83%D8%AA%D8%A7%D8%A8_%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA_%D9%84%D9%84%D8%B5%D9%81_%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A_%D8%B9%D8%B4%D8%B1_%D8%B9%D8%A7%D9%85_%D8%A7%D9%84%D9%81%D8%B5%D9%84_%D8%A7%D9%84%D8%A3%D9%88%D9%84_2026_2027"
+  },
+  "PriorFullYearEvidence": {
+    "Period": "2025-2026",
+    "Sources": [
+      "https://almanahj.com/ae/id=35140",
+      "https://almanahj.com/ae/id=37738",
+      "https://almanahj.com/ae/id=38834"
+    ]
+  },
+  "LessonCount": 52,
+  "Units": [
+    {
+      "Number": 1,
+      "Title": "Quadratic Functions and Equations",
+      "Term": "T1",
+      "LessonCount": 8,
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "Lessons": [
+        {
+          "LessonNumber": 1,
+          "Title": "Graphing Quadratic Functions",
+          "SourceOutcomeCodes": [
+            "MAT.5.02.04.001",
+            "MAT.5.02.04.002"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:01:01"
+        },
+        {
+          "LessonNumber": 2,
+          "Title": "Solving Quadratic Equations by Graphing",
+          "SourceOutcomeCodes": [
+            "MAT.2.02.11.002",
+            "MAT.2.02.11.004"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:01:02"
+        },
+        {
+          "LessonNumber": 3,
+          "Title": "Solving Quadratic Equations by Completing the Square",
+          "SourceOutcomeCodes": [
+            "MAT.2.02.11.006",
+            "MAT.2.02.11.008"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:01:03"
+        },
+        {
+          "LessonNumber": 4,
+          "Title": "Solving Quadratic Equations by Factoring",
+          "SourceOutcomeCodes": [
+            "MAT.2.02.11.010",
+            "MAT.2.02.11.012"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:01:04"
+        },
+        {
+          "LessonNumber": 5,
+          "Title": "Complex Numbers",
+          "SourceOutcomeCodes": [
+            "MAT.2.02.11.014",
+            "MAT.2.02.11.016"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:01:05"
+        },
+        {
+          "LessonNumber": 6,
+          "Title": "The Quadratic Formula and the Discriminant",
+          "SourceOutcomeCodes": [
+            "MAT.2.02.11.018",
+            "MAT.2.02.11.020"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:01:06"
+        },
+        {
+          "LessonNumber": 7,
+          "Title": "Transformations of Quadratic Graphs",
+          "SourceOutcomeCodes": [
+            "MAT.5.02.04.005",
+            "MAT.5.02.04.007"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:01:07"
+        },
+        {
+          "LessonNumber": 8,
+          "Title": "Quadratic Inequalities",
+          "SourceOutcomeCodes": [
+            "MAT.2.02.11.022",
+            "MAT.2.02.11.024"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:01:08"
+        }
+      ]
+    },
+    {
+      "Number": 2,
+      "Title": "Polynomials and Polynomial Functions",
+      "Term": "T1",
+      "LessonCount": 8,
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "Lessons": [
+        {
+          "LessonNumber": 1,
+          "Title": "Operations with Polynomials",
+          "SourceOutcomeCodes": [
+            "MAT.5.02.05.001",
+            "MAT.5.02.05.002"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:01"
+        },
+        {
+          "LessonNumber": 2,
+          "Title": "Dividing with Polynomials",
+          "SourceOutcomeCodes": [
+            "MAT.5.02.05.003",
+            "MAT.5.02.05.004"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:02"
+        },
+        {
+          "LessonNumber": 3,
+          "Title": "Polynomial Functions",
+          "SourceOutcomeCodes": [
+            "MAT.5.02.05.005",
+            "MAT.5.02.05.006"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:03"
+        },
+        {
+          "LessonNumber": 4,
+          "Title": "Analyzing Graphs of Polynomial Functions",
+          "SourceOutcomeCodes": [
+            "MAT.5.02.05.007",
+            "MAT.5.02.05.008"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:04"
+        },
+        {
+          "LessonNumber": 5,
+          "Title": "Solving Polynomial Equations",
+          "SourceOutcomeCodes": [
+            "MAT.5.02.05.009",
+            "MAT.5.02.05.010"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:05"
+        },
+        {
+          "LessonNumber": 6,
+          "Title": "The Remainder and Factor Theorems",
+          "SourceOutcomeCodes": [
+            "MAT.5.02.05.011",
+            "MAT.5.02.05.012"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:06"
+        },
+        {
+          "LessonNumber": 7,
+          "Title": "Roots and Zeros",
+          "SourceOutcomeCodes": [
+            "MAT.5.02.05.013",
+            "MAT.5.02.05.014"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:07"
+        },
+        {
+          "LessonNumber": 8,
+          "Title": "Rational Zero Theorem",
+          "SourceOutcomeCodes": [
+            "MAT.5.02.05.015",
+            "MAT.5.02.05.016"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:08"
+        }
+      ]
+    },
+    {
+      "Number": 3,
+      "Title": "Exponential Functions and Equations",
+      "Term": "T1",
+      "LessonCount": 6,
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "Lessons": [
+        {
+          "LessonNumber": 1,
+          "Title": "Exponential Functions",
+          "SourceOutcomeCodes": [
+            "MAT.5.03.01.001",
+            "MAT.5.03.01.003"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:03:01"
+        },
+        {
+          "LessonNumber": 2,
+          "Title": "Identify Functions with Successive Differences",
+          "SourceOutcomeCodes": [
+            "MAT.5.03.01.005",
+            "MAT.2.02.22.001"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:03:02"
+        },
+        {
+          "LessonNumber": 3,
+          "Title": "Growth and Decay",
+          "SourceOutcomeCodes": [
+            "MAT.5.03.03.003",
+            "MAT.5.03.03.004"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:03:03"
+        },
+        {
+          "LessonNumber": 4,
+          "Title": "Geometric Sequences as Exponential Functions",
+          "SourceOutcomeCodes": [
+            "MAT.2.05.01.001",
+            "MAT.2.05.02.002"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:03:04"
+        },
+        {
+          "LessonNumber": 5,
+          "Title": "Recursive Formulas",
+          "SourceOutcomeCodes": [
+            "MAT.2.02.22.002",
+            "MAT.2.05.01.002"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:03:05"
+        },
+        {
+          "LessonNumber": 6,
+          "Title": "Solving Exponential Equations and Inequalities",
+          "SourceOutcomeCodes": [
+            "MAT.2.02.22.003",
+            "MAT.2.02.22.004"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:03:06"
+        }
+      ]
+    },
+    {
+      "Number": 4,
+      "Title": "Statistics and Probability",
+      "Term": "T1",
+      "LessonCount": 5,
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "Lessons": [
+        {
+          "LessonNumber": 1,
+          "Title": "Designing a Study",
+          "SourceOutcomeCodes": [
+            "MAT.4.02.09.001",
+            "MAT.4.02.09.002"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:04:01"
+        },
+        {
+          "LessonNumber": 2,
+          "Title": "Distributions of Data",
+          "SourceOutcomeCodes": [
+            "MAT.4.02.09.003",
+            "MAT.4.02.09.004"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:04:02"
+        },
+        {
+          "LessonNumber": 3,
+          "Title": "Probability Distributions",
+          "SourceOutcomeCodes": [
+            "MAT.4.02.09.005",
+            "MAT.4.02.09.006"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:04:03"
+        },
+        {
+          "LessonNumber": 4,
+          "Title": "The Binomial Distribution",
+          "SourceOutcomeCodes": [
+            "MAT.4.03.03.001",
+            "MAT.4.03.03.002"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:04:04"
+        },
+        {
+          "LessonNumber": 5,
+          "Title": "The Normal Distribution",
+          "SourceOutcomeCodes": [
+            "MAT.4.03.04.001",
+            "MAT.4.03.04.002"
+          ],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:04:05"
+        }
+      ]
+    },
+    {
+      "Number": 5,
+      "Title": "Inverse and Radical Functions",
+      "Term": "T2",
+      "LessonCount": 7,
+      "SourceUrl": "https://almanahj.com/ae/id=37738",
+      "Lessons": [
+        {
+          "LessonNumber": 1,
+          "Title": "Operations on Functions",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:05:01"
+        },
+        {
+          "LessonNumber": 2,
+          "Title": "Inverse Relations and Functions",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:05:02"
+        },
+        {
+          "LessonNumber": 3,
+          "Title": "Square Root Functions and Inequalities",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:05:03"
+        },
+        {
+          "LessonNumber": 4,
+          "Title": "Nth Roots",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:05:04"
+        },
+        {
+          "LessonNumber": 5,
+          "Title": "Operations on Radical Expressions",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:05:05"
+        },
+        {
+          "LessonNumber": 6,
+          "Title": "Rational Exponents",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:05:06"
+        },
+        {
+          "LessonNumber": 7,
+          "Title": "Solving Radical Equations and Inequalities",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:05:07"
+        }
+      ]
+    },
+    {
+      "Number": 6,
+      "Title": "Exponential and Logarithmic Functions",
+      "Term": "T2",
+      "LessonCount": 6,
+      "SourceUrl": "https://almanahj.com/ae/id=37738",
+      "Lessons": [
+        {
+          "LessonNumber": 1,
+          "Title": "Logarithms and Logarithmic Functions",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:06:01"
+        },
+        {
+          "LessonNumber": 2,
+          "Title": "Solving Logarithmic Equations and Inequalities",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:06:02"
+        },
+        {
+          "LessonNumber": 3,
+          "Title": "Properties of Logarithms",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:06:03"
+        },
+        {
+          "LessonNumber": 4,
+          "Title": "Common Logarithms",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:06:04"
+        },
+        {
+          "LessonNumber": 5,
+          "Title": "Base e and Natural Logarithms",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:06:05"
+        },
+        {
+          "LessonNumber": 6,
+          "Title": "Using Exponential and Logarithmic Functions",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:06:06"
+        }
+      ]
+    },
+    {
+      "Number": 7,
+      "Title": "Rational Functions and Relations",
+      "Term": "T3",
+      "LessonCount": 5,
+      "SourceUrl": "https://almanahj.com/ae/id=38834",
+      "Lessons": [
+        {
+          "LessonNumber": 1,
+          "Title": "Multiplying and Dividing Rational Expressions",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:07:01"
+        },
+        {
+          "LessonNumber": 2,
+          "Title": "Adding and Subtracting Rational Expressions",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:07:02"
+        },
+        {
+          "LessonNumber": 3,
+          "Title": "Graphing Reciprocal Functions",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:07:03"
+        },
+        {
+          "LessonNumber": 4,
+          "Title": "Graphing Rational Functions",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:07:04"
+        },
+        {
+          "LessonNumber": 5,
+          "Title": "Solving Rational Equations and Inequalities",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:07:05"
+        }
+      ]
+    },
+    {
+      "Number": 8,
+      "Title": "Trigonometric Functions",
+      "Term": "T3",
+      "LessonCount": 7,
+      "SourceUrl": "https://almanahj.com/ae/id=38834",
+      "Lessons": [
+        {
+          "LessonNumber": 1,
+          "Title": "Trigonometric Ratios in Right Triangles",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:08:01"
+        },
+        {
+          "LessonNumber": 2,
+          "Title": "Angles and Angle Measure",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:08:02"
+        },
+        {
+          "LessonNumber": 3,
+          "Title": "Trigonometric Ratios of General Angles",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:08:03"
+        },
+        {
+          "LessonNumber": 4,
+          "Title": "The Sine Law",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:08:04"
+        },
+        {
+          "LessonNumber": 5,
+          "Title": "The Cosine Law",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:08:05"
+        },
+        {
+          "LessonNumber": 6,
+          "Title": "Circular and Periodic Functions",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:08:06"
+        },
+        {
+          "LessonNumber": 7,
+          "Title": "Graphing Trigonometric Functions",
+          "SourceOutcomeCodes": [],
+          "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:08:07"
+        }
+      ]
+    }
+  ]
+}

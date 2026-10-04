@@ -30,7 +30,7 @@
   "SemanticGraphSha256": "55b7740f15189e8a124c18439e659aaaea50ee0411b46817e8bd7a1dac9614b5",
   "AcquisitionDiagnostics": {
     "UnitCount": 5,
-    "LessonCount": 25,
+    "LessonCount": 23,
     "OfficialStandardCount": 13,
     "AddressingCoverageCount": 13,
     "FormalMappingCount": 20,
@@ -72,7 +72,7 @@
       "UnitCode": "UAE-G4-COMMON-T1-OGL-V1:U04",
       "SortOrder": 4,
       "Title": "Geometry",
-      "LessonCount": 5,
+      "LessonCount": 3,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "4b3193eaca91fff4f68bd18f00107459aef8955d2626f073f2cf2614f35da916"
     },
@@ -618,30 +618,13 @@
       "FormalTargets": []
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L4:COMMON:U04:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L4:COMMON:04:03:QUADRILATERALS",
-      "UnitNumber": 4,
-      "UnitTitle": "Geometry",
-      "LessonNumber": 3,
-      "Title": "Quadrilaterals",
-      "SortOrder": 20,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "db3c8005914065bf76644515acbe9bca6d74102be067a604993bcf2ac13afd7f",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G4-COMMON-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L4:COMMON:U04:L04",
       "LessonCode": "PED:UAE-MOE-MATH:L4:COMMON:04:04:COORDINATES-IN-THE-FIRST-QUADRANT",
       "UnitNumber": 4,
       "UnitTitle": "Geometry",
       "LessonNumber": 4,
       "Title": "Coordinates in the first quadrant",
-      "SortOrder": 21,
+      "SortOrder": 20,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "dea49c14b5cfd606aa4ea02b43658fceee5a3b5d197464d19c9588b47bf7ffff",
       "Alignments": [
@@ -663,30 +646,13 @@
       "FormalTargets": []
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L4:COMMON:U04:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L4:COMMON:04:05:LINE-SYMMETRY",
-      "UnitNumber": 4,
-      "UnitTitle": "Geometry",
-      "LessonNumber": 5,
-      "Title": "Line symmetry",
-      "SortOrder": 22,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "5035920e78098c6d9b37b127fb5b41feaf2a985b92c3e384e09185b442ede828",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G4-COMMON-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L4:COMMON:U05:L01",
       "LessonCode": "PED:UAE-MOE-MATH:L4:COMMON:05:01:BAR-CHARTS-WITH-SCALES",
       "UnitNumber": 5,
       "UnitTitle": "Statistics",
       "LessonNumber": 1,
       "Title": "Bar charts with scales",
-      "SortOrder": 23,
+      "SortOrder": 21,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "d0b9b2a215814ac904070f5099457df254b8216f6f2e2a122d6ba937ae29dab3",
       "Alignments": [
@@ -714,7 +680,7 @@
       "UnitTitle": "Statistics",
       "LessonNumber": 2,
       "Title": "Line graphs",
-      "SortOrder": 24,
+      "SortOrder": 22,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "e58c66dc53a60c16cec9a049bd13d62dddc7bc3185c873571874a4047a1e4238",
       "Alignments": [
@@ -741,7 +707,7 @@
       "UnitTitle": "Statistics",
       "LessonNumber": 3,
       "Title": "Interpreting tables",
-      "SortOrder": 25,
+      "SortOrder": 23,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "571be44a8cd529b0a8545cc41ae8ee81a5982f7deaa8d943f54c96674cf4fa79",
       "Alignments": [

@@ -13,136 +13,242 @@
   "SourcePublisher": "UK Department for Education",
   "SourceEdition": "Key Stage 3 Mathematics programme of study / current GOV.UK publication",
   "SourceRootUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-  "SourceCheckedAtUtc": "2026-09-01T00:00:00Z",
+  "SourceCheckedAtUtc": "2026-10-04T00:00:00Z",
   "SourceLicense": "Open Government Licence v3.0",
   "RequiredDigitalAttribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
   "SourceSelectionReason": "The official curriculum source remains the academic authority. Edulytics uses open DfE Mathematics material only as lawful pedagogical scaffolding for independently authored lesson explanations where official copyrighted or source-linked prose is not reproduced.",
-  "SourceSelectionEvidence": "This scope contains 37 Edulytics-authored supporting lessons across 4 units. No formal outcome mapping is claimed without explicit source evidence; every formal OutcomeCodes collection is empty.",
+  "SourceSelectionEvidence": "Grade 9 General rebuilt from UAE Student Edition TOCs: T1 Units 1-6, T2 Units 7-10, and T3 current structure Units 11-13. Third-party hosts are discovery only; textbook files themselves carry UAE/McGraw-Hill provenance.",
   "SourceEvidenceUrls": [
-    "https://minhaji.moe.gov.ae/",
-    "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-    "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
-    "https://uae.afedne.com/Sho9t3Q6jyvn",
-    "https://uae.afedne.com/Sho8yCxMqaod",
-    "https://uae.afedne.com/ShofH9acVYVB"
+    "https://minhaji.moe.gov.ae/"
   ],
   "SourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. Official UAE Ministry of Education wording is not reproduced. Edulytics learner-facing bodies are independently authored.",
-  "SemanticGraphSha256": "647e71571d625de7cb671e17960e94aeac6e5fdf0791482248b56be904a66094",
+  "SemanticGraphSha256": "dd0c38774eb317be26efba4f14c32dc6f5f222554801376e09ec204c88bbd0a9",
   "AcquisitionDiagnostics": {
-    "UnitCount": 4,
-    "LessonCount": 37,
+    "UnitCount": 13,
+    "LessonCount": 82,
     "OfficialStandardCount": 0,
     "AddressingCoverageCount": 0,
     "FormalMappingCount": 0,
-    "LessonsWithoutNumberedGradeReferenceAnyRole": 37,
-    "LessonsWithoutNumberedAddressingStandard": 37,
-    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 37,
+    "LessonsWithoutNumberedGradeReferenceAnyRole": 0,
+    "LessonsWithoutNumberedAddressingStandard": 82,
+    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 82,
     "MultiStandardLessons": 0
   },
   "Units": [
     {
       "Number": 1,
-      "UnitCode": "UAE-G9-GENERAL-T1-OGL-V1:U01",
+      "UnitCode": "UAE-G9-GENERAL:U01",
       "SortOrder": 1,
-      "Title": "Number and Proportional Reasoning",
+      "Title": "Expressions, Equations, and Functions",
       "LessonCount": 8,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "e5de96cc4472ce4a569e4b4eee631e4a154cb4bf60630164dd97125e75afc405"
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "2bb6de32f976f6c83e7c1d5decd3c11f747d1f0376cc48e9fc0b70c9452c36be"
     },
     {
       "Number": 2,
-      "UnitCode": "UAE-G9-GENERAL-T1-OGL-V1:U02",
+      "UnitCode": "UAE-G9-GENERAL:U02",
       "SortOrder": 2,
-      "Title": "Algebra",
-      "LessonCount": 12,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "ae3c73c4bcef35fded93bede6bbc671daf74bc37791710678c59f187763f7f15"
+      "Title": "Linear Equations",
+      "LessonCount": 9,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "511cf851f84fa8d4e02c314ef6c100a58298edbab81c9f6f156df19f2d8cb481"
     },
     {
       "Number": 3,
-      "UnitCode": "UAE-G9-GENERAL-T1-OGL-V1:U03",
+      "UnitCode": "UAE-G9-GENERAL:U03",
       "SortOrder": 3,
-      "Title": "Geometry and Measure",
-      "LessonCount": 9,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "ccd21497521603b81485dff5aa2d894a2979529795f72d805e651f8715bba8b5"
+      "Title": "Linear Functions",
+      "LessonCount": 6,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "d6356b3fe956e38a6b4d7d05af933fa08ce82642193db4c9a3c30a8e13009f94"
     },
     {
       "Number": 4,
-      "UnitCode": "UAE-G9-GENERAL-T1-OGL-V1:U04",
+      "UnitCode": "UAE-G9-GENERAL:U04",
       "SortOrder": 4,
-      "Title": "Statistics and Probability",
-      "LessonCount": 8,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "c8e853c3c780fb60a88ec82a83e2b0d24396bc39bdc227668388b59a18ba4446"
+      "Title": "Equations of Linear Functions",
+      "LessonCount": 4,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "3bcd17cf08c03181b56b95029e2702871399b6c7c827a20a7fc0e4d223b088d6"
+    },
+    {
+      "Number": 5,
+      "UnitCode": "UAE-G9-GENERAL:U05",
+      "SortOrder": 5,
+      "Title": "Linear Inequalities",
+      "LessonCount": 6,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "703115031900ecac491e3cdf681b70bbcd9786e30204473b88b5265786ee0ede"
+    },
+    {
+      "Number": 6,
+      "UnitCode": "UAE-G9-GENERAL:U06",
+      "SortOrder": 6,
+      "Title": "Systems of Linear Equations and Inequalities",
+      "LessonCount": 6,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "3684a21f6b08b9140d0eea571425d90ac814c22479afc1e3041b417b2cfeb328"
+    },
+    {
+      "Number": 7,
+      "UnitCode": "UAE-G9-GENERAL:U07",
+      "SortOrder": 7,
+      "Title": "Quadratic Expressions and Equations",
+      "LessonCount": 9,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "77f34bdb0b213a387fd71279bde0ccdd12c855d697b23d56b0ccc5b18f2eb60d"
+    },
+    {
+      "Number": 8,
+      "UnitCode": "UAE-G9-GENERAL:U08",
+      "SortOrder": 8,
+      "Title": "Exponents and Radical Expressions",
+      "LessonCount": 6,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "a23035fc7a407c510da0770e8a0f763c8d8350115e36d346559ccc27620082c5"
+    },
+    {
+      "Number": 9,
+      "UnitCode": "UAE-G9-GENERAL:U09",
+      "SortOrder": 9,
+      "Title": "Set Theory",
+      "LessonCount": 5,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "0617e0e1567c06d15a498cd88afad674c4b04f45f0de9c43099b640e0a3c18be"
+    },
+    {
+      "Number": 10,
+      "UnitCode": "UAE-G9-GENERAL:U10",
+      "SortOrder": 10,
+      "Title": "Logic and Mathematical Proof",
+      "LessonCount": 4,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "f31452fb377857855919feba1413e1a38ec01f3859c0d00f2ae6c4374c632c6e"
+    },
+    {
+      "Number": 11,
+      "UnitCode": "UAE-G9-GENERAL:U11",
+      "SortOrder": 11,
+      "Title": "Reasoning and Proof",
+      "LessonCount": 4,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "f2230aa0366af95b0d6f3c059e5bd58a48c445674e6064efeaca98ea8325bc50"
+    },
+    {
+      "Number": 12,
+      "UnitCode": "UAE-G9-GENERAL:U12",
+      "SortOrder": 12,
+      "Title": "Parallel and Perpendicular Lines",
+      "LessonCount": 6,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "1aac87ebfd9603574dd1e2c4609cd7127dcf83aca93e5a8519e6d1dab36c5ace"
+    },
+    {
+      "Number": 13,
+      "UnitCode": "UAE-G9-GENERAL:U13",
+      "SortOrder": 13,
+      "Title": "Congruent Triangles",
+      "LessonCount": 9,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "cca0a2957ec3daae103f7c39ca4382805f40bfcdb239def7ad69ba558e41b8e5"
     }
   ],
   "Lessons": [
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U01:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:01:01:INTEGERS-AND-DIRECTED-NUMBER",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:01:01:VARIABLES-AND-EXPRESSIONS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Expressions, Equations, and Functions",
       "LessonNumber": 1,
-      "Title": "Integers and directed number",
+      "Title": "Variables and Expressions",
       "SortOrder": 1,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "9ff3020a6c610ef1eeb2124176f2cd98fc43594ca7def8e5a47ef6846e1ee352",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "4a048c951b389e75bcf8821c9f8084aa391e134269c46565189d3102127889c3",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U01:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U01:L01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U01:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:01:02:FRACTIONS-AND-MIXED-NUMBERS",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:01:02:ORDER-OF-OPERATIONS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Expressions, Equations, and Functions",
       "LessonNumber": 2,
-      "Title": "Fractions and mixed numbers",
+      "Title": "Order of Operations",
       "SortOrder": 2,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "3293ca500e7576928ab65852b048dca6ce05fe57accf06452d2289f6f97294dc",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "b01ca1daf7c99953820565a3e48505be4fd4d44c17d547e804c5a8568901c7cf",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U01:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U01:L02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U01:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:01:03:DECIMALS-AND-ROUNDING",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:01:03:PROPERTIES-OF-NUMBERS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Expressions, Equations, and Functions",
       "LessonNumber": 3,
-      "Title": "Decimals and rounding",
+      "Title": "Properties of Numbers",
       "SortOrder": 3,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "185044607c4dd8352a764b5930a546ed0cc33c2bdf3c6fe6b1780ba22bbb1e72",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "8448a579e5bb6a70fe9c880a396db9add8a989d793512bc2f0e7958024dc5c2c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U01:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U01:L03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U01:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:01:04:PERCENTAGES",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:01:04:DISTRIBUTIVE-PROPERTY",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Expressions, Equations, and Functions",
       "LessonNumber": 4,
-      "Title": "Percentages",
+      "Title": "Distributive Property",
       "SortOrder": 4,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "4d2dcdc5b7c81a26b8daae8ffd25c899c8a65e08cfd7ddacdd6a735cb67969b7",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "d00edb82f5975859ac677efc21863a55dc012cfee11cbf0c2c50335d13fedbe7",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:EDU:01:04",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U01:L04",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -154,22 +260,22 @@
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:EDU:01:04"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U01:L04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U01:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:01:05:RATIO-AND-PROPORTION",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:01:05:EQUATIONS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Expressions, Equations, and Functions",
       "LessonNumber": 5,
-      "Title": "Ratio and proportion",
+      "Title": "Equations",
       "SortOrder": 5,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "4f59ef07d6d52ed984997eff25a72b7014f863832a1c83d098d689e7d17f3ef1",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "447224a85bdf04d167d5708b37f642327d5f00cd7a5ca146d020fc56e5d4a8ec",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:EDU:01:05",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U01:L05",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -181,22 +287,22 @@
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:EDU:01:05"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U01:L05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U01:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:01:06:RATES-AND-UNIT-RATES",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:01:06:RELATIONS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Expressions, Equations, and Functions",
       "LessonNumber": 6,
-      "Title": "Rates and unit rates",
+      "Title": "Relations",
       "SortOrder": 6,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "e676e79edfd47d9aaab4101c485b2d1d6df0ff03348d788a4a11b7f5a186a4db",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "92a2f5d7986da0fe679936c8a47ae38e2828d3220fa105e571d0a725f12cca15",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:EDU:01:06",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U01:L06",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -208,56 +314,76 @@
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:EDU:01:06"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U01:L06"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U01:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:01:07:POWERS-AND-ROOTS",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:01:07:FUNCTIONS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Expressions, Equations, and Functions",
       "LessonNumber": 7,
-      "Title": "Powers and roots",
+      "Title": "Functions",
       "SortOrder": 7,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "f348d0c38b84d14cf5b66814f4f873751b3950929373f227099d660e7f0fd050",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "e019b22b0cc9533e4878470b668239b25349599ca3a3a34d7d67d56b15a8d552",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U01:L07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U01:L07"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U01:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:01:08:STANDARD-FORM-AND-ESTIMATION",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:01:08:INTERPRETING-FUNCTION-GRAPHS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Expressions, Equations, and Functions",
       "LessonNumber": 8,
-      "Title": "Standard form and estimation",
+      "Title": "Interpreting Function Graphs",
       "SortOrder": 8,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "f1571722f9871d72db147a1bb937b4186a3b44d53722821e8f09bc45d621be4f",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "cca8c18d711d179b1aca94b4d067b9dad173b7ff15244c0b60b6156b71401598",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U01:L08",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U01:L08"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U02:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:02:01:ALGEBRAIC-EXPRESSIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:02:01:WRITING-EQUATIONS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Linear Equations",
       "LessonNumber": 1,
-      "Title": "Algebraic expressions",
+      "Title": "Writing Equations",
       "SortOrder": 9,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "228530e5711ba7884da0bc6a886f9f1ee38e0ac3fb32b2debacdefca81afdf74",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "e4b93c23c5076aab2645bdbaeb42fcb0ec79a1c7ac798fdd69fb0d0f1e6e2eb4",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:EDU:02:01",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U02:L01",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -269,73 +395,103 @@
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:EDU:02:01"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U02:L01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U02:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:02:02:SUBSTITUTION",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:02:02:SOLVING-ONE-STEP-EQUATIONS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Linear Equations",
       "LessonNumber": 2,
-      "Title": "Substitution",
+      "Title": "Solving One-Step Equations",
       "SortOrder": 10,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "758aa425d5ba987e88f59a05deacead2aca3b7f9cc33c5ba4ce810654f687ef7",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "1aa2424cdd6cbf3751111294efe602a35d55eb4062de73a4f42824959f2ce217",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U02:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U02:L02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U02:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:02:03:EXPANDING-BRACKETS",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:02:03:SOLVING-MULTI-STEP-EQUATIONS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Linear Equations",
       "LessonNumber": 3,
-      "Title": "Expanding brackets",
+      "Title": "Solving Multi-Step Equations",
       "SortOrder": 11,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "69246961fc4163bc7432c2e6f567bbaecbe39b52a4c3796daceb1a88fea96698",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "1bf4249d969af16562ca385188a3448f718f526250051c7a75713b93c9fc9af9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U02:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U02:L03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U02:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:02:04:FACTORISING-EXPRESSIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:02:04:EQUATIONS-WITH-VARIABLES-ON-BOTH-SIDES",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Linear Equations",
       "LessonNumber": 4,
-      "Title": "Factorising expressions",
+      "Title": "Equations with Variables on Both Sides",
       "SortOrder": 12,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "1030cf6b829e3891abb3e641516a11f713f0af2eb375b77b58b49f52ef08459d",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "7f323933ff8a485629ca9a77fec05238ea06194166cf4343cbe3d6bcf80dd08b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U02:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U02:L04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U02:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:02:05:LINEAR-EQUATIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:02:05:ABSOLUTE-VALUE-EQUATIONS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Linear Equations",
       "LessonNumber": 5,
-      "Title": "Linear equations",
+      "Title": "Absolute Value Equations",
       "SortOrder": 13,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "c7b272aa1ea0a0ddc3f949c615f9fcb274e64d32d35d5d0aaa823562b18b1f3a",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "5bed19d907399c3f43beba0bec986536fc63b136f02bac3daf9fa77621e995b2",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:EDU:02:05",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U02:L05",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -347,22 +503,22 @@
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:EDU:02:05"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U02:L05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U02:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:02:06:INEQUALITIES",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:02:06:RATIOS-AND-PROPORTIONS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Linear Equations",
       "LessonNumber": 6,
-      "Title": "Inequalities",
+      "Title": "Ratios and Proportions",
       "SortOrder": 14,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "117fdebe3d8b9f67bb386830bd48e9188f9f90d878c19293878431f89e6026ab",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "886949bc51e8f48ddffd49a5403d5d0c9a9420b28bbf269aa18f820b460f8d59",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:EDU:02:06",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U02:L06",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -374,22 +530,22 @@
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:EDU:02:06"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U02:L06"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U02:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:02:07:SEQUENCES",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:02:07:PERCENT-OF-CHANGE",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Linear Equations",
       "LessonNumber": 7,
-      "Title": "Sequences",
+      "Title": "Percent of Change",
       "SortOrder": 15,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "817d441ad813c6be8c058d0841b964819fd067d92d1cadf475fce52059e6fe24",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "cbf4c808b6b015171ea66e8f8f2bc5a62372ac0d42e77eccda704c440bb8e7d7",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:EDU:02:07",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U02:L07",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -401,22 +557,22 @@
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:EDU:02:07"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U02:L07"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U02:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:02:08:COORDINATES-AND-STRAIGHT-LINE-GRAPHS",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:02:08:LITERAL-EQUATIONS-AND-DIMENSIONAL-ANALYSIS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Linear Equations",
       "LessonNumber": 8,
-      "Title": "Coordinates and straight-line graphs",
+      "Title": "Literal Equations and Dimensional Analysis",
       "SortOrder": 16,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "d5c66d0a26942aecdccbacedb43243774e626a5b7472d09758a9d9db12779dd4",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "bd2de9cd689f1be7e0c2b239bc72b354d8f48c2482de1c53cf217ff481c1dde0",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:EDU:02:08",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U02:L08",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -428,22 +584,22 @@
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:EDU:02:08"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U02:L08"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U02:L09",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:02:09:SIMULTANEOUS-EQUATIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:02:09:WEIGHTED-AVERAGES",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Linear Equations",
       "LessonNumber": 9,
-      "Title": "Simultaneous equations",
+      "Title": "Weighted Averages",
       "SortOrder": 17,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "53178efaa98ea7b81bb5b22246ecae0d234e734e6a9a4ce75cc7bb9db7c0f90d",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "6334a1c8080da9394a5f96b556f9b9237afbe4b5d72dce3d72bb6629414d7491",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:EDU:02:09",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U02:L09",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -455,367 +611,1762 @@
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:EDU:02:09"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U02:L10",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:02:10:LINEAR-MODELLING",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 10,
-      "Title": "Linear modelling",
-      "SortOrder": 18,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "3906f1da9e394f5fae77dc7c584d9c7b07fb0a2931022d163b73292195d758b2",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:EDU:02:10",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 1
-        }
-      ],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G9-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:EDU:02:10"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U02:L11",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:02:11:QUADRATIC-EXPRESSIONS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 11,
-      "Title": "Quadratic expressions",
-      "SortOrder": 19,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "96a71e8ecb07574df4dac1d8c4200286827987e6bf638bbc381c06f4531f4160",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G9-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U02:L12",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:02:12:FUNCTIONS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 12,
-      "Title": "Functions",
-      "SortOrder": 20,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "22235964fd5f40de408fe63024da0d671045f7796fcca7ce29128eabe342e766",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:EDU:02:12",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 1
-        }
-      ],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G9-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:EDU:02:12"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U02:L09"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U03:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:03:01:ANGLE-RELATIONSHIPS",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:03:01:GRAPHING-LINEAR-EQUATIONS",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Linear Functions",
       "LessonNumber": 1,
-      "Title": "Angle relationships",
-      "SortOrder": 21,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "4433d309225402180479d56319abc934965387802ffb57fff9e3ef38c3b3f350",
-      "Alignments": [],
+      "Title": "Graphing Linear Equations",
+      "SortOrder": 18,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "0a1cf239ea87a3215330808f081573492f6d12f11652d24d614cd31fa9fd6328",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U03:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U03:L01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U03:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:03:02:POLYGONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:03:02:SOLVING-LINEAR-EQUATIONS-BY-GRAPHING",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Linear Functions",
       "LessonNumber": 2,
-      "Title": "Polygons",
-      "SortOrder": 22,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "32b6263567e723b4766c6d1e34cbf4462090f29c25e2594306711346849ccfbc",
-      "Alignments": [],
+      "Title": "Solving Linear Equations by Graphing",
+      "SortOrder": 19,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "6bc3a758e61fe9c691992dcab65a8418e2d5f4ced7d6f584f1029676695dbe6c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U03:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U03:L02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U03:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:03:03:CONGRUENCE-AND-SIMILARITY",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:03:03:RATE-OF-CHANGE-AND-SLOPE",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Linear Functions",
       "LessonNumber": 3,
-      "Title": "Congruence and similarity",
-      "SortOrder": 23,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "ef68b66bffd8a3965828345969790037987c8a7b6b7e9d2f4885fd3f17d493f7",
-      "Alignments": [],
+      "Title": "Rate of Change and Slope",
+      "SortOrder": 20,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "7d1cb3a56fb9cb919d17426efbd816e75e771de103facf8b356f854e7dbbe842",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U03:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U03:L03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U03:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:03:04:TRANSFORMATIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:03:04:DIRECT-VARIATION",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Linear Functions",
       "LessonNumber": 4,
-      "Title": "Transformations",
-      "SortOrder": 24,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "58f03da6a9cfbb4d22bb01144326718012406f2aa9a22f591cab93146f2842c3",
-      "Alignments": [],
+      "Title": "Direct Variation",
+      "SortOrder": 21,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "e8528679780a0db81c84b773289737171cb79fdd262808039fcde4006cd60cb7",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U03:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U03:L04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U03:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:03:05:PERIMETER-AND-AREA",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:03:05:ARITHMETIC-SEQUENCES-AS-LINEAR-FUNCTIONS",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Linear Functions",
       "LessonNumber": 5,
-      "Title": "Perimeter and area",
-      "SortOrder": 25,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "49262fd734ddd53fe4ebd7bc3f07109355fdc87fe868973a09889e7dc93adc48",
-      "Alignments": [],
+      "Title": "Arithmetic Sequences as Linear Functions",
+      "SortOrder": 22,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "01876d3c849677e5314712240f6f3e565a510d6b805955b0c34a7d5bb209c2d5",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U03:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U03:L05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U03:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:03:06:SURFACE-AREA-AND-VOLUME",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:03:06:PROPORTIONAL-AND-NONPROPORTIONAL-RELATIONSHIPS",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Linear Functions",
       "LessonNumber": 6,
-      "Title": "Surface area and volume",
-      "SortOrder": 26,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "5598de259f1df5c19544894afbe79d3dc63162e48c90152824ffc5ac7c3866b1",
-      "Alignments": [],
+      "Title": "Proportional and Nonproportional Relationships",
+      "SortOrder": 23,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "928d48bcec6919fc12d5aeb3011968d5bfb6e705950e8ce2c139ce3ac625e01b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U03:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U03:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:03:07:PYTHAGORAS-THEOREM",
-      "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 7,
-      "Title": "Pythagoras theorem",
-      "SortOrder": 27,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "7361f91ea64c9f4c2fbfffb0b42092cac419caf0d571886d283d29dfda7cc008",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G9-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U03:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:03:08:CONSTRUCTIONS-AND-LOCI",
-      "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 8,
-      "Title": "Constructions and loci",
-      "SortOrder": 28,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "09d6f3004e07b2c02ed753996500eebcea926146eaf007b77b12fd1a850e3bed",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G9-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U03:L09",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:03:09:TRIGONOMETRIC-RATIOS",
-      "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 9,
-      "Title": "Trigonometric ratios",
-      "SortOrder": 29,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "9bf4f81af9317b819bc1c4fbae8e03331c616b5dedb4c1cc04f1fc8626f721a8",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G9-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U03:L06"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U04:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:04:01:COLLECTING-DATA",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:04:01:GRAPHING-EQUATIONS-IN-SLOPE-INTERCEPT-FORM",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Equations of Linear Functions",
       "LessonNumber": 1,
-      "Title": "Collecting data",
-      "SortOrder": 30,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "a3cf4c5d275ebe0e4f0fe8a45bdad99a981d247a4ce6023c77be553b4b46e9a3",
-      "Alignments": [],
+      "Title": "Graphing Equations in Slope-Intercept Form",
+      "SortOrder": 24,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "c5e96bd986831c41ae82454028ecfc9a03138236438cbf16b3f47b6d461e6de7",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U04:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U04:L01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U04:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:04:02:TABLES-AND-CHARTS",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:04:02:WRITING-EQUATIONS-IN-SLOPE-INTERCEPT-FORM",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Equations of Linear Functions",
       "LessonNumber": 2,
-      "Title": "Tables and charts",
-      "SortOrder": 31,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "e032f76ab961982772eb1bcdd75e7179ec3a6ceb7e81348dae67d9f93cd202c3",
-      "Alignments": [],
+      "Title": "Writing Equations in Slope-Intercept Form",
+      "SortOrder": 25,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "cd91f9d12b78788f976919b222843e7ca51c27b431384e42117d28246bda3932",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U04:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U04:L02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U04:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:04:03:MEAN-MEDIAN-AND-RANGE",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:04:03:WRITING-EQUATIONS-IN-POINT-SLOPE-FORM",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Equations of Linear Functions",
       "LessonNumber": 3,
-      "Title": "Mean, median and range",
-      "SortOrder": 32,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "ff15d93da5bbf94c55933e2b7f62a2a3f4c2c14e363a2c824ebc0f6facd5a9a5",
-      "Alignments": [],
+      "Title": "Writing Equations in Point-Slope Form",
+      "SortOrder": 26,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "e4b847ff6b85931d67f67f58dcfdd519d682d984702437b3aca309ae1ecc5357",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U04:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U04:L03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U04:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:04:04:SCATTER-GRAPHS",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:04:04:PARALLEL-AND-PERPENDICULAR-LINES",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Equations of Linear Functions",
       "LessonNumber": 4,
-      "Title": "Scatter graphs",
-      "SortOrder": 33,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "f774a6b7f3655d3d9beb5bf1b12184d0b34b43e5f6d8b59d506d1d088b49d5dc",
-      "Alignments": [],
+      "Title": "Parallel and Perpendicular Lines",
+      "SortOrder": 27,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "591b4a4ad741ccac6b8ec4ac353611bfb2798b7a74b255bbbb9fe0ac10ad63f0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U04:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U04:L04"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U04:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:04:05:EXPERIMENTAL-PROBABILITY",
-      "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U05:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:05:01:SOLVING-INEQUALITIES-BY-ADDITION-AND-SUBTRACTION",
+      "UnitNumber": 5,
+      "UnitTitle": "Linear Inequalities",
+      "LessonNumber": 1,
+      "Title": "Solving Inequalities by Addition and Subtraction",
+      "SortOrder": 28,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "cee460e14263d5bee2bd2665c54a14b2794edc7696368eaaa95d54f594170862",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U05:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U05:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U05:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:05:02:SOLVING-INEQUALITIES-BY-MULTIPLICATION-AND-DIVISION",
+      "UnitNumber": 5,
+      "UnitTitle": "Linear Inequalities",
+      "LessonNumber": 2,
+      "Title": "Solving Inequalities by Multiplication and Division",
+      "SortOrder": 29,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "30594dd66d9510c0f896fc79279cc356c7ecb6cede5d48fd88749afa3bd20ac9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U05:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U05:L02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U05:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:05:03:SOLVING-MULTI-STEP-INEQUALITIES",
+      "UnitNumber": 5,
+      "UnitTitle": "Linear Inequalities",
+      "LessonNumber": 3,
+      "Title": "Solving Multi-Step Inequalities",
+      "SortOrder": 30,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "cf75761a6f38a173dc98fc9a01790f703b07606553a784a9a0d150ef4444b284",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U05:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U05:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U05:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:05:04:SOLVING-COMPOUND-INEQUALITIES",
+      "UnitNumber": 5,
+      "UnitTitle": "Linear Inequalities",
+      "LessonNumber": 4,
+      "Title": "Solving Compound Inequalities",
+      "SortOrder": 31,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "9ee3e3906b9166931f01155cf123ebaa546f421e6572de0e7f1eabedba5889e4",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U05:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U05:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U05:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:05:05:ABSOLUTE-VALUE-INEQUALITIES",
+      "UnitNumber": 5,
+      "UnitTitle": "Linear Inequalities",
       "LessonNumber": 5,
-      "Title": "Experimental probability",
-      "SortOrder": 34,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "4325f5fe48925fa15430e151ae525972c32483fcffdf3c9d7172ace0ffb73a58",
-      "Alignments": [],
+      "Title": "Absolute Value Inequalities",
+      "SortOrder": 32,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "f47ccbb5bb89fe90387c49151f613b83c402fce5f70097404b34056c7d924e60",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U05:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U05:L05"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U04:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:04:06:THEORETICAL-PROBABILITY",
-      "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U05:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:05:06:GRAPHING-INEQUALITIES-IN-TWO-VARIABLES",
+      "UnitNumber": 5,
+      "UnitTitle": "Linear Inequalities",
       "LessonNumber": 6,
-      "Title": "Theoretical probability",
+      "Title": "Graphing Inequalities in Two Variables",
+      "SortOrder": 33,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "a00797485536db318218a04ecb2a894adaa9ed455eece98122f7d878d5d83991",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U05:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U05:L06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U06:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:06:01:GRAPHING-SYSTEMS-OF-EQUATIONS",
+      "UnitNumber": 6,
+      "UnitTitle": "Systems of Linear Equations and Inequalities",
+      "LessonNumber": 1,
+      "Title": "Graphing Systems of Equations",
+      "SortOrder": 34,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "7c77eb609b324f1b331f2c98b71a9f095fa3bbb0d4928c89efe7d5fb61693697",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U06:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U06:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U06:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:06:02:SUBSTITUTION",
+      "UnitNumber": 6,
+      "UnitTitle": "Systems of Linear Equations and Inequalities",
+      "LessonNumber": 2,
+      "Title": "Substitution",
       "SortOrder": 35,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "a25f2847baa9d3a3e4a208b14b0fb18b51cd3f451ea06febde2a92c008962700",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "ca3e6d4696f8138cf0e029d47461b23cffa41363cb09a83da444b4c6cdce9181",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U06:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U06:L02"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U04:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:04:07:SAMPLE-SPACES",
-      "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
-      "LessonNumber": 7,
-      "Title": "Sample spaces",
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U06:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:06:03:ELIMINATION-USING-ADDITION-AND-SUBTRACTION",
+      "UnitNumber": 6,
+      "UnitTitle": "Systems of Linear Equations and Inequalities",
+      "LessonNumber": 3,
+      "Title": "Elimination Using Addition and Subtraction",
       "SortOrder": 36,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "e7091b0da37724f90128c714cc05b6fa9240ca7e5a152fc1f51a168080cdd103",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "708764c16102c39615380ea541f2b903815b7d80c8bf3a65d9627f6c58e4f902",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U06:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U06:L03"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U04:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:04:08:COMPARING-DISTRIBUTIONS",
-      "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
-      "LessonNumber": 8,
-      "Title": "Comparing distributions",
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U06:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:06:04:ELIMINATION-USING-MULTIPLICATION",
+      "UnitNumber": 6,
+      "UnitTitle": "Systems of Linear Equations and Inequalities",
+      "LessonNumber": 4,
+      "Title": "Elimination Using Multiplication",
       "SortOrder": 37,
-      "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "4cd2065a7d26e4cd905c4c5e08841c05095504288340fa34ce2076291205bb6e",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "4f6d797adc031f27e9a67ec3d668a1042aefc1d7a02827de7c006d197d06b124",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U06:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G9-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U06:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U06:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:06:05:APPLICATIONS-OF-SYSTEMS-OF-LINEAR-EQUATIONS",
+      "UnitNumber": 6,
+      "UnitTitle": "Systems of Linear Equations and Inequalities",
+      "LessonNumber": 5,
+      "Title": "Applications of Systems of Linear Equations",
+      "SortOrder": 38,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "31940f2d060433044adcf2bddbff4c6734e565fd0aad99f56148d0eb6860bcc9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U06:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U06:L05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U06:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:06:06:SYSTEMS-OF-INEQUALITIES",
+      "UnitNumber": 6,
+      "UnitTitle": "Systems of Linear Equations and Inequalities",
+      "LessonNumber": 6,
+      "Title": "Systems of Inequalities",
+      "SortOrder": 39,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "bab84993ff73e346175a2b5a7c4a435a77a80e21da8bfa419da7ae65c876315b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U06:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T1:U06:L06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U07:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:07:01:ADDING-AND-SUBTRACTING-POLYNOMIALS",
+      "UnitNumber": 7,
+      "UnitTitle": "Quadratic Expressions and Equations",
+      "LessonNumber": 1,
+      "Title": "Adding and Subtracting Polynomials",
+      "SortOrder": 40,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "06526b138c4dc7bcdf37768b44fed7fc07a1a98b6337d562d1dd1bda177598bd",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U07:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U07:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U07:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:07:02:MULTIPLYING-A-POLYNOMIAL-BY-A-MONOMIAL",
+      "UnitNumber": 7,
+      "UnitTitle": "Quadratic Expressions and Equations",
+      "LessonNumber": 2,
+      "Title": "Multiplying a Polynomial by a Monomial",
+      "SortOrder": 41,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "3b0199c417298dcd519e9dae0c4e9beadc570c2b218e83691a7829dea7a004cb",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U07:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U07:L02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U07:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:07:03:MULTIPLYING-POLYNOMIALS",
+      "UnitNumber": 7,
+      "UnitTitle": "Quadratic Expressions and Equations",
+      "LessonNumber": 3,
+      "Title": "Multiplying Polynomials",
+      "SortOrder": 42,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "0fb9e112165d092759543c9df52176294dc116e9feeadc5af439e107dd7b1fc3",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U07:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U07:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U07:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:07:04:SPECIAL-PRODUCTS",
+      "UnitNumber": 7,
+      "UnitTitle": "Quadratic Expressions and Equations",
+      "LessonNumber": 4,
+      "Title": "Special Products",
+      "SortOrder": 43,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "256ba97dde86739cf6536743897e9f04f91e11b3ce473a4bca1c00622289cae1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U07:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U07:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U07:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:07:05:USING-THE-DISTRIBUTIVE-PROPERTY",
+      "UnitNumber": 7,
+      "UnitTitle": "Quadratic Expressions and Equations",
+      "LessonNumber": 5,
+      "Title": "Using the Distributive Property",
+      "SortOrder": 44,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "a295134464ebb7d3fbe7b5f82a59f0b41d052d350a86ba849a6835e9414081ad",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U07:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U07:L05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U07:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:07:06:SOLVING-X-BX-C-0",
+      "UnitNumber": 7,
+      "UnitTitle": "Quadratic Expressions and Equations",
+      "LessonNumber": 6,
+      "Title": "Solving x² + bx + c = 0",
+      "SortOrder": 45,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "c4b12cc0ca912ecd560411a11df046ae7eebccaaa8f340b7c0aa59728bc8aba6",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U07:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U07:L06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U07:L07",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:07:07:SOLVING-AX-BX-C-0",
+      "UnitNumber": 7,
+      "UnitTitle": "Quadratic Expressions and Equations",
+      "LessonNumber": 7,
+      "Title": "Solving ax² + bx + c = 0",
+      "SortOrder": 46,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "796ae7667179436108e5f3dd058b5ac26ccf62454fe80e65c022d16a73e89373",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U07:L07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U07:L07"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U07:L08",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:07:08:DIFFERENCE-OF-TWO-SQUARES",
+      "UnitNumber": 7,
+      "UnitTitle": "Quadratic Expressions and Equations",
+      "LessonNumber": 8,
+      "Title": "Difference of Two Squares",
+      "SortOrder": 47,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "ad72f812333b8a584bfd1957d0dfe2c4adeed236cdef7284a9760141bd04f304",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U07:L08",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U07:L08"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U07:L09",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:07:09:PERFECT-SQUARES",
+      "UnitNumber": 7,
+      "UnitTitle": "Quadratic Expressions and Equations",
+      "LessonNumber": 9,
+      "Title": "Perfect Squares",
+      "SortOrder": 48,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "335a6a33e3ee0d9a396387570d2eb5726d645700991023cb41cf57024b4b94e4",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U07:L09",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U07:L09"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U08:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:08:01:MULTIPLICATION-PROPERTIES-OF-EXPONENTS",
+      "UnitNumber": 8,
+      "UnitTitle": "Exponents and Radical Expressions",
+      "LessonNumber": 1,
+      "Title": "Multiplication Properties of Exponents",
+      "SortOrder": 49,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "b72530f50fa2665e79c51493e3a5fcd711889fea3410f2d06c8c440c7cab7b3b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U08:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U08:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U08:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:08:02:DIVISION-PROPERTIES-OF-EXPONENTS",
+      "UnitNumber": 8,
+      "UnitTitle": "Exponents and Radical Expressions",
+      "LessonNumber": 2,
+      "Title": "Division Properties of Exponents",
+      "SortOrder": 50,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "2dd80dab20e013c83b1a854524d40037e234183a9e2e5b13acb992a66ba8cc7b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U08:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U08:L02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U08:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:08:03:RATIONAL-EXPONENTS",
+      "UnitNumber": 8,
+      "UnitTitle": "Exponents and Radical Expressions",
+      "LessonNumber": 3,
+      "Title": "Rational Exponents",
+      "SortOrder": 51,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "f1ec488b818e48f30eb35d9a26fe2442be2fe2946760021176d36bd0ae437c92",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U08:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U08:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U08:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:08:04:SCIENTIFIC-NOTATION",
+      "UnitNumber": 8,
+      "UnitTitle": "Exponents and Radical Expressions",
+      "LessonNumber": 4,
+      "Title": "Scientific Notation",
+      "SortOrder": 52,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "feae7ca09383510510068d641cc7c1b490df76186885e9761795d185cc7fad9c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U08:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U08:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U08:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:08:05:SIMPLIFYING-RADICAL-EXPRESSIONS",
+      "UnitNumber": 8,
+      "UnitTitle": "Exponents and Radical Expressions",
+      "LessonNumber": 5,
+      "Title": "Simplifying Radical Expressions",
+      "SortOrder": 53,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "e115fcd0c55b325dcc5132d063977ca7a2a02a6cac9a5d4c0b57b54a68cc4931",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U08:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U08:L05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U08:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:08:06:OPERATIONS-WITH-RADICAL-EXPRESSIONS",
+      "UnitNumber": 8,
+      "UnitTitle": "Exponents and Radical Expressions",
+      "LessonNumber": 6,
+      "Title": "Operations with Radical Expressions",
+      "SortOrder": 54,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "9b5dd57d1be672abe84bedc532c94f7612ae11d484f942d2552e16412002b62f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U08:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U08:L06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U09:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:09:01:INTRODUCTION-TO-SET-THEORY",
+      "UnitNumber": 9,
+      "UnitTitle": "Set Theory",
+      "LessonNumber": 1,
+      "Title": "Introduction to Set Theory",
+      "SortOrder": 55,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "6728d7231cb7289cb758bbee4d29a66c265a11e053ca482e455c9ad864eb14e6",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U09:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U09:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U09:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:09:02:SUBSETS-AND-OPERATIONS-ON-SETS",
+      "UnitNumber": 9,
+      "UnitTitle": "Set Theory",
+      "LessonNumber": 2,
+      "Title": "Subsets and Operations on Sets",
+      "SortOrder": 56,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "11a5b9cdd35b7fbd64c4a8d593ec706d0db4aff30a9e2c3f515aa427f4e3c673",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U09:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U09:L02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U09:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:09:03:USING-VENN-DIAGRAMS-FOR-SET-OPERATIONS",
+      "UnitNumber": 9,
+      "UnitTitle": "Set Theory",
+      "LessonNumber": 3,
+      "Title": "Using Venn Diagrams for Set Operations",
+      "SortOrder": 57,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "ef610c84e0573fdf95ad8494e71609342f9dd876fb518bb666fd5e9fd28ac48f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U09:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U09:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U09:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:09:04:USING-SETS-TO-SOLVE-PROBLEMS",
+      "UnitNumber": 9,
+      "UnitTitle": "Set Theory",
+      "LessonNumber": 4,
+      "Title": "Using Sets to Solve Problems",
+      "SortOrder": 58,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "7e6db836521a3cdf185888fbc5685e1c84376e1d6fc128f6a75df220953e562b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U09:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U09:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U09:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:09:05:INFINITE-SETS",
+      "UnitNumber": 9,
+      "UnitTitle": "Set Theory",
+      "LessonNumber": 5,
+      "Title": "Infinite Sets",
+      "SortOrder": 59,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "e15cc6c80505f5424575365bdff89fd1d78f98d7842ef7362acbbb48cc9ae052",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U09:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U09:L05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U10:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:10:01:INDUCTIVE-REASONING-AND-CONJECTURE",
+      "UnitNumber": 10,
+      "UnitTitle": "Logic and Mathematical Proof",
+      "LessonNumber": 1,
+      "Title": "Inductive Reasoning and Conjecture",
+      "SortOrder": 60,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "7da18564334fb13f94441efcd4684bf55b19eb07ef0890289479e20d5839d13f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U10:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U10:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U10:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:10:02:LOGIC",
+      "UnitNumber": 10,
+      "UnitTitle": "Logic and Mathematical Proof",
+      "LessonNumber": 2,
+      "Title": "Logic",
+      "SortOrder": 61,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "5f735e5fe423689a6104b452e66bcd46dbf597a6b11de43691c5597aaf41ce04",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U10:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U10:L02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U10:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:10:03:CONDITIONAL-STATEMENTS",
+      "UnitNumber": 10,
+      "UnitTitle": "Logic and Mathematical Proof",
+      "LessonNumber": 3,
+      "Title": "Conditional Statements",
+      "SortOrder": 62,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "840a9bf6ff0e55c3e6144054ed408171beae9964bcbd29d2cd5c357547a96380",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U10:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U10:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U10:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:10:04:DEDUCTIVE-REASONING",
+      "UnitNumber": 10,
+      "UnitTitle": "Logic and Mathematical Proof",
+      "LessonNumber": 4,
+      "Title": "Deductive Reasoning",
+      "SortOrder": 63,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "4c103878a6331067c0db1f5e7cb187fe1d2a83821b4b46903fe073413ec12523",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U10:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T2:U10:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U11:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:11:01:POSTULATES-AND-PARAGRAPH-PROOFS",
+      "UnitNumber": 11,
+      "UnitTitle": "Reasoning and Proof",
+      "LessonNumber": 1,
+      "Title": "Postulates and Paragraph Proofs",
+      "SortOrder": 64,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "cfd7dd78d80658182e2ed1adaf2f12a56b8f0619b92be78b9ef0646e6f73ca3d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U11:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U11:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U11:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:11:02:ALGEBRAIC-PROOF",
+      "UnitNumber": 11,
+      "UnitTitle": "Reasoning and Proof",
+      "LessonNumber": 2,
+      "Title": "Algebraic Proof",
+      "SortOrder": 65,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "fa5985e5f26ef0fed9a5b6f2c6c2a3bffc89173be66b4c6cc89582c7b479619a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U11:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U11:L02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U11:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:11:03:PROVING-RELATIONSHIPS-BETWEEN-SEGMENTS",
+      "UnitNumber": 11,
+      "UnitTitle": "Reasoning and Proof",
+      "LessonNumber": 3,
+      "Title": "Proving Relationships Between Segments",
+      "SortOrder": 66,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "3e1b8054275c879b7642047ff9f653f220b20d4a957ba6fc69631b638101dbab",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U11:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U11:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U11:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:11:04:PROVING-RELATIONSHIPS-BETWEEN-ANGLES",
+      "UnitNumber": 11,
+      "UnitTitle": "Reasoning and Proof",
+      "LessonNumber": 4,
+      "Title": "Proving Relationships Between Angles",
+      "SortOrder": 67,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "2cb38b4c662cbd832b58cd96fccc918fee2383ce618dc7dbe8b62b909167a949",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U11:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U11:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U12:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:12:01:PARALLEL-AND-INTERSECTING-LINES",
+      "UnitNumber": 12,
+      "UnitTitle": "Parallel and Perpendicular Lines",
+      "LessonNumber": 1,
+      "Title": "Parallel and Intersecting Lines",
+      "SortOrder": 68,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "ef36d64cda7553551cbd52a9e907d396e0f5a43f5079d2002028d3d4863559c1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U12:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U12:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U12:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:12:02:ANGLES-AND-PARALLEL-LINES",
+      "UnitNumber": 12,
+      "UnitTitle": "Parallel and Perpendicular Lines",
+      "LessonNumber": 2,
+      "Title": "Angles and Parallel Lines",
+      "SortOrder": 69,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "ad056e4c71a153edfc57dd283a1bededf284ee7c98248f737935192e1a66f122",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U12:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U12:L02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U12:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:12:03:SLOPES-OF-LINES",
+      "UnitNumber": 12,
+      "UnitTitle": "Parallel and Perpendicular Lines",
+      "LessonNumber": 3,
+      "Title": "Slopes of Lines",
+      "SortOrder": 70,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "ccbbb01a5c50e0ce13494785b030a0dec3ffdcb271fe4e86b05044319421a48e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U12:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U12:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U12:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:12:04:EQUATIONS-OF-LINES",
+      "UnitNumber": 12,
+      "UnitTitle": "Parallel and Perpendicular Lines",
+      "LessonNumber": 4,
+      "Title": "Equations of Lines",
+      "SortOrder": 71,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "08baa679dddf8d31cd8171fadb1541c30159f6f6354ec98c8d606660ec2361f3",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U12:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U12:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U12:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:12:05:PROVING-LINES-PARALLEL",
+      "UnitNumber": 12,
+      "UnitTitle": "Parallel and Perpendicular Lines",
+      "LessonNumber": 5,
+      "Title": "Proving Lines Parallel",
+      "SortOrder": 72,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "611af7ebe5a2441e3257014ca14ca6926302b5b1e735b877ca60585ffc0b26f9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U12:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U12:L05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U12:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:12:06:PERPENDICULARS-AND-DISTANCE",
+      "UnitNumber": 12,
+      "UnitTitle": "Parallel and Perpendicular Lines",
+      "LessonNumber": 6,
+      "Title": "Perpendiculars and Distance",
+      "SortOrder": 73,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "6876869cfcecb864af474b2af46955fba733c4df4443b9d3b541ad7d2bd90c02",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U12:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U12:L06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U13:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:13:01:CLASSIFYING-TRIANGLES",
+      "UnitNumber": 13,
+      "UnitTitle": "Congruent Triangles",
+      "LessonNumber": 1,
+      "Title": "Classifying Triangles",
+      "SortOrder": 74,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "794581f47e0305f18044b7d9b8bd896944ecb8b07a99f71c941a3bde77ea8237",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U13:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U13:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U13:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:13:02:ANGLES-OF-TRIANGLES",
+      "UnitNumber": 13,
+      "UnitTitle": "Congruent Triangles",
+      "LessonNumber": 2,
+      "Title": "Angles of Triangles",
+      "SortOrder": 75,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "f41804c24a47a4b0fd7c3c9b6b55ff87e192233883ddf86963706340777bbbaf",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U13:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U13:L02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U13:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:13:03:CONGRUENT-TRIANGLES",
+      "UnitNumber": 13,
+      "UnitTitle": "Congruent Triangles",
+      "LessonNumber": 3,
+      "Title": "Congruent Triangles",
+      "SortOrder": 76,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "658d6e1676b218f10be180bbc1aeb75e68a966893863000cbc4c1460c3809079",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U13:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U13:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U13:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:13:04:PROVING-CONGRUENCE-SSS-AND-SAS",
+      "UnitNumber": 13,
+      "UnitTitle": "Congruent Triangles",
+      "LessonNumber": 4,
+      "Title": "Proving Congruence: SSS and SAS",
+      "SortOrder": 77,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "87a784a3a88f14d356070193999e830fa085bb7353a4e38e6bd31f6b80e55400",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U13:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U13:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U13:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:13:05:PROVING-CONGRUENCE-ASA-AND-AAS",
+      "UnitNumber": 13,
+      "UnitTitle": "Congruent Triangles",
+      "LessonNumber": 5,
+      "Title": "Proving Congruence: ASA and AAS",
+      "SortOrder": 78,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "01461f49e800d894513d81fdc1c908ad3d5373ed437662b958a6f7ae876ca4a9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U13:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U13:L05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U13:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:13:06:ISOSCELES-AND-EQUILATERAL-TRIANGLES",
+      "UnitNumber": 13,
+      "UnitTitle": "Congruent Triangles",
+      "LessonNumber": 6,
+      "Title": "Isosceles and Equilateral Triangles",
+      "SortOrder": 79,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "eac5d936828d6f40d3fb7d120a1167e526f493aa8c4e2ad846b9b332ca73114d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U13:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U13:L06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U13:L07",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:13:07:CONGRUENCE-TRANSFORMATIONS",
+      "UnitNumber": 13,
+      "UnitTitle": "Congruent Triangles",
+      "LessonNumber": 7,
+      "Title": "Congruence Transformations",
+      "SortOrder": 80,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "fef4838f0afffd6858eb417a3aad3dd3bb94ad59f3ffa0be61775a5d4d74743b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U13:L07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U13:L07"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U13:L08",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:13:08:TRIANGLES-AND-COORDINATE-PROOF",
+      "UnitNumber": 13,
+      "UnitTitle": "Congruent Triangles",
+      "LessonNumber": 8,
+      "Title": "Triangles and Coordinate Proof",
+      "SortOrder": 81,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "9fa44e95c68eddccfb0c81af81fc1693e4a2810bde0368900951ca35acc38c18",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U13:L08",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U13:L08"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L9:GENERAL:U13:L09",
+      "LessonCode": "PED:UAE-MOE-MATH:L9:GENERAL:13:09:AREA-OF-PARALLELOGRAMS-AND-TRIANGLES",
+      "UnitNumber": 13,
+      "UnitTitle": "Congruent Triangles",
+      "LessonNumber": 9,
+      "Title": "Area of Parallelograms and Triangles",
+      "SortOrder": 82,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "f4d39f4ef04b10deaaeb3ee0c965d72a7247da0b7354ff2ce52273b45fe3c510",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U13:L09",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G9-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G9:GENERAL:T3:U13:L09"
     }
   ]
 }

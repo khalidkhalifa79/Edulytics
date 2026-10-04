@@ -8,7 +8,7 @@ namespace Edulytics.Tests.MathematicsIntelligence;
 
 public sealed class PracticeV2FullCatalogueCertificationTests
 {
-    private const int ExpectedLessonCount = 4453;
+    private const int ExpectedLessonCount = 4666;
     private const string RunEnvironmentVariable =
         "EDULYTICS_RUN_FULL_PRACTICE_V2_CERTIFICATION";
 

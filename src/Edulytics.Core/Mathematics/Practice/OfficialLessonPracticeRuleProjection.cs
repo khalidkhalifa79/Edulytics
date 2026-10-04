@@ -118,8 +118,20 @@ internal static class OfficialLessonPracticeRuleProjection
                         continue;
                     }
 
-                    if (lesson.OutcomeCodes.Count == 0)
+                    var hasOutcomeCodes = lesson.OutcomeCodes.Count > 0;
+                    var isVerifiedUaeTextbookReference =
+                        string.Equals(
+                            pack.PackCode,
+                            MathematicsCurriculumPackRegistry.UaeCode,
+                            StringComparison.Ordinal) &&
+                        !string.IsNullOrWhiteSpace(
+                            lesson.OfficialReferenceCode);
+
+                    if (!hasOutcomeCodes &&
+                        !isVerifiedUaeTextbookReference)
+                    {
                         continue;
+                    }
 
                     var translation = ChooseTranslation(pack, lesson);
                     if (translation is not null &&
@@ -148,6 +160,9 @@ internal static class OfficialLessonPracticeRuleProjection
                         });
                         continue;
                     }
+
+                    if (!hasOutcomeCodes)
+                        continue;
 
                     var resolvedOutcomes = lesson.OutcomeCodes
                         .Select(code =>

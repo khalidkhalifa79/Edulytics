@@ -13,30 +13,29 @@
   "SourcePublisher": "UK Department for Education",
   "SourceEdition": "GCE AS/A level Mathematics subject content / current GOV.UK publication",
   "SourceRootUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-  "SourceCheckedAtUtc": "2026-09-01T00:00:00Z",
+  "SourceCheckedAtUtc": "2026-10-04T00:00:00Z",
   "SourceLicense": "Open Government Licence v3.0",
   "RequiredDigitalAttribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
   "SourceSelectionReason": "The official curriculum source remains the academic authority. Edulytics uses open DfE Mathematics material only as lawful pedagogical scaffolding for independently authored lesson explanations where official copyrighted or source-linked prose is not reproduced.",
-  "SourceSelectionEvidence": "This scope contains 48 Edulytics-authored supporting lessons across 4 units. No formal outcome mapping is claimed without explicit source evidence; every formal OutcomeCodes collection is empty.",
+  "SourceSelectionEvidence": "52 lessons reconstructed from verified UAE Grade 12 General annual 2025-2026 unit/lesson evidence; 2026-2027 Term 1 independently confirms Units 1-3. Later 2026-2027 terms are not yet published and remain explicitly previous-official fallback rather than synthetic Supporting content.",
   "SourceEvidenceUrls": [
     "https://minhaji.moe.gov.ae/",
-    "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-    "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
-    "https://uae.afedne.com/Sho1ye1tAf3Y",
-    "https://uae.afedne.com/Shoqg3a9vd2g",
-    "https://uae.afedne.com/ShoVNdbNxeeg"
+    "https://almanahj.com/ae/id=35140",
+    "https://almanahj.com/ae/id=37738",
+    "https://almanahj.com/ae/id=38834",
+    "https://uae.afedne.com/library/file/459/%D9%83%D8%AA%D8%A7%D8%A8_%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA_%D9%84%D9%84%D8%B5%D9%81_%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A_%D8%B9%D8%B4%D8%B1_%D8%B9%D8%A7%D9%85_%D8%A7%D9%84%D9%81%D8%B5%D9%84_%D8%A7%D9%84%D8%A3%D9%88%D9%84_2026_2027"
   ],
-  "SourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. Official UAE Ministry of Education wording is not reproduced. Edulytics learner-facing bodies are independently authored.",
-  "SemanticGraphSha256": "695f414a48f73a4e1ffe75112521bf37570bbc12518fc00a2cea3a47bc5c9f3e",
+  "SourceRightsNote": "Official UAE curriculum/book evidence is used only for scope, lesson-title provenance and reference mapping. Learner-facing explanations are independently authored by Edulytics; no textbook prose is reproduced.",
+  "SemanticGraphSha256": "f9974a0a7af4673c589d466a94d40114e6f5f0908b691dfd1a36c4f5f5b9ace3",
   "AcquisitionDiagnostics": {
-    "UnitCount": 4,
-    "LessonCount": 48,
+    "UnitCount": 8,
+    "LessonCount": 52,
     "OfficialStandardCount": 0,
     "AddressingCoverageCount": 0,
     "FormalMappingCount": 0,
-    "LessonsWithoutNumberedGradeReferenceAnyRole": 48,
-    "LessonsWithoutNumberedAddressingStandard": 48,
-    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 48,
+    "LessonsWithoutNumberedGradeReferenceAnyRole": 0,
+    "LessonsWithoutNumberedAddressingStandard": 52,
+    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 52,
     "MultiStandardLessons": 0
   },
   "Units": [
@@ -44,152 +43,248 @@
       "Number": 1,
       "UnitCode": "UAE-G12-GENERAL-T1-OGL-V1:U01",
       "SortOrder": 1,
-      "Title": "Number and Proportional Reasoning",
+      "Title": "Quadratic Functions and Equations",
       "LessonCount": 8,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "e24d71e6add6fb6fc9c8ef16e66aca0f23865bf05353830d557d92395c0c8ec0"
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "5ef95788a88e61b0823a8ba6bad6b175508ed5293eb8d289c5170c936b1fee4f"
     },
     {
       "Number": 2,
       "UnitCode": "UAE-G12-GENERAL-T1-OGL-V1:U02",
       "SortOrder": 2,
-      "Title": "Algebra",
-      "LessonCount": 19,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "010e3e1668f74ef817f442a64312b79daf7e698a1eb4b1d4af7ff383a4df0188"
+      "Title": "Polynomials and Polynomial Functions",
+      "LessonCount": 8,
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "04d91e7127bfef7f3c2d2df4d017159998c9d40c24c64d3b028dd9f0221cdc32"
     },
     {
       "Number": 3,
       "UnitCode": "UAE-G12-GENERAL-T1-OGL-V1:U03",
       "SortOrder": 3,
-      "Title": "Geometry and Measure",
-      "LessonCount": 11,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "db23d9c240b59753a09bc87c84b1e0138c6326d06581a77ba13495c18ab32a39"
+      "Title": "Exponential Functions and Equations",
+      "LessonCount": 6,
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "5721398bfe547fef583d30a063a0132f697577419ec4c2dd2296f8ae29e08536"
     },
     {
       "Number": 4,
       "UnitCode": "UAE-G12-GENERAL-T1-OGL-V1:U04",
       "SortOrder": 4,
       "Title": "Statistics and Probability",
-      "LessonCount": 10,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "c65690188a243fa05d6bc95db8694942d45d292cd7c18bd8fa8ac769f87e9741"
+      "LessonCount": 5,
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "d2cad1afb491bc8b4becab20c13930afa9dfc8d33665441c5a0a38abbd144660"
+    },
+    {
+      "Number": 5,
+      "UnitCode": "UAE-G12-GENERAL-T1-OGL-V1:U05",
+      "SortOrder": 5,
+      "Title": "Inverse and Radical Functions",
+      "LessonCount": 7,
+      "SourceUrl": "https://almanahj.com/ae/id=37738",
+      "SemanticSha256": "985ab8ec896a0aca22e165d483a0312649a61c08db45bef41be10ba85c0aeb71"
+    },
+    {
+      "Number": 6,
+      "UnitCode": "UAE-G12-GENERAL-T1-OGL-V1:U06",
+      "SortOrder": 6,
+      "Title": "Exponential and Logarithmic Functions",
+      "LessonCount": 6,
+      "SourceUrl": "https://almanahj.com/ae/id=37738",
+      "SemanticSha256": "58f6d94b0167cb951cbb9f3ed2d3b8ab84370409fe100dbb8ae7785c3677d123"
+    },
+    {
+      "Number": 7,
+      "UnitCode": "UAE-G12-GENERAL-T1-OGL-V1:U07",
+      "SortOrder": 7,
+      "Title": "Rational Functions and Relations",
+      "LessonCount": 5,
+      "SourceUrl": "https://almanahj.com/ae/id=38834",
+      "SemanticSha256": "2a452c6b5ad5f4bf6280026bd2a48279b210d18aea583b377473aca291cd97a6"
+    },
+    {
+      "Number": 8,
+      "UnitCode": "UAE-G12-GENERAL-T1-OGL-V1:U08",
+      "SortOrder": 8,
+      "Title": "Trigonometric Functions",
+      "LessonCount": 7,
+      "SourceUrl": "https://almanahj.com/ae/id=38834",
+      "SemanticSha256": "cb2baac018791fd7339d270c5dbc6dd69a8f77d2170f49c64734a30176157082"
     }
   ],
   "Lessons": [
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U01:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:01:01:INTEGERS-AND-DIRECTED-NUMBER",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:01:01:GRAPHING-QUADRATIC-FUNCTIONS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Quadratic Functions and Equations",
       "LessonNumber": 1,
-      "Title": "Integers and directed number",
+      "Title": "Graphing Quadratic Functions",
       "SortOrder": 1,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "655862a937f6a1d9fb62a1d849e2f70d72de52d1e6b9ce269b9b603d697b5af6",
-      "Alignments": [],
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "8ff1d8c5061023a1803574a5b1b4e81f72f44d8e5e010250298697e86360735e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:01:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:01:01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U01:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:01:02:FRACTIONS-AND-MIXED-NUMBERS",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:01:02:SOLVING-QUADRATIC-EQUATIONS-BY-GRAPHING",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Quadratic Functions and Equations",
       "LessonNumber": 2,
-      "Title": "Fractions and mixed numbers",
+      "Title": "Solving Quadratic Equations by Graphing",
       "SortOrder": 2,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "9be0d6bf14b52e4190c401d8a4d7be6e3a700bb661e46734ca2559e67ce0214e",
-      "Alignments": [],
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "2d8bfa6bcac006e18d7a122770b8d4e454e32184da3261adb3f102e17d4ea138",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:01:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:01:02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U01:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:01:03:DECIMALS-AND-ROUNDING",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:01:03:SOLVING-QUADRATIC-EQUATIONS-BY-COMPLETING-THE-SQUARE",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Quadratic Functions and Equations",
       "LessonNumber": 3,
-      "Title": "Decimals and rounding",
+      "Title": "Solving Quadratic Equations by Completing the Square",
       "SortOrder": 3,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "c9a1c7e1fd3a6d0201220e91cda6b398013b2231de52325b150f5b2be09d55f3",
-      "Alignments": [],
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "1ee97423e9e04580dfe03ae8e68d52bd51d00e38f80920e9f0afdd3fb0c2cb2b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:01:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:01:03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U01:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:01:04:PERCENTAGES",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:01:04:SOLVING-QUADRATIC-EQUATIONS-BY-FACTORING",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Quadratic Functions and Equations",
       "LessonNumber": 4,
-      "Title": "Percentages",
+      "Title": "Solving Quadratic Equations by Factoring",
       "SortOrder": 4,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "a2daf37afeacd7476039367c53f6cfd27666152ce8be72b56efba0d180eb68b2",
-      "Alignments": [],
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "b044f9e97901c5467a2e2c0140985abd6c9eb7114cf45df4539ae9f7bc00d265",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:01:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:01:04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U01:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:01:05:RATIO-AND-PROPORTION",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:01:05:COMPLEX-NUMBERS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Quadratic Functions and Equations",
       "LessonNumber": 5,
-      "Title": "Ratio and proportion",
+      "Title": "Complex Numbers",
       "SortOrder": 5,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "9ab17958b39df4f700b6caa79c606b3f48168f02a868e32c6308d506b8499fbb",
-      "Alignments": [],
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "cb9c16e70d18779dea503caca2718ad816f45539a47c18e3c21fc4a6d1a69f48",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:01:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:01:05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U01:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:01:06:RATES-AND-UNIT-RATES",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:01:06:THE-QUADRATIC-FORMULA-AND-THE-DISCRIMINANT",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Quadratic Functions and Equations",
       "LessonNumber": 6,
-      "Title": "Rates and unit rates",
+      "Title": "The Quadratic Formula and the Discriminant",
       "SortOrder": 6,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "140382365515afc3c27dfab52f9e1841e5e9fce75785b53ecab24119c6f7cb2f",
-      "Alignments": [],
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "8c632c6e36287967a3534caa0606d67d634125bcf8f51570aaf63d747d0da6ff",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:01:06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:01:06"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U01:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:01:07:POWERS-AND-ROOTS",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:01:07:TRANSFORMATIONS-OF-QUADRATIC-GRAPHS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Quadratic Functions and Equations",
       "LessonNumber": 7,
-      "Title": "Powers and roots",
+      "Title": "Transformations of Quadratic Graphs",
       "SortOrder": 7,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "c35e70da5a795c0173e95d1140b62e2feeec430fb4e010de8ed1f0f79a49f012",
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "50279717d803eca57e0885e05ace0bfee478abcb6ae38d50de60712fa7f0cdd0",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -209,82 +304,122 @@
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U01:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:01:08:STANDARD-FORM-AND-ESTIMATION",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:01:08:QUADRATIC-INEQUALITIES",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Quadratic Functions and Equations",
       "LessonNumber": 8,
-      "Title": "Standard form and estimation",
+      "Title": "Quadratic Inequalities",
       "SortOrder": 8,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "dee2811bd9aa75b58b3a36bc0928467abdb6578ffa9af07324b0974ef20eb25a",
-      "Alignments": [],
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "3ee374e702edab17a06a233a059b88c9f62481a43bf54dee63ad8ad1338af277",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:01:08",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:01:08"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U02:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:01:ALGEBRAIC-EXPRESSIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:01:OPERATIONS-WITH-POLYNOMIALS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Polynomials and Polynomial Functions",
       "LessonNumber": 1,
-      "Title": "Algebraic expressions",
+      "Title": "Operations with Polynomials",
       "SortOrder": 9,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "81b2002f77b296aa6ffa27e9b9ed9ebaffc362a5d95a7dac36735d4cdb9fed2d",
-      "Alignments": [],
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "7296768fd8069a7f03c4af3a8d4bb72fea31012f6e5bc563d9ece964b0ccd476",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U02:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:02:SUBSTITUTION",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:02:DIVIDING-WITH-POLYNOMIALS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Polynomials and Polynomial Functions",
       "LessonNumber": 2,
-      "Title": "Substitution",
+      "Title": "Dividing with Polynomials",
       "SortOrder": 10,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "544cef5a10144bc91234250dca36cbe34d274e0e963cb9feac7529ac146b3184",
-      "Alignments": [],
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "231bc43e71e9be48cb5063fbe258dbee25c0966e9326efd568bc69e6d9a76137",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U02:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:03:EXPANDING-BRACKETS",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:03:POLYNOMIAL-FUNCTIONS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Polynomials and Polynomial Functions",
       "LessonNumber": 3,
-      "Title": "Expanding brackets",
+      "Title": "Polynomial Functions",
       "SortOrder": 11,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "0be70cdc88d12b16fe0f146bc85be1ee92c0a337326a71a968a10144b4361cf8",
-      "Alignments": [],
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "00f1201b404256376be792f2aa8bec7836919566215602c117463b62aa5ab7e1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U02:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:04:FACTORISING-EXPRESSIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:04:ANALYZING-GRAPHS-OF-POLYNOMIAL-FUNCTIONS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Polynomials and Polynomial Functions",
       "LessonNumber": 4,
-      "Title": "Factorising expressions",
+      "Title": "Analyzing Graphs of Polynomial Functions",
       "SortOrder": 12,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "15043c17ac89f36a65bafd27bfbba9b907a41895a05f2abe861ac7678954f3e7",
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "59a8bdfdf0b2f0f60bd867df13db00866d44a6c6342bf58985af96e4de640a31",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -304,120 +439,99 @@
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U02:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:05:LINEAR-EQUATIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:05:SOLVING-POLYNOMIAL-EQUATIONS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Polynomials and Polynomial Functions",
       "LessonNumber": 5,
-      "Title": "Linear equations",
+      "Title": "Solving Polynomial Equations",
       "SortOrder": 13,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "ff33a735d7a1fa24b2f8f327ea7f1ef627fec65a2aaecd9cdea1534f2800fc53",
-      "Alignments": [],
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "bab85378282f07b54a013c1820d822cf4199dd2e236106d01e7987b6bda36246",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U02:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:06:INEQUALITIES",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:06:THE-REMAINDER-AND-FACTOR-THEOREMS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Polynomials and Polynomial Functions",
       "LessonNumber": 6,
-      "Title": "Inequalities",
+      "Title": "The Remainder and Factor Theorems",
       "SortOrder": 14,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "cdf56efe4ddcfa5114ccac652069c36f20049e505286caaf774f8cf1853b5471",
-      "Alignments": [],
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "5f8cc4aa7cc1c3676c380889991ed4bab47c6fc2bd05061c68afe4dc5826af9a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:06"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U02:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:07:SEQUENCES",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:07:ROOTS-AND-ZEROS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Polynomials and Polynomial Functions",
       "LessonNumber": 7,
-      "Title": "Sequences",
+      "Title": "Roots and Zeros",
       "SortOrder": 15,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "c4b199173ae329074435d4e57c018c5e2de47c4128895c6a770be1b8649ff27d",
-      "Alignments": [],
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "0f45fd350af79af6245afa2085e92364391fd8991ee57d69617f57beae97e050",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:07"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U02:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:08:COORDINATES-AND-STRAIGHT-LINE-GRAPHS",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:08:RATIONAL-ZERO-THEOREM",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Polynomials and Polynomial Functions",
       "LessonNumber": 8,
-      "Title": "Coordinates and straight-line graphs",
+      "Title": "Rational Zero Theorem",
       "SortOrder": 16,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "1b1da1057f9937a351347c7835246a9f21f0bc39bc4a3a086cb64a50f0027af5",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G12-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U02:L09",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:09:SIMULTANEOUS-EQUATIONS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 9,
-      "Title": "Simultaneous equations",
-      "SortOrder": 17,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "d5dabb69134b945159092dbae792c30976d0f0d12486442b0f79207a8c691969",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G12-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U02:L10",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:10:LINEAR-MODELLING",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 10,
-      "Title": "Linear modelling",
-      "SortOrder": 18,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "2d9074738b6f74ede29572a94c47c5ee90b768a7e3fc8e8d131df960512c4507",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G12-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U02:L11",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:11:QUADRATIC-EXPRESSIONS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 11,
-      "Title": "Quadratic expressions",
-      "SortOrder": 19,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "4436b799ff158107a8088a31a3abaa4529a13be25a786308bc5ab03c42f57fca",
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "d5680aa65a2fc410dd89b121ce5423ea00ee4f54afdf559b9f59b9cd7a834f6b",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:11",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:08",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -429,364 +543,22 @@
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:11"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U02:L12",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:12:FUNCTIONS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 12,
-      "Title": "Functions",
-      "SortOrder": 20,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "e7ad328aa5c4dca3cd5cc8bd116803c478ca66097c97c4eb246ac5d49578c90f",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:12",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 1
-        }
-      ],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G12-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:12"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U02:L13",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:13:QUADRATIC-EQUATIONS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 13,
-      "Title": "Quadratic equations",
-      "SortOrder": 21,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "8bfc586180af0c0036fc35ad1a4e2b5be34de6bac04825905e648d9104a24079",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:13",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 1
-        }
-      ],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G12-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:13"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U02:L14",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:14:POLYNOMIAL-GRAPHS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 14,
-      "Title": "Polynomial graphs",
-      "SortOrder": 22,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "c9bc88915e6aa5cd54e8281040aa03f29982321a14402406bec32acc58b36db9",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:14",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 1
-        }
-      ],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G12-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:14"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U02:L15",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:15:EXPONENTIAL-MODELS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 15,
-      "Title": "Exponential models",
-      "SortOrder": 23,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "b9924744b550b2aa5fff5c46a7873e2a150635ef0a14b392aa274400f6da792a",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:15",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 1
-        }
-      ],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G12-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:15"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U02:L16",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:16:FUNCTION-TRANSFORMATIONS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 16,
-      "Title": "Function transformations",
-      "SortOrder": 24,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "4c662ad7a727204fa54145f5c5574d60ee940e37bcc4074773eb4fcee4b6f20f",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:16",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 1
-        }
-      ],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G12-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:16"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U02:L17",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:17:LOGARITHMS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 17,
-      "Title": "Logarithms",
-      "SortOrder": 25,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "1e645e81bc5b288d839a0ed97d88801e7c36666550a653d7f18f71201a92e3d2",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:17",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 1
-        }
-      ],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G12-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:17"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U02:L18",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:18:SEQUENCES-AND-SERIES",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 18,
-      "Title": "Sequences and series",
-      "SortOrder": 26,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "33b0c0cf42662873dfe0374d836f193985110ed22cb69b0b706e3a0888e37f19",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:18",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 1
-        }
-      ],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G12-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:18"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U02:L19",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:02:19:INTRODUCTORY-DIFFERENTIATION",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 19,
-      "Title": "Introductory differentiation",
-      "SortOrder": 27,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "fa83285d13721b35fafcd2ce310931c8476057c129da51ec28cf4c205162aefb",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G12-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:02:08"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U03:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:03:01:ANGLE-RELATIONSHIPS",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:03:01:EXPONENTIAL-FUNCTIONS",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Exponential Functions and Equations",
       "LessonNumber": 1,
-      "Title": "Angle relationships",
-      "SortOrder": 28,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "8000d3cb797bd84588e75b723b61a6eefff016bd8f8c50356459ee6f2cd35326",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G12-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U03:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:03:02:POLYGONS",
-      "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 2,
-      "Title": "Polygons",
-      "SortOrder": 29,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "e34e291a31de56b7cacfc43f1aa88a7a81aa270db89ccae93fa93b81ed2760b1",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G12-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U03:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:03:03:CONGRUENCE-AND-SIMILARITY",
-      "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 3,
-      "Title": "Congruence and similarity",
-      "SortOrder": 30,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "e09d7ab532d97c447a8b9fb7b0b6a724792ae43bd131c51cf62bd8c30fd66d9a",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G12-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U03:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:03:04:TRANSFORMATIONS",
-      "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 4,
-      "Title": "Transformations",
-      "SortOrder": 31,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "93bafd8d3e2ce1b305d30d289779ec3e284910616925407935868755ff7a38b2",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G12-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U03:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:03:05:PERIMETER-AND-AREA",
-      "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 5,
-      "Title": "Perimeter and area",
-      "SortOrder": 32,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "30dd09d299ae4dfa7bab30fc0bcf3ca978bb040be06a3e5462834d2820a1803d",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G12-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U03:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:03:06:SURFACE-AREA-AND-VOLUME",
-      "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 6,
-      "Title": "Surface area and volume",
-      "SortOrder": 33,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "3659e8d864175fd64b726bde46a55f330ed8025cf6b06569a7ea368855f19e61",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G12-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U03:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:03:07:PYTHAGORAS-THEOREM",
-      "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 7,
-      "Title": "Pythagoras theorem",
-      "SortOrder": 34,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "9e049ff568f38fef3d6219fa445675cdd392f69af838518536ceb7168e0e9b90",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G12-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U03:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:03:08:CONSTRUCTIONS-AND-LOCI",
-      "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 8,
-      "Title": "Constructions and loci",
-      "SortOrder": 35,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "fcead457dc380e54838d6e07695e5435322126c54bbf00674f2b086d6d96d1a9",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G12-GENERAL-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U03:L09",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:03:09:TRIGONOMETRIC-RATIOS",
-      "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 9,
-      "Title": "Trigonometric ratios",
-      "SortOrder": 36,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "6662e4ae4a06f1db212eb2e0157219f61efc39be4ef333fd175911a9143bde25",
+      "Title": "Exponential Functions",
+      "SortOrder": 17,
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "627ceaa7be6760d31d9dcdbf6c207a35c6a2772a50e2efb91c99d0a4f0c85be0",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:03:09",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:03:01",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -798,211 +570,952 @@
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:03:09"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:03:01"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U03:L10",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:03:10:SINE-RULE",
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U03:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:03:02:IDENTIFY-FUNCTIONS-WITH-SUCCESSIVE-DIFFERENCES",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 10,
-      "Title": "Sine rule",
-      "SortOrder": 37,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "51048b396ad65892141fb4df76f10d27334a8927b80afeffc589dbdc2e1d5841",
-      "Alignments": [],
+      "UnitTitle": "Exponential Functions and Equations",
+      "LessonNumber": 2,
+      "Title": "Identify Functions with Successive Differences",
+      "SortOrder": 18,
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "5f61dfc786aafe22226744ae9fe70d88afd77381e77272a742dfcc90daeef04e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:03:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:03:02"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U03:L11",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:03:11:COSINE-RULE",
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U03:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:03:03:GROWTH-AND-DECAY",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 11,
-      "Title": "Cosine rule",
-      "SortOrder": 38,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "54957939ed12feb3383a7aacbc1dffb4ce374ad87fd8f42097a1c2deae903a40",
-      "Alignments": [],
+      "UnitTitle": "Exponential Functions and Equations",
+      "LessonNumber": 3,
+      "Title": "Growth and Decay",
+      "SortOrder": 19,
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "19f5a2305cb48a81b54b120d2b8ef9925624c30c472e3c969f90ce37dbf1a401",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:03:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:03:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U03:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:03:04:GEOMETRIC-SEQUENCES-AS-EXPONENTIAL-FUNCTIONS",
+      "UnitNumber": 3,
+      "UnitTitle": "Exponential Functions and Equations",
+      "LessonNumber": 4,
+      "Title": "Geometric Sequences as Exponential Functions",
+      "SortOrder": 20,
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "3ae12fdaa98a7838ee1d416574c939cddc00acab43d0fe805a816894e1315451",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:03:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G12-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:03:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U03:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:03:05:RECURSIVE-FORMULAS",
+      "UnitNumber": 3,
+      "UnitTitle": "Exponential Functions and Equations",
+      "LessonNumber": 5,
+      "Title": "Recursive Formulas",
+      "SortOrder": 21,
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "46554298e652f9da9e76ed1f047653340032ca689f38a5ca78a309c1d8ffa90a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:03:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G12-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:03:05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U03:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:03:06:SOLVING-EXPONENTIAL-EQUATIONS-AND-INEQUALITIES",
+      "UnitNumber": 3,
+      "UnitTitle": "Exponential Functions and Equations",
+      "LessonNumber": 6,
+      "Title": "Solving Exponential Equations and Inequalities",
+      "SortOrder": 22,
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "320e157669e2ac7b4a67d22915368c5dfde69177aeaeb08fe79d9cd81af68bfb",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:03:06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G12-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:03:06"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U04:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:04:01:COLLECTING-DATA",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:04:01:DESIGNING-A-STUDY",
       "UnitNumber": 4,
       "UnitTitle": "Statistics and Probability",
       "LessonNumber": 1,
-      "Title": "Collecting data",
-      "SortOrder": 39,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "8619714a17d1834a41c6589cee2efbc803a2ecd1d60656d2724c1be5e18de6d8",
-      "Alignments": [],
+      "Title": "Designing a Study",
+      "SortOrder": 23,
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "947ed19507a6bf1bcda70f6f88972ff61dd35d186668e571f2c77e35116b4b63",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:04:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:04:01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U04:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:04:02:TABLES-AND-CHARTS",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:04:02:DISTRIBUTIONS-OF-DATA",
       "UnitNumber": 4,
       "UnitTitle": "Statistics and Probability",
       "LessonNumber": 2,
-      "Title": "Tables and charts",
-      "SortOrder": 40,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "91c9cb11a8d5a9371322679c1a8988bff669f69be04a9b0747f371f62b3a45ed",
-      "Alignments": [],
+      "Title": "Distributions of Data",
+      "SortOrder": 24,
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "3ce63cb90699fe08b0a2b7e142fa855d796dca17b68349ffe953e0e33ab13a72",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:04:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:04:02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U04:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:04:03:MEAN-MEDIAN-AND-RANGE",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:04:03:PROBABILITY-DISTRIBUTIONS",
       "UnitNumber": 4,
       "UnitTitle": "Statistics and Probability",
       "LessonNumber": 3,
-      "Title": "Mean, median and range",
-      "SortOrder": 41,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "721ffbd8d791872a740a40bb39162466ee1cedde1baa6a6b0fe8bb43f8934440",
-      "Alignments": [],
+      "Title": "Probability Distributions",
+      "SortOrder": 25,
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "879946a80420ea03036c5d2545fda19f7847169e929d8dc6f39a198590c8b634",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:04:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:04:03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U04:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:04:04:SCATTER-GRAPHS",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:04:04:THE-BINOMIAL-DISTRIBUTION",
       "UnitNumber": 4,
       "UnitTitle": "Statistics and Probability",
       "LessonNumber": 4,
-      "Title": "Scatter graphs",
-      "SortOrder": 42,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "d9de9b9aba3b30e64f79d65df34a4d6a9f082588b9e1316e0556d97686750f7a",
-      "Alignments": [],
+      "Title": "The Binomial Distribution",
+      "SortOrder": 26,
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "07bcea0e9253f997eb317dd70903e67576eb672b4f55b79c1c3a83ee456cab85",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:04:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:04:04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U04:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:04:05:EXPERIMENTAL-PROBABILITY",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:04:05:THE-NORMAL-DISTRIBUTION",
       "UnitNumber": 4,
       "UnitTitle": "Statistics and Probability",
       "LessonNumber": 5,
-      "Title": "Experimental probability",
-      "SortOrder": 43,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "013cc7058871cf0b9451fea18467a4b3deffb9b4ea7c14d782846ca9e9c4588d",
-      "Alignments": [],
+      "Title": "The Normal Distribution",
+      "SortOrder": 27,
+      "SourceUrl": "https://almanahj.com/ae/id=35140",
+      "SemanticSha256": "9602c4359ca9741c4f5d8c400b7dd25ebd7d9865a82ddf61a1bea1eefa9f6e60",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:04:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T1:EDU:04:05"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U04:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:04:06:THEORETICAL-PROBABILITY",
-      "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U05:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:05:01:OPERATIONS-ON-FUNCTIONS",
+      "UnitNumber": 5,
+      "UnitTitle": "Inverse and Radical Functions",
+      "LessonNumber": 1,
+      "Title": "Operations on Functions",
+      "SortOrder": 28,
+      "SourceUrl": "https://almanahj.com/ae/id=37738",
+      "SemanticSha256": "4d3cd92c773bd5658d18839970caea976976ad240482fcad65808983340d45ac",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:05:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G12-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:05:01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U05:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:05:02:INVERSE-RELATIONS-AND-FUNCTIONS",
+      "UnitNumber": 5,
+      "UnitTitle": "Inverse and Radical Functions",
+      "LessonNumber": 2,
+      "Title": "Inverse Relations and Functions",
+      "SortOrder": 29,
+      "SourceUrl": "https://almanahj.com/ae/id=37738",
+      "SemanticSha256": "821e477c507c8b973752274f8a548389721dbffa1bd72b0a28f6a38aa7cfe4e1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:05:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G12-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:05:02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U05:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:05:03:SQUARE-ROOT-FUNCTIONS-AND-INEQUALITIES",
+      "UnitNumber": 5,
+      "UnitTitle": "Inverse and Radical Functions",
+      "LessonNumber": 3,
+      "Title": "Square Root Functions and Inequalities",
+      "SortOrder": 30,
+      "SourceUrl": "https://almanahj.com/ae/id=37738",
+      "SemanticSha256": "2a1dff93742ad42d95a1a164a237605663baf27364e534118d30c594c18c65d2",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:05:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G12-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:05:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U05:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:05:04:NTH-ROOTS",
+      "UnitNumber": 5,
+      "UnitTitle": "Inverse and Radical Functions",
+      "LessonNumber": 4,
+      "Title": "Nth Roots",
+      "SortOrder": 31,
+      "SourceUrl": "https://almanahj.com/ae/id=37738",
+      "SemanticSha256": "58b67fb1a3fc63d15c42f964c5b2776695ce463c31a8364af7a20cc7558fabf6",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:05:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G12-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:05:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U05:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:05:05:OPERATIONS-ON-RADICAL-EXPRESSIONS",
+      "UnitNumber": 5,
+      "UnitTitle": "Inverse and Radical Functions",
+      "LessonNumber": 5,
+      "Title": "Operations on Radical Expressions",
+      "SortOrder": 32,
+      "SourceUrl": "https://almanahj.com/ae/id=37738",
+      "SemanticSha256": "283de86efeb96f1c57e95d158d9a3a1fc65ff3b4c4f67cfd2f70fd1909ccf4fe",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:05:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G12-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:05:05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U05:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:05:06:RATIONAL-EXPONENTS",
+      "UnitNumber": 5,
+      "UnitTitle": "Inverse and Radical Functions",
       "LessonNumber": 6,
-      "Title": "Theoretical probability",
-      "SortOrder": 44,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "b3c51a20b5a2141a0c2359bae007f26ac613d293e88b061d4c643b8611c36773",
-      "Alignments": [],
+      "Title": "Rational Exponents",
+      "SortOrder": 33,
+      "SourceUrl": "https://almanahj.com/ae/id=37738",
+      "SemanticSha256": "387b768255d1454e9526d9ff1bfa832d7dd57520f6dd8ccd0d06ba61fc0a1472",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:05:06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:05:06"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U04:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:04:07:SAMPLE-SPACES",
-      "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U05:L07",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:05:07:SOLVING-RADICAL-EQUATIONS-AND-INEQUALITIES",
+      "UnitNumber": 5,
+      "UnitTitle": "Inverse and Radical Functions",
       "LessonNumber": 7,
-      "Title": "Sample spaces",
+      "Title": "Solving Radical Equations and Inequalities",
+      "SortOrder": 34,
+      "SourceUrl": "https://almanahj.com/ae/id=37738",
+      "SemanticSha256": "a93ec259f46f7d2c984e8e70886c52cb4708372d9d82ede6fc3ebda577883ffa",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:05:07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G12-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:05:07"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U06:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:06:01:LOGARITHMS-AND-LOGARITHMIC-FUNCTIONS",
+      "UnitNumber": 6,
+      "UnitTitle": "Exponential and Logarithmic Functions",
+      "LessonNumber": 1,
+      "Title": "Logarithms and Logarithmic Functions",
+      "SortOrder": 35,
+      "SourceUrl": "https://almanahj.com/ae/id=37738",
+      "SemanticSha256": "36e916b8cf81e8ea2ce8648ceaa326891bdccb1283d3ea3420976975bedb4bca",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:06:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G12-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:06:01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U06:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:06:02:SOLVING-LOGARITHMIC-EQUATIONS-AND-INEQUALITIES",
+      "UnitNumber": 6,
+      "UnitTitle": "Exponential and Logarithmic Functions",
+      "LessonNumber": 2,
+      "Title": "Solving Logarithmic Equations and Inequalities",
+      "SortOrder": 36,
+      "SourceUrl": "https://almanahj.com/ae/id=37738",
+      "SemanticSha256": "7ae90c83e49b3388c1b0200f89672197f56b39718df52df5e7b7c0f966e93ce4",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:06:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G12-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:06:02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U06:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:06:03:PROPERTIES-OF-LOGARITHMS",
+      "UnitNumber": 6,
+      "UnitTitle": "Exponential and Logarithmic Functions",
+      "LessonNumber": 3,
+      "Title": "Properties of Logarithms",
+      "SortOrder": 37,
+      "SourceUrl": "https://almanahj.com/ae/id=37738",
+      "SemanticSha256": "f60fa2f26e470a14c2a2adf3167123da9c594588b6cb2ac6ec99359d9f1a3bb0",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:06:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G12-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:06:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U06:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:06:04:COMMON-LOGARITHMS",
+      "UnitNumber": 6,
+      "UnitTitle": "Exponential and Logarithmic Functions",
+      "LessonNumber": 4,
+      "Title": "Common Logarithms",
+      "SortOrder": 38,
+      "SourceUrl": "https://almanahj.com/ae/id=37738",
+      "SemanticSha256": "eef657da2e88c9b22c43ca4c3b37af7f3f4d2f1607927a6fa9a5de42455ad419",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:06:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G12-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:06:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U06:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:06:05:BASE-E-AND-NATURAL-LOGARITHMS",
+      "UnitNumber": 6,
+      "UnitTitle": "Exponential and Logarithmic Functions",
+      "LessonNumber": 5,
+      "Title": "Base e and Natural Logarithms",
+      "SortOrder": 39,
+      "SourceUrl": "https://almanahj.com/ae/id=37738",
+      "SemanticSha256": "65b108be9273845336935402012492212d82d68de7de56a89294ae494f7164d8",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:06:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G12-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:06:05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U06:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:06:06:USING-EXPONENTIAL-AND-LOGARITHMIC-FUNCTIONS",
+      "UnitNumber": 6,
+      "UnitTitle": "Exponential and Logarithmic Functions",
+      "LessonNumber": 6,
+      "Title": "Using Exponential and Logarithmic Functions",
+      "SortOrder": 40,
+      "SourceUrl": "https://almanahj.com/ae/id=37738",
+      "SemanticSha256": "fcae83de92cd9bbd27ba5b8baf8148a54c14c06ecb820a0359fc9b2b0a272543",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:06:06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G12-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T2:EDU:06:06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U07:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:07:01:MULTIPLYING-AND-DIVIDING-RATIONAL-EXPRESSIONS",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Functions and Relations",
+      "LessonNumber": 1,
+      "Title": "Multiplying and Dividing Rational Expressions",
+      "SortOrder": 41,
+      "SourceUrl": "https://almanahj.com/ae/id=38834",
+      "SemanticSha256": "1f3da730eb5820963eba436cc64ae10b1eec629b8545b0c570d524a077e823d1",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:07:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G12-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:07:01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U07:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:07:02:ADDING-AND-SUBTRACTING-RATIONAL-EXPRESSIONS",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Functions and Relations",
+      "LessonNumber": 2,
+      "Title": "Adding and Subtracting Rational Expressions",
+      "SortOrder": 42,
+      "SourceUrl": "https://almanahj.com/ae/id=38834",
+      "SemanticSha256": "5fc3efa2d1fc798dd52b2be6c420f101e7913ed467e2df20175690e07ed94b4d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:07:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G12-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:07:02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U07:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:07:03:GRAPHING-RECIPROCAL-FUNCTIONS",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Functions and Relations",
+      "LessonNumber": 3,
+      "Title": "Graphing Reciprocal Functions",
+      "SortOrder": 43,
+      "SourceUrl": "https://almanahj.com/ae/id=38834",
+      "SemanticSha256": "92bd30366052a7adeb5482b6932a40673f12c4e94dc8c011abd7d5bbc21ae62a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:07:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G12-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:07:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U07:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:07:04:GRAPHING-RATIONAL-FUNCTIONS",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Functions and Relations",
+      "LessonNumber": 4,
+      "Title": "Graphing Rational Functions",
+      "SortOrder": 44,
+      "SourceUrl": "https://almanahj.com/ae/id=38834",
+      "SemanticSha256": "c7f770ebe7a0a3ad8cdf46bbdd6e6476a7a87ce248bc48668b0b88ab0ec17cc7",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:07:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G12-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:07:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U07:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:07:05:SOLVING-RATIONAL-EQUATIONS-AND-INEQUALITIES",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Functions and Relations",
+      "LessonNumber": 5,
+      "Title": "Solving Rational Equations and Inequalities",
       "SortOrder": 45,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "ed97fe5bf4a69b50e20f419dd88b900dfe82d47ef1ca42652fc368018b45981f",
-      "Alignments": [],
+      "SourceUrl": "https://almanahj.com/ae/id=38834",
+      "SemanticSha256": "a5c135d5315cb4b5630a6e590b4962f60d2e4ec2c341b13abe8a04cb952e9f70",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:07:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:07:05"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U04:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:04:08:COMPARING-DISTRIBUTIONS",
-      "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
-      "LessonNumber": 8,
-      "Title": "Comparing distributions",
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U08:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:08:01:TRIGONOMETRIC-RATIOS-IN-RIGHT-TRIANGLES",
+      "UnitNumber": 8,
+      "UnitTitle": "Trigonometric Functions",
+      "LessonNumber": 1,
+      "Title": "Trigonometric Ratios in Right Triangles",
       "SortOrder": 46,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "c0481f42e87a164d6843f8db441ac25ba52ef1a007f3b4885369926f0a854bdc",
-      "Alignments": [],
+      "SourceUrl": "https://almanahj.com/ae/id=38834",
+      "SemanticSha256": "b1a8e97e911b44c4e4b1671d5fcff41f731252257a3dfa5540f8ca1a5033dd61",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:08:01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:08:01"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U04:L09",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:04:09:TREE-DIAGRAMS",
-      "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
-      "LessonNumber": 9,
-      "Title": "Tree diagrams",
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U08:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:08:02:ANGLES-AND-ANGLE-MEASURE",
+      "UnitNumber": 8,
+      "UnitTitle": "Trigonometric Functions",
+      "LessonNumber": 2,
+      "Title": "Angles and Angle Measure",
       "SortOrder": 47,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "bda90e32ef9231a617b5c64c10899834928ee52597c5c4fd42866b3531203bb4",
-      "Alignments": [],
+      "SourceUrl": "https://almanahj.com/ae/id=38834",
+      "SemanticSha256": "aa3deb2c13464f8bf9faecb3008b4c4ee31ece6470fa077920ebcd620156c179",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:08:02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:08:02"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U04:L10",
-      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:04:10:NORMAL-DISTRIBUTION-FOUNDATIONS",
-      "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
-      "LessonNumber": 10,
-      "Title": "Normal distribution foundations",
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U08:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:08:03:TRIGONOMETRIC-RATIOS-OF-GENERAL-ANGLES",
+      "UnitNumber": 8,
+      "UnitTitle": "Trigonometric Functions",
+      "LessonNumber": 3,
+      "Title": "Trigonometric Ratios of General Angles",
       "SortOrder": 48,
-      "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SemanticSha256": "e9fb1f20f5b8a87c837ef6fe9692fa7d610d4f172b3e3fc009e825bcaceab49a",
-      "Alignments": [],
+      "SourceUrl": "https://almanahj.com/ae/id=38834",
+      "SemanticSha256": "60fe2538703af0c84ce29dc72163a5b96d58bdd94423e323fbb4a95fdf8d2da3",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:08:03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G12-GENERAL-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:08:03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U08:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:08:04:THE-SINE-LAW",
+      "UnitNumber": 8,
+      "UnitTitle": "Trigonometric Functions",
+      "LessonNumber": 4,
+      "Title": "The Sine Law",
+      "SortOrder": 49,
+      "SourceUrl": "https://almanahj.com/ae/id=38834",
+      "SemanticSha256": "ff880b1a4ec69fefc544e14bcefc51e94955f457d08a1899c7cdb78d01a2a283",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:08:04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G12-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:08:04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U08:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:08:05:THE-COSINE-LAW",
+      "UnitNumber": 8,
+      "UnitTitle": "Trigonometric Functions",
+      "LessonNumber": 5,
+      "Title": "The Cosine Law",
+      "SortOrder": 50,
+      "SourceUrl": "https://almanahj.com/ae/id=38834",
+      "SemanticSha256": "001806ee7e1f6574e9eaf4b5c11b62c03ce792b7402a3ba9fd0428d4650ffc60",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:08:05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G12-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:08:05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U08:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:08:06:CIRCULAR-AND-PERIODIC-FUNCTIONS",
+      "UnitNumber": 8,
+      "UnitTitle": "Trigonometric Functions",
+      "LessonNumber": 6,
+      "Title": "Circular and Periodic Functions",
+      "SortOrder": 51,
+      "SourceUrl": "https://almanahj.com/ae/id=38834",
+      "SemanticSha256": "fb57d7aff3ef4b9d48e3dac1be1306cec7f97ee28322dcf6417bb17843bc1df9",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:08:06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G12-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:08:06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L12:GENERAL:U08:L07",
+      "LessonCode": "PED:UAE-MOE-MATH:L12:GENERAL:08:07:GRAPHING-TRIGONOMETRIC-FUNCTIONS",
+      "UnitNumber": 8,
+      "UnitTitle": "Trigonometric Functions",
+      "LessonNumber": 7,
+      "Title": "Graphing Trigonometric Functions",
+      "SortOrder": 52,
+      "SourceUrl": "https://almanahj.com/ae/id=38834",
+      "SemanticSha256": "9884062d569d51066c64e1b617be4d562998b2d1d1e86ec9a33a62c9ee3308b4",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:08:07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G12-GENERAL-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G12:GENERAL:T3:EDU:08:07"
     }
   ]
 }

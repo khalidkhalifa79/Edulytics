@@ -113,11 +113,11 @@ public sealed class RichLessonContentV2RolloutTests
             }
         }
 
-        Assert.Equal(4453, rows.Count);
+        Assert.Equal(4666, rows.Count);
         Assert.Equal(
             26,
             readyCurated);
-        Assert.Equal(4427, readyRuntime);
+        Assert.Equal(4640, readyRuntime);
         Assert.Equal(0, blockedLocalized);
         Assert.Equal(0, blockedContract);
         Assert.Equal(0, blockedGeneration);

@@ -1,0 +1,111 @@
+{
+  "SchemaVersion": 1,
+  "Grade": 12,
+  "Pathway": "Advanced",
+  "VerifiedAtUtc": "2026-10-04T00:00:00Z",
+  "LessonCount": 53,
+  "Units": [
+    {
+      "n": 1,
+      "title": "Preliminaries of Calculus",
+      "term": "T1",
+      "ls": [
+        "Polynomials and Rational Functions",
+        "Inverse Functions",
+        "Trigonometric and Inverse Trigonometric Functions",
+        "Exponential and Logarithmic Functions",
+        "Transformations of Functions"
+      ]
+    },
+    {
+      "n": 2,
+      "title": "Limits and Continuity",
+      "term": "T1",
+      "ls": [
+        "A Brief Preview of Calculus: Tangent Lines and the Length of a Curve",
+        "The Concept of Limit",
+        "Computation of Limits",
+        "Continuity and Its Consequences",
+        "Limits Involving Infinity; Asymptotes",
+        "Formal Definition of the Limit",
+        "Limits and Loss-of-Significance Errors"
+      ]
+    },
+    {
+      "n": 3,
+      "title": "Differentiation",
+      "term": "T1",
+      "ls": [
+        "Tangent Lines and Velocity",
+        "The Derivative",
+        "Computation of Derivatives: The Power Rule",
+        "The Product and Quotient Rules",
+        "The Chain Rule",
+        "Derivatives of Trigonometric Functions",
+        "Derivatives of Exponential and Logarithmic Functions",
+        "Implicit Differentiation and Inverse Trigonometric Functions",
+        "The Hyperbolic Functions",
+        "The Mean Value Theorem"
+      ]
+    },
+    {
+      "n": 4,
+      "title": "Applications of Differentiation",
+      "term": "T2",
+      "ls": [
+        "Linear Approximations and Newton’s Method",
+        "Indeterminate Forms and L’Hopital’s Rule",
+        "Maximum and Minimum Values",
+        "Increasing and Decreasing Functions",
+        "Concavity and the Second Derivative Test",
+        "Overview of Curve Sketching",
+        "Optimization",
+        "Related Rates",
+        "Rates of Change in Economics and the Sciences"
+      ]
+    },
+    {
+      "n": 5,
+      "title": "Integration",
+      "term": "T2",
+      "ls": [
+        "Antiderivatives",
+        "Sums and Sigma Notation",
+        "Area",
+        "The Definite Integral",
+        "The Fundamental Theorem of Calculus",
+        "Integration by Substitution",
+        "Numerical Integration",
+        "The Natural Logarithm as an Integral"
+      ]
+    },
+    {
+      "n": 6,
+      "title": "Applications of the Definite Integral",
+      "term": "T3",
+      "ls": [
+        "Area Between Curves",
+        "Volume: Slicing, Disks and Washers",
+        "Volumes by Cylindrical Shells",
+        "Arc Length and Surface Area",
+        "Projectile Motion",
+        "Applications of Integration to Physics and Engineering",
+        "Probability"
+      ]
+    },
+    {
+      "n": 7,
+      "title": "Integration Techniques and First-Order Differential Equations",
+      "term": "T3",
+      "ls": [
+        "Review of Formulas and Techniques",
+        "Integration by Parts",
+        "Trigonometric Techniques of Integration",
+        "Integration of Rational Functions Using Partial Fractions",
+        "Integration Tables and Computer Algebra Systems",
+        "Modeling with Differential Equations",
+        "Separable Differential Equations"
+      ]
+    }
+  ]
+}

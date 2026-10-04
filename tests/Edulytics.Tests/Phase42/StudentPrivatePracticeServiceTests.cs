@@ -237,7 +237,7 @@ public sealed class StudentPrivatePracticeServiceTests
     public async Task Quadratic_lesson_exposes_only_truthfully_supported_standard_difficulties()
     {
         const string lessonCode =
-            "PED:UAE-MOE-MATH:L11:ADVANCED:02:13:QUADRATIC-EQUATIONS";
+            "PED:UAE-MOE-MATH:L10:ADVANCED:01:04:SOLVING-QUADRATIC-EQUATIONS-BY-FACTORING";
 
         Assert.True(
             LessonPracticeContractRegistry.TryResolve(

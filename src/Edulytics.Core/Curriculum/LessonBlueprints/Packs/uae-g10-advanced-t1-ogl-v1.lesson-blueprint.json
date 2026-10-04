@@ -13,197 +13,287 @@
   "SourcePublisher": "UK Department for Education",
   "SourceEdition": "GCSE Mathematics subject content / current GOV.UK publication",
   "SourceRootUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-  "SourceCheckedAtUtc": "2026-09-01T00:00:00Z",
+  "SourceCheckedAtUtc": "2026-10-04T00:00:00Z",
   "SourceLicense": "Open Government Licence v3.0",
   "RequiredDigitalAttribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
   "SourceSelectionReason": "The official curriculum source remains the academic authority. Edulytics uses open DfE Mathematics material only as lawful pedagogical scaffolding for independently authored lesson explanations where official copyrighted or source-linked prose is not reproduced.",
-  "SourceSelectionEvidence": "This scope contains 47 Edulytics-authored supporting lessons across 5 units. No formal outcome mapping is claimed without explicit source evidence; every formal OutcomeCodes collection is empty.",
+  "SourceSelectionEvidence": "Verified UAE Grade 10 Advanced Reveal Math Integrated III Student Edition TOC; current 2025-2026 structure files are retained separately for term-level validation. The UAE Student Edition is used for exact annual unit/lesson scope. Where 2025-2026 term structure differs or is incomplete, this is recorded as PreviousOfficialFallback rather than inventing mappings.",
   "SourceEvidenceUrls": [
-    "https://minhaji.moe.gov.ae/",
-    "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-    "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
-    "https://uae.afedne.com/ShopW0GIPgdv",
-    "https://uae.afedne.com/ShoysvVstnq7",
-    "https://uae.afedne.com/ShoLXdvsAaPP",
-    "https://uae.afedne.com/ShoSRm1l5RVL"
+    "https://minhaji.moe.gov.ae/"
   ],
   "SourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. Official UAE Ministry of Education wording is not reproduced. Edulytics learner-facing bodies are independently authored.",
-  "SemanticGraphSha256": "0cbfab7a6cb1b656c2a4169bfe08a3c27999051c8e7a0a9c400be7fb7a257aab",
+  "SemanticGraphSha256": "0f7ee5df0c58a35476298dcb0c49cb17f54095182b8c637d9d5a201e6620a162",
   "AcquisitionDiagnostics": {
-    "UnitCount": 5,
-    "LessonCount": 47,
+    "UnitCount": 9,
+    "LessonCount": 52,
     "OfficialStandardCount": 0,
     "AddressingCoverageCount": 0,
     "FormalMappingCount": 0,
-    "LessonsWithoutNumberedGradeReferenceAnyRole": 47,
-    "LessonsWithoutNumberedAddressingStandard": 47,
-    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 47,
+    "LessonsWithoutNumberedGradeReferenceAnyRole": 0,
+    "LessonsWithoutNumberedAddressingStandard": 52,
+    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 52,
     "MultiStandardLessons": 0
   },
   "Units": [
     {
       "Number": 1,
-      "UnitCode": "UAE-G10-ADVANCED-T1-OGL-V1:U01",
+      "UnitCode": "UAE-G10-ADVANCED:U01",
       "SortOrder": 1,
-      "Title": "Number and Proportional Reasoning",
+      "Title": "Quadratic Functions",
       "LessonCount": 8,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "69b39bcc18d63b15e46a44422d7339e8809ff77627fdd697b28ccea5702406df"
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "1aef0b28307c71bb666fd37476dde213bebf69fdec43ab092f71226464513cee"
     },
     {
       "Number": 2,
-      "UnitCode": "UAE-G10-ADVANCED-T1-OGL-V1:U02",
+      "UnitCode": "UAE-G10-ADVANCED:U02",
       "SortOrder": 2,
-      "Title": "Algebra",
-      "LessonCount": 14,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "0f30b585f429d8fe0553dd38a9dbb12a8353f537708cdff070645f2e98048b4f"
+      "Title": "Polynomials and Polynomial Functions",
+      "LessonCount": 5,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "a848fa46132d47ca240be3f4f1330a626a3ae865c7a553572966fd5cc0487d5a"
     },
     {
       "Number": 3,
-      "UnitCode": "UAE-G10-ADVANCED-T1-OGL-V1:U03",
+      "UnitCode": "UAE-G10-ADVANCED:U03",
       "SortOrder": 3,
-      "Title": "Geometry and Measure",
-      "LessonCount": 9,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "44cae023278b95cfd74a2e14d4503680bda5f1031409fc461b072eabece41248"
+      "Title": "Polynomial Equations",
+      "LessonCount": 5,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "60a8b2f588a46998bf4757ab0acb8d9ba37bf21e2be1b87eb30b28f5d822f431"
     },
     {
       "Number": 4,
-      "UnitCode": "UAE-G10-ADVANCED-T1-OGL-V1:U04",
+      "UnitCode": "UAE-G10-ADVANCED:U04",
       "SortOrder": 4,
-      "Title": "Statistics and Probability",
-      "LessonCount": 9,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "89d7bb4820e598d18041718044494d9bb4392db3b6aba3a9b2d0eb874c1ef497"
+      "Title": "Inverses and Radical Functions",
+      "LessonCount": 6,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "5fd1a478db0dc7e88dba8b4c14330bc44bc2f72458b9fe55b4af0ef8d85423a8"
     },
     {
       "Number": 5,
-      "UnitCode": "UAE-G10-ADVANCED-T1-OGL-V1:U05",
+      "UnitCode": "UAE-G10-ADVANCED:U05",
       "SortOrder": 5,
-      "Title": "Advanced Reasoning",
+      "Title": "Exponential Functions",
+      "LessonCount": 5,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "bf355f75d7454c8f448f635b9a44ccb1e87e9f4268b05bdc19cd22ca6793ab48"
+    },
+    {
+      "Number": 6,
+      "UnitCode": "UAE-G10-ADVANCED:U06",
+      "SortOrder": 6,
+      "Title": "Logarithmic Functions",
+      "LessonCount": 5,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "705bc79577a37f305d5c10b294c06b28aecc31f70619a78010e47e206ccad53a"
+    },
+    {
+      "Number": 7,
+      "UnitCode": "UAE-G10-ADVANCED:U07",
+      "SortOrder": 7,
+      "Title": "Rational Functions",
+      "LessonCount": 6,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "f0a9ce11be39c34916a75cba6c7b3702ad5c290c1ae3ad275dc9cb9e17a209b7"
+    },
+    {
+      "Number": 8,
+      "UnitCode": "UAE-G10-ADVANCED:U08",
+      "SortOrder": 8,
+      "Title": "Inferential Statistics",
+      "LessonCount": 5,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "6c6f26d1f43127ea066408a0183ff641dd08d125166a4f7bfe0f61b518ebb0c0"
+    },
+    {
+      "Number": 9,
+      "UnitCode": "UAE-G10-ADVANCED:U09",
+      "SortOrder": 9,
+      "Title": "Trigonometric Functions",
       "LessonCount": 7,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "e977784be1914dbbc9710901f21282db287c8ac661c77c6fb581ffd9734dc552"
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "ee1869d07ec66235e7607a5fd92cca606e8d3887ceb067522b44d4e5d70857ff"
     }
   ],
   "Lessons": [
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U01:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:01:01:INTEGERS-AND-DIRECTED-NUMBER",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:01:01:GRAPHING-QUADRATIC-FUNCTIONS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Quadratic Functions",
       "LessonNumber": 1,
-      "Title": "Integers and directed number — advanced reasoning",
+      "Title": "Graphing Quadratic Functions",
       "SortOrder": 1,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "815e3c3046f2124772ee379b66e0523521d20f50c14c72e782665a42cde6e722",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "7a0235e9ce04a2d7ad8fa76158e85244b20275d73bab61a498bd7e3c0d787ded",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U01:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U01:L01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U01:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:01:02:FRACTIONS-AND-MIXED-NUMBERS",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:01:02:SOLVING-QUADRATIC-EQUATIONS-BY-GRAPHING",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Quadratic Functions",
       "LessonNumber": 2,
-      "Title": "Fractions and mixed numbers — advanced reasoning",
+      "Title": "Solving Quadratic Equations by Graphing",
       "SortOrder": 2,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "8e1f2edcbfa698a7e3255e6168b1a837d45722b006435ad247ce7a64ab6960ae",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "f950171b1a569d51cf8b2a3e40f8e36911e607c107697542f4863d4b00599416",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U01:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U01:L02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U01:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:01:03:DECIMALS-AND-ROUNDING",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:01:03:COMPLEX-NUMBERS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Quadratic Functions",
       "LessonNumber": 3,
-      "Title": "Decimals and rounding — advanced reasoning",
+      "Title": "Complex Numbers",
       "SortOrder": 3,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "1657324c5731292dc4134a1efd8933690692253e7b01feb1d26af04bfcadcfae",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "271bc757a919f054934aef9fc17a231cd59feda38cf8f622533e2f91b1022f89",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U01:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U01:L03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U01:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:01:04:PERCENTAGES",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:01:04:SOLVING-QUADRATIC-EQUATIONS-BY-FACTORING",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Quadratic Functions",
       "LessonNumber": 4,
-      "Title": "Percentages — advanced reasoning",
+      "Title": "Solving Quadratic Equations by Factoring",
       "SortOrder": 4,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "958ffc51bc65ae7b9fc2e4e8e2505263eedb7b2d0f0ac5dc86ca75e28e94669b",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "e510f9b49823a4a9e9e83d41c8f163f22163a2e43eacc36c32eacc0fb582ef05",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U01:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U01:L04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U01:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:01:05:RATIO-AND-PROPORTION",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:01:05:SOLVING-QUADRATIC-EQUATIONS-BY-COMPLETING-THE-SQUARE",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Quadratic Functions",
       "LessonNumber": 5,
-      "Title": "Ratio and proportion — advanced reasoning",
+      "Title": "Solving Quadratic Equations by Completing the Square",
       "SortOrder": 5,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "ae7ee5ee8a6bfaad231625fa51acbd96cdc698317308d80661698004117c7e51",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "19200ff7c535ebc2e85174bff9275d17ef52a86db05b5ea4f084c85d77d00187",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U01:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U01:L05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U01:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:01:06:RATES-AND-UNIT-RATES",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:01:06:USING-THE-QUADRATIC-FORMULA-AND-THE-DISCRIMINANT",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Quadratic Functions",
       "LessonNumber": 6,
-      "Title": "Rates and unit rates — advanced reasoning",
+      "Title": "Using the Quadratic Formula and the Discriminant",
       "SortOrder": 6,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "cc2503dfc3972d565b85738ebc7fc5bb130d7ad93d7f74fb220784b1b09a5e5e",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "631bb18ef7523b1534491b5175f5d0e5f4ac49f686cec98cb24f2dfd59a86df8",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U01:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U01:L06"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U01:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:01:07:POWERS-AND-ROOTS",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:01:07:QUADRATIC-INEQUALITIES",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Quadratic Functions",
       "LessonNumber": 7,
-      "Title": "Powers and roots — advanced reasoning",
+      "Title": "Quadratic Inequalities",
       "SortOrder": 7,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "f1b6c97c5ea5ff247ea6bb125345e049e33487c32a52d5f962bfa4770a93fafa",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "05c87fefcc4a0db4b4066f1460520947fa3395d61a7b5693ceea08c9c5234e77",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:01:07",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U01:L07",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -215,22 +305,22 @@
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:01:07"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U01:L07"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U01:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:01:08:STANDARD-FORM-AND-ESTIMATION",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:01:08:SOLVING-LINEAR-NONLINEAR-SYSTEMS",
       "UnitNumber": 1,
-      "UnitTitle": "Number and Proportional Reasoning",
+      "UnitTitle": "Quadratic Functions",
       "LessonNumber": 8,
-      "Title": "Standard form and estimation — advanced reasoning",
+      "Title": "Solving Linear-Nonlinear Systems",
       "SortOrder": 8,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "0bb253f159f7b480e4926a4d391f8daf080136f6ac233dcf5c2cadfcad8f3b97",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "f943042d595ff5f0f64e8dec6cb60c17ecf67e3aaa0d4faa0b413990761967f9",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:01:08",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U01:L08",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -242,90 +332,130 @@
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:01:08"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U01:L08"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U02:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:02:01:ALGEBRAIC-EXPRESSIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:02:01:POLYNOMIAL-FUNCTIONS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Polynomials and Polynomial Functions",
       "LessonNumber": 1,
-      "Title": "Algebraic expressions — advanced reasoning",
+      "Title": "Polynomial Functions",
       "SortOrder": 9,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "32637f7cca2b9cfb353ef527fa41aad148fb00187e41a27157ce7a1120901ebd",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "6b6d9882e17b5d9aa668fdd82113bfb929ebae593c1557f2bd26d881098f083d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U02:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U02:L01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U02:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:02:02:SUBSTITUTION",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:02:02:ANALYZING-GRAPHS-OF-POLYNOMIAL-FUNCTIONS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Polynomials and Polynomial Functions",
       "LessonNumber": 2,
-      "Title": "Substitution — advanced reasoning",
+      "Title": "Analyzing Graphs of Polynomial Functions",
       "SortOrder": 10,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "9bc885aef913f0680b775a0d240b395e481e3ac170ecb4931f2a2465fc107088",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "3dbad17c0e7eecbdc05b4084090e95e18e1734bfb9510e48ceb318556d6db485",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U02:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U02:L02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U02:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:02:03:EXPANDING-BRACKETS",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:02:03:OPERATIONS-WITH-POLYNOMIALS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Polynomials and Polynomial Functions",
       "LessonNumber": 3,
-      "Title": "Expanding brackets — advanced reasoning",
+      "Title": "Operations with Polynomials",
       "SortOrder": 11,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "8e20342177978ae78848d87cdb0e62ff4d75ae1e9a8de7d2e278000da15a83da",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "0ec177cca8a08d2216ff40e454e3fb502aaf3caea1e6b0c7dd69a297974d17c7",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U02:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U02:L03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U02:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:02:04:FACTORISING-EXPRESSIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:02:04:DIVIDING-POLYNOMIALS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Polynomials and Polynomial Functions",
       "LessonNumber": 4,
-      "Title": "Factorising expressions — advanced reasoning",
+      "Title": "Dividing Polynomials",
       "SortOrder": 12,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "4dd47e4caf491dc5392bf8ef70d3935efa6bfcc3bf35978b635158cfc23c3f57",
-      "Alignments": [],
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "cc04936abec6d16bbd43e82733744b678c86f1b020f348d3595206458c24d717",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U02:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U02:L04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U02:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:02:05:LINEAR-EQUATIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:02:05:POWERS-OF-BINOMIALS",
       "UnitNumber": 2,
-      "UnitTitle": "Algebra",
+      "UnitTitle": "Polynomials and Polynomial Functions",
       "LessonNumber": 5,
-      "Title": "Linear equations — advanced reasoning",
+      "Title": "Powers of Binomials",
       "SortOrder": 13,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "35f1d4a4268a7a64dd7b1ea22c5004957e8abb6c87625987d8bc11a19c476fd0",
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "4e313d9725d80c38e4647134945df1d27131cb71f495194ff4761fe7161a29a8",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:02:05",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U02:L05",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -337,252 +467,49 @@
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:02:05"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U02:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:02:06:INEQUALITIES",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 6,
-      "Title": "Inequalities — advanced reasoning",
-      "SortOrder": 14,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "8dbcdd90437cf213058bc10b6b3183e2bf9c2d6b35f5e294a533c41547ca3431",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:02:06",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 1
-        }
-      ],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-ADVANCED-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:02:06"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U02:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:02:07:SEQUENCES",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 7,
-      "Title": "Sequences — advanced reasoning",
-      "SortOrder": 15,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "377d0d4e6f34ac605dfc21a54baf4de48b26bd30664df960ecaee00a6c5df656",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-ADVANCED-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U02:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:02:08:COORDINATES-AND-STRAIGHT-LINE-GRAPHS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 8,
-      "Title": "Coordinates and straight-line graphs — advanced reasoning",
-      "SortOrder": 16,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "49b60b19589031dc5bd8ceb142db52fdf8ca92de1214719cb153a80371ca8c50",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-ADVANCED-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U02:L09",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:02:09:SIMULTANEOUS-EQUATIONS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 9,
-      "Title": "Simultaneous equations — advanced reasoning",
-      "SortOrder": 17,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "2bdc9c77408eafa44d03297844b9b773bc9896393f65ac39c41df42989555475",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:02:09",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 1
-        }
-      ],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-ADVANCED-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:02:09"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U02:L10",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:02:10:LINEAR-MODELLING",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 10,
-      "Title": "Linear modelling — advanced reasoning",
-      "SortOrder": 18,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "a5e24292a3882f48d6bce0a44bfa95f44276c78b25aacc4d2c8a9213312777f7",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-ADVANCED-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U02:L11",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:02:11:QUADRATIC-EXPRESSIONS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 11,
-      "Title": "Quadratic expressions — advanced reasoning",
-      "SortOrder": 19,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "9c434fe4d04282b7ec5d285e6f82fd8b452c8d74b6c84ea8428dc03a3acafe95",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:02:11",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 1
-        }
-      ],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-ADVANCED-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:02:11"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U02:L12",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:02:12:FUNCTIONS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 12,
-      "Title": "Functions — advanced reasoning",
-      "SortOrder": 20,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "a8259287f4bb29f53badc1f2bf6bd61e1d7044802b0e8f457bb72c1899482e24",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:02:12",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 1
-        }
-      ],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-ADVANCED-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:02:12"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U02:L13",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:02:13:QUADRATIC-EQUATIONS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 13,
-      "Title": "Quadratic equations — advanced reasoning",
-      "SortOrder": 21,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "f9b37c1c40e07720b89cca9e48c5c50edfde853fd459a2f76fd19cd10baf17d6",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:02:13",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 1
-        }
-      ],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-ADVANCED-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:02:13"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U02:L14",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:02:14:POLYNOMIAL-GRAPHS",
-      "UnitNumber": 2,
-      "UnitTitle": "Algebra",
-      "LessonNumber": 14,
-      "Title": "Polynomial graphs — advanced reasoning",
-      "SortOrder": 22,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "ecbc9bdd4fe12afa044a5c46523f4d7accd46e033386a1cd47a329c4f97fd787",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:02:14",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 1
-        }
-      ],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-ADVANCED-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:02:14"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U02:L05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U03:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:03:01:ANGLE-RELATIONSHIPS",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:03:01:SOLVING-POLYNOMIAL-EQUATIONS-BY-GRAPHING",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Polynomial Equations",
       "LessonNumber": 1,
-      "Title": "Angle relationships — advanced reasoning",
-      "SortOrder": 23,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "1f584a98acf3d45b67a81e903740a7b750634e2a56cc885a6998ab164f0cf86d",
-      "Alignments": [],
+      "Title": "Solving Polynomial Equations by Graphing",
+      "SortOrder": 14,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "0b951a6c34860e0318822550c80e12c0dc0603b8c90e637969439a74ccbc4690",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U03:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U03:L01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U03:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:03:02:POLYGONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:03:02:SOLVING-POLYNOMIAL-EQUATIONS-ALGEBRAICALLY",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Polynomial Equations",
       "LessonNumber": 2,
-      "Title": "Polygons — advanced reasoning",
-      "SortOrder": 24,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "449fce54360b0d198cef0d9cf9eaeb4bc330e5ead30bcb2eebadc351b74e8fcf",
+      "Title": "Solving Polynomial Equations Algebraically",
+      "SortOrder": 15,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "4c53d4200c2d15704a2f9b0708560c62bb1f40001867fdb951d71d80d445c6ff",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:03:02",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U03:L02",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -594,22 +521,22 @@
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:03:02"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U03:L02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U03:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:03:03:CONGRUENCE-AND-SIMILARITY",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:03:03:PROVING-POLYNOMIAL-IDENTITIES",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Polynomial Equations",
       "LessonNumber": 3,
-      "Title": "Congruence and similarity — advanced reasoning",
-      "SortOrder": 25,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "715fb4eb6d88c6386e95467a4055199c15085ec350a81697d914ffd38263b6c5",
+      "Title": "Proving Polynomial Identities",
+      "SortOrder": 16,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "ee7e30615a83ff62cdd3038e36ae3a8abc9bd8e71b7ed5a4b89ccd4701c692c9",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:03:03",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U03:L03",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -621,22 +548,22 @@
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:03:03"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U03:L03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U03:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:03:04:TRANSFORMATIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:03:04:THE-REMAINDER-AND-FACTOR-THEOREMS",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Polynomial Equations",
       "LessonNumber": 4,
-      "Title": "Transformations — advanced reasoning",
-      "SortOrder": 26,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "08a1cf3ff1da02d9855173fee1b0ed7899d8c314d004a30f4a49b61cde66bf04",
+      "Title": "The Remainder and Factor Theorems",
+      "SortOrder": 17,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "37f51087a3e16a1d748840f4edb01685aa558192a210fcced21880c8fa4e0a32",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:03:04",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U03:L04",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -648,39 +575,22 @@
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:03:04"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U03:L04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U03:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:03:05:PERIMETER-AND-AREA",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:03:05:ROOTS-AND-ZEROS",
       "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
+      "UnitTitle": "Polynomial Equations",
       "LessonNumber": 5,
-      "Title": "Perimeter and area — advanced reasoning",
-      "SortOrder": 27,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "1f82f62e6a31479c5ff7beaa95d78a8cd1e77ec68065e6792c5ef36ff6b632c3",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-ADVANCED-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U03:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:03:06:SURFACE-AREA-AND-VOLUME",
-      "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 6,
-      "Title": "Surface area and volume — advanced reasoning",
-      "SortOrder": 28,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "eeb27e8677edeba01a09f43bb985ce8fbf48a6cd36cd4b40b65fe6d8edecc479",
+      "Title": "Roots and Zeros",
+      "SortOrder": 18,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "9d0b359db610ced5c170d319caf6c5292ade8ede41f2b60dd9fb8f71fd51ff9f",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:03:06",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U03:L05",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -692,151 +602,130 @@
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:03:06"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U03:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:03:07:PYTHAGORAS-THEOREM",
-      "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 7,
-      "Title": "Pythagoras theorem — advanced reasoning",
-      "SortOrder": 29,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "aacf950d72cdc42807c84054e258e6161636dd1f4bd58aca683cad61aa51e00e",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-ADVANCED-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U03:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:03:08:CONSTRUCTIONS-AND-LOCI",
-      "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 8,
-      "Title": "Constructions and loci — advanced reasoning",
-      "SortOrder": 30,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "62fc17ea4b781f921d738cf3b926069b1f82e418c9d88dde75a782b2960dad9e",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-ADVANCED-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U03:L09",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:03:09:TRIGONOMETRIC-RATIOS",
-      "UnitNumber": 3,
-      "UnitTitle": "Geometry and Measure",
-      "LessonNumber": 9,
-      "Title": "Trigonometric ratios — advanced reasoning",
-      "SortOrder": 31,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "f4110e69626b1c9455fa956689f528558c4d72ae7d771d631f71b1330012ce53",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:03:09",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 1
-        }
-      ],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-ADVANCED-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:03:09"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U03:L05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U04:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:04:01:COLLECTING-DATA",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:04:01:OPERATIONS-ON-FUNCTIONS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Inverses and Radical Functions",
       "LessonNumber": 1,
-      "Title": "Collecting data — advanced reasoning",
-      "SortOrder": 32,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "4872ccc41bcf56b5e831c866fa606d7241280ddd3b99f1c608ad22729721ee48",
-      "Alignments": [],
+      "Title": "Operations on Functions",
+      "SortOrder": 19,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "11de6c34030d4358e5448999a1366cfa043265f48de618dc71120aa1e022df8f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U04:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U04:L01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U04:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:04:02:TABLES-AND-CHARTS",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:04:02:INVERSE-RELATIONS-AND-FUNCTIONS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Inverses and Radical Functions",
       "LessonNumber": 2,
-      "Title": "Tables and charts — advanced reasoning",
-      "SortOrder": 33,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "0acae6b28190459537efc39474355ed85a51d1a0d457cb67da88d8e935905676",
-      "Alignments": [],
+      "Title": "Inverse Relations and Functions",
+      "SortOrder": 20,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "4118517786b156dad9e9dc8024411ddc81dd062f490588e71f4cd5037b4d76fd",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U04:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U04:L02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U04:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:04:03:MEAN-MEDIAN-AND-RANGE",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:04:03:NTH-ROOTS-AND-RATIONAL-EXPONENTS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Inverses and Radical Functions",
       "LessonNumber": 3,
-      "Title": "Mean, median and range — advanced reasoning",
-      "SortOrder": 34,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "7170669bd41b5b31f9f0005dac782bfc11506ab4fe6013d6197b8de60924cda6",
-      "Alignments": [],
+      "Title": "nth Roots and Rational Exponents",
+      "SortOrder": 21,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "ba884744f206c58e3b3a270599c9bc02b3738f6df6560163a4a305d8f50a8e66",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U04:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U04:L03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U04:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:04:04:SCATTER-GRAPHS",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:04:04:GRAPHING-RADICAL-FUNCTIONS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Inverses and Radical Functions",
       "LessonNumber": 4,
-      "Title": "Scatter graphs — advanced reasoning",
-      "SortOrder": 35,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "d27d52eba723839e16bc08445434ec7836f1ca823c5fc6a9f85166300edd7dbd",
-      "Alignments": [],
+      "Title": "Graphing Radical Functions",
+      "SortOrder": 22,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "b6eb80920ae5911eb9d2f19faac6cb296f393438c19b1b322a0beaf113a80166",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U04:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U04:L04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U04:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:04:05:EXPERIMENTAL-PROBABILITY",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:04:05:OPERATIONS-WITH-RADICAL-EXPRESSIONS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Inverses and Radical Functions",
       "LessonNumber": 5,
-      "Title": "Experimental probability — advanced reasoning",
-      "SortOrder": 36,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "5ba568ffd756e695eb34b6a0d4421d1710fd6f42abd65a365c90d9258ddfae27",
+      "Title": "Operations with Radical Expressions",
+      "SortOrder": 23,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "957689294d5cb26eecea5c0f68d8dfc2a3efcd3042de4a4ea64a0f094ea27fc3",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:04:05",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U04:L05",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -848,22 +737,22 @@
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:04:05"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U04:L05"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U04:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:04:06:THEORETICAL-PROBABILITY",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:04:06:SOLVING-RADICAL-EQUATIONS",
       "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
+      "UnitTitle": "Inverses and Radical Functions",
       "LessonNumber": 6,
-      "Title": "Theoretical probability — advanced reasoning",
-      "SortOrder": 37,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "d008f4b515afb58a9eed35c14328b86a13cb54022129574a2b5bdca547ae8db2",
+      "Title": "Solving Radical Equations",
+      "SortOrder": 24,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "eedc91fb6e48eedf4e432d749cc1e675482ab6853a639b6c3cd21aece7ce316e",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:04:06",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U04:L06",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -875,161 +764,130 @@
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:04:06"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U04:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:04:07:SAMPLE-SPACES",
-      "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
-      "LessonNumber": 7,
-      "Title": "Sample spaces — advanced reasoning",
-      "SortOrder": 38,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "18168cc92369348f6c4783bdb8fb8beac8ec93090bb0344ed6cb44559d9c2b2d",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:04:07",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 1
-        }
-      ],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-ADVANCED-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:04:07"
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U04:L08",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:04:08:COMPARING-DISTRIBUTIONS",
-      "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
-      "LessonNumber": 8,
-      "Title": "Comparing distributions — advanced reasoning",
-      "SortOrder": 39,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "d5c6651074743a6f8096c4d595c5eceed85f9aee9fb8ff88cdc2cdbcf464578f",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-ADVANCED-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U04:L09",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:04:09:TREE-DIAGRAMS",
-      "UnitNumber": 4,
-      "UnitTitle": "Statistics and Probability",
-      "LessonNumber": 9,
-      "Title": "Tree diagrams — advanced reasoning",
-      "SortOrder": 40,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "dbf8f0a96ea728f858a66f27e3745098e0ced91685351b32a843e5e4353255ad",
-      "Alignments": [
-        {
-          "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:04:09",
-          "ReferenceKind": "OfficialReference",
-          "ResolutionKind": "ExactAcceptedReference",
-          "OutcomeCode": null,
-          "SortOrder": 1
-        }
-      ],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G10-ADVANCED-T1-OGL-V1"
-      ],
-      "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:04:09"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U04:L06"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U05:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:05:01:MULTI-STEP-ALGEBRAIC-MODELLING",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:05:01:GRAPHING-EXPONENTIAL-FUNCTIONS",
       "UnitNumber": 5,
-      "UnitTitle": "Advanced Reasoning",
+      "UnitTitle": "Exponential Functions",
       "LessonNumber": 1,
-      "Title": "Multi-step algebraic modelling — advanced reasoning",
-      "SortOrder": 41,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "f69cf9b95e17f37d954668ebc4abc85dba255a304fabf40aad5000c0ff0ce56a",
-      "Alignments": [],
+      "Title": "Graphing Exponential Functions",
+      "SortOrder": 25,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "888651556e6fedc74aae40110a4f4d4a222b07ff06cee1da74af01785fdbdd76",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U05:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U05:L01"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U05:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:05:02:PROOF-AND-JUSTIFICATION",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:05:02:SOLVING-EXPONENTIAL-EQUATIONS-AND-INEQUALITIES",
       "UnitNumber": 5,
-      "UnitTitle": "Advanced Reasoning",
+      "UnitTitle": "Exponential Functions",
       "LessonNumber": 2,
-      "Title": "Proof and justification — advanced reasoning",
-      "SortOrder": 42,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "f4d8c08b49366643ca4b48d84b030f410f8e75e3e8b6ce584e454a9cca73c823",
-      "Alignments": [],
+      "Title": "Solving Exponential Equations and Inequalities",
+      "SortOrder": 26,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "d1ddc014c030792eba012807a64014834cb98079d0d050a4a309cc0529b4970b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U05:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U05:L02"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U05:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:05:03:NON-ROUTINE-PROBLEM-SOLVING",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:05:03:SPECIAL-EXPONENTIAL-FUNCTIONS",
       "UnitNumber": 5,
-      "UnitTitle": "Advanced Reasoning",
+      "UnitTitle": "Exponential Functions",
       "LessonNumber": 3,
-      "Title": "Non-routine problem solving — advanced reasoning",
-      "SortOrder": 43,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "ddeca6e0f263a6bbc35ea035bc73b6dbf579a5111c3be36cd736a21db6352653",
-      "Alignments": [],
+      "Title": "Special Exponential Functions",
+      "SortOrder": 27,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "525322cec4f7b5d9683965aabccfce0e991d4808cf6e044db9c27a65c04ba33d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U05:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U05:L03"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U05:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:05:04:SURDS-AND-EXACT-VALUES",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:05:04:GEOMETRIC-SEQUENCES-AND-SERIES",
       "UnitNumber": 5,
-      "UnitTitle": "Advanced Reasoning",
+      "UnitTitle": "Exponential Functions",
       "LessonNumber": 4,
-      "Title": "Surds and exact values — advanced reasoning",
-      "SortOrder": 44,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "5273fd92c5d94f308e9b01b89207920b3c0256a90eba7005d68a9e1151faff1a",
-      "Alignments": [],
+      "Title": "Geometric Sequences and Series",
+      "SortOrder": 28,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "b6a1cb03447b067d7e54556a305006f0cca42c724024fcd82a6e02a67eaafb34",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U05:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
       "OutcomeCodes": [],
       "ApplicableCourses": [
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
-      "FormalTargets": []
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U05:L04"
     },
     {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U05:L05",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:05:05:ADVANCED-FUNCTIONS",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:05:05:MODELING-DATA",
       "UnitNumber": 5,
-      "UnitTitle": "Advanced Reasoning",
+      "UnitTitle": "Exponential Functions",
       "LessonNumber": 5,
-      "Title": "Advanced functions",
-      "SortOrder": 45,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "78fef42d428d4afc3efc21d61db5a270cc0fef796a1430209ba973d8e2dd2fa6",
+      "Title": "Modeling Data",
+      "SortOrder": 29,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "0163c74928fd2577fd7a20ce4f35ec9ef0c9e4b5e3c5a8745369db2de496dc9b",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:05:05",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U05:L05",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -1041,22 +899,292 @@
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:05:05"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U05:L05"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U05:L06",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:05:06:SYSTEMS-AND-INEQUALITIES",
-      "UnitNumber": 5,
-      "UnitTitle": "Advanced Reasoning",
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U06:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:06:01:LOGARITHMS-AND-LOGARITHMIC-FUNCTIONS",
+      "UnitNumber": 6,
+      "UnitTitle": "Logarithmic Functions",
+      "LessonNumber": 1,
+      "Title": "Logarithms and Logarithmic Functions",
+      "SortOrder": 30,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "a8b83414c7e6e202a12329407537c5a2b0b9ba64459e40e40a6c0f6f2f1d59c5",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U06:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U06:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U06:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:06:02:PROPERTIES-OF-LOGARITHMS",
+      "UnitNumber": 6,
+      "UnitTitle": "Logarithmic Functions",
+      "LessonNumber": 2,
+      "Title": "Properties of Logarithms",
+      "SortOrder": 31,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "23ba2bec904be4cb17834cdb1751bf0443c76c68bf5ac5e2ee87a3aed5547b2b",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U06:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U06:L02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U06:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:06:03:COMMON-LOGARITHMS",
+      "UnitNumber": 6,
+      "UnitTitle": "Logarithmic Functions",
+      "LessonNumber": 3,
+      "Title": "Common Logarithms",
+      "SortOrder": 32,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "e0a6a9af9fb3f9aa2ec2ccf72e69ae06efe535c532dc319782e271f5215ceef8",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U06:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U06:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U06:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:06:04:NATURAL-LOGARITHMS",
+      "UnitNumber": 6,
+      "UnitTitle": "Logarithmic Functions",
+      "LessonNumber": 4,
+      "Title": "Natural Logarithms",
+      "SortOrder": 33,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "32039929173f2e4a514fa55ae8154a00074622e7cd29d261191ed745c2863616",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U06:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U06:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U06:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:06:05:USING-EXPONENTIAL-AND-LOGARITHMIC-FUNCTIONS",
+      "UnitNumber": 6,
+      "UnitTitle": "Logarithmic Functions",
+      "LessonNumber": 5,
+      "Title": "Using Exponential and Logarithmic Functions",
+      "SortOrder": 34,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "23e1b8d84dbdbffd92d7b16a0b291b67068263a17da983eaa6a004752947511f",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U06:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U06:L05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U07:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:07:01:MULTIPLYING-AND-DIVIDING-RATIONAL-EXPRESSIONS",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Functions",
+      "LessonNumber": 1,
+      "Title": "Multiplying and Dividing Rational Expressions",
+      "SortOrder": 35,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "ce52103d299e41b61d7aa96e2419e3a18cbf1bf879f2e268febf61eec23329f5",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U07:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U07:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U07:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:07:02:ADDING-AND-SUBTRACTING-RATIONAL-EXPRESSIONS",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Functions",
+      "LessonNumber": 2,
+      "Title": "Adding and Subtracting Rational Expressions",
+      "SortOrder": 36,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "2e6eb2669bdcb9c03679904833be223f835b7814a06b55d0edf6dd5e23c8854e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U07:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U07:L02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U07:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:07:03:GRAPHING-RECIPROCAL-FUNCTIONS",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Functions",
+      "LessonNumber": 3,
+      "Title": "Graphing Reciprocal Functions",
+      "SortOrder": 37,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "7aef3efd5156f2288786a75742918433733ffa1fd797daa71b3c3f4eed46df34",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U07:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U07:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U07:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:07:04:GRAPHING-RATIONAL-FUNCTIONS",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Functions",
+      "LessonNumber": 4,
+      "Title": "Graphing Rational Functions",
+      "SortOrder": 38,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "a971b493e88af8d29eec2d3fd40052ff148174eff8582ec5bc1cf2507e796349",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U07:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U07:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U07:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:07:05:VARIATION",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Functions",
+      "LessonNumber": 5,
+      "Title": "Variation",
+      "SortOrder": 39,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "082c3d75f36c851421468fe5205077523ddd42f92cb26b2e9f021440a335ab93",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U07:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U07:L05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U07:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:07:06:SOLVING-RATIONAL-EQUATIONS-AND-INEQUALITIES",
+      "UnitNumber": 7,
+      "UnitTitle": "Rational Functions",
       "LessonNumber": 6,
-      "Title": "Systems and inequalities — advanced reasoning",
-      "SortOrder": 46,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "0c836218b57d53f48149ddf473afd5d1e56446662ef10c2b4fc51a5c9862e16f",
+      "Title": "Solving Rational Equations and Inequalities",
+      "SortOrder": 40,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "9a5cc428210252df6dc31e9b3d0e37c5188e2ed0ead2d35543feca71fdd55497",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:05:06",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U07:L06",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -1068,22 +1196,22 @@
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:05:06"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U07:L06"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U05:L07",
-      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:05:07:EXTENDED-TRIGONOMETRIC-MODELLING",
-      "UnitNumber": 5,
-      "UnitTitle": "Advanced Reasoning",
-      "LessonNumber": 7,
-      "Title": "Extended trigonometric modelling — advanced reasoning",
-      "SortOrder": 47,
-      "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "5fd1f94467cb3f763a4fa4b92281ef62b211f4a8004734a8e91761dd842e380c",
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U08:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:08:01:RANDOM-SAMPLING",
+      "UnitNumber": 8,
+      "UnitTitle": "Inferential Statistics",
+      "LessonNumber": 1,
+      "Title": "Random Sampling",
+      "SortOrder": 41,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "8849313c641ee4b38de2e61452c9664eaabb73c4631a4d2793423e9d932e8afc",
       "Alignments": [
         {
           "Role": "Addressing",
-          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:05:07",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U08:L01",
           "ReferenceKind": "OfficialReference",
           "ResolutionKind": "ExactAcceptedReference",
           "OutcomeCode": null,
@@ -1095,7 +1223,304 @@
         "UAE-G10-ADVANCED-T1-OGL-V1"
       ],
       "FormalTargets": [],
-      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:T1:EDU:05:07"
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U08:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U08:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:08:02:USING-STATISTICAL-EXPERIMENTS",
+      "UnitNumber": 8,
+      "UnitTitle": "Inferential Statistics",
+      "LessonNumber": 2,
+      "Title": "Using Statistical Experiments",
+      "SortOrder": 42,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "509c0e7d1ef7a4da7a61c63658e7b5561a2c8def65c330b6681e3f43da916a09",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U08:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U08:L02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U08:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:08:03:ANALYZING-POPULATION-DATA",
+      "UnitNumber": 8,
+      "UnitTitle": "Inferential Statistics",
+      "LessonNumber": 3,
+      "Title": "Analyzing Population Data",
+      "SortOrder": 43,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "00ac8dede2a2989b469ad707b4c816fad349fe19672314b0ac0e1420a0cd0666",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U08:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U08:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U08:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:08:04:NORMAL-DISTRIBUTIONS",
+      "UnitNumber": 8,
+      "UnitTitle": "Inferential Statistics",
+      "LessonNumber": 4,
+      "Title": "Normal Distributions",
+      "SortOrder": 44,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "513fe7aedc26841d77b268891f8b9582ea91f22e8b938ea5278f60788cede457",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U08:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U08:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U08:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:08:05:ESTIMATING-POPULATION-PARAMETERS",
+      "UnitNumber": 8,
+      "UnitTitle": "Inferential Statistics",
+      "LessonNumber": 5,
+      "Title": "Estimating Population Parameters",
+      "SortOrder": 45,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "cc94240689631eb2719b472801118630d69bb98996fe4a9c94a74f41ec21b502",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U08:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U08:L05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U09:L01",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:09:01:ANGLES-AND-ANGLE-MEASURE",
+      "UnitNumber": 9,
+      "UnitTitle": "Trigonometric Functions",
+      "LessonNumber": 1,
+      "Title": "Angles and Angle Measure",
+      "SortOrder": 46,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "e4b6ee17c15f34b1b33f26ca29193dd1ed63f29e1fc32fb75bfc74906caa8bfb",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U09:L01",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U09:L01"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U09:L02",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:09:02:TRIGONOMETRIC-FUNCTIONS-OF-GENERAL-ANGLES",
+      "UnitNumber": 9,
+      "UnitTitle": "Trigonometric Functions",
+      "LessonNumber": 2,
+      "Title": "Trigonometric Functions of General Angles",
+      "SortOrder": 47,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "319ea407197cb408d2eb602f0dec704008bd53e5f775f3e7f5a5bb62b224eb85",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U09:L02",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U09:L02"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U09:L03",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:09:03:CIRCULAR-AND-PERIODIC-FUNCTIONS",
+      "UnitNumber": 9,
+      "UnitTitle": "Trigonometric Functions",
+      "LessonNumber": 3,
+      "Title": "Circular and Periodic Functions",
+      "SortOrder": 48,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "9a9e89673ea775ef0a433962ffdaf73fc83ec6c619dcf87d14e8cc907a9bf7ba",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U09:L03",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U09:L03"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U09:L04",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:09:04:GRAPHING-SINE-AND-COSINE-FUNCTIONS",
+      "UnitNumber": 9,
+      "UnitTitle": "Trigonometric Functions",
+      "LessonNumber": 4,
+      "Title": "Graphing Sine and Cosine Functions",
+      "SortOrder": 49,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "ad31bcf7c550f80aa8201f02f0d101a52ecede18afca6b669a941a5ab1fae60d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U09:L04",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U09:L04"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U09:L05",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:09:05:GRAPHING-OTHER-TRIGONOMETRIC-FUNCTIONS",
+      "UnitNumber": 9,
+      "UnitTitle": "Trigonometric Functions",
+      "LessonNumber": 5,
+      "Title": "Graphing Other Trigonometric Functions",
+      "SortOrder": 50,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "ce39e65294a2108ab7a234adf32575c1ed5edc0dee02a1634a4b47649f506ece",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U09:L05",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U09:L05"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U09:L06",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:09:06:TRANSLATIONS-OF-TRIGONOMETRIC-GRAPHS",
+      "UnitNumber": 9,
+      "UnitTitle": "Trigonometric Functions",
+      "LessonNumber": 6,
+      "Title": "Translations of Trigonometric Graphs",
+      "SortOrder": 51,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "ee30e763f248cc41b45fc9fd45d09cec0ab6e6fd6f142e27b8c84a34d229c954",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U09:L06",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U09:L06"
+    },
+    {
+      "SourceLessonCode": "EDU:UAE-MOE-MATH:L10:ADVANCED:U09:L07",
+      "LessonCode": "PED:UAE-MOE-MATH:L10:ADVANCED:09:07:INVERSE-TRIGONOMETRIC-FUNCTIONS",
+      "UnitNumber": 9,
+      "UnitTitle": "Trigonometric Functions",
+      "LessonNumber": 7,
+      "Title": "Inverse Trigonometric Functions",
+      "SortOrder": 52,
+      "SourceUrl": "https://minhaji.moe.gov.ae/",
+      "SemanticSha256": "7abc87aee14ba168877a9730fa3019cfb89d6d6b359da45815bee9f1534a078c",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U09:L07",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": null,
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [],
+      "ApplicableCourses": [
+        "UAE-G10-ADVANCED-T1-OGL-V1"
+      ],
+      "FormalTargets": [],
+      "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G10:ADVANCED:ANNUAL:U09:L07"
     }
   ]
 }

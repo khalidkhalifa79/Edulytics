@@ -29,7 +29,7 @@
   "SemanticGraphSha256": "89ddd5ee9861ce10c4b4f6599ac8b26457c55415031769542199acc692fdea3c",
   "AcquisitionDiagnostics": {
     "UnitCount": 5,
-    "LessonCount": 18,
+    "LessonCount": 14,
     "OfficialStandardCount": 0,
     "AddressingCoverageCount": 0,
     "FormalMappingCount": 0,
@@ -53,7 +53,7 @@
       "UnitCode": "UAE-G1-COMMON-T1-OGL-V1:U02",
       "SortOrder": 2,
       "Title": "Patterns and Relations",
-      "LessonCount": 3,
+      "LessonCount": 2,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "432e34eba9ac14e7d989bd35f281989ffac0df97d0cf712f1d1b1a16b3c9fe94"
     },
@@ -62,7 +62,7 @@
       "UnitCode": "UAE-G1-COMMON-T1-OGL-V1:U03",
       "SortOrder": 3,
       "Title": "Measurement",
-      "LessonCount": 4,
+      "LessonCount": 2,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "decf0cf5b02ba6aaaff0d5622957b232cc5a4288ae4ce9a959737ca8b1f5cf8c"
     },
@@ -71,7 +71,7 @@
       "UnitCode": "UAE-G1-COMMON-T1-OGL-V1:U04",
       "SortOrder": 4,
       "Title": "Geometry",
-      "LessonCount": 3,
+      "LessonCount": 2,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "4b75dbf5721d6d58fbaaa26f757bae4708795b444774ea1e964a3a62784b2e6d"
     },
@@ -249,30 +249,13 @@
       "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G1:COMMON:T1:EDU:01:06"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L1:COMMON:U02:L01",
-      "LessonCode": "PED:UAE-MOE-MATH:L1:COMMON:02:01:REPEATING-PATTERNS",
-      "UnitNumber": 2,
-      "UnitTitle": "Patterns and Relations",
-      "LessonNumber": 1,
-      "Title": "Repeating patterns",
-      "SortOrder": 7,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "94050e45df1ce1a8e549dbb3f11a0d728b22f9927b0875a23ae4270c2d751441",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G1-COMMON-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L1:COMMON:U02:L02",
       "LessonCode": "PED:UAE-MOE-MATH:L1:COMMON:02:02:MISSING-NUMBER-STATEMENTS",
       "UnitNumber": 2,
       "UnitTitle": "Patterns and Relations",
       "LessonNumber": 2,
       "Title": "Missing-number statements",
-      "SortOrder": 8,
+      "SortOrder": 7,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "73e3eb923b2c5416f8466fc01cdd86d0ef006716a5371c7bc721811a473143c1",
       "Alignments": [
@@ -299,7 +282,7 @@
       "UnitTitle": "Patterns and Relations",
       "LessonNumber": 3,
       "Title": "Equality and balance",
-      "SortOrder": 9,
+      "SortOrder": 8,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "9728ed4a644a1bd0fc278f67b167d0e968055636eeb2e5be214b887cc21354e8",
       "Alignments": [
@@ -326,7 +309,7 @@
       "UnitTitle": "Measurement",
       "LessonNumber": 1,
       "Title": "Comparing length",
-      "SortOrder": 10,
+      "SortOrder": 9,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "edb4381b72dd80c98f6d5bc9989ea890fcf124d9f10b2d80a3b6a0e0d8b1144e",
       "Alignments": [
@@ -347,30 +330,13 @@
       "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G1:COMMON:T1:EDU:03:01"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L1:COMMON:U03:L02",
-      "LessonCode": "PED:UAE-MOE-MATH:L1:COMMON:03:02:MASS-AND-CAPACITY",
-      "UnitNumber": 3,
-      "UnitTitle": "Measurement",
-      "LessonNumber": 2,
-      "Title": "Mass and capacity",
-      "SortOrder": 11,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "7715da38b9ef3e5ff8b882cb0b7d73c30cd298f5d92902073eac7e162c714e05",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G1-COMMON-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L1:COMMON:U03:L03",
       "LessonCode": "PED:UAE-MOE-MATH:L1:COMMON:03:03:TIME-TO-THE-HOUR-AND-HALF-HOUR",
       "UnitNumber": 3,
       "UnitTitle": "Measurement",
       "LessonNumber": 3,
       "Title": "Time to the hour and half hour",
-      "SortOrder": 12,
+      "SortOrder": 10,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "0e4ae1fb58b6134e98e51906699ec957ca26f413bb2071765945c673611eeced",
       "Alignments": [
@@ -391,30 +357,13 @@
       "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G1:COMMON:T1:EDU:03:03"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L1:COMMON:U03:L04",
-      "LessonCode": "PED:UAE-MOE-MATH:L1:COMMON:03:04:COINS-AND-SIMPLE-MONEY",
-      "UnitNumber": 3,
-      "UnitTitle": "Measurement",
-      "LessonNumber": 4,
-      "Title": "Coins and simple money",
-      "SortOrder": 13,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "43ca31eca47d8ff9e8a1377abb5850d049ac2dee6201217fd0980cdc230b7cb1",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G1-COMMON-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L1:COMMON:U04:L01",
       "LessonCode": "PED:UAE-MOE-MATH:L1:COMMON:04:01:PROPERTIES-OF-2D-SHAPES",
       "UnitNumber": 4,
       "UnitTitle": "Geometry",
       "LessonNumber": 1,
       "Title": "Properties of 2D shapes",
-      "SortOrder": 14,
+      "SortOrder": 11,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "f00931f69d134cfc0618e801a97849b2bdc275a8ea682dc889c66b9b8c3c2831",
       "Alignments": [
@@ -441,7 +390,7 @@
       "UnitTitle": "Geometry",
       "LessonNumber": 2,
       "Title": "Properties of 3D shapes",
-      "SortOrder": 15,
+      "SortOrder": 12,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "ee4de09a9b717cdb27e86999adf36938b3ce73d83ccdf53fb34b4c1caf803d18",
       "Alignments": [
@@ -462,30 +411,13 @@
       "OfficialReferenceCode": "UAE:REF:TEXTBOOK:G1:COMMON:T1:EDU:04:02"
     },
     {
-      "SourceLessonCode": "EDU:UAE-MOE-MATH:L1:COMMON:U04:L03",
-      "LessonCode": "PED:UAE-MOE-MATH:L1:COMMON:04:03:POSITION-AND-DIRECTION",
-      "UnitNumber": 4,
-      "UnitTitle": "Geometry",
-      "LessonNumber": 3,
-      "Title": "Position and direction",
-      "SortOrder": 16,
-      "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
-      "SemanticSha256": "7977368b817c25a33e9b4ebebc765fbb047f8e7a9a45be848a8b11d19f63dd3e",
-      "Alignments": [],
-      "OutcomeCodes": [],
-      "ApplicableCourses": [
-        "UAE-G1-COMMON-T1-OGL-V1"
-      ],
-      "FormalTargets": []
-    },
-    {
       "SourceLessonCode": "EDU:UAE-MOE-MATH:L1:COMMON:U05:L01",
       "LessonCode": "PED:UAE-MOE-MATH:L1:COMMON:05:01:SORTING-DATA",
       "UnitNumber": 5,
       "UnitTitle": "Data",
       "LessonNumber": 1,
       "Title": "Sorting data",
-      "SortOrder": 17,
+      "SortOrder": 13,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "2f1e75471a9f6039490a19926fd3e756868ed586e376fc7a0ca6662544c3d994",
       "Alignments": [
@@ -512,7 +444,7 @@
       "UnitTitle": "Data",
       "LessonNumber": 2,
       "Title": "Pictograms and simple tables",
-      "SortOrder": 18,
+      "SortOrder": 14,
       "SourceUrl": "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
       "SemanticSha256": "787f09d0f6e8e2448ddb0ebbd5e23a0a4c4d58c874446640bc5651691b30c565",
       "Alignments": [
