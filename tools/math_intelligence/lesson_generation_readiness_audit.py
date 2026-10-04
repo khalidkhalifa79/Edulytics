@@ -71,10 +71,11 @@ def load_approved_mappings() -> tuple[dict[str, dict[str, Any]], list[str]]:
         for row in doc.get("mappings") or []
         if isinstance(row, dict)
     }
+    covered_by_non_supporting_mapping = explicit_codes | set(official)
     errors.extend(
         f"Supporting Practice target rule missing for {row['lessonCode']}: {row['title']}"
         for row in unmatched
-        if row["lessonCode"] not in explicit_codes
+        if row["lessonCode"] not in covered_by_non_supporting_mapping
     )
     return result, errors
 
@@ -141,6 +142,32 @@ def capability_for_mapping(
         return False, False, False, False, [
             "Mapped SkillIds are absent from the registry: " + ", ".join(sorted(missing))
         ]
+
+    mapped_families = clean_list(mapping.get("allowedQuestionFamilies"))
+    if mapped_families:
+        family_errors: list[str] = []
+        for family_id in mapped_families:
+            family = families.get(family_id)
+            if family is None:
+                family_errors.append(f"Mapped family {family_id} is missing from the registry.")
+                continue
+            family_skill = str(family.get("skillId") or "").strip()
+            if family_skill not in primary_skills:
+                family_errors.append(
+                    f"Mapped family {family_id} belongs to {family_skill!r}, not an approved primary SkillId."
+                )
+            if family.get("lessonPracticeRouting") is not True:
+                family_errors.append(
+                    f"Mapped family {family_id} is not enabled for lesson Practice routing."
+                )
+            if not str(family.get("verificationPolicy") or "").strip():
+                family_errors.append(
+                    f"Mapped family {family_id} has no verification policy."
+                )
+        if not family_errors:
+            return True, True, True, False, [
+                "Approved mapping declares exact lesson Practice families with valid routing and verification policies."
+            ]
 
     question_family_flags: list[bool] = []
     verified_flags: list[bool] = []
