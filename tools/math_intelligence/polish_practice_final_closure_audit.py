@@ -155,9 +155,9 @@ def audit() -> dict[str, Any]:
 
     summary = matrix.get("summary") or {}
     required_global = {
-        "lessonCount": 4453,
-        "practiceEligibleLessonCount": 4453,
-        "READY_VERIFIED": 4453,
+        "lessonCount": 5110,
+        "practiceEligibleLessonCount": 5110,
+        "READY_VERIFIED": 5110,
         "internalBlockerCount": 0,
     }
     for key, expected in required_global.items():
