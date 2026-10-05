@@ -28,6 +28,22 @@ def _is_reviewed_exact_pattern(pattern: re.Pattern[str]) -> bool:
     return raw.startswith("^") and raw.endswith("$")
 
 
+def _matches_reviewed_exact_code(
+    lesson_code: str,
+    rule: SupportingRule,
+) -> bool:
+    if rule.title_patterns:
+        return False
+    exact_patterns = [
+        pattern for pattern in rule.code_patterns
+        if _is_reviewed_exact_pattern(pattern)
+    ]
+    return bool(exact_patterns) and any(
+        pattern.fullmatch(lesson_code)
+        for pattern in exact_patterns
+    )
+
+
 def _matches_reviewed_exact_title(
     lesson_code: str,
     title: str,
@@ -114,21 +130,29 @@ def mapping_from_rule(
     match_mode: str,
 ) -> dict[str, Any]:
     source_type = (
-        "OfficialReviewedExactTitleRule"
-        if match_mode == "EXACT_TITLE"
+        "OfficialReviewedExactCodeRule"
+        if match_mode == "EXACT_CODE"
         else (
-            "OfficialReviewedUniqueTitleRule"
-            if match_mode == "UNIQUE_REVIEWED_TITLE"
-            else "OfficialReviewedCanonicalEvidence"
+            "OfficialReviewedExactTitleRule"
+            if match_mode == "EXACT_TITLE"
+            else (
+                "OfficialReviewedUniqueTitleRule"
+                if match_mode == "UNIQUE_REVIEWED_TITLE"
+                else "OfficialReviewedCanonicalEvidence"
+            )
         )
     )
     confidence = (
-        "ReviewedExactTitle"
-        if match_mode == "EXACT_TITLE"
+        "ReviewedExactCode"
+        if match_mode == "EXACT_CODE"
         else (
-            "ReviewedUniqueTitle"
-            if match_mode == "UNIQUE_REVIEWED_TITLE"
-            else "ReviewedCanonicalEvidence"
+            "ReviewedExactTitle"
+            if match_mode == "EXACT_TITLE"
+            else (
+                "ReviewedUniqueTitle"
+                if match_mode == "UNIQUE_REVIEWED_TITLE"
+                else "ReviewedCanonicalEvidence"
+            )
         )
     )
     return {
@@ -243,7 +267,20 @@ def load_reviewed_official_rule_mappings(
             outcomes = clean_list(
                 get_case(lesson, "OutcomeCodes", "outcomeCodes", default=[])
             )
-            if not outcomes:
+            official_reference = str(
+                get_case(
+                    lesson,
+                    "OfficialReferenceCode",
+                    "officialReferenceCode",
+                    default="",
+                )
+                or ""
+            ).strip()
+            is_verified_uae_reference = (
+                pack_code == "UAE-MOE-MATH"
+                and bool(official_reference)
+            )
+            if not outcomes and not is_verified_uae_reference:
                 continue
 
             if pack_code == "PL-NATIONAL-MATH":
@@ -266,6 +303,28 @@ def load_reviewed_official_rule_mappings(
                 get_case(translation, "Title", "title", default="")
                 or get_case(lesson, "Title", "title", default="")
             )
+
+            exact_code_candidates = [
+                rule
+                for rule in rules
+                if _matches_reviewed_exact_code(lesson_code, rule)
+            ]
+            if len(exact_code_candidates) > 1:
+                errors.append(
+                    "Official exact-code Practice rule collision for "
+                    f"{lesson_code}: "
+                    + ", ".join(rule.rule_id for rule in exact_code_candidates)
+                )
+                continue
+
+            if len(exact_code_candidates) == 1:
+                mappings[lesson_code] = mapping_from_rule(
+                    lesson_code,
+                    outcomes,
+                    exact_code_candidates[0],
+                    "EXACT_CODE",
+                )
+                continue
 
             exact_candidates = [
                 rule
@@ -303,10 +362,14 @@ def load_reviewed_official_rule_mappings(
                 )
                 continue
 
-            if (
-                pack_code == "CAMBRIDGE-INTL-MATH"
-                and any(code.startswith("CAM:REF:9709:") for code in outcomes)
-            ):
+            should_review_canonical_evidence = (
+                is_verified_uae_reference
+                or (
+                    pack_code == "CAMBRIDGE-INTL-MATH"
+                    and any(code.startswith("CAM:REF:9709:") for code in outcomes)
+                )
+            )
+            if should_review_canonical_evidence:
                 canonical_candidates = [
                     rule
                     for rule in rules
@@ -316,14 +379,6 @@ def load_reviewed_official_rule_mappings(
                         rule,
                     )
                 ]
-                if len(canonical_candidates) > 1:
-                    errors.append(
-                        "Cambridge 9709 canonical-evidence Practice rule collision for "
-                        f"{lesson_code}: {title!r} -> "
-                        + ", ".join(rule.rule_id for rule in canonical_candidates)
-                    )
-                    continue
-
                 if len(canonical_candidates) == 1:
                     mappings[lesson_code] = mapping_from_rule(
                         lesson_code,
@@ -333,7 +388,7 @@ def load_reviewed_official_rule_mappings(
                     )
                     continue
 
-            if all(
+            if outcomes and all(
                 resolution is not None
                 for resolution in resolved_outcomes
             ):
