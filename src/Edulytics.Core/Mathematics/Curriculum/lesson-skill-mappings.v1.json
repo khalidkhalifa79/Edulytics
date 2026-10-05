@@ -1391,27 +1391,27 @@
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6NPV-4:APPLY",
       "primarySkills": [
-        "measurement.scale.read_equal_intervals"
+        "supporting.number.place_value_rounding"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "Exact lesson title and corrected worked examples require reading equal scale intervals and pointer positions."
       ],
       "practiceReadiness": "READY_VERIFIED",
-      "practiceMechanic": "SCALE_READING",
+      "practiceMechanic": "ROUNDING",
       "allowedQuestionFamilies": [
-        "measurement.scale.equal_intervals.read_value"
+        "supporting.number.rounding"
       ]
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6NPV-4:BUILD",
       "primarySkills": [
-        "measurement.scale.read_equal_intervals"
+        "supporting.number.place_value_rounding"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R3 academic evidence review confirmed measurement.scale.read_equal_intervals as the exact primary mathematical target for this lesson.",
@@ -1419,9 +1419,9 @@
         "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
       ],
       "practiceReadiness": "READY_VERIFIED",
-      "practiceMechanic": "SCALE_READING",
+      "practiceMechanic": "ROUNDING",
       "allowedQuestionFamilies": [
-        "measurement.scale.equal_intervals.read_value"
+        "supporting.number.rounding"
       ]
     },
     {

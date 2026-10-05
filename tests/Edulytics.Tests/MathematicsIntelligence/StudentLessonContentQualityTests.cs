@@ -9,7 +9,7 @@ public sealed class StudentLessonContentQualityTests
         "PED:CAMBRIDGE-INTL-MATH:S6:6NPV-4:BUILD";
 
     [Fact]
-    public void ReadingScalesBuildLessonIsLearnerFacingAndTargetSpecific()
+    public void DecimalRoundingBuildLessonIsLearnerFacingAndTargetSpecific()
     {
         var lesson = MathematicsCanonicalLessonContentSeeder
             .LoadEmbeddedDocuments()
@@ -27,19 +27,19 @@ public sealed class StudentLessonContentQualityTests
                     StringComparison.OrdinalIgnoreCase));
 
         Assert.Contains(
-            "equal intervals",
+            "nearest target place value",
             english.Explanation,
             StringComparison.OrdinalIgnoreCase);
         Assert.Contains(
-            "60 − 20 = 40",
+            "4.36",
             english.WorkedExamples,
             StringComparison.Ordinal);
         Assert.Contains(
-            "40 ÷ 4 = 10",
+            "4.4",
             english.WorkedExamples,
             StringComparison.Ordinal);
         Assert.Contains(
-            "Count spaces",
+            "hundredths digit",
             english.KeyConceptsAndRules,
             StringComparison.OrdinalIgnoreCase);
 

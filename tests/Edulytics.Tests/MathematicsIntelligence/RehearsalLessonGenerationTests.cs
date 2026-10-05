@@ -169,7 +169,7 @@ public class RehearsalLessonGenerationTests
             .Where(x => x.lesson.OutcomeCodes.Count > 0 &&
                 IsRehearsalLesson(x.lesson.LessonCode))
             .ToArray();
-        Assert.Equal(49, lessons.Length);
+        Assert.Equal(57, lessons.Length);
         foreach (var (document, lesson) in lessons)
         {
             var mappedBody = JsonSerializer.Serialize(lesson.Translations);

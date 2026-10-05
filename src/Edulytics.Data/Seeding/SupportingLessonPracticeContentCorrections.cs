@@ -11,6 +11,9 @@ namespace Edulytics.Data.Seeding;
 public static class SupportingLessonPracticeContentCorrections
 {
     public const string CorrectionContentVersion =
+        "supporting-practice-remediation-v2";
+
+    private const string PriorCorrectionContentVersion =
         "supporting-practice-remediation-v1";
 
     public static bool IsTarget(
@@ -64,6 +67,10 @@ public static class SupportingLessonPracticeContentCorrections
              StringComparison.Ordinal) ||
          string.Equals(
              existingContentVersion,
+             PriorCorrectionContentVersion,
+             StringComparison.Ordinal) ||
+         string.Equals(
+             existingContentVersion,
              CorrectionContentVersion,
              StringComparison.Ordinal));
 
@@ -89,9 +96,11 @@ public static class SupportingLessonPracticeContentCorrections
 
             english.Explanation =
                 rule.Content.Concept + " " +
-                (lesson.OutcomeCodes.Count == 0
-                    ? "This Supporting lesson remains pedagogical content and does not create or imply an official curriculum OutcomeCode."
-                    : "This learner lesson has a reviewed official curriculum mapping; this Practice recipe does not create or alter that mapping.");
+                (PreservesReviewedRehearsalBody(document, lesson)
+                    ? "This reviewed learner lesson uses an exact Practice recipe without creating or altering curriculum mapping metadata."
+                    : lesson.OutcomeCodes.Count == 0
+                        ? "This Supporting lesson remains pedagogical content and does not create or imply an official curriculum OutcomeCode."
+                        : "This learner lesson has a reviewed official curriculum mapping; this Practice recipe does not create or alter that mapping.");
             english.KeyConceptsAndRules =
                 rule.Content.Concept;
             english.WorkedExamples =
