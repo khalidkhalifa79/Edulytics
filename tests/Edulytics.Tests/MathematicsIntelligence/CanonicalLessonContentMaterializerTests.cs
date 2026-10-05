@@ -84,7 +84,7 @@ public sealed class CanonicalLessonContentMaterializerTests
                     StringComparison.OrdinalIgnoreCase));
 
         Assert.Equal(
-            "supporting-practice-remediation-v1",
+            "supporting-practice-remediation-v2",
             CanonicalLessonContentMaterializer
                 .GetEffectiveContentVersion(
                     pair.document,

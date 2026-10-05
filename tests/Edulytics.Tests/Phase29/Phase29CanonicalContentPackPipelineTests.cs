@@ -482,7 +482,7 @@ public sealed class Phase29CanonicalContentPackPipelineTests
                     x.CultureCode == "en");
 
         Assert.Equal(
-            "supporting-practice-remediation-v1",
+            "supporting-practice-remediation-v2",
             repairedContent.ContentVersion);
 
         Assert.Contains(

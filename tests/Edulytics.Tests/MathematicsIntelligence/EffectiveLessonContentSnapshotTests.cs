@@ -60,7 +60,7 @@ public sealed class EffectiveLessonContentSnapshotTests
                 StringComparison.Ordinal));
 
         Assert.Equal(
-            "supporting-practice-remediation-v1",
+            "supporting-practice-remediation-v2",
             quantified.contentVersion);
 
         var root = FindRoot();
