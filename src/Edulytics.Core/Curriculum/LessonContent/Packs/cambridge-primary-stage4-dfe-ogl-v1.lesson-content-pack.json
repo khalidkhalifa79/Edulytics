@@ -25,133 +25,141 @@
   "PedagogicalSourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. No government logos or identified third-party copyright material is reproduced.",
   "Status": "Published",
   "ReviewedBy": "Edulytics Phase 29 deterministic Cambridge Primary source-policy review",
-  "ReviewEvidence": "Stage 4: 16 DfE ready-to-progress criteria, 32 supporting lessons, English academic bodies, zero unverified Cambridge formal mappings, source SHA256 c053da83bf59edeb97c92887c15cfb64555784d490d103678cd873758f9c0dbf.",
+  "ReviewEvidence": "Stage 4: 16 DfE ready-to-progress criteria, 32 supporting lessons, English academic bodies, zero unverified Cambridge formal mappings, source SHA256 c053da83bf59edeb97c92887c15cfb64555784d490d103678cd873758f9c0dbf. Previously unmapped legacy enrichment was replaced in-place with independently authored lessons aligned to verified current Cambridge identifiers; lesson identities were preserved.",
   "Lessons": [
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4F-1:BUILD",
       "TitleProvenance": "PedagogicalSource",
-      "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4F-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "TitleSourceReference": "Edulytics-authored replacement lesson reviewed against official Cambridge identifier 4Nf.02; official objective prose is not reproduced.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Nf.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
-      "SourceLocator": "4F-1",
+      "SourceLocator": "Official Cambridge identifier 4Nf.02; Fractions / 01",
       "SourceTitle": "Mathematics guidance: year 4",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "DfE-00113-2020 / June 2020",
       "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation; no government logos or identified third-party material is reused.",
       "SourceSha256": "c053da83bf59edeb97c92887c15cfb64555784d490d103678cd873758f9c0dbf",
-      "CanonicalBodySha256": "7688575d1c8ddb11532a419b59840ea1f1e12290cdca3c53666e41ecd0a34e7c",
+      "CanonicalBodySha256": "78738f495b91ec4fc44ea1ea1fbc85a6d4c31b8608d8c8e9be660008bda0c57f",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by OGL DfE guidance for the corresponding year. Cambridge official identifiers remain in the curriculum reference graph; this lesson does not claim an unverified formal Cambridge mapping.",
+      "AdaptationStatus": "Edulytics-authored replacement lesson aligned to verified official Cambridge identifier 4Nf.02. Learner-facing prose is independently authored; official Cambridge objective prose is not stored.",
       "Translations": [
         {
           "CultureCode": "en",
-          "Title": "Mixed numbers in the linear number system: Build the Idea",
-          "Explanation": "This Cambridge Primary Stage 4 supporting lesson develops the open DfE Year 4 ready-to-progress focus “Mixed numbers in the linear number system”. Fractions describe equal parts and numbers on a number line. Equivalent fractions preserve value even when numerator and denominator change together. Build the idea by representing it in more than one way and explaining why the representations agree. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here.",
-          "KeyConceptsAndRules": "Source focus: Mixed numbers in the linear number system. Fractions describe equal parts and numbers on a number line. Equivalent fractions preserve value even when numerator and denominator change together. Build the idea by representing it in more than one way and explaining why the representations agree. Always state what each number, unit, operation or geometric property represents before calculating.",
-          "WorkedExamples": "Example A: Represent a fraction with equal parts, locate it on a number line and explain the role of the numerator and denominator. Explain each step and name the mathematical relationship being used. Example B: Use equivalence or a common denominator only when it helps compare or calculate without changing the value. Compare two possible approaches and choose the clearer one.",
-          "StepByStepSolutions": "Step 1: Read the problem and identify the quantities or properties. Step 2: Represent the situation with numbers, a diagram, a number line, an equation or a labelled shape. Step 3: Apply the relevant rule while preserving place value, units and relationships. Step 4: Calculate carefully and write the result with its meaning. Step 5: Check using an inverse operation, estimation, an alternative representation or the stated geometric properties.",
-          "CommonMistakes": "Do not add denominators when adding fractions, and do not assume a larger denominator means a larger fraction. Compare the value represented by the whole fraction. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude.",
-          "QuickSummary": "Mixed numbers in the linear number system: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning."
+          "Title": "Fractions as division: Build the Idea",
+          "Explanation": "Fractions as division: Build the Idea develops fractions as division. Represent the quantities clearly, choose a method that matches the mathematical structure, and explain why each step is valid. Connect symbolic work to a diagram, graph, table or contextual interpretation when useful, and finish with an independent reasonableness check.",
+          "KeyConceptsAndRules": "Focus: fractions as division. Define the relevant quantities and relationships before calculating. Keep equivalent transformations explicit, use correct notation and units, and verify the result with a second representation, inverse relationship, boundary check or substitution whenever possible.",
+          "WorkedExamples": "Worked example: For 3/4, interpret the fraction as 3 divided by 4. Check the value using a diagram split into four equal parts. Explain the mathematical relationship before calculating, then verify that the result is consistent with the original conditions.",
+          "StepByStepSolutions": "Step 1: Identify the known information and the quantity to be found. Step 2: Choose an appropriate representation. Step 3: State the rule or relationship being used. Step 4: Carry out the calculation with intermediate reasoning visible. Step 5: Check the result independently. Step 6: State the conclusion with its mathematical meaning and units where required.",
+          "CommonMistakes": "Do not select a procedure from a keyword alone. For fractions as division, check that the conditions of the rule are satisfied, keep notation and units consistent, and test the final result against the original representation.",
+          "QuickSummary": "For fractions as division, represent the relationship accurately, apply the correct rule, calculate carefully and verify the result."
         }
       ]
     },
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4F-1:APPLY",
       "TitleProvenance": "PedagogicalSource",
-      "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4F-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "TitleSourceReference": "Edulytics-authored replacement lesson reviewed against official Cambridge identifier 4Nf.02; official objective prose is not reproduced.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Nf.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
-      "SourceLocator": "4F-1",
+      "SourceLocator": "Official Cambridge identifier 4Nf.02; Fractions / 02",
       "SourceTitle": "Mathematics guidance: year 4",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "DfE-00113-2020 / June 2020",
       "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation; no government logos or identified third-party material is reused.",
       "SourceSha256": "c053da83bf59edeb97c92887c15cfb64555784d490d103678cd873758f9c0dbf",
-      "CanonicalBodySha256": "f559f634e12aa28a98c3aeb22cf0544d22aaf1e522d17f518f85a00688e49c68",
+      "CanonicalBodySha256": "016e3a73aba5874b940597fd86fe9f06f8bb260cc32ad10e974a93fbdd00fed2",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by OGL DfE guidance for the corresponding year. Cambridge official identifiers remain in the curriculum reference graph; this lesson does not claim an unverified formal Cambridge mapping.",
+      "AdaptationStatus": "Edulytics-authored replacement lesson aligned to verified official Cambridge identifier 4Nf.02. Learner-facing prose is independently authored; official Cambridge objective prose is not stored.",
       "Translations": [
         {
           "CultureCode": "en",
-          "Title": "Mixed numbers in the linear number system: Reason and Apply",
-          "Explanation": "This Cambridge Primary Stage 4 supporting lesson develops the open DfE Year 4 ready-to-progress focus “Mixed numbers in the linear number system”. Fractions describe equal parts and numbers on a number line. Equivalent fractions preserve value even when numerator and denominator change together. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here.",
-          "KeyConceptsAndRules": "Source focus: Mixed numbers in the linear number system. Fractions describe equal parts and numbers on a number line. Equivalent fractions preserve value even when numerator and denominator change together. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. Always state what each number, unit, operation or geometric property represents before calculating.",
-          "WorkedExamples": "Example A: Represent a fraction with equal parts, locate it on a number line and explain the role of the numerator and denominator. Explain each step and name the mathematical relationship being used. Example B: Use equivalence or a common denominator only when it helps compare or calculate without changing the value. Compare two possible approaches and choose the clearer one.",
-          "StepByStepSolutions": "Step 1: Read the problem and identify the quantities or properties. Step 2: Represent the situation with numbers, a diagram, a number line, an equation or a labelled shape. Step 3: Apply the relevant rule while preserving place value, units and relationships. Step 4: Calculate carefully and write the result with its meaning. Step 5: Check using an inverse operation, estimation, an alternative representation or the stated geometric properties.",
-          "CommonMistakes": "Do not add denominators when adding fractions, and do not assume a larger denominator means a larger fraction. Compare the value represented by the whole fraction. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude.",
-          "QuickSummary": "Mixed numbers in the linear number system: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning."
+          "Title": "Fractions as division: Reason and Apply",
+          "Explanation": "Fractions as division: Reason and Apply develops fractions as division. Represent the quantities clearly, choose a method that matches the mathematical structure, and explain why each step is valid. Connect symbolic work to a diagram, graph, table or contextual interpretation when useful, and finish with an independent reasonableness check.",
+          "KeyConceptsAndRules": "Focus: fractions as division. Define the relevant quantities and relationships before calculating. Keep equivalent transformations explicit, use correct notation and units, and verify the result with a second representation, inverse relationship, boundary check or substitution whenever possible.",
+          "WorkedExamples": "Worked example: For 3/4, interpret the fraction as 3 divided by 4. Check the value using a diagram split into four equal parts. Explain the mathematical relationship before calculating, then verify that the result is consistent with the original conditions.",
+          "StepByStepSolutions": "Step 1: Identify the known information and the quantity to be found. Step 2: Choose an appropriate representation. Step 3: State the rule or relationship being used. Step 4: Carry out the calculation with intermediate reasoning visible. Step 5: Check the result independently. Step 6: State the conclusion with its mathematical meaning and units where required.",
+          "CommonMistakes": "Do not select a procedure from a keyword alone. For fractions as division, check that the conditions of the rule are satisfied, keep notation and units consistent, and test the final result against the original representation.",
+          "QuickSummary": "For fractions as division, represent the relationship accurately, apply the correct rule, calculate carefully and verify the result."
         }
       ]
     },
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4F-2:BUILD",
       "TitleProvenance": "PedagogicalSource",
-      "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4F-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "TitleSourceReference": "Edulytics-authored replacement lesson reviewed against official Cambridge identifier 4Nf.04; official objective prose is not reproduced.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Nf.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
-      "SourceLocator": "4F-2",
+      "SourceLocator": "Official Cambridge identifier 4Nf.04; Fractions / 03",
       "SourceTitle": "Mathematics guidance: year 4",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "DfE-00113-2020 / June 2020",
       "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation; no government logos or identified third-party material is reused.",
       "SourceSha256": "c053da83bf59edeb97c92887c15cfb64555784d490d103678cd873758f9c0dbf",
-      "CanonicalBodySha256": "9a33b35f7eec3021ed6f264e4731eed86f9232579b2a4930784bb0b2e8949f4d",
+      "CanonicalBodySha256": "d3ecc60ef56f9fb7c28f757deb31eda4a6593cdea74c3126778c87afc7002df3",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by OGL DfE guidance for the corresponding year. Cambridge official identifiers remain in the curriculum reference graph; this lesson does not claim an unverified formal Cambridge mapping.",
+      "AdaptationStatus": "Edulytics-authored replacement lesson aligned to verified official Cambridge identifier 4Nf.04. Learner-facing prose is independently authored; official Cambridge objective prose is not stored.",
       "Translations": [
         {
           "CultureCode": "en",
-          "Title": "Convert between mixed numbers and improper fractions: Build the Idea",
-          "Explanation": "This Cambridge Primary Stage 4 supporting lesson develops the open DfE Year 4 ready-to-progress focus “Convert between mixed numbers and improper fractions”. Fractions describe equal parts and numbers on a number line. Equivalent fractions preserve value even when numerator and denominator change together. Build the idea by representing it in more than one way and explaining why the representations agree. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here.",
-          "KeyConceptsAndRules": "Source focus: Convert between mixed numbers and improper fractions. Fractions describe equal parts and numbers on a number line. Equivalent fractions preserve value even when numerator and denominator change together. Build the idea by representing it in more than one way and explaining why the representations agree. Always state what each number, unit, operation or geometric property represents before calculating.",
-          "WorkedExamples": "Example A: Represent a fraction with equal parts, locate it on a number line and explain the role of the numerator and denominator. Explain each step and name the mathematical relationship being used. Example B: Use equivalence or a common denominator only when it helps compare or calculate without changing the value. Compare two possible approaches and choose the clearer one.",
-          "StepByStepSolutions": "Step 1: Read the problem and identify the quantities or properties. Step 2: Represent the situation with numbers, a diagram, a number line, an equation or a labelled shape. Step 3: Apply the relevant rule while preserving place value, units and relationships. Step 4: Calculate carefully and write the result with its meaning. Step 5: Check using an inverse operation, estimation, an alternative representation or the stated geometric properties.",
-          "CommonMistakes": "Do not add denominators when adding fractions, and do not assume a larger denominator means a larger fraction. Compare the value represented by the whole fraction. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude.",
-          "QuickSummary": "Convert between mixed numbers and improper fractions: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning."
+          "Title": "Equivalent proper fractions: Build the Idea",
+          "Explanation": "Equivalent proper fractions: Build the Idea develops equivalent proper fractions. Represent the quantities clearly, choose a method that matches the mathematical structure, and explain why each step is valid. Connect symbolic work to a diagram, graph, table or contextual interpretation when useful, and finish with an independent reasonableness check.",
+          "KeyConceptsAndRules": "Focus: equivalent proper fractions. Define the relevant quantities and relationships before calculating. Keep equivalent transformations explicit, use correct notation and units, and verify the result with a second representation, inverse relationship, boundary check or substitution whenever possible.",
+          "WorkedExamples": "Worked example: Show that 1/2 and 2/4 name the same amount by multiplying numerator and denominator by 2 and checking with a fraction model. Explain the mathematical relationship before calculating, then verify that the result is consistent with the original conditions.",
+          "StepByStepSolutions": "Step 1: Identify the known information and the quantity to be found. Step 2: Choose an appropriate representation. Step 3: State the rule or relationship being used. Step 4: Carry out the calculation with intermediate reasoning visible. Step 5: Check the result independently. Step 6: State the conclusion with its mathematical meaning and units where required.",
+          "CommonMistakes": "Do not select a procedure from a keyword alone. For equivalent proper fractions, check that the conditions of the rule are satisfied, keep notation and units consistent, and test the final result against the original representation.",
+          "QuickSummary": "For equivalent proper fractions, represent the relationship accurately, apply the correct rule, calculate carefully and verify the result."
         }
       ]
     },
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4F-2:APPLY",
       "TitleProvenance": "PedagogicalSource",
-      "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4F-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "TitleSourceReference": "Edulytics-authored replacement lesson reviewed against official Cambridge identifier 4Nf.04; official objective prose is not reproduced.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Nf.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
-      "SourceLocator": "4F-2",
+      "SourceLocator": "Official Cambridge identifier 4Nf.04; Fractions / 04",
       "SourceTitle": "Mathematics guidance: year 4",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "DfE-00113-2020 / June 2020",
       "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation; no government logos or identified third-party material is reused.",
       "SourceSha256": "c053da83bf59edeb97c92887c15cfb64555784d490d103678cd873758f9c0dbf",
-      "CanonicalBodySha256": "25de6af6726f4050ab698f6694d7ef497c7300eb46f1c62d5595d47700a92c88",
+      "CanonicalBodySha256": "57cc98ba3ef37416adc35d60761bf850815db12422f1e59856259f223a2e3abc",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by OGL DfE guidance for the corresponding year. Cambridge official identifiers remain in the curriculum reference graph; this lesson does not claim an unverified formal Cambridge mapping.",
+      "AdaptationStatus": "Edulytics-authored replacement lesson aligned to verified official Cambridge identifier 4Nf.04. Learner-facing prose is independently authored; official Cambridge objective prose is not stored.",
       "Translations": [
         {
           "CultureCode": "en",
-          "Title": "Convert between mixed numbers and improper fractions: Reason and Apply",
-          "Explanation": "This Cambridge Primary Stage 4 supporting lesson develops the open DfE Year 4 ready-to-progress focus “Convert between mixed numbers and improper fractions”. Fractions describe equal parts and numbers on a number line. Equivalent fractions preserve value even when numerator and denominator change together. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here.",
-          "KeyConceptsAndRules": "Source focus: Convert between mixed numbers and improper fractions. Fractions describe equal parts and numbers on a number line. Equivalent fractions preserve value even when numerator and denominator change together. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. Always state what each number, unit, operation or geometric property represents before calculating.",
-          "WorkedExamples": "Example A: Represent a fraction with equal parts, locate it on a number line and explain the role of the numerator and denominator. Explain each step and name the mathematical relationship being used. Example B: Use equivalence or a common denominator only when it helps compare or calculate without changing the value. Compare two possible approaches and choose the clearer one.",
-          "StepByStepSolutions": "Step 1: Read the problem and identify the quantities or properties. Step 2: Represent the situation with numbers, a diagram, a number line, an equation or a labelled shape. Step 3: Apply the relevant rule while preserving place value, units and relationships. Step 4: Calculate carefully and write the result with its meaning. Step 5: Check using an inverse operation, estimation, an alternative representation or the stated geometric properties.",
-          "CommonMistakes": "Do not add denominators when adding fractions, and do not assume a larger denominator means a larger fraction. Compare the value represented by the whole fraction. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude.",
-          "QuickSummary": "Convert between mixed numbers and improper fractions: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning."
+          "Title": "Equivalent proper fractions: Reason and Apply",
+          "Explanation": "Equivalent proper fractions: Reason and Apply develops equivalent proper fractions. Represent the quantities clearly, choose a method that matches the mathematical structure, and explain why each step is valid. Connect symbolic work to a diagram, graph, table or contextual interpretation when useful, and finish with an independent reasonableness check.",
+          "KeyConceptsAndRules": "Focus: equivalent proper fractions. Define the relevant quantities and relationships before calculating. Keep equivalent transformations explicit, use correct notation and units, and verify the result with a second representation, inverse relationship, boundary check or substitution whenever possible.",
+          "WorkedExamples": "Worked example: Show that 1/2 and 2/4 name the same amount by multiplying numerator and denominator by 2 and checking with a fraction model. Explain the mathematical relationship before calculating, then verify that the result is consistent with the original conditions.",
+          "StepByStepSolutions": "Step 1: Identify the known information and the quantity to be found. Step 2: Choose an appropriate representation. Step 3: State the rule or relationship being used. Step 4: Carry out the calculation with intermediate reasoning visible. Step 5: Check the result independently. Step 6: State the conclusion with its mathematical meaning and units where required.",
+          "CommonMistakes": "Do not select a procedure from a keyword alone. For equivalent proper fractions, check that the conditions of the rule are satisfied, keep notation and units consistent, and test the final result against the original representation.",
+          "QuickSummary": "For equivalent proper fractions, represent the relationship accurately, apply the correct rule, calculate carefully and verify the result."
         }
       ]
     },
@@ -159,7 +167,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4F-3:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4F-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Nf.05"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4F-3",
@@ -191,7 +201,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4F-3:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4F-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Nf.05"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4F-3",
@@ -223,7 +235,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4G-1:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4G-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Gp.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4G-1",
@@ -255,7 +269,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4G-1:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4G-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Gp.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4G-1",
@@ -287,7 +303,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4G-2:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4G-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Gg.02",
+        "CAM:OUT:0096:4Gg.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4G-2",
@@ -319,7 +338,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4G-2:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4G-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Gg.02",
+        "CAM:OUT:0096:4Gg.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4G-2",
@@ -351,7 +373,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4G-3:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4G-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Gg.07"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4G-3",
@@ -383,7 +407,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4G-3:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4G-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Gg.07"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4G-3",
@@ -415,7 +441,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4MD-1:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4MD-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Np.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4MD-1",
@@ -447,7 +475,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4MD-1:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4MD-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Np.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4MD-1",
@@ -479,7 +509,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4MD-2:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4MD-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Ni.05",
+        "CAM:OUT:0096:4Ni.06"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4MD-2",
@@ -511,7 +544,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4MD-2:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4MD-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Ni.05",
+        "CAM:OUT:0096:4Ni.06"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4MD-2",
@@ -543,7 +579,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4MD-3:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4MD-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Ni.05"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4MD-3",
@@ -575,7 +613,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4MD-3:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4MD-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Ni.05"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4MD-3",
@@ -607,7 +647,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4NF-1:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4NF-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Ni.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4NF-1",
@@ -639,7 +681,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4NF-1:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4NF-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Ni.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4NF-1",
@@ -671,7 +715,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4NF-2:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4NF-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Ni.06"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4NF-2",
@@ -703,7 +749,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4NF-2:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4NF-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Ni.06"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4NF-2",
@@ -735,7 +783,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4NF-3:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4NF-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Np.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4NF-3",
@@ -767,7 +817,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4NF-3:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4NF-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Np.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4NF-3",
@@ -799,7 +851,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4NPV-1:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4NPV-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Np.01",
+        "CAM:OUT:0096:4Np.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4NPV-1",
@@ -831,7 +886,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4NPV-1:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4NPV-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Np.01",
+        "CAM:OUT:0096:4Np.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4NPV-1",
@@ -863,7 +921,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4NPV-2:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4NPV-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Np.01",
+        "CAM:OUT:0096:4Np.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4NPV-2",
@@ -895,7 +956,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4NPV-2:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4NPV-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Np.01",
+        "CAM:OUT:0096:4Np.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4NPV-2",
@@ -927,7 +991,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4NPV-3:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4NPV-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Np.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4NPV-3",
@@ -959,7 +1025,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4NPV-3:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4NPV-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Np.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4NPV-3",
@@ -991,7 +1059,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4NPV-4:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4NPV-4; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Gg.09"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4NPV-4",
@@ -1023,7 +1093,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S4:4NPV-4:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 4 ready-to-progress criterion 4NPV-4; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Gg.09"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SourceLocator": "4NPV-4",

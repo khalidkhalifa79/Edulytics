@@ -720,17 +720,17 @@ public static class LessonPracticeContractRegistry
             byLesson.TryAdd(projected.LessonCode, projected);
         }
 
-        foreach (var projected in OfficialLessonPracticeRuleProjection.Load())
+        foreach (var projected in SupportingLessonPracticeRuleProjection.Load())
         {
-            // Official lessons may be promoted only by reviewed anchored
-            // exact-title rules. Broad keyword matching is never authoritative.
+            // Preserve already-reviewed exact-skill Practice contracts when a
+            // Cambridge lesson later gains an official outcome mapping.
             byLesson.TryAdd(projected.LessonCode, projected);
         }
 
-        foreach (var projected in SupportingLessonPracticeRuleProjection.Load())
+        foreach (var projected in OfficialLessonPracticeRuleProjection.Load())
         {
-            // Reviewed Supporting target rules fill only lessons that still do not
-            // have an explicit hand-authored or approved-mapping contract.
+            // Official exact-title rules fill only lessons that still do not have
+            // a more specific reviewed Practice contract.
             byLesson.TryAdd(projected.LessonCode, projected);
         }
 

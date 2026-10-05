@@ -368,7 +368,7 @@ public sealed class
     }
 
     [Fact]
-    public async Task StageOneRemainsExactWhileStagesTwoToSixSeedAsReviewedSupportingContent()
+    public async Task CambridgeSeederPersistsReviewedMappingsForEveryLearnerVisibleLesson()
     {
         await using var db = CreateDb();
 
@@ -391,45 +391,59 @@ public sealed class
             .ToArrayAsync();
 
         Assert.Equal(566, lessons.Length);
-        var stageOne = lessons.Where(x => x.LogicalLevelFrom == 1 && x.LogicalLevelTo == 1).ToArray();
-        var supporting = lessons.Where(x => x.LogicalLevelFrom >= 2 && x.LogicalLevelFrom <= 13).ToArray();
+
+        var stageOne = lessons
+            .Where(x => x.LogicalLevelFrom == 1 && x.LogicalLevelTo == 1)
+            .ToArray();
         Assert.Equal(27, stageOne.Length);
-        Assert.Equal(539, supporting.Length);
         Assert.All(stageOne, x => Assert.Equal("Cambridge Primary Stage 1", x.NativeLevel));
 
-        var stageOneIds = stageOne.Select(x => x.Id).ToArray();
-        var non9709SupportingIds = supporting
-            .Where(x => x.LogicalLevelFrom <= 11)
-            .Select(x => x.Id)
+        var mappingRows = await (
+            from mapping in db.CurriculumPedagogicalLessonOutcomes
+            join node in db.CurriculumPackContentNodes on mapping.OutcomeNodeId equals node.Id
+            where mapping.FrameworkVersionId == versionId
+            select new
+            {
+                mapping.PedagogicalLessonId,
+                node.Code
+            }).ToArrayAsync();
+
+        Assert.Equal(962, mappingRows.Length);
+
+        var mappedLessonIds = mappingRows
+            .Select(x => x.PedagogicalLessonId)
+            .Distinct()
+            .ToHashSet();
+
+        Assert.Equal(566, mappedLessonIds.Count);
+
+        var supporting = lessons
+            .Where(x => !mappedLessonIds.Contains(x.Id))
             .ToArray();
-        var advanced9709Ids = supporting
-            .Where(x => x.LogicalLevelFrom is 12 or 13)
-            .Select(x => x.Id)
+
+        Assert.Empty(supporting);
+
+        var stageOneCodes = mappingRows
+            .Where(x => stageOne.Any(lesson => lesson.Id == x.PedagogicalLessonId))
+            .Select(x => x.Code)
             .ToArray();
+
+        Assert.Equal(36, stageOneCodes.Length);
+        Assert.True(ExpectedStageOneCodes.SetEquals(stageOneCodes));
+        Assert.DoesNotContain(
+            stageOneCodes,
+            x => x.StartsWith("TWM.", StringComparison.Ordinal));
+
+        var learnerVisibleMapped = lessons
+            .Where(x => mappedLessonIds.Contains(x.Id))
+            .ToArray();
+
+        Assert.Equal(566, learnerVisibleMapped.Length);
+        Assert.DoesNotContain(
+            learnerVisibleMapped,
+            lesson => !mappedLessonIds.Contains(lesson.Id));
+
         var allLessonIds = lessons.Select(x => x.Id).ToArray();
-
-        var mappings = await (
-            from mapping in db.CurriculumPedagogicalLessonOutcomes
-            join node in db.CurriculumPackContentNodes on mapping.OutcomeNodeId equals node.Id
-            where mapping.FrameworkVersionId == versionId &&
-                  stageOneIds.Contains(mapping.PedagogicalLessonId)
-            select node.Code).ToArrayAsync();
-
-        Assert.Equal(36, mappings.Length);
-        Assert.True(ExpectedStageOneCodes.SetEquals(mappings));
-        Assert.DoesNotContain(mappings, x => x.StartsWith("TWM.", StringComparison.Ordinal));
-        Assert.False(
-            await db.CurriculumPedagogicalLessonOutcomes.AnyAsync(
-                x => x.FrameworkVersionId == versionId && non9709SupportingIds.Contains(x.PedagogicalLessonId)));
-
-        var advancedMappings = await (
-            from mapping in db.CurriculumPedagogicalLessonOutcomes
-            join node in db.CurriculumPackContentNodes on mapping.OutcomeNodeId equals node.Id
-            where mapping.FrameworkVersionId == versionId &&
-                  advanced9709Ids.Contains(mapping.PedagogicalLessonId)
-            select node.Code).ToArrayAsync();
-        Assert.Equal(49, advancedMappings.Length);
-        Assert.All(advancedMappings, code => Assert.StartsWith("CAM:REF:9709:", code, StringComparison.Ordinal));
 
         Assert.Equal(
             566,

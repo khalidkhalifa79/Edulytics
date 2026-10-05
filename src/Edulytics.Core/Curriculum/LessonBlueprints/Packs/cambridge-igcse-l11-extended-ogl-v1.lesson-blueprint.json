@@ -17,7 +17,7 @@
   "SourceLicense": "Open Government Licence v3.0",
   "RequiredDigitalAttribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
   "SourceSelectionReason": "The official curriculum source remains the academic authority. Edulytics uses open DfE Mathematics material only as lawful pedagogical scaffolding for independently authored lesson explanations where official copyrighted or source-linked prose is not reproduced.",
-  "SourceSelectionEvidence": "This scope contains 70 Edulytics-authored supporting lessons across 13 units. No formal outcome mapping is claimed without explicit source evidence; every formal OutcomeCodes collection is empty.",
+  "SourceSelectionEvidence": "Official Cambridge identifiers remain reference-only. Formal mappings in this blueprint were source-audited against the current Cambridge framework/syllabus; learner-facing pedagogy remains independently authored from lawful open sources and Cambridge objective prose is not reproduced.",
   "SourceEvidenceUrls": [
     "https://www.cambridgeinternational.org/Images/662466-2025-2027-syllabus.pdf",
     "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
@@ -28,13 +28,13 @@
   "AcquisitionDiagnostics": {
     "UnitCount": 13,
     "LessonCount": 70,
-    "OfficialStandardCount": 0,
-    "AddressingCoverageCount": 0,
-    "FormalMappingCount": 0,
-    "LessonsWithoutNumberedGradeReferenceAnyRole": 70,
-    "LessonsWithoutNumberedAddressingStandard": 70,
-    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 70,
-    "MultiStandardLessons": 0
+    "OfficialStandardCount": 118,
+    "AddressingCoverageCount": 118,
+    "FormalMappingCount": 151,
+    "LessonsWithoutNumberedGradeReferenceAnyRole": 0,
+    "LessonsWithoutNumberedAddressingStandard": 0,
+    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 0,
+    "MultiStandardLessons": 43
   },
   "Units": [
     {
@@ -166,8 +166,19 @@
       "SortOrder": 1,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "acd836c344df9c981828178e42e5d387a941d5eba962139d9fb9283a1858ced7",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.6",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E1.6"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -183,8 +194,28 @@
       "SortOrder": 2,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "55d1e2bcef872af6db15dfd04a3fb7f1422f21d424a206ccf3f5ad6e0677a211",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.4.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.4.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.4.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.4.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E1.4.1",
+        "CAM:OUT:0580:E1.4.2"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -200,8 +231,55 @@
       "SortOrder": 3,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "30be6b5349978650cfd640dfd725a2a1b8a916a554146a8b4863724422acef33",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.13.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.13.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.13.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.13.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.13.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.13.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.13.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.13.4",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.13.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.13.5",
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E1.13.1",
+        "CAM:OUT:0580:E1.13.2",
+        "CAM:OUT:0580:E1.13.3",
+        "CAM:OUT:0580:E1.13.4",
+        "CAM:OUT:0580:E1.13.5"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -217,8 +295,19 @@
       "SortOrder": 4,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "09dbfab060203e7dfc57e39fbaf12b08a29000a213c9f46b836653fe2dfa8617",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.11",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.11",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E1.11"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -234,8 +323,37 @@
       "SortOrder": 5,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "34a57afda66f9e607c18ebd3ed2a1267802317555461c8f0be9e49268c5590dd",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.8.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.8.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.8.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.8.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.8.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.8.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E1.8.1",
+        "CAM:OUT:0580:E1.8.2",
+        "CAM:OUT:0580:E1.8.3"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -251,8 +369,55 @@
       "SortOrder": 6,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "a0ad06c59ef62b821994cfd482f2ad9412ffcfd7b2d6f272046298785dcaba48",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.9.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.9.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.9.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.9.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.9.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.9.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.10.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.10.1",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.10.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.10.2",
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E1.9.1",
+        "CAM:OUT:0580:E1.9.2",
+        "CAM:OUT:0580:E1.9.3",
+        "CAM:OUT:0580:E1.10.1",
+        "CAM:OUT:0580:E1.10.2"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -268,8 +433,28 @@
       "SortOrder": 7,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "eaf797dd83696f49016d7e6c2f6386b1ee42d3e53d3dd7a1bea2c53170e03ada",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.12.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.12.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.12.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.12.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E1.12.1",
+        "CAM:OUT:0580:E1.12.3"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -285,8 +470,37 @@
       "SortOrder": 8,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "3f4b9e5bbbb9fc51ffe5623cecc02b2715562ccb4b36657b05097110113c471c",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.12.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.12.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.16.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.16.1",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.16.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.16.2",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E1.12.2",
+        "CAM:OUT:0580:E1.16.1",
+        "CAM:OUT:0580:E1.16.2"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -302,8 +516,73 @@
       "SortOrder": 9,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "47dba69d7b1deceb8b6abbbab3b0c848b097eb22ee5626ddbdd30b1c80685e3c",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.2.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.2.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.2.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.2.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.2.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.2.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.2.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.2.4",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.2.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.2.5",
+          "SortOrder": 5
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.3.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.3.1",
+          "SortOrder": 6
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.3.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.3.2",
+          "SortOrder": 7
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E2.2.1",
+        "CAM:OUT:0580:E2.2.2",
+        "CAM:OUT:0580:E2.2.3",
+        "CAM:OUT:0580:E2.2.4",
+        "CAM:OUT:0580:E2.2.5",
+        "CAM:OUT:0580:E2.3.1",
+        "CAM:OUT:0580:E2.3.2"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -319,8 +598,37 @@
       "SortOrder": 10,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "4e9d10658e34fb0b51ac24dcd1a368177521e9d00df349b93cba05bb3d4a1327",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.5.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.5.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.5.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.5.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.5.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.5.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E2.5.1",
+        "CAM:OUT:0580:E2.5.2",
+        "CAM:OUT:0580:E2.5.3"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -336,8 +644,37 @@
       "SortOrder": 11,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "3949ce571525112a9e47e897044b7169b3c485f75d9bde49b7d1318f68c7c3a7",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.5.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.5.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.5.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.5.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.5.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.5.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E2.5.1",
+        "CAM:OUT:0580:E2.5.2",
+        "CAM:OUT:0580:E2.5.3"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -353,8 +690,46 @@
       "SortOrder": 12,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "bd4ba48bab2d773609eb96aa96836199ab900d0fd2fad35e8bb5c3598adea4ab",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.6.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.6.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.6.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.6.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.6.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.6.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.6.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.6.4",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E2.6.1",
+        "CAM:OUT:0580:E2.6.2",
+        "CAM:OUT:0580:E2.6.3",
+        "CAM:OUT:0580:E2.6.4"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -370,8 +745,37 @@
       "SortOrder": 13,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "43daf5dc282dda3381ce887537fad7711f5677fa7e3789f42229096f99d8e513",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.7.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.7.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.7.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.7.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.7.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.7.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E2.7.1",
+        "CAM:OUT:0580:E2.7.2",
+        "CAM:OUT:0580:E2.7.3"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -387,8 +791,19 @@
       "SortOrder": 14,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "ef572f850db49ff313e40d12c4962f9925b87f6cf7ed8a606dd3176be54144cf",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.13.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.13.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E2.13.1"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -404,8 +819,37 @@
       "SortOrder": 15,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "fee161b52fa9447c889f4507613e5746ed13aba49aa295f9ad9477c96d044207",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E3.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E3.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E3.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E3.5",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E3.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E3.6",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E3.2",
+        "CAM:OUT:0580:E3.5",
+        "CAM:OUT:0580:E3.6"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -421,8 +865,28 @@
       "SortOrder": 16,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "0bff26edfffc7a0a2f83b4fa3ee80a5d99eaee2334e96db043839643b5aa8337",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.5.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.5.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.5.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.5.7",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E2.5.5",
+        "CAM:OUT:0580:E2.5.7"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -438,8 +902,28 @@
       "SortOrder": 17,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "8bd09ae17f79da1a87e0c4e9de66ec805690a610850e6f7cb7049e41eb0313aa",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E3.3.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E3.3.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E3.3.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E3.3.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E3.3.1",
+        "CAM:OUT:0580:E3.3.2"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -455,8 +939,28 @@
       "SortOrder": 18,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "6d8cf453737ac3f7ac666f2c42c205d376b2c1b50afdb11e424ff20d29a5fb32",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E3.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E3.5",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E3.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E3.6",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E3.5",
+        "CAM:OUT:0580:E3.6"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -472,8 +976,19 @@
       "SortOrder": 19,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "903c1328bdc91c03f6c0f95867e2f3176ce36d9086b09856fe2cfc345bcb486e",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E3.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E3.7",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E3.7"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -489,8 +1004,28 @@
       "SortOrder": 20,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "475296cc78d2e10e9a45b052a1d6692bfe0caceae69c715b89687324a9638a31",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E3.4.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E3.4.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E3.4.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E3.4.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E3.4.1",
+        "CAM:OUT:0580:E3.4.2"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -506,8 +1041,37 @@
       "SortOrder": 21,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "efa7ab943107a8baf7378127b13deba86633fbb9eef6d0020713b32317a9a4de",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E4.6.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E4.6.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E4.6.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E4.6.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E4.6.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E4.6.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E4.6.1",
+        "CAM:OUT:0580:E4.6.2",
+        "CAM:OUT:0580:E4.6.3"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -523,8 +1087,55 @@
       "SortOrder": 22,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "d2f2a5b73ecb127014503a77ddf3bb33dc9e14096ab64505d3ca4d5416d4a2f2",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E4.1.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E4.1.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E4.1.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E4.1.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E4.1.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E4.1.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E4.5.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E4.5.1",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E4.5.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E4.5.2",
+          "SortOrder": 5
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E4.1.1",
+        "CAM:OUT:0580:E4.1.2",
+        "CAM:OUT:0580:E4.1.3",
+        "CAM:OUT:0580:E4.5.1",
+        "CAM:OUT:0580:E4.5.2"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -540,8 +1151,37 @@
       "SortOrder": 23,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "9d70981a0e2322db4ef20f1a2939aa75e1dc81251401c78b2f14bec7257dcc6c",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E4.4.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E4.4.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E4.4.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E4.4.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E4.4.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E4.4.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E4.4.1",
+        "CAM:OUT:0580:E4.4.2",
+        "CAM:OUT:0580:E4.4.3"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -557,8 +1197,28 @@
       "SortOrder": 24,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "5eb102c51e1772c4249b7ab3176e7e612709578e6a196173db89e41ca6fc3173",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E4.1.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E4.1.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E4.1.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E4.1.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E4.1.1",
+        "CAM:OUT:0580:E4.1.2"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -574,8 +1234,28 @@
       "SortOrder": 25,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "773d1f45293c028042eadf809dbd2b1d5ddc6a7651489f5fc08da73a22a1653c",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E4.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E4.7",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E4.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E4.8",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E4.7",
+        "CAM:OUT:0580:E4.8"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -591,8 +1271,46 @@
       "SortOrder": 26,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "8142d8d4b6ba4ec9bc78a9af28b8d012a8fa004065790fa33cf1986b74ca93ea",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E7.1.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E7.1.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E7.1.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E7.1.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E7.1.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E7.1.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E7.1.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E7.1.4",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E7.1.1",
+        "CAM:OUT:0580:E7.1.2",
+        "CAM:OUT:0580:E7.1.3",
+        "CAM:OUT:0580:E7.1.4"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -608,8 +1326,19 @@
       "SortOrder": 27,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "9737eafe0c1859355a3688d67280c96578378f9ed16d01a7a0af070c7006591a",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E5.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E5.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E5.2"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -625,8 +1354,28 @@
       "SortOrder": 28,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "d921f2af32e77da363436ae3c2db2c003539c3f32ae8b475940e529829b44f02",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E5.3.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E5.3.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E5.3.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E5.3.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E5.3.1",
+        "CAM:OUT:0580:E5.3.2"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -642,8 +1391,19 @@
       "SortOrder": 29,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "bd00e23a1e925f137b322ab7796ca82c1896586d53d34c9711fbd6e297825868",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E5.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E5.4",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E5.4"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -659,8 +1419,19 @@
       "SortOrder": 30,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "feaed51f5d1379fd41b305daa210963fc30a4b52d6aa7f021417b3cc740c1eec",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E5.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E5.4",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E5.4"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -676,8 +1447,28 @@
       "SortOrder": 31,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "3e682e40602e7a905c08729bf6bf3e5952ef574e0c717f136124bd4fada3b56d",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E5.5.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E5.5.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E5.5.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E5.5.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E5.5.1",
+        "CAM:OUT:0580:E5.5.2"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -693,8 +1484,19 @@
       "SortOrder": 32,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "3bcec078b73e7e60a49556b49c02009d2c1575b33112b94103b5482069053528",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E6.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E6.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E6.1"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -710,8 +1512,46 @@
       "SortOrder": 33,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "c6758d175653dbb33cdb11ec099720ab045b21ad45fa129b2399464b9c897f9c",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E6.2.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E6.2.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E6.2.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E6.2.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E6.2.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E6.2.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E6.2.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E6.2.4",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E6.2.1",
+        "CAM:OUT:0580:E6.2.2",
+        "CAM:OUT:0580:E6.2.3",
+        "CAM:OUT:0580:E6.2.4"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -727,8 +1567,37 @@
       "SortOrder": 34,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "166de39e15c60723cdbd36aee37544883f6e60bf2c2c0b1c50658ef3d4e7bc92",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E4.3.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E4.3.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E4.3.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E4.3.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E6.2.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E6.2.4",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E4.3.1",
+        "CAM:OUT:0580:E4.3.2",
+        "CAM:OUT:0580:E6.2.4"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -744,8 +1613,19 @@
       "SortOrder": 35,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "cb9f900f7beb5b276a8eed6461c6c118969256e8e3476771d51e079bff62cd47",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E6.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E6.6",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E6.6"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -761,8 +1641,19 @@
       "SortOrder": 36,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "76f0966bf4034f6cdfb0f430c6a30825a1f18aea227dae756349a60d103d8736",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E7.2.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E7.2.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E7.2.1"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -778,8 +1669,28 @@
       "SortOrder": 37,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "137024c6f678c37fff2073d02e9497069b45687a7ec3c02fb28ae95d8bffd542",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E7.2.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E7.2.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E7.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E7.3",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E7.2.1",
+        "CAM:OUT:0580:E7.3"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -795,8 +1706,19 @@
       "SortOrder": 38,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "3cfc0454724b92e113ab13903027190ea4393225aabc9c211c31fe20d184fb2b",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E7.2.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E7.2.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E7.2.1"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -812,8 +1734,37 @@
       "SortOrder": 39,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "c730922c5fdc0af8c8c057901c828267152290fe589eb5248349097942606bc7",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E7.1.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E7.1.2",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E7.1.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E7.1.3",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E7.1.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E7.1.4",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E7.1.2",
+        "CAM:OUT:0580:E7.1.3",
+        "CAM:OUT:0580:E7.1.4"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -829,8 +1780,19 @@
       "SortOrder": 40,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "e53a0bb0dca18d78700307c50a8ea324bef67defeb5f6120fcd0961d66d34c73",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E8.1.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E8.1.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E8.1.2"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -846,8 +1808,19 @@
       "SortOrder": 41,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "cf20c57c9e4c0a628a487af84f2b0227790e7e2c0da3b3f9fb53b932bad66f74",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E8.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E8.3",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E8.3"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -863,8 +1836,28 @@
       "SortOrder": 42,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "ec09d06ec79fc09e4dc5c2049cf03a789ac10b810280b29060ddf9c2e6ff608d",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E8.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E8.3",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E8.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E8.4",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E8.3",
+        "CAM:OUT:0580:E8.4"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -880,8 +1873,19 @@
       "SortOrder": 43,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "a1601700667cbbea8462d506ea9443cdffd26222ace55816741be35ec1d3f926",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E8.2.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E8.2.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E8.2.2"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -897,8 +1901,19 @@
       "SortOrder": 44,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "1285c50acb03208e3068898829b62d36eb60ce835f3c1392c9929332261de1a7",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E9.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E9.4",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E9.4"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -914,8 +1929,37 @@
       "SortOrder": 45,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "67cc7c6d4045e6e8f2be34a520e98bbc8eddd8ffa578ee928dc38700f8ee7ad7",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E9.2.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E9.2.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E9.2.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E9.2.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E9.2.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E9.2.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E9.2.1",
+        "CAM:OUT:0580:E9.2.2",
+        "CAM:OUT:0580:E9.2.3"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -931,8 +1975,37 @@
       "SortOrder": 46,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "622dabf153c8e088e369a5bc6e227bc29e18cf65d9a7fb927aa6e4da749c30e5",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E9.3.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E9.3.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E9.3.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E9.3.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E9.3.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E9.3.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E9.3.1",
+        "CAM:OUT:0580:E9.3.2",
+        "CAM:OUT:0580:E9.3.3"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -948,8 +2021,28 @@
       "SortOrder": 47,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "3e0fd3a9a975489e693e4844a8de286349e54b2e5f53b973bce2d917f81d2224",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E9.6.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E9.6.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E9.6.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E9.6.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E9.6.1",
+        "CAM:OUT:0580:E9.6.2"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -965,8 +2058,37 @@
       "SortOrder": 48,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "3466ab692617873745cda1d6018d5e0ed6bd9b06f45fff9ecd248656b39692cb",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E9.5.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E9.5.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E9.5.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E9.5.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E9.5.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E9.5.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E9.5.1",
+        "CAM:OUT:0580:E9.5.2",
+        "CAM:OUT:0580:E9.5.3"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -982,8 +2104,28 @@
       "SortOrder": 49,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "6b5e987590a7cb065ea84b864b591d279feaa17929e2e104476da160099142ef",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.18.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.18.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.18.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.18.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E1.18.1",
+        "CAM:OUT:0580:E1.18.2"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -999,8 +2141,28 @@
       "SortOrder": 50,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "8cd4b668117463d919a47ed96f4bd06d43df36ce3f16260127a98dd1cf59f36e",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.7.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.7.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.7.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.7.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E1.7.1",
+        "CAM:OUT:0580:E1.7.2"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -1016,8 +2178,28 @@
       "SortOrder": 51,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "073e7942b0452268e411c3d922101d48bf3543bfacefc8fb4ff475862826dda3",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.3.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.3.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.3.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.3.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E2.3.1",
+        "CAM:OUT:0580:E2.3.2"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -1033,8 +2215,19 @@
       "SortOrder": 52,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "d52446e973c4ca4b0bd3d0ab1a9a52bb19ae4aef75860fc4ae8c476f987edcf4",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.5.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.5.5",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E2.5.5"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -1050,8 +2243,19 @@
       "SortOrder": 53,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "b3528e288d27ca072ebd4aa226b3185d80a428f84e4ced8636db352bb91037b1",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.5.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.5.5",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E2.5.5"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -1067,8 +2271,19 @@
       "SortOrder": 54,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "ee31e7e4903c98531c9cac1784ea09b948b9738c1f9ff71b3cc94c9dae9b707b",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.8",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E2.8"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -1084,8 +2299,19 @@
       "SortOrder": 55,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "5d533ef774e49a76b7670fd447d67c295e55912aac5a6c7f71db3aa297bdff5e",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.13.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.13.3",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E2.13.3"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -1101,8 +2327,19 @@
       "SortOrder": 56,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "1f60eb1c19cc494c37551c6edfdc211961d8a7b7c656bd42aaf127806a6f3bdb",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.13.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.13.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E2.13.2"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -1118,8 +2355,19 @@
       "SortOrder": 57,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "83aa25af6afea2324cc678fea3e21d8b7395a013287769aa1ce846ad38b583a9",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.11",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.11",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E2.11"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -1135,8 +2383,19 @@
       "SortOrder": 58,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "319f4cad83252c2ed7e2b95597e6ef2acef6b0cd78bb7249a20c5905660b69c4",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E3.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E3.5",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E3.5"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -1152,8 +2411,37 @@
       "SortOrder": 59,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "cf8ee5b14c2756fd3a297471019aba004158d8c00b84b7900e165d5e892f42e1",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E4.4.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E4.4.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E4.4.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E4.4.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E4.4.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E4.4.3",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E4.4.1",
+        "CAM:OUT:0580:E4.4.2",
+        "CAM:OUT:0580:E4.4.3"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -1169,8 +2457,28 @@
       "SortOrder": 60,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "1c68779b4dedd7e06e6041949955043a02b9a212a5fce58f5cb6288ab6cd8a50",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E4.7",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E4.7",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E4.8",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E4.8",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E4.7",
+        "CAM:OUT:0580:E4.8"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -1186,8 +2494,46 @@
       "SortOrder": 61,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "c953461aca44ded6c5c81d4e8528a054df6ac657b9c9596b96bc3dd624a7e6c3",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E7.4.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E7.4.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E7.4.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E7.4.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E7.4.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E7.4.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E7.4.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E7.4.4",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E7.4.1",
+        "CAM:OUT:0580:E7.4.2",
+        "CAM:OUT:0580:E7.4.3",
+        "CAM:OUT:0580:E7.4.4"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -1203,8 +2549,46 @@
       "SortOrder": 62,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "b770808c3eab68c740a020f324492527977617ab55aad9851b85e8b8773c5771",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E7.1.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E7.1.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E7.1.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E7.1.2",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E7.1.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E7.1.3",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E7.1.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E7.1.4",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E7.1.1",
+        "CAM:OUT:0580:E7.1.2",
+        "CAM:OUT:0580:E7.1.3",
+        "CAM:OUT:0580:E7.1.4"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -1220,8 +2604,19 @@
       "SortOrder": 63,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "61c1634c44dc36c58f6f8f6016ee423eb02369c9977c36f24216e4a093504648",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E6.5.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E6.5.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E6.5.1"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -1237,8 +2632,19 @@
       "SortOrder": 64,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "9d4d1c008f9f7b26d987af78ee5c73dd3c5f20f6c419cc7e2c617b6db11938db",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E6.5.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E6.5.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E6.5.1"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -1254,8 +2660,19 @@
       "SortOrder": 65,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "aba7393638f10a9f1a1431fad6df8d1a1a0330786be67d3168482714ccc13b9f",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E6.5.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E6.5.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E6.5.2"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -1271,8 +2688,28 @@
       "SortOrder": 66,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "8dde7ec6f0a77224ca69f39a7949a2a3257ce49b863e331681579a48a1fd26ad",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E6.4.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E6.4.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E6.4.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E6.4.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E6.4.1",
+        "CAM:OUT:0580:E6.4.2"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -1288,8 +2725,19 @@
       "SortOrder": 67,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "4cfc45a6eb78c620fdbd078b206f0213326292e105be9af48fae0329dc0767d6",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E8.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E8.4",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E8.4"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -1305,8 +2753,19 @@
       "SortOrder": 68,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "233d69394dc9eb0107c9ef54aa9026dd08198ed926610dd314f3e2bd9c5dce8e",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.2",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E1.2"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -1322,8 +2781,28 @@
       "SortOrder": 69,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "509944a019717bde60f6a83b09ee4f2e422a78dd09d1c7243d6ad48858ab38a8",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E9.7.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E9.7.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E9.7.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E9.7.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E9.7.1",
+        "CAM:OUT:0580:E9.7.2"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],
@@ -1339,8 +2818,28 @@
       "SortOrder": 70,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SemanticSha256": "5af5fd715ec8830d600af9df7b9b79bbf43381ab79d72de74edf3582e799586e",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E9.6.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E9.6.1",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E9.6.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E9.6.2",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:E9.6.1",
+        "CAM:OUT:0580:E9.6.2"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L11-EXTENDED-OGL-V1"
       ],

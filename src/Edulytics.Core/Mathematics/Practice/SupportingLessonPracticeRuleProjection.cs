@@ -6,9 +6,11 @@ using Edulytics.Core.Curriculum;
 namespace Edulytics.Core.Mathematics.Practice;
 
 /// <summary>
-/// Fail-closed projection of reviewed Supporting target rules over every embedded
+/// Fail-closed projection of reviewed lesson target rules over every embedded
 /// canonical lesson-content pack. Explicit hand-authored/mapping contracts remain
-/// authoritative; this projection fills only still-unmapped Supporting lessons.
+/// authoritative. A verified practice contract remains valid when a Cambridge
+/// lesson gains an official outcome mapping; curriculum alignment must not disable
+/// previously reviewed exact-skill practice.
 /// </summary>
 internal static class SupportingLessonPracticeRuleProjection
 {
@@ -54,9 +56,6 @@ internal static class SupportingLessonPracticeRuleProjection
             {
                 foreach (var lesson in pack.Lessons)
                 {
-                    if (lesson.OutcomeCodes.Count != 0)
-                        continue;
-
                     var translation = ChooseTranslation(pack, lesson);
                     if (translation is null ||
                         !SupportingPracticeTargetRuleRegistry.TryResolve(

@@ -17,7 +17,7 @@
   "SourceLicense": "Open Government Licence v3.0",
   "RequiredDigitalAttribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
   "SourceSelectionReason": "The official curriculum source remains the academic authority. Edulytics uses open DfE Mathematics material only as lawful pedagogical scaffolding for independently authored lesson explanations where official copyrighted or source-linked prose is not reproduced.",
-  "SourceSelectionEvidence": "Cambridge 9709 official syllabus section identifiers are mapped only where the lesson directly addresses that published section; additional pedagogical lessons remain supporting and no official identifier is invented.",
+  "SourceSelectionEvidence": "Official Cambridge identifiers remain reference-only. Formal mappings in this blueprint were source-audited against the current Cambridge framework/syllabus; learner-facing pedagogy remains independently authored from lawful open sources and Cambridge objective prose is not reproduced.",
   "SourceEvidenceUrls": [
     "https://www.cambridgeinternational.org/Images/697427-2026-2027-syllabus.pdf",
     "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
@@ -30,10 +30,10 @@
     "LessonCount": 29,
     "OfficialStandardCount": 18,
     "AddressingCoverageCount": 18,
-    "FormalMappingCount": 28,
-    "LessonsWithoutNumberedGradeReferenceAnyRole": 1,
-    "LessonsWithoutNumberedAddressingStandard": 1,
-    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 1,
+    "FormalMappingCount": 29,
+    "LessonsWithoutNumberedGradeReferenceAnyRole": 0,
+    "LessonsWithoutNumberedAddressingStandard": 0,
+    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 0,
     "MultiStandardLessons": 0
   },
   "Units": [
@@ -76,8 +76,19 @@
       "SortOrder": 1,
       "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
       "SemanticSha256": "f19faa39159144fcf831225da3e26ad309660d6d5bbee36988ecbc2dd8dbaf3a",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "CAM:REF:9709:1.1",
+          "ReferenceKind": "OfficialReference",
+          "ResolutionKind": "ExactAcceptedReference",
+          "OutcomeCode": "CAM:REF:9709:1.1",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:REF:9709:1.1"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-AS-LEVEL-9709-OGL-V1"
       ],

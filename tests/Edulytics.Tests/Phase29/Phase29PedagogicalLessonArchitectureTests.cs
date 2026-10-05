@@ -531,9 +531,13 @@ public sealed class Phase29PedagogicalLessonArchitectureTests
             await db.CurriculumPedagogicalLessonOutcomes.CountAsync(
                 x => x.FrameworkVersionId == versionId && stageOneIds.Contains(x.PedagogicalLessonId)));
 
-        Assert.False(
-            await db.CurriculumPedagogicalLessonOutcomes.AnyAsync(
-                x => x.FrameworkVersionId == versionId && non9709SupportingIds.Contains(x.PedagogicalLessonId)));
+        Assert.Equal(
+            non9709SupportingIds.Length,
+            await db.CurriculumPedagogicalLessonOutcomes
+                .Where(x => x.FrameworkVersionId == versionId && non9709SupportingIds.Contains(x.PedagogicalLessonId))
+                .Select(x => x.PedagogicalLessonId)
+                .Distinct()
+                .CountAsync());
 
         var advancedMappings = await (
             from mapping in db.CurriculumPedagogicalLessonOutcomes
@@ -541,7 +545,7 @@ public sealed class Phase29PedagogicalLessonArchitectureTests
             where mapping.FrameworkVersionId == versionId &&
                   advanced9709Ids.Contains(mapping.PedagogicalLessonId)
             select node.Code).ToArrayAsync();
-        Assert.Equal(49, advancedMappings.Length);
+        Assert.Equal(61, advancedMappings.Length);
         Assert.All(advancedMappings, code => Assert.StartsWith("CAM:REF:9709:", code, StringComparison.Ordinal));
 
         Assert.False(

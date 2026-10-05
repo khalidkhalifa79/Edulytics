@@ -25,13 +25,15 @@
   "PedagogicalSourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. No government logos or identified third-party copyright material is reproduced.",
   "Status": "Published",
   "ReviewedBy": "Edulytics Phase 29 deterministic Cambridge Primary source-policy review",
-  "ReviewEvidence": "Stage 5: 16 DfE ready-to-progress criteria, 32 supporting lessons, English academic bodies, zero unverified Cambridge formal mappings, source SHA256 2f37f94aee76b285746d4e00f504d80072270268e10147886e91325209b18875.",
+  "ReviewEvidence": "Stage 5: 16 DfE ready-to-progress criteria, 32 supporting lessons, English academic bodies, zero unverified Cambridge formal mappings, source SHA256 2f37f94aee76b285746d4e00f504d80072270268e10147886e91325209b18875. Previously unmapped legacy enrichment was replaced in-place with independently authored lessons aligned to verified current Cambridge identifiers; lesson identities were preserved.",
   "Lessons": [
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5F-1:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5F-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Nf.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5F-1",
@@ -63,7 +65,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5F-1:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5F-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Nf.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5F-1",
@@ -95,7 +99,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5F-2:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5F-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Nf.03",
+        "CAM:OUT:0096:5Nf.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5F-2",
@@ -127,7 +134,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5F-2:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5F-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Nf.03",
+        "CAM:OUT:0096:5Nf.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5F-2",
@@ -159,7 +169,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5F-3:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5F-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Nf.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5F-3",
@@ -191,7 +203,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5F-3:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5F-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Nf.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5F-3",
@@ -223,7 +237,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5G-1:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5G-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Gg.07",
+        "CAM:OUT:0096:5Gg.08"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5G-1",
@@ -255,7 +272,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5G-1:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5G-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Gg.07",
+        "CAM:OUT:0096:5Gg.08"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5G-1",
@@ -287,7 +307,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5G-2:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5G-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Gg.02",
+        "CAM:OUT:0096:5Gg.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5G-2",
@@ -319,7 +342,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5G-2:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5G-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Gg.02",
+        "CAM:OUT:0096:5Gg.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5G-2",
@@ -351,7 +377,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5MD-1:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5MD-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Np.02",
+        "CAM:OUT:0096:5Np.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5MD-1",
@@ -383,7 +412,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5MD-1:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5MD-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Np.02",
+        "CAM:OUT:0096:5Np.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5MD-1",
@@ -415,7 +447,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5MD-2:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5MD-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Ni.06",
+        "CAM:OUT:0096:5Ni.07"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5MD-2",
@@ -447,7 +482,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5MD-2:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5MD-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Ni.06",
+        "CAM:OUT:0096:5Ni.07"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5MD-2",
@@ -479,7 +517,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5MD-3:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5MD-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Ni.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5MD-3",
@@ -511,7 +551,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5MD-3:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5MD-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Ni.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5MD-3",
@@ -543,7 +585,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5MD-4:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5MD-4; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Ni.05"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5MD-4",
@@ -575,7 +619,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5MD-4:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5MD-4; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Ni.05"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5MD-4",
@@ -607,7 +653,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5NF-1:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5NF-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Ni.04",
+        "CAM:OUT:0096:5Ni.05"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5NF-1",
@@ -639,7 +688,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5NF-1:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5NF-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Ni.04",
+        "CAM:OUT:0096:5Ni.05"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5NF-1",
@@ -671,7 +723,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5NF-2:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5NF-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Np.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5NF-2",
@@ -703,7 +757,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5NF-2:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5NF-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Np.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5NF-2",
@@ -735,7 +791,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5NPV-1:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5NPV-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Np.01",
+        "CAM:OUT:0096:5Np.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5NPV-1",
@@ -767,7 +826,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5NPV-1:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5NPV-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Np.01",
+        "CAM:OUT:0096:5Np.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5NPV-1",
@@ -799,7 +861,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5NPV-2:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5NPV-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Np.01",
+        "CAM:OUT:0096:5Np.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5NPV-2",
@@ -831,7 +896,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5NPV-2:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5NPV-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Np.01",
+        "CAM:OUT:0096:5Np.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5NPV-2",
@@ -863,7 +931,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5NPV-3:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5NPV-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Nf.08"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5NPV-3",
@@ -895,7 +965,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5NPV-3:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5NPV-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Nf.08"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5NPV-3",
@@ -927,7 +999,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5NPV-4:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5NPV-4; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Gg.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5NPV-4",
@@ -959,7 +1033,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5NPV-4:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5NPV-4; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Gg.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "SourceLocator": "5NPV-4",
@@ -990,64 +1066,68 @@
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5NPV-5:BUILD",
       "TitleProvenance": "PedagogicalSource",
-      "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5NPV-5; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "TitleSourceReference": "Edulytics-authored replacement lesson reviewed against official Cambridge identifier 5Np.05; official objective prose is not reproduced.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Np.05"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
-      "SourceLocator": "5NPV-5",
+      "SourceLocator": "Official Cambridge identifier 5Np.05; Number and Place Value / 09",
       "SourceTitle": "Mathematics guidance: year 5",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "DfE-00114-2020 / June 2020",
       "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation; no government logos or identified third-party material is reused.",
       "SourceSha256": "2f37f94aee76b285746d4e00f504d80072270268e10147886e91325209b18875",
-      "CanonicalBodySha256": "8bb6a5b4e161054fde06e1e8f4f1172820626c6c3d6dc00ad5876be1282b51a0",
+      "CanonicalBodySha256": "df9d2fe5a2ee9a7a716bc3002c00a814d4c7bb147ac1b67da821c1839290d762",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by OGL DfE guidance for the corresponding year. Cambridge official identifiers remain in the curriculum reference graph; this lesson does not claim an unverified formal Cambridge mapping.",
+      "AdaptationStatus": "Edulytics-authored replacement lesson aligned to verified official Cambridge identifier 5Np.05. Learner-facing prose is independently authored; official Cambridge objective prose is not stored.",
       "Translations": [
         {
           "CultureCode": "en",
-          "Title": "Convert between units of measure: Build the Idea",
-          "Explanation": "This Cambridge Primary Stage 5 supporting lesson develops the open DfE Year 5 ready-to-progress focus “Convert between units of measure”. A digit's value depends on its position. Compose and decompose numbers with place-value units, and use a number line or powers of ten to reason about magnitude. Build the idea by representing it in more than one way and explaining why the representations agree. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here.",
-          "KeyConceptsAndRules": "Source focus: Convert between units of measure. A digit's value depends on its position. Compose and decompose numbers with place-value units, and use a number line or powers of ten to reason about magnitude. Build the idea by representing it in more than one way and explaining why the representations agree. Always state what each number, unit, operation or geometric property represents before calculating.",
-          "WorkedExamples": "Example A: 5.37 = 5 ones + 3 tenths + 7 hundredths Explain each step and name the mathematical relationship being used. Example B: Compare 5.37 with 5.4 by using place value rather than digit length. Compare two possible approaches and choose the clearer one.",
-          "StepByStepSolutions": "Step 1: Read the problem and identify the quantities or properties. Step 2: Represent the situation with numbers, a diagram, a number line, an equation or a labelled shape. Step 3: Apply the relevant rule while preserving place value, units and relationships. Step 4: Calculate carefully and write the result with its meaning. Step 5: Check using an inverse operation, estimation, an alternative representation or the stated geometric properties.",
-          "CommonMistakes": "Do not compare numbers by looking at a single digit or by counting digits after the decimal point. Keep the value of each place explicit and check the size of the whole number. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude.",
-          "QuickSummary": "Convert between units of measure: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning."
+          "Title": "Round decimals to the nearest whole number: Build the Idea",
+          "Explanation": "Round decimals to the nearest whole number: Build the Idea develops rounding one-decimal-place numbers to the nearest whole number. Represent the quantities clearly, choose a method that matches the mathematical structure, and explain why each step is valid. Connect symbolic work to a diagram, graph, table or contextual interpretation when useful, and finish with an independent reasonableness check.",
+          "KeyConceptsAndRules": "Focus: rounding one-decimal-place numbers to the nearest whole number. Define the relevant quantities and relationships before calculating. Keep equivalent transformations explicit, use correct notation and units, and verify the result with a second representation, inverse relationship, boundary check or substitution whenever possible.",
+          "WorkedExamples": "Worked example: Round 6.7 to the nearest whole number. Since 0.7 is at least one half, 6.7 rounds to 7. Check its position between 6 and 7 on a number line. Explain the mathematical relationship before calculating, then verify that the result is consistent with the original conditions.",
+          "StepByStepSolutions": "Step 1: Identify the known information and the quantity to be found. Step 2: Choose an appropriate representation. Step 3: State the rule or relationship being used. Step 4: Carry out the calculation with intermediate reasoning visible. Step 5: Check the result independently. Step 6: State the conclusion with its mathematical meaning and units where required.",
+          "CommonMistakes": "Do not select a procedure from a keyword alone. For rounding one-decimal-place numbers to the nearest whole number, check that the conditions of the rule are satisfied, keep notation and units consistent, and test the final result against the original representation.",
+          "QuickSummary": "For rounding one-decimal-place numbers to the nearest whole number, represent the relationship accurately, apply the correct rule, calculate carefully and verify the result."
         }
       ]
     },
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S5:5NPV-5:APPLY",
       "TitleProvenance": "PedagogicalSource",
-      "TitleSourceReference": "DfE Year 5 ready-to-progress criterion 5NPV-5; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "TitleSourceReference": "Edulytics-authored replacement lesson reviewed against official Cambridge identifier 5Np.05; official objective prose is not reproduced.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:5Np.05"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
-      "SourceLocator": "5NPV-5",
+      "SourceLocator": "Official Cambridge identifier 5Np.05; Number and Place Value / 10",
       "SourceTitle": "Mathematics guidance: year 5",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "DfE-00114-2020 / June 2020",
       "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation; no government logos or identified third-party material is reused.",
       "SourceSha256": "2f37f94aee76b285746d4e00f504d80072270268e10147886e91325209b18875",
-      "CanonicalBodySha256": "52300506fe0d1dd6612eb9ae6f5ace91d7cb2e29bd1ebd53e2caa8b24813c139",
+      "CanonicalBodySha256": "ebbbe5e6d60bc0a66cbae2aaf301ef7ad119d352fe0f9d3ac40a69bd6f8e8055",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/6009a99be90e0747975b4ba8/Maths_guidance_year_5.pdf",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by OGL DfE guidance for the corresponding year. Cambridge official identifiers remain in the curriculum reference graph; this lesson does not claim an unverified formal Cambridge mapping.",
+      "AdaptationStatus": "Edulytics-authored replacement lesson aligned to verified official Cambridge identifier 5Np.05. Learner-facing prose is independently authored; official Cambridge objective prose is not stored.",
       "Translations": [
         {
           "CultureCode": "en",
-          "Title": "Convert between units of measure: Reason and Apply",
-          "Explanation": "This Cambridge Primary Stage 5 supporting lesson develops the open DfE Year 5 ready-to-progress focus “Convert between units of measure”. A digit's value depends on its position. Compose and decompose numbers with place-value units, and use a number line or powers of ten to reason about magnitude. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here.",
-          "KeyConceptsAndRules": "Source focus: Convert between units of measure. A digit's value depends on its position. Compose and decompose numbers with place-value units, and use a number line or powers of ten to reason about magnitude. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. Always state what each number, unit, operation or geometric property represents before calculating.",
-          "WorkedExamples": "Example A: 5.37 = 5 ones + 3 tenths + 7 hundredths Explain each step and name the mathematical relationship being used. Example B: Compare 5.37 with 5.4 by using place value rather than digit length. Compare two possible approaches and choose the clearer one.",
-          "StepByStepSolutions": "Step 1: Read the problem and identify the quantities or properties. Step 2: Represent the situation with numbers, a diagram, a number line, an equation or a labelled shape. Step 3: Apply the relevant rule while preserving place value, units and relationships. Step 4: Calculate carefully and write the result with its meaning. Step 5: Check using an inverse operation, estimation, an alternative representation or the stated geometric properties.",
-          "CommonMistakes": "Do not compare numbers by looking at a single digit or by counting digits after the decimal point. Keep the value of each place explicit and check the size of the whole number. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude.",
-          "QuickSummary": "Convert between units of measure: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning."
+          "Title": "Round decimals to the nearest whole number: Reason and Apply",
+          "Explanation": "Round decimals to the nearest whole number: Reason and Apply develops rounding one-decimal-place numbers to the nearest whole number. Represent the quantities clearly, choose a method that matches the mathematical structure, and explain why each step is valid. Connect symbolic work to a diagram, graph, table or contextual interpretation when useful, and finish with an independent reasonableness check.",
+          "KeyConceptsAndRules": "Focus: rounding one-decimal-place numbers to the nearest whole number. Define the relevant quantities and relationships before calculating. Keep equivalent transformations explicit, use correct notation and units, and verify the result with a second representation, inverse relationship, boundary check or substitution whenever possible.",
+          "WorkedExamples": "Worked example: Round 6.7 to the nearest whole number. Since 0.7 is at least one half, 6.7 rounds to 7. Check its position between 6 and 7 on a number line. Explain the mathematical relationship before calculating, then verify that the result is consistent with the original conditions.",
+          "StepByStepSolutions": "Step 1: Identify the known information and the quantity to be found. Step 2: Choose an appropriate representation. Step 3: State the rule or relationship being used. Step 4: Carry out the calculation with intermediate reasoning visible. Step 5: Check the result independently. Step 6: State the conclusion with its mathematical meaning and units where required.",
+          "CommonMistakes": "Do not select a procedure from a keyword alone. For rounding one-decimal-place numbers to the nearest whole number, check that the conditions of the rule are satisfied, keep notation and units consistent, and test the final result against the original representation.",
+          "QuickSummary": "For rounding one-decimal-place numbers to the nearest whole number, represent the relationship accurately, apply the correct rule, calculate carefully and verify the result."
         }
       ]
     }

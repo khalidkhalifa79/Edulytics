@@ -17,7 +17,7 @@
   "SourceLicense": "Open Government Licence v3.0",
   "RequiredDigitalAttribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
   "SourceSelectionReason": "Cambridge official material remains reference-only. DfE primary Mathematics guidance supplies an open, structured pedagogical sequence that Edulytics can lawfully adapt for commercial use.",
-  "SourceSelectionEvidence": "The official DfE Year 4 PDF was retrieved and parsed. Every ready-to-progress criterion found in the Year 4 guidance is represented by an Edulytics concept lesson and an application lesson. These lessons are supporting lessons: no Cambridge objective mapping is claimed without explicit evidence.",
+  "SourceSelectionEvidence": "Official Cambridge identifiers remain reference-only. Formal mappings in this blueprint were source-audited against the current Cambridge framework/syllabus; learner-facing pedagogy remains independently authored from lawful open sources and Cambridge objective prose is not reproduced. Unmapped legacy enrichment that did not fit the current Cambridge stage or syllabus was replaced in-place with independently authored source-aligned lessons while preserving stable lesson identities.",
   "SourceEvidenceUrls": [
     "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
     "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
@@ -28,13 +28,13 @@
   "AcquisitionDiagnostics": {
     "UnitCount": 5,
     "LessonCount": 32,
-    "OfficialStandardCount": 0,
-    "AddressingCoverageCount": 0,
-    "FormalMappingCount": 0,
-    "LessonsWithoutNumberedGradeReferenceAnyRole": 32,
-    "LessonsWithoutNumberedAddressingStandard": 32,
-    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 32,
-    "MultiStandardLessons": 0
+    "OfficialStandardCount": 15,
+    "AddressingCoverageCount": 15,
+    "FormalMappingCount": 40,
+    "LessonsWithoutNumberedGradeReferenceAnyRole": 0,
+    "LessonsWithoutNumberedAddressingStandard": 0,
+    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 0,
+    "MultiStandardLessons": 8
   },
   "Units": [
     {
@@ -90,12 +90,23 @@
       "UnitNumber": 5,
       "UnitTitle": "Fractions",
       "LessonNumber": 1,
-      "Title": "Mixed numbers in the linear number system: Build the Idea",
+      "Title": "Fractions as division: Build the Idea",
       "SortOrder": 1,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
-      "SemanticSha256": "92b6179bdd219cb67f605d9ad0dccc6dff082b86d22a1d6a270b29d6b8e45582",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "SemanticSha256": "1559c1bf4d485c796acd8b54f4b8391afbebf86ad8c366d3d434728f5dd4ad7a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Nf.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Nf.02",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Nf.02"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -107,12 +118,23 @@
       "UnitNumber": 5,
       "UnitTitle": "Fractions",
       "LessonNumber": 2,
-      "Title": "Mixed numbers in the linear number system: Reason and Apply",
+      "Title": "Fractions as division: Reason and Apply",
       "SortOrder": 2,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
-      "SemanticSha256": "031b19d5220c88156a405065c3db26817836c62b9921fa476105bbc0c0f47c16",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "SemanticSha256": "ee7530bdfa88b5181a7dc4300ae2f7fa4033b22f4d3dc421d46e4ccdee24b59a",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Nf.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Nf.02",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Nf.02"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -124,12 +146,23 @@
       "UnitNumber": 5,
       "UnitTitle": "Fractions",
       "LessonNumber": 3,
-      "Title": "Convert between mixed numbers and improper fractions: Build the Idea",
+      "Title": "Equivalent proper fractions: Build the Idea",
       "SortOrder": 3,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
-      "SemanticSha256": "455bc612fcb0f8d4ba582fa289e1838cec1b903623dcd7274a7321921c33f21a",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "SemanticSha256": "910a6e48005eb6dc5f3b9d66b2fcd1f1eec4edd148bb52ddfb2d28ad3ffc9c48",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Nf.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Nf.04",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Nf.04"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -141,12 +174,23 @@
       "UnitNumber": 5,
       "UnitTitle": "Fractions",
       "LessonNumber": 4,
-      "Title": "Convert between mixed numbers and improper fractions: Reason and Apply",
+      "Title": "Equivalent proper fractions: Reason and Apply",
       "SortOrder": 4,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
-      "SemanticSha256": "db8c811c454c75253c29dc96215ba375e4746c3954cbcf05322f72f006fb8809",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "SemanticSha256": "b985a847567a8ac344522dc40f0603a4018fccd112a788f55ba0f762d0a7957d",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Nf.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Nf.04",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Nf.04"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -162,8 +206,19 @@
       "SortOrder": 5,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "ddbc82c37b79eaa4900fc4cfd39d2a7f2f84510424328bd6ecc318f6530a2cb7",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Nf.05",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Nf.05",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Nf.05"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -179,8 +234,19 @@
       "SortOrder": 6,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "51a4a9fa5b67dceb9af92018d2d3db89794a9a54bf0cff2a41038cbe68d2aacf",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Nf.05",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Nf.05",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Nf.05"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -196,8 +262,19 @@
       "SortOrder": 7,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "1dcf9167e7528fa5cff627bd4e2b1283179b2e126636524cd4d6ebb1f6e33dad",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Gp.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Gp.02",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Gp.02"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -213,8 +290,19 @@
       "SortOrder": 8,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "795a93d37e3ec96b4038707b84712063dd7db7a7c078d9ef8afc7c117cff9679",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Gp.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Gp.02",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Gp.02"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -230,8 +318,28 @@
       "SortOrder": 9,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "a5ae550d9f9110b0d1081003a1375ffbc5fb6fa6781955438d77d219d82a9d66",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Gg.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Gg.02",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Gg.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Gg.03",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Gg.02",
+        "CAM:OUT:0096:4Gg.03"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -247,8 +355,28 @@
       "SortOrder": 10,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "9e81c59d9d8445bc5e722d605267b41d30986ddafdbf0de1fd8090bc1a53cdf9",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Gg.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Gg.02",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Gg.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Gg.03",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Gg.02",
+        "CAM:OUT:0096:4Gg.03"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -264,8 +392,19 @@
       "SortOrder": 11,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "50cc2f3649cd36704e90df0fa835b3069fbc74935528563de72e1b7aa07b1e28",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Gg.07",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Gg.07",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Gg.07"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -281,8 +420,19 @@
       "SortOrder": 12,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "f3360b3c897aedeb168f41919a1cdb5f472831a7abd94dc6b62b26a63c929c0b",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Gg.07",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Gg.07",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Gg.07"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -298,8 +448,19 @@
       "SortOrder": 13,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "2bd09a8cd0e7395aa5bdfddd0cae28e689da019c2d88edef56d5808dacc2850e",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Np.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Np.02",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Np.02"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -315,8 +476,19 @@
       "SortOrder": 14,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "8432e97e1ac60d605dd70d8b17713a41fdbeebc9b31c6e21f42abbb2662e911c",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Np.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Np.02",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Np.02"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -332,8 +504,28 @@
       "SortOrder": 15,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "8d2fd4679dc2120193cbaf5816ff2d650dfa16db8e66daa8766b08d414b2d0e4",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Ni.05",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Ni.05",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Ni.06",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Ni.06",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Ni.05",
+        "CAM:OUT:0096:4Ni.06"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -349,8 +541,28 @@
       "SortOrder": 16,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "050f7b90ae3acd7fe126a1459cae7f17abe8f49b8b26edaae585be9937a41884",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Ni.05",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Ni.05",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Ni.06",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Ni.06",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Ni.05",
+        "CAM:OUT:0096:4Ni.06"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -366,8 +578,19 @@
       "SortOrder": 17,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "2bae9d6a9e5d1c68ff09bde8e068d26de73d1609b4aaf4912be7db9d6da6ca6d",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Ni.05",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Ni.05",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Ni.05"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -383,8 +606,19 @@
       "SortOrder": 18,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "2ce9d2b2c487b1669aaea74a8880e2a46c6d440c09673625b7633a55774ed633",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Ni.05",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Ni.05",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Ni.05"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -400,8 +634,19 @@
       "SortOrder": 19,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "802938decd9e24c2f348b41ccb20e5ee5cd5d8ea53282f7a2d6d866386ab5988",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Ni.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Ni.04",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Ni.04"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -417,8 +662,19 @@
       "SortOrder": 20,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "cb2582277c3f1bcd6055e0810d6dbaa179df623bfbf00f6087e499f27e89e998",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Ni.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Ni.04",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Ni.04"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -434,8 +690,19 @@
       "SortOrder": 21,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "dec8e29151686161a92c1ceb637b17056cb6e6da59a671ff1aaf770baf3fa942",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Ni.06",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Ni.06",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Ni.06"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -451,8 +718,19 @@
       "SortOrder": 22,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "1ccf59349d197cd2c6baacb0c76971546211478eeebb3a0f1a22bf31f54c2b5b",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Ni.06",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Ni.06",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Ni.06"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -468,8 +746,19 @@
       "SortOrder": 23,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "25a0f84d4bf30170df0e74c09e57c37d4dad979843dbdc3bbbce549fe43e8a81",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Np.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Np.02",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Np.02"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -485,8 +774,19 @@
       "SortOrder": 24,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "56c610efd25a3763296c9dbc1dd43189833756a6ad9a921a835a41ce855cfb99",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Np.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Np.02",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Np.02"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -502,8 +802,28 @@
       "SortOrder": 25,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "8366c5207c87aed0dec8a97b09cd5339b4cd3166fc7bc093b0b842e798828bf9",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Np.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Np.01",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Np.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Np.03",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Np.01",
+        "CAM:OUT:0096:4Np.03"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -519,8 +839,28 @@
       "SortOrder": 26,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "73a68f51e726397937b13f8d5efd1aaaea83b74bf613f05fc374fe445af56889",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Np.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Np.01",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Np.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Np.03",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Np.01",
+        "CAM:OUT:0096:4Np.03"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -536,8 +876,28 @@
       "SortOrder": 27,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "ce90796fed9fce5d3818252202fdd79fb90ce923a4a022387fba37a4aedd76b1",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Np.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Np.01",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Np.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Np.03",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Np.01",
+        "CAM:OUT:0096:4Np.03"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -553,8 +913,28 @@
       "SortOrder": 28,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "455136457cf56e1b019f90d29592f8f93fa03e8607f6aecda70fc744bdafc5a0",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Np.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Np.01",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Np.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Np.03",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Np.01",
+        "CAM:OUT:0096:4Np.03"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -570,8 +950,19 @@
       "SortOrder": 29,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "add279866048d1d93f42c50f092c13c256e79c7d7950f7b8a7175fa617b66a2e",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Np.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Np.04",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Np.04"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -587,8 +978,19 @@
       "SortOrder": 30,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "f3b9adca550263cb030616b475bb2c40d5ec8c6178ea3a58e843368d99b105f5",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Np.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Np.04",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Np.04"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -604,8 +1006,19 @@
       "SortOrder": 31,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "e04b9063b1a0abe49309b1a1beb8bf936817603c7d30e15467522816fe9f531b",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Gg.09",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Gg.09",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Gg.09"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],
@@ -621,8 +1034,19 @@
       "SortOrder": 32,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
       "SemanticSha256": "be7404c2c3144495b407e41d5cbc669e3ed67bf6161d26bf073be5a3d99fdaaf",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Gg.09",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Gg.09",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:4Gg.09"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
       ],

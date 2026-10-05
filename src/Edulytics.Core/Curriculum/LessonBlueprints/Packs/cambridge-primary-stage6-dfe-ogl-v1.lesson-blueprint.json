@@ -17,7 +17,7 @@
   "SourceLicense": "Open Government Licence v3.0",
   "RequiredDigitalAttribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
   "SourceSelectionReason": "Cambridge official material remains reference-only. DfE primary Mathematics guidance supplies an open, structured pedagogical sequence that Edulytics can lawfully adapt for commercial use.",
-  "SourceSelectionEvidence": "The official DfE Year 6 PDF was retrieved and parsed. Every ready-to-progress criterion found in the Year 6 guidance is represented by an Edulytics concept lesson and an application lesson. These lessons are supporting lessons: no Cambridge objective mapping is claimed without explicit evidence.",
+  "SourceSelectionEvidence": "Official Cambridge identifiers remain reference-only. Formal mappings in this blueprint were source-audited against the current Cambridge framework/syllabus; learner-facing pedagogy remains independently authored from lawful open sources and Cambridge objective prose is not reproduced. Unmapped legacy enrichment that did not fit the current Cambridge stage or syllabus was replaced in-place with independently authored source-aligned lessons while preserving stable lesson identities.",
   "SourceEvidenceUrls": [
     "https://www.gov.uk/government/publications/teaching-mathematics-in-primary-schools",
     "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
@@ -28,13 +28,13 @@
   "AcquisitionDiagnostics": {
     "UnitCount": 4,
     "LessonCount": 24,
-    "OfficialStandardCount": 0,
-    "AddressingCoverageCount": 0,
-    "FormalMappingCount": 0,
-    "LessonsWithoutNumberedGradeReferenceAnyRole": 24,
-    "LessonsWithoutNumberedAddressingStandard": 24,
-    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 24,
-    "MultiStandardLessons": 0
+    "OfficialStandardCount": 13,
+    "AddressingCoverageCount": 13,
+    "FormalMappingCount": 32,
+    "LessonsWithoutNumberedGradeReferenceAnyRole": 0,
+    "LessonsWithoutNumberedAddressingStandard": 0,
+    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 0,
+    "MultiStandardLessons": 8
   },
   "Units": [
     {
@@ -85,8 +85,28 @@
       "SortOrder": 1,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SemanticSha256": "41977cdbbaeb595bc7768839c7dbdf3862b377a2f07885f4118980974de7fe64",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Nc.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Nc.02",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Nc.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Nc.03",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Nc.02",
+        "CAM:OUT:0096:6Nc.03"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S6"
       ],
@@ -102,8 +122,28 @@
       "SortOrder": 2,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SemanticSha256": "2b36147a270ad899b803fcd849e2e37bf9f17fb79ed065c1eb9f124655c8a354",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Nc.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Nc.02",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Nc.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Nc.03",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Nc.02",
+        "CAM:OUT:0096:6Nc.03"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S6"
       ],
@@ -119,8 +159,19 @@
       "SortOrder": 3,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SemanticSha256": "611c10c3cf9ad1046613a227765c3bcd3f853d00fdc634efa1c5b73351e3b1b2",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Ni.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Ni.02",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Ni.02"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S6"
       ],
@@ -136,8 +187,19 @@
       "SortOrder": 4,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SemanticSha256": "273762b4ad911ad94a00d2d3e4a0349b8116c6b256dd9d958e8230c20e806ae0",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Ni.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Ni.02",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Ni.02"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S6"
       ],
@@ -153,8 +215,28 @@
       "SortOrder": 5,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SemanticSha256": "bdfa27be4d4cef5960e0f7ed7f79ad9ac7500d881b53d74c68136a7b92bf6fd1",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Nf.12",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Nf.12",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Nf.13",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Nf.13",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Nf.12",
+        "CAM:OUT:0096:6Nf.13"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S6"
       ],
@@ -170,8 +252,28 @@
       "SortOrder": 6,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SemanticSha256": "c7b0292baad79b273a6357ca54590a14917bf588d544d966452aae946bb6b7af",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Nf.12",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Nf.12",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Nf.13",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Nf.13",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Nf.12",
+        "CAM:OUT:0096:6Nf.13"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S6"
       ],
@@ -187,8 +289,19 @@
       "SortOrder": 7,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SemanticSha256": "2c57c1bfc3af40b13c5b80709820191ace4cbffc2a1796db4ef26337a8ed5392",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Nc.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Nc.02",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Nc.02"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S6"
       ],
@@ -204,8 +317,19 @@
       "SortOrder": 8,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SemanticSha256": "3555c0ddea3e58922b5a55c11cceb200a21df9eb25a9e34f503083d13f22e0c4",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Nc.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Nc.02",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Nc.02"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S6"
       ],
@@ -221,8 +345,19 @@
       "SortOrder": 9,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SemanticSha256": "519791f6fc924d66f0badc681d9b8d9cc90dac4a302923676ea67135effaca09",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Nf.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Nf.03",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Nf.03"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S6"
       ],
@@ -238,8 +373,19 @@
       "SortOrder": 10,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SemanticSha256": "afde45913e702bccbb19cf4886061874c0771b87bad4d88462c49bdef22a06f5",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Nf.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Nf.03",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Nf.03"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S6"
       ],
@@ -255,8 +401,19 @@
       "SortOrder": 11,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SemanticSha256": "49b23c0f3b6b645f16d26c7866235317bc175d22906ef3b99bc48a3acf3bb499",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Nf.05",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Nf.05",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Nf.05"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S6"
       ],
@@ -272,8 +429,19 @@
       "SortOrder": 12,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SemanticSha256": "62eb1f220e5993e3f4490bed17c7154e8043b9d6085de9f836e413905a6aaeda",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Nf.05",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Nf.05",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Nf.05"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S6"
       ],
@@ -289,8 +457,19 @@
       "SortOrder": 13,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SemanticSha256": "eeec528e44134147e36d79d4e35f0df86d3330f9949afd535480b3329c646b16",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Nf.08",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Nf.08",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Nf.08"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S6"
       ],
@@ -306,8 +485,19 @@
       "SortOrder": 14,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SemanticSha256": "b1a055f48b117ba765ac3a5130b70005d621dacc849d39b9411b9d21d798db47",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Nf.08",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Nf.08",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Nf.08"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S6"
       ],
@@ -323,8 +513,28 @@
       "SortOrder": 15,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SemanticSha256": "2624cea254e5eb2ccb46ca5423da5df0d5f7f3f00d20805fa5a5f765e70d32af",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Gg.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Gg.04",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Gg.06",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Gg.06",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Gg.04",
+        "CAM:OUT:0096:6Gg.06"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S6"
       ],
@@ -340,8 +550,28 @@
       "SortOrder": 16,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SemanticSha256": "1441a167092a7bc4106ac1db6ae450e838279ee2082992368c6c2a98ff070eee",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Gg.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Gg.04",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Gg.06",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Gg.06",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Gg.04",
+        "CAM:OUT:0096:6Gg.06"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S6"
       ],
@@ -357,8 +587,19 @@
       "SortOrder": 17,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SemanticSha256": "4094b5c1986640049629bdf998a14a241886090ccb0501f02ca4cf41964fd89e",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Np.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Np.02",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Np.02"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S6"
       ],
@@ -374,8 +615,19 @@
       "SortOrder": 18,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SemanticSha256": "46ca6c805ccf3fb03094ad4004c0ae04d5d585ad4ba6d788b8664a0cd948ce8e",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Np.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Np.02",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Np.02"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S6"
       ],
@@ -391,8 +643,28 @@
       "SortOrder": 19,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SemanticSha256": "eb00788e594e63ffd7a79f9eb0bf464af994f6f6015eb4014ba79fb26b8ccf0c",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Np.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Np.02",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Np.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Np.03",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Np.02",
+        "CAM:OUT:0096:6Np.03"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S6"
       ],
@@ -408,8 +680,28 @@
       "SortOrder": 20,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SemanticSha256": "992371e071ef351b79ce15ccf3dd7cd329776aea5c9da421659c596efcb731d2",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Np.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Np.02",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Np.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Np.03",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Np.02",
+        "CAM:OUT:0096:6Np.03"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S6"
       ],
@@ -425,8 +717,19 @@
       "SortOrder": 21,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SemanticSha256": "9370968070c11fc50caed506394124e6c9f9901b6002931c038c75eac9bf886a",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Np.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Np.03",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Np.03"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S6"
       ],
@@ -442,8 +745,19 @@
       "SortOrder": 22,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SemanticSha256": "61cba86b1e01777e47c1d4edcfb22f246c414747a4a7369f8468a644e686c936",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Np.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Np.03",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Np.03"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S6"
       ],
@@ -455,12 +769,23 @@
       "UnitNumber": 1,
       "UnitTitle": "Number and Place Value",
       "LessonNumber": 7,
-      "Title": "Reading scales with 2, 4, 5 or 10 intervals: Build the Idea",
+      "Title": "Round decimals to the nearest tenth or whole number: Build the Idea",
       "SortOrder": 23,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
-      "SemanticSha256": "9f41b07728e6ab6c1aaaa5005eb657604adf743381dea44eabcd779ccf65ea8f",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "SemanticSha256": "086f3c73769d8a3b87de288a2c26ad46cd765ea2e5e794e7faf91943aaac1b1e",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Np.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Np.04",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Np.04"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S6"
       ],
@@ -472,12 +797,23 @@
       "UnitNumber": 1,
       "UnitTitle": "Number and Place Value",
       "LessonNumber": 8,
-      "Title": "Reading scales with 2, 4, 5 or 10 intervals: Reason and Apply",
+      "Title": "Round decimals to the nearest tenth or whole number: Reason and Apply",
       "SortOrder": 24,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
-      "SemanticSha256": "da3bdf9b82e302ef93698c71bde7479148d40220caba1444d80728f2ad94012c",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "SemanticSha256": "dafdf8e7a33e7cb74b974d21712c4e76878328c8c61cc14497e54272a4f2d564",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "6Np.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:6Np.04",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Np.04"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S6"
       ],

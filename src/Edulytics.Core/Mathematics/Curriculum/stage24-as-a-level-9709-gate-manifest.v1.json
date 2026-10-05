@@ -26,14 +26,14 @@
   "academicReview": {
     "currentState": "REQUIRED",
     "approvedVerifiedLessonCount": 0,
-    "note": "49 lessons have exact official 9709 references and eight remain Supporting. Engine overlap remains CONTEXTUAL until paper/domain-specific academic approval exists; formal mapping alone does not promote the capability claim."
+    "note": "57 lessons have exact official 9709 references and 0 remain Supporting. Engine overlap remains CONTEXTUAL until paper/domain-specific academic approval exists; formal mapping alone does not promote the capability claim."
   },
   "summary": {
     "totalLessons": 57,
     "verified": 0,
     "contextual": 25,
     "unsupported": 32,
-    "formalOutcomeMapped": 49,
+    "formalOutcomeMapped": 57,
     "paperRouteCount": 6
   },
   "coverageByPaper": [
@@ -45,7 +45,7 @@
       "verified": 0,
       "contextual": 2,
       "unsupported": 6,
-      "formalOutcomeMapped": 4,
+      "formalOutcomeMapped": 8,
       "productRoutingEnabled": false,
       "capabilityClaim": "GATED"
     },
@@ -57,7 +57,7 @@
       "verified": 0,
       "contextual": 0,
       "unsupported": 8,
-      "formalOutcomeMapped": 6,
+      "formalOutcomeMapped": 8,
       "productRoutingEnabled": false,
       "capabilityClaim": "GATED"
     },
@@ -69,7 +69,7 @@
       "verified": 0,
       "contextual": 6,
       "unsupported": 6,
-      "formalOutcomeMapped": 11,
+      "formalOutcomeMapped": 12,
       "productRoutingEnabled": false,
       "capabilityClaim": "GATED"
     },
@@ -105,7 +105,7 @@
       "verified": 0,
       "contextual": 9,
       "unsupported": 4,
-      "formalOutcomeMapped": 12,
+      "formalOutcomeMapped": 13,
       "productRoutingEnabled": false,
       "capabilityClaim": "GATED"
     }
@@ -120,13 +120,15 @@
       "lessonTitle": "Algebraic manipulation",
       "sourceAuthority": "Cambridge International Education",
       "officialSourceUrl": "https://www.cambridgeinternational.org/Images/697427-2026-2027-syllabus.pdf",
-      "formalOutcomeMapped": false,
-      "formalOutcomeCodes": [],
+      "formalOutcomeMapped": true,
+      "formalOutcomeCodes": [
+        "CAM:REF:9709:1.1"
+      ],
       "status": "UNSUPPORTED",
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L12:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:01:02:QUADRATIC-FUNCTIONS",
@@ -191,7 +193,7 @@
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L12:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:01:05:CIRCULAR-MEASURE",
@@ -210,7 +212,7 @@
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L12:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:01:06:TRIGONOMETRIC-IDENTITIES",
@@ -300,7 +302,7 @@
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L12:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:01:10:DIFFERENTIATION",
@@ -411,7 +413,7 @@
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L12:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:02:02:MEASURES-OF-CENTRAL-TENDENCY",
@@ -455,7 +457,7 @@
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L12:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:02:04:PERMUTATIONS-AND-COMBINATIONS",
@@ -474,7 +476,7 @@
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L12:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:02:05:PROBABILITY",
@@ -518,7 +520,7 @@
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L12:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:02:07:BINOMIAL-DISTRIBUTION",
@@ -537,7 +539,7 @@
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L12:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:02:08:NORMAL-DISTRIBUTION",
@@ -556,7 +558,7 @@
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L12:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:03:01:KINEMATICS-IN-ONE-DIMENSION",
@@ -600,7 +602,7 @@
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L12:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:03:03:CONSTANT-ACCELERATION",
@@ -692,7 +694,7 @@
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L12:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:03:07:MOMENTUM",
@@ -759,7 +761,7 @@
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:01:02:LOGARITHMIC-AND-EXPONENTIAL-FUNCTIONS",
@@ -849,7 +851,7 @@
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:01:06:PARAMETRIC-DIFFERENTIATION",
@@ -868,7 +870,7 @@
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:01:07:INTEGRATION-TECHNIQUES",
@@ -910,7 +912,7 @@
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:01:09:NUMERICAL-SOLUTION-OF-EQUATIONS",
@@ -979,7 +981,7 @@
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:01:12:SERIES-AND-APPROXIMATIONS",
@@ -990,13 +992,15 @@
       "lessonTitle": "Series and approximations",
       "sourceAuthority": "Cambridge International Education",
       "officialSourceUrl": "https://www.cambridgeinternational.org/Images/697427-2026-2027-syllabus.pdf",
-      "formalOutcomeMapped": false,
-      "formalOutcomeCodes": [],
+      "formalOutcomeMapped": true,
+      "formalOutcomeCodes": [
+        "CAM:REF:9709:1.6"
+      ],
       "status": "UNSUPPORTED",
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:02:01:POISSON-DISTRIBUTION",
@@ -1015,7 +1019,7 @@
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:02:02:CONTINUOUS-RANDOM-VARIABLES",
@@ -1034,7 +1038,7 @@
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:02:03:SAMPLING",
@@ -1053,7 +1057,7 @@
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:02:04:ESTIMATION",
@@ -1072,7 +1076,7 @@
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:02:05:HYPOTHESIS-TESTING",
@@ -1091,7 +1095,7 @@
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:02:06:NORMAL-APPROXIMATIONS",
@@ -1102,13 +1106,15 @@
       "lessonTitle": "Normal approximations",
       "sourceAuthority": "Cambridge International Education",
       "officialSourceUrl": "https://www.cambridgeinternational.org/Images/697427-2026-2027-syllabus.pdf",
-      "formalOutcomeMapped": false,
-      "formalOutcomeCodes": [],
+      "formalOutcomeMapped": true,
+      "formalOutcomeCodes": [
+        "CAM:REF:9709:6.1"
+      ],
       "status": "UNSUPPORTED",
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:02:07:LINEAR-COMBINATIONS-OF-RANDOM-VARIABLES",
@@ -1127,7 +1133,7 @@
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:02:08:CORRELATION-AND-REGRESSION-REASONING",
@@ -1138,13 +1144,15 @@
       "lessonTitle": "Correlation and regression reasoning",
       "sourceAuthority": "Cambridge International Education",
       "officialSourceUrl": "https://www.cambridgeinternational.org/Images/697427-2026-2027-syllabus.pdf",
-      "formalOutcomeMapped": false,
-      "formalOutcomeCodes": [],
+      "formalOutcomeMapped": true,
+      "formalOutcomeCodes": [
+        "CAM:REF:9709:6.5"
+      ],
       "status": "UNSUPPORTED",
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:03:01:PROJECTILES",
@@ -1155,13 +1163,15 @@
       "lessonTitle": "Projectiles",
       "sourceAuthority": "Cambridge International Education",
       "officialSourceUrl": "https://www.cambridgeinternational.org/Images/697427-2026-2027-syllabus.pdf",
-      "formalOutcomeMapped": false,
-      "formalOutcomeCodes": [],
+      "formalOutcomeMapped": true,
+      "formalOutcomeCodes": [
+        "CAM:REF:9709:4.2"
+      ],
       "status": "UNSUPPORTED",
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:03:02:VARIABLE-ACCELERATION",
@@ -1180,7 +1190,7 @@
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:03:03:MOMENTUM-AND-IMPULSE",
@@ -1239,13 +1249,15 @@
       "lessonTitle": "Circular motion foundations",
       "sourceAuthority": "Cambridge International Education",
       "officialSourceUrl": "https://www.cambridgeinternational.org/Images/697427-2026-2027-syllabus.pdf",
-      "formalOutcomeMapped": false,
-      "formalOutcomeCodes": [],
+      "formalOutcomeMapped": true,
+      "formalOutcomeCodes": [
+        "CAM:REF:9709:4.3"
+      ],
       "status": "UNSUPPORTED",
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:03:06:EQUILIBRIUM-OF-RIGID-BODIES",
@@ -1256,13 +1268,15 @@
       "lessonTitle": "Equilibrium of rigid bodies",
       "sourceAuthority": "Cambridge International Education",
       "officialSourceUrl": "https://www.cambridgeinternational.org/Images/697427-2026-2027-syllabus.pdf",
-      "formalOutcomeMapped": false,
-      "formalOutcomeCodes": [],
+      "formalOutcomeMapped": true,
+      "formalOutcomeCodes": [
+        "CAM:REF:9709:4.1"
+      ],
       "status": "UNSUPPORTED",
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:03:07:FRICTION",
@@ -1281,7 +1295,7 @@
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     },
     {
       "lessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:03:08:MIXED-MECHANICS-MODELLING",
@@ -1292,13 +1306,19 @@
       "lessonTitle": "Mixed mechanics modelling",
       "sourceAuthority": "Cambridge International Education",
       "officialSourceUrl": "https://www.cambridgeinternational.org/Images/697427-2026-2027-syllabus.pdf",
-      "formalOutcomeMapped": false,
-      "formalOutcomeCodes": [],
+      "formalOutcomeMapped": true,
+      "formalOutcomeCodes": [
+        "CAM:REF:9709:4.1",
+        "CAM:REF:9709:4.2",
+        "CAM:REF:9709:4.3",
+        "CAM:REF:9709:4.4",
+        "CAM:REF:9709:4.5"
+      ],
       "status": "UNSUPPORTED",
       "engineSkillIds": [],
       "benchmarkIds": [],
       "academicReviewStatus": "NOT_READY",
-      "reason": "No reviewed exact Cambridge 9709 SkillContract mapping is approved for this lesson; Stage 24 blocks capability claims instead of inferring them from the title."
+      "reason": "Exact Cambridge 9709 reference mapping is present, but Stage 24 keeps this lesson unsupported for engine capability claims until paper/domain-specific benchmark coverage and academic review are approved."
     }
   ]
 }

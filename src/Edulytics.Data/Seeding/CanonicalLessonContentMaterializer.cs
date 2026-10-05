@@ -17,6 +17,8 @@ public static class CanonicalLessonContentMaterializer
     {
         CambridgePrimaryStage6LessonContentCorrections
             .ApplyApprovedCorrections(document);
+        CambridgeOfficialMappingContentCorrections
+            .ApplyApprovedCorrections(document);
         SupportingLessonPracticeContentCorrections
             .ApplyApprovedCorrections(document);
         OfficialLessonPracticeContentCorrections
@@ -131,13 +133,23 @@ public static class CanonicalLessonContentMaterializer
             CambridgePrimaryStage6LessonContentCorrections
                 .GetExpectedContentVersion(document, lesson);
 
+        var officialMapping =
+            CambridgeOfficialMappingContentCorrections
+                .GetExpectedContentVersion(
+                    document,
+                    lesson,
+                    stage6);
+
         var supporting =
             SupportingLessonPracticeContentCorrections
                 .GetExpectedContentVersion(
                     document,
                     lesson,
                     CambridgeReviewedExampleContentCorrections
-                        .GetExpectedContentVersion(document, lesson, stage6));
+                        .GetExpectedContentVersion(
+                            document,
+                            lesson,
+                            officialMapping));
 
         var official =
             OfficialLessonPracticeContentCorrections
@@ -158,6 +170,8 @@ public static class CanonicalLessonContentMaterializer
         CanonicalLessonContentPackLesson lesson) =>
         CambridgePrimaryStage6LessonContentCorrections
             .IsTarget(document, lesson) ||
+        CambridgeOfficialMappingContentCorrections
+            .IsTarget(document, lesson) ||
         CambridgeReviewedExampleContentCorrections
             .IsTarget(document, lesson) ||
         SupportingLessonPracticeContentCorrections
@@ -172,6 +186,11 @@ public static class CanonicalLessonContentMaterializer
         CanonicalLessonContentPackLesson lesson,
         string existingContentVersion) =>
         CambridgePrimaryStage6LessonContentCorrections
+            .CanUpgradeExisting(
+                document,
+                lesson,
+                existingContentVersion) ||
+        CambridgeOfficialMappingContentCorrections
             .CanUpgradeExisting(
                 document,
                 lesson,

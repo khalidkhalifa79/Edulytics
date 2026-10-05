@@ -25,7 +25,7 @@
   "PedagogicalSourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. Official curriculum wording is not reproduced.",
   "Status": "Published",
   "ReviewedBy": "Edulytics Phase 29 deterministic curriculum review",
-  "ReviewEvidence": "Cambridge 9709 official section mapping reviewed for A Level; lesson bodies are unchanged and unmatched enrichment is supporting.",
+  "ReviewEvidence": "Cambridge 9709 official section mapping reviewed for A Level; lesson bodies are unchanged and unmatched enrichment is supporting. Previously unmapped legacy enrichment was replaced in-place with independently authored lessons aligned to verified current Cambridge identifiers; lesson identities were preserved.",
   "Lessons": [
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:01:01:FURTHER-ALGEBRA",
@@ -405,8 +405,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:01:12:SERIES-AND-APPROXIMATIONS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCE AS and A level Mathematics subject content; Edulytics-authored scope sequence for Cambridge International A Level Mathematics (9709) / Component/route structure preserved in reference graph.",
-      "OutcomeCodes": [],
-      "IsSupporting": true,
+      "OutcomeCodes": [
+        "CAM:REF:9709:1.6"
+      ],
+      "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
       "SourceLocator": "Cambridge International A Level Mathematics (9709) / Advanced Pure Mathematics / 12",
       "SourceTitle": "GCE AS and A level Mathematics subject content",
@@ -607,8 +609,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:02:06:NORMAL-APPROXIMATIONS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCE AS and A level Mathematics subject content; Edulytics-authored scope sequence for Cambridge International A Level Mathematics (9709) / Component/route structure preserved in reference graph.",
-      "OutcomeCodes": [],
-      "IsSupporting": true,
+      "OutcomeCodes": [
+        "CAM:REF:9709:6.1"
+      ],
+      "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
       "SourceLocator": "Cambridge International A Level Mathematics (9709) / Advanced Probability and Statistics / 06",
       "SourceTitle": "GCE AS and A level Mathematics subject content",
@@ -672,64 +676,68 @@
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:02:08:CORRELATION-AND-REGRESSION-REASONING",
       "TitleProvenance": "PedagogicalSource",
-      "TitleSourceReference": "GCE AS and A level Mathematics subject content; Edulytics-authored scope sequence for Cambridge International A Level Mathematics (9709) / Component/route structure preserved in reference graph.",
-      "OutcomeCodes": [],
-      "IsSupporting": true,
+      "TitleSourceReference": "Edulytics-authored replacement lesson reviewed against official Cambridge identifier 6.5; official objective prose is not reproduced.",
+      "OutcomeCodes": [
+        "CAM:REF:9709:6.5"
+      ],
+      "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SourceLocator": "Cambridge International A Level Mathematics (9709) / Advanced Probability and Statistics / 08",
+      "SourceLocator": "Official Cambridge identifier 6.5; Advanced Probability and Statistics / 08",
       "SourceTitle": "GCE AS and A level Mathematics subject content",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "GCE AS/A level Mathematics subject content / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "6e424381d419f28a3b2a07efb27d23f0d3bcf663b2ad4388a98dd942bba3ed05",
-      "CanonicalBodySha256": "07d47c3053954c69317122307f9e978d2f933a7539b11c94b25e25888dfe6b37",
+      "CanonicalBodySha256": "ad7bd8f1dacb2e8f4431fe04c0c33a325853da46dedfa2adae2925de8e367401",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Edulytics-authored replacement lesson aligned to verified official Cambridge identifier 6.5. Learner-facing prose is independently authored; official Cambridge objective prose is not stored.",
       "Translations": [
         {
           "CultureCode": "en",
-          "Title": "Correlation and regression reasoning",
-          "Explanation": "Correlation and regression reasoning is studied here as part of Cambridge International A Level Mathematics (9709) — Component/route structure preserved in reference graph. Statistics describes data through appropriate representations, measures of centre and measures of spread. The method must match the data type and question. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Correlation and regression reasoning. Statistics describes data through appropriate representations, measures of centre and measures of spread. The method must match the data type and question. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: For 2,4,4,6 the mean is 16/4=4, the median is 4 and the range is 4. Worked example 2: A positive trend in a scatter graph indicates association, but association alone does not establish causation. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not calculate an average without checking what it represents. Read scales carefully and distinguish correlation from causation. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Correlation and regression reasoning, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Title": "Hypothesis testing: interpretation and decisions",
+          "Explanation": "Hypothesis testing: interpretation and decisions develops interpreting hypothesis tests and making decisions from a stated significance level. Represent the quantities clearly, choose a method that matches the mathematical structure, and explain why each step is valid. Connect symbolic work to a diagram, graph, table or contextual interpretation when useful, and finish with an independent reasonableness check.",
+          "KeyConceptsAndRules": "Focus: interpreting hypothesis tests and making decisions from a stated significance level. Define the relevant quantities and relationships before calculating. Keep equivalent transformations explicit, use correct notation and units, and verify the result with a second representation, inverse relationship, boundary check or substitution whenever possible.",
+          "WorkedExamples": "Worked example: State null and alternative hypotheses, compare the test result with the critical region or p-value rule, then give a conclusion in context. Explain the mathematical relationship before calculating, then verify that the result is consistent with the original conditions.",
+          "StepByStepSolutions": "Step 1: Identify the known information and the quantity to be found. Step 2: Choose an appropriate representation. Step 3: State the rule or relationship being used. Step 4: Carry out the calculation with intermediate reasoning visible. Step 5: Check the result independently. Step 6: State the conclusion with its mathematical meaning and units where required.",
+          "CommonMistakes": "Do not select a procedure from a keyword alone. For interpreting hypothesis tests and making decisions from a stated significance level, check that the conditions of the rule are satisfied, keep notation and units consistent, and test the final result against the original representation.",
+          "QuickSummary": "For interpreting hypothesis tests and making decisions from a stated significance level, represent the relationship accurately, apply the correct rule, calculate carefully and verify the result."
         }
       ]
     },
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:03:01:PROJECTILES",
       "TitleProvenance": "PedagogicalSource",
-      "TitleSourceReference": "GCE AS and A level Mathematics subject content; Edulytics-authored scope sequence for Cambridge International A Level Mathematics (9709) / Component/route structure preserved in reference graph.",
-      "OutcomeCodes": [],
-      "IsSupporting": true,
+      "TitleSourceReference": "Edulytics-authored replacement lesson reviewed against official Cambridge identifier 4.2; official objective prose is not reproduced.",
+      "OutcomeCodes": [
+        "CAM:REF:9709:4.2"
+      ],
+      "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SourceLocator": "Cambridge International A Level Mathematics (9709) / Advanced Mechanics / 01",
+      "SourceLocator": "Official Cambridge identifier 4.2; Advanced Mechanics / 01",
       "SourceTitle": "GCE AS and A level Mathematics subject content",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "GCE AS/A level Mathematics subject content / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "6e424381d419f28a3b2a07efb27d23f0d3bcf663b2ad4388a98dd942bba3ed05",
-      "CanonicalBodySha256": "a2f374fd63a630775cdb4ee631630de5df696b33eca58d20bc8de39cf7d2e03d",
+      "CanonicalBodySha256": "66331dfe5c9a9dec762180b580c85b9066a8c97e618dc41d4ab74cdbf4b746e8",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Edulytics-authored replacement lesson aligned to verified official Cambridge identifier 4.2. Learner-facing prose is independently authored; official Cambridge objective prose is not stored.",
       "Translations": [
         {
           "CultureCode": "en",
-          "Title": "Projectiles",
-          "Explanation": "Projectiles is studied here as part of Cambridge International A Level Mathematics (9709) — Component/route structure preserved in reference graph. Mechanics translates a physical situation into a mathematical model. Define positive direction, identify forces or motion variables, and keep units consistent. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Projectiles. Mechanics translates a physical situation into a mathematical model. Define positive direction, identify forces or motion variables, and keep units consistent. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: With u=5 m/s, a=2 m/s² and t=3 s, v=u+at=11 m/s. Worked example 2: A constant force 4 N acting through 3 m does work W=Fs=12 J when force and displacement are aligned. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not mix scalar speed with signed velocity, and state modelling assumptions before applying a formula. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Projectiles, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Title": "Kinematics in a straight line: modelling review",
+          "Explanation": "Kinematics in a straight line: modelling review develops modelling displacement, velocity and acceleration for motion in a straight line. Represent the quantities clearly, choose a method that matches the mathematical structure, and explain why each step is valid. Connect symbolic work to a diagram, graph, table or contextual interpretation when useful, and finish with an independent reasonableness check.",
+          "KeyConceptsAndRules": "Focus: modelling displacement, velocity and acceleration for motion in a straight line. Define the relevant quantities and relationships before calculating. Keep equivalent transformations explicit, use correct notation and units, and verify the result with a second representation, inverse relationship, boundary check or substitution whenever possible.",
+          "WorkedExamples": "Worked example: For constant acceleration, connect displacement, initial velocity, final velocity, acceleration and time using a suitable kinematic relation and check units. Explain the mathematical relationship before calculating, then verify that the result is consistent with the original conditions.",
+          "StepByStepSolutions": "Step 1: Identify the known information and the quantity to be found. Step 2: Choose an appropriate representation. Step 3: State the rule or relationship being used. Step 4: Carry out the calculation with intermediate reasoning visible. Step 5: Check the result independently. Step 6: State the conclusion with its mathematical meaning and units where required.",
+          "CommonMistakes": "Do not select a procedure from a keyword alone. For modelling displacement, velocity and acceleration for motion in a straight line, check that the conditions of the rule are satisfied, keep notation and units consistent, and test the final result against the original representation.",
+          "QuickSummary": "For modelling displacement, velocity and acceleration for motion in a straight line, represent the relationship accurately, apply the correct rule, calculate carefully and verify the result."
         }
       ]
     },
@@ -838,64 +846,68 @@
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:03:05:CIRCULAR-MOTION-FOUNDATIONS",
       "TitleProvenance": "PedagogicalSource",
-      "TitleSourceReference": "GCE AS and A level Mathematics subject content; Edulytics-authored scope sequence for Cambridge International A Level Mathematics (9709) / Component/route structure preserved in reference graph.",
-      "OutcomeCodes": [],
-      "IsSupporting": true,
+      "TitleSourceReference": "Edulytics-authored replacement lesson reviewed against official Cambridge identifier 4.3; official objective prose is not reproduced.",
+      "OutcomeCodes": [
+        "CAM:REF:9709:4.3"
+      ],
+      "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SourceLocator": "Cambridge International A Level Mathematics (9709) / Advanced Mechanics / 05",
+      "SourceLocator": "Official Cambridge identifier 4.3; Advanced Mechanics / 05",
       "SourceTitle": "GCE AS and A level Mathematics subject content",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "GCE AS/A level Mathematics subject content / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "6e424381d419f28a3b2a07efb27d23f0d3bcf663b2ad4388a98dd942bba3ed05",
-      "CanonicalBodySha256": "2baa9d1c0733676e929714199c5d73c8249a5b1964f341fa4ee0ee04962e3c63",
+      "CanonicalBodySha256": "78dc81754652e9c43ae77da35f121485f8a687881171af13d6c7a6b9828c8ad4",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Edulytics-authored replacement lesson aligned to verified official Cambridge identifier 4.3. Learner-facing prose is independently authored; official Cambridge objective prose is not stored.",
       "Translations": [
         {
           "CultureCode": "en",
-          "Title": "Circular motion foundations",
-          "Explanation": "Circular motion foundations is studied here as part of Cambridge International A Level Mathematics (9709) — Component/route structure preserved in reference graph. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Circular motion foundations. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: For 48+27, regroup as 48+20+7=75 and verify with 75-27=48. Worked example 2: For a quantity of 60 split equally into 5 groups, each group is 12; verify 5×12=60. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not select an operation from a keyword alone. Check units, magnitude and the original relationship before accepting an answer. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Circular motion foundations, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Title": "Momentum and impulse: modelling review",
+          "Explanation": "Momentum and impulse: modelling review develops using momentum and impulse in one-dimensional mechanics models. Represent the quantities clearly, choose a method that matches the mathematical structure, and explain why each step is valid. Connect symbolic work to a diagram, graph, table or contextual interpretation when useful, and finish with an independent reasonableness check.",
+          "KeyConceptsAndRules": "Focus: using momentum and impulse in one-dimensional mechanics models. Define the relevant quantities and relationships before calculating. Keep equivalent transformations explicit, use correct notation and units, and verify the result with a second representation, inverse relationship, boundary check or substitution whenever possible.",
+          "WorkedExamples": "Worked example: For a force acting over a time interval, relate impulse to change in momentum and keep the chosen positive direction consistent. Explain the mathematical relationship before calculating, then verify that the result is consistent with the original conditions.",
+          "StepByStepSolutions": "Step 1: Identify the known information and the quantity to be found. Step 2: Choose an appropriate representation. Step 3: State the rule or relationship being used. Step 4: Carry out the calculation with intermediate reasoning visible. Step 5: Check the result independently. Step 6: State the conclusion with its mathematical meaning and units where required.",
+          "CommonMistakes": "Do not select a procedure from a keyword alone. For using momentum and impulse in one-dimensional mechanics models, check that the conditions of the rule are satisfied, keep notation and units consistent, and test the final result against the original representation.",
+          "QuickSummary": "For using momentum and impulse in one-dimensional mechanics models, represent the relationship accurately, apply the correct rule, calculate carefully and verify the result."
         }
       ]
     },
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:03:06:EQUILIBRIUM-OF-RIGID-BODIES",
       "TitleProvenance": "PedagogicalSource",
-      "TitleSourceReference": "GCE AS and A level Mathematics subject content; Edulytics-authored scope sequence for Cambridge International A Level Mathematics (9709) / Component/route structure preserved in reference graph.",
-      "OutcomeCodes": [],
-      "IsSupporting": true,
+      "TitleSourceReference": "Edulytics-authored replacement lesson reviewed against official Cambridge identifier 4.1; official objective prose is not reproduced.",
+      "OutcomeCodes": [
+        "CAM:REF:9709:4.1"
+      ],
+      "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SourceLocator": "Cambridge International A Level Mathematics (9709) / Advanced Mechanics / 06",
+      "SourceLocator": "Official Cambridge identifier 4.1; Advanced Mechanics / 06",
       "SourceTitle": "GCE AS and A level Mathematics subject content",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "GCE AS/A level Mathematics subject content / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "6e424381d419f28a3b2a07efb27d23f0d3bcf663b2ad4388a98dd942bba3ed05",
-      "CanonicalBodySha256": "d2e0f3cd35452c4e1f5d2233293869aa8149b7297762b95544e6befc233156df",
+      "CanonicalBodySha256": "534adee56d009658861d5e8ab6cba65f3c683f4f4bca2eeeddab9d07cb8ce4c5",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Edulytics-authored replacement lesson aligned to verified official Cambridge identifier 4.1. Learner-facing prose is independently authored; official Cambridge objective prose is not stored.",
       "Translations": [
         {
           "CultureCode": "en",
-          "Title": "Equilibrium of rigid bodies",
-          "Explanation": "Equilibrium of rigid bodies is studied here as part of Cambridge International A Level Mathematics (9709) — Component/route structure preserved in reference graph. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Equilibrium of rigid bodies. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: For 48+27, regroup as 48+20+7=75 and verify with 75-27=48. Worked example 2: For a quantity of 60 split equally into 5 groups, each group is 12; verify 5×12=60. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not select an operation from a keyword alone. Check units, magnitude and the original relationship before accepting an answer. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Equilibrium of rigid bodies, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Title": "Forces and equilibrium: modelling review",
+          "Explanation": "Forces and equilibrium: modelling review develops resolving forces and applying equilibrium conditions to particle models. Represent the quantities clearly, choose a method that matches the mathematical structure, and explain why each step is valid. Connect symbolic work to a diagram, graph, table or contextual interpretation when useful, and finish with an independent reasonableness check.",
+          "KeyConceptsAndRules": "Focus: resolving forces and applying equilibrium conditions to particle models. Define the relevant quantities and relationships before calculating. Keep equivalent transformations explicit, use correct notation and units, and verify the result with a second representation, inverse relationship, boundary check or substitution whenever possible.",
+          "WorkedExamples": "Worked example: Resolve forces along chosen axes. For equilibrium, the resultant force is zero, so the component sums in each independent direction are zero. Explain the mathematical relationship before calculating, then verify that the result is consistent with the original conditions.",
+          "StepByStepSolutions": "Step 1: Identify the known information and the quantity to be found. Step 2: Choose an appropriate representation. Step 3: State the rule or relationship being used. Step 4: Carry out the calculation with intermediate reasoning visible. Step 5: Check the result independently. Step 6: State the conclusion with its mathematical meaning and units where required.",
+          "CommonMistakes": "Do not select a procedure from a keyword alone. For resolving forces and applying equilibrium conditions to particle models, check that the conditions of the rule are satisfied, keep notation and units consistent, and test the final result against the original representation.",
+          "QuickSummary": "For resolving forces and applying equilibrium conditions to particle models, represent the relationship accurately, apply the correct rule, calculate carefully and verify the result."
         }
       ]
     },
@@ -937,8 +949,14 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L13:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:03:08:MIXED-MECHANICS-MODELLING",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCE AS and A level Mathematics subject content; Edulytics-authored scope sequence for Cambridge International A Level Mathematics (9709) / Component/route structure preserved in reference graph.",
-      "OutcomeCodes": [],
-      "IsSupporting": true,
+      "OutcomeCodes": [
+        "CAM:REF:9709:4.1",
+        "CAM:REF:9709:4.2",
+        "CAM:REF:9709:4.3",
+        "CAM:REF:9709:4.4",
+        "CAM:REF:9709:4.5"
+      ],
+      "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
       "SourceLocator": "Cambridge International A Level Mathematics (9709) / Advanced Mechanics / 08",
       "SourceTitle": "GCE AS and A level Mathematics subject content",

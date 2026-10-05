@@ -40,9 +40,7 @@ public static class SupportingLessonPracticeContentCorrections
     private static bool PreservesReviewedRehearsalBody(
         CanonicalLessonContentPackDocument document,
         CanonicalLessonContentPackLesson lesson) =>
-        (document.PackCode == MathematicsCurriculumPackRegistry.CambridgeCode &&
-         (lesson.LessonCode.StartsWith("PED:CAMBRIDGE-INTL-MATH:L12:", StringComparison.Ordinal) ||
-          lesson.LessonCode.StartsWith("PED:CAMBRIDGE-INTL-MATH:L13:", StringComparison.Ordinal))) ||
+        document.PackCode == MathematicsCurriculumPackRegistry.CambridgeCode ||
         (document.PackCode == MathematicsCurriculumPackRegistry.UaeCode &&
          new[] { "L3:COMMON:", "L4:COMMON:", "L7:ADVANCED:", "L8:ADVANCED:", "L11:ADVANCED:", "L12:ADVANCED:" }
              .Any(scope => lesson.LessonCode.StartsWith("PED:UAE-MOE-MATH:" + scope, StringComparison.Ordinal)));
@@ -91,7 +89,9 @@ public static class SupportingLessonPracticeContentCorrections
 
             english.Explanation =
                 rule.Content.Concept + " " +
-                "This Supporting lesson remains pedagogical content and does not create or imply an official curriculum OutcomeCode.";
+                (lesson.OutcomeCodes.Count == 0
+                    ? "This Supporting lesson remains pedagogical content and does not create or imply an official curriculum OutcomeCode."
+                    : "This learner lesson has a reviewed official curriculum mapping; this Practice recipe does not create or alter that mapping.");
             english.KeyConceptsAndRules =
                 rule.Content.Concept;
             english.WorkedExamples =

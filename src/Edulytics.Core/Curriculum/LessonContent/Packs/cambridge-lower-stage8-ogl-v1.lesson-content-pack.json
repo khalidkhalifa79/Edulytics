@@ -25,13 +25,16 @@
   "PedagogicalSourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. Official curriculum wording is not reproduced.",
   "Status": "Published",
   "ReviewedBy": "Edulytics Phase 29 deterministic curriculum review",
-  "ReviewEvidence": "Scope CAMBRIDGE-INTL-MATH/L8/SHARED: 35 lessons, 4 units, academic language en, zero unverified formal mappings.",
+  "ReviewEvidence": "Scope CAMBRIDGE-INTL-MATH/L8/SHARED: 35 lessons, 4 units, academic language en, zero unverified formal mappings. Previously unmapped legacy enrichment was replaced in-place with independently authored lessons aligned to verified current Cambridge identifiers; lesson identities were preserved.",
   "Lessons": [
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:01:01:INTEGERS-AND-DIRECTED-NUMBER",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Ni.02",
+        "CAM:OUT:0862:8Ni.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Number and Proportional Reasoning / 01",
@@ -63,7 +66,11 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:01:02:FRACTIONS-AND-MIXED-NUMBERS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Nf.02",
+        "CAM:OUT:0862:8Nf.03",
+        "CAM:OUT:0862:8Nf.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Number and Proportional Reasoning / 02",
@@ -95,7 +102,11 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:01:03:DECIMALS-AND-ROUNDING",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Np.02",
+        "CAM:OUT:0862:8Nf.07",
+        "CAM:OUT:0862:8Nf.08"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Number and Proportional Reasoning / 03",
@@ -127,7 +138,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:01:04:PERCENTAGES",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Nf.05"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Number and Proportional Reasoning / 04",
@@ -159,7 +172,11 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:01:05:RATIO-AND-PROPORTION",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Nf.09",
+        "CAM:OUT:0862:8Nf.10",
+        "CAM:OUT:0862:8Nf.11"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Number and Proportional Reasoning / 05",
@@ -191,7 +208,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:01:06:RATES-AND-UNIT-RATES",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8As.07"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Number and Proportional Reasoning / 06",
@@ -223,7 +242,12 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:01:07:POWERS-AND-ROOTS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Ni.01",
+        "CAM:OUT:0862:8Ni.05",
+        "CAM:OUT:0862:8Ni.06",
+        "CAM:OUT:0862:8Ni.07"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Number and Proportional Reasoning / 07",
@@ -255,7 +279,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:01:08:STANDARD-FORM-AND-ESTIMATION",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Np.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Number and Proportional Reasoning / 08",
@@ -287,7 +313,12 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:02:01:ALGEBRAIC-EXPRESSIONS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Ae.01",
+        "CAM:OUT:0862:8Ae.02",
+        "CAM:OUT:0862:8Ae.03",
+        "CAM:OUT:0862:8Ae.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Algebra / 01",
@@ -319,7 +350,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:02:02:SUBSTITUTION",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Ae.05"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Algebra / 02",
@@ -351,7 +384,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:02:03:EXPANDING-BRACKETS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Ae.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Algebra / 03",
@@ -383,7 +418,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:02:04:FACTORISING-EXPRESSIONS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Ae.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Algebra / 04",
@@ -415,7 +452,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:02:05:LINEAR-EQUATIONS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Ae.06"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Algebra / 05",
@@ -447,7 +486,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:02:06:INEQUALITIES",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Ae.07"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Algebra / 06",
@@ -479,7 +520,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:02:07:SEQUENCES",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8As.01",
+        "CAM:OUT:0862:8As.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Algebra / 07",
@@ -511,7 +555,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:02:08:COORDINATES-AND-STRAIGHT-LINE-GRAPHS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8As.05",
+        "CAM:OUT:0862:8As.06"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Algebra / 08",
@@ -543,7 +590,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:02:09:SIMULTANEOUS-EQUATIONS-FOUNDATIONS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8As.07"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Algebra / 09",
@@ -575,7 +624,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:02:10:NON-LINEAR-SEQUENCES",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8As.01"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Algebra / 10",
@@ -607,7 +658,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:03:01:ANGLE-RELATIONSHIPS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Gg.10",
+        "CAM:OUT:0862:8Gg.11"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Geometry and Measure / 01",
@@ -639,7 +693,11 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:03:02:POLYGONS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Gg.01",
+        "CAM:OUT:0862:8Gg.09",
+        "CAM:OUT:0862:8Gg.10"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Geometry and Measure / 02",
@@ -671,7 +729,12 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:03:03:CONGRUENCE-AND-SIMILARITY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Gp.03",
+        "CAM:OUT:0862:8Gp.04",
+        "CAM:OUT:0862:8Gp.05",
+        "CAM:OUT:0862:8Gp.06"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Geometry and Measure / 03",
@@ -703,7 +766,12 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:03:04:TRANSFORMATIONS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Gp.03",
+        "CAM:OUT:0862:8Gp.04",
+        "CAM:OUT:0862:8Gp.05",
+        "CAM:OUT:0862:8Gp.06"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Geometry and Measure / 04",
@@ -735,7 +803,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:03:05:PERIMETER-AND-AREA",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Gg.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Geometry and Measure / 05",
@@ -767,7 +837,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:03:06:SURFACE-AREA-AND-VOLUME",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Gg.06",
+        "CAM:OUT:0862:8Gg.08"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Geometry and Measure / 06",
@@ -798,32 +871,34 @@
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:03:07:PYTHAGORAS-THEOREM",
       "TitleProvenance": "PedagogicalSource",
-      "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "TitleSourceReference": "Edulytics-authored replacement lesson reviewed against official Cambridge identifier 8Gp.02; official objective prose is not reproduced.",
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Gp.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SourceLocator": "Cambridge Lower Secondary Stage 8 / Geometry and Measure / 07",
+      "SourceLocator": "Official Cambridge identifier 8Gp.02; Geometry and Measure / 07",
       "SourceTitle": "National curriculum in England: Mathematics programmes of study — Key Stage 3",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "Key Stage 3 Mathematics programme of study / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "e4c5b2e18ba763441f3ac028e8547274fa85b63e97cd9615debafdc799ca010a",
-      "CanonicalBodySha256": "39b51ddec9a65070d53a8f0096c420a29ba14f7b355449683d5eaa0c39025be1",
+      "CanonicalBodySha256": "fb66ada49fb7bb8750158b64aa315d68807eecca87de7629daaf6708144b8241",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Edulytics-authored replacement lesson aligned to verified official Cambridge identifier 8Gp.02. Learner-facing prose is independently authored; official Cambridge objective prose is not stored.",
       "Translations": [
         {
           "CultureCode": "en",
-          "Title": "Pythagoras theorem",
-          "Explanation": "Pythagoras theorem is studied here as part of Cambridge Lower Secondary Stage 8. Right-triangle and trigonometric relationships connect side lengths and angles. Select a theorem from the information given and keep angle mode and units consistent. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Pythagoras theorem. Right-triangle and trigonometric relationships connect side lengths and angles. Select a theorem from the information given and keep angle mode and units consistent. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: A right triangle with legs 6 and 8 has hypotenuse √(36+64)=10. Worked example 2: If sin 30° = opposite/10, then opposite = 10×0.5 = 5. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not use Pythagoras on a non-right triangle. When using trigonometry, identify opposite, adjacent and hypotenuse relative to the chosen angle. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Pythagoras theorem, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Title": "Midpoint of a line segment",
+          "Explanation": "Midpoint of a line segment develops finding the midpoint of a line segment from its coordinates. Represent the quantities clearly, choose a method that matches the mathematical structure, and explain why each step is valid. Connect symbolic work to a diagram, graph, table or contextual interpretation when useful, and finish with an independent reasonableness check.",
+          "KeyConceptsAndRules": "Focus: finding the midpoint of a line segment from its coordinates. Define the relevant quantities and relationships before calculating. Keep equivalent transformations explicit, use correct notation and units, and verify the result with a second representation, inverse relationship, boundary check or substitution whenever possible.",
+          "WorkedExamples": "Worked example: The midpoint of (2,4) and (8,10) is ((2+8)/2,(4+10)/2)=(5,7). Check that it is equally distant in coordinate change from both endpoints. Explain the mathematical relationship before calculating, then verify that the result is consistent with the original conditions.",
+          "StepByStepSolutions": "Step 1: Identify the known information and the quantity to be found. Step 2: Choose an appropriate representation. Step 3: State the rule or relationship being used. Step 4: Carry out the calculation with intermediate reasoning visible. Step 5: Check the result independently. Step 6: State the conclusion with its mathematical meaning and units where required.",
+          "CommonMistakes": "Do not select a procedure from a keyword alone. For finding the midpoint of a line segment from its coordinates, check that the conditions of the rule are satisfied, keep notation and units consistent, and test the final result against the original representation.",
+          "QuickSummary": "For finding the midpoint of a line segment from its coordinates, represent the relationship accurately, apply the correct rule, calculate carefully and verify the result."
         }
       ]
     },
@@ -831,7 +906,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:03:08:CONSTRUCTIONS-AND-LOCI",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Gg.12"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Geometry and Measure / 08",
@@ -862,32 +939,34 @@
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:03:09:RIGHT-TRIANGLE-REASONING",
       "TitleProvenance": "PedagogicalSource",
-      "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "TitleSourceReference": "Edulytics-authored replacement lesson reviewed against official Cambridge identifier 8Gp.01; official objective prose is not reproduced.",
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Gp.01"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SourceLocator": "Cambridge Lower Secondary Stage 8 / Geometry and Measure / 09",
+      "SourceLocator": "Official Cambridge identifier 8Gp.01; Geometry and Measure / 09",
       "SourceTitle": "National curriculum in England: Mathematics programmes of study — Key Stage 3",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "Key Stage 3 Mathematics programme of study / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "e4c5b2e18ba763441f3ac028e8547274fa85b63e97cd9615debafdc799ca010a",
-      "CanonicalBodySha256": "1eb0dfc09fc69c88eeaebaff21e835129d09a5bc5469b1d2bf57623b547cdb4a",
+      "CanonicalBodySha256": "90f47091921f15e25c2b0abcea29459864ed7a52a648a67238682591928edebd",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Edulytics-authored replacement lesson aligned to verified official Cambridge identifier 8Gp.01. Learner-facing prose is independently authored; official Cambridge objective prose is not stored.",
       "Translations": [
         {
           "CultureCode": "en",
-          "Title": "Right-triangle reasoning",
-          "Explanation": "Right-triangle reasoning is studied here as part of Cambridge Lower Secondary Stage 8. Geometric conclusions follow from defined properties and angle relationships, not from appearance. Mark known information before applying a theorem. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Right-triangle reasoning. Geometric conclusions follow from defined properties and angle relationships, not from appearance. Mark known information before applying a theorem. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: If two angles of a triangle are 50° and 60°, the third is 180°-110°=70°. Worked example 2: A quadrilateral has interior angle sum 360°; if three angles total 285°, the fourth is 75°. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not assume a diagram is to scale. State the property or theorem that justifies each step. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Right-triangle reasoning, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Title": "Bearings and direction",
+          "Explanation": "Bearings and direction develops using three-figure bearings to describe direction. Represent the quantities clearly, choose a method that matches the mathematical structure, and explain why each step is valid. Connect symbolic work to a diagram, graph, table or contextual interpretation when useful, and finish with an independent reasonableness check.",
+          "KeyConceptsAndRules": "Focus: using three-figure bearings to describe direction. Define the relevant quantities and relationships before calculating. Keep equivalent transformations explicit, use correct notation and units, and verify the result with a second representation, inverse relationship, boundary check or substitution whenever possible.",
+          "WorkedExamples": "Worked example: A bearing is measured clockwise from north. A direction 65 degrees clockwise from north is written 065 degrees. Explain the mathematical relationship before calculating, then verify that the result is consistent with the original conditions.",
+          "StepByStepSolutions": "Step 1: Identify the known information and the quantity to be found. Step 2: Choose an appropriate representation. Step 3: State the rule or relationship being used. Step 4: Carry out the calculation with intermediate reasoning visible. Step 5: Check the result independently. Step 6: State the conclusion with its mathematical meaning and units where required.",
+          "CommonMistakes": "Do not select a procedure from a keyword alone. For using three-figure bearings to describe direction, check that the conditions of the rule are satisfied, keep notation and units consistent, and test the final result against the original representation.",
+          "QuickSummary": "For using three-figure bearings to describe direction, represent the relationship accurately, apply the correct rule, calculate carefully and verify the result."
         }
       ]
     },
@@ -895,7 +974,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:04:01:COLLECTING-DATA",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Ss.01",
+        "CAM:OUT:0862:8Ss.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Statistics and Probability / 01",
@@ -927,7 +1009,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:04:02:TABLES-AND-CHARTS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Ss.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Statistics and Probability / 02",
@@ -959,7 +1043,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:04:03:MEAN-MEDIAN-AND-RANGE",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Ss.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Statistics and Probability / 03",
@@ -991,7 +1077,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:04:04:SCATTER-GRAPHS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Ss.03",
+        "CAM:OUT:0862:8Ss.05"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Statistics and Probability / 04",
@@ -1023,7 +1112,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:04:05:EXPERIMENTAL-PROBABILITY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Sp.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Statistics and Probability / 05",
@@ -1055,7 +1146,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:04:06:THEORETICAL-PROBABILITY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Sp.02",
+        "CAM:OUT:0862:8Sp.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Statistics and Probability / 06",
@@ -1087,7 +1181,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:04:07:SAMPLE-SPACES",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Sp.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Statistics and Probability / 07",
@@ -1119,7 +1215,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L8:SHARED:04:08:COMPARING-DISTRIBUTIONS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 8.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:8Ss.04",
+        "CAM:OUT:0862:8Ss.05"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 8 / Statistics and Probability / 08",

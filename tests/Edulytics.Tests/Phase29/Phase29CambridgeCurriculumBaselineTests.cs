@@ -262,8 +262,11 @@ public sealed class Phase29CambridgeCurriculumBaselineTests
         Assert.Equal(397, laterScopes.Length);
 
         var stageOneIds = stageOne.Select(x => x.Id).ToArray();
-        var non9709SupportingIds = stagesTwoToSix
-            .Concat(laterScopes.Where(x => x.LogicalLevelFrom <= 11))
+        var stagesTwoToSixIds = stagesTwoToSix
+            .Select(x => x.Id)
+            .ToArray();
+        var lowerAndIgcseIds = laterScopes
+            .Where(x => x.LogicalLevelFrom <= 11)
             .Select(x => x.Id)
             .ToArray();
         var advanced9709Ids = laterScopes
@@ -281,22 +284,71 @@ public sealed class Phase29CambridgeCurriculumBaselineTests
         Assert.Equal(36, mappings.Length);
         Assert.Equal(36, mappings.Distinct(StringComparer.Ordinal).Count());
         Assert.All(mappings, code => Assert.StartsWith("CAM:OUT:0096:1", code, StringComparison.Ordinal));
-        Assert.False(
-            await db.CurriculumPedagogicalLessonOutcomes.AnyAsync(
-                x => x.FrameworkVersionId == state.FrameworkVersionId &&
-                     non9709SupportingIds.Contains(x.PedagogicalLessonId)));
+
+        var primaryMappings = await (
+            from mapping in db.CurriculumPedagogicalLessonOutcomes
+            join node in db.CurriculumPackContentNodes on mapping.OutcomeNodeId equals node.Id
+            where mapping.FrameworkVersionId == state.FrameworkVersionId &&
+                  stagesTwoToSixIds.Contains(mapping.PedagogicalLessonId)
+            select new { mapping.PedagogicalLessonId, node.Code }).ToArrayAsync();
+
+        Assert.Equal(200, primaryMappings.Length);
+        Assert.Equal(
+            142,
+            primaryMappings
+                .Select(x => x.PedagogicalLessonId)
+                .Distinct()
+                .Count());
+        Assert.All(
+            primaryMappings,
+            x => Assert.StartsWith("CAM:OUT:0096:", x.Code, StringComparison.Ordinal));
+
+        var lowerAndIgcseMappings = await (
+            from mapping in db.CurriculumPedagogicalLessonOutcomes
+            join node in db.CurriculumPackContentNodes on mapping.OutcomeNodeId equals node.Id
+            where mapping.FrameworkVersionId == state.FrameworkVersionId &&
+                  lowerAndIgcseIds.Contains(mapping.PedagogicalLessonId)
+            select new { mapping.PedagogicalLessonId, node.Code }).ToArrayAsync();
+
+        Assert.Equal(665, lowerAndIgcseMappings.Length);
+        Assert.Equal(
+            340,
+            lowerAndIgcseMappings
+                .Select(x => x.PedagogicalLessonId)
+                .Distinct()
+                .Count());
+        Assert.All(
+            lowerAndIgcseMappings,
+            x => Assert.True(
+                x.Code.StartsWith("CAM:OUT:0862:", StringComparison.Ordinal) ||
+                x.Code.StartsWith("CAM:OUT:0580:", StringComparison.Ordinal)));
 
         var advancedMappings = await (
             from mapping in db.CurriculumPedagogicalLessonOutcomes
             join node in db.CurriculumPackContentNodes on mapping.OutcomeNodeId equals node.Id
             where mapping.FrameworkVersionId == state.FrameworkVersionId &&
                   advanced9709Ids.Contains(mapping.PedagogicalLessonId)
-            select node.Code).ToArrayAsync();
+            select new { mapping.PedagogicalLessonId, node.Code }).ToArrayAsync();
 
-        Assert.Equal(49, advancedMappings.Length);
+        Assert.Equal(61, advancedMappings.Length);
+        Assert.Equal(
+            57,
+            advancedMappings
+                .Select(x => x.PedagogicalLessonId)
+                .Distinct()
+                .Count());
         Assert.All(
             advancedMappings,
-            code => Assert.StartsWith("CAM:REF:9709:", code, StringComparison.Ordinal));
+            x => Assert.StartsWith("CAM:REF:9709:", x.Code, StringComparison.Ordinal));
+
+        var mappedLessonIds = await db.CurriculumPedagogicalLessonOutcomes
+            .Where(x => x.FrameworkVersionId == state.FrameworkVersionId)
+            .Select(x => x.PedagogicalLessonId)
+            .Distinct()
+            .ToArrayAsync();
+
+        Assert.Equal(566, mappedLessonIds.Length);
+        Assert.Equal(0, lessons.Count(x => !mappedLessonIds.Contains(x.Id)));
 
         Assert.False(
             await db.CurriculumPedagogicalLessons.AnyAsync(

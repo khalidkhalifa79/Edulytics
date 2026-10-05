@@ -17,7 +17,7 @@
   "SourceLicense": "Open Government Licence v3.0",
   "RequiredDigitalAttribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
   "SourceSelectionReason": "The official curriculum source remains the academic authority. Edulytics uses open DfE Mathematics material only as lawful pedagogical scaffolding for independently authored lesson explanations where official copyrighted or source-linked prose is not reproduced.",
-  "SourceSelectionEvidence": "This scope contains 32 Edulytics-authored supporting lessons across 4 units. No formal outcome mapping is claimed without explicit source evidence; every formal OutcomeCodes collection is empty.",
+  "SourceSelectionEvidence": "Official Cambridge identifiers remain reference-only. Formal mappings in this blueprint were source-audited against the current Cambridge framework/syllabus; learner-facing pedagogy remains independently authored from lawful open sources and Cambridge objective prose is not reproduced. Unmapped legacy enrichment that did not fit the current Cambridge stage or syllabus was replaced in-place with independently authored source-aligned lessons while preserving stable lesson identities.",
   "SourceEvidenceUrls": [
     "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-lower-secondary/curriculum/mathematics/",
     "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
@@ -28,13 +28,13 @@
   "AcquisitionDiagnostics": {
     "UnitCount": 4,
     "LessonCount": 32,
-    "OfficialStandardCount": 0,
-    "AddressingCoverageCount": 0,
-    "FormalMappingCount": 0,
-    "LessonsWithoutNumberedGradeReferenceAnyRole": 32,
-    "LessonsWithoutNumberedAddressingStandard": 32,
-    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 32,
-    "MultiStandardLessons": 0
+    "OfficialStandardCount": 47,
+    "AddressingCoverageCount": 47,
+    "FormalMappingCount": 57,
+    "LessonsWithoutNumberedGradeReferenceAnyRole": 0,
+    "LessonsWithoutNumberedAddressingStandard": 0,
+    "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 0,
+    "MultiStandardLessons": 17
   },
   "Units": [
     {
@@ -85,8 +85,28 @@
       "SortOrder": 1,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "12ccac14a4e9f4ef00c47e64999f193c64c4bd190daac0a35a575246b292d24c",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Ni.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Ni.01",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Ni.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Ni.03",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Ni.01",
+        "CAM:OUT:0862:7Ni.03"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -102,8 +122,37 @@
       "SortOrder": 2,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "fee31b3f4cdf2e89db339f1848c42dfab1d7d50bb459b20b086458c2bfcd04b4",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Nf.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Nf.02",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Nf.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Nf.03",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Nf.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Nf.04",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Nf.02",
+        "CAM:OUT:0862:7Nf.03",
+        "CAM:OUT:0862:7Nf.04"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -119,8 +168,37 @@
       "SortOrder": 3,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "d212bad596d73e18a7f6f6e285178bd1ec74ce1b8df340a00f39f7de37a39fd3",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Np.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Np.02",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Nf.07",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Nf.07",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Nf.08",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Nf.08",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Np.02",
+        "CAM:OUT:0862:7Nf.07",
+        "CAM:OUT:0862:7Nf.08"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -136,8 +214,19 @@
       "SortOrder": 4,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "a24c7fc528840b1734fb6d7da9188302c1971daa0c768709b94f71a8122c86c7",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Nf.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Nf.01",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Nf.01"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -153,8 +242,37 @@
       "SortOrder": 5,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "ac91d140c2b67362ab9607b7a00ba6f2c3ffcaa19d710ffcfd371da0570853bf",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Nf.09",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Nf.09",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Nf.10",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Nf.10",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Nf.11",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Nf.11",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Nf.09",
+        "CAM:OUT:0862:7Nf.10",
+        "CAM:OUT:0862:7Nf.11"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -170,8 +288,19 @@
       "SortOrder": 6,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "fb50ab1ca6c2a8891b59799abe8727d456ae07e8d4f9f0ca105891a415d10c63",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Nf.09",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Nf.09",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Nf.09"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -187,8 +316,28 @@
       "SortOrder": 7,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "6ab5897a8c2913f8a2b1640b780f87f3301bec561aaaa175825a9f12ea89f0f2",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Ni.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Ni.02",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Ni.06",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Ni.06",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Ni.02",
+        "CAM:OUT:0862:7Ni.06"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -204,8 +353,19 @@
       "SortOrder": 8,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "41aec2be2d0db5eb7335b22e253a331fdd71c23ffb5b82e3bcee19c693b00bb7",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Np.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Np.02",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Np.02"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -221,8 +381,46 @@
       "SortOrder": 9,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "02c31c7130b7a2c9927c4f54e5712c49759fca9c9df370c858b6215d824e6d54",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Ae.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Ae.01",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Ae.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Ae.02",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Ae.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Ae.03",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Ae.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Ae.04",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Ae.01",
+        "CAM:OUT:0862:7Ae.02",
+        "CAM:OUT:0862:7Ae.03",
+        "CAM:OUT:0862:7Ae.04"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -238,8 +436,19 @@
       "SortOrder": 10,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "e0b1dc8fe4ccc247947785e2100068aeaea2290ecfd4a5fc60a30d3c3662274c",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Ae.05",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Ae.05",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Ae.05"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -255,8 +464,19 @@
       "SortOrder": 11,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "c1fc3e0615c8f338b2ab7fa0262d05f3cfeb63282afed1b977220b599c9e8fe5",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Ae.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Ae.03",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Ae.03"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -272,8 +492,19 @@
       "SortOrder": 12,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "5021e10ccf659ce3d58cba246953dfa245431587d5a0f006898924f76e116b0f",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Ae.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Ae.03",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Ae.03"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -289,8 +520,19 @@
       "SortOrder": 13,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "7e8eaa0481cd1e70e82ccd685de2209b28f51f80ed9de68ceb59a427f876a03b",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Ae.06",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Ae.06",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Ae.06"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -306,8 +548,19 @@
       "SortOrder": 14,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "011ed760a971e66833149534985b52bfdbb3691f685f6393d7848dee4a1205d4",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Ae.07",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Ae.07",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Ae.07"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -323,8 +576,28 @@
       "SortOrder": 15,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "aed1e7af1a5b05590d50d623d119a6be8d7f0886c4ffcc363cccf8747d74fe69",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7As.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7As.01",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7As.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7As.02",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7As.01",
+        "CAM:OUT:0862:7As.02"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -340,8 +613,28 @@
       "SortOrder": 16,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "d932200e6b0f205c11a745e3ac64792e0f44c2899f9fefe7eaf7abaeb1756d3b",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7As.05",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7As.05",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7As.06",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7As.06",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7As.05",
+        "CAM:OUT:0862:7As.06"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -357,8 +650,37 @@
       "SortOrder": 17,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "4a630b24d94627e77a1443bc2d9a200a22d3f59c592122a9fa51616cb9fc144e",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Gg.11",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Gg.11",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Gg.12",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Gg.12",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Gg.13",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Gg.13",
+          "SortOrder": 3
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Gg.11",
+        "CAM:OUT:0862:7Gg.12",
+        "CAM:OUT:0862:7Gg.13"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -374,8 +696,28 @@
       "SortOrder": 18,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "7486aeace0ad7d601983584a13ac0092b53897237167b202803515744085da58",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Gg.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Gg.01",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Gg.11",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Gg.11",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Gg.01",
+        "CAM:OUT:0862:7Gg.11"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -391,8 +733,28 @@
       "SortOrder": 19,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "1b7852221d845eb5dc14451bfa737496c507f33638e6f37bad45fc822ac79f25",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Gg.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Gg.02",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Gp.06",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Gp.06",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Gg.02",
+        "CAM:OUT:0862:7Gp.06"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -408,8 +770,46 @@
       "SortOrder": 20,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "8225ffca0f6502e412b0072ab22c87cf49bf3d41c4c3d9ea3b0fb691f387881d",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Gp.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Gp.03",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Gp.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Gp.04",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Gp.05",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Gp.05",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Gp.06",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Gp.06",
+          "SortOrder": 4
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Gp.03",
+        "CAM:OUT:0862:7Gp.04",
+        "CAM:OUT:0862:7Gp.05",
+        "CAM:OUT:0862:7Gp.06"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -425,8 +825,19 @@
       "SortOrder": 21,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "11bf5fe007a5b85e6ea5ac10edf8464495840d037c1ce6471925307da246cb8b",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Gg.05",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Gg.05",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Gg.05"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -442,8 +853,28 @@
       "SortOrder": 22,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "b35ee6f912351e673d3d01d3b2e2e6083ebc29197ae3dc489a763928f695db51",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Gg.07",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Gg.07",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Gg.09",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Gg.09",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Gg.07",
+        "CAM:OUT:0862:7Gg.09"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -455,12 +886,23 @@
       "UnitNumber": 3,
       "UnitTitle": "Geometry and Measure",
       "LessonNumber": 7,
-      "Title": "Pythagoras theorem",
+      "Title": "Coordinate distance on horizontal and vertical lines",
       "SortOrder": 23,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SemanticSha256": "d07f9bdf65186dd6cf3405ec2856011e9ff80f339a7876b9d020d49169d09988",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "SemanticSha256": "3ab249cdbc91f8304e7511d3413452c69e59dad9c28d3b201584e911169811e4",
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Gp.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Gp.02",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Gp.02"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -476,8 +918,19 @@
       "SortOrder": 24,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "043d301739d607995f405405e1b53c64a00b869e4ec04e0188916cdb47afa996",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Gg.14",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Gg.14",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Gg.14"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -493,8 +946,28 @@
       "SortOrder": 25,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "840de1898febbe28ad3539bf0713c52566dc8dff798af3999fbd7626f6e260ec",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Ss.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Ss.01",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Ss.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Ss.02",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Ss.01",
+        "CAM:OUT:0862:7Ss.02"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -510,8 +983,19 @@
       "SortOrder": 26,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "3a6d44719c796507402979611982d1d34977f43937442c003ebfa1679a257d2f",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Ss.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Ss.03",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Ss.03"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -527,8 +1011,19 @@
       "SortOrder": 27,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "7f11bc40e29b01241ef472dcabf05845c07ba2d08e7f4a3bbdc1e7056b42f689",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Ss.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Ss.04",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Ss.04"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -544,8 +1039,28 @@
       "SortOrder": 28,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "05c1dfe7e1c52d4d474d5414f4507ef9b24b054ce47d44d2af18b2a04aeba33d",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Ss.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Ss.03",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Ss.05",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Ss.05",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Ss.03",
+        "CAM:OUT:0862:7Ss.05"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -561,8 +1076,19 @@
       "SortOrder": 29,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "393b3081a3181c79e775be2a00a36f24ad6fcfcd1e1225c118c535257f6a5a4c",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Sp.05",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Sp.05",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Sp.05"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -578,8 +1104,28 @@
       "SortOrder": 30,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "1c7ea2861279316bc083b261edd97830173af7bb1eb6b7ba906c23f9c3b563fd",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Sp.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Sp.03",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Sp.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Sp.04",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Sp.03",
+        "CAM:OUT:0862:7Sp.04"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -595,8 +1141,19 @@
       "SortOrder": 31,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "c6d64fb5bbd1f7d5d6bf2532c52e2a777643c6ae9d8eb7695ee98ef6a4b05fb1",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Sp.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Sp.03",
+          "SortOrder": 1
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Sp.03"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],
@@ -612,8 +1169,28 @@
       "SortOrder": 32,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SemanticSha256": "9308f3f8e5f50788bcdc81faefac4a47b66fd5233e256f754f0a3a18cfa6caaf",
-      "Alignments": [],
-      "OutcomeCodes": [],
+      "Alignments": [
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Ss.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Ss.04",
+          "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "7Ss.05",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0862:7Ss.05",
+          "SortOrder": 2
+        }
+      ],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:7Ss.04",
+        "CAM:OUT:0862:7Ss.05"
+      ],
       "ApplicableCourses": [
         "CAMBRIDGE-LOWER-STAGE7-OGL-V1"
       ],

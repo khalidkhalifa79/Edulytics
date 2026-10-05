@@ -31,8 +31,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L12:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:01:01:ALGEBRAIC-MANIPULATION",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCE AS and A level Mathematics subject content; Edulytics-authored scope sequence for Cambridge International AS Level Mathematics (9709) / Component/route structure preserved in reference graph.",
-      "OutcomeCodes": [],
-      "IsSupporting": true,
+      "OutcomeCodes": [
+        "CAM:REF:9709:1.1"
+      ],
+      "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
       "SourceLocator": "Cambridge International AS Level Mathematics (9709) / Pure Mathematics / 01",
       "SourceTitle": "GCE AS and A level Mathematics subject content",

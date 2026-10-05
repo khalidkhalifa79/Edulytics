@@ -25,13 +25,15 @@
   "PedagogicalSourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. Official curriculum wording is not reproduced.",
   "Status": "Published",
   "ReviewedBy": "Edulytics Phase 29 deterministic curriculum review",
-  "ReviewEvidence": "Scope CAMBRIDGE-INTL-MATH/L11/Core: 48 lessons, 9 units, academic language en, zero unverified formal mappings.",
+  "ReviewEvidence": "Scope CAMBRIDGE-INTL-MATH/L11/Core: 48 lessons, 9 units, academic language en, zero unverified formal mappings. Previously unmapped legacy enrichment was replaced in-place with independently authored lessons aligned to verified current Cambridge identifiers; lesson identities were preserved.",
   "Lessons": [
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:01:01:CONSOLIDATING-INTEGERS-AND-ORDER-OF-OPERATIONS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C1.6"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Number / 01",
@@ -63,7 +65,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:01:02:CONSOLIDATING-FRACTIONS-AND-DECIMALS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C1.4.1",
+        "CAM:OUT:0580:C1.4.2"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Number / 02",
@@ -95,7 +100,12 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:01:03:CONSOLIDATING-PERCENTAGES",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C1.13.1",
+        "CAM:OUT:0580:C1.13.2",
+        "CAM:OUT:0580:C1.13.3",
+        "CAM:OUT:0580:C1.13.4"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Number / 03",
@@ -127,7 +137,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:01:04:CONSOLIDATING-RATIO-AND-PROPORTION",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C1.11"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Number / 04",
@@ -159,7 +171,11 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:01:05:CONSOLIDATING-STANDARD-FORM",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C1.8.1",
+        "CAM:OUT:0580:C1.8.2",
+        "CAM:OUT:0580:C1.8.3"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Number / 05",
@@ -191,7 +207,12 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:01:06:CONSOLIDATING-APPROXIMATION-AND-BOUNDS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C1.9.1",
+        "CAM:OUT:0580:C1.9.2",
+        "CAM:OUT:0580:C1.9.3",
+        "CAM:OUT:0580:C1.10"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Number / 06",
@@ -223,7 +244,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:01:07:CONSOLIDATING-RATES",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C1.12.1",
+        "CAM:OUT:0580:C1.12.3"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Number / 07",
@@ -255,7 +279,11 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:01:08:CONSOLIDATING-MONEY-AND-COMPOUND-MEASURES",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C1.12.2",
+        "CAM:OUT:0580:C1.16.1",
+        "CAM:OUT:0580:C1.16.2"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Number / 08",
@@ -287,7 +315,11 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:02:01:CONSOLIDATING-ALGEBRAIC-MANIPULATION",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C2.2.1",
+        "CAM:OUT:0580:C2.2.2",
+        "CAM:OUT:0580:C2.2.3"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Algebra / 01",
@@ -319,7 +351,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:02:02:CONSOLIDATING-LINEAR-EQUATIONS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C2.5.2"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Algebra / 02",
@@ -351,7 +385,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:02:03:CONSOLIDATING-SIMULTANEOUS-LINEAR-EQUATIONS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C2.5.2"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Algebra / 03",
@@ -383,7 +419,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:02:04:CONSOLIDATING-INEQUALITIES",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C2.6"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Algebra / 04",
@@ -415,7 +453,11 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:02:05:CONSOLIDATING-SEQUENCES",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C2.7.1",
+        "CAM:OUT:0580:C2.7.2",
+        "CAM:OUT:0580:C2.7.3"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Algebra / 05",
@@ -447,7 +489,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:02:06:CONSOLIDATING-FUNCTIONS-AND-NOTATION",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C2.10.1"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Algebra / 06",
@@ -479,7 +523,11 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:02:07:CONSOLIDATING-STRAIGHT-LINE-GRAPHS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C3.2",
+        "CAM:OUT:0580:C3.5",
+        "CAM:OUT:0580:C3.6"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Algebra / 07",
@@ -511,7 +559,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:02:08:CONSOLIDATING-QUADRATIC-EXPRESSIONS-AND-EQUATIONS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C2.5.1"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Algebra / 08",
@@ -543,7 +593,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:03:01:CONSOLIDATING-GRADIENT",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C3.3"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Coordinate Geometry / 01",
@@ -575,7 +627,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:03:02:CONSOLIDATING-EQUATION-OF-A-LINE",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C3.5",
+        "CAM:OUT:0580:C3.6"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Coordinate Geometry / 02",
@@ -607,7 +662,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:03:03:CONSOLIDATING-PARALLEL-AND-PERPENDICULAR-LINES",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C3.6"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Coordinate Geometry / 03",
@@ -639,7 +696,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:03:04:CONSOLIDATING-MIDPOINT-AND-DISTANCE",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C3.1"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Coordinate Geometry / 04",
@@ -671,7 +730,11 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:04:01:CONSOLIDATING-ANGLE-FACTS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C4.6.1",
+        "CAM:OUT:0580:C4.6.2",
+        "CAM:OUT:0580:C4.6.3"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Geometry / 01",
@@ -703,7 +766,11 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:04:02:CONSOLIDATING-POLYGONS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C4.1.1",
+        "CAM:OUT:0580:C4.1.2",
+        "CAM:OUT:0580:C4.1.3"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Geometry / 02",
@@ -735,7 +802,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:04:03:CONSOLIDATING-SIMILARITY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C4.4"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Geometry / 03",
@@ -767,7 +836,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:04:04:CONSOLIDATING-CONGRUENCE",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C4.1.1",
+        "CAM:OUT:0580:C4.1.2"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Geometry / 04",
@@ -799,7 +871,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:04:05:CONSOLIDATING-CIRCLE-GEOMETRY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C4.7"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Geometry / 05",
@@ -831,7 +905,12 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:04:06:CONSOLIDATING-TRANSFORMATIONS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C7.1.1",
+        "CAM:OUT:0580:C7.1.2",
+        "CAM:OUT:0580:C7.1.3",
+        "CAM:OUT:0580:C7.1.4"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Geometry / 06",
@@ -863,7 +942,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:05:01:CONSOLIDATING-PERIMETER-AND-AREA",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C5.2"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Mensuration / 01",
@@ -895,7 +976,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:05:02:CONSOLIDATING-CIRCLE-MEASURES",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C5.3.1",
+        "CAM:OUT:0580:C5.3.2"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Mensuration / 02",
@@ -927,7 +1011,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:05:03:CONSOLIDATING-SURFACE-AREA",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C5.4"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Mensuration / 03",
@@ -959,7 +1045,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:05:04:CONSOLIDATING-VOLUME",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C5.4"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Mensuration / 04",
@@ -991,7 +1079,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:05:05:CONSOLIDATING-COMPOUND-SHAPES",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C5.5.1",
+        "CAM:OUT:0580:C5.5.2"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Mensuration / 05",
@@ -1023,7 +1114,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:06:01:CONSOLIDATING-PYTHAGORAS-THEOREM",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C6.1"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Trigonometry / 01",
@@ -1055,7 +1148,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:06:02:CONSOLIDATING-SINE-COSINE-AND-TANGENT",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C6.2.1",
+        "CAM:OUT:0580:C6.2.2"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Trigonometry / 02",
@@ -1087,7 +1183,11 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:06:03:CONSOLIDATING-BEARINGS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C4.3.1",
+        "CAM:OUT:0580:C4.3.2",
+        "CAM:OUT:0580:C6.2.2"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Trigonometry / 03",
@@ -1119,7 +1219,11 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:06:04:CONSOLIDATING-THREE-DIMENSIONAL-PROBLEMS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C5.4",
+        "CAM:OUT:0580:C5.5.1",
+        "CAM:OUT:0580:C5.5.2"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Trigonometry / 04",
@@ -1151,7 +1255,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:07:01:CONSOLIDATING-VECTOR-NOTATION",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C7.1.4"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Vectors and Transformations / 01",
@@ -1182,32 +1288,34 @@
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:07:02:CONSOLIDATING-VECTOR-ARITHMETIC",
       "TitleProvenance": "PedagogicalSource",
-      "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "TitleSourceReference": "Edulytics-authored replacement lesson reviewed against official Cambridge identifier C4.5; official objective prose is not reproduced.",
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C4.5"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Vectors and Transformations / 02",
+      "SourceLocator": "Official Cambridge identifier C4.5; Vectors and Transformations / 02",
       "SourceTitle": "GCSE Mathematics subject content and assessment objectives",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "GCSE Mathematics subject content / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "08a1f8ed562e2b0311365154a550fbab21bd408ab5dd651cdcb97f840e529e39",
-      "CanonicalBodySha256": "9befb5c5fd0050eb4f23f74d9bfe0ace760a97c240282f22ea9d164d9b9eff6b",
+      "CanonicalBodySha256": "f9e5587a60bab7bb41f7db1c8ff97921eb4862822ac9f576770f40c76d085a35",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Edulytics-authored replacement lesson aligned to verified official Cambridge identifier C4.5. Learner-facing prose is independently authored; official Cambridge objective prose is not stored.",
       "Translations": [
         {
           "CultureCode": "en",
-          "Title": "Consolidating Vector arithmetic",
-          "Explanation": "Consolidating Vector arithmetic is studied here as part of Cambridge IGCSE Mathematics (0580) — Core. Vectors have magnitude and direction and can be represented by components. Addition and scalar multiplication operate component by component. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Consolidating Vector arithmetic. Vectors have magnitude and direction and can be represented by components. Addition and scalar multiplication operate component by component. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: (2,3)+(1,-1)=(3,2). Worked example 2: 2(3,-4)=(6,-8). In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not treat a vector as a scalar. Keep component order consistent and distinguish position vectors from lengths. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Consolidating Vector arithmetic, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Title": "Consolidating Symmetry",
+          "Explanation": "Consolidating Symmetry develops consolidating line and rotational symmetry in plane figures. Represent the quantities clearly, choose a method that matches the mathematical structure, and explain why each step is valid. Connect symbolic work to a diagram, graph, table or contextual interpretation when useful, and finish with an independent reasonableness check.",
+          "KeyConceptsAndRules": "Focus: consolidating line and rotational symmetry in plane figures. Define the relevant quantities and relationships before calculating. Keep equivalent transformations explicit, use correct notation and units, and verify the result with a second representation, inverse relationship, boundary check or substitution whenever possible.",
+          "WorkedExamples": "Worked example: Classify the symmetries of a regular hexagon, then justify each line of symmetry and its rotational order. Explain the mathematical relationship before calculating, then verify that the result is consistent with the original conditions.",
+          "StepByStepSolutions": "Step 1: Identify the known information and the quantity to be found. Step 2: Choose an appropriate representation. Step 3: State the rule or relationship being used. Step 4: Carry out the calculation with intermediate reasoning visible. Step 5: Check the result independently. Step 6: State the conclusion with its mathematical meaning and units where required.",
+          "CommonMistakes": "Do not select a procedure from a keyword alone. For consolidating line and rotational symmetry in plane figures, check that the conditions of the rule are satisfied, keep notation and units consistent, and test the final result against the original representation.",
+          "QuickSummary": "For consolidating line and rotational symmetry in plane figures, represent the relationship accurately, apply the correct rule, calculate carefully and verify the result."
         }
       ]
     },
@@ -1215,7 +1323,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:07:03:CONSOLIDATING-TRANSLATIONS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C7.1.1"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Vectors and Transformations / 03",
@@ -1247,7 +1357,11 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:07:04:CONSOLIDATING-ROTATIONS-REFLECTIONS-AND-ENLARGEMENTS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C7.1.2",
+        "CAM:OUT:0580:C7.1.3",
+        "CAM:OUT:0580:C7.1.4"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Vectors and Transformations / 04",
@@ -1279,7 +1393,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:08:01:CONSOLIDATING-SINGLE-EVENT-PROBABILITY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C8.1.2"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Probability / 01",
@@ -1311,7 +1427,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:08:02:CONSOLIDATING-COMBINED-EVENTS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C8.3"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Probability / 02",
@@ -1343,7 +1461,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:08:03:CONSOLIDATING-TREE-DIAGRAMS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C8.3"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Probability / 03",
@@ -1375,7 +1495,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:08:04:CONSOLIDATING-EXPECTED-FREQUENCY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C8.2.2"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Probability / 04",
@@ -1407,7 +1529,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:09:01:CONSOLIDATING-STATISTICAL-DIAGRAMS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C9.4"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Statistics / 01",
@@ -1439,7 +1563,11 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:09:02:CONSOLIDATING-AVERAGES-AND-SPREAD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C9.2.1",
+        "CAM:OUT:0580:C9.2.2",
+        "CAM:OUT:0580:C9.2.3"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Statistics / 02",
@@ -1471,7 +1599,11 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:09:03:CONSOLIDATING-GROUPED-DATA",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C9.2.1",
+        "CAM:OUT:0580:C9.2.2",
+        "CAM:OUT:0580:C9.2.3"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Statistics / 03",
@@ -1503,7 +1635,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:09:04:CONSOLIDATING-CUMULATIVE-FREQUENCY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C9.3"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Statistics / 04",
@@ -1535,7 +1669,11 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L11:CORE:09:05:CONSOLIDATING-SCATTER-DIAGRAMS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCSE Mathematics subject content and assessment objectives; Edulytics-authored scope sequence for Cambridge IGCSE Mathematics (0580) / Core.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0580:C9.5.1",
+        "CAM:OUT:0580:C9.5.2",
+        "CAM:OUT:0580:C9.5.3"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
       "SourceLocator": "Cambridge IGCSE Mathematics (0580) / Statistics / 05",

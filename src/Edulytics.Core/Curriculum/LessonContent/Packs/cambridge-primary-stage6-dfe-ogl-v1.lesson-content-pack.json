@@ -25,13 +25,16 @@
   "PedagogicalSourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. No government logos or identified third-party copyright material is reproduced.",
   "Status": "Published",
   "ReviewedBy": "Edulytics Phase 29 deterministic Cambridge Primary source-policy review",
-  "ReviewEvidence": "Stage 6: 12 DfE ready-to-progress criteria, 24 supporting lessons, English academic bodies, zero unverified Cambridge formal mappings, source SHA256 e6951bfe5a90242787c9c1e4026a86c597be1b3461e99298c7164234fb986f56.",
+  "ReviewEvidence": "Stage 6: 12 DfE ready-to-progress criteria, 24 supporting lessons, English academic bodies, zero unverified Cambridge formal mappings, source SHA256 e6951bfe5a90242787c9c1e4026a86c597be1b3461e99298c7164234fb986f56. Previously unmapped legacy enrichment was replaced in-place with independently authored lessons aligned to verified current Cambridge identifiers; lesson identities were preserved.",
   "Lessons": [
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6AS-MD-1:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 6 ready-to-progress criterion 6AS/MD-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Nc.02",
+        "CAM:OUT:0096:6Nc.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SourceLocator": "6AS/MD-1",
@@ -63,7 +66,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6AS-MD-1:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 6 ready-to-progress criterion 6AS/MD-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Nc.02",
+        "CAM:OUT:0096:6Nc.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SourceLocator": "6AS/MD-1",
@@ -95,7 +101,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6AS-MD-2:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 6 ready-to-progress criterion 6AS/MD-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Ni.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SourceLocator": "6AS/MD-2",
@@ -127,7 +135,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6AS-MD-2:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 6 ready-to-progress criterion 6AS/MD-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Ni.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SourceLocator": "6AS/MD-2",
@@ -159,7 +169,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6AS-MD-3:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 6 ready-to-progress criterion 6AS/MD-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Nf.12",
+        "CAM:OUT:0096:6Nf.13"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SourceLocator": "6AS/MD-3",
@@ -191,7 +204,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6AS-MD-3:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 6 ready-to-progress criterion 6AS/MD-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Nf.12",
+        "CAM:OUT:0096:6Nf.13"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SourceLocator": "6AS/MD-3",
@@ -223,7 +239,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6AS-MD-4:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 6 ready-to-progress criterion 6AS/MD-4; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Nc.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SourceLocator": "6AS/MD-4",
@@ -255,7 +273,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6AS-MD-4:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 6 ready-to-progress criterion 6AS/MD-4; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Nc.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SourceLocator": "6AS/MD-4",
@@ -287,7 +307,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6F-1:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 6 ready-to-progress criterion 6F-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Nf.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SourceLocator": "6F-1",
@@ -319,7 +341,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6F-1:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 6 ready-to-progress criterion 6F-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Nf.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SourceLocator": "6F-1",
@@ -351,7 +375,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6F-2:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 6 ready-to-progress criterion 6F-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Nf.05"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SourceLocator": "6F-2",
@@ -383,7 +409,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6F-2:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 6 ready-to-progress criterion 6F-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Nf.05"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SourceLocator": "6F-2",
@@ -415,7 +443,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6F-3:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 6 ready-to-progress criterion 6F-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Nf.08"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SourceLocator": "6F-3",
@@ -447,7 +477,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6F-3:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 6 ready-to-progress criterion 6F-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Nf.08"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SourceLocator": "6F-3",
@@ -479,7 +511,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6G-1:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 6 ready-to-progress criterion 6G-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Gg.04",
+        "CAM:OUT:0096:6Gg.06"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SourceLocator": "6G-1",
@@ -511,7 +546,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6G-1:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 6 ready-to-progress criterion 6G-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Gg.04",
+        "CAM:OUT:0096:6Gg.06"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SourceLocator": "6G-1",
@@ -543,7 +581,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6NPV-1:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 6 ready-to-progress criterion 6NPV-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Np.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SourceLocator": "6NPV-1",
@@ -575,7 +615,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6NPV-1:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 6 ready-to-progress criterion 6NPV-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Np.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SourceLocator": "6NPV-1",
@@ -607,7 +649,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6NPV-2:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 6 ready-to-progress criterion 6NPV-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Np.02",
+        "CAM:OUT:0096:6Np.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SourceLocator": "6NPV-2",
@@ -639,7 +684,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6NPV-2:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 6 ready-to-progress criterion 6NPV-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Np.02",
+        "CAM:OUT:0096:6Np.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SourceLocator": "6NPV-2",
@@ -671,7 +719,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6NPV-3:BUILD",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 6 ready-to-progress criterion 6NPV-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Np.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SourceLocator": "6NPV-3",
@@ -703,7 +753,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6NPV-3:APPLY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 6 ready-to-progress criterion 6NPV-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Np.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "SourceLocator": "6NPV-3",
@@ -734,64 +786,68 @@
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6NPV-4:BUILD",
       "TitleProvenance": "PedagogicalSource",
-      "TitleSourceReference": "DfE Year 6 ready-to-progress criterion 6NPV-4; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "TitleSourceReference": "Edulytics-authored replacement lesson reviewed against official Cambridge identifier 6Np.04; official objective prose is not reproduced.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Np.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
-      "SourceLocator": "6NPV-4",
+      "SourceLocator": "Official Cambridge identifier 6Np.04; Number and Place Value / 07",
       "SourceTitle": "Mathematics guidance: year 6",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "DfE-00115-2020 / June 2020",
       "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation; no government logos or identified third-party material is reused.",
       "SourceSha256": "e6951bfe5a90242787c9c1e4026a86c597be1b3461e99298c7164234fb986f56",
-      "CanonicalBodySha256": "ac128c56ee44e95d8329682de8a8f25dcb136f2b133f1c2b225f2c0cd5279cdc",
+      "CanonicalBodySha256": "4f3a1fa497c3fc8e72b81f7707ea55f2dc3f54149a3d43238d6e1198b11de641",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by OGL DfE guidance for the corresponding year. Cambridge official identifiers remain in the curriculum reference graph; this lesson does not claim an unverified formal Cambridge mapping.",
+      "AdaptationStatus": "Edulytics-authored replacement lesson aligned to verified official Cambridge identifier 6Np.04. Learner-facing prose is independently authored; official Cambridge objective prose is not stored.",
       "Translations": [
         {
           "CultureCode": "en",
-          "Title": "Reading scales with 2, 4, 5 or 10 intervals: Build the Idea",
-          "Explanation": "This Cambridge Primary Stage 6 supporting lesson develops the open DfE Year 6 ready-to-progress focus “Reading scales with 2, 4, 5 or 10 intervals”. A digit's value depends on its position. Compose and decompose numbers with place-value units, and use a number line or powers of ten to reason about magnitude. Build the idea by representing it in more than one way and explaining why the representations agree. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here.",
-          "KeyConceptsAndRules": "Read scales by calculating the constant value of each equal interval from the endpoints.",
-          "WorkedExamples": "Example A: A scale runs from 240 to 440 in 5 equal intervals. Each interval is (440-240)÷5 = 40, so the third tick after 240 is 360. Verify five intervals reaches 440.",
-          "StepByStepSolutions": "Subtract the endpoints, divide by the number of equal intervals, count the pointer intervals from the start, and check the final tick equals the endpoint.",
-          "CommonMistakes": "Do not compare numbers by looking at a single digit or by counting digits after the decimal point. Keep the value of each place explicit and check the size of the whole number. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude.",
-          "QuickSummary": "Reading scales with 2, 4, 5 or 10 intervals: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning."
+          "Title": "Round decimals to the nearest tenth or whole number: Build the Idea",
+          "Explanation": "Round decimals to the nearest tenth or whole number: Build the Idea develops rounding decimals to the nearest tenth or whole number. Represent the quantities clearly, choose a method that matches the mathematical structure, and explain why each step is valid. Connect symbolic work to a diagram, graph, table or contextual interpretation when useful, and finish with an independent reasonableness check.",
+          "KeyConceptsAndRules": "Focus: rounding decimals to the nearest tenth or whole number. Define the relevant quantities and relationships before calculating. Keep equivalent transformations explicit, use correct notation and units, and verify the result with a second representation, inverse relationship, boundary check or substitution whenever possible.",
+          "WorkedExamples": "Worked example: Round 4.36 to the nearest tenth: 4.4. Round 4.36 to the nearest whole number: 4. Use place value and a number line to justify both results. Explain the mathematical relationship before calculating, then verify that the result is consistent with the original conditions.",
+          "StepByStepSolutions": "Step 1: Identify the known information and the quantity to be found. Step 2: Choose an appropriate representation. Step 3: State the rule or relationship being used. Step 4: Carry out the calculation with intermediate reasoning visible. Step 5: Check the result independently. Step 6: State the conclusion with its mathematical meaning and units where required.",
+          "CommonMistakes": "Do not select a procedure from a keyword alone. For rounding decimals to the nearest tenth or whole number, check that the conditions of the rule are satisfied, keep notation and units consistent, and test the final result against the original representation.",
+          "QuickSummary": "For rounding decimals to the nearest tenth or whole number, represent the relationship accurately, apply the correct rule, calculate carefully and verify the result."
         }
       ]
     },
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S6:6NPV-4:APPLY",
       "TitleProvenance": "PedagogicalSource",
-      "TitleSourceReference": "DfE Year 6 ready-to-progress criterion 6NPV-4; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
-      "OutcomeCodes": [],
+      "TitleSourceReference": "Edulytics-authored replacement lesson reviewed against official Cambridge identifier 6Np.04; official objective prose is not reproduced.",
+      "OutcomeCodes": [
+        "CAM:OUT:0096:6Np.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
-      "SourceLocator": "6NPV-4",
+      "SourceLocator": "Official Cambridge identifier 6Np.04; Number and Place Value / 08",
       "SourceTitle": "Mathematics guidance: year 6",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "DfE-00115-2020 / June 2020",
       "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation; no government logos or identified third-party material is reused.",
       "SourceSha256": "e6951bfe5a90242787c9c1e4026a86c597be1b3461e99298c7164234fb986f56",
-      "CanonicalBodySha256": "3c013f309a9ef65942bdf66437e639711d55ea61df3eb2a4387fde1696966164",
+      "CanonicalBodySha256": "459ec29b427cef0ddf1cb0dc842daa814d485a8fd738de012245abb7620c466e",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/614094a6d3bf7f05afde045f/Maths_guidance_year_6.pdf",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by OGL DfE guidance for the corresponding year. Cambridge official identifiers remain in the curriculum reference graph; this lesson does not claim an unverified formal Cambridge mapping.",
+      "AdaptationStatus": "Edulytics-authored replacement lesson aligned to verified official Cambridge identifier 6Np.04. Learner-facing prose is independently authored; official Cambridge objective prose is not stored.",
       "Translations": [
         {
           "CultureCode": "en",
-          "Title": "Reading scales with 2, 4, 5 or 10 intervals: Reason and Apply",
-          "Explanation": "This Cambridge Primary Stage 6 supporting lesson develops the open DfE Year 6 ready-to-progress focus “Reading scales with 2, 4, 5 or 10 intervals”. Read the labelled endpoints, count equal intervals rather than tick marks, calculate the value of one interval, and then locate or interpret the marked position. Reason and apply by checking that the interval size reconstructs the labelled scale. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here.",
-          "KeyConceptsAndRules": "Source focus: Reading scales with 2, 4, 5 or 10 intervals. Equal intervals represent equal changes in value. Interval value = (end value - start value) ÷ number of equal intervals. A scale with n intervals has n + 1 tick positions. Read a pointer by counting intervals from a known labelled value, then verify against the endpoint.",
-          "WorkedExamples": "Example A: A scale runs from 20 to 60 in 5 equal intervals. The total change is 40, so each interval is 40 ÷ 5 = 8. A pointer three intervals after 20 represents 44. Check: 20 + 5 × 8 = 60. Example B: A scale runs from 120 to 200 in 4 equal intervals. Each interval is (200 - 120) ÷ 4 = 20, so the second interior tick is 160. Compare counting intervals with counting tick marks and explain why using 5 tick positions as the divisor would be incorrect.",
-          "StepByStepSolutions": "Step 1: Identify two labelled values on the scale. Step 2: Count the number of equal intervals between them. Step 3: Subtract the labelled values to find the total change. Step 4: Divide the total change by the number of intervals. Step 5: Count intervals from a labelled value to the pointer and verify that repeated intervals reach the other labelled endpoint.",
-          "CommonMistakes": "Do not divide by the number of tick marks; divide by the number of spaces or intervals between them. Do not assume each tick increases by 1. Keep units attached to the scale and verify the interval size using both labelled endpoints.",
-          "QuickSummary": "Read equal-interval scales by finding the total change, dividing by 2, 4, 5 or 10 intervals, locating the pointer, and checking the endpoint."
+          "Title": "Round decimals to the nearest tenth or whole number: Reason and Apply",
+          "Explanation": "Round decimals to the nearest tenth or whole number: Reason and Apply develops rounding decimals to the nearest tenth or whole number. Represent the quantities clearly, choose a method that matches the mathematical structure, and explain why each step is valid. Connect symbolic work to a diagram, graph, table or contextual interpretation when useful, and finish with an independent reasonableness check.",
+          "KeyConceptsAndRules": "Focus: rounding decimals to the nearest tenth or whole number. Define the relevant quantities and relationships before calculating. Keep equivalent transformations explicit, use correct notation and units, and verify the result with a second representation, inverse relationship, boundary check or substitution whenever possible.",
+          "WorkedExamples": "Worked example: Round 4.36 to the nearest tenth: 4.4. Round 4.36 to the nearest whole number: 4. Use place value and a number line to justify both results. Explain the mathematical relationship before calculating, then verify that the result is consistent with the original conditions.",
+          "StepByStepSolutions": "Step 1: Identify the known information and the quantity to be found. Step 2: Choose an appropriate representation. Step 3: State the rule or relationship being used. Step 4: Carry out the calculation with intermediate reasoning visible. Step 5: Check the result independently. Step 6: State the conclusion with its mathematical meaning and units where required.",
+          "CommonMistakes": "Do not select a procedure from a keyword alone. For rounding decimals to the nearest tenth or whole number, check that the conditions of the rule are satisfied, keep notation and units consistent, and test the final result against the original representation.",
+          "QuickSummary": "For rounding decimals to the nearest tenth or whole number, represent the relationship accurately, apply the correct rule, calculate carefully and verify the result."
         }
       ]
     }

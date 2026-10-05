@@ -45,7 +45,7 @@ public sealed class Stage24AsALevel9709GateTests
         Assert.Equal(0, summary.GetProperty("verified").GetInt32());
         Assert.Equal(25, summary.GetProperty("contextual").GetInt32());
         Assert.Equal(32, summary.GetProperty("unsupported").GetInt32());
-        Assert.Equal(49, summary.GetProperty("formalOutcomeMapped").GetInt32());
+        Assert.Equal(57, summary.GetProperty("formalOutcomeMapped").GetInt32());
         Assert.Equal(6, summary.GetProperty("paperRouteCount").GetInt32());
 
         var gate = manifest.RootElement.GetProperty("gatePolicy");

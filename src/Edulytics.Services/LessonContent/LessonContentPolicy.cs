@@ -43,11 +43,17 @@ public static class LessonContentPolicy
     public static bool CanExposeStudentLesson(
         string frameworkCode,
         bool isSupporting) =>
-        !string.Equals(
-            frameworkCode,
-            MathematicsCurriculumPackRegistry.UaeCode,
-            StringComparison.Ordinal) ||
-        !isSupporting;
+        !isSupporting ||
+        (
+            !string.Equals(
+                frameworkCode,
+                MathematicsCurriculumPackRegistry.UaeCode,
+                StringComparison.Ordinal) &&
+            !string.Equals(
+                frameworkCode,
+                MathematicsCurriculumPackRegistry.CambridgeCode,
+                StringComparison.Ordinal)
+        );
 
     public static bool IsProductionReady(
         CanonicalLessonContentStatus? status,

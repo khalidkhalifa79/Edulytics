@@ -25,13 +25,15 @@
   "PedagogicalSourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. Official curriculum wording is not reproduced.",
   "Status": "Published",
   "ReviewedBy": "Edulytics Phase 29 deterministic curriculum review",
-  "ReviewEvidence": "Scope CAMBRIDGE-INTL-MATH/L9/SHARED: 37 lessons, 4 units, academic language en, zero unverified formal mappings.",
+  "ReviewEvidence": "Scope CAMBRIDGE-INTL-MATH/L9/SHARED: 37 lessons, 4 units, academic language en, zero unverified formal mappings. Previously unmapped legacy enrichment was replaced in-place with independently authored lessons aligned to verified current Cambridge identifiers; lesson identities were preserved.",
   "Lessons": [
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:01:01:INTEGERS-AND-DIRECTED-NUMBER",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Ni.01"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Number and Proportional Reasoning / 01",
@@ -63,7 +65,11 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:01:02:FRACTIONS-AND-MIXED-NUMBERS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Nf.02",
+        "CAM:OUT:0862:9Nf.03",
+        "CAM:OUT:0862:9Nf.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Number and Proportional Reasoning / 02",
@@ -95,7 +101,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:01:03:DECIMALS-AND-ROUNDING",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Np.02",
+        "CAM:OUT:0862:9Nf.06"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Number and Proportional Reasoning / 03",
@@ -127,7 +136,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:01:04:PERCENTAGES",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Nf.05"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Number and Proportional Reasoning / 04",
@@ -159,7 +170,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:01:05:RATIO-AND-PROPORTION",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Nf.08"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Number and Proportional Reasoning / 05",
@@ -191,7 +204,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:01:06:RATES-AND-UNIT-RATES",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9As.07"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Number and Proportional Reasoning / 06",
@@ -223,7 +238,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:01:07:POWERS-AND-ROOTS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Ni.02",
+        "CAM:OUT:0862:9Ni.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Number and Proportional Reasoning / 07",
@@ -255,7 +273,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:01:08:STANDARD-FORM-AND-ESTIMATION",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Ni.03",
+        "CAM:OUT:0862:9Np.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Number and Proportional Reasoning / 08",
@@ -287,7 +308,11 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:02:01:ALGEBRAIC-EXPRESSIONS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Ae.01",
+        "CAM:OUT:0862:9Ae.02",
+        "CAM:OUT:0862:9Ae.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Algebra / 01",
@@ -319,7 +344,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:02:02:SUBSTITUTION",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Ae.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Algebra / 02",
@@ -351,7 +378,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:02:03:EXPANDING-BRACKETS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Ae.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Algebra / 03",
@@ -383,7 +412,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:02:04:FACTORISING-EXPRESSIONS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Ae.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Algebra / 04",
@@ -415,7 +446,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:02:05:LINEAR-EQUATIONS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Ae.05"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Algebra / 05",
@@ -447,7 +480,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:02:06:INEQUALITIES",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Ae.07"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Algebra / 06",
@@ -479,7 +514,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:02:07:SEQUENCES",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9As.01",
+        "CAM:OUT:0862:9As.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Algebra / 07",
@@ -511,7 +549,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:02:08:COORDINATES-AND-STRAIGHT-LINE-GRAPHS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9As.05",
+        "CAM:OUT:0862:9As.06"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Algebra / 08",
@@ -543,7 +584,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:02:09:QUADRATIC-EXPRESSIONS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Ae.02",
+        "CAM:OUT:0862:9As.05"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Algebra / 09",
@@ -575,7 +619,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:02:10:DIRECT-AND-INVERSE-PROPORTION",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Nf.07"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Algebra / 10",
@@ -607,7 +653,11 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:03:01:ANGLE-RELATIONSHIPS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Gg.07",
+        "CAM:OUT:0862:9Gg.08",
+        "CAM:OUT:0862:9Gg.09"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Geometry and Measure / 01",
@@ -639,7 +689,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:03:02:POLYGONS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Gg.07",
+        "CAM:OUT:0862:9Gg.08"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Geometry and Measure / 02",
@@ -671,7 +724,11 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:03:03:CONGRUENCE-AND-SIMILARITY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Gp.05",
+        "CAM:OUT:0862:9Gp.06",
+        "CAM:OUT:0862:9Gp.07"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Geometry and Measure / 03",
@@ -703,7 +760,11 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:03:04:TRANSFORMATIONS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Gp.03",
+        "CAM:OUT:0862:9Gp.04",
+        "CAM:OUT:0862:9Gp.05"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Geometry and Measure / 04",
@@ -735,7 +796,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:03:05:PERIMETER-AND-AREA",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Gg.01",
+        "CAM:OUT:0862:9Gg.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Geometry and Measure / 05",
@@ -767,7 +831,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:03:06:SURFACE-AREA-AND-VOLUME",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Gg.04",
+        "CAM:OUT:0862:9Gg.05"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Geometry and Measure / 06",
@@ -799,7 +866,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:03:07:PYTHAGORAS-THEOREM",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Gg.10"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Geometry and Measure / 07",
@@ -831,7 +900,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:03:08:CONSTRUCTIONS-AND-LOCI",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Gg.11"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Geometry and Measure / 08",
@@ -862,32 +933,34 @@
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:03:09:TRIGONOMETRIC-RATIOS-FOUNDATIONS",
       "TitleProvenance": "PedagogicalSource",
-      "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "TitleSourceReference": "Edulytics-authored replacement lesson reviewed against official Cambridge identifier 9Gp.01; official objective prose is not reproduced.",
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Gp.01"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SourceLocator": "Cambridge Lower Secondary Stage 9 / Geometry and Measure / 09",
+      "SourceLocator": "Official Cambridge identifier 9Gp.01; Geometry and Measure / 09",
       "SourceTitle": "National curriculum in England: Mathematics programmes of study — Key Stage 3",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "Key Stage 3 Mathematics programme of study / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "a882f4fd0684f57c293ac45038aee786d7b8236e1be1a601970b4c06d55d163a",
-      "CanonicalBodySha256": "5dd7db81947086d33ac4040632614b84b0c108dbe2066e840a3609022fa2ed28",
+      "CanonicalBodySha256": "708e609290d76af8f03b10d1019decd34f186dd7f5e65df5c039f6e5027c8a7c",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Edulytics-authored replacement lesson aligned to verified official Cambridge identifier 9Gp.01. Learner-facing prose is independently authored; official Cambridge objective prose is not stored.",
       "Translations": [
         {
           "CultureCode": "en",
-          "Title": "Trigonometric ratios foundations",
-          "Explanation": "Trigonometric ratios foundations is studied here as part of Cambridge Lower Secondary Stage 9. Ratio and proportion compare quantities multiplicatively. Keep corresponding quantities in the same order and scale both parts by the same factor. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Trigonometric ratios foundations. Ratio and proportion compare quantities multiplicatively. Keep corresponding quantities in the same order and scale both parts by the same factor. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: For a ratio 3:5 with total 40, there are 8 equal parts; each is 5, so the quantities are 15 and 25. Worked example 2: If 4 items cost 18, the unit cost is 18/4 = 4.5, so 10 items cost 45. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not use additive differences when a multiplicative comparison is required. Check units before forming a rate. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Trigonometric ratios foundations, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Title": "Bearings and scale on maps",
+          "Explanation": "Bearings and scale on maps develops using bearings and scale to interpret positions on maps and plans. Represent the quantities clearly, choose a method that matches the mathematical structure, and explain why each step is valid. Connect symbolic work to a diagram, graph, table or contextual interpretation when useful, and finish with an independent reasonableness check.",
+          "KeyConceptsAndRules": "Focus: using bearings and scale to interpret positions on maps and plans. Define the relevant quantities and relationships before calculating. Keep equivalent transformations explicit, use correct notation and units, and verify the result with a second representation, inverse relationship, boundary check or substitution whenever possible.",
+          "WorkedExamples": "Worked example: On a 1:50 000 map, 2 cm represents 1 km. Combine the scale with a three-figure bearing to describe both distance and direction. Explain the mathematical relationship before calculating, then verify that the result is consistent with the original conditions.",
+          "StepByStepSolutions": "Step 1: Identify the known information and the quantity to be found. Step 2: Choose an appropriate representation. Step 3: State the rule or relationship being used. Step 4: Carry out the calculation with intermediate reasoning visible. Step 5: Check the result independently. Step 6: State the conclusion with its mathematical meaning and units where required.",
+          "CommonMistakes": "Do not select a procedure from a keyword alone. For using bearings and scale to interpret positions on maps and plans, check that the conditions of the rule are satisfied, keep notation and units consistent, and test the final result against the original representation.",
+          "QuickSummary": "For using bearings and scale to interpret positions on maps and plans, represent the relationship accurately, apply the correct rule, calculate carefully and verify the result."
         }
       ]
     },
@@ -895,7 +968,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:03:10:SIMILARITY-AND-SCALE-FACTORS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Gp.06",
+        "CAM:OUT:0862:9Gp.07"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Geometry and Measure / 10",
@@ -927,7 +1003,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:04:01:COLLECTING-DATA",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Ss.01",
+        "CAM:OUT:0862:9Ss.02"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Statistics and Probability / 01",
@@ -959,7 +1038,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:04:02:TABLES-AND-CHARTS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Ss.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Statistics and Probability / 02",
@@ -991,7 +1072,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:04:03:MEAN-MEDIAN-AND-RANGE",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Ss.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Statistics and Probability / 03",
@@ -1023,7 +1106,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:04:04:SCATTER-GRAPHS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Ss.03",
+        "CAM:OUT:0862:9Ss.05"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Statistics and Probability / 04",
@@ -1055,7 +1141,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:04:05:EXPERIMENTAL-PROBABILITY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Sp.04"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Statistics and Probability / 05",
@@ -1087,7 +1175,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:04:06:THEORETICAL-PROBABILITY",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Sp.01",
+        "CAM:OUT:0862:9Sp.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Statistics and Probability / 06",
@@ -1119,7 +1210,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:04:07:SAMPLE-SPACES",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Sp.01",
+        "CAM:OUT:0862:9Sp.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Statistics and Probability / 07",
@@ -1151,7 +1245,10 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:04:08:COMPARING-DISTRIBUTIONS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Ss.04",
+        "CAM:OUT:0862:9Ss.05"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Statistics and Probability / 08",
@@ -1183,7 +1280,9 @@
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:04:09:TREE-DIAGRAMS",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
-      "OutcomeCodes": [],
+      "OutcomeCodes": [
+        "CAM:OUT:0862:9Sp.03"
+      ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "SourceLocator": "Cambridge Lower Secondary Stage 9 / Statistics and Probability / 09",
