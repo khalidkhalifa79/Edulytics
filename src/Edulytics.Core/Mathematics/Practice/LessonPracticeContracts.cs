@@ -45,10 +45,10 @@ public static class LessonPracticeContractRegistry
             Version),
         new(
             "PED:CAMBRIDGE-INTL-MATH:S6:6NPV-4:APPLY",
-            "measurement.scale.read_equal_intervals",
-            "SCALE_READING",
-            ["measurement.scale.equal_intervals.read_value"],
-            "SupportingLesson",
+            "supporting.number.place_value_rounding",
+            "ROUNDING",
+            ["supporting.number.rounding"],
+            "OfficialMappingUpgrade",
             "READY_VERIFIED",
             Version),
         new(
@@ -543,10 +543,10 @@ public static class LessonPracticeContractRegistry
             Version),
         new(
             "PED:CAMBRIDGE-INTL-MATH:S6:6NPV-4:BUILD",
-            "measurement.scale.read_equal_intervals",
-            "SCALE_READING",
-            ["measurement.scale.equal_intervals.read_value"],
-            "SupportingLesson",
+            "supporting.number.place_value_rounding",
+            "ROUNDING",
+            ["supporting.number.rounding"],
+            "OfficialMappingUpgrade",
             "READY_VERIFIED",
             Version),
         new(

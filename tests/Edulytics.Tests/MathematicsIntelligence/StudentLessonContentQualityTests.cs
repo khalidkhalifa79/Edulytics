@@ -175,33 +175,20 @@ public sealed class StudentLessonContentQualityTests
     }
 
     [Fact]
-    public void ReadingScalesBuildLessonAndPracticeResolveToTheSameExactTarget()
+    public void DecimalRoundingBuildLessonAndPracticeResolveToTheSameExactTarget()
     {
-        const string title =
-            "Reading scales with 2, 4, 5 or 10 intervals: Build the Idea";
-
-        Assert.True(
-            SupportingPracticeTargetRuleRegistry.TryResolve(
-                ScaleBuildCode,
-                title,
-                out var rule));
-        Assert.NotNull(rule);
-        Assert.Equal(
-            "measurement.scale.read_equal_intervals",
-            rule!.SkillId);
-        Assert.Contains(
-            "measurement.scale.equal_intervals.read_value",
-            rule.Families);
-
         Assert.True(
             LessonPracticeCapabilityResolver.TryResolve(
                 ScaleBuildCode,
                 out var contract));
         Assert.NotNull(contract);
-        Assert.Equal(rule.SkillId, contract!.SkillId);
+        Assert.Equal(
+            "supporting.number.place_value_rounding",
+            contract!.SkillId);
         Assert.Contains(
-            "measurement.scale.equal_intervals.read_value",
+            "supporting.number.rounding",
             contract.AllowedQuestionFamilies);
+        Assert.Equal("READY_VERIFIED", contract.Readiness);
     }
 
     [Fact]

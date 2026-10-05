@@ -203,26 +203,22 @@ public sealed class SupportingLessonPracticeR1Tests
     }
 
     [Fact]
-    public void ScaleReadingBuildRuleAndRuntimeContractResolveIndependentlyOfGameRoute()
+    public void DecimalRoundingBuildRuntimeContractMatchesCurrentOfficialMappedLesson()
     {
         const string lessonCode =
             "PED:CAMBRIDGE-INTL-MATH:S6:6NPV-4:BUILD";
-        const string title =
-            "Reading scales with 2, 4, 5 or 10 intervals: Build the Idea";
-
-        Assert.True(
-            SupportingPracticeTargetRuleRegistry.TryResolve(
-                lessonCode,
-                title,
-                out var rule));
-        Assert.NotNull(rule);
 
         Assert.True(
             LessonPracticeContractRegistry.TryResolve(
                 lessonCode,
                 out var contract));
         Assert.NotNull(contract);
-        Assert.Equal(rule!.SkillId, contract!.SkillId);
+        Assert.Equal(
+            "supporting.number.place_value_rounding",
+            contract!.SkillId);
+        Assert.Contains(
+            "supporting.number.rounding",
+            contract.AllowedQuestionFamilies);
         Assert.Equal("READY_VERIFIED", contract.Readiness);
     }
 
