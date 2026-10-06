@@ -292,7 +292,7 @@ public sealed class Phase29CambridgeCurriculumBaselineTests
                   stagesTwoToSixIds.Contains(mapping.PedagogicalLessonId)
             select new { mapping.PedagogicalLessonId, node.Code }).ToArrayAsync();
 
-        Assert.Equal(200, primaryMappings.Length);
+        Assert.Equal(376, primaryMappings.Length);
         Assert.Equal(
             142,
             primaryMappings
@@ -310,7 +310,7 @@ public sealed class Phase29CambridgeCurriculumBaselineTests
                   lowerAndIgcseIds.Contains(mapping.PedagogicalLessonId)
             select new { mapping.PedagogicalLessonId, node.Code }).ToArrayAsync();
 
-        Assert.Equal(665, lowerAndIgcseMappings.Length);
+        Assert.Equal(771, lowerAndIgcseMappings.Length);
         Assert.Equal(
             340,
             lowerAndIgcseMappings
@@ -330,7 +330,7 @@ public sealed class Phase29CambridgeCurriculumBaselineTests
                   advanced9709Ids.Contains(mapping.PedagogicalLessonId)
             select new { mapping.PedagogicalLessonId, node.Code }).ToArrayAsync();
 
-        Assert.Equal(61, advancedMappings.Length);
+        Assert.Equal(67, advancedMappings.Length);
         Assert.Equal(
             57,
             advancedMappings

@@ -24,17 +24,17 @@
     "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
   ],
   "SourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. No government logos or identified third-party copyright material is reproduced. Cambridge objective prose is not reproduced.",
-  "SemanticGraphSha256": "5ea536e0c2ab8b7c998043905c1baf875a5eebf939f7f924c1df6b1efec881b3",
+  "SemanticGraphSha256": "bf12e3bd8f765b7030da6bc3fa250552929502fde15d5493f48e693a2593ebe4",
   "AcquisitionDiagnostics": {
     "UnitCount": 5,
     "LessonCount": 32,
-    "OfficialStandardCount": 15,
-    "AddressingCoverageCount": 15,
-    "FormalMappingCount": 40,
+    "OfficialStandardCount": 46,
+    "AddressingCoverageCount": 46,
+    "FormalMappingCount": 71,
     "LessonsWithoutNumberedGradeReferenceAnyRole": 0,
     "LessonsWithoutNumberedAddressingStandard": 0,
     "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 0,
-    "MultiStandardLessons": 8
+    "MultiStandardLessons": 14
   },
   "Units": [
     {
@@ -149,7 +149,7 @@
       "Title": "Equivalent proper fractions: Build the Idea",
       "SortOrder": 3,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
-      "SemanticSha256": "910a6e48005eb6dc5f3b9d66b2fcd1f1eec4edd148bb52ddfb2d28ad3ffc9c48",
+      "SemanticSha256": "a32f9a3dd339a8b5230a46ba5e3c0fb2347d955bf2f06b6957bbfef1d941724b",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -158,10 +158,73 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:4Nf.04",
           "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Ss.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Ss.01",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Ss.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Ss.02",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Ss.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Ss.03",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Nf.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Nf.01",
+          "SortOrder": 5
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Nf.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Nf.03",
+          "SortOrder": 6
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Nf.06",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Nf.06",
+          "SortOrder": 7
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Nf.07",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Nf.07",
+          "SortOrder": 8
         }
       ],
       "OutcomeCodes": [
-        "CAM:OUT:0096:4Nf.04"
+        "CAM:OUT:0096:4Nf.04",
+        "CAM:OUT:0096:4Ss.01",
+        "CAM:OUT:0096:4Ss.02",
+        "CAM:OUT:0096:4Ss.03",
+        "CAM:OUT:0096:4Nf.01",
+        "CAM:OUT:0096:4Nf.03",
+        "CAM:OUT:0096:4Nf.06",
+        "CAM:OUT:0096:4Nf.07"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
@@ -177,7 +240,7 @@
       "Title": "Equivalent proper fractions: Reason and Apply",
       "SortOrder": 4,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
-      "SemanticSha256": "b985a847567a8ac344522dc40f0603a4018fccd112a788f55ba0f762d0a7957d",
+      "SemanticSha256": "b180ce13eec378e4fbbabbdb6bc6153ecb34097a3ed40872da47630194b15421",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -186,10 +249,46 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:4Nf.04",
           "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Gt.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Gt.02",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Gt.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Gt.03",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Gt.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Gt.01",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Gt.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Gt.04",
+          "SortOrder": 5
         }
       ],
       "OutcomeCodes": [
-        "CAM:OUT:0096:4Nf.04"
+        "CAM:OUT:0096:4Nf.04",
+        "CAM:OUT:0096:4Gt.02",
+        "CAM:OUT:0096:4Gt.03",
+        "CAM:OUT:0096:4Gt.01",
+        "CAM:OUT:0096:4Gt.04"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
@@ -261,7 +360,7 @@
       "Title": "Draw polygons specified by coordinates or by: Build the Idea",
       "SortOrder": 7,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
-      "SemanticSha256": "1dcf9167e7528fa5cff627bd4e2b1283179b2e126636524cd4d6ebb1f6e33dad",
+      "SemanticSha256": "38595d4fa751759489a852a6bb6381213d35d451f52dec1057715f319ed890df",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -270,10 +369,19 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:4Gp.02",
           "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Sp.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Sp.01",
+          "SortOrder": 2
         }
       ],
       "OutcomeCodes": [
-        "CAM:OUT:0096:4Gp.02"
+        "CAM:OUT:0096:4Gp.02",
+        "CAM:OUT:0096:4Sp.01"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
@@ -289,7 +397,7 @@
       "Title": "Draw polygons specified by coordinates or by: Reason and Apply",
       "SortOrder": 8,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
-      "SemanticSha256": "795a93d37e3ec96b4038707b84712063dd7db7a7c078d9ef8afc7c117cff9679",
+      "SemanticSha256": "36ea4787836a0a342449be995314b8821a376e68b89842eb202303bc48f787a8",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -298,10 +406,19 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:4Gp.02",
           "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Gp.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Gp.01",
+          "SortOrder": 2
         }
       ],
       "OutcomeCodes": [
-        "CAM:OUT:0096:4Gp.02"
+        "CAM:OUT:0096:4Gp.02",
+        "CAM:OUT:0096:4Gp.01"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
@@ -354,7 +471,7 @@
       "Title": "Perimeter: regular and irregular polygons: Reason and Apply",
       "SortOrder": 10,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
-      "SemanticSha256": "9e81c59d9d8445bc5e722d605267b41d30986ddafdbf0de1fd8090bc1a53cdf9",
+      "SemanticSha256": "e4b69138062365c7fe70252b00264776b07cb143531b4e5a41d53dfb054bfe06",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -371,11 +488,56 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:4Gg.03",
           "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Gg.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Gg.04",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Gg.05",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Gg.05",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Gg.06",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Gg.06",
+          "SortOrder": 5
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Gg.08",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Gg.08",
+          "SortOrder": 6
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Sp.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Sp.02",
+          "SortOrder": 7
         }
       ],
       "OutcomeCodes": [
         "CAM:OUT:0096:4Gg.02",
-        "CAM:OUT:0096:4Gg.03"
+        "CAM:OUT:0096:4Gg.03",
+        "CAM:OUT:0096:4Gg.04",
+        "CAM:OUT:0096:4Gg.05",
+        "CAM:OUT:0096:4Gg.06",
+        "CAM:OUT:0096:4Gg.08",
+        "CAM:OUT:0096:4Sp.02"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
@@ -419,7 +581,7 @@
       "Title": "Identify line symmetry in 2D shapes: Reason and Apply",
       "SortOrder": 12,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
-      "SemanticSha256": "f3360b3c897aedeb168f41919a1cdb5f472831a7abd94dc6b62b26a63c929c0b",
+      "SemanticSha256": "aa913493a7cdac0b3900ef968058d84cab4bdcc962a948c7b30e8f59fca3d82d",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -428,10 +590,28 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:4Gg.07",
           "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Gg.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Gg.01",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Gp.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Gp.03",
+          "SortOrder": 3
         }
       ],
       "OutcomeCodes": [
-        "CAM:OUT:0096:4Gg.07"
+        "CAM:OUT:0096:4Gg.07",
+        "CAM:OUT:0096:4Gg.01",
+        "CAM:OUT:0096:4Gp.03"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
@@ -540,7 +720,7 @@
       "Title": "Manipulating the multiplicative relationship: Reason and Apply",
       "SortOrder": 16,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
-      "SemanticSha256": "050f7b90ae3acd7fe126a1459cae7f17abe8f49b8b26edaae585be9937a41884",
+      "SemanticSha256": "5ec3db76eae1b3ed93fdcd03c481278467c29e7d7635998c69e7cb7b418dab09",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -557,11 +737,65 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:4Ni.06",
           "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Ni.07",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Ni.07",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Ni.08",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Ni.08",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Nc.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Nc.02",
+          "SortOrder": 5
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Nc.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Nc.03",
+          "SortOrder": 6
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Ni.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Ni.02",
+          "SortOrder": 7
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Ni.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Ni.03",
+          "SortOrder": 8
         }
       ],
       "OutcomeCodes": [
         "CAM:OUT:0096:4Ni.05",
-        "CAM:OUT:0096:4Ni.06"
+        "CAM:OUT:0096:4Ni.06",
+        "CAM:OUT:0096:4Ni.07",
+        "CAM:OUT:0096:4Ni.08",
+        "CAM:OUT:0096:4Nc.02",
+        "CAM:OUT:0096:4Nc.03",
+        "CAM:OUT:0096:4Ni.02",
+        "CAM:OUT:0096:4Ni.03"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
@@ -912,7 +1146,7 @@
       "Title": "Place value in four-digit numbers: Reason and Apply",
       "SortOrder": 28,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
-      "SemanticSha256": "455136457cf56e1b019f90d29592f8f93fa03e8607f6aecda70fc744bdafc5a0",
+      "SemanticSha256": "cf2e834ffd12c95eb1041a8e756fc0be018718ead1a51de5de294227d19d7c5d",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -929,11 +1163,20 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:4Np.03",
           "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Np.05",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Np.05",
+          "SortOrder": 3
         }
       ],
       "OutcomeCodes": [
         "CAM:OUT:0096:4Np.01",
-        "CAM:OUT:0096:4Np.03"
+        "CAM:OUT:0096:4Np.03",
+        "CAM:OUT:0096:4Np.05"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"
@@ -977,7 +1220,7 @@
       "Title": "Four-digit numbers in the linear number system: Reason and Apply",
       "SortOrder": 30,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9888fa8f5296a72aad7/Maths_guidance_year_4.pdf",
-      "SemanticSha256": "f3b9adca550263cb030616b475bb2c40d5ec8c6178ea3a58e843368d99b105f5",
+      "SemanticSha256": "4194789694c360a1e7e8cf2ef6850d6f3575915b32f475f115fe2e5db992db45",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -986,10 +1229,46 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:4Np.04",
           "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Nc.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Nc.01",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Ni.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Ni.01",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Nc.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Nc.04",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "4Nc.05",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:4Nc.05",
+          "SortOrder": 5
         }
       ],
       "OutcomeCodes": [
-        "CAM:OUT:0096:4Np.04"
+        "CAM:OUT:0096:4Np.04",
+        "CAM:OUT:0096:4Nc.01",
+        "CAM:OUT:0096:4Ni.01",
+        "CAM:OUT:0096:4Nc.04",
+        "CAM:OUT:0096:4Nc.05"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S4"

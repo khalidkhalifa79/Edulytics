@@ -1,67 +1,34 @@
-import fs from "node:fs";
+﻿import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-
-const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
-const registryPath = path.join(root, "tools/curriculum/cambridge-teaching-source-registry.v1.json");
-const registry = JSON.parse(fs.readFileSync(registryPath, "utf8"));
-
-const expected = [];
-for (const programme of registry.programmes ?? []) {
-  if (programme.books) {
-    for (const book of programme.books) {
-      expected.push({
-        programme: programme.programme,
-        stage: book.stage,
-        title: book.title,
-        access: book.contentAccess,
-        localPath: book.localSample ? path.join(root, book.localSample) : null
-      });
-    }
-  }
-  if (programme.localSamples) {
-    for (const rel of programme.localSamples) {
-      expected.push({
-        programme: programme.programme,
-        stage: null,
-        title: "Local endorsed sample",
-        access: "OFFICIAL_SAMPLE_LOCAL",
-        localPath: path.join(root, rel)
-      });
-    }
-  }
-  if (programme.officialSupportLocal) {
-    expected.push({
-      programme: programme.programme,
-      stage: null,
-      title: "Official Cambridge support document",
-      access: "OFFICIAL_SUPPORT_LOCAL",
-      localPath: path.join(root, programme.officialSupportLocal)
-    });
-  }
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),"../..");
+const registry=JSON.parse(fs.readFileSync(path.join(root,"tools/curriculum/cambridge-teaching-source-registry.v1.json"),"utf8"));
+const artifacts=[];
+for(const p of registry.programmes??[]){
+ const required=[];
+ if(p.officialScopeLocal) required.push(["Official scope",p.officialScopeLocal]);
+ for(const x of p.officialSchemeOfWorkLocal??[]) required.push(["Official Scheme of Work",x]);
+ if(p.officialSupportLocal) required.push(["Official support",p.officialSupportLocal]);
+ for(const [kind,rel] of required){
+  const full=path.join(root,rel);
+  artifacts.push({programme:p.programme,kind,relativePath:rel,exists:fs.existsSync(full),sizeBytes:fs.existsSync(full)?fs.statSync(full).size:null});
+ }
 }
-
-const checked = expected.map(x => ({
-  ...x,
-  exists: x.localPath ? fs.existsSync(x.localPath) : false,
-  sizeBytes: x.localPath && fs.existsSync(x.localPath) ? fs.statSync(x.localPath).size : null
-}));
-
-const report = {
-  generatedAt: new Date().toISOString(),
-  policy: {
-    fullLessonBuildRequiresOfficialScope: true,
-    fullLessonBuildRequiresEndorsedOrOfficialTeachingSource: true,
-    samplesDoNotConstituteFullBookAccess: true
-  },
-  checked,
-  summary: {
-    registeredTeachingArtifacts: checked.length,
-    localArtifactsPresent: checked.filter(x => x.exists).length,
-    missingRegisteredLocalArtifacts: checked.filter(x => x.localPath && !x.exists).length,
-    fullBookAccessReady: false
-  },
-  gate: "BLOCK_FULL_CAMBRIDGE_LESSON_BUILD_UNTIL_STAGE_LEVEL_TEACHING_SOURCE_ACCESS_IS_COMPLETE"
+const missing=artifacts.filter(x=>!x.exists);
+const programmeReady=(registry.programmes??[]).every(p=>String(p.readiness??"").startsWith("BUILD_READY_")&&!p.blocker);
+const report={
+ generatedAt:new Date().toISOString(),
+ policy:registry.policy,
+ artifacts,
+ summary:{
+  requiredOfficialArtifacts:artifacts.length,
+  officialArtifactsPresent:artifacts.length-missing.length,
+  missingOfficialArtifacts:missing.length,
+  programmeReadinessDeclared:programmeReady,
+  supplementalFullBookAccessIsBuildBlocker:registry.policy?.supplementalBookFullAccessRequiredForBuild===true,
+  officialBuildSourceReady:missing.length===0&&programmeReady
+ },
+ gate:missing.length===0&&programmeReady?"READY_FOR_CAMBRIDGE_LESSON_BUILD":"BLOCK_CAMBRIDGE_LESSON_BUILD"
 };
-
-console.log(JSON.stringify(report, null, 2));
+console.log(JSON.stringify(report,null,2));
+if(process.argv.includes("--require-ready")&&!report.summary.officialBuildSourceReady)process.exitCode=1;

@@ -24,17 +24,17 @@
     "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
   ],
   "SourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. No government logos or identified third-party copyright material is reproduced. Cambridge objective prose is not reproduced.",
-  "SemanticGraphSha256": "184a73f60b4a9bd0de5543deeb27e9a3910cec61f162475972262495bde59ca4",
+  "SemanticGraphSha256": "1f37f876cafc8a0f1c5e469677811782d3e356ab7ec01f4d18687c3f340fa973",
   "AcquisitionDiagnostics": {
     "UnitCount": 5,
     "LessonCount": 20,
-    "OfficialStandardCount": 10,
-    "AddressingCoverageCount": 10,
-    "FormalMappingCount": 32,
+    "OfficialStandardCount": 48,
+    "AddressingCoverageCount": 48,
+    "FormalMappingCount": 70,
     "LessonsWithoutNumberedGradeReferenceAnyRole": 0,
     "LessonsWithoutNumberedAddressingStandard": 0,
     "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 0,
-    "MultiStandardLessons": 10
+    "MultiStandardLessons": 16
   },
   "Units": [
     {
@@ -399,7 +399,7 @@
       "Title": "Describe and compare 2D and 3D shapes: Reason and Apply",
       "SortOrder": 10,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9638fa8f5296a72aad6/Maths_guidance_year_2.pdf",
-      "SemanticSha256": "923d42d48f59be438e33fbbcd7b9615a814b76f8ff8fe472aaa9bef89ef840ab",
+      "SemanticSha256": "e2e68053b3ed3f4297df8c5d15cc245947beca97e395aec5708682d7cd0b229c",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -424,12 +424,111 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:2Gg.08",
           "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Gg.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Gg.02",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Gg.09",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Gg.09",
+          "SortOrder": 5
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Gp.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Gp.02",
+          "SortOrder": 6
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Gg.11",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Gg.11",
+          "SortOrder": 7
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Gg.10",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Gg.10",
+          "SortOrder": 8
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Gp.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Gp.01",
+          "SortOrder": 9
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Gg.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Gg.03",
+          "SortOrder": 10
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Gg.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Gg.04",
+          "SortOrder": 11
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Gg.12",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Gg.12",
+          "SortOrder": 12
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Gg.06",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Gg.06",
+          "SortOrder": 13
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Gg.07",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Gg.07",
+          "SortOrder": 14
         }
       ],
       "OutcomeCodes": [
         "CAM:OUT:0096:2Gg.01",
         "CAM:OUT:0096:2Gg.05",
-        "CAM:OUT:0096:2Gg.08"
+        "CAM:OUT:0096:2Gg.08",
+        "CAM:OUT:0096:2Gg.02",
+        "CAM:OUT:0096:2Gg.09",
+        "CAM:OUT:0096:2Gp.02",
+        "CAM:OUT:0096:2Gg.11",
+        "CAM:OUT:0096:2Gg.10",
+        "CAM:OUT:0096:2Gp.01",
+        "CAM:OUT:0096:2Gg.03",
+        "CAM:OUT:0096:2Gg.04",
+        "CAM:OUT:0096:2Gg.12",
+        "CAM:OUT:0096:2Gg.06",
+        "CAM:OUT:0096:2Gg.07"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S2"
@@ -445,7 +544,7 @@
       "Title": "Multiplication as repeated addition: Build the Idea",
       "SortOrder": 11,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9638fa8f5296a72aad6/Maths_guidance_year_2.pdf",
-      "SemanticSha256": "1c4a23506055205326dc1a32b98f799277d5fd8130e1eae712c0d17bdd1eeaa9",
+      "SemanticSha256": "abe9e57d15badd56fbe65b0921378120f338f8db8a6acd38a29259325c9049ea",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -454,10 +553,19 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:2Ni.05",
           "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Ni.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Ni.03",
+          "SortOrder": 2
         }
       ],
       "OutcomeCodes": [
-        "CAM:OUT:0096:2Ni.05"
+        "CAM:OUT:0096:2Ni.05",
+        "CAM:OUT:0096:2Ni.03"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S2"
@@ -473,7 +581,7 @@
       "Title": "Multiplication as repeated addition: Reason and Apply",
       "SortOrder": 12,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9638fa8f5296a72aad6/Maths_guidance_year_2.pdf",
-      "SemanticSha256": "9078501c23988eb74ba357dfc76325254a940311699e0838888b6c097c358e7c",
+      "SemanticSha256": "8928e75fd51fe35f96a643bc9289d676aec7d2593a4013e04ea242e9f25aef6f",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -482,10 +590,82 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:2Ni.05",
           "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Nc.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Nc.01",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Nc.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Nc.02",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Nc.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Nc.03",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Ni.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Ni.01",
+          "SortOrder": 5
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Nc.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Nc.04",
+          "SortOrder": 6
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Nc.05",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Nc.05",
+          "SortOrder": 7
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Nc.06",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Nc.06",
+          "SortOrder": 8
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Ni.07",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Ni.07",
+          "SortOrder": 9
         }
       ],
       "OutcomeCodes": [
-        "CAM:OUT:0096:2Ni.05"
+        "CAM:OUT:0096:2Ni.05",
+        "CAM:OUT:0096:2Nc.01",
+        "CAM:OUT:0096:2Nc.02",
+        "CAM:OUT:0096:2Nc.03",
+        "CAM:OUT:0096:2Ni.01",
+        "CAM:OUT:0096:2Nc.04",
+        "CAM:OUT:0096:2Nc.05",
+        "CAM:OUT:0096:2Nc.06",
+        "CAM:OUT:0096:2Ni.07"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S2"
@@ -501,7 +681,7 @@
       "Title": "Grouping problems: missing factors and division: Build the Idea",
       "SortOrder": 13,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9638fa8f5296a72aad6/Maths_guidance_year_2.pdf",
-      "SemanticSha256": "98fa575b6d22eea5fb4b53b372b5ddfcf25da0fd702444185f2e27fc879231bc",
+      "SemanticSha256": "9df3e11de9b0e12cfb641b7db8bcab2e4bc1727df3d06394779c5b13236e6407",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -510,10 +690,82 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:2Ni.06",
           "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Nf.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Nf.01",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Nf.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Nf.02",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Nf.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Nf.03",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Nf.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Nf.04",
+          "SortOrder": 5
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Nf.05",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Nf.05",
+          "SortOrder": 6
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Nf.06",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Nf.06",
+          "SortOrder": 7
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Sp.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Sp.01",
+          "SortOrder": 8
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Sp.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Sp.02",
+          "SortOrder": 9
         }
       ],
       "OutcomeCodes": [
-        "CAM:OUT:0096:2Ni.06"
+        "CAM:OUT:0096:2Ni.06",
+        "CAM:OUT:0096:2Nf.01",
+        "CAM:OUT:0096:2Nf.02",
+        "CAM:OUT:0096:2Nf.03",
+        "CAM:OUT:0096:2Nf.04",
+        "CAM:OUT:0096:2Nf.05",
+        "CAM:OUT:0096:2Nf.06",
+        "CAM:OUT:0096:2Sp.01",
+        "CAM:OUT:0096:2Sp.02"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S2"
@@ -529,7 +781,7 @@
       "Title": "Grouping problems: missing factors and division: Reason and Apply",
       "SortOrder": 14,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9638fa8f5296a72aad6/Maths_guidance_year_2.pdf",
-      "SemanticSha256": "14674e30b83d9e0b28dfed7913cfbe105cb66626079b077ff06601fb18c044bb",
+      "SemanticSha256": "50158262030dc497092412cbeea1c605a132df9bb27ce4868f20b78d474fc100",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -538,10 +790,37 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:2Ni.06",
           "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Gt.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Gt.01",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Gt.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Gt.02",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Gt.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Gt.03",
+          "SortOrder": 4
         }
       ],
       "OutcomeCodes": [
-        "CAM:OUT:0096:2Ni.06"
+        "CAM:OUT:0096:2Ni.06",
+        "CAM:OUT:0096:2Gt.01",
+        "CAM:OUT:0096:2Gt.02",
+        "CAM:OUT:0096:2Gt.03"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S2"
@@ -668,7 +947,7 @@
       "Title": "Place value in two-digit numbers: Reason and Apply",
       "SortOrder": 18,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9638fa8f5296a72aad6/Maths_guidance_year_2.pdf",
-      "SemanticSha256": "8d91063e7c0870e3aef6d346149f4103ad7f6a3d6f339e13155f2580975cd5f4",
+      "SemanticSha256": "6ae96fbf0f05d1751b785bf12ed77599874f54768a818980d287c13abdc26eb5",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -685,11 +964,20 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:2Np.02",
           "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Np.05",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Np.05",
+          "SortOrder": 3
         }
       ],
       "OutcomeCodes": [
         "CAM:OUT:0096:2Np.01",
-        "CAM:OUT:0096:2Np.02"
+        "CAM:OUT:0096:2Np.02",
+        "CAM:OUT:0096:2Np.05"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S2"
@@ -705,7 +993,7 @@
       "Title": "Two-digit numbers in the linear number system: Build the Idea",
       "SortOrder": 19,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9638fa8f5296a72aad6/Maths_guidance_year_2.pdf",
-      "SemanticSha256": "49aec771badc64344a7cca12c8104cc83eedb501191a27e86d30ae069c3b78cc",
+      "SemanticSha256": "353bc047335777aeca8941a71478ef09cf83a5d511f300fb4bb459262b8d1a2c",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -714,10 +1002,37 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:2Np.03",
           "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Ss.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Ss.01",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Ss.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Ss.02",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Ss.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Ss.03",
+          "SortOrder": 4
         }
       ],
       "OutcomeCodes": [
-        "CAM:OUT:0096:2Np.03"
+        "CAM:OUT:0096:2Np.03",
+        "CAM:OUT:0096:2Ss.01",
+        "CAM:OUT:0096:2Ss.02",
+        "CAM:OUT:0096:2Ss.03"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S2"
@@ -733,7 +1048,7 @@
       "Title": "Two-digit numbers in the linear number system: Reason and Apply",
       "SortOrder": 20,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/6009a9638fa8f5296a72aad6/Maths_guidance_year_2.pdf",
-      "SemanticSha256": "e112a86ce4f5354d256c329ed9cce63d3434319dd1f9f35bec6c12c745d30fa1",
+      "SemanticSha256": "0eaba4962bfda1420e8ded2d52af44768df993ac56222e316cb256fd2e04efe3",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -742,10 +1057,37 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:2Np.03",
           "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Nm.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Nm.01",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Nm.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Nm.02",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "2Np.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:2Np.04",
+          "SortOrder": 4
         }
       ],
       "OutcomeCodes": [
-        "CAM:OUT:0096:2Np.03"
+        "CAM:OUT:0096:2Np.03",
+        "CAM:OUT:0096:2Nm.01",
+        "CAM:OUT:0096:2Nm.02",
+        "CAM:OUT:0096:2Np.04"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S2"

@@ -24,17 +24,17 @@
     "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
   ],
   "SourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. Official Cambridge International Education wording is not reproduced. Edulytics learner-facing bodies are independently authored.",
-  "SemanticGraphSha256": "a95d066b4cd3f9e220e9890fc524caabaedb9febf84ddafa59c0f0dbaf9657de",
+  "SemanticGraphSha256": "0b4f70fd6bad63fe025e03456aa0492185892e21c482ee176d625207b44cd7fc",
   "AcquisitionDiagnostics": {
     "UnitCount": 13,
     "LessonCount": 70,
-    "OfficialStandardCount": 118,
-    "AddressingCoverageCount": 118,
-    "FormalMappingCount": 151,
+    "OfficialStandardCount": 155,
+    "AddressingCoverageCount": 155,
+    "FormalMappingCount": 188,
     "LessonsWithoutNumberedGradeReferenceAnyRole": 0,
     "LessonsWithoutNumberedAddressingStandard": 0,
     "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 0,
-    "MultiStandardLessons": 43
+    "MultiStandardLessons": 44
   },
   "Units": [
     {
@@ -368,7 +368,7 @@
       "Title": "Approximation and bounds",
       "SortOrder": 6,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "40c202921fcdff7c35ae037225b426b473cc17770eb17a9c978534d27e3d3518",
+      "SemanticSha256": "36fc0fccda11d9cc40263ae9036ac0c053c3dc13ff7573343b657e3f627c06f0",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -409,6 +409,86 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0580:E1.10.2",
           "SortOrder": 5
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.1",
+          "SortOrder": 6
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.3",
+          "SortOrder": 7
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.5",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.5",
+          "SortOrder": 8
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.14.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.14.1",
+          "SortOrder": 9
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.14.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.14.2",
+          "SortOrder": 10
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.14.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.14.3",
+          "SortOrder": 11
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.15.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.15.1",
+          "SortOrder": 12
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.15.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.15.2",
+          "SortOrder": 13
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.15.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.15.3",
+          "SortOrder": 14
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E1.17",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E1.17",
+          "SortOrder": 15
         }
       ],
       "OutcomeCodes": [
@@ -416,7 +496,17 @@
         "CAM:OUT:0580:E1.9.2",
         "CAM:OUT:0580:E1.9.3",
         "CAM:OUT:0580:E1.10.1",
-        "CAM:OUT:0580:E1.10.2"
+        "CAM:OUT:0580:E1.10.2",
+        "CAM:OUT:0580:E1.1",
+        "CAM:OUT:0580:E1.3",
+        "CAM:OUT:0580:E1.5",
+        "CAM:OUT:0580:E1.14.1",
+        "CAM:OUT:0580:E1.14.2",
+        "CAM:OUT:0580:E1.14.3",
+        "CAM:OUT:0580:E1.15.1",
+        "CAM:OUT:0580:E1.15.2",
+        "CAM:OUT:0580:E1.15.3",
+        "CAM:OUT:0580:E1.17"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L10-EXTENDED-OGL-V1"
@@ -515,7 +605,7 @@
       "Title": "Algebraic manipulation",
       "SortOrder": 9,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "17a94f484825fa2b658136cfa35d43749ea376926701c4ddb113438cc65bdebf",
+      "SemanticSha256": "9d613d956ccaac31c755d5d6bd86c011227235a558e542093bf6292d3cdeeaec",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -572,6 +662,126 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0580:E2.3.2",
           "SortOrder": 7
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.1.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.1.1",
+          "SortOrder": 8
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.1.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.1.2",
+          "SortOrder": 9
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.4.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.4.1",
+          "SortOrder": 10
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.4.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.4.2",
+          "SortOrder": 11
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.9.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.9.1",
+          "SortOrder": 12
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.9.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.9.2",
+          "SortOrder": 13
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.9.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.9.3",
+          "SortOrder": 14
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.9.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.9.4",
+          "SortOrder": 15
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.10.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.10.1",
+          "SortOrder": 16
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.10.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.10.2",
+          "SortOrder": 17
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.10.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.10.3",
+          "SortOrder": 18
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.12.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.12.1",
+          "SortOrder": 19
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.12.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.12.2",
+          "SortOrder": 20
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.12.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.12.3",
+          "SortOrder": 21
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.12.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.12.4",
+          "SortOrder": 22
         }
       ],
       "OutcomeCodes": [
@@ -581,7 +791,22 @@
         "CAM:OUT:0580:E2.2.4",
         "CAM:OUT:0580:E2.2.5",
         "CAM:OUT:0580:E2.3.1",
-        "CAM:OUT:0580:E2.3.2"
+        "CAM:OUT:0580:E2.3.2",
+        "CAM:OUT:0580:E2.1.1",
+        "CAM:OUT:0580:E2.1.2",
+        "CAM:OUT:0580:E2.4.1",
+        "CAM:OUT:0580:E2.4.2",
+        "CAM:OUT:0580:E2.9.1",
+        "CAM:OUT:0580:E2.9.2",
+        "CAM:OUT:0580:E2.9.3",
+        "CAM:OUT:0580:E2.9.4",
+        "CAM:OUT:0580:E2.10.1",
+        "CAM:OUT:0580:E2.10.2",
+        "CAM:OUT:0580:E2.10.3",
+        "CAM:OUT:0580:E2.12.1",
+        "CAM:OUT:0580:E2.12.2",
+        "CAM:OUT:0580:E2.12.3",
+        "CAM:OUT:0580:E2.12.4"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L10-EXTENDED-OGL-V1"
@@ -643,7 +868,7 @@
       "Title": "Simultaneous linear equations",
       "SortOrder": 11,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "e6ea0216cd51e627ce661aa6d4512a0b907f934fea5e470588c5dd33ac3103ad",
+      "SemanticSha256": "3f27a83c752cbbdef61da5ab1c27fbb3ae5e27874ed4308b07cf31f86b1be35e",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -668,12 +893,30 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0580:E2.5.3",
           "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.5.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.5.4",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E2.5.6",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E2.5.6",
+          "SortOrder": 5
         }
       ],
       "OutcomeCodes": [
         "CAM:OUT:0580:E2.5.1",
         "CAM:OUT:0580:E2.5.2",
-        "CAM:OUT:0580:E2.5.3"
+        "CAM:OUT:0580:E2.5.3",
+        "CAM:OUT:0580:E2.5.4",
+        "CAM:OUT:0580:E2.5.6"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L10-EXTENDED-OGL-V1"
@@ -901,7 +1144,7 @@
       "Title": "Gradient",
       "SortOrder": 17,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "7c90a529982a1b4ed189f6c2a4cb82985c80dc07ff840f84edfc2c27d082130e",
+      "SemanticSha256": "a6906020ebe06e5a96edaeb4090cd5e73c8ebc6ccdcdef4f31992b999f90fee3",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -918,11 +1161,20 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0580:E3.3.2",
           "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E3.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E3.1",
+          "SortOrder": 3
         }
       ],
       "OutcomeCodes": [
         "CAM:OUT:0580:E3.3.1",
-        "CAM:OUT:0580:E3.3.2"
+        "CAM:OUT:0580:E3.3.2",
+        "CAM:OUT:0580:E3.1"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L10-EXTENDED-OGL-V1"
@@ -1353,7 +1605,7 @@
       "Title": "Circle measures",
       "SortOrder": 28,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "07453b9246d78e2b89ebfeb6d6f3a2b914e504075b06abb2e8117a5a2a5beaca",
+      "SemanticSha256": "e71987dcc35d69a9125a18dd3ba38473b5091a273577e1e95c5bb6d7a5125010",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -1370,11 +1622,20 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0580:E5.3.2",
           "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E5.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E5.1",
+          "SortOrder": 3
         }
       ],
       "OutcomeCodes": [
         "CAM:OUT:0580:E5.3.1",
-        "CAM:OUT:0580:E5.3.2"
+        "CAM:OUT:0580:E5.3.2",
+        "CAM:OUT:0580:E5.1"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L10-EXTENDED-OGL-V1"
@@ -1511,7 +1772,7 @@
       "Title": "Sine cosine and tangent",
       "SortOrder": 33,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "72725cb92e86c6530204738983e408b76ecefca195a3a7824a044c975e6d8e90",
+      "SemanticSha256": "f0ced7378f82c30eda7e4a76bc2273d3711bc10ed5eb86d5fd40a78bc5f8d991",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -1544,13 +1805,22 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0580:E6.2.4",
           "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E6.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E6.3",
+          "SortOrder": 5
         }
       ],
       "OutcomeCodes": [
         "CAM:OUT:0580:E6.2.1",
         "CAM:OUT:0580:E6.2.2",
         "CAM:OUT:0580:E6.2.3",
-        "CAM:OUT:0580:E6.2.4"
+        "CAM:OUT:0580:E6.2.4",
+        "CAM:OUT:0580:E6.3"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L10-EXTENDED-OGL-V1"
@@ -1668,7 +1938,7 @@
       "Title": "Vector arithmetic",
       "SortOrder": 37,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "76c8f7027061bbd3a979602d0d1c17aa867feb8e9d2b66da32bdcf6b58166956",
+      "SemanticSha256": "a3b8d689400142d5a4ce7e59a1e340b8e9da60ceb758f94a93e7fda0cea43705",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -1685,11 +1955,29 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0580:E7.3",
           "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E7.2.2",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E7.2.2",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E7.2.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E7.2.3",
+          "SortOrder": 4
         }
       ],
       "OutcomeCodes": [
         "CAM:OUT:0580:E7.2.1",
-        "CAM:OUT:0580:E7.3"
+        "CAM:OUT:0580:E7.3",
+        "CAM:OUT:0580:E7.2.2",
+        "CAM:OUT:0580:E7.2.3"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L10-EXTENDED-OGL-V1"
@@ -1835,7 +2123,7 @@
       "Title": "Tree diagrams",
       "SortOrder": 42,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "41f9106e3fba872380d2c6826eab839ac8d5345307197bb3a674d019e244c13d",
+      "SemanticSha256": "259d4b984979898d2f38aacb16a003df6e101af65dbce323b36e188d24164b46",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -1852,11 +2140,38 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0580:E8.4",
           "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E8.1.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E8.1.1",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E8.1.3",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E8.1.3",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E8.1.4",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E8.1.4",
+          "SortOrder": 5
         }
       ],
       "OutcomeCodes": [
         "CAM:OUT:0580:E8.3",
-        "CAM:OUT:0580:E8.4"
+        "CAM:OUT:0580:E8.4",
+        "CAM:OUT:0580:E8.1.1",
+        "CAM:OUT:0580:E8.1.3",
+        "CAM:OUT:0580:E8.1.4"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L10-EXTENDED-OGL-V1"
@@ -1872,7 +2187,7 @@
       "Title": "Expected frequency",
       "SortOrder": 43,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "cea2b78fcabcf1e9982ff1d8b05eb3a94fbf6a6a272fd771c89a64a5be30d9a2",
+      "SemanticSha256": "3919d905e15999100c16146cc1e9cd2139e33895a7351bb80a6d923d9e1845be",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -1881,10 +2196,19 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0580:E8.2.2",
           "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E8.2.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E8.2.1",
+          "SortOrder": 2
         }
       ],
       "OutcomeCodes": [
-        "CAM:OUT:0580:E8.2.2"
+        "CAM:OUT:0580:E8.2.2",
+        "CAM:OUT:0580:E8.2.1"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L10-EXTENDED-OGL-V1"
@@ -1928,7 +2252,7 @@
       "Title": "Averages and spread",
       "SortOrder": 45,
       "SourceUrl": "https://www.gov.uk/government/publications/gcse-mathematics-subject-content-and-assessment-objectives",
-      "SemanticSha256": "71596f1aa7707bb6ff1d09d366d2dc8faadc74cfe44ca0f1d2d679ff2031d67f",
+      "SemanticSha256": "44c795c99a50612cd3e18d7cd18c51af71669c5b1fdc1ea8bd8d90119a597b48",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -1953,12 +2277,21 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0580:E9.2.3",
           "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "E9.1",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0580:E9.1",
+          "SortOrder": 4
         }
       ],
       "OutcomeCodes": [
         "CAM:OUT:0580:E9.2.1",
         "CAM:OUT:0580:E9.2.2",
-        "CAM:OUT:0580:E9.2.3"
+        "CAM:OUT:0580:E9.2.3",
+        "CAM:OUT:0580:E9.1"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-IGCSE-L10-EXTENDED-OGL-V1"

@@ -12,7 +12,7 @@
   "SourceCheckedAtUtc": "2026-09-01T00:00:00Z",
   "SourceResolution": "CurrentOfficial",
   "FallbackReason": "",
-  "ReviewMethod": "Scope inventory review, pathway isolation, OGL source-policy review, deterministic lesson/body generation, mathematical example verification and canonical body hashing.",
+  "ReviewMethod": "Stable-identity Cambridge official-outcome closure: existing reviewed lessons and practice mappings preserved; missing Scheme-of-Work outcomes appended only to unprotected Edulytics lessons with independently authored coverage.",
   "SourcePolicyVersion": 2,
   "PedagogicalSourceType": "OpenEducationalResource",
   "PedagogicalSourceTitle": "National curriculum in England: Mathematics programmes of study — Key Stage 3",
@@ -24,8 +24,8 @@
   "PedagogicalSourceSelectionEvidence": "37 source-policy-compliant lessons generated for exactly one curriculum level/pathway scope; zero unverified formal OutcomeCodes.",
   "PedagogicalSourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. Official curriculum wording is not reproduced.",
   "Status": "Published",
-  "ReviewedBy": "Edulytics Phase 29 deterministic curriculum review",
-  "ReviewEvidence": "Scope CAMBRIDGE-INTL-MATH/L9/SHARED: 37 lessons, 4 units, academic language en, zero unverified formal mappings. Previously unmapped legacy enrichment was replaced in-place with independently authored lessons aligned to verified current Cambridge identifiers; lesson identities were preserved.",
+  "ReviewedBy": "Edulytics Cambridge official-outcome closure",
+  "ReviewEvidence": "Stage 9: complete coverage of 55 formal official identifiers; protected practice and reviewed lesson bodies remain unchanged.",
   "Lessons": [
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L9:SHARED:01:01:INTEGERS-AND-DIRECTED-NUMBER",
@@ -240,32 +240,33 @@
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
       "OutcomeCodes": [
         "CAM:OUT:0862:9Ni.02",
-        "CAM:OUT:0862:9Ni.04"
+        "CAM:OUT:0862:9Ni.04",
+        "CAM:OUT:0862:9Nf.01"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SourceLocator": "Cambridge Lower Secondary Stage 9 / Number and Proportional Reasoning / 07",
+      "SourceLocator": "Cambridge Lower Secondary Stage 9 / Number and Proportional Reasoning / 07 | Cambridge Official Scheme of Work / Stage 9 / Unit 1 / Topic 2",
       "SourceTitle": "National curriculum in England: Mathematics programmes of study — Key Stage 3",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "Key Stage 3 Mathematics programme of study / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "a882f4fd0684f57c293ac45038aee786d7b8236e1be1a601970b4c06d55d163a",
-      "CanonicalBodySha256": "e286e761f06a9124398524e47c6f8a9706923c0cabf0a17bb7240f3caa46f5e0",
+      "CanonicalBodySha256": "3d12c2a757681c8c8bd51f845e2757d022e0e5dca8944332b79de7d5814a43b3",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Existing reviewed Edulytics lesson retained; additional Cambridge official outcome coverage was independently authored and appended without reproducing Cambridge objective prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Powers and roots",
-          "Explanation": "Powers and roots is studied here as part of Cambridge Lower Secondary Stage 9. Powers, roots and logarithms are linked operations. Apply index laws only when their bases and operation structures satisfy the relevant conditions. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Powers and roots. Powers, roots and logarithms are linked operations. Apply index laws only when their bases and operation structures satisfy the relevant conditions. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: 2³×2⁴ = 2⁷ = 128. Worked example 2: √50 = √(25×2) = 5√2, and log₁₀(1000)=3. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not add exponents when bases differ, and do not distribute a root across addition. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Powers and roots, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Explanation": "Powers and roots is studied here as part of Cambridge Lower Secondary Stage 9. Powers, roots and logarithms are linked operations. Apply index laws only when their bases and operation structures satisfy the relevant conditions. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure. Additional official coverage for Cambridge Stage 9 topic “The number system” is integrated here for identifiers 9Nf.01. Number reasoning depends on place value, magnitude and estimation. Keep digit values explicit and use intervals or number lines to justify comparisons and rounding.",
+          "KeyConceptsAndRules": "Focus: Powers and roots. Powers, roots and logarithms are linked operations. Apply index laws only when their bases and operation structures satisfy the relevant conditions. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result. For the added The number system focus: Number reasoning depends on place value, magnitude and estimation. Keep digit values explicit and use intervals or number lines to justify comparisons and rounding. State units, assumptions or restrictions when relevant.",
+          "WorkedExamples": "Worked example 1: 2³×2⁴ = 2⁷ = 128. Worked example 2: √50 = √(25×2) = 5√2, and log₁₀(1000)=3. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable. Added worked focus for The number system: Locate a number between two neighbouring benchmark values, make the required comparison or rounding decision, then estimate independently to check the result.",
+          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context.",
+          "CommonMistakes": "Do not add exponents when bases differ, and do not distribute a root across addition. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem.",
+          "QuickSummary": "For Powers and roots, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently. Added Cambridge focus: The number system — model, calculate or reason accurately, then verify."
         }
       ]
     },
@@ -311,32 +312,34 @@
       "OutcomeCodes": [
         "CAM:OUT:0862:9Ae.01",
         "CAM:OUT:0862:9Ae.02",
-        "CAM:OUT:0862:9Ae.03"
+        "CAM:OUT:0862:9Ae.03",
+        "CAM:OUT:0862:9Np.01",
+        "CAM:OUT:0862:9Ae.06"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SourceLocator": "Cambridge Lower Secondary Stage 9 / Algebra / 01",
+      "SourceLocator": "Cambridge Lower Secondary Stage 9 / Algebra / 01 | Cambridge Official Scheme of Work / Stage 9 / Unit 1 / Topic 1 | Cambridge Official Scheme of Work / Stage 9 / Unit 2 / Topic 2",
       "SourceTitle": "National curriculum in England: Mathematics programmes of study — Key Stage 3",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "Key Stage 3 Mathematics programme of study / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "a882f4fd0684f57c293ac45038aee786d7b8236e1be1a601970b4c06d55d163a",
-      "CanonicalBodySha256": "5fb59b6ca5666acc8b91ed2448a6265a9a3c6c8d85b636dadd8f6e6ffe93ec64",
+      "CanonicalBodySha256": "ae8ddf7d70b951379ce1d25e18f085ea23bd0f7b7147d7ef86c27c61c8f5a846",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Existing reviewed Edulytics lesson retained; additional Cambridge official outcome coverage was independently authored and appended without reproducing Cambridge objective prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Algebraic expressions",
-          "Explanation": "Algebraic expressions is studied here as part of Cambridge Lower Secondary Stage 9. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Algebraic expressions. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: For 48+27, regroup as 48+20+7=75 and verify with 75-27=48. Worked example 2: For a quantity of 60 split equally into 5 groups, each group is 12; verify 5×12=60. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not select an operation from a keyword alone. Check units, magnitude and the original relationship before accepting an answer. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Algebraic expressions, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Explanation": "Algebraic expressions is studied here as part of Cambridge Lower Secondary Stage 9. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure. Additional official coverage for Cambridge Stage 9 topic “Indices and standard form” is integrated here for identifiers 9Np.01. Represent the relationship clearly, use a valid mathematical rule, and verify the conclusion with an independent check. Additional official coverage for Cambridge Stage 9 topic “Linear and simultaneous equations” is integrated here for identifiers 9Ae.06. Algebra and pattern work represents general relationships. Keep equivalent transformations explicit and test symbolic results against values, tables or graphs.",
+          "KeyConceptsAndRules": "Focus: Algebraic expressions. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result. For the added Indices and standard form focus: Represent the relationship clearly, use a valid mathematical rule, and verify the conclusion with an independent check. State units, assumptions or restrictions when relevant. For the added Linear and simultaneous equations focus: Algebra and pattern work represents general relationships. Keep equivalent transformations explicit and test symbolic results against values, tables or graphs. State units, assumptions or restrictions when relevant.",
+          "WorkedExamples": "Worked example 1: For 48+27, regroup as 48+20+7=75 and verify with 75-27=48. Worked example 2: For a quantity of 60 split equally into 5 groups, each group is 12; verify 5×12=60. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable. Added worked focus for Indices and standard form: Choose simple values that satisfy the stated conditions, show the calculation in visible steps, and check the answer using an inverse operation or a second representation. Added worked focus for Linear and simultaneous equations: Express the relationship symbolically, transform it one valid step at a time, and verify the result by substitution or by checking several terms or points.",
+          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context.",
+          "CommonMistakes": "Do not select an operation from a keyword alone. Check units, magnitude and the original relationship before accepting an answer. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem.",
+          "QuickSummary": "For Algebraic expressions, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently. Added Cambridge focus: Indices and standard form — model, calculate or reason accurately, then verify. Added Cambridge focus: Linear and simultaneous equations — model, calculate or reason accurately, then verify."
         }
       ]
     },
@@ -586,32 +589,35 @@
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
       "OutcomeCodes": [
         "CAM:OUT:0862:9Ae.02",
-        "CAM:OUT:0862:9As.05"
+        "CAM:OUT:0862:9As.05",
+        "CAM:OUT:0862:9As.03",
+        "CAM:OUT:0862:9As.04",
+        "CAM:OUT:0862:9Gp.02"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SourceLocator": "Cambridge Lower Secondary Stage 9 / Algebra / 09",
+      "SourceLocator": "Cambridge Lower Secondary Stage 9 / Algebra / 09 | Cambridge Official Scheme of Work / Stage 9 / Unit 7 / Topic 2 | Cambridge Official Scheme of Work / Stage 9 / Unit 7 / Topic 3",
       "SourceTitle": "National curriculum in England: Mathematics programmes of study — Key Stage 3",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "Key Stage 3 Mathematics programme of study / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "a882f4fd0684f57c293ac45038aee786d7b8236e1be1a601970b4c06d55d163a",
-      "CanonicalBodySha256": "c71573adadf3efb587fef074072e81e42f392b64ec877a210c9d30286aef03df",
+      "CanonicalBodySha256": "6178099333416766fc90e53e53333f2e60ccec94091d0d0f8bbeca7fd7e3b984",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Existing reviewed Edulytics lesson retained; additional Cambridge official outcome coverage was independently authored and appended without reproducing Cambridge objective prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Quadratic expressions",
-          "Explanation": "Quadratic expressions is studied here as part of Cambridge Lower Secondary Stage 9. Quadratic relationships contain a squared variable. Factorisation, completing the square, graphs and the quadratic formula are connected representations of the same structure. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Quadratic expressions. Quadratic relationships contain a squared variable. Factorisation, completing the square, graphs and the quadratic formula are connected representations of the same structure. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: x² - 5x + 6 = (x - 2)(x - 3), so the roots are 2 and 3. Worked example 2: For y = x² - 4, the x-intercepts satisfy x² = 4, giving x = ±2. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not discard a negative root without a contextual reason, and verify roots by substitution into the original equation. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Quadratic expressions, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Explanation": "Quadratic expressions is studied here as part of Cambridge Lower Secondary Stage 9. Quadratic relationships contain a squared variable. Factorisation, completing the square, graphs and the quadratic formula are connected representations of the same structure. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure. Additional official coverage for Cambridge Stage 9 topic “Functions” is integrated here for identifiers 9As.03, 9As.04. Algebra and pattern work represents general relationships. Keep equivalent transformations explicit and test symbolic results against values, tables or graphs. Additional official coverage for Cambridge Stage 9 topic “Graphs and coordinates” is integrated here for identifiers 9Gp.02. Algebra and pattern work represents general relationships. Keep equivalent transformations explicit and test symbolic results against values, tables or graphs.",
+          "KeyConceptsAndRules": "Focus: Quadratic expressions. Quadratic relationships contain a squared variable. Factorisation, completing the square, graphs and the quadratic formula are connected representations of the same structure. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result. For the added Functions focus: Algebra and pattern work represents general relationships. Keep equivalent transformations explicit and test symbolic results against values, tables or graphs. State units, assumptions or restrictions when relevant. For the added Graphs and coordinates focus: Algebra and pattern work represents general relationships. Keep equivalent transformations explicit and test symbolic results against values, tables or graphs. State units, assumptions or restrictions when relevant.",
+          "WorkedExamples": "Worked example 1: x² - 5x + 6 = (x - 2)(x - 3), so the roots are 2 and 3. Worked example 2: For y = x² - 4, the x-intercepts satisfy x² = 4, giving x = ±2. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable. Added worked focus for Functions: Express the relationship symbolically, transform it one valid step at a time, and verify the result by substitution or by checking several terms or points. Added worked focus for Graphs and coordinates: Express the relationship symbolically, transform it one valid step at a time, and verify the result by substitution or by checking several terms or points.",
+          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context.",
+          "CommonMistakes": "Do not discard a negative root without a contextual reason, and verify roots by substitution into the original equation. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem.",
+          "QuickSummary": "For Quadratic expressions, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently. Added Cambridge focus: Functions — model, calculate or reason accurately, then verify. Added Cambridge focus: Graphs and coordinates — model, calculate or reason accurately, then verify."
         }
       ]
     },
@@ -833,32 +839,34 @@
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
       "OutcomeCodes": [
         "CAM:OUT:0862:9Gg.04",
-        "CAM:OUT:0862:9Gg.05"
+        "CAM:OUT:0862:9Gg.05",
+        "CAM:OUT:0862:9Gg.02",
+        "CAM:OUT:0862:9Gg.06"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SourceLocator": "Cambridge Lower Secondary Stage 9 / Geometry and Measure / 06",
+      "SourceLocator": "Cambridge Lower Secondary Stage 9 / Geometry and Measure / 06 | Cambridge Official Scheme of Work / Stage 9 / Unit 3 / Topic 1 | Cambridge Official Scheme of Work / Stage 9 / Unit 3 / Topic 2",
       "SourceTitle": "National curriculum in England: Mathematics programmes of study — Key Stage 3",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "Key Stage 3 Mathematics programme of study / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "a882f4fd0684f57c293ac45038aee786d7b8236e1be1a601970b4c06d55d163a",
-      "CanonicalBodySha256": "bda5fcbd1a4fc1bca3b9173e380ab0e95260d89d1b0398b5ea77afbf479e90ac",
+      "CanonicalBodySha256": "369230aa91441a866c1a0dbba5aadf00d5365f52d7290c8d2545a6a793c16b7f",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Existing reviewed Edulytics lesson retained; additional Cambridge official outcome coverage was independently authored and appended without reproducing Cambridge objective prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Surface area and volume",
-          "Explanation": "Surface area and volume is studied here as part of Cambridge Lower Secondary Stage 9. Measurement formulas express geometric relationships. Draw and label the figure, choose the correct dimensions, then calculate with consistent units. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Surface area and volume. Measurement formulas express geometric relationships. Draw and label the figure, choose the correct dimensions, then calculate with consistent units. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: A rectangle 8 by 5 has area 8×5 = 40 square units. Worked example 2: A triangle with base 10 and perpendicular height 6 has area 1/2×10×6 = 30 square units. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not confuse perimeter with area or area with volume. Convert units before substituting into a formula. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Surface area and volume, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Explanation": "Surface area and volume is studied here as part of Cambridge Lower Secondary Stage 9. Measurement formulas express geometric relationships. Draw and label the figure, choose the correct dimensions, then calculate with consistent units. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure. Additional official coverage for Cambridge Stage 9 topic “2D shapes and measure” is integrated here for identifiers 9Gg.02. Geometric and measurement reasoning uses definitions, properties and consistent units. Label known information before calculating or classifying. Additional official coverage for Cambridge Stage 9 topic “3D shapes” is integrated here for identifiers 9Gg.06. Geometric and measurement reasoning uses definitions, properties and consistent units. Label known information before calculating or classifying.",
+          "KeyConceptsAndRules": "Focus: Surface area and volume. Measurement formulas express geometric relationships. Draw and label the figure, choose the correct dimensions, then calculate with consistent units. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result. For the added 2D shapes and measure focus: Geometric and measurement reasoning uses definitions, properties and consistent units. Label known information before calculating or classifying. State units, assumptions or restrictions when relevant. For the added 3D shapes focus: Geometric and measurement reasoning uses definitions, properties and consistent units. Label known information before calculating or classifying. State units, assumptions or restrictions when relevant.",
+          "WorkedExamples": "Worked example 1: A rectangle 8 by 5 has area 8×5 = 40 square units. Worked example 2: A triangle with base 10 and perpendicular height 6 has area 1/2×10×6 = 30 square units. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable. Added worked focus for 2D shapes and measure: Sketch or label the relevant figure, identify the property or measurement relationship, calculate using consistent units, and confirm that the final unit and magnitude are appropriate. Added worked focus for 3D shapes: Sketch or label the relevant figure, identify the property or measurement relationship, calculate using consistent units, and confirm that the final unit and magnitude are appropriate.",
+          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context.",
+          "CommonMistakes": "Do not confuse perimeter with area or area with volume. Convert units before substituting into a formula. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem.",
+          "QuickSummary": "For Surface area and volume, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently. Added Cambridge focus: 2D shapes and measure — model, calculate or reason accurately, then verify. Added Cambridge focus: 3D shapes — model, calculate or reason accurately, then verify."
         }
       ]
     },
@@ -1212,32 +1220,33 @@
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 9.",
       "OutcomeCodes": [
         "CAM:OUT:0862:9Sp.01",
-        "CAM:OUT:0862:9Sp.03"
+        "CAM:OUT:0862:9Sp.03",
+        "CAM:OUT:0862:9Sp.02"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SourceLocator": "Cambridge Lower Secondary Stage 9 / Statistics and Probability / 07",
+      "SourceLocator": "Cambridge Lower Secondary Stage 9 / Statistics and Probability / 07 | Cambridge Official Scheme of Work / Stage 9 / Unit 5 / Topic 1",
       "SourceTitle": "National curriculum in England: Mathematics programmes of study — Key Stage 3",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "Key Stage 3 Mathematics programme of study / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "a882f4fd0684f57c293ac45038aee786d7b8236e1be1a601970b4c06d55d163a",
-      "CanonicalBodySha256": "8e476e2f0af8fbbaa3e2e9f77bc04e3dd60d9cfad89f33c65f06035c9daa1eaa",
+      "CanonicalBodySha256": "789e2ca0e1cc8f6a7b31fbca9291dc1ad92caa5c94569b71ab96938ec16cf89a",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Existing reviewed Edulytics lesson retained; additional Cambridge official outcome coverage was independently authored and appended without reproducing Cambridge objective prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Sample spaces",
-          "Explanation": "Sample spaces is studied here as part of Cambridge Lower Secondary Stage 9. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Sample spaces. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: For 48+27, regroup as 48+20+7=75 and verify with 75-27=48. Worked example 2: For a quantity of 60 split equally into 5 groups, each group is 12; verify 5×12=60. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not select an operation from a keyword alone. Check units, magnitude and the original relationship before accepting an answer. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Sample spaces, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Explanation": "Sample spaces is studied here as part of Cambridge Lower Secondary Stage 9. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure. Additional official coverage for Cambridge Stage 9 topic “Mutually exclusive and combined events” is integrated here for identifiers 9Sp.02. Represent the relationship clearly, use a valid mathematical rule, and verify the conclusion with an independent check.",
+          "KeyConceptsAndRules": "Focus: Sample spaces. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result. For the added Mutually exclusive and combined events focus: Represent the relationship clearly, use a valid mathematical rule, and verify the conclusion with an independent check. State units, assumptions or restrictions when relevant.",
+          "WorkedExamples": "Worked example 1: For 48+27, regroup as 48+20+7=75 and verify with 75-27=48. Worked example 2: For a quantity of 60 split equally into 5 groups, each group is 12; verify 5×12=60. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable. Added worked focus for Mutually exclusive and combined events: Choose simple values that satisfy the stated conditions, show the calculation in visible steps, and check the answer using an inverse operation or a second representation.",
+          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context.",
+          "CommonMistakes": "Do not select an operation from a keyword alone. Check units, magnitude and the original relationship before accepting an answer. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem.",
+          "QuickSummary": "For Sample spaces, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently. Added Cambridge focus: Mutually exclusive and combined events — model, calculate or reason accurately, then verify."
         }
       ]
     },

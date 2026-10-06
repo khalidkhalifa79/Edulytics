@@ -12,7 +12,7 @@
   "SourceCheckedAtUtc": "2026-09-01T00:00:00Z",
   "SourceResolution": "CurrentOfficial",
   "FallbackReason": "",
-  "ReviewMethod": "DfE OGL source extraction, ready-to-progress criterion completeness check, deterministic two-lesson-per-criterion Edulytics authoring, canonical body hashing, and explicit no-unverified-Cambridge-mapping rule.",
+  "ReviewMethod": "Stable-identity Cambridge official-outcome closure: existing reviewed lessons and practice mappings preserved; missing Scheme-of-Work outcomes appended only to unprotected Edulytics lessons with independently authored coverage.",
   "SourcePolicyVersion": 2,
   "PedagogicalSourceType": "OpenEducationalResource",
   "PedagogicalSourceTitle": "Mathematics guidance: year 3",
@@ -24,8 +24,8 @@
   "PedagogicalSourceSelectionEvidence": "All 17 distinct Year 3 ready-to-progress criteria extracted from the official DfE guidance are represented by two Edulytics lessons, for 34 source-backed supporting lessons.",
   "PedagogicalSourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. No government logos or identified third-party copyright material is reproduced.",
   "Status": "Published",
-  "ReviewedBy": "Edulytics Phase 29 deterministic Cambridge Primary source-policy review",
-  "ReviewEvidence": "Stage 3: 17 DfE ready-to-progress criteria, 34 supporting lessons, English academic bodies, zero unverified Cambridge formal mappings, source SHA256 d84091d958b64002656f2fcb39e0c396ab9e97e93adb75052ddc8f5050d4edd0.",
+  "ReviewedBy": "Edulytics Cambridge official-outcome closure",
+  "ReviewEvidence": "Stage 3: complete coverage of 53 formal official identifiers; protected practice and reviewed lesson bodies remain unchanged.",
   "Lessons": [
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:S3:3AS-1:BUILD",
@@ -274,32 +274,33 @@
       "TitleSourceReference": "DfE Year 3 ready-to-progress criterion 3F-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
       "OutcomeCodes": [
         "CAM:OUT:0096:3Nf.01",
-        "CAM:OUT:0096:3Nf.04"
+        "CAM:OUT:0096:3Nf.04",
+        "CAM:OUT:0096:3Nf.02"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
-      "SourceLocator": "3F-1",
+      "SourceLocator": "3F-1 | Cambridge Official Scheme of Work / Stage 3 / Unit 7 / Topic 1",
       "SourceTitle": "Mathematics guidance: year 3",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "DfE-00112-2020 / June 2020",
       "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation; no government logos or identified third-party material is reused.",
       "SourceSha256": "d84091d958b64002656f2fcb39e0c396ab9e97e93adb75052ddc8f5050d4edd0",
-      "CanonicalBodySha256": "22633a3b433ed5566f990a867ca99c00a752ac93817a9ed3b5534d5898240ce9",
+      "CanonicalBodySha256": "c7f9f7390e27154752360f0dcb314ebeda7454f49fca7ff861e61a734d841632",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by OGL DfE guidance for the corresponding year. Cambridge official identifiers remain in the curriculum reference graph; this lesson does not claim an unverified formal Cambridge mapping.",
+      "AdaptationStatus": "Existing reviewed Edulytics lesson retained; additional Cambridge official outcome coverage was independently authored and appended without reproducing Cambridge objective prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Use and understand fraction notation: Reason and Apply",
-          "Explanation": "This Cambridge Primary Stage 3 supporting lesson develops the open DfE Year 3 ready-to-progress focus “Use and understand fraction notation”. Fractions describe equal parts and numbers on a number line. Equivalent fractions preserve value even when numerator and denominator change together. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here.",
-          "KeyConceptsAndRules": "Source focus: Use and understand fraction notation. Fractions describe equal parts and numbers on a number line. Equivalent fractions preserve value even when numerator and denominator change together. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. Always state what each number, unit, operation or geometric property represents before calculating.",
-          "WorkedExamples": "Example A: Represent a fraction with equal parts, locate it on a number line and explain the role of the numerator and denominator. Explain each step and name the mathematical relationship being used. Example B: Use equivalence or a common denominator only when it helps compare or calculate without changing the value. Compare two possible approaches and choose the clearer one.",
-          "StepByStepSolutions": "Step 1: Read the problem and identify the quantities or properties. Step 2: Represent the situation with numbers, a diagram, a number line, an equation or a labelled shape. Step 3: Apply the relevant rule while preserving place value, units and relationships. Step 4: Calculate carefully and write the result with its meaning. Step 5: Check using an inverse operation, estimation, an alternative representation or the stated geometric properties.",
-          "CommonMistakes": "Do not add denominators when adding fractions, and do not assume a larger denominator means a larger fraction. Compare the value represented by the whole fraction. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude.",
-          "QuickSummary": "Use and understand fraction notation: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning."
+          "Explanation": "This Cambridge Primary Stage 3 supporting lesson develops the open DfE Year 3 ready-to-progress focus “Use and understand fraction notation”. Fractions describe equal parts and numbers on a number line. Equivalent fractions preserve value even when numerator and denominator change together. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here. Additional official coverage for Cambridge Stage 3 topic “Understanding fractions” is integrated here for identifiers 3Nf.02. Fractions, percentages and ratios compare quantities multiplicatively. Work with equivalent forms and keep the reference whole or ratio parts explicit.",
+          "KeyConceptsAndRules": "Source focus: Use and understand fraction notation. Fractions describe equal parts and numbers on a number line. Equivalent fractions preserve value even when numerator and denominator change together. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. Always state what each number, unit, operation or geometric property represents before calculating. For the added Understanding fractions focus: Fractions, percentages and ratios compare quantities multiplicatively. Work with equivalent forms and keep the reference whole or ratio parts explicit. State units, assumptions or restrictions when relevant.",
+          "WorkedExamples": "Example A: Represent a fraction with equal parts, locate it on a number line and explain the role of the numerator and denominator. Explain each step and name the mathematical relationship being used. Example B: Use equivalence or a common denominator only when it helps compare or calculate without changing the value. Compare two possible approaches and choose the clearer one. Added worked focus for Understanding fractions: For an equivalent-form check, scale numerator and denominator by the same non-zero factor, or convert a fraction to a decimal or percentage and verify that the represented quantity is unchanged.",
+          "StepByStepSolutions": "Step 1: Read the problem and identify the quantities or properties. Step 2: Represent the situation with numbers, a diagram, a number line, an equation or a labelled shape. Step 3: Apply the relevant rule while preserving place value, units and relationships. Step 4: Calculate carefully and write the result with its meaning. Step 5: Check using an inverse operation, estimation, an alternative representation or the stated geometric properties. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context.",
+          "CommonMistakes": "Do not add denominators when adding fractions, and do not assume a larger denominator means a larger fraction. Compare the value represented by the whole fraction. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem.",
+          "QuickSummary": "Use and understand fraction notation: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning. Added Cambridge focus: Understanding fractions — model, calculate or reason accurately, then verify."
         }
       ]
     },
@@ -378,32 +379,33 @@
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 3 ready-to-progress criterion 3F-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
       "OutcomeCodes": [
-        "CAM:OUT:0096:3Nf.08"
+        "CAM:OUT:0096:3Nf.08",
+        "CAM:OUT:0096:3Nf.06"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
-      "SourceLocator": "3F-3",
+      "SourceLocator": "3F-3 | Cambridge Official Scheme of Work / Stage 3 / Unit 7 / Topic 2",
       "SourceTitle": "Mathematics guidance: year 3",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "DfE-00112-2020 / June 2020",
       "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation; no government logos or identified third-party material is reused.",
       "SourceSha256": "d84091d958b64002656f2fcb39e0c396ab9e97e93adb75052ddc8f5050d4edd0",
-      "CanonicalBodySha256": "63b846a577e4cbfdd74d4b5f1a7b1ea9608a7c6ddb21e61b3c83fc85a0792438",
+      "CanonicalBodySha256": "0b338c7770fda0a83533652b768bd5f1d7cb075e2b6bdf3d12c319724c055810",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by OGL DfE guidance for the corresponding year. Cambridge official identifiers remain in the curriculum reference graph; this lesson does not claim an unverified formal Cambridge mapping.",
+      "AdaptationStatus": "Existing reviewed Edulytics lesson retained; additional Cambridge official outcome coverage was independently authored and appended without reproducing Cambridge objective prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Fractions within 1 in the linear number system: Build the Idea",
-          "Explanation": "This Cambridge Primary Stage 3 supporting lesson develops the open DfE Year 3 ready-to-progress focus “Fractions within 1 in the linear number system”. Fractions describe equal parts and numbers on a number line. Equivalent fractions preserve value even when numerator and denominator change together. Build the idea by representing it in more than one way and explaining why the representations agree. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here.",
-          "KeyConceptsAndRules": "Source focus: Fractions within 1 in the linear number system. Fractions describe equal parts and numbers on a number line. Equivalent fractions preserve value even when numerator and denominator change together. Build the idea by representing it in more than one way and explaining why the representations agree. Always state what each number, unit, operation or geometric property represents before calculating.",
-          "WorkedExamples": "Example A: Represent a fraction with equal parts, locate it on a number line and explain the role of the numerator and denominator. Explain each step and name the mathematical relationship being used. Example B: Use equivalence or a common denominator only when it helps compare or calculate without changing the value. Compare two possible approaches and choose the clearer one.",
-          "StepByStepSolutions": "Step 1: Read the problem and identify the quantities or properties. Step 2: Represent the situation with numbers, a diagram, a number line, an equation or a labelled shape. Step 3: Apply the relevant rule while preserving place value, units and relationships. Step 4: Calculate carefully and write the result with its meaning. Step 5: Check using an inverse operation, estimation, an alternative representation or the stated geometric properties.",
-          "CommonMistakes": "Do not add denominators when adding fractions, and do not assume a larger denominator means a larger fraction. Compare the value represented by the whole fraction. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude.",
-          "QuickSummary": "Fractions within 1 in the linear number system: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning."
+          "Explanation": "This Cambridge Primary Stage 3 supporting lesson develops the open DfE Year 3 ready-to-progress focus “Fractions within 1 in the linear number system”. Fractions describe equal parts and numbers on a number line. Equivalent fractions preserve value even when numerator and denominator change together. Build the idea by representing it in more than one way and explaining why the representations agree. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here. Additional official coverage for Cambridge Stage 3 topic “Comparing fractions” is integrated here for identifiers 3Nf.06. Fractions, percentages and ratios compare quantities multiplicatively. Work with equivalent forms and keep the reference whole or ratio parts explicit.",
+          "KeyConceptsAndRules": "Source focus: Fractions within 1 in the linear number system. Fractions describe equal parts and numbers on a number line. Equivalent fractions preserve value even when numerator and denominator change together. Build the idea by representing it in more than one way and explaining why the representations agree. Always state what each number, unit, operation or geometric property represents before calculating. For the added Comparing fractions focus: Fractions, percentages and ratios compare quantities multiplicatively. Work with equivalent forms and keep the reference whole or ratio parts explicit. State units, assumptions or restrictions when relevant.",
+          "WorkedExamples": "Example A: Represent a fraction with equal parts, locate it on a number line and explain the role of the numerator and denominator. Explain each step and name the mathematical relationship being used. Example B: Use equivalence or a common denominator only when it helps compare or calculate without changing the value. Compare two possible approaches and choose the clearer one. Added worked focus for Comparing fractions: For an equivalent-form check, scale numerator and denominator by the same non-zero factor, or convert a fraction to a decimal or percentage and verify that the represented quantity is unchanged.",
+          "StepByStepSolutions": "Step 1: Read the problem and identify the quantities or properties. Step 2: Represent the situation with numbers, a diagram, a number line, an equation or a labelled shape. Step 3: Apply the relevant rule while preserving place value, units and relationships. Step 4: Calculate carefully and write the result with its meaning. Step 5: Check using an inverse operation, estimation, an alternative representation or the stated geometric properties. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context.",
+          "CommonMistakes": "Do not add denominators when adding fractions, and do not assume a larger denominator means a larger fraction. Compare the value represented by the whole fraction. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem.",
+          "QuickSummary": "Fractions within 1 in the linear number system: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning. Added Cambridge focus: Comparing fractions — model, calculate or reason accurately, then verify."
         }
       ]
     },
@@ -412,32 +414,36 @@
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 3 ready-to-progress criterion 3F-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
       "OutcomeCodes": [
-        "CAM:OUT:0096:3Nf.08"
+        "CAM:OUT:0096:3Nf.08",
+        "CAM:OUT:0096:3Gt.02",
+        "CAM:OUT:0096:3Gt.03",
+        "CAM:OUT:0096:3Gt.01",
+        "CAM:OUT:0096:3Gt.04"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
-      "SourceLocator": "3F-3",
+      "SourceLocator": "3F-3 | Cambridge Official Scheme of Work / Stage 3 / Unit 2 / Topic 1 | Cambridge Official Scheme of Work / Stage 3 / Unit 2 / Topic 2",
       "SourceTitle": "Mathematics guidance: year 3",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "DfE-00112-2020 / June 2020",
       "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation; no government logos or identified third-party material is reused.",
       "SourceSha256": "d84091d958b64002656f2fcb39e0c396ab9e97e93adb75052ddc8f5050d4edd0",
-      "CanonicalBodySha256": "756bf2df1bc6c65bff189ac02f51aecdf02839b5883394e2e01500ad9a795314",
+      "CanonicalBodySha256": "5ae471cf434db5d9e5a2c538ad1552e0cfa9930a1e1ded55ee7ac2067608400a",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by OGL DfE guidance for the corresponding year. Cambridge official identifiers remain in the curriculum reference graph; this lesson does not claim an unverified formal Cambridge mapping.",
+      "AdaptationStatus": "Existing reviewed Edulytics lesson retained; additional Cambridge official outcome coverage was independently authored and appended without reproducing Cambridge objective prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Fractions within 1 in the linear number system: Reason and Apply",
-          "Explanation": "This Cambridge Primary Stage 3 supporting lesson develops the open DfE Year 3 ready-to-progress focus “Fractions within 1 in the linear number system”. Fractions describe equal parts and numbers on a number line. Equivalent fractions preserve value even when numerator and denominator change together. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here.",
-          "KeyConceptsAndRules": "Source focus: Fractions within 1 in the linear number system. Fractions describe equal parts and numbers on a number line. Equivalent fractions preserve value even when numerator and denominator change together. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. Always state what each number, unit, operation or geometric property represents before calculating.",
-          "WorkedExamples": "Example A: Represent a fraction with equal parts, locate it on a number line and explain the role of the numerator and denominator. Explain each step and name the mathematical relationship being used. Example B: Use equivalence or a common denominator only when it helps compare or calculate without changing the value. Compare two possible approaches and choose the clearer one.",
-          "StepByStepSolutions": "Step 1: Read the problem and identify the quantities or properties. Step 2: Represent the situation with numbers, a diagram, a number line, an equation or a labelled shape. Step 3: Apply the relevant rule while preserving place value, units and relationships. Step 4: Calculate carefully and write the result with its meaning. Step 5: Check using an inverse operation, estimation, an alternative representation or the stated geometric properties.",
-          "CommonMistakes": "Do not add denominators when adding fractions, and do not assume a larger denominator means a larger fraction. Compare the value represented by the whole fraction. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude.",
-          "QuickSummary": "Fractions within 1 in the linear number system: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning."
+          "Explanation": "This Cambridge Primary Stage 3 supporting lesson develops the open DfE Year 3 ready-to-progress focus “Fractions within 1 in the linear number system”. Fractions describe equal parts and numbers on a number line. Equivalent fractions preserve value even when numerator and denominator change together. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here. Additional official coverage for Cambridge Stage 3 topic “Reading and recording time” is integrated here for identifiers 3Gt.02, 3Gt.03. Represent the relationship clearly, use a valid mathematical rule, and verify the conclusion with an independent check. Additional official coverage for Cambridge Stage 3 topic “Time problems” is integrated here for identifiers 3Gt.01, 3Gt.04. Represent the relationship clearly, use a valid mathematical rule, and verify the conclusion with an independent check.",
+          "KeyConceptsAndRules": "Source focus: Fractions within 1 in the linear number system. Fractions describe equal parts and numbers on a number line. Equivalent fractions preserve value even when numerator and denominator change together. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. Always state what each number, unit, operation or geometric property represents before calculating. For the added Reading and recording time focus: Represent the relationship clearly, use a valid mathematical rule, and verify the conclusion with an independent check. State units, assumptions or restrictions when relevant. For the added Time problems focus: Represent the relationship clearly, use a valid mathematical rule, and verify the conclusion with an independent check. State units, assumptions or restrictions when relevant.",
+          "WorkedExamples": "Example A: Represent a fraction with equal parts, locate it on a number line and explain the role of the numerator and denominator. Explain each step and name the mathematical relationship being used. Example B: Use equivalence or a common denominator only when it helps compare or calculate without changing the value. Compare two possible approaches and choose the clearer one. Added worked focus for Reading and recording time: Choose simple values that satisfy the stated conditions, show the calculation in visible steps, and check the answer using an inverse operation or a second representation. Added worked focus for Time problems: Choose simple values that satisfy the stated conditions, show the calculation in visible steps, and check the answer using an inverse operation or a second representation.",
+          "StepByStepSolutions": "Step 1: Read the problem and identify the quantities or properties. Step 2: Represent the situation with numbers, a diagram, a number line, an equation or a labelled shape. Step 3: Apply the relevant rule while preserving place value, units and relationships. Step 4: Calculate carefully and write the result with its meaning. Step 5: Check using an inverse operation, estimation, an alternative representation or the stated geometric properties. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context.",
+          "CommonMistakes": "Do not add denominators when adding fractions, and do not assume a larger denominator means a larger fraction. Compare the value represented by the whole fraction. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem.",
+          "QuickSummary": "Fractions within 1 in the linear number system: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning. Added Cambridge focus: Reading and recording time — model, calculate or reason accurately, then verify. Added Cambridge focus: Time problems — model, calculate or reason accurately, then verify."
         }
       ]
     },
@@ -514,32 +520,35 @@
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 3 ready-to-progress criterion 3G-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
       "OutcomeCodes": [
-        "CAM:OUT:0096:3Gg.10"
+        "CAM:OUT:0096:3Gg.10",
+        "CAM:OUT:0096:3Ss.01",
+        "CAM:OUT:0096:3Ss.02",
+        "CAM:OUT:0096:3Ss.03"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
-      "SourceLocator": "3G-1",
+      "SourceLocator": "3G-1 | Cambridge Official Scheme of Work / Stage 3 / Unit 8 / Topic 1",
       "SourceTitle": "Mathematics guidance: year 3",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "DfE-00112-2020 / June 2020",
       "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation; no government logos or identified third-party material is reused.",
       "SourceSha256": "d84091d958b64002656f2fcb39e0c396ab9e97e93adb75052ddc8f5050d4edd0",
-      "CanonicalBodySha256": "894d94588ed75d83691c6f5ec1d4170976ea237f040af84f8e72b5d44a6c49f8",
+      "CanonicalBodySha256": "1ac8602ac9ac0387927c803fce438568098582becdb3688fd8189b118842cb77",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by OGL DfE guidance for the corresponding year. Cambridge official identifiers remain in the curriculum reference graph; this lesson does not claim an unverified formal Cambridge mapping.",
+      "AdaptationStatus": "Existing reviewed Edulytics lesson retained; additional Cambridge official outcome coverage was independently authored and appended without reproducing Cambridge objective prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Recognise right angles: Build the Idea",
-          "Explanation": "This Cambridge Primary Stage 3 supporting lesson develops the open DfE Year 3 ready-to-progress focus “Recognise right angles”. Geometry uses defined properties, measurement and spatial reasoning. A diagram supports a conclusion only when its stated or measured properties justify that conclusion. Build the idea by representing it in more than one way and explaining why the representations agree. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here.",
-          "KeyConceptsAndRules": "Source focus: Recognise right angles. Geometry uses defined properties, measurement and spatial reasoning. A diagram supports a conclusion only when its stated or measured properties justify that conclusion. Build the idea by representing it in more than one way and explaining why the representations agree. Always state what each number, unit, operation or geometric property represents before calculating.",
-          "WorkedExamples": "Example A: Describe a shape using sides, angles, parallel or perpendicular lines, symmetry, coordinates, length or area as appropriate. Explain each step and name the mathematical relationship being used. Example B: Draw or transform a shape from stated properties, then check each required property rather than relying on appearance. Compare two possible approaches and choose the clearer one.",
-          "StepByStepSolutions": "Step 1: Read the problem and identify the quantities or properties. Step 2: Represent the situation with numbers, a diagram, a number line, an equation or a labelled shape. Step 3: Apply the relevant rule while preserving place value, units and relationships. Step 4: Calculate carefully and write the result with its meaning. Step 5: Check using an inverse operation, estimation, an alternative representation or the stated geometric properties.",
-          "CommonMistakes": "Do not classify a shape by orientation or visual impression alone. Keep length, area, angle and volume distinct, and use the stated scale or unit. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude.",
-          "QuickSummary": "Recognise right angles: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning."
+          "Explanation": "This Cambridge Primary Stage 3 supporting lesson develops the open DfE Year 3 ready-to-progress focus “Recognise right angles”. Geometry uses defined properties, measurement and spatial reasoning. A diagram supports a conclusion only when its stated or measured properties justify that conclusion. Build the idea by representing it in more than one way and explaining why the representations agree. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here. Additional official coverage for Cambridge Stage 3 topic “The statistical cycle” is integrated here for identifiers 3Ss.01, 3Ss.02, 3Ss.03. Statistical and probability reasoning requires a clear question or sample space, an appropriate representation, and an interpretation tied back to the context.",
+          "KeyConceptsAndRules": "Source focus: Recognise right angles. Geometry uses defined properties, measurement and spatial reasoning. A diagram supports a conclusion only when its stated or measured properties justify that conclusion. Build the idea by representing it in more than one way and explaining why the representations agree. Always state what each number, unit, operation or geometric property represents before calculating. For the added The statistical cycle focus: Statistical and probability reasoning requires a clear question or sample space, an appropriate representation, and an interpretation tied back to the context. State units, assumptions or restrictions when relevant.",
+          "WorkedExamples": "Example A: Describe a shape using sides, angles, parallel or perpendicular lines, symmetry, coordinates, length or area as appropriate. Explain each step and name the mathematical relationship being used. Example B: Draw or transform a shape from stated properties, then check each required property rather than relying on appearance. Compare two possible approaches and choose the clearer one. Added worked focus for The statistical cycle: Organise the data or outcomes systematically, calculate the requested measure or probability, and explain what the numerical result means in the original situation.",
+          "StepByStepSolutions": "Step 1: Read the problem and identify the quantities or properties. Step 2: Represent the situation with numbers, a diagram, a number line, an equation or a labelled shape. Step 3: Apply the relevant rule while preserving place value, units and relationships. Step 4: Calculate carefully and write the result with its meaning. Step 5: Check using an inverse operation, estimation, an alternative representation or the stated geometric properties. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context.",
+          "CommonMistakes": "Do not classify a shape by orientation or visual impression alone. Keep length, area, angle and volume distinct, and use the stated scale or unit. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem.",
+          "QuickSummary": "Recognise right angles: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning. Added Cambridge focus: The statistical cycle — model, calculate or reason accurately, then verify."
         }
       ]
     },
@@ -548,32 +557,44 @@
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "DfE Year 3 ready-to-progress criterion 3G-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
       "OutcomeCodes": [
-        "CAM:OUT:0096:3Gg.10"
+        "CAM:OUT:0096:3Gg.10",
+        "CAM:OUT:0096:3Gg.05",
+        "CAM:OUT:0096:3Gg.08",
+        "CAM:OUT:0096:3Gg.09",
+        "CAM:OUT:0096:3Gp.02",
+        "CAM:OUT:0096:3Gp.01",
+        "CAM:OUT:0096:3Gg.02",
+        "CAM:OUT:0096:3Gg.03",
+        "CAM:OUT:0096:3Gg.04",
+        "CAM:OUT:0096:3Gg.06",
+        "CAM:OUT:0096:3Gg.07",
+        "CAM:OUT:0096:3Sp.01",
+        "CAM:OUT:0096:3Sp.02"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
-      "SourceLocator": "3G-1",
+      "SourceLocator": "3G-1 | Cambridge Official Scheme of Work / Stage 3 / Unit 3 / Topic 1 | Cambridge Official Scheme of Work / Stage 3 / Unit 3 / Topic 2 | Cambridge Official Scheme of Work / Stage 3 / Unit 3 / Topic 3 | Cambridge Official Scheme of Work / Stage 3 / Unit 5 / Topic 1 | Cambridge Official Scheme of Work / Stage 3 / Unit 8 / Topic 2",
       "SourceTitle": "Mathematics guidance: year 3",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "DfE-00112-2020 / June 2020",
       "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation; no government logos or identified third-party material is reused.",
       "SourceSha256": "d84091d958b64002656f2fcb39e0c396ab9e97e93adb75052ddc8f5050d4edd0",
-      "CanonicalBodySha256": "2b7e33dfe3ed59910cceada977049738cf0e5de8d398d9687a160fe0737c1b40",
+      "CanonicalBodySha256": "f756eda9ed1d777414e792c9cde432789c08df20a6af21f76e746ee22c1448b0",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by OGL DfE guidance for the corresponding year. Cambridge official identifiers remain in the curriculum reference graph; this lesson does not claim an unverified formal Cambridge mapping.",
+      "AdaptationStatus": "Existing reviewed Edulytics lesson retained; additional Cambridge official outcome coverage was independently authored and appended without reproducing Cambridge objective prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Recognise right angles: Reason and Apply",
-          "Explanation": "This Cambridge Primary Stage 3 supporting lesson develops the open DfE Year 3 ready-to-progress focus “Recognise right angles”. Geometry uses defined properties, measurement and spatial reasoning. A diagram supports a conclusion only when its stated or measured properties justify that conclusion. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here.",
-          "KeyConceptsAndRules": "Source focus: Recognise right angles. Geometry uses defined properties, measurement and spatial reasoning. A diagram supports a conclusion only when its stated or measured properties justify that conclusion. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. Always state what each number, unit, operation or geometric property represents before calculating.",
-          "WorkedExamples": "Example A: Describe a shape using sides, angles, parallel or perpendicular lines, symmetry, coordinates, length or area as appropriate. Explain each step and name the mathematical relationship being used. Example B: Draw or transform a shape from stated properties, then check each required property rather than relying on appearance. Compare two possible approaches and choose the clearer one.",
-          "StepByStepSolutions": "Step 1: Read the problem and identify the quantities or properties. Step 2: Represent the situation with numbers, a diagram, a number line, an equation or a labelled shape. Step 3: Apply the relevant rule while preserving place value, units and relationships. Step 4: Calculate carefully and write the result with its meaning. Step 5: Check using an inverse operation, estimation, an alternative representation or the stated geometric properties.",
-          "CommonMistakes": "Do not classify a shape by orientation or visual impression alone. Keep length, area, angle and volume distinct, and use the stated scale or unit. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude.",
-          "QuickSummary": "Recognise right angles: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning."
+          "Explanation": "This Cambridge Primary Stage 3 supporting lesson develops the open DfE Year 3 ready-to-progress focus “Recognise right angles”. Geometry uses defined properties, measurement and spatial reasoning. A diagram supports a conclusion only when its stated or measured properties justify that conclusion. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here. Additional official coverage for Cambridge Stage 3 topic “2D and 3D shapes” is integrated here for identifiers 3Gg.05, 3Gg.08. Geometric and measurement reasoning uses definitions, properties and consistent units. Label known information before calculating or classifying. Additional official coverage for Cambridge Stage 3 topic “Symmetry and reflection” is integrated here for identifiers 3Gg.09, 3Gp.02. Geometric and measurement reasoning uses definitions, properties and consistent units. Label known information before calculating or classifying. Additional official coverage for Cambridge Stage 3 topic “Angles, direction and position” is integrated here for identifiers 3Gp.01. Geometric and measurement reasoning uses definitions, properties and consistent units. Label known information before calculating or classifying. Additional official coverage for Cambridge Stage 3 topic “Measuring length, mass, capacity and temperature” is integrated here for identifiers 3Gg.02, 3Gg.03, 3Gg.04, 3Gg.06, 3Gg.07. Geometric and measurement reasoning uses definitions, properties and consistent units. Label known information before calculating or classifying. Additional official coverage for Cambridge Stage 3 topic “Chance” is integrated here for identifiers 3Sp.01, 3Sp.02. Statistical and probability reasoning requires a clear question or sample space, an appropriate representation, and an interpretation tied back to the context.",
+          "KeyConceptsAndRules": "Source focus: Recognise right angles. Geometry uses defined properties, measurement and spatial reasoning. A diagram supports a conclusion only when its stated or measured properties justify that conclusion. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. Always state what each number, unit, operation or geometric property represents before calculating. For the added 2D and 3D shapes focus: Geometric and measurement reasoning uses definitions, properties and consistent units. Label known information before calculating or classifying. State units, assumptions or restrictions when relevant. For the added Symmetry and reflection focus: Geometric and measurement reasoning uses definitions, properties and consistent units. Label known information before calculating or classifying. State units, assumptions or restrictions when relevant. For the added Angles, direction and position focus: Geometric and measurement reasoning uses definitions, properties and consistent units. Label known information before calculating or classifying. State units, assumptions or restrictions when relevant. For the added Measuring length, mass, capacity and temperature focus: Geometric and measurement reasoning uses definitions, properties and consistent units. Label known information before calculating or classifying. State units, assumptions or restrictions when relevant. For the added Chance focus: Statistical and probability reasoning requires a clear question or sample space, an appropriate representation, and an interpretation tied back to the context. State units, assumptions or restrictions when relevant.",
+          "WorkedExamples": "Example A: Describe a shape using sides, angles, parallel or perpendicular lines, symmetry, coordinates, length or area as appropriate. Explain each step and name the mathematical relationship being used. Example B: Draw or transform a shape from stated properties, then check each required property rather than relying on appearance. Compare two possible approaches and choose the clearer one. Added worked focus for 2D and 3D shapes: Sketch or label the relevant figure, identify the property or measurement relationship, calculate using consistent units, and confirm that the final unit and magnitude are appropriate. Added worked focus for Symmetry and reflection: Sketch or label the relevant figure, identify the property or measurement relationship, calculate using consistent units, and confirm that the final unit and magnitude are appropriate. Added worked focus for Angles, direction and position: Sketch or label the relevant figure, identify the property or measurement relationship, calculate using consistent units, and confirm that the final unit and magnitude are appropriate. Added worked focus for Measuring length, mass, capacity and temperature: Sketch or label the relevant figure, identify the property or measurement relationship, calculate using consistent units, and confirm that the final unit and magnitude are appropriate. Added worked focus for Chance: Organise the data or outcomes systematically, calculate the requested measure or probability, and explain what the numerical result means in the original situation.",
+          "StepByStepSolutions": "Step 1: Read the problem and identify the quantities or properties. Step 2: Represent the situation with numbers, a diagram, a number line, an equation or a labelled shape. Step 3: Apply the relevant rule while preserving place value, units and relationships. Step 4: Calculate carefully and write the result with its meaning. Step 5: Check using an inverse operation, estimation, an alternative representation or the stated geometric properties. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context.",
+          "CommonMistakes": "Do not classify a shape by orientation or visual impression alone. Keep length, area, angle and volume distinct, and use the stated scale or unit. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem.",
+          "QuickSummary": "Recognise right angles: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning. Added Cambridge focus: 2D and 3D shapes — model, calculate or reason accurately, then verify. Added Cambridge focus: Symmetry and reflection — model, calculate or reason accurately, then verify. Added Cambridge focus: Angles, direction and position — model, calculate or reason accurately, then verify. Added Cambridge focus: Measuring length, mass, capacity and temperature — model, calculate or reason accurately, then verify. Added Cambridge focus: Chance — model, calculate or reason accurately, then verify."
         }
       ]
     },
@@ -651,32 +672,35 @@
       "TitleSourceReference": "DfE Year 3 ready-to-progress criterion 3MD-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
       "OutcomeCodes": [
         "CAM:OUT:0096:3Ni.05",
-        "CAM:OUT:0096:3Ni.06"
+        "CAM:OUT:0096:3Ni.06",
+        "CAM:OUT:0096:3Ni.10",
+        "CAM:OUT:0096:3Ni.08",
+        "CAM:OUT:0096:3Ni.09"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
-      "SourceLocator": "3MD-1",
+      "SourceLocator": "3MD-1 | Cambridge Official Scheme of Work / Stage 3 / Unit 6 / Topic 1 | Cambridge Official Scheme of Work / Stage 3 / Unit 6 / Topic 2",
       "SourceTitle": "Mathematics guidance: year 3",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "DfE-00112-2020 / June 2020",
       "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation; no government logos or identified third-party material is reused.",
       "SourceSha256": "d84091d958b64002656f2fcb39e0c396ab9e97e93adb75052ddc8f5050d4edd0",
-      "CanonicalBodySha256": "2564821d821a2d28f2295d4ed3cb191905226a867ecd98d9f26ae3e24cdfeef9",
+      "CanonicalBodySha256": "89c86bb37e6966bb5123897931e10195b42f796e8122c8a6b2f750568289b12c",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by OGL DfE guidance for the corresponding year. Cambridge official identifiers remain in the curriculum reference graph; this lesson does not claim an unverified formal Cambridge mapping.",
+      "AdaptationStatus": "Existing reviewed Edulytics lesson retained; additional Cambridge official outcome coverage was independently authored and appended without reproducing Cambridge objective prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Multiplication and division structures: Build the Idea",
-          "Explanation": "This Cambridge Primary Stage 3 supporting lesson develops the open DfE Year 3 ready-to-progress focus “Multiplication and division structures”. Multiplication and division connect equal groups, scaling, factors, multiples and inverse relationships. Efficient methods preserve place value and the meaning of the quantities. Build the idea by representing it in more than one way and explaining why the representations agree. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here.",
-          "KeyConceptsAndRules": "Source focus: Multiplication and division structures. Multiplication and division connect equal groups, scaling, factors, multiples and inverse relationships. Efficient methods preserve place value and the meaning of the quantities. Build the idea by representing it in more than one way and explaining why the representations agree. Always state what each number, unit, operation or geometric property represents before calculating.",
-          "WorkedExamples": "Example A: Model equal groups and write a multiplication equation; then write the related division equation and interpret the quotient. Explain each step and name the mathematical relationship being used. Example B: Use factors or place-value scaling to simplify a multiplication or division calculation before checking the result. Compare two possible approaches and choose the clearer one.",
-          "StepByStepSolutions": "Step 1: Read the problem and identify the quantities or properties. Step 2: Represent the situation with numbers, a diagram, a number line, an equation or a labelled shape. Step 3: Apply the relevant rule while preserving place value, units and relationships. Step 4: Calculate carefully and write the result with its meaning. Step 5: Check using an inverse operation, estimation, an alternative representation or the stated geometric properties.",
-          "CommonMistakes": "Do not confuse the number of groups with the size of each group. Interpret remainders in context and check division with multiplication when appropriate. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude.",
-          "QuickSummary": "Multiplication and division structures: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning."
+          "Explanation": "This Cambridge Primary Stage 3 supporting lesson develops the open DfE Year 3 ready-to-progress focus “Multiplication and division structures”. Multiplication and division connect equal groups, scaling, factors, multiples and inverse relationships. Efficient methods preserve place value and the meaning of the quantities. Build the idea by representing it in more than one way and explaining why the representations agree. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here. Additional official coverage for Cambridge Stage 3 topic “Using multiplication and division facts” is integrated here for identifiers 3Ni.10. Calculation methods should preserve the underlying additive or multiplicative relationship. Use place-value decomposition and inverse operations to justify the result. Additional official coverage for Cambridge Stage 3 topic “Strategies for multiplication and division” is integrated here for identifiers 3Ni.08, 3Ni.09. Calculation methods should preserve the underlying additive or multiplicative relationship. Use place-value decomposition and inverse operations to justify the result.",
+          "KeyConceptsAndRules": "Source focus: Multiplication and division structures. Multiplication and division connect equal groups, scaling, factors, multiples and inverse relationships. Efficient methods preserve place value and the meaning of the quantities. Build the idea by representing it in more than one way and explaining why the representations agree. Always state what each number, unit, operation or geometric property represents before calculating. For the added Using multiplication and division facts focus: Calculation methods should preserve the underlying additive or multiplicative relationship. Use place-value decomposition and inverse operations to justify the result. State units, assumptions or restrictions when relevant. For the added Strategies for multiplication and division focus: Calculation methods should preserve the underlying additive or multiplicative relationship. Use place-value decomposition and inverse operations to justify the result. State units, assumptions or restrictions when relevant.",
+          "WorkedExamples": "Example A: Model equal groups and write a multiplication equation; then write the related division equation and interpret the quotient. Explain each step and name the mathematical relationship being used. Example B: Use factors or place-value scaling to simplify a multiplication or division calculation before checking the result. Compare two possible approaches and choose the clearer one. Added worked focus for Using multiplication and division facts: Write the operation from the mathematical relationship, calculate in structured steps, then reverse the operation to verify the answer. Added worked focus for Strategies for multiplication and division: Write the operation from the mathematical relationship, calculate in structured steps, then reverse the operation to verify the answer.",
+          "StepByStepSolutions": "Step 1: Read the problem and identify the quantities or properties. Step 2: Represent the situation with numbers, a diagram, a number line, an equation or a labelled shape. Step 3: Apply the relevant rule while preserving place value, units and relationships. Step 4: Calculate carefully and write the result with its meaning. Step 5: Check using an inverse operation, estimation, an alternative representation or the stated geometric properties. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context.",
+          "CommonMistakes": "Do not confuse the number of groups with the size of each group. Interpret remainders in context and check division with multiplication when appropriate. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem.",
+          "QuickSummary": "Multiplication and division structures: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning. Added Cambridge focus: Using multiplication and division facts — model, calculate or reason accurately, then verify. Added Cambridge focus: Strategies for multiplication and division — model, calculate or reason accurately, then verify."
         }
       ]
     },
@@ -686,32 +710,33 @@
       "TitleSourceReference": "DfE Year 3 ready-to-progress criterion 3MD-1; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
       "OutcomeCodes": [
         "CAM:OUT:0096:3Ni.05",
-        "CAM:OUT:0096:3Ni.06"
+        "CAM:OUT:0096:3Ni.06",
+        "CAM:OUT:0096:3Nm.02"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
-      "SourceLocator": "3MD-1",
+      "SourceLocator": "3MD-1 | Cambridge Official Scheme of Work / Stage 3 / Unit 1 / Topic 3",
       "SourceTitle": "Mathematics guidance: year 3",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "DfE-00112-2020 / June 2020",
       "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation; no government logos or identified third-party material is reused.",
       "SourceSha256": "d84091d958b64002656f2fcb39e0c396ab9e97e93adb75052ddc8f5050d4edd0",
-      "CanonicalBodySha256": "2838031255c9f107981885761b376172c77d8c8d70b3cdefe465e8e4bb23723e",
+      "CanonicalBodySha256": "e4d56a1de096e3e2bd6d0c4f1354e59920b43496c58d66652e1818b9347acd34",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by OGL DfE guidance for the corresponding year. Cambridge official identifiers remain in the curriculum reference graph; this lesson does not claim an unverified formal Cambridge mapping.",
+      "AdaptationStatus": "Existing reviewed Edulytics lesson retained; additional Cambridge official outcome coverage was independently authored and appended without reproducing Cambridge objective prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Multiplication and division structures: Reason and Apply",
-          "Explanation": "This Cambridge Primary Stage 3 supporting lesson develops the open DfE Year 3 ready-to-progress focus “Multiplication and division structures”. Multiplication and division connect equal groups, scaling, factors, multiples and inverse relationships. Efficient methods preserve place value and the meaning of the quantities. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here.",
-          "KeyConceptsAndRules": "Source focus: Multiplication and division structures. Multiplication and division connect equal groups, scaling, factors, multiples and inverse relationships. Efficient methods preserve place value and the meaning of the quantities. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. Always state what each number, unit, operation or geometric property represents before calculating.",
-          "WorkedExamples": "Example A: Model equal groups and write a multiplication equation; then write the related division equation and interpret the quotient. Explain each step and name the mathematical relationship being used. Example B: Use factors or place-value scaling to simplify a multiplication or division calculation before checking the result. Compare two possible approaches and choose the clearer one.",
-          "StepByStepSolutions": "Step 1: Read the problem and identify the quantities or properties. Step 2: Represent the situation with numbers, a diagram, a number line, an equation or a labelled shape. Step 3: Apply the relevant rule while preserving place value, units and relationships. Step 4: Calculate carefully and write the result with its meaning. Step 5: Check using an inverse operation, estimation, an alternative representation or the stated geometric properties.",
-          "CommonMistakes": "Do not confuse the number of groups with the size of each group. Interpret remainders in context and check division with multiplication when appropriate. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude.",
-          "QuickSummary": "Multiplication and division structures: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning."
+          "Explanation": "This Cambridge Primary Stage 3 supporting lesson develops the open DfE Year 3 ready-to-progress focus “Multiplication and division structures”. Multiplication and division connect equal groups, scaling, factors, multiples and inverse relationships. Efficient methods preserve place value and the meaning of the quantities. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here. Additional official coverage for Cambridge Stage 3 topic “Strategies for addition and subtraction” is integrated here for identifiers 3Nm.02. Calculation methods should preserve the underlying additive or multiplicative relationship. Use place-value decomposition and inverse operations to justify the result.",
+          "KeyConceptsAndRules": "Source focus: Multiplication and division structures. Multiplication and division connect equal groups, scaling, factors, multiples and inverse relationships. Efficient methods preserve place value and the meaning of the quantities. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. Always state what each number, unit, operation or geometric property represents before calculating. For the added Strategies for addition and subtraction focus: Calculation methods should preserve the underlying additive or multiplicative relationship. Use place-value decomposition and inverse operations to justify the result. State units, assumptions or restrictions when relevant.",
+          "WorkedExamples": "Example A: Model equal groups and write a multiplication equation; then write the related division equation and interpret the quotient. Explain each step and name the mathematical relationship being used. Example B: Use factors or place-value scaling to simplify a multiplication or division calculation before checking the result. Compare two possible approaches and choose the clearer one. Added worked focus for Strategies for addition and subtraction: Write the operation from the mathematical relationship, calculate in structured steps, then reverse the operation to verify the answer.",
+          "StepByStepSolutions": "Step 1: Read the problem and identify the quantities or properties. Step 2: Represent the situation with numbers, a diagram, a number line, an equation or a labelled shape. Step 3: Apply the relevant rule while preserving place value, units and relationships. Step 4: Calculate carefully and write the result with its meaning. Step 5: Check using an inverse operation, estimation, an alternative representation or the stated geometric properties. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context.",
+          "CommonMistakes": "Do not confuse the number of groups with the size of each group. Interpret remainders in context and check division with multiplication when appropriate. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem.",
+          "QuickSummary": "Multiplication and division structures: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning. Added Cambridge focus: Strategies for addition and subtraction — model, calculate or reason accurately, then verify."
         }
       ]
     },
@@ -1030,32 +1055,33 @@
       "TitleSourceReference": "DfE Year 3 ready-to-progress criterion 3NPV-2; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
       "OutcomeCodes": [
         "CAM:OUT:0096:3Np.01",
-        "CAM:OUT:0096:3Np.03"
+        "CAM:OUT:0096:3Np.03",
+        "CAM:OUT:0096:3Np.05"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
-      "SourceLocator": "3NPV-2",
+      "SourceLocator": "3NPV-2 | Cambridge Official Scheme of Work / Stage 3 / Unit 4 / Topic 2",
       "SourceTitle": "Mathematics guidance: year 3",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "DfE-00112-2020 / June 2020",
       "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation; no government logos or identified third-party material is reused.",
       "SourceSha256": "d84091d958b64002656f2fcb39e0c396ab9e97e93adb75052ddc8f5050d4edd0",
-      "CanonicalBodySha256": "fcafd133bf6673ce7b5c6428a99336ea37b8d7311e6fa0521688ed6d82a5613b",
+      "CanonicalBodySha256": "f734fa0479f7e94338bfe922d1d5f5e4e9d9b42065da44dfca4c6a36105d71c6",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by OGL DfE guidance for the corresponding year. Cambridge official identifiers remain in the curriculum reference graph; this lesson does not claim an unverified formal Cambridge mapping.",
+      "AdaptationStatus": "Existing reviewed Edulytics lesson retained; additional Cambridge official outcome coverage was independently authored and appended without reproducing Cambridge objective prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Place value in three-digit numbers: Reason and Apply",
-          "Explanation": "This Cambridge Primary Stage 3 supporting lesson develops the open DfE Year 3 ready-to-progress focus “Place value in three-digit numbers”. A digit's value depends on its position. Compose and decompose numbers with place-value units, and use a number line or powers of ten to reason about magnitude. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here.",
-          "KeyConceptsAndRules": "Source focus: Place value in three-digit numbers. A digit's value depends on its position. Compose and decompose numbers with place-value units, and use a number line or powers of ten to reason about magnitude. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. Always state what each number, unit, operation or geometric property represents before calculating.",
-          "WorkedExamples": "Example A: 326 = 3 hundreds + 2 tens + 6 ones Explain each step and name the mathematical relationship being used. Example B: Place 326 between 300 and 400 and explain why it is closer to 300. Compare two possible approaches and choose the clearer one.",
-          "StepByStepSolutions": "Step 1: Read the problem and identify the quantities or properties. Step 2: Represent the situation with numbers, a diagram, a number line, an equation or a labelled shape. Step 3: Apply the relevant rule while preserving place value, units and relationships. Step 4: Calculate carefully and write the result with its meaning. Step 5: Check using an inverse operation, estimation, an alternative representation or the stated geometric properties.",
-          "CommonMistakes": "Do not compare numbers by looking at a single digit or by counting digits after the decimal point. Keep the value of each place explicit and check the size of the whole number. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude.",
-          "QuickSummary": "Place value in three-digit numbers: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning."
+          "Explanation": "This Cambridge Primary Stage 3 supporting lesson develops the open DfE Year 3 ready-to-progress focus “Place value in three-digit numbers”. A digit's value depends on its position. Compose and decompose numbers with place-value units, and use a number line or powers of ten to reason about magnitude. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here. Additional official coverage for Cambridge Stage 3 topic “Using place value and rounding” is integrated here for identifiers 3Np.05. Number reasoning depends on place value, magnitude and estimation. Keep digit values explicit and use intervals or number lines to justify comparisons and rounding.",
+          "KeyConceptsAndRules": "Source focus: Place value in three-digit numbers. A digit's value depends on its position. Compose and decompose numbers with place-value units, and use a number line or powers of ten to reason about magnitude. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. Always state what each number, unit, operation or geometric property represents before calculating. For the added Using place value and rounding focus: Number reasoning depends on place value, magnitude and estimation. Keep digit values explicit and use intervals or number lines to justify comparisons and rounding. State units, assumptions or restrictions when relevant.",
+          "WorkedExamples": "Example A: 326 = 3 hundreds + 2 tens + 6 ones Explain each step and name the mathematical relationship being used. Example B: Place 326 between 300 and 400 and explain why it is closer to 300. Compare two possible approaches and choose the clearer one. Added worked focus for Using place value and rounding: Locate a number between two neighbouring benchmark values, make the required comparison or rounding decision, then estimate independently to check the result.",
+          "StepByStepSolutions": "Step 1: Read the problem and identify the quantities or properties. Step 2: Represent the situation with numbers, a diagram, a number line, an equation or a labelled shape. Step 3: Apply the relevant rule while preserving place value, units and relationships. Step 4: Calculate carefully and write the result with its meaning. Step 5: Check using an inverse operation, estimation, an alternative representation or the stated geometric properties. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context.",
+          "CommonMistakes": "Do not compare numbers by looking at a single digit or by counting digits after the decimal point. Keep the value of each place explicit and check the size of the whole number. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem.",
+          "QuickSummary": "Place value in three-digit numbers: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning. Added Cambridge focus: Using place value and rounding — model, calculate or reason accurately, then verify."
         }
       ]
     },
@@ -1100,32 +1126,38 @@
       "TitleSourceReference": "DfE Year 3 ready-to-progress criterion 3NPV-3; Edulytics supporting sequence; no Cambridge outcome mapping claimed.",
       "OutcomeCodes": [
         "CAM:OUT:0096:3Np.04",
-        "CAM:OUT:0096:3Nc.02"
+        "CAM:OUT:0096:3Nc.02",
+        "CAM:OUT:0096:3Nc.01",
+        "CAM:OUT:0096:3Nc.03",
+        "CAM:OUT:0096:3Nm.01",
+        "CAM:OUT:0096:3Ni.01",
+        "CAM:OUT:0096:3Nc.05",
+        "CAM:OUT:0096:3Nc.06"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
-      "SourceLocator": "3NPV-3",
+      "SourceLocator": "3NPV-3 | Cambridge Official Scheme of Work / Stage 3 / Unit 1 / Topic 1 | Cambridge Official Scheme of Work / Stage 3 / Unit 4 / Topic 1",
       "SourceTitle": "Mathematics guidance: year 3",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "DfE-00112-2020 / June 2020",
       "SourceRights": "Open Government Licence v3.0. Edulytics learner-facing body is an original adaptation; no government logos or identified third-party material is reused.",
       "SourceSha256": "d84091d958b64002656f2fcb39e0c396ab9e97e93adb75052ddc8f5050d4edd0",
-      "CanonicalBodySha256": "863beb6a9112ae93185b44d8cce4bff0399a12208b5f7851e3dd2985e63e5893",
+      "CanonicalBodySha256": "74632561fb965a596f07ec99857947a78bacbbba1260fe31cf2bcbf9d8a6b7a2",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by OGL DfE guidance for the corresponding year. Cambridge official identifiers remain in the curriculum reference graph; this lesson does not claim an unverified formal Cambridge mapping.",
+      "AdaptationStatus": "Existing reviewed Edulytics lesson retained; additional Cambridge official outcome coverage was independently authored and appended without reproducing Cambridge objective prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Three-digit numbers in the linear number system: Reason and Apply",
-          "Explanation": "This Cambridge Primary Stage 3 supporting lesson develops the open DfE Year 3 ready-to-progress focus “Three-digit numbers in the linear number system”. A digit's value depends on its position. Compose and decompose numbers with place-value units, and use a number line or powers of ten to reason about magnitude. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here.",
-          "KeyConceptsAndRules": "Source focus: Three-digit numbers in the linear number system. A digit's value depends on its position. Compose and decompose numbers with place-value units, and use a number line or powers of ten to reason about magnitude. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. Always state what each number, unit, operation or geometric property represents before calculating.",
-          "WorkedExamples": "Example A: 326 = 3 hundreds + 2 tens + 6 ones Explain each step and name the mathematical relationship being used. Example B: Place 326 between 300 and 400 and explain why it is closer to 300. Compare two possible approaches and choose the clearer one.",
-          "StepByStepSolutions": "Step 1: Read the problem and identify the quantities or properties. Step 2: Represent the situation with numbers, a diagram, a number line, an equation or a labelled shape. Step 3: Apply the relevant rule while preserving place value, units and relationships. Step 4: Calculate carefully and write the result with its meaning. Step 5: Check using an inverse operation, estimation, an alternative representation or the stated geometric properties.",
-          "CommonMistakes": "Do not compare numbers by looking at a single digit or by counting digits after the decimal point. Keep the value of each place explicit and check the size of the whole number. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude.",
-          "QuickSummary": "Three-digit numbers in the linear number system: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning."
+          "Explanation": "This Cambridge Primary Stage 3 supporting lesson develops the open DfE Year 3 ready-to-progress focus “Three-digit numbers in the linear number system”. A digit's value depends on its position. Compose and decompose numbers with place-value units, and use a number line or powers of ten to reason about magnitude. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. The lesson is Edulytics-authored from OGL material; Cambridge remains the academic reference authority and no Cambridge objective wording is reproduced here. Additional official coverage for Cambridge Stage 3 topic “Understanding numbers” is integrated here for identifiers 3Nc.01, 3Nc.03, 3Nm.01, 3Ni.01. Number reasoning depends on place value, magnitude and estimation. Keep digit values explicit and use intervals or number lines to justify comparisons and rounding. Additional official coverage for Cambridge Stage 3 topic “Making patterns” is integrated here for identifiers 3Nc.05, 3Nc.06. Algebra and pattern work represents general relationships. Keep equivalent transformations explicit and test symbolic results against values, tables or graphs.",
+          "KeyConceptsAndRules": "Source focus: Three-digit numbers in the linear number system. A digit's value depends on its position. Compose and decompose numbers with place-value units, and use a number line or powers of ten to reason about magnitude. Reason and apply by selecting a representation, solving a contextual problem, and checking the result independently. Always state what each number, unit, operation or geometric property represents before calculating. For the added Understanding numbers focus: Number reasoning depends on place value, magnitude and estimation. Keep digit values explicit and use intervals or number lines to justify comparisons and rounding. State units, assumptions or restrictions when relevant. For the added Making patterns focus: Algebra and pattern work represents general relationships. Keep equivalent transformations explicit and test symbolic results against values, tables or graphs. State units, assumptions or restrictions when relevant.",
+          "WorkedExamples": "Example A: 326 = 3 hundreds + 2 tens + 6 ones Explain each step and name the mathematical relationship being used. Example B: Place 326 between 300 and 400 and explain why it is closer to 300. Compare two possible approaches and choose the clearer one. Added worked focus for Understanding numbers: Locate a number between two neighbouring benchmark values, make the required comparison or rounding decision, then estimate independently to check the result. Added worked focus for Making patterns: Express the relationship symbolically, transform it one valid step at a time, and verify the result by substitution or by checking several terms or points.",
+          "StepByStepSolutions": "Step 1: Read the problem and identify the quantities or properties. Step 2: Represent the situation with numbers, a diagram, a number line, an equation or a labelled shape. Step 3: Apply the relevant rule while preserving place value, units and relationships. Step 4: Calculate carefully and write the result with its meaning. Step 5: Check using an inverse operation, estimation, an alternative representation or the stated geometric properties. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context.",
+          "CommonMistakes": "Do not compare numbers by looking at a single digit or by counting digits after the decimal point. Keep the value of each place explicit and check the size of the whole number. A correct-looking number is not enough if the representation or reasoning does not match the original relationship. Re-read the question and check units and magnitude. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem.",
+          "QuickSummary": "Three-digit numbers in the linear number system: represent the idea clearly, apply the correct relationship, calculate accurately, and verify the result using a second line of reasoning. Added Cambridge focus: Understanding numbers — model, calculate or reason accurately, then verify. Added Cambridge focus: Making patterns — model, calculate or reason accurately, then verify."
         }
       ]
     },

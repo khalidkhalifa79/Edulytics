@@ -408,7 +408,7 @@ public sealed class
                 node.Code
             }).ToArrayAsync();
 
-        Assert.Equal(962, mappingRows.Length);
+        Assert.Equal(1250, mappingRows.Length);
 
         var mappedLessonIds = mappingRows
             .Select(x => x.PedagogicalLessonId)

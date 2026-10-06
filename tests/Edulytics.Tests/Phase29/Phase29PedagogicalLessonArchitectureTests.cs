@@ -545,7 +545,7 @@ public sealed class Phase29PedagogicalLessonArchitectureTests
             where mapping.FrameworkVersionId == versionId &&
                   advanced9709Ids.Contains(mapping.PedagogicalLessonId)
             select node.Code).ToArrayAsync();
-        Assert.Equal(61, advancedMappings.Length);
+        Assert.Equal(67, advancedMappings.Length);
         Assert.All(advancedMappings, code => Assert.StartsWith("CAM:REF:9709:", code, StringComparison.Ordinal));
 
         Assert.False(

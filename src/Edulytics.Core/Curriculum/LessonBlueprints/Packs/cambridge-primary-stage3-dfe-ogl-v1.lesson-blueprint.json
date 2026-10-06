@@ -24,17 +24,17 @@
     "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
   ],
   "SourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. No government logos or identified third-party copyright material is reproduced. Cambridge objective prose is not reproduced.",
-  "SemanticGraphSha256": "935c28314efe57a5313585b8713d67a8fd925b5f81628bacdd43452caf28a21e",
+  "SemanticGraphSha256": "3a062b56e017e43d28b1cefa0a55b8d4d69364d110749fe02d4e775aa2483b87",
   "AcquisitionDiagnostics": {
     "UnitCount": 6,
     "LessonCount": 34,
-    "OfficialStandardCount": 21,
-    "AddressingCoverageCount": 21,
-    "FormalMappingCount": 48,
+    "OfficialStandardCount": 53,
+    "AddressingCoverageCount": 53,
+    "FormalMappingCount": 80,
     "LessonsWithoutNumberedGradeReferenceAnyRole": 0,
     "LessonsWithoutNumberedAddressingStandard": 0,
     "LessonsWithoutNumberedAddressingOrBuildingTowardsStandard": 0,
-    "MultiStandardLessons": 14
+    "MultiStandardLessons": 18
   },
   "Units": [
     {
@@ -325,7 +325,7 @@
       "Title": "Use and understand fraction notation: Reason and Apply",
       "SortOrder": 8,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
-      "SemanticSha256": "4dc31f63b3f731581ef48292c476998eab82859dd2d716cb896d244a7a0128d6",
+      "SemanticSha256": "80f4170a0ed4ae61e873dd955cd98974d061a2ecd973dc599dabfba61294393d",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -342,11 +342,20 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:3Nf.04",
           "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Nf.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Nf.02",
+          "SortOrder": 3
         }
       ],
       "OutcomeCodes": [
         "CAM:OUT:0096:3Nf.01",
-        "CAM:OUT:0096:3Nf.04"
+        "CAM:OUT:0096:3Nf.04",
+        "CAM:OUT:0096:3Nf.02"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S3"
@@ -436,7 +445,7 @@
       "Title": "Fractions within 1 in the linear number system: Build the Idea",
       "SortOrder": 11,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
-      "SemanticSha256": "27ceff1b5ebeddfa284ce351a320aa8a6a91c1025078c2c3cf708726f06304f0",
+      "SemanticSha256": "46f8dd5c9e6c7cc91cf692d126a8451a942537aa1daf22ecf0e42ef12669080f",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -445,10 +454,19 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:3Nf.08",
           "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Nf.06",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Nf.06",
+          "SortOrder": 2
         }
       ],
       "OutcomeCodes": [
-        "CAM:OUT:0096:3Nf.08"
+        "CAM:OUT:0096:3Nf.08",
+        "CAM:OUT:0096:3Nf.06"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S3"
@@ -464,7 +482,7 @@
       "Title": "Fractions within 1 in the linear number system: Reason and Apply",
       "SortOrder": 12,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
-      "SemanticSha256": "b39efc28e528f72d769b5e50ba667e0675a47ff4b34ccde51b58cfc31ceccd42",
+      "SemanticSha256": "a473f368456462f9708a3bd7b3bb70038f0deba2e950b18048304cea01a3bd6c",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -473,10 +491,46 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:3Nf.08",
           "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Gt.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Gt.02",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Gt.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Gt.03",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Gt.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Gt.01",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Gt.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Gt.04",
+          "SortOrder": 5
         }
       ],
       "OutcomeCodes": [
-        "CAM:OUT:0096:3Nf.08"
+        "CAM:OUT:0096:3Nf.08",
+        "CAM:OUT:0096:3Gt.02",
+        "CAM:OUT:0096:3Gt.03",
+        "CAM:OUT:0096:3Gt.01",
+        "CAM:OUT:0096:3Gt.04"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S3"
@@ -548,7 +602,7 @@
       "Title": "Recognise right angles: Build the Idea",
       "SortOrder": 15,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
-      "SemanticSha256": "278f3f13a2ab71789013caee1dc9180aed18231592ee0197841fbb0076895e2a",
+      "SemanticSha256": "1a9dc17292e086fc8a5c8a9f45590ddd24f41317a30db18399e974f95fb91bb1",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -557,10 +611,37 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:3Gg.10",
           "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Ss.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Ss.01",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Ss.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Ss.02",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Ss.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Ss.03",
+          "SortOrder": 4
         }
       ],
       "OutcomeCodes": [
-        "CAM:OUT:0096:3Gg.10"
+        "CAM:OUT:0096:3Gg.10",
+        "CAM:OUT:0096:3Ss.01",
+        "CAM:OUT:0096:3Ss.02",
+        "CAM:OUT:0096:3Ss.03"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S3"
@@ -576,7 +657,7 @@
       "Title": "Recognise right angles: Reason and Apply",
       "SortOrder": 16,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
-      "SemanticSha256": "9b110baf835bbff1c883791d64416251eaf2c03a3349114a1ba872a3f6655ee3",
+      "SemanticSha256": "035ff591f0859f386c1910549713f0afb901fd49bcc105e5951f0ace79e71af1",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -585,10 +666,118 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:3Gg.10",
           "SortOrder": 1
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Gg.05",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Gg.05",
+          "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Gg.08",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Gg.08",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Gg.09",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Gg.09",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Gp.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Gp.02",
+          "SortOrder": 5
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Gp.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Gp.01",
+          "SortOrder": 6
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Gg.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Gg.02",
+          "SortOrder": 7
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Gg.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Gg.03",
+          "SortOrder": 8
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Gg.04",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Gg.04",
+          "SortOrder": 9
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Gg.06",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Gg.06",
+          "SortOrder": 10
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Gg.07",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Gg.07",
+          "SortOrder": 11
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Sp.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Sp.01",
+          "SortOrder": 12
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Sp.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Sp.02",
+          "SortOrder": 13
         }
       ],
       "OutcomeCodes": [
-        "CAM:OUT:0096:3Gg.10"
+        "CAM:OUT:0096:3Gg.10",
+        "CAM:OUT:0096:3Gg.05",
+        "CAM:OUT:0096:3Gg.08",
+        "CAM:OUT:0096:3Gg.09",
+        "CAM:OUT:0096:3Gp.02",
+        "CAM:OUT:0096:3Gp.01",
+        "CAM:OUT:0096:3Gg.02",
+        "CAM:OUT:0096:3Gg.03",
+        "CAM:OUT:0096:3Gg.04",
+        "CAM:OUT:0096:3Gg.06",
+        "CAM:OUT:0096:3Gg.07",
+        "CAM:OUT:0096:3Sp.01",
+        "CAM:OUT:0096:3Sp.02"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S3"
@@ -660,7 +849,7 @@
       "Title": "Multiplication and division structures: Build the Idea",
       "SortOrder": 19,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
-      "SemanticSha256": "9b8a454cb248d5e5f778ad6e38145949deb07882973c22595284ecd93c49967f",
+      "SemanticSha256": "c9a682eae3837277326a1107e194cde04d7841723c51012c747b9ca6a39d9995",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -677,11 +866,38 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:3Ni.06",
           "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Ni.10",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Ni.10",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Ni.08",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Ni.08",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Ni.09",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Ni.09",
+          "SortOrder": 5
         }
       ],
       "OutcomeCodes": [
         "CAM:OUT:0096:3Ni.05",
-        "CAM:OUT:0096:3Ni.06"
+        "CAM:OUT:0096:3Ni.06",
+        "CAM:OUT:0096:3Ni.10",
+        "CAM:OUT:0096:3Ni.08",
+        "CAM:OUT:0096:3Ni.09"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S3"
@@ -697,7 +913,7 @@
       "Title": "Multiplication and division structures: Reason and Apply",
       "SortOrder": 20,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
-      "SemanticSha256": "259c1bff88fef4d1ce96b0b34dc0971c77fb0e1ef67617ed3e524bfe7828b359",
+      "SemanticSha256": "fc900df5bd59348ef43d347bd3cd3e29cfcf6ceba923a5a20c7b096a28d4a7a1",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -714,11 +930,20 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:3Ni.06",
           "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Nm.02",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Nm.02",
+          "SortOrder": 3
         }
       ],
       "OutcomeCodes": [
         "CAM:OUT:0096:3Ni.05",
-        "CAM:OUT:0096:3Ni.06"
+        "CAM:OUT:0096:3Ni.06",
+        "CAM:OUT:0096:3Nm.02"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S3"
@@ -1013,7 +1238,7 @@
       "Title": "Place value in three-digit numbers: Reason and Apply",
       "SortOrder": 30,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
-      "SemanticSha256": "29c27a099fca2494df028a4e5a597d332caa8dac8922b75e350fcfcf9e5451a8",
+      "SemanticSha256": "5432c7f0f6634b9c7e7b1eea9e80579aa4fae1c557f8aa3f20f83f53eab96b72",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -1030,11 +1255,20 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:3Np.03",
           "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Np.05",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Np.05",
+          "SortOrder": 3
         }
       ],
       "OutcomeCodes": [
         "CAM:OUT:0096:3Np.01",
-        "CAM:OUT:0096:3Np.03"
+        "CAM:OUT:0096:3Np.03",
+        "CAM:OUT:0096:3Np.05"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S3"
@@ -1087,7 +1321,7 @@
       "Title": "Three-digit numbers in the linear number system: Reason and Apply",
       "SortOrder": 32,
       "SourceUrl": "https://assets.publishing.service.gov.uk/media/61409475e90e07043fea1c45/Maths_guidance_year_3.pdf",
-      "SemanticSha256": "d9a6f43f03f3c73900e8a2662ae5961c3647ef276734cfa06cb054c4fac7380c",
+      "SemanticSha256": "c5f9ceed0db308851c6bed53bcbe97e2e56881c0f9b1c528b67a80f2ca18e9cc",
       "Alignments": [
         {
           "Role": "Addressing",
@@ -1104,11 +1338,65 @@
           "ResolutionKind": "ExactAcceptedStandard",
           "OutcomeCode": "CAM:OUT:0096:3Nc.02",
           "SortOrder": 2
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Nc.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Nc.01",
+          "SortOrder": 3
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Nc.03",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Nc.03",
+          "SortOrder": 4
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Nm.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Nm.01",
+          "SortOrder": 5
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Ni.01",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Ni.01",
+          "SortOrder": 6
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Nc.05",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Nc.05",
+          "SortOrder": 7
+        },
+        {
+          "Role": "Addressing",
+          "ReferenceCode": "3Nc.06",
+          "ReferenceKind": "NumberedStandard",
+          "ResolutionKind": "ExactAcceptedStandard",
+          "OutcomeCode": "CAM:OUT:0096:3Nc.06",
+          "SortOrder": 8
         }
       ],
       "OutcomeCodes": [
         "CAM:OUT:0096:3Np.04",
-        "CAM:OUT:0096:3Nc.02"
+        "CAM:OUT:0096:3Nc.02",
+        "CAM:OUT:0096:3Nc.01",
+        "CAM:OUT:0096:3Nc.03",
+        "CAM:OUT:0096:3Nm.01",
+        "CAM:OUT:0096:3Ni.01",
+        "CAM:OUT:0096:3Nc.05",
+        "CAM:OUT:0096:3Nc.06"
       ],
       "ApplicableCourses": [
         "CAMBRIDGE-PRIMARY-S3"

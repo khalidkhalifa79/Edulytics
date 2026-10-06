@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "mappingVersion": "lesson-skill-supporting-r4-v4",
+  "mappingVersion": "1.1-cambridge-official-outcome-closure",
   "status": "Foundation",
   "mappings": [
     {
@@ -8,19 +8,23 @@
       "primarySkills": [
         "algebra.linear.solve"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R5 exact-target promotion confirmed algebra.linear.solve as the primary mathematical target for “Linear equations”.",
         "Promotion requires the current lesson semantic audit to pass and restricts Practice to the explicitly approved exact families listed on this mapping.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "LINEAR_EQUATION",
       "allowedQuestionFamilies": [
         "algebra.linear.ax_plus_b_equals_c",
         "algebra.linear.variables_both_sides"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:C2.5.2"
       ]
     },
     {
@@ -28,19 +32,23 @@
       "primarySkills": [
         "algebra.linear.inequality.solve"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R5 exact-target promotion confirmed algebra.linear.inequality.solve as the primary mathematical target for “Inequalities”.",
         "Promotion requires the current lesson semantic audit to pass and restricts Practice to the explicitly approved exact families listed on this mapping.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "LINEAR_INEQUALITY",
       "allowedQuestionFamilies": [
         "algebra.linear.inequality.ax_plus_b_relation_c",
         "algebra.linear.inequality.variables_both_sides"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:C2.6"
       ]
     },
     {
@@ -48,19 +56,23 @@
       "primarySkills": [
         "geometry.right_triangle.pythagorean"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R5 exact-target promotion confirmed geometry.right_triangle.pythagorean as the primary mathematical target for “Pythagoras theorem”.",
         "Promotion requires the current lesson semantic audit to pass and restricts Practice to the explicitly approved exact families listed on this mapping.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "PYTHAGORAS",
       "allowedQuestionFamilies": [
         "geometry.right_triangle.pythagorean.exact",
         "geometry.right_triangle.pythagorean.find_leg_exact"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:C6.1"
       ]
     },
     {
@@ -68,19 +80,25 @@
       "primarySkills": [
         "algebra.linear.solve"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R5 exact-target promotion confirmed algebra.linear.solve as the primary mathematical target for “Linear equations”.",
         "Promotion requires the current lesson semantic audit to pass and restricts Practice to the explicitly approved exact families listed on this mapping.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "LINEAR_EQUATION",
       "allowedQuestionFamilies": [
         "algebra.linear.ax_plus_b_equals_c",
         "algebra.linear.variables_both_sides"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:E2.5.1",
+        "CAM:OUT:0580:E2.5.2",
+        "CAM:OUT:0580:E2.5.3"
       ]
     },
     {
@@ -88,19 +106,26 @@
       "primarySkills": [
         "algebra.linear.inequality.solve"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R5 exact-target promotion confirmed algebra.linear.inequality.solve as the primary mathematical target for “Inequalities”.",
         "Promotion requires the current lesson semantic audit to pass and restricts Practice to the explicitly approved exact families listed on this mapping.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "LINEAR_INEQUALITY",
       "allowedQuestionFamilies": [
         "algebra.linear.inequality.ax_plus_b_relation_c",
         "algebra.linear.inequality.variables_both_sides"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:E2.6.1",
+        "CAM:OUT:0580:E2.6.2",
+        "CAM:OUT:0580:E2.6.3",
+        "CAM:OUT:0580:E2.6.4"
       ]
     },
     {
@@ -108,19 +133,23 @@
       "primarySkills": [
         "geometry.right_triangle.pythagorean"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R5 exact-target promotion confirmed geometry.right_triangle.pythagorean as the primary mathematical target for “Pythagoras theorem”.",
         "Promotion requires the current lesson semantic audit to pass and restricts Practice to the explicitly approved exact families listed on this mapping.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "PYTHAGORAS",
       "allowedQuestionFamilies": [
         "geometry.right_triangle.pythagorean.exact",
         "geometry.right_triangle.pythagorean.find_leg_exact"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:E6.1"
       ]
     },
     {
@@ -128,19 +157,23 @@
       "primarySkills": [
         "algebra.linear.solve"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R5 exact-target promotion confirmed algebra.linear.solve as the primary mathematical target for “Consolidating Linear equations”.",
         "Promotion requires the current lesson semantic audit to pass and restricts Practice to the explicitly approved exact families listed on this mapping.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "LINEAR_EQUATION",
       "allowedQuestionFamilies": [
         "algebra.linear.ax_plus_b_equals_c",
         "algebra.linear.variables_both_sides"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:C2.5.2"
       ]
     },
     {
@@ -148,19 +181,23 @@
       "primarySkills": [
         "algebra.linear.inequality.solve"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R5 exact-target promotion confirmed algebra.linear.inequality.solve as the primary mathematical target for “Consolidating Inequalities”.",
         "Promotion requires the current lesson semantic audit to pass and restricts Practice to the explicitly approved exact families listed on this mapping.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "LINEAR_INEQUALITY",
       "allowedQuestionFamilies": [
         "algebra.linear.inequality.ax_plus_b_relation_c",
         "algebra.linear.inequality.variables_both_sides"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:C2.6"
       ]
     },
     {
@@ -168,19 +205,23 @@
       "primarySkills": [
         "geometry.right_triangle.pythagorean"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R5 exact-target promotion confirmed geometry.right_triangle.pythagorean as the primary mathematical target for “Consolidating Pythagoras theorem”.",
         "Promotion requires the current lesson semantic audit to pass and restricts Practice to the explicitly approved exact families listed on this mapping.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "PYTHAGORAS",
       "allowedQuestionFamilies": [
         "geometry.right_triangle.pythagorean.exact",
         "geometry.right_triangle.pythagorean.find_leg_exact"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:C6.1"
       ]
     },
     {
@@ -188,19 +229,25 @@
       "primarySkills": [
         "algebra.linear.solve"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R5 exact-target promotion confirmed algebra.linear.solve as the primary mathematical target for “Consolidating Linear equations”.",
         "Promotion requires the current lesson semantic audit to pass and restricts Practice to the explicitly approved exact families listed on this mapping.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "LINEAR_EQUATION",
       "allowedQuestionFamilies": [
         "algebra.linear.ax_plus_b_equals_c",
         "algebra.linear.variables_both_sides"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:E2.5.1",
+        "CAM:OUT:0580:E2.5.2",
+        "CAM:OUT:0580:E2.5.3"
       ]
     },
     {
@@ -208,19 +255,26 @@
       "primarySkills": [
         "algebra.linear.inequality.solve"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R5 exact-target promotion confirmed algebra.linear.inequality.solve as the primary mathematical target for “Consolidating Inequalities”.",
         "Promotion requires the current lesson semantic audit to pass and restricts Practice to the explicitly approved exact families listed on this mapping.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "LINEAR_INEQUALITY",
       "allowedQuestionFamilies": [
         "algebra.linear.inequality.ax_plus_b_relation_c",
         "algebra.linear.inequality.variables_both_sides"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:E2.6.1",
+        "CAM:OUT:0580:E2.6.2",
+        "CAM:OUT:0580:E2.6.3",
+        "CAM:OUT:0580:E2.6.4"
       ]
     },
     {
@@ -228,19 +282,23 @@
       "primarySkills": [
         "geometry.right_triangle.pythagorean"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R5 exact-target promotion confirmed geometry.right_triangle.pythagorean as the primary mathematical target for “Consolidating Pythagoras theorem”.",
         "Promotion requires the current lesson semantic audit to pass and restricts Practice to the explicitly approved exact families listed on this mapping.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "PYTHAGORAS",
       "allowedQuestionFamilies": [
         "geometry.right_triangle.pythagorean.exact",
         "geometry.right_triangle.pythagorean.find_leg_exact"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:E6.1"
       ]
     },
     {
@@ -248,19 +306,23 @@
       "primarySkills": [
         "ratio.unit_rate"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "Deterministic skill-resolution audit identified ratio.unit_rate as a high-confidence exact target from the canonical lesson title and target-bearing content.",
         "Academic promotion for R2 confirmed the lesson target 'Rates and unit rates' and restricted Practice to approved exact question families: ratio.unit_rate.direct, ratio.unit_rate.equivalent_ratio.",
-        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one."
+        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "UNIT_RATE",
       "allowedQuestionFamilies": [
         "ratio.unit_rate.direct",
         "ratio.unit_rate.equivalent_ratio"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:7Nf.09"
       ]
     },
     {
@@ -268,19 +330,23 @@
       "primarySkills": [
         "algebra.linear.solve"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R5 exact-target promotion confirmed algebra.linear.solve as the primary mathematical target for “Linear equations”.",
         "Promotion requires the current lesson semantic audit to pass and restricts Practice to the explicitly approved exact families listed on this mapping.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "LINEAR_EQUATION",
       "allowedQuestionFamilies": [
         "algebra.linear.ax_plus_b_equals_c",
         "algebra.linear.variables_both_sides"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:7Ae.06"
       ]
     },
     {
@@ -288,19 +354,23 @@
       "primarySkills": [
         "algebra.linear.inequality.solve"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R5 exact-target promotion confirmed algebra.linear.inequality.solve as the primary mathematical target for “Inequalities”.",
         "Promotion requires the current lesson semantic audit to pass and restricts Practice to the explicitly approved exact families listed on this mapping.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "LINEAR_INEQUALITY",
       "allowedQuestionFamilies": [
         "algebra.linear.inequality.ax_plus_b_relation_c",
         "algebra.linear.inequality.variables_both_sides"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:7Ae.07"
       ]
     },
     {
@@ -308,13 +378,14 @@
       "primarySkills": [
         "geometry.angles.relationships"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R5 exact-target promotion confirmed geometry.angles.relationships as the primary mathematical target for “Angle relationships”.",
         "Promotion requires the current lesson semantic audit to pass and restricts Practice to the explicitly approved exact families listed on this mapping.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "ANGLE_RELATIONSHIPS",
@@ -322,6 +393,11 @@
         "geometry.angles.parallel_lines",
         "geometry.angles.supplementary",
         "geometry.angles.algebraic_supplementary"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:7Gg.11",
+        "CAM:OUT:0862:7Gg.12",
+        "CAM:OUT:0862:7Gg.13"
       ]
     },
     {
@@ -329,19 +405,23 @@
       "primarySkills": [
         "geometry.right_triangle.pythagorean"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R5 exact-target promotion confirmed geometry.right_triangle.pythagorean as the primary mathematical target for “Pythagoras theorem”.",
         "Promotion requires the current lesson semantic audit to pass and restricts Practice to the explicitly approved exact families listed on this mapping.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "PYTHAGORAS",
       "allowedQuestionFamilies": [
         "geometry.right_triangle.pythagorean.exact",
         "geometry.right_triangle.pythagorean.find_leg_exact"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:7Gp.02"
       ]
     },
     {
@@ -349,19 +429,23 @@
       "primarySkills": [
         "ratio.unit_rate"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "Deterministic skill-resolution audit identified ratio.unit_rate as a high-confidence exact target from the canonical lesson title and target-bearing content.",
         "Academic promotion for R2 confirmed the lesson target 'Rates and unit rates' and restricted Practice to approved exact question families: ratio.unit_rate.direct, ratio.unit_rate.equivalent_ratio.",
-        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one."
+        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "UNIT_RATE",
       "allowedQuestionFamilies": [
         "ratio.unit_rate.direct",
         "ratio.unit_rate.equivalent_ratio"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:8As.07"
       ]
     },
     {
@@ -369,19 +453,23 @@
       "primarySkills": [
         "algebra.linear.solve"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R5 exact-target promotion confirmed algebra.linear.solve as the primary mathematical target for “Linear equations”.",
         "Promotion requires the current lesson semantic audit to pass and restricts Practice to the explicitly approved exact families listed on this mapping.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "LINEAR_EQUATION",
       "allowedQuestionFamilies": [
         "algebra.linear.ax_plus_b_equals_c",
         "algebra.linear.variables_both_sides"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:8Ae.06"
       ]
     },
     {
@@ -389,19 +477,23 @@
       "primarySkills": [
         "algebra.linear.inequality.solve"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R5 exact-target promotion confirmed algebra.linear.inequality.solve as the primary mathematical target for “Inequalities”.",
         "Promotion requires the current lesson semantic audit to pass and restricts Practice to the explicitly approved exact families listed on this mapping.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "LINEAR_INEQUALITY",
       "allowedQuestionFamilies": [
         "algebra.linear.inequality.ax_plus_b_relation_c",
         "algebra.linear.inequality.variables_both_sides"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:8Ae.07"
       ]
     },
     {
@@ -409,13 +501,14 @@
       "primarySkills": [
         "geometry.angles.relationships"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R5 exact-target promotion confirmed geometry.angles.relationships as the primary mathematical target for “Angle relationships”.",
         "Promotion requires the current lesson semantic audit to pass and restricts Practice to the explicitly approved exact families listed on this mapping.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "ANGLE_RELATIONSHIPS",
@@ -423,6 +516,10 @@
         "geometry.angles.parallel_lines",
         "geometry.angles.supplementary",
         "geometry.angles.algebraic_supplementary"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:8Gg.10",
+        "CAM:OUT:0862:8Gg.11"
       ]
     },
     {
@@ -430,19 +527,23 @@
       "primarySkills": [
         "geometry.right_triangle.pythagorean"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R5 exact-target promotion confirmed geometry.right_triangle.pythagorean as the primary mathematical target for “Pythagoras theorem”.",
         "Promotion requires the current lesson semantic audit to pass and restricts Practice to the explicitly approved exact families listed on this mapping.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "PYTHAGORAS",
       "allowedQuestionFamilies": [
         "geometry.right_triangle.pythagorean.exact",
         "geometry.right_triangle.pythagorean.find_leg_exact"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:8Gp.02"
       ]
     },
     {
@@ -450,19 +551,23 @@
       "primarySkills": [
         "ratio.unit_rate"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "Deterministic skill-resolution audit identified ratio.unit_rate as a high-confidence exact target from the canonical lesson title and target-bearing content.",
         "Academic promotion for R2 confirmed the lesson target 'Rates and unit rates' and restricted Practice to approved exact question families: ratio.unit_rate.direct, ratio.unit_rate.equivalent_ratio.",
-        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one."
+        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "UNIT_RATE",
       "allowedQuestionFamilies": [
         "ratio.unit_rate.direct",
         "ratio.unit_rate.equivalent_ratio"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:9As.07"
       ]
     },
     {
@@ -470,19 +575,23 @@
       "primarySkills": [
         "algebra.linear.solve"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R5 exact-target promotion confirmed algebra.linear.solve as the primary mathematical target for “Linear equations”.",
         "Promotion requires the current lesson semantic audit to pass and restricts Practice to the explicitly approved exact families listed on this mapping.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "LINEAR_EQUATION",
       "allowedQuestionFamilies": [
         "algebra.linear.ax_plus_b_equals_c",
         "algebra.linear.variables_both_sides"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:9Ae.05"
       ]
     },
     {
@@ -490,19 +599,23 @@
       "primarySkills": [
         "algebra.linear.inequality.solve"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R5 exact-target promotion confirmed algebra.linear.inequality.solve as the primary mathematical target for “Inequalities”.",
         "Promotion requires the current lesson semantic audit to pass and restricts Practice to the explicitly approved exact families listed on this mapping.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "LINEAR_INEQUALITY",
       "allowedQuestionFamilies": [
         "algebra.linear.inequality.ax_plus_b_relation_c",
         "algebra.linear.inequality.variables_both_sides"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:9Ae.07"
       ]
     },
     {
@@ -510,13 +623,14 @@
       "primarySkills": [
         "geometry.angles.relationships"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R5 exact-target promotion confirmed geometry.angles.relationships as the primary mathematical target for “Angle relationships”.",
         "Promotion requires the current lesson semantic audit to pass and restricts Practice to the explicitly approved exact families listed on this mapping.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "ANGLE_RELATIONSHIPS",
@@ -524,6 +638,11 @@
         "geometry.angles.parallel_lines",
         "geometry.angles.supplementary",
         "geometry.angles.algebraic_supplementary"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:9Gg.07",
+        "CAM:OUT:0862:9Gg.08",
+        "CAM:OUT:0862:9Gg.09"
       ]
     },
     {
@@ -531,19 +650,23 @@
       "primarySkills": [
         "geometry.right_triangle.pythagorean"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R5 exact-target promotion confirmed geometry.right_triangle.pythagorean as the primary mathematical target for “Pythagoras theorem”.",
         "Promotion requires the current lesson semantic audit to pass and restricts Practice to the explicitly approved exact families listed on this mapping.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "PYTHAGORAS",
       "allowedQuestionFamilies": [
         "geometry.right_triangle.pythagorean.exact",
         "geometry.right_triangle.pythagorean.find_leg_exact"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:9Gg.10"
       ]
     },
     {
@@ -551,18 +674,23 @@
       "primarySkills": [
         "number.whole.add_subtract"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "Deterministic skill-resolution audit identified number.whole.add_subtract as a high-confidence exact target from the canonical lesson title and target-bearing content.",
         "Academic promotion for R2 confirmed the lesson target 'Add and subtract across 10: Reason and Apply' and restricted Practice to approved exact question families: number.whole.add_subtract.across_ten.apply.",
-        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one."
+        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "WHOLE_ADD_SUBTRACT",
       "allowedQuestionFamilies": [
         "number.whole.add_subtract.across_ten.apply"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:2Ni.02",
+        "CAM:OUT:0096:2Ni.04"
       ]
     },
     {
@@ -570,18 +698,23 @@
       "primarySkills": [
         "number.whole.add_subtract"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "Deterministic skill-resolution audit identified number.whole.add_subtract as a high-confidence exact target from the canonical lesson title and target-bearing content.",
         "Academic promotion for R2 confirmed the lesson target 'Add and subtract across 10: Build the Idea' and restricted Practice to approved exact question families: number.whole.add_subtract.across_ten.build.",
-        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one."
+        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "WHOLE_ADD_SUBTRACT",
       "allowedQuestionFamilies": [
         "number.whole.add_subtract.across_ten.build"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:2Ni.02",
+        "CAM:OUT:0096:2Ni.04"
       ]
     },
     {
@@ -589,18 +722,23 @@
       "primarySkills": [
         "number.whole.add_subtract"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R3 academic evidence review confirmed number.whole.add_subtract as the exact primary mathematical target for this lesson.",
         "Practice is restricted to approved exact families: number.whole.add_subtract.comparative.apply.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "WHOLE_ADD_SUBTRACT",
       "allowedQuestionFamilies": [
         "number.whole.add_subtract.comparative.apply"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:2Ni.02",
+        "CAM:OUT:0096:2Ni.04"
       ]
     },
     {
@@ -608,18 +746,23 @@
       "primarySkills": [
         "number.whole.add_subtract"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R3 academic evidence review confirmed number.whole.add_subtract as the exact primary mathematical target for this lesson.",
         "Practice is restricted to approved exact families: number.whole.add_subtract.comparative.build.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "WHOLE_ADD_SUBTRACT",
       "allowedQuestionFamilies": [
         "number.whole.add_subtract.comparative.build"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:2Ni.02",
+        "CAM:OUT:0096:2Ni.04"
       ]
     },
     {
@@ -627,18 +770,22 @@
       "primarySkills": [
         "number.whole.add_subtract"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "Deterministic skill-resolution audit identified number.whole.add_subtract as a high-confidence exact target from the canonical lesson title and target-bearing content.",
         "Academic promotion for R2 confirmed the lesson target 'Add and subtract within 100 - part 1: Reason and Apply' and restricted Practice to approved exact question families: number.whole.add_subtract.within_100.apply.",
-        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one."
+        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "WHOLE_ADD_SUBTRACT",
       "allowedQuestionFamilies": [
         "number.whole.add_subtract.within_100.apply"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:2Ni.04"
       ]
     },
     {
@@ -646,18 +793,22 @@
       "primarySkills": [
         "number.whole.add_subtract"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "Deterministic skill-resolution audit identified number.whole.add_subtract as a high-confidence exact target from the canonical lesson title and target-bearing content.",
         "Academic promotion for R2 confirmed the lesson target 'Add and subtract within 100 - part 1: Build the Idea' and restricted Practice to approved exact question families: number.whole.add_subtract.within_100.build.",
-        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one."
+        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "WHOLE_ADD_SUBTRACT",
       "allowedQuestionFamilies": [
         "number.whole.add_subtract.within_100.build"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:2Ni.04"
       ]
     },
     {
@@ -665,18 +816,22 @@
       "primarySkills": [
         "number.whole.add_subtract"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "Deterministic skill-resolution audit identified number.whole.add_subtract as a high-confidence exact target from the canonical lesson title and target-bearing content.",
         "Academic promotion for R2 confirmed the lesson target 'Add and subtract within 100 - part 2: Reason and Apply' and restricted Practice to approved exact question families: number.whole.add_subtract.within_100.apply.",
-        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one."
+        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "WHOLE_ADD_SUBTRACT",
       "allowedQuestionFamilies": [
         "number.whole.add_subtract.within_100.apply"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:2Ni.04"
       ]
     },
     {
@@ -684,18 +839,22 @@
       "primarySkills": [
         "number.whole.add_subtract"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "Deterministic skill-resolution audit identified number.whole.add_subtract as a high-confidence exact target from the canonical lesson title and target-bearing content.",
         "Academic promotion for R2 confirmed the lesson target 'Add and subtract within 100 - part 2: Build the Idea' and restricted Practice to approved exact question families: number.whole.add_subtract.within_100.build.",
-        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one."
+        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "WHOLE_ADD_SUBTRACT",
       "allowedQuestionFamilies": [
         "number.whole.add_subtract.within_100.build"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:2Ni.04"
       ]
     },
     {
@@ -703,18 +862,23 @@
       "primarySkills": [
         "number.whole.add_subtract"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "Deterministic skill-resolution audit identified number.whole.add_subtract as a high-confidence exact target from the canonical lesson title and target-bearing content.",
         "Academic promotion for R2 confirmed the lesson target 'Fluently add and subtract within 10: Reason and Apply' and restricted Practice to approved exact question families: number.whole.add_subtract.within_10.apply.",
-        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one."
+        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "WHOLE_ADD_SUBTRACT",
       "allowedQuestionFamilies": [
         "number.whole.add_subtract.within_10.apply"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:2Ni.02",
+        "CAM:OUT:0096:2Ni.04"
       ]
     },
     {
@@ -722,18 +886,23 @@
       "primarySkills": [
         "number.whole.add_subtract"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "Deterministic skill-resolution audit identified number.whole.add_subtract as a high-confidence exact target from the canonical lesson title and target-bearing content.",
         "Academic promotion for R2 confirmed the lesson target 'Fluently add and subtract within 10: Build the Idea' and restricted Practice to approved exact question families: number.whole.add_subtract.within_10.build.",
-        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one."
+        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "WHOLE_ADD_SUBTRACT",
       "allowedQuestionFamilies": [
         "number.whole.add_subtract.within_10.build"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:2Ni.02",
+        "CAM:OUT:0096:2Ni.04"
       ]
     },
     {
@@ -741,18 +910,22 @@
       "primarySkills": [
         "number.whole.add_subtract"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R3 academic evidence review confirmed number.whole.add_subtract as the exact primary mathematical target for this lesson.",
         "Practice is restricted to approved exact families: number.whole.add_subtract.complement_100.apply.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "WHOLE_ADD_SUBTRACT",
       "allowedQuestionFamilies": [
         "number.whole.add_subtract.complement_100.apply"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:3Ni.03"
       ]
     },
     {
@@ -760,18 +933,22 @@
       "primarySkills": [
         "number.whole.add_subtract"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R3 academic evidence review confirmed number.whole.add_subtract as the exact primary mathematical target for this lesson.",
         "Practice is restricted to approved exact families: number.whole.add_subtract.complement_100.build.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "WHOLE_ADD_SUBTRACT",
       "allowedQuestionFamilies": [
         "number.whole.add_subtract.complement_100.build"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:3Ni.03"
       ]
     },
     {
@@ -779,18 +956,22 @@
       "primarySkills": [
         "number.whole.add_subtract"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "Deterministic skill-resolution audit identified number.whole.add_subtract as a high-confidence exact target from the canonical lesson title and target-bearing content.",
         "Academic promotion for R2 confirmed the lesson target 'Columnar addition and subtraction: Reason and Apply' and restricted Practice to approved exact question families: number.whole.add_subtract.columnar.apply.",
-        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one."
+        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "WHOLE_ADD_SUBTRACT",
       "allowedQuestionFamilies": [
         "number.whole.add_subtract.columnar.apply"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:3Ni.04"
       ]
     },
     {
@@ -798,18 +979,22 @@
       "primarySkills": [
         "number.whole.add_subtract"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "Deterministic skill-resolution audit identified number.whole.add_subtract as a high-confidence exact target from the canonical lesson title and target-bearing content.",
         "Academic promotion for R2 confirmed the lesson target 'Columnar addition and subtraction: Build the Idea' and restricted Practice to approved exact question families: number.whole.add_subtract.columnar.build.",
-        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one."
+        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "WHOLE_ADD_SUBTRACT",
       "allowedQuestionFamilies": [
         "number.whole.add_subtract.columnar.build"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:3Ni.04"
       ]
     },
     {
@@ -817,18 +1002,23 @@
       "primarySkills": [
         "fractions.of_quantity"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R3 academic evidence review confirmed fractions.of_quantity as the exact primary mathematical target for this lesson.",
         "Practice is restricted to approved exact families: fractions.of_quantity.apply.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "FRACTION_OF_QUANTITY",
       "allowedQuestionFamilies": [
         "fractions.of_quantity.apply"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:3Nf.03",
+        "CAM:OUT:0096:3Nf.05"
       ]
     },
     {
@@ -836,18 +1026,23 @@
       "primarySkills": [
         "fractions.of_quantity"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R3 academic evidence review confirmed fractions.of_quantity as the exact primary mathematical target for this lesson.",
         "Practice is restricted to approved exact families: fractions.of_quantity.build.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "FRACTION_OF_QUANTITY",
       "allowedQuestionFamilies": [
         "fractions.of_quantity.build"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:3Nf.03",
+        "CAM:OUT:0096:3Nf.05"
       ]
     },
     {
@@ -861,20 +1056,24 @@
       "prerequisites": [
         "number.whole.add_subtract"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R4 ambiguity review classified each detected skill as Primary, Secondary or Prerequisite rather than treating every mentioned skill as a Practice target.",
         "Primary target: fractions.add_subtract.",
         "Secondary skills: fractions.equivalent.",
         "Prerequisites: number.whole.add_subtract.",
-        "No official curriculum outcome was invented."
+        "No official curriculum outcome was invented.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "SUPPORTING_EXACT",
       "allowedQuestionFamilies": [
         "fractions.add_subtract.within_one.apply"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:3Nf.07"
       ]
     },
     {
@@ -888,20 +1087,24 @@
       "prerequisites": [
         "number.whole.add_subtract"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R4 ambiguity review classified each detected skill as Primary, Secondary or Prerequisite rather than treating every mentioned skill as a Practice target.",
         "Primary target: fractions.add_subtract.",
         "Secondary skills: fractions.equivalent.",
         "Prerequisites: number.whole.add_subtract.",
-        "No official curriculum outcome was invented."
+        "No official curriculum outcome was invented.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "SUPPORTING_EXACT",
       "allowedQuestionFamilies": [
         "fractions.add_subtract.within_one.build"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:3Nf.07"
       ]
     },
     {
@@ -909,18 +1112,22 @@
       "primarySkills": [
         "number.whole.add_subtract"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "Deterministic skill-resolution audit identified number.whole.add_subtract as a high-confidence exact target from the canonical lesson title and target-bearing content.",
         "Academic promotion for R2 confirmed the lesson target 'Fluently add and subtract within and across 10: Reason and Apply' and restricted Practice to approved exact question families: number.whole.add_subtract.across_ten.apply.",
-        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one."
+        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "WHOLE_ADD_SUBTRACT",
       "allowedQuestionFamilies": [
         "number.whole.add_subtract.across_ten.apply"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:3Ni.04"
       ]
     },
     {
@@ -928,18 +1135,22 @@
       "primarySkills": [
         "number.whole.add_subtract"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "Deterministic skill-resolution audit identified number.whole.add_subtract as a high-confidence exact target from the canonical lesson title and target-bearing content.",
         "Academic promotion for R2 confirmed the lesson target 'Fluently add and subtract within and across 10: Build the Idea' and restricted Practice to approved exact question families: number.whole.add_subtract.across_ten.build.",
-        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one."
+        "This Supporting lesson has no independent official OutcomeCode; the Edulytics mapping controls Practice only and does not invent one.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "WHOLE_ADD_SUBTRACT",
       "allowedQuestionFamilies": [
         "number.whole.add_subtract.across_ten.build"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:3Ni.04"
       ]
     },
     {
@@ -947,18 +1158,22 @@
       "primarySkills": [
         "number.whole.multiply"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R3 academic evidence review confirmed number.whole.multiply as the exact primary mathematical target for this lesson.",
         "Practice is restricted to approved exact families: number.whole.multiply.fact_recall.apply.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "MULTIPLICATION_FACTS",
       "allowedQuestionFamilies": [
         "number.whole.multiply.fact_recall.apply"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:3Ni.07"
       ]
     },
     {
@@ -966,18 +1181,22 @@
       "primarySkills": [
         "number.whole.multiply"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R3 academic evidence review confirmed number.whole.multiply as the exact primary mathematical target for this lesson.",
         "Practice is restricted to approved exact families: number.whole.multiply.fact_recall.build.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "MULTIPLICATION_FACTS",
       "allowedQuestionFamilies": [
         "number.whole.multiply.fact_recall.build"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:3Ni.07"
       ]
     },
     {
@@ -985,18 +1204,22 @@
       "primarySkills": [
         "measurement.scale.read_equal_intervals"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R3 academic evidence review confirmed measurement.scale.read_equal_intervals as the exact primary mathematical target for this lesson.",
         "Practice is restricted to approved exact families: measurement.scale.equal_intervals.read_value.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "SCALE_READING",
       "allowedQuestionFamilies": [
         "measurement.scale.equal_intervals.read_value"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:3Gg.11"
       ]
     },
     {
@@ -1004,18 +1227,22 @@
       "primarySkills": [
         "measurement.scale.read_equal_intervals"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R3 academic evidence review confirmed measurement.scale.read_equal_intervals as the exact primary mathematical target for this lesson.",
         "Practice is restricted to approved exact families: measurement.scale.equal_intervals.read_value.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "SCALE_READING",
       "allowedQuestionFamilies": [
         "measurement.scale.equal_intervals.read_value"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:3Gg.11"
       ]
     },
     {
@@ -1029,20 +1256,24 @@
       "prerequisites": [
         "number.whole.add_subtract"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R4 ambiguity review classified each detected skill as Primary, Secondary or Prerequisite rather than treating every mentioned skill as a Practice target.",
         "Primary target: fractions.add_subtract.",
         "Secondary skills: fractions.equivalent.",
         "Prerequisites: number.whole.add_subtract.",
-        "No official curriculum outcome was invented."
+        "No official curriculum outcome was invented.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "SUPPORTING_EXACT",
       "allowedQuestionFamilies": [
         "fractions.add_subtract.same_denominator.mixed.apply"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:4Nf.05"
       ]
     },
     {
@@ -1056,20 +1287,24 @@
       "prerequisites": [
         "number.whole.add_subtract"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R4 ambiguity review classified each detected skill as Primary, Secondary or Prerequisite rather than treating every mentioned skill as a Practice target.",
         "Primary target: fractions.add_subtract.",
         "Secondary skills: fractions.equivalent.",
         "Prerequisites: number.whole.add_subtract.",
-        "No official curriculum outcome was invented."
+        "No official curriculum outcome was invented.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "SUPPORTING_EXACT",
       "allowedQuestionFamilies": [
         "fractions.add_subtract.same_denominator.mixed.build"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:4Nf.05"
       ]
     },
     {
@@ -1077,18 +1312,22 @@
       "primarySkills": [
         "number.whole.multiply"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R3 academic evidence review confirmed number.whole.multiply as the exact primary mathematical target for this lesson.",
         "Practice is restricted to approved exact families: number.whole.multiply.fact_recall.apply.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "MULTIPLICATION_FACTS",
       "allowedQuestionFamilies": [
         "number.whole.multiply.fact_recall.apply"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:4Ni.04"
       ]
     },
     {
@@ -1096,18 +1335,22 @@
       "primarySkills": [
         "number.whole.multiply"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R3 academic evidence review confirmed number.whole.multiply as the exact primary mathematical target for this lesson.",
         "Practice is restricted to approved exact families: number.whole.multiply.fact_recall.build.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "MULTIPLICATION_FACTS",
       "allowedQuestionFamilies": [
         "number.whole.multiply.fact_recall.build"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:4Ni.04"
       ]
     },
     {
@@ -1115,18 +1358,22 @@
       "primarySkills": [
         "number.whole.divide"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R3 academic evidence review confirmed number.whole.divide as the exact primary mathematical target for this lesson.",
         "Practice is restricted to approved exact families: number.whole.divide.with_remainder.apply.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "DIVISION_REMAINDER",
       "allowedQuestionFamilies": [
         "number.whole.divide.with_remainder.apply"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:4Ni.06"
       ]
     },
     {
@@ -1134,18 +1381,22 @@
       "primarySkills": [
         "number.whole.divide"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R3 academic evidence review confirmed number.whole.divide as the exact primary mathematical target for this lesson.",
         "Practice is restricted to approved exact families: number.whole.divide.with_remainder.build.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "DIVISION_REMAINDER",
       "allowedQuestionFamilies": [
         "number.whole.divide.with_remainder.build"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:4Ni.06"
       ]
     },
     {
@@ -1153,18 +1404,22 @@
       "primarySkills": [
         "measurement.scale.read_equal_intervals"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R3 academic evidence review confirmed measurement.scale.read_equal_intervals as the exact primary mathematical target for this lesson.",
         "Practice is restricted to approved exact families: measurement.scale.equal_intervals.read_value.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "SCALE_READING",
       "allowedQuestionFamilies": [
         "measurement.scale.equal_intervals.read_value"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:4Gg.09"
       ]
     },
     {
@@ -1172,18 +1427,22 @@
       "primarySkills": [
         "measurement.scale.read_equal_intervals"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R3 academic evidence review confirmed measurement.scale.read_equal_intervals as the exact primary mathematical target for this lesson.",
         "Practice is restricted to approved exact families: measurement.scale.equal_intervals.read_value.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "SCALE_READING",
       "allowedQuestionFamilies": [
         "measurement.scale.equal_intervals.read_value"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:4Gg.09"
       ]
     },
     {
@@ -1191,18 +1450,22 @@
       "primarySkills": [
         "fractions.of_quantity"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R3 academic evidence review confirmed fractions.of_quantity as the exact primary mathematical target for this lesson.",
         "Practice is restricted to approved exact families: fractions.of_quantity.apply.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "FRACTION_OF_QUANTITY",
       "allowedQuestionFamilies": [
         "fractions.of_quantity.apply"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:5Nf.02"
       ]
     },
     {
@@ -1210,18 +1473,22 @@
       "primarySkills": [
         "fractions.of_quantity"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R3 academic evidence review confirmed fractions.of_quantity as the exact primary mathematical target for this lesson.",
         "Practice is restricted to approved exact families: fractions.of_quantity.build.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "FRACTION_OF_QUANTITY",
       "allowedQuestionFamilies": [
         "fractions.of_quantity.build"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:5Nf.02"
       ]
     },
     {
@@ -1229,19 +1496,24 @@
       "primarySkills": [
         "fractions.equivalent"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The canonical lesson title is 'Find equivalent fractions: Reason and Apply' and the worked examples explicitly use fraction equivalence without changing value.",
         "The deterministic skill-resolution audit identifies fractions.equivalent as the high-confidence exact target and the semantic-content audit passes target evidence.",
-        "This supporting lesson has no independent official OutcomeCode; the Edulytics SkillContract is pedagogical metadata only and does not invent an official curriculum outcome."
+        "This supporting lesson has no independent official OutcomeCode; the Edulytics SkillContract is pedagogical metadata only and does not invent an official curriculum outcome.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "FRACTION_EQUIVALENT",
       "allowedQuestionFamilies": [
         "fractions.equivalent.missing_value",
         "fractions.equivalent.recognize"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:5Nf.03",
+        "CAM:OUT:0096:5Nf.04"
       ]
     },
     {
@@ -1249,19 +1521,24 @@
       "primarySkills": [
         "fractions.equivalent"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The canonical lesson title is 'Find equivalent fractions: Build the Idea' and the worked examples explicitly use fraction equivalence without changing value.",
         "The deterministic skill-resolution audit identifies fractions.equivalent as the high-confidence exact target and the semantic-content audit passes target evidence.",
-        "This supporting lesson has no independent official OutcomeCode; the Edulytics SkillContract is pedagogical metadata only and does not invent an official curriculum outcome."
+        "This supporting lesson has no independent official OutcomeCode; the Edulytics SkillContract is pedagogical metadata only and does not invent an official curriculum outcome.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "FRACTION_EQUIVALENT",
       "allowedQuestionFamilies": [
         "fractions.equivalent.missing_value",
         "fractions.equivalent.recognize"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:5Nf.03",
+        "CAM:OUT:0096:5Nf.04"
       ]
     },
     {
@@ -1269,18 +1546,22 @@
       "primarySkills": [
         "measurement.scale.read_equal_intervals"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R3 academic evidence review confirmed measurement.scale.read_equal_intervals as the exact primary mathematical target for this lesson.",
         "Practice is restricted to approved exact families: measurement.scale.equal_intervals.read_value.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "SCALE_READING",
       "allowedQuestionFamilies": [
         "measurement.scale.equal_intervals.read_value"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:5Gg.02"
       ]
     },
     {
@@ -1288,18 +1569,22 @@
       "primarySkills": [
         "measurement.scale.read_equal_intervals"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R3 academic evidence review confirmed measurement.scale.read_equal_intervals as the exact primary mathematical target for this lesson.",
         "Practice is restricted to approved exact families: measurement.scale.equal_intervals.read_value.",
-        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized."
+        "The lesson remains Supporting/pedagogical metadata only; no official curriculum outcome is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "SCALE_READING",
       "allowedQuestionFamilies": [
         "measurement.scale.equal_intervals.read_value"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:5Gg.02"
       ]
     },
     {
@@ -1307,16 +1592,20 @@
       "primarySkills": [
         "algebra.relationships.two_unknowns"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
-        "Exact lesson title and corrected worked examples require two linked unknown quantities and two independent relationships."
+        "Exact lesson title and corrected worked examples require two linked unknown quantities and two independent relationships.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "TWO_UNKNOWNS",
       "allowedQuestionFamilies": [
         "algebra.relationships.two_unknowns.total_difference"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:6Nc.02"
       ]
     },
     {
@@ -1328,20 +1617,24 @@
       "prerequisites": [
         "number.whole.add_subtract"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "R4 ambiguity review classified each detected skill as Primary, Secondary or Prerequisite rather than treating every mentioned skill as a Practice target.",
         "Primary target: algebra.relationships.two_unknowns.",
         "No secondary Practice target is authorized.",
         "Prerequisites: number.whole.add_subtract.",
-        "No official curriculum outcome was invented."
+        "No official curriculum outcome was invented.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "TWO_UNKNOWNS",
       "allowedQuestionFamilies": [
         "algebra.relationships.two_unknowns.total_difference"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:6Nc.02"
       ]
     },
     {
@@ -1353,18 +1646,22 @@
         "fractions.equivalent",
         "number.lcm"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The canonical lesson title is 'Compare fractions with different denominators: Reason and Apply' and the semantic-content audit contains target evidence for unlike-denominator comparison.",
         "The deterministic skill-resolution audit identifies fractions.compare.unlike_denominators as the high-confidence exact target.",
-        "This supporting lesson has no independent official OutcomeCode; the Edulytics SkillContract does not invent one."
+        "This supporting lesson has no independent official OutcomeCode; the Edulytics SkillContract does not invent one.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "FRACTION_COMPARE_UNLIKE",
       "allowedQuestionFamilies": [
         "fractions.compare.unlike.common_denominator"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:6Nf.08"
       ]
     },
     {
@@ -1376,16 +1673,20 @@
         "fractions.equivalent",
         "number.lcm"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
-        "Exact lesson title and corrected worked examples compare unlike-denominator fractions using equivalent fractions and common denominators."
+        "Exact lesson title and corrected worked examples compare unlike-denominator fractions using equivalent fractions and common denominators.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "FRACTION_COMPARE_UNLIKE",
       "allowedQuestionFamilies": [
         "fractions.compare.unlike.common_denominator"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:6Nf.08"
       ]
     },
     {
@@ -1397,12 +1698,16 @@
       "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
-        "Official Cambridge 0096 objective 6Np.04 and the replacement learner body both target rounding numbers with two decimal places to the nearest tenth or whole number."
+        "Official Cambridge 0096 objective 6Np.04 and the replacement learner body both target rounding numbers with two decimal places to the nearest tenth or whole number.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "ROUNDING",
       "allowedQuestionFamilies": [
         "supporting.number.rounding"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:6Np.04"
       ]
     },
     {
@@ -1416,12 +1721,16 @@
       "evidence": [
         "Official Cambridge 0096 objective 6Np.04 and the replacement learner body both target rounding numbers with two decimal places to the nearest tenth or whole number.",
         "Practice is restricted to the reviewed rounding family supporting.number.rounding.",
-        "The lesson is now an exact official-mapped pedagogical lesson; no synthetic curriculum outcome is created."
+        "The lesson is now an exact official-mapped pedagogical lesson; no synthetic curriculum outcome is created.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "ROUNDING",
       "allowedQuestionFamilies": [
         "supporting.number.rounding"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:6Np.04"
       ]
     },
     {
@@ -1748,18 +2057,25 @@
       "primarySkills": [
         "percentages.core"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact canonical lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson defines percentage as a rate per hundred and its worked examples include percentage-of-quantity and percentage increase. Practice is restricted to the corresponding exact verified families; no official OutcomeCode is synthesized."
+        "The canonical lesson defines percentage as a rate per hundred and its worked examples include percentage-of-quantity and percentage increase. Practice is restricted to the corresponding exact verified families; no official OutcomeCode is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "PERCENTAGES_CORE",
       "allowedQuestionFamilies": [
         "percentages.core.of_quantity",
         "percentages.core.increase_decrease"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:C1.13.1",
+        "CAM:OUT:0580:C1.13.2",
+        "CAM:OUT:0580:C1.13.3",
+        "CAM:OUT:0580:C1.13.4"
       ]
     },
     {
@@ -1767,12 +2083,13 @@
       "primarySkills": [
         "sequences.core"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact canonical lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson describes sequence rules using differences and ratios and includes an nth-term worked example. Practice is restricted to exact arithmetic/geometric term and reverse-position families; no official OutcomeCode is synthesized."
+        "The canonical lesson describes sequence rules using differences and ratios and includes an nth-term worked example. Practice is restricted to exact arithmetic/geometric term and reverse-position families; no official OutcomeCode is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "SEQUENCES_CORE",
@@ -1780,6 +2097,11 @@
         "sequences.core.arithmetic_nth_term",
         "sequences.core.geometric_nth_term",
         "sequences.core.find_position_arithmetic"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:C2.7.1",
+        "CAM:OUT:0580:C2.7.2",
+        "CAM:OUT:0580:C2.7.3"
       ]
     },
     {
@@ -1787,12 +2109,13 @@
       "primarySkills": [
         "geometry.polygons.angle_sum"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact canonical lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson teaches polygon angle relationships and includes triangle and quadrilateral interior-angle-sum examples. Practice is restricted to verified polygon angle families with deterministic diagrams."
+        "The canonical lesson teaches polygon angle relationships and includes triangle and quadrilateral interior-angle-sum examples. Practice is restricted to verified polygon angle families with deterministic diagrams.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "POLYGON_ANGLE_SUM",
@@ -1800,6 +2123,11 @@
         "geometry.polygons.interior_angle_sum",
         "geometry.polygons.missing_interior_angle",
         "geometry.polygons.regular_interior_angle"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:C4.1.1",
+        "CAM:OUT:0580:C4.1.2",
+        "CAM:OUT:0580:C4.1.3"
       ]
     },
     {
@@ -1807,12 +2135,13 @@
       "primarySkills": [
         "geometry.perimeter_area"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact canonical lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson explicitly targets perimeter and area and includes rectangle and triangle area worked examples. Practice uses direct and reverse verified plane-measurement families with deterministic diagrams."
+        "The canonical lesson explicitly targets perimeter and area and includes rectangle and triangle area worked examples. Practice uses direct and reverse verified plane-measurement families with deterministic diagrams.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "PERIMETER_AREA",
@@ -1821,6 +2150,9 @@
         "geometry.perimeter_area.rectangle_perimeter",
         "geometry.perimeter_area.triangle_area",
         "geometry.perimeter_area.rectangle_missing_side"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:C5.2"
       ]
     },
     {
@@ -1828,18 +2160,26 @@
       "primarySkills": [
         "percentages.core"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact canonical lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson defines percentage as a rate per hundred and its worked examples include percentage-of-quantity and percentage increase. Practice is restricted to the corresponding exact verified families; no official OutcomeCode is synthesized."
+        "The canonical lesson defines percentage as a rate per hundred and its worked examples include percentage-of-quantity and percentage increase. Practice is restricted to the corresponding exact verified families; no official OutcomeCode is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "PERCENTAGES_CORE",
       "allowedQuestionFamilies": [
         "percentages.core.of_quantity",
         "percentages.core.increase_decrease"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:E1.13.1",
+        "CAM:OUT:0580:E1.13.2",
+        "CAM:OUT:0580:E1.13.3",
+        "CAM:OUT:0580:E1.13.4",
+        "CAM:OUT:0580:E1.13.5"
       ]
     },
     {
@@ -1847,12 +2187,13 @@
       "primarySkills": [
         "sequences.core"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact canonical lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson describes sequence rules using differences and ratios and includes an nth-term worked example. Practice is restricted to exact arithmetic/geometric term and reverse-position families; no official OutcomeCode is synthesized."
+        "The canonical lesson describes sequence rules using differences and ratios and includes an nth-term worked example. Practice is restricted to exact arithmetic/geometric term and reverse-position families; no official OutcomeCode is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "SEQUENCES_CORE",
@@ -1860,6 +2201,11 @@
         "sequences.core.arithmetic_nth_term",
         "sequences.core.geometric_nth_term",
         "sequences.core.find_position_arithmetic"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:E2.7.1",
+        "CAM:OUT:0580:E2.7.2",
+        "CAM:OUT:0580:E2.7.3"
       ]
     },
     {
@@ -1867,12 +2213,13 @@
       "primarySkills": [
         "geometry.polygons.angle_sum"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact canonical lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson teaches polygon angle relationships and includes triangle and quadrilateral interior-angle-sum examples. Practice is restricted to verified polygon angle families with deterministic diagrams."
+        "The canonical lesson teaches polygon angle relationships and includes triangle and quadrilateral interior-angle-sum examples. Practice is restricted to verified polygon angle families with deterministic diagrams.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "POLYGON_ANGLE_SUM",
@@ -1880,6 +2227,13 @@
         "geometry.polygons.interior_angle_sum",
         "geometry.polygons.missing_interior_angle",
         "geometry.polygons.regular_interior_angle"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:E4.1.1",
+        "CAM:OUT:0580:E4.1.2",
+        "CAM:OUT:0580:E4.1.3",
+        "CAM:OUT:0580:E4.5.1",
+        "CAM:OUT:0580:E4.5.2"
       ]
     },
     {
@@ -1887,12 +2241,13 @@
       "primarySkills": [
         "geometry.perimeter_area"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact canonical lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson explicitly targets perimeter and area and includes rectangle and triangle area worked examples. Practice uses direct and reverse verified plane-measurement families with deterministic diagrams."
+        "The canonical lesson explicitly targets perimeter and area and includes rectangle and triangle area worked examples. Practice uses direct and reverse verified plane-measurement families with deterministic diagrams.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "PERIMETER_AREA",
@@ -1901,6 +2256,9 @@
         "geometry.perimeter_area.rectangle_perimeter",
         "geometry.perimeter_area.triangle_area",
         "geometry.perimeter_area.rectangle_missing_side"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:E5.2"
       ]
     },
     {
@@ -1908,18 +2266,22 @@
       "primarySkills": [
         "percentages.core"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact canonical lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson defines percentage as a rate per hundred and its worked examples include percentage-of-quantity and percentage increase. Practice is restricted to the corresponding exact verified families; no official OutcomeCode is synthesized."
+        "The canonical lesson defines percentage as a rate per hundred and its worked examples include percentage-of-quantity and percentage increase. Practice is restricted to the corresponding exact verified families; no official OutcomeCode is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "PERCENTAGES_CORE",
       "allowedQuestionFamilies": [
         "percentages.core.of_quantity",
         "percentages.core.increase_decrease"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:7Nf.01"
       ]
     },
     {
@@ -1927,12 +2289,13 @@
       "primarySkills": [
         "sequences.core"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact canonical lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson describes sequence rules using differences and ratios and includes an nth-term worked example. Practice is restricted to exact arithmetic/geometric term and reverse-position families; no official OutcomeCode is synthesized."
+        "The canonical lesson describes sequence rules using differences and ratios and includes an nth-term worked example. Practice is restricted to exact arithmetic/geometric term and reverse-position families; no official OutcomeCode is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "SEQUENCES_CORE",
@@ -1940,6 +2303,10 @@
         "sequences.core.arithmetic_nth_term",
         "sequences.core.geometric_nth_term",
         "sequences.core.find_position_arithmetic"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:7As.01",
+        "CAM:OUT:0862:7As.02"
       ]
     },
     {
@@ -1947,12 +2314,13 @@
       "primarySkills": [
         "geometry.polygons.angle_sum"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact canonical lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson teaches polygon angle relationships and includes triangle and quadrilateral interior-angle-sum examples. Practice is restricted to verified polygon angle families with deterministic diagrams."
+        "The canonical lesson teaches polygon angle relationships and includes triangle and quadrilateral interior-angle-sum examples. Practice is restricted to verified polygon angle families with deterministic diagrams.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "POLYGON_ANGLE_SUM",
@@ -1960,6 +2328,10 @@
         "geometry.polygons.interior_angle_sum",
         "geometry.polygons.missing_interior_angle",
         "geometry.polygons.regular_interior_angle"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:7Gg.01",
+        "CAM:OUT:0862:7Gg.11"
       ]
     },
     {
@@ -1967,12 +2339,13 @@
       "primarySkills": [
         "geometry.perimeter_area"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact canonical lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson explicitly targets perimeter and area and includes rectangle and triangle area worked examples. Practice uses direct and reverse verified plane-measurement families with deterministic diagrams."
+        "The canonical lesson explicitly targets perimeter and area and includes rectangle and triangle area worked examples. Practice uses direct and reverse verified plane-measurement families with deterministic diagrams.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "PERIMETER_AREA",
@@ -1981,6 +2354,9 @@
         "geometry.perimeter_area.rectangle_perimeter",
         "geometry.perimeter_area.triangle_area",
         "geometry.perimeter_area.rectangle_missing_side"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:7Gg.05"
       ]
     },
     {
@@ -1988,18 +2364,22 @@
       "primarySkills": [
         "percentages.core"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact canonical lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson defines percentage as a rate per hundred and its worked examples include percentage-of-quantity and percentage increase. Practice is restricted to the corresponding exact verified families; no official OutcomeCode is synthesized."
+        "The canonical lesson defines percentage as a rate per hundred and its worked examples include percentage-of-quantity and percentage increase. Practice is restricted to the corresponding exact verified families; no official OutcomeCode is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "PERCENTAGES_CORE",
       "allowedQuestionFamilies": [
         "percentages.core.of_quantity",
         "percentages.core.increase_decrease"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:8Nf.05"
       ]
     },
     {
@@ -2007,12 +2387,13 @@
       "primarySkills": [
         "sequences.core"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact canonical lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson describes sequence rules using differences and ratios and includes an nth-term worked example. Practice is restricted to exact arithmetic/geometric term and reverse-position families; no official OutcomeCode is synthesized."
+        "The canonical lesson describes sequence rules using differences and ratios and includes an nth-term worked example. Practice is restricted to exact arithmetic/geometric term and reverse-position families; no official OutcomeCode is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "SEQUENCES_CORE",
@@ -2020,6 +2401,10 @@
         "sequences.core.arithmetic_nth_term",
         "sequences.core.geometric_nth_term",
         "sequences.core.find_position_arithmetic"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:8As.01",
+        "CAM:OUT:0862:8As.02"
       ]
     },
     {
@@ -2027,12 +2412,13 @@
       "primarySkills": [
         "geometry.polygons.angle_sum"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact canonical lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson teaches polygon angle relationships and includes triangle and quadrilateral interior-angle-sum examples. Practice is restricted to verified polygon angle families with deterministic diagrams."
+        "The canonical lesson teaches polygon angle relationships and includes triangle and quadrilateral interior-angle-sum examples. Practice is restricted to verified polygon angle families with deterministic diagrams.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "POLYGON_ANGLE_SUM",
@@ -2040,6 +2426,11 @@
         "geometry.polygons.interior_angle_sum",
         "geometry.polygons.missing_interior_angle",
         "geometry.polygons.regular_interior_angle"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:8Gg.01",
+        "CAM:OUT:0862:8Gg.09",
+        "CAM:OUT:0862:8Gg.10"
       ]
     },
     {
@@ -2047,12 +2438,13 @@
       "primarySkills": [
         "geometry.perimeter_area"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact canonical lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson explicitly targets perimeter and area and includes rectangle and triangle area worked examples. Practice uses direct and reverse verified plane-measurement families with deterministic diagrams."
+        "The canonical lesson explicitly targets perimeter and area and includes rectangle and triangle area worked examples. Practice uses direct and reverse verified plane-measurement families with deterministic diagrams.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "PERIMETER_AREA",
@@ -2061,6 +2453,9 @@
         "geometry.perimeter_area.rectangle_perimeter",
         "geometry.perimeter_area.triangle_area",
         "geometry.perimeter_area.rectangle_missing_side"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:8Gg.04"
       ]
     },
     {
@@ -2068,18 +2463,22 @@
       "primarySkills": [
         "percentages.core"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact canonical lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson defines percentage as a rate per hundred and its worked examples include percentage-of-quantity and percentage increase. Practice is restricted to the corresponding exact verified families; no official OutcomeCode is synthesized."
+        "The canonical lesson defines percentage as a rate per hundred and its worked examples include percentage-of-quantity and percentage increase. Practice is restricted to the corresponding exact verified families; no official OutcomeCode is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "PERCENTAGES_CORE",
       "allowedQuestionFamilies": [
         "percentages.core.of_quantity",
         "percentages.core.increase_decrease"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:9Nf.05"
       ]
     },
     {
@@ -2087,12 +2486,13 @@
       "primarySkills": [
         "sequences.core"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact canonical lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson describes sequence rules using differences and ratios and includes an nth-term worked example. Practice is restricted to exact arithmetic/geometric term and reverse-position families; no official OutcomeCode is synthesized."
+        "The canonical lesson describes sequence rules using differences and ratios and includes an nth-term worked example. Practice is restricted to exact arithmetic/geometric term and reverse-position families; no official OutcomeCode is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "SEQUENCES_CORE",
@@ -2100,6 +2500,10 @@
         "sequences.core.arithmetic_nth_term",
         "sequences.core.geometric_nth_term",
         "sequences.core.find_position_arithmetic"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:9As.01",
+        "CAM:OUT:0862:9As.02"
       ]
     },
     {
@@ -2107,12 +2511,13 @@
       "primarySkills": [
         "geometry.polygons.angle_sum"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact canonical lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson teaches polygon angle relationships and includes triangle and quadrilateral interior-angle-sum examples. Practice is restricted to verified polygon angle families with deterministic diagrams."
+        "The canonical lesson teaches polygon angle relationships and includes triangle and quadrilateral interior-angle-sum examples. Practice is restricted to verified polygon angle families with deterministic diagrams.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "POLYGON_ANGLE_SUM",
@@ -2120,6 +2525,10 @@
         "geometry.polygons.interior_angle_sum",
         "geometry.polygons.missing_interior_angle",
         "geometry.polygons.regular_interior_angle"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:9Gg.07",
+        "CAM:OUT:0862:9Gg.08"
       ]
     },
     {
@@ -2127,12 +2536,13 @@
       "primarySkills": [
         "geometry.perimeter_area"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact canonical lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson explicitly targets perimeter and area and includes rectangle and triangle area worked examples. Practice uses direct and reverse verified plane-measurement families with deterministic diagrams."
+        "The canonical lesson explicitly targets perimeter and area and includes rectangle and triangle area worked examples. Practice uses direct and reverse verified plane-measurement families with deterministic diagrams.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "PERIMETER_AREA",
@@ -2141,6 +2551,10 @@
         "geometry.perimeter_area.rectangle_perimeter",
         "geometry.perimeter_area.triangle_area",
         "geometry.perimeter_area.rectangle_missing_side"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:9Gg.01",
+        "CAM:OUT:0862:9Gg.03"
       ]
     },
     {
@@ -2148,12 +2562,13 @@
       "primarySkills": [
         "ratio.unit_rate"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson explicitly covers multiplicative ratio/proportion, division of a total in a ratio, and unit-rate scaling. Practice is restricted to exact verified ratio families; no official OutcomeCode is synthesized."
+        "The canonical lesson explicitly covers multiplicative ratio/proportion, division of a total in a ratio, and unit-rate scaling. Practice is restricted to exact verified ratio families; no official OutcomeCode is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "RATIO_PROPORTION",
@@ -2161,6 +2576,11 @@
         "ratio.unit_rate.direct",
         "ratio.unit_rate.equivalent_ratio",
         "ratio.unit_rate.divide_total"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:7Nf.09",
+        "CAM:OUT:0862:7Nf.10",
+        "CAM:OUT:0862:7Nf.11"
       ]
     },
     {
@@ -2168,12 +2588,13 @@
       "primarySkills": [
         "ratio.unit_rate"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson explicitly covers multiplicative ratio/proportion, division of a total in a ratio, and unit-rate scaling. Practice is restricted to exact verified ratio families; no official OutcomeCode is synthesized."
+        "The canonical lesson explicitly covers multiplicative ratio/proportion, division of a total in a ratio, and unit-rate scaling. Practice is restricted to exact verified ratio families; no official OutcomeCode is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "RATIO_PROPORTION",
@@ -2181,6 +2602,11 @@
         "ratio.unit_rate.direct",
         "ratio.unit_rate.equivalent_ratio",
         "ratio.unit_rate.divide_total"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:8Nf.09",
+        "CAM:OUT:0862:8Nf.10",
+        "CAM:OUT:0862:8Nf.11"
       ]
     },
     {
@@ -2188,12 +2614,13 @@
       "primarySkills": [
         "ratio.unit_rate"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson explicitly covers multiplicative ratio/proportion, division of a total in a ratio, and unit-rate scaling. Practice is restricted to exact verified ratio families; no official OutcomeCode is synthesized."
+        "The canonical lesson explicitly covers multiplicative ratio/proportion, division of a total in a ratio, and unit-rate scaling. Practice is restricted to exact verified ratio families; no official OutcomeCode is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "RATIO_PROPORTION",
@@ -2201,6 +2628,9 @@
         "ratio.unit_rate.direct",
         "ratio.unit_rate.equivalent_ratio",
         "ratio.unit_rate.divide_total"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:9Nf.08"
       ]
     },
     {
@@ -2208,12 +2638,13 @@
       "primarySkills": [
         "ratio.unit_rate"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson explicitly covers multiplicative ratio/proportion, division of a total in a ratio, and unit-rate scaling. Practice is restricted to exact verified ratio families; no official OutcomeCode is synthesized."
+        "The canonical lesson explicitly covers multiplicative ratio/proportion, division of a total in a ratio, and unit-rate scaling. Practice is restricted to exact verified ratio families; no official OutcomeCode is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "RATIO_PROPORTION",
@@ -2221,6 +2652,9 @@
         "ratio.unit_rate.direct",
         "ratio.unit_rate.equivalent_ratio",
         "ratio.unit_rate.divide_total"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:C1.11"
       ]
     },
     {
@@ -2228,12 +2662,13 @@
       "primarySkills": [
         "ratio.unit_rate"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson explicitly covers multiplicative ratio/proportion, division of a total in a ratio, and unit-rate scaling. Practice is restricted to exact verified ratio families; no official OutcomeCode is synthesized."
+        "The canonical lesson explicitly covers multiplicative ratio/proportion, division of a total in a ratio, and unit-rate scaling. Practice is restricted to exact verified ratio families; no official OutcomeCode is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "RATIO_PROPORTION",
@@ -2241,6 +2676,9 @@
         "ratio.unit_rate.direct",
         "ratio.unit_rate.equivalent_ratio",
         "ratio.unit_rate.divide_total"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:C1.11"
       ]
     },
     {
@@ -2248,18 +2686,23 @@
       "primarySkills": [
         "ratio.unit_rate"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact Rates target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING.",
-        "Rates are routed only to exact unit-rate and equivalent-rate families. Division-in-ratio is deliberately excluded from this lesson contract."
+        "Rates are routed only to exact unit-rate and equivalent-rate families. Division-in-ratio is deliberately excluded from this lesson contract.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "UNIT_RATE",
       "allowedQuestionFamilies": [
         "ratio.unit_rate.direct",
         "ratio.unit_rate.equivalent_ratio"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:C1.12.1",
+        "CAM:OUT:0580:C1.12.3"
       ]
     },
     {
@@ -2267,18 +2710,23 @@
       "primarySkills": [
         "ratio.unit_rate"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact Rates target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING.",
-        "Rates are routed only to exact unit-rate and equivalent-rate families. Division-in-ratio is deliberately excluded from this lesson contract."
+        "Rates are routed only to exact unit-rate and equivalent-rate families. Division-in-ratio is deliberately excluded from this lesson contract.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "UNIT_RATE",
       "allowedQuestionFamilies": [
         "ratio.unit_rate.direct",
         "ratio.unit_rate.equivalent_ratio"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:C1.12.1",
+        "CAM:OUT:0580:C1.12.3"
       ]
     },
     {
@@ -2286,12 +2734,13 @@
       "primarySkills": [
         "ratio.unit_rate"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson explicitly covers multiplicative ratio/proportion, division of a total in a ratio, and unit-rate scaling. Practice is restricted to exact verified ratio families; no official OutcomeCode is synthesized."
+        "The canonical lesson explicitly covers multiplicative ratio/proportion, division of a total in a ratio, and unit-rate scaling. Practice is restricted to exact verified ratio families; no official OutcomeCode is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "RATIO_PROPORTION",
@@ -2299,6 +2748,9 @@
         "ratio.unit_rate.direct",
         "ratio.unit_rate.equivalent_ratio",
         "ratio.unit_rate.divide_total"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:E1.11"
       ]
     },
     {
@@ -2306,12 +2758,13 @@
       "primarySkills": [
         "ratio.unit_rate"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact lesson target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING rather than CONTENT_WEAK or mapping conflict.",
-        "The canonical lesson explicitly covers multiplicative ratio/proportion, division of a total in a ratio, and unit-rate scaling. Practice is restricted to exact verified ratio families; no official OutcomeCode is synthesized."
+        "The canonical lesson explicitly covers multiplicative ratio/proportion, division of a total in a ratio, and unit-rate scaling. Practice is restricted to exact verified ratio families; no official OutcomeCode is synthesized.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "RATIO_PROPORTION",
@@ -2319,6 +2772,9 @@
         "ratio.unit_rate.direct",
         "ratio.unit_rate.equivalent_ratio",
         "ratio.unit_rate.divide_total"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:E1.11"
       ]
     },
     {
@@ -2326,18 +2782,23 @@
       "primarySkills": [
         "ratio.unit_rate"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact Rates target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING.",
-        "Rates are routed only to exact unit-rate and equivalent-rate families. Division-in-ratio is deliberately excluded from this lesson contract."
+        "Rates are routed only to exact unit-rate and equivalent-rate families. Division-in-ratio is deliberately excluded from this lesson contract.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "UNIT_RATE",
       "allowedQuestionFamilies": [
         "ratio.unit_rate.direct",
         "ratio.unit_rate.equivalent_ratio"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:E1.12.1",
+        "CAM:OUT:0580:E1.12.3"
       ]
     },
     {
@@ -2345,18 +2806,23 @@
       "primarySkills": [
         "ratio.unit_rate"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact Rates target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING.",
-        "Rates are routed only to exact unit-rate and equivalent-rate families. Division-in-ratio is deliberately excluded from this lesson contract."
+        "Rates are routed only to exact unit-rate and equivalent-rate families. Division-in-ratio is deliberately excluded from this lesson contract.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "UNIT_RATE",
       "allowedQuestionFamilies": [
         "ratio.unit_rate.direct",
         "ratio.unit_rate.equivalent_ratio"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:E1.12.1",
+        "CAM:OUT:0580:E1.12.3"
       ]
     },
     {
@@ -2364,12 +2830,13 @@
       "primarySkills": [
         "geometry.coordinate.straight_line"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING.",
-        "The canonical lesson explicitly links tables/equations/graphs and includes both function evaluation and gradient between two points. The contract therefore uses exact gradient, linear-rule evaluation and y-intercept families with deterministic graph rendering."
+        "The canonical lesson explicitly links tables/equations/graphs and includes both function evaluation and gradient between two points. The contract therefore uses exact gradient, linear-rule evaluation and y-intercept families with deterministic graph rendering.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "COORDINATE_STRAIGHT_LINE",
@@ -2377,6 +2844,10 @@
         "geometry.coordinate.gradient_between_points",
         "geometry.coordinate.evaluate_linear_rule",
         "geometry.coordinate.y_intercept_from_rule"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:7As.05",
+        "CAM:OUT:0862:7As.06"
       ]
     },
     {
@@ -2384,12 +2855,13 @@
       "primarySkills": [
         "statistics.center_spread.core"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact Mean, median and range target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING.",
-        "The canonical lesson explicitly names measures of centre/spread and includes a worked example computing mean, median and range. Practice is restricted to independently verified exact data-set families."
+        "The canonical lesson explicitly names measures of centre/spread and includes a worked example computing mean, median and range. Practice is restricted to independently verified exact data-set families.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "MEAN_MEDIAN_RANGE",
@@ -2397,6 +2869,9 @@
         "statistics.center_spread.mean",
         "statistics.center_spread.median",
         "statistics.center_spread.range"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:7Ss.04"
       ]
     },
     {
@@ -2404,12 +2879,13 @@
       "primarySkills": [
         "probability.theoretical.core"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact Theoretical probability target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING.",
-        "The canonical lesson explicitly defines probability on 0 to 1 and includes favourable-over-total and two-independent-coin examples. Practice is restricted to exact sample-space families."
+        "The canonical lesson explicitly defines probability on 0 to 1 and includes favourable-over-total and two-independent-coin examples. Practice is restricted to exact sample-space families.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "THEORETICAL_PROBABILITY",
@@ -2417,6 +2893,10 @@
         "probability.theoretical.simple_event",
         "probability.theoretical.complement",
         "probability.theoretical.two_coins_exactly_one"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:7Sp.03",
+        "CAM:OUT:0862:7Sp.04"
       ]
     },
     {
@@ -2424,12 +2904,13 @@
       "primarySkills": [
         "geometry.coordinate.straight_line"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING.",
-        "The canonical lesson explicitly links tables/equations/graphs and includes both function evaluation and gradient between two points. The contract therefore uses exact gradient, linear-rule evaluation and y-intercept families with deterministic graph rendering."
+        "The canonical lesson explicitly links tables/equations/graphs and includes both function evaluation and gradient between two points. The contract therefore uses exact gradient, linear-rule evaluation and y-intercept families with deterministic graph rendering.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "COORDINATE_STRAIGHT_LINE",
@@ -2437,6 +2918,10 @@
         "geometry.coordinate.gradient_between_points",
         "geometry.coordinate.evaluate_linear_rule",
         "geometry.coordinate.y_intercept_from_rule"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:8As.05",
+        "CAM:OUT:0862:8As.06"
       ]
     },
     {
@@ -2444,12 +2929,13 @@
       "primarySkills": [
         "statistics.center_spread.core"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact Mean, median and range target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING.",
-        "The canonical lesson explicitly names measures of centre/spread and includes a worked example computing mean, median and range. Practice is restricted to independently verified exact data-set families."
+        "The canonical lesson explicitly names measures of centre/spread and includes a worked example computing mean, median and range. Practice is restricted to independently verified exact data-set families.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "MEAN_MEDIAN_RANGE",
@@ -2457,6 +2943,9 @@
         "statistics.center_spread.mean",
         "statistics.center_spread.median",
         "statistics.center_spread.range"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:8Ss.04"
       ]
     },
     {
@@ -2464,12 +2953,13 @@
       "primarySkills": [
         "probability.theoretical.core"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact Theoretical probability target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING.",
-        "The canonical lesson explicitly defines probability on 0 to 1 and includes favourable-over-total and two-independent-coin examples. Practice is restricted to exact sample-space families."
+        "The canonical lesson explicitly defines probability on 0 to 1 and includes favourable-over-total and two-independent-coin examples. Practice is restricted to exact sample-space families.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "THEORETICAL_PROBABILITY",
@@ -2477,6 +2967,10 @@
         "probability.theoretical.simple_event",
         "probability.theoretical.complement",
         "probability.theoretical.two_coins_exactly_one"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:8Sp.02",
+        "CAM:OUT:0862:8Sp.03"
       ]
     },
     {
@@ -2484,12 +2978,13 @@
       "primarySkills": [
         "geometry.coordinate.straight_line"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING.",
-        "The canonical lesson explicitly links tables/equations/graphs and includes both function evaluation and gradient between two points. The contract therefore uses exact gradient, linear-rule evaluation and y-intercept families with deterministic graph rendering."
+        "The canonical lesson explicitly links tables/equations/graphs and includes both function evaluation and gradient between two points. The contract therefore uses exact gradient, linear-rule evaluation and y-intercept families with deterministic graph rendering.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "COORDINATE_STRAIGHT_LINE",
@@ -2497,6 +2992,10 @@
         "geometry.coordinate.gradient_between_points",
         "geometry.coordinate.evaluate_linear_rule",
         "geometry.coordinate.y_intercept_from_rule"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:9As.05",
+        "CAM:OUT:0862:9As.06"
       ]
     },
     {
@@ -2504,12 +3003,13 @@
       "primarySkills": [
         "statistics.center_spread.core"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact Mean, median and range target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING.",
-        "The canonical lesson explicitly names measures of centre/spread and includes a worked example computing mean, median and range. Practice is restricted to independently verified exact data-set families."
+        "The canonical lesson explicitly names measures of centre/spread and includes a worked example computing mean, median and range. Practice is restricted to independently verified exact data-set families.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "MEAN_MEDIAN_RANGE",
@@ -2517,6 +3017,9 @@
         "statistics.center_spread.mean",
         "statistics.center_spread.median",
         "statistics.center_spread.range"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:9Ss.04"
       ]
     },
     {
@@ -2524,12 +3027,13 @@
       "primarySkills": [
         "probability.theoretical.core"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact Theoretical probability target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING.",
-        "The canonical lesson explicitly defines probability on 0 to 1 and includes favourable-over-total and two-independent-coin examples. Practice is restricted to exact sample-space families."
+        "The canonical lesson explicitly defines probability on 0 to 1 and includes favourable-over-total and two-independent-coin examples. Practice is restricted to exact sample-space families.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "THEORETICAL_PROBABILITY",
@@ -2537,6 +3041,10 @@
         "probability.theoretical.simple_event",
         "probability.theoretical.complement",
         "probability.theoretical.two_coins_exactly_one"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:9Sp.01",
+        "CAM:OUT:0862:9Sp.03"
       ]
     },
     {
@@ -2544,18 +3052,22 @@
       "primarySkills": [
         "probability.theoretical.core"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact Single-event probability target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING.",
-        "The contract is deliberately restricted to one-event favourable-over-total and complement probability families and excludes multi-event questions."
+        "The contract is deliberately restricted to one-event favourable-over-total and complement probability families and excludes multi-event questions.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "SINGLE_EVENT_PROBABILITY",
       "allowedQuestionFamilies": [
         "probability.theoretical.simple_event",
         "probability.theoretical.complement"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:C8.1.2"
       ]
     },
     {
@@ -2563,18 +3075,22 @@
       "primarySkills": [
         "probability.theoretical.core"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact Single-event probability target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING.",
-        "The contract is deliberately restricted to one-event favourable-over-total and complement probability families and excludes multi-event questions."
+        "The contract is deliberately restricted to one-event favourable-over-total and complement probability families and excludes multi-event questions.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "SINGLE_EVENT_PROBABILITY",
       "allowedQuestionFamilies": [
         "probability.theoretical.simple_event",
         "probability.theoretical.complement"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:C8.1.2"
       ]
     },
     {
@@ -2582,18 +3098,22 @@
       "primarySkills": [
         "probability.theoretical.core"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact Single-event probability target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING.",
-        "The contract is deliberately restricted to one-event favourable-over-total and complement probability families and excludes multi-event questions."
+        "The contract is deliberately restricted to one-event favourable-over-total and complement probability families and excludes multi-event questions.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "SINGLE_EVENT_PROBABILITY",
       "allowedQuestionFamilies": [
         "probability.theoretical.simple_event",
         "probability.theoretical.complement"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:E8.1.2"
       ]
     },
     {
@@ -2601,18 +3121,22 @@
       "primarySkills": [
         "probability.theoretical.core"
       ],
-      "sourceType": "SupportingLesson",
-      "officialOutcomeMapped": false,
+      "sourceType": "OfficialMappedPedagogicalLesson",
+      "officialOutcomeMapped": true,
       "mappingConfidence": "High",
       "evidence": [
         "The latest Practice audit classifies this exact Single-event probability target as PASS_WITH_WARNINGS with SOLVER_CAPABILITY_MISSING.",
-        "The contract is deliberately restricted to one-event favourable-over-total and complement probability families and excludes multi-event questions."
+        "The contract is deliberately restricted to one-event favourable-over-total and complement probability families and excludes multi-event questions.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "SINGLE_EVENT_PROBABILITY",
       "allowedQuestionFamilies": [
         "probability.theoretical.simple_event",
         "probability.theoretical.complement"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:E8.1.2"
       ]
     },
     {
@@ -2620,18 +3144,22 @@
       "primarySkills": [
         "supporting.decimals.core"
       ],
-      "sourceType": "OfficialMappingUpgrade",
+      "sourceType": "OfficialMappedPedagogicalLesson",
       "officialOutcomeMapped": true,
-      "mappingConfidence": "ReviewedOfficialOutcome",
+      "mappingConfidence": "High",
       "evidence": [
         "Cambridge official curriculum mapping was reviewed and accepted for this canonical lesson.",
         "The existing exact learner-facing SkillContract was preserved during the official mapping upgrade.",
-        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping."
+        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "DECIMAL_ROUNDING",
       "allowedQuestionFamilies": [
         "supporting.decimals.round"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:5Np.05"
       ]
     },
     {
@@ -2639,18 +3167,22 @@
       "primarySkills": [
         "supporting.decimals.core"
       ],
-      "sourceType": "OfficialMappingUpgrade",
+      "sourceType": "OfficialMappedPedagogicalLesson",
       "officialOutcomeMapped": true,
-      "mappingConfidence": "ReviewedOfficialOutcome",
+      "mappingConfidence": "High",
       "evidence": [
         "Cambridge official curriculum mapping was reviewed and accepted for this canonical lesson.",
         "The existing exact learner-facing SkillContract was preserved during the official mapping upgrade.",
-        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping."
+        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "DECIMAL_ROUNDING",
       "allowedQuestionFamilies": [
         "supporting.decimals.round"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:5Np.05"
       ]
     },
     {
@@ -2658,13 +3190,14 @@
       "primarySkills": [
         "geometry.coordinate.straight_line"
       ],
-      "sourceType": "OfficialMappingUpgrade",
+      "sourceType": "OfficialMappedPedagogicalLesson",
       "officialOutcomeMapped": true,
-      "mappingConfidence": "ReviewedOfficialOutcome",
+      "mappingConfidence": "High",
       "evidence": [
         "Cambridge official curriculum mapping was reviewed and accepted for this canonical lesson.",
         "The existing exact learner-facing SkillContract was preserved during the official mapping upgrade.",
-        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping."
+        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "STRAIGHT_LINE",
@@ -2672,6 +3205,11 @@
         "geometry.coordinate.gradient_between_points",
         "geometry.coordinate.evaluate_linear_rule",
         "geometry.coordinate.y_intercept_from_rule"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:C3.2",
+        "CAM:OUT:0580:C3.5",
+        "CAM:OUT:0580:C3.6"
       ]
     },
     {
@@ -2679,13 +3217,14 @@
       "primarySkills": [
         "geometry.coordinate.straight_line"
       ],
-      "sourceType": "OfficialMappingUpgrade",
+      "sourceType": "OfficialMappedPedagogicalLesson",
       "officialOutcomeMapped": true,
-      "mappingConfidence": "ReviewedOfficialOutcome",
+      "mappingConfidence": "High",
       "evidence": [
         "Cambridge official curriculum mapping was reviewed and accepted for this canonical lesson.",
         "The existing exact learner-facing SkillContract was preserved during the official mapping upgrade.",
-        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping."
+        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "STRAIGHT_LINE",
@@ -2693,6 +3232,11 @@
         "geometry.coordinate.gradient_between_points",
         "geometry.coordinate.evaluate_linear_rule",
         "geometry.coordinate.y_intercept_from_rule"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:E3.2",
+        "CAM:OUT:0580:E3.5",
+        "CAM:OUT:0580:E3.6"
       ]
     },
     {
@@ -2700,13 +3244,14 @@
       "primarySkills": [
         "geometry.coordinate.straight_line"
       ],
-      "sourceType": "OfficialMappingUpgrade",
+      "sourceType": "OfficialMappedPedagogicalLesson",
       "officialOutcomeMapped": true,
-      "mappingConfidence": "ReviewedOfficialOutcome",
+      "mappingConfidence": "High",
       "evidence": [
         "Cambridge official curriculum mapping was reviewed and accepted for this canonical lesson.",
         "The existing exact learner-facing SkillContract was preserved during the official mapping upgrade.",
-        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping."
+        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "STRAIGHT_LINE",
@@ -2714,6 +3259,11 @@
         "geometry.coordinate.gradient_between_points",
         "geometry.coordinate.evaluate_linear_rule",
         "geometry.coordinate.y_intercept_from_rule"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:C3.2",
+        "CAM:OUT:0580:C3.5",
+        "CAM:OUT:0580:C3.6"
       ]
     },
     {
@@ -2721,13 +3271,14 @@
       "primarySkills": [
         "geometry.coordinate.straight_line"
       ],
-      "sourceType": "OfficialMappingUpgrade",
+      "sourceType": "OfficialMappedPedagogicalLesson",
       "officialOutcomeMapped": true,
-      "mappingConfidence": "ReviewedOfficialOutcome",
+      "mappingConfidence": "High",
       "evidence": [
         "Cambridge official curriculum mapping was reviewed and accepted for this canonical lesson.",
         "The existing exact learner-facing SkillContract was preserved during the official mapping upgrade.",
-        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping."
+        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "STRAIGHT_LINE",
@@ -2735,6 +3286,11 @@
         "geometry.coordinate.gradient_between_points",
         "geometry.coordinate.evaluate_linear_rule",
         "geometry.coordinate.y_intercept_from_rule"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:E3.2",
+        "CAM:OUT:0580:E3.5",
+        "CAM:OUT:0580:E3.6"
       ]
     },
     {
@@ -2742,18 +3298,22 @@
       "primarySkills": [
         "supporting.algebra.equations"
       ],
-      "sourceType": "OfficialMappingUpgrade",
+      "sourceType": "OfficialMappedPedagogicalLesson",
       "officialOutcomeMapped": true,
-      "mappingConfidence": "ReviewedOfficialOutcome",
+      "mappingConfidence": "High",
       "evidence": [
         "Cambridge official curriculum mapping was reviewed and accepted for this canonical lesson.",
         "The existing exact learner-facing SkillContract was preserved during the official mapping upgrade.",
-        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping."
+        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "QUADRATIC",
       "allowedQuestionFamilies": [
         "supporting.algebra.quadratic_larger_root"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:E2.5.5"
       ]
     },
     {
@@ -2761,18 +3321,22 @@
       "primarySkills": [
         "supporting.algebra.equations"
       ],
-      "sourceType": "OfficialMappingUpgrade",
+      "sourceType": "OfficialMappedPedagogicalLesson",
       "officialOutcomeMapped": true,
-      "mappingConfidence": "ReviewedOfficialOutcome",
+      "mappingConfidence": "High",
       "evidence": [
         "Cambridge official curriculum mapping was reviewed and accepted for this canonical lesson.",
         "The existing exact learner-facing SkillContract was preserved during the official mapping upgrade.",
-        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping."
+        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "QUADRATIC",
       "allowedQuestionFamilies": [
         "supporting.algebra.quadratic_larger_root"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0580:E2.5.5"
       ]
     },
     {
@@ -2780,19 +3344,25 @@
       "primarySkills": [
         "supporting.decimals.core"
       ],
-      "sourceType": "OfficialMappingUpgrade",
+      "sourceType": "OfficialMappedPedagogicalLesson",
       "officialOutcomeMapped": true,
-      "mappingConfidence": "ReviewedOfficialOutcome",
+      "mappingConfidence": "High",
       "evidence": [
         "Cambridge official curriculum mapping was reviewed and accepted for this canonical lesson.",
         "The existing exact learner-facing SkillContract was preserved during the official mapping upgrade.",
-        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping."
+        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "DECIMAL_COMPARE_ROUND",
       "allowedQuestionFamilies": [
         "supporting.decimals.compare",
         "supporting.decimals.round"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:7Np.02",
+        "CAM:OUT:0862:7Nf.07",
+        "CAM:OUT:0862:7Nf.08"
       ]
     },
     {
@@ -2800,19 +3370,25 @@
       "primarySkills": [
         "supporting.decimals.core"
       ],
-      "sourceType": "OfficialMappingUpgrade",
+      "sourceType": "OfficialMappedPedagogicalLesson",
       "officialOutcomeMapped": true,
-      "mappingConfidence": "ReviewedOfficialOutcome",
+      "mappingConfidence": "High",
       "evidence": [
         "Cambridge official curriculum mapping was reviewed and accepted for this canonical lesson.",
         "The existing exact learner-facing SkillContract was preserved during the official mapping upgrade.",
-        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping."
+        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "DECIMAL_COMPARE_ROUND",
       "allowedQuestionFamilies": [
         "supporting.decimals.compare",
         "supporting.decimals.round"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:8Np.02",
+        "CAM:OUT:0862:8Nf.07",
+        "CAM:OUT:0862:8Nf.08"
       ]
     },
     {
@@ -2820,19 +3396,24 @@
       "primarySkills": [
         "supporting.decimals.core"
       ],
-      "sourceType": "OfficialMappingUpgrade",
+      "sourceType": "OfficialMappedPedagogicalLesson",
       "officialOutcomeMapped": true,
-      "mappingConfidence": "ReviewedOfficialOutcome",
+      "mappingConfidence": "High",
       "evidence": [
         "Cambridge official curriculum mapping was reviewed and accepted for this canonical lesson.",
         "The existing exact learner-facing SkillContract was preserved during the official mapping upgrade.",
-        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping."
+        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "DECIMAL_COMPARE_ROUND",
       "allowedQuestionFamilies": [
         "supporting.decimals.compare",
         "supporting.decimals.round"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:9Np.02",
+        "CAM:OUT:0862:9Nf.06"
       ]
     },
     {
@@ -2840,18 +3421,22 @@
       "primarySkills": [
         "supporting.indices.roots_standard_form"
       ],
-      "sourceType": "OfficialMappingUpgrade",
+      "sourceType": "OfficialMappedPedagogicalLesson",
       "officialOutcomeMapped": true,
-      "mappingConfidence": "ReviewedOfficialOutcome",
+      "mappingConfidence": "High",
       "evidence": [
         "Cambridge official curriculum mapping was reviewed and accepted for this canonical lesson.",
         "The existing exact learner-facing SkillContract was preserved during the official mapping upgrade.",
-        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping."
+        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "STANDARD_FORM",
       "allowedQuestionFamilies": [
         "supporting.standard_form.power10_exponent"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:7Np.02"
       ]
     },
     {
@@ -2859,18 +3444,22 @@
       "primarySkills": [
         "supporting.indices.roots_standard_form"
       ],
-      "sourceType": "OfficialMappingUpgrade",
+      "sourceType": "OfficialMappedPedagogicalLesson",
       "officialOutcomeMapped": true,
-      "mappingConfidence": "ReviewedOfficialOutcome",
+      "mappingConfidence": "High",
       "evidence": [
         "Cambridge official curriculum mapping was reviewed and accepted for this canonical lesson.",
         "The existing exact learner-facing SkillContract was preserved during the official mapping upgrade.",
-        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping."
+        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "STANDARD_FORM",
       "allowedQuestionFamilies": [
         "supporting.standard_form.power10_exponent"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:8Np.02"
       ]
     },
     {
@@ -2878,18 +3467,23 @@
       "primarySkills": [
         "supporting.indices.roots_standard_form"
       ],
-      "sourceType": "OfficialMappingUpgrade",
+      "sourceType": "OfficialMappedPedagogicalLesson",
       "officialOutcomeMapped": true,
-      "mappingConfidence": "ReviewedOfficialOutcome",
+      "mappingConfidence": "High",
       "evidence": [
         "Cambridge official curriculum mapping was reviewed and accepted for this canonical lesson.",
         "The existing exact learner-facing SkillContract was preserved during the official mapping upgrade.",
-        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping."
+        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "STANDARD_FORM",
       "allowedQuestionFamilies": [
         "supporting.standard_form.power10_exponent"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:9Ni.03",
+        "CAM:OUT:0862:9Np.02"
       ]
     },
     {
@@ -2897,18 +3491,22 @@
       "primarySkills": [
         "geometry.angles.relationships"
       ],
-      "sourceType": "OfficialMappingUpgrade",
+      "sourceType": "OfficialMappedPedagogicalLesson",
       "officialOutcomeMapped": true,
-      "mappingConfidence": "ReviewedOfficialOutcome",
+      "mappingConfidence": "High",
       "evidence": [
         "Cambridge official curriculum mapping was reviewed and accepted for this canonical lesson.",
         "The existing exact learner-facing SkillContract was preserved during the official mapping upgrade.",
-        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping."
+        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "PARALLEL_PERPENDICULAR",
       "allowedQuestionFamilies": [
         "geometry.angles.parallel_lines"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:3Gg.01"
       ]
     },
     {
@@ -2916,18 +3514,22 @@
       "primarySkills": [
         "geometry.angles.relationships"
       ],
-      "sourceType": "OfficialMappingUpgrade",
+      "sourceType": "OfficialMappedPedagogicalLesson",
       "officialOutcomeMapped": true,
-      "mappingConfidence": "ReviewedOfficialOutcome",
+      "mappingConfidence": "High",
       "evidence": [
         "Cambridge official curriculum mapping was reviewed and accepted for this canonical lesson.",
         "The existing exact learner-facing SkillContract was preserved during the official mapping upgrade.",
-        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping."
+        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "PARALLEL_PERPENDICULAR",
       "allowedQuestionFamilies": [
         "geometry.angles.parallel_lines"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:3Gg.01"
       ]
     },
     {
@@ -2935,13 +3537,14 @@
       "primarySkills": [
         "supporting.indices.roots_standard_form"
       ],
-      "sourceType": "OfficialMappingUpgrade",
+      "sourceType": "OfficialMappedPedagogicalLesson",
       "officialOutcomeMapped": true,
-      "mappingConfidence": "ReviewedOfficialOutcome",
+      "mappingConfidence": "High",
       "evidence": [
         "Cambridge official curriculum mapping was reviewed and accepted for this canonical lesson.",
         "The existing exact learner-facing SkillContract was preserved during the official mapping upgrade.",
-        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping."
+        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "POWERS_OF_TEN",
@@ -2950,6 +3553,9 @@
         "supporting.powers10.multiply",
         "supporting.powers10.divide",
         "supporting.powers10.missing_exponent"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:6Np.02"
       ]
     },
     {
@@ -2957,13 +3563,14 @@
       "primarySkills": [
         "supporting.indices.roots_standard_form"
       ],
-      "sourceType": "OfficialMappingUpgrade",
+      "sourceType": "OfficialMappedPedagogicalLesson",
       "officialOutcomeMapped": true,
-      "mappingConfidence": "ReviewedOfficialOutcome",
+      "mappingConfidence": "High",
       "evidence": [
         "Cambridge official curriculum mapping was reviewed and accepted for this canonical lesson.",
         "The existing exact learner-facing SkillContract was preserved during the official mapping upgrade.",
-        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping."
+        "Practice remains restricted to the explicitly verified solver-backed question families on this mapping.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "POWERS_OF_TEN",
@@ -2972,6 +3579,9 @@
         "supporting.powers10.multiply",
         "supporting.powers10.divide",
         "supporting.powers10.missing_exponent"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:6Np.02"
       ]
     },
     {
@@ -2979,18 +3589,22 @@
       "primarySkills": [
         "fractions.represent.interpret"
       ],
-      "sourceType": "OfficialMappingUpgrade",
+      "sourceType": "OfficialMappedPedagogicalLesson",
       "officialOutcomeMapped": true,
-      "mappingConfidence": "ReviewedOfficialOutcome",
+      "mappingConfidence": "High",
       "evidence": [
         "Cambridge 0096 objective 4Nf.02 is officially mapped to this replacement lesson.",
         "The learner body explicitly interprets a fraction such as 3/4 as 3 divided by 4 and verifies it with an equal-parts representation.",
-        "Practice is limited to the verified fraction-representation family and does not invent curriculum scope."
+        "Practice is limited to the verified fraction-representation family and does not invent curriculum scope.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "FRACTION_REPRESENTATION",
       "allowedQuestionFamilies": [
         "fractions.represent.interpret.fraction_bar"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:4Nf.02"
       ]
     },
     {
@@ -2998,18 +3612,22 @@
       "primarySkills": [
         "fractions.represent.interpret"
       ],
-      "sourceType": "OfficialMappingUpgrade",
+      "sourceType": "OfficialMappedPedagogicalLesson",
       "officialOutcomeMapped": true,
-      "mappingConfidence": "ReviewedOfficialOutcome",
+      "mappingConfidence": "High",
       "evidence": [
         "Cambridge 0096 objective 4Nf.02 is officially mapped to this replacement lesson.",
         "The learner body explicitly interprets a fraction such as 3/4 as 3 divided by 4 and verifies it with an equal-parts representation.",
-        "Practice is limited to the verified fraction-representation family and does not invent curriculum scope."
+        "Practice is limited to the verified fraction-representation family and does not invent curriculum scope.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "FRACTION_REPRESENTATION",
       "allowedQuestionFamilies": [
         "fractions.represent.interpret.fraction_bar"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0096:4Nf.02"
       ]
     },
     {
@@ -3017,18 +3635,22 @@
       "primarySkills": [
         "supporting.trigonometry.core"
       ],
-      "sourceType": "OfficialMappingUpgrade",
+      "sourceType": "OfficialMappedPedagogicalLesson",
       "officialOutcomeMapped": true,
-      "mappingConfidence": "ReviewedOfficialOutcome",
+      "mappingConfidence": "High",
       "evidence": [
         "Cambridge 0862 objective 8Gp.01 is officially mapped to the replacement learner lesson Bearings and direction.",
         "The learner target is three-figure bearing and direction reasoning, matching the verified bearing Practice family.",
-        "Practice remains restricted to solver-backed bearing questions."
+        "Practice remains restricted to solver-backed bearing questions.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "BEARING",
       "allowedQuestionFamilies": [
         "supporting.trigonometry.bearing"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:8Gp.01"
       ]
     },
     {
@@ -3037,19 +3659,23 @@
         "supporting.trigonometry.core",
         "geometry.similarity"
       ],
-      "sourceType": "OfficialMappingUpgrade",
+      "sourceType": "OfficialMappedPedagogicalLesson",
       "officialOutcomeMapped": true,
-      "mappingConfidence": "ReviewedOfficialOutcome",
+      "mappingConfidence": "High",
       "evidence": [
         "Cambridge 0862 objective 9Gp.01 is officially mapped to the replacement learner lesson Bearings and scale on maps.",
         "The learner target combines direction by bearing with map-scale reasoning.",
-        "Practice is restricted to verified bearing and scale-factor families."
+        "Practice is restricted to verified bearing and scale-factor families.",
+        "Official Cambridge outcome mapping is sourced from the canonical Cambridge lesson blueprint; no synthetic curriculum outcome is created."
       ],
       "practiceReadiness": "READY_VERIFIED",
       "practiceMechanic": "BEARING",
       "allowedQuestionFamilies": [
         "supporting.trigonometry.bearing",
         "geometry.similarity.scale_factor"
+      ],
+      "officialOutcomeCodes": [
+        "CAM:OUT:0862:9Gp.01"
       ]
     }
   ]

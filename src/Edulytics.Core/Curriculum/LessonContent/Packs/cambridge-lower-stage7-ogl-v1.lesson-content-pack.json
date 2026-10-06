@@ -12,7 +12,7 @@
   "SourceCheckedAtUtc": "2026-09-01T00:00:00Z",
   "SourceResolution": "CurrentOfficial",
   "FallbackReason": "",
-  "ReviewMethod": "Scope inventory review, pathway isolation, OGL source-policy review, deterministic lesson/body generation, mathematical example verification and canonical body hashing.",
+  "ReviewMethod": "Stable-identity Cambridge official-outcome closure: existing reviewed lessons and practice mappings preserved; missing Scheme-of-Work outcomes appended only to unprotected Edulytics lessons with independently authored coverage.",
   "SourcePolicyVersion": 2,
   "PedagogicalSourceType": "OpenEducationalResource",
   "PedagogicalSourceTitle": "National curriculum in England: Mathematics programmes of study — Key Stage 3",
@@ -24,8 +24,8 @@
   "PedagogicalSourceSelectionEvidence": "32 source-policy-compliant lessons generated for exactly one curriculum level/pathway scope; zero unverified formal OutcomeCodes.",
   "PedagogicalSourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. Official curriculum wording is not reproduced.",
   "Status": "Published",
-  "ReviewedBy": "Edulytics Phase 29 deterministic curriculum review",
-  "ReviewEvidence": "Scope CAMBRIDGE-INTL-MATH/L7/SHARED: 32 lessons, 4 units, academic language en, zero unverified formal mappings. Previously unmapped legacy enrichment was replaced in-place with independently authored lessons aligned to verified current Cambridge identifiers; lesson identities were preserved.",
+  "ReviewedBy": "Edulytics Cambridge official-outcome closure",
+  "ReviewEvidence": "Stage 7: complete coverage of 63 formal official identifiers; protected practice and reviewed lesson bodies remain unchanged.",
   "Lessons": [
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L7:SHARED:01:01:INTEGERS-AND-DIRECTED-NUMBER",
@@ -69,32 +69,35 @@
       "OutcomeCodes": [
         "CAM:OUT:0862:7Nf.02",
         "CAM:OUT:0862:7Nf.03",
-        "CAM:OUT:0862:7Nf.04"
+        "CAM:OUT:0862:7Nf.04",
+        "CAM:OUT:0862:7Nf.05",
+        "CAM:OUT:0862:7Nf.06",
+        "CAM:OUT:0862:7Gp.01"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SourceLocator": "Cambridge Lower Secondary Stage 7 / Number and Proportional Reasoning / 02",
+      "SourceLocator": "Cambridge Lower Secondary Stage 7 / Number and Proportional Reasoning / 02 | Cambridge Official Scheme of Work / Stage 7 / Unit 4 / Topic 1 | Cambridge Official Scheme of Work / Stage 7 / Unit 4 / Topic 4",
       "SourceTitle": "National curriculum in England: Mathematics programmes of study — Key Stage 3",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "Key Stage 3 Mathematics programme of study / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "8f87e8eaba6c820d2c7eaf17aae06ce1baca359ff7e00fe05b4fed37e3b56cd0",
-      "CanonicalBodySha256": "abc80b5be24b428133158ed6a70d159d2e9256c7ffd8c72117d909115bc18ea7",
+      "CanonicalBodySha256": "5b97ebe7ffef8f9c43029427d7cc6c202d3fdeba3337ffb870a51e66e65e603c",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Existing reviewed Edulytics lesson retained; additional Cambridge official outcome coverage was independently authored and appended without reproducing Cambridge objective prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Fractions and mixed numbers",
-          "Explanation": "Fractions and mixed numbers is studied here as part of Cambridge Lower Secondary Stage 7. Fractions represent numbers and ratios. Equivalent fractions have the same value; common denominators make addition, subtraction and comparison valid. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Fractions and mixed numbers. Fractions represent numbers and ratios. Equivalent fractions have the same value; common denominators make addition, subtraction and comparison valid. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: 3/4 + 1/8 = 6/8 + 1/8 = 7/8. Worked example 2: Two thirds of 18 is (2/3) × 18 = 12. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not add denominators when adding fractions. Preserve the value of each fraction before combining them. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Fractions and mixed numbers, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Explanation": "Fractions and mixed numbers is studied here as part of Cambridge Lower Secondary Stage 7. Fractions represent numbers and ratios. Equivalent fractions have the same value; common denominators make addition, subtraction and comparison valid. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure. Additional official coverage for Cambridge Stage 7 topic “Making connections between fractions, decimals and percentages” is integrated here for identifiers 7Nf.05, 7Nf.06. Fractions, percentages and ratios compare quantities multiplicatively. Work with equivalent forms and keep the reference whole or ratio parts explicit. Additional official coverage for Cambridge Stage 7 topic “Ratio and proportion” is integrated here for identifiers 7Gp.01. Fractions, percentages and ratios compare quantities multiplicatively. Work with equivalent forms and keep the reference whole or ratio parts explicit.",
+          "KeyConceptsAndRules": "Focus: Fractions and mixed numbers. Fractions represent numbers and ratios. Equivalent fractions have the same value; common denominators make addition, subtraction and comparison valid. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result. For the added Making connections between fractions, decimals and percentages focus: Fractions, percentages and ratios compare quantities multiplicatively. Work with equivalent forms and keep the reference whole or ratio parts explicit. State units, assumptions or restrictions when relevant. For the added Ratio and proportion focus: Fractions, percentages and ratios compare quantities multiplicatively. Work with equivalent forms and keep the reference whole or ratio parts explicit. State units, assumptions or restrictions when relevant.",
+          "WorkedExamples": "Worked example 1: 3/4 + 1/8 = 6/8 + 1/8 = 7/8. Worked example 2: Two thirds of 18 is (2/3) × 18 = 12. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable. Added worked focus for Making connections between fractions, decimals and percentages: For an equivalent-form check, scale numerator and denominator by the same non-zero factor, or convert a fraction to a decimal or percentage and verify that the represented quantity is unchanged. Added worked focus for Ratio and proportion: For an equivalent-form check, scale numerator and denominator by the same non-zero factor, or convert a fraction to a decimal or percentage and verify that the represented quantity is unchanged.",
+          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context.",
+          "CommonMistakes": "Do not add denominators when adding fractions. Preserve the value of each fraction before combining them. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem.",
+          "QuickSummary": "For Fractions and mixed numbers, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently. Added Cambridge focus: Making connections between fractions, decimals and percentages — model, calculate or reason accurately, then verify. Added Cambridge focus: Ratio and proportion — model, calculate or reason accurately, then verify."
         }
       ]
     },
@@ -244,32 +247,34 @@
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 7.",
       "OutcomeCodes": [
         "CAM:OUT:0862:7Ni.02",
-        "CAM:OUT:0862:7Ni.06"
+        "CAM:OUT:0862:7Ni.06",
+        "CAM:OUT:0862:7Ni.05",
+        "CAM:OUT:0862:7Ni.04"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SourceLocator": "Cambridge Lower Secondary Stage 7 / Number and Proportional Reasoning / 07",
+      "SourceLocator": "Cambridge Lower Secondary Stage 7 / Number and Proportional Reasoning / 07 | Cambridge Official Scheme of Work / Stage 7 / Unit 1 / Topic 3",
       "SourceTitle": "National curriculum in England: Mathematics programmes of study — Key Stage 3",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "Key Stage 3 Mathematics programme of study / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "8f87e8eaba6c820d2c7eaf17aae06ce1baca359ff7e00fe05b4fed37e3b56cd0",
-      "CanonicalBodySha256": "aea07a8ed11bbabd178604da3972dbed098308c2ab55155ca5a5529c622cb75e",
+      "CanonicalBodySha256": "6b1d678355d7a75f83831ce73d7d586fdd547a227ab3bf26e7cd357635579950",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Existing reviewed Edulytics lesson retained; additional Cambridge official outcome coverage was independently authored and appended without reproducing Cambridge objective prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Powers and roots",
-          "Explanation": "Powers and roots is studied here as part of Cambridge Lower Secondary Stage 7. Powers, roots and logarithms are linked operations. Apply index laws only when their bases and operation structures satisfy the relevant conditions. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Powers and roots. Powers, roots and logarithms are linked operations. Apply index laws only when their bases and operation structures satisfy the relevant conditions. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: 2³×2⁴ = 2⁷ = 128. Worked example 2: √50 = √(25×2) = 5√2, and log₁₀(1000)=3. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not add exponents when bases differ, and do not distribute a root across addition. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Powers and roots, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Explanation": "Powers and roots is studied here as part of Cambridge Lower Secondary Stage 7. Powers, roots and logarithms are linked operations. Apply index laws only when their bases and operation structures satisfy the relevant conditions. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure. Additional official coverage for Cambridge Stage 7 topic “Number types” is integrated here for identifiers 7Ni.05, 7Ni.04. Number reasoning depends on place value, magnitude and estimation. Keep digit values explicit and use intervals or number lines to justify comparisons and rounding.",
+          "KeyConceptsAndRules": "Focus: Powers and roots. Powers, roots and logarithms are linked operations. Apply index laws only when their bases and operation structures satisfy the relevant conditions. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result. For the added Number types focus: Number reasoning depends on place value, magnitude and estimation. Keep digit values explicit and use intervals or number lines to justify comparisons and rounding. State units, assumptions or restrictions when relevant.",
+          "WorkedExamples": "Worked example 1: 2³×2⁴ = 2⁷ = 128. Worked example 2: √50 = √(25×2) = 5√2, and log₁₀(1000)=3. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable. Added worked focus for Number types: Locate a number between two neighbouring benchmark values, make the required comparison or rounding decision, then estimate independently to check the result.",
+          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context.",
+          "CommonMistakes": "Do not add exponents when bases differ, and do not distribute a root across addition. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem.",
+          "QuickSummary": "For Powers and roots, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently. Added Cambridge focus: Number types — model, calculate or reason accurately, then verify."
         }
       ]
     },
@@ -349,32 +354,33 @@
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 7.",
       "OutcomeCodes": [
-        "CAM:OUT:0862:7Ae.05"
+        "CAM:OUT:0862:7Ae.05",
+        "CAM:OUT:0862:7Np.01"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SourceLocator": "Cambridge Lower Secondary Stage 7 / Algebra / 02",
+      "SourceLocator": "Cambridge Lower Secondary Stage 7 / Algebra / 02 | Cambridge Official Scheme of Work / Stage 7 / Unit 1 / Topic 1",
       "SourceTitle": "National curriculum in England: Mathematics programmes of study — Key Stage 3",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "Key Stage 3 Mathematics programme of study / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "8f87e8eaba6c820d2c7eaf17aae06ce1baca359ff7e00fe05b4fed37e3b56cd0",
-      "CanonicalBodySha256": "9aceb160495fcd57530c209b91aaa71bf9745d613f728efb08970067bd6c2c14",
+      "CanonicalBodySha256": "7816281fc26279e412bfc56d061c6f718457b7e38bce99fcdaeca7a36664a90c",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Existing reviewed Edulytics lesson retained; additional Cambridge official outcome coverage was independently authored and appended without reproducing Cambridge objective prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Substitution",
-          "Explanation": "Substitution is studied here as part of Cambridge Lower Secondary Stage 7. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Substitution. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: For 48+27, regroup as 48+20+7=75 and verify with 75-27=48. Worked example 2: For a quantity of 60 split equally into 5 groups, each group is 12; verify 5×12=60. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not select an operation from a keyword alone. Check units, magnitude and the original relationship before accepting an answer. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Substitution, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Explanation": "Substitution is studied here as part of Cambridge Lower Secondary Stage 7. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure. Additional official coverage for Cambridge Stage 7 topic “Using place value” is integrated here for identifiers 7Np.01. Number reasoning depends on place value, magnitude and estimation. Keep digit values explicit and use intervals or number lines to justify comparisons and rounding.",
+          "KeyConceptsAndRules": "Focus: Substitution. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result. For the added Using place value focus: Number reasoning depends on place value, magnitude and estimation. Keep digit values explicit and use intervals or number lines to justify comparisons and rounding. State units, assumptions or restrictions when relevant.",
+          "WorkedExamples": "Worked example 1: For 48+27, regroup as 48+20+7=75 and verify with 75-27=48. Worked example 2: For a quantity of 60 split equally into 5 groups, each group is 12; verify 5×12=60. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable. Added worked focus for Using place value: Locate a number between two neighbouring benchmark values, make the required comparison or rounding decision, then estimate independently to check the result.",
+          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context.",
+          "CommonMistakes": "Do not select an operation from a keyword alone. Check units, magnitude and the original relationship before accepting an answer. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem.",
+          "QuickSummary": "For Substitution, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently. Added Cambridge focus: Using place value — model, calculate or reason accurately, then verify."
         }
       ]
     },
@@ -383,32 +389,35 @@
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 7.",
       "OutcomeCodes": [
-        "CAM:OUT:0862:7Ae.03"
+        "CAM:OUT:0862:7Ae.03",
+        "CAM:OUT:0862:7As.03",
+        "CAM:OUT:0862:7As.04",
+        "CAM:OUT:0862:7As.07"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SourceLocator": "Cambridge Lower Secondary Stage 7 / Algebra / 03",
+      "SourceLocator": "Cambridge Lower Secondary Stage 7 / Algebra / 03 | Cambridge Official Scheme of Work / Stage 7 / Unit 6 / Topic 2 | Cambridge Official Scheme of Work / Stage 7 / Unit 6 / Topic 4",
       "SourceTitle": "National curriculum in England: Mathematics programmes of study — Key Stage 3",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "Key Stage 3 Mathematics programme of study / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "8f87e8eaba6c820d2c7eaf17aae06ce1baca359ff7e00fe05b4fed37e3b56cd0",
-      "CanonicalBodySha256": "19bc40988c7d8444e6f4b771707b16aa23ac0b087f0f01f8629361fd2263d1e7",
+      "CanonicalBodySha256": "27910c6e32beea6a187dd98010dc511bfc26d8025755adab5a8a22195cd5f0d2",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Existing reviewed Edulytics lesson retained; additional Cambridge official outcome coverage was independently authored and appended without reproducing Cambridge objective prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Expanding brackets",
-          "Explanation": "Expanding brackets is studied here as part of Cambridge Lower Secondary Stage 7. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Expanding brackets. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: For 48+27, regroup as 48+20+7=75 and verify with 75-27=48. Worked example 2: For a quantity of 60 split equally into 5 groups, each group is 12; verify 5×12=60. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not select an operation from a keyword alone. Check units, magnitude and the original relationship before accepting an answer. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Expanding brackets, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Explanation": "Expanding brackets is studied here as part of Cambridge Lower Secondary Stage 7. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure. Additional official coverage for Cambridge Stage 7 topic “Functions” is integrated here for identifiers 7As.03, 7As.04. Algebra and pattern work represents general relationships. Keep equivalent transformations explicit and test symbolic results against values, tables or graphs. Additional official coverage for Cambridge Stage 7 topic “Graphs related to rates of change” is integrated here for identifiers 7As.07. Algebra and pattern work represents general relationships. Keep equivalent transformations explicit and test symbolic results against values, tables or graphs.",
+          "KeyConceptsAndRules": "Focus: Expanding brackets. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result. For the added Functions focus: Algebra and pattern work represents general relationships. Keep equivalent transformations explicit and test symbolic results against values, tables or graphs. State units, assumptions or restrictions when relevant. For the added Graphs related to rates of change focus: Algebra and pattern work represents general relationships. Keep equivalent transformations explicit and test symbolic results against values, tables or graphs. State units, assumptions or restrictions when relevant.",
+          "WorkedExamples": "Worked example 1: For 48+27, regroup as 48+20+7=75 and verify with 75-27=48. Worked example 2: For a quantity of 60 split equally into 5 groups, each group is 12; verify 5×12=60. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable. Added worked focus for Functions: Express the relationship symbolically, transform it one valid step at a time, and verify the result by substitution or by checking several terms or points. Added worked focus for Graphs related to rates of change: Express the relationship symbolically, transform it one valid step at a time, and verify the result by substitution or by checking several terms or points.",
+          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context.",
+          "CommonMistakes": "Do not select an operation from a keyword alone. Check units, magnitude and the original relationship before accepting an answer. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem.",
+          "QuickSummary": "For Expanding brackets, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently. Added Cambridge focus: Functions — model, calculate or reason accurately, then verify. Added Cambridge focus: Graphs related to rates of change — model, calculate or reason accurately, then verify."
         }
       ]
     },
@@ -661,32 +670,35 @@
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 7.",
       "OutcomeCodes": [
         "CAM:OUT:0862:7Gg.02",
-        "CAM:OUT:0862:7Gp.06"
+        "CAM:OUT:0862:7Gp.06",
+        "CAM:OUT:0862:7Gg.10",
+        "CAM:OUT:0862:7Gg.03",
+        "CAM:OUT:0862:7Gg.04"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SourceLocator": "Cambridge Lower Secondary Stage 7 / Geometry and Measure / 03",
+      "SourceLocator": "Cambridge Lower Secondary Stage 7 / Geometry and Measure / 03 | Cambridge Official Scheme of Work / Stage 7 / Unit 3 / Topic 1 | Cambridge Official Scheme of Work / Stage 7 / Unit 3 / Topic 2",
       "SourceTitle": "National curriculum in England: Mathematics programmes of study — Key Stage 3",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "Key Stage 3 Mathematics programme of study / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "8f87e8eaba6c820d2c7eaf17aae06ce1baca359ff7e00fe05b4fed37e3b56cd0",
-      "CanonicalBodySha256": "8807e92f2f74b73bb129fc33dc44403ae9799bceb0d998a4219208ad3db0065d",
+      "CanonicalBodySha256": "a86e929b8ce0be213e5b443fbd9d6f487e1ff036cfb72ff564070e5e68413a4e",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Existing reviewed Edulytics lesson retained; additional Cambridge official outcome coverage was independently authored and appended without reproducing Cambridge objective prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Congruence and similarity",
-          "Explanation": "Congruence and similarity is studied here as part of Cambridge Lower Secondary Stage 7. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Congruence and similarity. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: For 48+27, regroup as 48+20+7=75 and verify with 75-27=48. Worked example 2: For a quantity of 60 split equally into 5 groups, each group is 12; verify 5×12=60. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not select an operation from a keyword alone. Check units, magnitude and the original relationship before accepting an answer. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Congruence and similarity, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Explanation": "Congruence and similarity is studied here as part of Cambridge Lower Secondary Stage 7. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure. Additional official coverage for Cambridge Stage 7 topic “Polygons, circles and symmetry” is integrated here for identifiers 7Gg.10, 7Gg.03. Geometric and measurement reasoning uses definitions, properties and consistent units. Label known information before calculating or classifying. Additional official coverage for Cambridge Stage 7 topic “Areas of 2D shapes” is integrated here for identifiers 7Gg.04. Geometric and measurement reasoning uses definitions, properties and consistent units. Label known information before calculating or classifying.",
+          "KeyConceptsAndRules": "Focus: Congruence and similarity. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result. For the added Polygons, circles and symmetry focus: Geometric and measurement reasoning uses definitions, properties and consistent units. Label known information before calculating or classifying. State units, assumptions or restrictions when relevant. For the added Areas of 2D shapes focus: Geometric and measurement reasoning uses definitions, properties and consistent units. Label known information before calculating or classifying. State units, assumptions or restrictions when relevant.",
+          "WorkedExamples": "Worked example 1: For 48+27, regroup as 48+20+7=75 and verify with 75-27=48. Worked example 2: For a quantity of 60 split equally into 5 groups, each group is 12; verify 5×12=60. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable. Added worked focus for Polygons, circles and symmetry: Sketch or label the relevant figure, identify the property or measurement relationship, calculate using consistent units, and confirm that the final unit and magnitude are appropriate. Added worked focus for Areas of 2D shapes: Sketch or label the relevant figure, identify the property or measurement relationship, calculate using consistent units, and confirm that the final unit and magnitude are appropriate.",
+          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context.",
+          "CommonMistakes": "Do not select an operation from a keyword alone. Check units, magnitude and the original relationship before accepting an answer. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem.",
+          "QuickSummary": "For Congruence and similarity, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently. Added Cambridge focus: Polygons, circles and symmetry — model, calculate or reason accurately, then verify. Added Cambridge focus: Areas of 2D shapes — model, calculate or reason accurately, then verify."
         }
       ]
     },
@@ -767,32 +779,34 @@
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 7.",
       "OutcomeCodes": [
         "CAM:OUT:0862:7Gg.07",
-        "CAM:OUT:0862:7Gg.09"
+        "CAM:OUT:0862:7Gg.09",
+        "CAM:OUT:0862:7Gg.06",
+        "CAM:OUT:0862:7Gg.08"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SourceLocator": "Cambridge Lower Secondary Stage 7 / Geometry and Measure / 06",
+      "SourceLocator": "Cambridge Lower Secondary Stage 7 / Geometry and Measure / 06 | Cambridge Official Scheme of Work / Stage 7 / Unit 3 / Topic 3",
       "SourceTitle": "National curriculum in England: Mathematics programmes of study — Key Stage 3",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "Key Stage 3 Mathematics programme of study / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "8f87e8eaba6c820d2c7eaf17aae06ce1baca359ff7e00fe05b4fed37e3b56cd0",
-      "CanonicalBodySha256": "a5957bce166a5faa4dd6814ebdcc32a2b30db9b0b5a35ad429abadbc4af15dd4",
+      "CanonicalBodySha256": "f818e4de9583ddeb20156f31e5b113bdd40c698f8cc33fe5afc88ebdb9462bfe",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Existing reviewed Edulytics lesson retained; additional Cambridge official outcome coverage was independently authored and appended without reproducing Cambridge objective prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Surface area and volume",
-          "Explanation": "Surface area and volume is studied here as part of Cambridge Lower Secondary Stage 7. Measurement formulas express geometric relationships. Draw and label the figure, choose the correct dimensions, then calculate with consistent units. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Surface area and volume. Measurement formulas express geometric relationships. Draw and label the figure, choose the correct dimensions, then calculate with consistent units. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: A rectangle 8 by 5 has area 8×5 = 40 square units. Worked example 2: A triangle with base 10 and perpendicular height 6 has area 1/2×10×6 = 30 square units. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not confuse perimeter with area or area with volume. Convert units before substituting into a formula. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Surface area and volume, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Explanation": "Surface area and volume is studied here as part of Cambridge Lower Secondary Stage 7. Measurement formulas express geometric relationships. Draw and label the figure, choose the correct dimensions, then calculate with consistent units. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure. Additional official coverage for Cambridge Stage 7 topic “3D shapes” is integrated here for identifiers 7Gg.06, 7Gg.08. Geometric and measurement reasoning uses definitions, properties and consistent units. Label known information before calculating or classifying.",
+          "KeyConceptsAndRules": "Focus: Surface area and volume. Measurement formulas express geometric relationships. Draw and label the figure, choose the correct dimensions, then calculate with consistent units. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result. For the added 3D shapes focus: Geometric and measurement reasoning uses definitions, properties and consistent units. Label known information before calculating or classifying. State units, assumptions or restrictions when relevant.",
+          "WorkedExamples": "Worked example 1: A rectangle 8 by 5 has area 8×5 = 40 square units. Worked example 2: A triangle with base 10 and perpendicular height 6 has area 1/2×10×6 = 30 square units. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable. Added worked focus for 3D shapes: Sketch or label the relevant figure, identify the property or measurement relationship, calculate using consistent units, and confirm that the final unit and magnitude are appropriate.",
+          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context.",
+          "CommonMistakes": "Do not confuse perimeter with area or area with volume. Convert units before substituting into a formula. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem.",
+          "QuickSummary": "For Surface area and volume, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently. Added Cambridge focus: 3D shapes — model, calculate or reason accurately, then verify."
         }
       ]
     },
@@ -1007,32 +1021,34 @@
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "National curriculum in England: Mathematics programmes of study — Key Stage 3; Edulytics-authored scope sequence for Cambridge Lower Secondary Stage 7.",
       "OutcomeCodes": [
-        "CAM:OUT:0862:7Sp.05"
+        "CAM:OUT:0862:7Sp.05",
+        "CAM:OUT:0862:7Sp.01",
+        "CAM:OUT:0862:7Sp.02"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
-      "SourceLocator": "Cambridge Lower Secondary Stage 7 / Statistics and Probability / 05",
+      "SourceLocator": "Cambridge Lower Secondary Stage 7 / Statistics and Probability / 05 | Cambridge Official Scheme of Work / Stage 7 / Unit 5 / Topic 1",
       "SourceTitle": "National curriculum in England: Mathematics programmes of study — Key Stage 3",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "Key Stage 3 Mathematics programme of study / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "8f87e8eaba6c820d2c7eaf17aae06ce1baca359ff7e00fe05b4fed37e3b56cd0",
-      "CanonicalBodySha256": "29e4e8e36663ae3928fca8661cc1396c7d296d948c3aac734ace4af56418f22c",
+      "CanonicalBodySha256": "68a3eefae34493db300c57450c52daf09801a59d66f7638893a467a8ca7a06f4",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Existing reviewed Edulytics lesson retained; additional Cambridge official outcome coverage was independently authored and appended without reproducing Cambridge objective prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Experimental probability",
-          "Explanation": "Experimental probability is studied here as part of Cambridge Lower Secondary Stage 7. Probability measures likelihood on a scale from 0 to 1. Define the sample space and use addition or multiplication rules only when their conditions are satisfied. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Experimental probability. Probability measures likelihood on a scale from 0 to 1. Define the sample space and use addition or multiplication rules only when their conditions are satisfied. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: With 3 red and 2 blue counters, P(red)=3/5. Worked example 2: For two independent fair coin tosses, P(exactly one head)=2/4=1/2. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not add probabilities for overlapping events without correcting the overlap, and do not multiply unless the event structure justifies it. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Experimental probability, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Explanation": "Experimental probability is studied here as part of Cambridge Lower Secondary Stage 7. Probability measures likelihood on a scale from 0 to 1. Define the sample space and use addition or multiplication rules only when their conditions are satisfied. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure. Additional official coverage for Cambridge Stage 7 topic “Expressing probability” is integrated here for identifiers 7Sp.01, 7Sp.02. Statistical and probability reasoning requires a clear question or sample space, an appropriate representation, and an interpretation tied back to the context.",
+          "KeyConceptsAndRules": "Focus: Experimental probability. Probability measures likelihood on a scale from 0 to 1. Define the sample space and use addition or multiplication rules only when their conditions are satisfied. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result. For the added Expressing probability focus: Statistical and probability reasoning requires a clear question or sample space, an appropriate representation, and an interpretation tied back to the context. State units, assumptions or restrictions when relevant.",
+          "WorkedExamples": "Worked example 1: With 3 red and 2 blue counters, P(red)=3/5. Worked example 2: For two independent fair coin tosses, P(exactly one head)=2/4=1/2. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable. Added worked focus for Expressing probability: Organise the data or outcomes systematically, calculate the requested measure or probability, and explain what the numerical result means in the original situation.",
+          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required. Added coverage check: identify the required relationship; select the valid rule or representation; work in justified steps; verify independently; state the result in context.",
+          "CommonMistakes": "Do not add probabilities for overlapping events without correcting the overlap, and do not multiply unless the event structure justifies it. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply. For the added official focus, do not rely on a memorised procedure without checking that its conditions, units and mathematical structure match the problem.",
+          "QuickSummary": "For Experimental probability, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently. Added Cambridge focus: Expressing probability — model, calculate or reason accurately, then verify."
         }
       ]
     },

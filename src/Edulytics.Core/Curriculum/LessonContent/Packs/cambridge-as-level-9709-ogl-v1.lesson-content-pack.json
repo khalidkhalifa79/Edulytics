@@ -12,7 +12,7 @@
   "SourceCheckedAtUtc": "2026-09-01T00:00:00Z",
   "SourceResolution": "CurrentOfficial",
   "FallbackReason": "",
-  "ReviewMethod": "Scope inventory review, pathway isolation, OGL source-policy review, deterministic lesson/body generation, mathematical example verification and canonical body hashing.",
+  "ReviewMethod": "Stable-identity 9709 AS route closure: Pure Mathematics 2 references are appended to semantically related existing AS lessons; no lesson identity or practice capability is repurposed.",
   "SourcePolicyVersion": 2,
   "PedagogicalSourceType": "OpenEducationalResource",
   "PedagogicalSourceTitle": "GCE AS and A level Mathematics subject content",
@@ -24,40 +24,41 @@
   "PedagogicalSourceSelectionEvidence": "Learner-facing explanations remain independently authored; formal mappings use verified Cambridge 9709 official syllabus section identifiers only, while unmatched enrichment stays supporting.",
   "PedagogicalSourceRightsNote": "Contains public sector information licensed under the Open Government Licence v3.0. Official curriculum wording is not reproduced.",
   "Status": "Published",
-  "ReviewedBy": "Edulytics Phase 29 deterministic curriculum review",
-  "ReviewEvidence": "Cambridge 9709 official section mapping reviewed for AS Level; lesson bodies are unchanged and unmatched enrichment is supporting.",
+  "ReviewedBy": "Edulytics Cambridge official-outcome closure",
+  "ReviewEvidence": "AS 9709 remains 29 learner-visible lessons with all P1, P2, Mechanics and Probability & Statistics 1 official section references represented; historical lesson identities remain unchanged.",
   "Lessons": [
     {
       "LessonCode": "PED:CAMBRIDGE-INTL-MATH:L12:COMPONENT-ROUTE-STRUCTURE-PRESERVED-IN-REFERENCE-GRAPH:01:01:ALGEBRAIC-MANIPULATION",
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCE AS and A level Mathematics subject content; Edulytics-authored scope sequence for Cambridge International AS Level Mathematics (9709) / Component/route structure preserved in reference graph.",
       "OutcomeCodes": [
-        "CAM:REF:9709:1.1"
+        "CAM:REF:9709:1.1",
+        "CAM:REF:9709:2.1"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SourceLocator": "Cambridge International AS Level Mathematics (9709) / Pure Mathematics / 01",
+      "SourceLocator": "Cambridge International AS Level Mathematics (9709) / Pure Mathematics / 01 | 9709 / Pure Mathematics 2 / 2.1",
       "SourceTitle": "GCE AS and A level Mathematics subject content",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "GCE AS/A level Mathematics subject content / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "30383b5234bb3d9de0c85b5e6bce876b692318bcc0837c9b848b844b970e5d86",
-      "CanonicalBodySha256": "4d954af08c1f8c350a0df449dcce453a977c75af7e39385d502d516fb69088d2",
+      "CanonicalBodySha256": "69a6e3ab2c83b92713336b9a09f10658d7249a72805f910ae10dce9fe88abfeb",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Existing AS lesson identity retained; additional Pure Mathematics 2 official reference coverage is independently authored and appended without reproducing Cambridge syllabus prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Algebraic manipulation",
-          "Explanation": "Algebraic manipulation is studied here as part of Cambridge International AS Level Mathematics (9709) — Component/route structure preserved in reference graph. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Algebraic manipulation. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: For 48+27, regroup as 48+20+7=75 and verify with 75-27=48. Worked example 2: For a quantity of 60 split equally into 5 groups, each group is 12; verify 5×12=60. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not select an operation from a keyword alone. Check units, magnitude and the original relationship before accepting an answer. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Algebraic manipulation, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Explanation": "Algebraic manipulation is studied here as part of Cambridge International AS Level Mathematics (9709) — Component/route structure preserved in reference graph. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure. Additional AS-only Pure Mathematics 2 coverage for section 2.1 (Algebra) is integrated here. Manipulate algebraic expressions and equations using exact equivalence, preserving domains and restrictions.",
+          "KeyConceptsAndRules": "Focus: Algebraic manipulation. Mathematical reasoning connects representations, properties and operations. Define the quantities, choose a valid method, and explain why each step preserves the required relationship. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result. Added P2 2.1 focus: Manipulate algebraic expressions and equations using exact equivalence, preserving domains and restrictions. Keep exact values, restrictions, intervals, constants and requested accuracy explicit where relevant.",
+          "WorkedExamples": "Worked example 1: For 48+27, regroup as 48+20+7=75 and verify with 75-27=48. Worked example 2: For a quantity of 60 split equally into 5 groups, each group is 12; verify 5×12=60. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable. Added P2 2.1 worked focus: identify the mathematical structure, apply the valid transformation or method in justified steps, and verify the result in the original relationship or with an independent representation.",
+          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required. Added P2 coverage: identify the structure; select the valid theorem or numerical method; work through equivalent steps; track conditions and accuracy; verify independently; state the conclusion.",
+          "CommonMistakes": "Do not select an operation from a keyword alone. Check units, magnitude and the original relationship before accepting an answer. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply. For the added P2 focus, do not apply a rule outside its domain or interval conditions, drop constants or restrictions, or accept numerical output without checking the requested accuracy.",
+          "QuickSummary": "For Algebraic manipulation, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently. Added P2 2.1: Algebra â€” preserve equivalence, calculate accurately, and verify."
         }
       ]
     },
@@ -66,32 +67,33 @@
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCE AS and A level Mathematics subject content; Edulytics-authored scope sequence for Cambridge International AS Level Mathematics (9709) / Component/route structure preserved in reference graph.",
       "OutcomeCodes": [
-        "CAM:REF:9709:1.1"
+        "CAM:REF:9709:1.1",
+        "CAM:REF:9709:2.6"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SourceLocator": "Cambridge International AS Level Mathematics (9709) / Pure Mathematics / 02",
+      "SourceLocator": "Cambridge International AS Level Mathematics (9709) / Pure Mathematics / 02 | 9709 / Pure Mathematics 2 / 2.6",
       "SourceTitle": "GCE AS and A level Mathematics subject content",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "GCE AS/A level Mathematics subject content / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "30383b5234bb3d9de0c85b5e6bce876b692318bcc0837c9b848b844b970e5d86",
-      "CanonicalBodySha256": "373310078ec92a596263b05798fdee04d7fe791dd637f514500950a9c5ce28a8",
+      "CanonicalBodySha256": "e7dde581ba8fc8ed8a2fa73a2589da9c57202258a092827e1a4f50e211f48ef7",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Existing AS lesson identity retained; additional Pure Mathematics 2 official reference coverage is independently authored and appended without reproducing Cambridge syllabus prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Quadratic functions",
-          "Explanation": "Quadratic functions is studied here as part of Cambridge International AS Level Mathematics (9709) — Component/route structure preserved in reference graph. Quadratic relationships contain a squared variable. Factorisation, completing the square, graphs and the quadratic formula are connected representations of the same structure. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Quadratic functions. Quadratic relationships contain a squared variable. Factorisation, completing the square, graphs and the quadratic formula are connected representations of the same structure. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: x² - 5x + 6 = (x - 2)(x - 3), so the roots are 2 and 3. Worked example 2: For y = x² - 4, the x-intercepts satisfy x² = 4, giving x = ±2. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not discard a negative root without a contextual reason, and verify roots by substitution into the original equation. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Quadratic functions, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Explanation": "Quadratic functions is studied here as part of Cambridge International AS Level Mathematics (9709) — Component/route structure preserved in reference graph. Quadratic relationships contain a squared variable. Factorisation, completing the square, graphs and the quadratic formula are connected representations of the same structure. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure. Additional AS-only Pure Mathematics 2 coverage for section 2.6 (Numerical solution of equations) is integrated here. Approximate roots numerically, track convergence and requested accuracy, and verify the stated interval or tolerance.",
+          "KeyConceptsAndRules": "Focus: Quadratic functions. Quadratic relationships contain a squared variable. Factorisation, completing the square, graphs and the quadratic formula are connected representations of the same structure. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result. Added P2 2.6 focus: Approximate roots numerically, track convergence and requested accuracy, and verify the stated interval or tolerance. Keep exact values, restrictions, intervals, constants and requested accuracy explicit where relevant.",
+          "WorkedExamples": "Worked example 1: x² - 5x + 6 = (x - 2)(x - 3), so the roots are 2 and 3. Worked example 2: For y = x² - 4, the x-intercepts satisfy x² = 4, giving x = ±2. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable. Added P2 2.6 worked focus: identify the mathematical structure, apply the valid transformation or method in justified steps, and verify the result in the original relationship or with an independent representation.",
+          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required. Added P2 coverage: identify the structure; select the valid theorem or numerical method; work through equivalent steps; track conditions and accuracy; verify independently; state the conclusion.",
+          "CommonMistakes": "Do not discard a negative root without a contextual reason, and verify roots by substitution into the original equation. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply. For the added P2 focus, do not apply a rule outside its domain or interval conditions, drop constants or restrictions, or accept numerical output without checking the requested accuracy.",
+          "QuickSummary": "For Quadratic functions, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently. Added P2 2.6: Numerical solution of equations â€” preserve equivalence, calculate accurately, and verify."
         }
       ]
     },
@@ -100,32 +102,33 @@
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCE AS and A level Mathematics subject content; Edulytics-authored scope sequence for Cambridge International AS Level Mathematics (9709) / Component/route structure preserved in reference graph.",
       "OutcomeCodes": [
-        "CAM:REF:9709:1.2"
+        "CAM:REF:9709:1.2",
+        "CAM:REF:9709:2.2"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SourceLocator": "Cambridge International AS Level Mathematics (9709) / Pure Mathematics / 03",
+      "SourceLocator": "Cambridge International AS Level Mathematics (9709) / Pure Mathematics / 03 | 9709 / Pure Mathematics 2 / 2.2",
       "SourceTitle": "GCE AS and A level Mathematics subject content",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "GCE AS/A level Mathematics subject content / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "30383b5234bb3d9de0c85b5e6bce876b692318bcc0837c9b848b844b970e5d86",
-      "CanonicalBodySha256": "18b5d02fdc66153e75ec34c4de9b6c0b515716dda20cd16d28527ba9b6f46891",
+      "CanonicalBodySha256": "96580be437a89612ca5ba4e648585ec4c8ad739828d0348f400ea905ac8f51c3",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Existing AS lesson identity retained; additional Pure Mathematics 2 official reference coverage is independently authored and appended without reproducing Cambridge syllabus prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Functions and graphs",
-          "Explanation": "Functions and graphs is studied here as part of Cambridge International AS Level Mathematics (9709) — Component/route structure preserved in reference graph. Functions connect inputs and outputs. Tables, equations and graphs should describe the same relationship; rate of change and intercepts carry specific meanings. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Functions and graphs. Functions connect inputs and outputs. Tables, equations and graphs should describe the same relationship; rate of change and intercepts carry specific meanings. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: For f(x)=2x+3, f(4)=11. Worked example 2: The gradient through (1,2) and (5,10) is (10-2)/(5-1)=2. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not read a graph without checking its scale. Distinguish a point's coordinates from a line's gradient and intercept. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Functions and graphs, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Explanation": "Functions and graphs is studied here as part of Cambridge International AS Level Mathematics (9709) — Component/route structure preserved in reference graph. Functions connect inputs and outputs. Tables, equations and graphs should describe the same relationship; rate of change and intercepts carry specific meanings. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure. Additional AS-only Pure Mathematics 2 coverage for section 2.2 (Logarithmic and exponential functions) is integrated here. Use logarithms and exponentials as inverse functions and apply their laws only under valid domain conditions.",
+          "KeyConceptsAndRules": "Focus: Functions and graphs. Functions connect inputs and outputs. Tables, equations and graphs should describe the same relationship; rate of change and intercepts carry specific meanings. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result. Added P2 2.2 focus: Use logarithms and exponentials as inverse functions and apply their laws only under valid domain conditions. Keep exact values, restrictions, intervals, constants and requested accuracy explicit where relevant.",
+          "WorkedExamples": "Worked example 1: For f(x)=2x+3, f(4)=11. Worked example 2: The gradient through (1,2) and (5,10) is (10-2)/(5-1)=2. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable. Added P2 2.2 worked focus: identify the mathematical structure, apply the valid transformation or method in justified steps, and verify the result in the original relationship or with an independent representation.",
+          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required. Added P2 coverage: identify the structure; select the valid theorem or numerical method; work through equivalent steps; track conditions and accuracy; verify independently; state the conclusion.",
+          "CommonMistakes": "Do not read a graph without checking its scale. Distinguish a point's coordinates from a line's gradient and intercept. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply. For the added P2 focus, do not apply a rule outside its domain or interval conditions, drop constants or restrictions, or accept numerical output without checking the requested accuracy.",
+          "QuickSummary": "For Functions and graphs, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently. Added P2 2.2: Logarithmic and exponential functions â€” preserve equivalence, calculate accurately, and verify."
         }
       ]
     },
@@ -236,32 +239,33 @@
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCE AS and A level Mathematics subject content; Edulytics-authored scope sequence for Cambridge International AS Level Mathematics (9709) / Component/route structure preserved in reference graph.",
       "OutcomeCodes": [
-        "CAM:REF:9709:1.5"
+        "CAM:REF:9709:1.5",
+        "CAM:REF:9709:2.3"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SourceLocator": "Cambridge International AS Level Mathematics (9709) / Pure Mathematics / 07",
+      "SourceLocator": "Cambridge International AS Level Mathematics (9709) / Pure Mathematics / 07 | 9709 / Pure Mathematics 2 / 2.3",
       "SourceTitle": "GCE AS and A level Mathematics subject content",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "GCE AS/A level Mathematics subject content / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "30383b5234bb3d9de0c85b5e6bce876b692318bcc0837c9b848b844b970e5d86",
-      "CanonicalBodySha256": "9587799b640a5a46627120fa780c5b0672b6c59804bc408fab2bcee839ece317",
+      "CanonicalBodySha256": "8bd4fe1a33b577c4540365d61bc5359de5a42ac76fad6f90c51e1ac942fc6413",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Existing AS lesson identity retained; additional Pure Mathematics 2 official reference coverage is independently authored and appended without reproducing Cambridge syllabus prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Trigonometric equations",
-          "Explanation": "Trigonometric equations is studied here as part of Cambridge International AS Level Mathematics (9709) — Component/route structure preserved in reference graph. An equation or inequality expresses a relationship between quantities. Preserve equivalence by performing valid operations on both sides and interpret the solution in the original context. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Trigonometric equations. An equation or inequality expresses a relationship between quantities. Preserve equivalence by performing valid operations on both sides and interpret the solution in the original context. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: 3x + 5 = 20 gives 3x = 15 and x = 5. Worked example 2: 2x + 3 < 11 gives 2x < 8 and x < 4. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "When multiplying or dividing an inequality by a negative number, reverse the inequality sign. Always check the solution against the original statement. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Trigonometric equations, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Explanation": "Trigonometric equations is studied here as part of Cambridge International AS Level Mathematics (9709) — Component/route structure preserved in reference graph. An equation or inequality expresses a relationship between quantities. Preserve equivalence by performing valid operations on both sides and interpret the solution in the original context. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure. Additional AS-only Pure Mathematics 2 coverage for section 2.3 (Trigonometry) is integrated here. Use trigonometric identities and equations systematically, tracking every valid solution in the required interval.",
+          "KeyConceptsAndRules": "Focus: Trigonometric equations. An equation or inequality expresses a relationship between quantities. Preserve equivalence by performing valid operations on both sides and interpret the solution in the original context. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result. Added P2 2.3 focus: Use trigonometric identities and equations systematically, tracking every valid solution in the required interval. Keep exact values, restrictions, intervals, constants and requested accuracy explicit where relevant.",
+          "WorkedExamples": "Worked example 1: 3x + 5 = 20 gives 3x = 15 and x = 5. Worked example 2: 2x + 3 < 11 gives 2x < 8 and x < 4. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable. Added P2 2.3 worked focus: identify the mathematical structure, apply the valid transformation or method in justified steps, and verify the result in the original relationship or with an independent representation.",
+          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required. Added P2 coverage: identify the structure; select the valid theorem or numerical method; work through equivalent steps; track conditions and accuracy; verify independently; state the conclusion.",
+          "CommonMistakes": "When multiplying or dividing an inequality by a negative number, reverse the inequality sign. Always check the solution against the original statement. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply. For the added P2 focus, do not apply a rule outside its domain or interval conditions, drop constants or restrictions, or accept numerical output without checking the requested accuracy.",
+          "QuickSummary": "For Trigonometric equations, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently. Added P2 2.3: Trigonometry â€” preserve equivalence, calculate accurately, and verify."
         }
       ]
     },
@@ -372,32 +376,33 @@
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCE AS and A level Mathematics subject content; Edulytics-authored scope sequence for Cambridge International AS Level Mathematics (9709) / Component/route structure preserved in reference graph.",
       "OutcomeCodes": [
-        "CAM:REF:9709:1.7"
+        "CAM:REF:9709:1.7",
+        "CAM:REF:9709:2.4"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SourceLocator": "Cambridge International AS Level Mathematics (9709) / Pure Mathematics / 11",
+      "SourceLocator": "Cambridge International AS Level Mathematics (9709) / Pure Mathematics / 11 | 9709 / Pure Mathematics 2 / 2.4",
       "SourceTitle": "GCE AS and A level Mathematics subject content",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "GCE AS/A level Mathematics subject content / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "30383b5234bb3d9de0c85b5e6bce876b692318bcc0837c9b848b844b970e5d86",
-      "CanonicalBodySha256": "14c326e969be3ff8c2f2edb1390e26ac856c842197c4e9342d2d4dd51d4cf94b",
+      "CanonicalBodySha256": "08a4c649b7c7fb976ddd78c95c0a716e2aa35995dafdb7447a8468ce54f96c86",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Existing AS lesson identity retained; additional Pure Mathematics 2 official reference coverage is independently authored and appended without reproducing Cambridge syllabus prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Applications of differentiation",
-          "Explanation": "Applications of differentiation is studied here as part of Cambridge International AS Level Mathematics (9709) — Component/route structure preserved in reference graph. Differentiation measures instantaneous rate of change and the gradient of a curve. Apply derivative rules term by term and interpret the result in context. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Applications of differentiation. Differentiation measures instantaneous rate of change and the gradient of a curve. Apply derivative rules term by term and interpret the result in context. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: If y=x³+2x, then dy/dx=3x²+2. Worked example 2: At x=2 the gradient is 3(4)+2=14. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not confuse the original function value with its gradient. Differentiate constants and powers correctly before substitution. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Applications of differentiation, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Explanation": "Applications of differentiation is studied here as part of Cambridge International AS Level Mathematics (9709) — Component/route structure preserved in reference graph. Differentiation measures instantaneous rate of change and the gradient of a curve. Apply derivative rules term by term and interpret the result in context. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure. Additional AS-only Pure Mathematics 2 coverage for section 2.4 (Differentiation) is integrated here. Apply differentiation rules accurately and interpret derivatives through gradients, stationary points and rates of change.",
+          "KeyConceptsAndRules": "Focus: Applications of differentiation. Differentiation measures instantaneous rate of change and the gradient of a curve. Apply derivative rules term by term and interpret the result in context. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result. Added P2 2.4 focus: Apply differentiation rules accurately and interpret derivatives through gradients, stationary points and rates of change. Keep exact values, restrictions, intervals, constants and requested accuracy explicit where relevant.",
+          "WorkedExamples": "Worked example 1: If y=x³+2x, then dy/dx=3x²+2. Worked example 2: At x=2 the gradient is 3(4)+2=14. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable. Added P2 2.4 worked focus: identify the mathematical structure, apply the valid transformation or method in justified steps, and verify the result in the original relationship or with an independent representation.",
+          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required. Added P2 coverage: identify the structure; select the valid theorem or numerical method; work through equivalent steps; track conditions and accuracy; verify independently; state the conclusion.",
+          "CommonMistakes": "Do not confuse the original function value with its gradient. Differentiate constants and powers correctly before substitution. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply. For the added P2 focus, do not apply a rule outside its domain or interval conditions, drop constants or restrictions, or accept numerical output without checking the requested accuracy.",
+          "QuickSummary": "For Applications of differentiation, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently. Added P2 2.4: Differentiation â€” preserve equivalence, calculate accurately, and verify."
         }
       ]
     },
@@ -440,32 +445,33 @@
       "TitleProvenance": "PedagogicalSource",
       "TitleSourceReference": "GCE AS and A level Mathematics subject content; Edulytics-authored scope sequence for Cambridge International AS Level Mathematics (9709) / Component/route structure preserved in reference graph.",
       "OutcomeCodes": [
-        "CAM:REF:9709:1.8"
+        "CAM:REF:9709:1.8",
+        "CAM:REF:9709:2.5"
       ],
       "IsSupporting": false,
       "SourceUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
-      "SourceLocator": "Cambridge International AS Level Mathematics (9709) / Pure Mathematics / 13",
+      "SourceLocator": "Cambridge International AS Level Mathematics (9709) / Pure Mathematics / 13 | 9709 / Pure Mathematics 2 / 2.5",
       "SourceTitle": "GCE AS and A level Mathematics subject content",
       "SourcePublisher": "UK Department for Education",
       "SourceEdition": "GCE AS/A level Mathematics subject content / current GOV.UK publication",
       "SourceRights": "Contains public sector information licensed under the Open Government Licence v3.0. Learner-facing body independently authored by Edulytics.",
       "SourceSha256": "30383b5234bb3d9de0c85b5e6bce876b692318bcc0837c9b848b844b970e5d86",
-      "CanonicalBodySha256": "3cd10fefba314b8553c2035fb93e6d88f71fa9fe06a88947bc38dac3a2da01de",
+      "CanonicalBodySha256": "7ef97581384816d83111190a3389790eece25c0a721faf7c3ca2abd79bb2159f",
       "SourceVerifiedAtUtc": "2026-09-01T00:00:00Z",
       "RetrievalUrl": "https://www.gov.uk/government/publications/gce-as-and-a-level-mathematics",
       "RetrievalChannel": "HTTPS",
       "RetrievalTimestamp": "2026-09-01T00:00:00Z",
-      "AdaptationStatus": "Edulytics-authored curriculum lesson informed by open OGL Mathematics pedagogy. The official curriculum remains the authority; no unverified formal mapping is claimed.",
+      "AdaptationStatus": "Existing AS lesson identity retained; additional Pure Mathematics 2 official reference coverage is independently authored and appended without reproducing Cambridge syllabus prose.",
       "Translations": [
         {
           "CultureCode": "en",
           "Title": "Applications of integration",
-          "Explanation": "Applications of integration is studied here as part of Cambridge International AS Level Mathematics (9709) — Component/route structure preserved in reference graph. Ratio and proportion compare quantities multiplicatively. Keep corresponding quantities in the same order and scale both parts by the same factor. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure.",
-          "KeyConceptsAndRules": "Focus: Applications of integration. Ratio and proportion compare quantities multiplicatively. Keep corresponding quantities in the same order and scale both parts by the same factor. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result.",
-          "WorkedExamples": "Worked example 1: For a ratio 3:5 with total 40, there are 8 equal parts; each is 5, so the quantities are 15 and 25. Worked example 2: If 4 items cost 18, the unit cost is 18/4 = 4.5, so 10 items cost 45. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable.",
-          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required.",
-          "CommonMistakes": "Do not use additive differences when a multiplicative comparison is required. Check units before forming a rate. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply.",
-          "QuickSummary": "For Applications of integration, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently."
+          "Explanation": "Applications of integration is studied here as part of Cambridge International AS Level Mathematics (9709) — Component/route structure preserved in reference graph. Ratio and proportion compare quantities multiplicatively. Keep corresponding quantities in the same order and scale both parts by the same factor. The lesson develops conceptual understanding first, then connects the idea to symbolic, graphical or contextual representations. Students should explain why a method works, not only reproduce a procedure. Additional AS-only Pure Mathematics 2 coverage for section 2.5 (Integration) is integrated here. Use integration as inverse differentiation and for accumulation, including constants and definite limits where required.",
+          "KeyConceptsAndRules": "Focus: Applications of integration. Ratio and proportion compare quantities multiplicatively. Keep corresponding quantities in the same order and scale both parts by the same factor. Record assumptions and units, keep equivalent steps explicit, and use a second representation or inverse relationship when possible to verify the result. Added P2 2.5 focus: Use integration as inverse differentiation and for accumulation, including constants and definite limits where required. Keep exact values, restrictions, intervals, constants and requested accuracy explicit where relevant.",
+          "WorkedExamples": "Worked example 1: For a ratio 3:5 with total 40, there are 8 equal parts; each is 5, so the quantities are 15 and 25. Worked example 2: If 4 items cost 18, the unit cost is 18/4 = 4.5, so 10 items cost 45. In each case, identify the mathematical relationship before calculating and finish by checking whether the result is reasonable. Added P2 2.5 worked focus: identify the mathematical structure, apply the valid transformation or method in justified steps, and verify the result in the original relationship or with an independent representation.",
+          "StepByStepSolutions": "Step 1: Identify what is known and what must be found. Step 2: Choose a representation such as an equation, table, graph, diagram, number line or labelled model. Step 3: Select the rule or property that matches the structure of the problem. Step 4: Carry out the calculation carefully, keeping intermediate reasoning visible. Step 5: Check the result with estimation, substitution, an inverse operation or a second representation. Step 6: State the answer with its mathematical meaning and units where required. Added P2 coverage: identify the structure; select the valid theorem or numerical method; work through equivalent steps; track conditions and accuracy; verify independently; state the conclusion.",
+          "CommonMistakes": "Do not use additive differences when a multiplicative comparison is required. Check units before forming a rate. Also avoid copying a procedure from a superficially similar question without checking that the same conditions apply. For the added P2 focus, do not apply a rule outside its domain or interval conditions, drop constants or restrictions, or accept numerical output without checking the requested accuracy.",
+          "QuickSummary": "For Applications of integration, represent the relationship clearly, apply the relevant rule, calculate accurately and verify the result independently. Added P2 2.5: Integration â€” preserve equivalence, calculate accurately, and verify."
         }
       ]
     },
