@@ -71,8 +71,16 @@
           "contentAccess": "OFFICIAL_SAMPLE_LOCAL"
         }
       ],
-      "readiness": "NOT_READY_FOR_FULL_LESSON_BUILD",
-      "blocker": "Need complete legal access to teaching content for all Stages 1-6, not only samples."
+      "readiness": "STRUCTURE_READY_BOOK_CONTENT_BLOCKED",
+      "blocker": "Official Cambridge Scheme of Work is local for Stages 1-6, but full endorsed Hachette Learner Books are not locally available. Do not claim book-based lesson authoring until full book access is provided.",
+      "officialSchemeOfWorkLocal": [
+        "artifacts/curriculum-sources/cambridge/teaching-sources/primary/0096_STAGE1_SCHEME_OF_WORK.docx",
+        "artifacts/curriculum-sources/cambridge/teaching-sources/primary/0096_STAGE2_SCHEME_OF_WORK.docx",
+        "artifacts/curriculum-sources/cambridge/teaching-sources/primary/0096_STAGE3_SCHEME_OF_WORK.docx",
+        "artifacts/curriculum-sources/cambridge/teaching-sources/primary/0096_STAGE4_SCHEME_OF_WORK.docx",
+        "artifacts/curriculum-sources/cambridge/teaching-sources/primary/0096_STAGE5_SCHEME_OF_WORK.docx",
+        "artifacts/curriculum-sources/cambridge/teaching-sources/primary/0096_STAGE6_SCHEME_OF_WORK.docx"
+      ]
     },
     {
       "programme": "Cambridge Lower Secondary Mathematics 0862",
@@ -88,8 +96,13 @@
       "localSamples": [
         "artifacts/curriculum-sources/cambridge/teaching-sources/lower-secondary/MCE_STAGE7_TEACHER_GUIDE_CH11_SAMPLE.pdf"
       ],
-      "readiness": "NOT_READY_FOR_FULL_LESSON_BUILD",
-      "blocker": "Need complete Stage 7-9 Student Book/Teacher Guide access; one sample chapter is insufficient."
+      "readiness": "STRUCTURE_READY_BOOK_CONTENT_BLOCKED",
+      "blocker": "Official Cambridge Scheme of Work is local for Stages 7-9, but full endorsed Marshall Cavendish books/teacher guides are not locally available. Do not claim book-based lesson authoring until full book access is provided.",
+      "officialSchemeOfWorkLocal": [
+        "artifacts/curriculum-sources/cambridge/teaching-sources/lower-secondary/0862_STAGE7_SCHEME_OF_WORK.docx",
+        "artifacts/curriculum-sources/cambridge/teaching-sources/lower-secondary/0862_STAGE8_SCHEME_OF_WORK.docx",
+        "artifacts/curriculum-sources/cambridge/teaching-sources/lower-secondary/0862_STAGE9_SCHEME_OF_WORK.docx"
+      ]
     },
     {
       "programme": "Cambridge IGCSE Mathematics 0580",
@@ -101,8 +114,17 @@
       "publisher": "Haese Mathematics",
       "published": 2026,
       "endorsementEvidence": "Cambridge International endorsed resources page; supports Extended content of syllabus for examination from 2025",
-      "readiness": "NOT_READY_FOR_FULL_LESSON_BUILD",
-      "blocker": "Need full endorsed teaching-resource access and an evidence-based two-year sequencing plan; Cambridge does not prescribe a Grade 10/11 split in the syllabus."
+      "readiness": "STRUCTURE_READY_BOOK_CONTENT_BLOCKED",
+      "blocker": "Current endorsed Haese Extended book is identified and its official table of contents is public, but full digital book access requires purchase/subscription.",
+      "officialSupportLocal": "artifacts/curriculum-sources/cambridge/teaching-sources/0580_SUPPORT.pdf",
+      "bookMetadata": {
+        "title": "Cambridge IGCSE Mathematics (0580) Extended",
+        "publisher": "Haese Mathematics",
+        "year": 2026,
+        "isbn": "9781922416926",
+        "onlineIsbn": "9781922416933",
+        "officialPublisherTocAvailable": true
+      }
     },
     {
       "programme": "Cambridge International AS & A Level Mathematics 9709",
@@ -121,8 +143,12 @@
         "Probability & Statistics 2"
       ],
       "officialSupportLocal": "artifacts/curriculum-sources/cambridge/teaching-sources/support9709.pdf",
-      "readiness": "PARTIALLY_READY",
-      "blocker": "Need complete endorsed book content and official Scheme of Work access for all components/routes before authoring missing lessons."
+      "readiness": "STRUCTURE_PARTIALLY_READY_BOOK_CONTENT_BLOCKED",
+      "blocker": "Full endorsed component coursebooks are not locally available. Official support document is local and some Scheme of Work mirrors are available, but book-based authoring must wait for full coursebook access.",
+      "schemeOfWorkLocalAvailable": [
+        "Probability & Statistics 1",
+        "Probability & Statistics 2"
+      ]
     }
   ]
 }
