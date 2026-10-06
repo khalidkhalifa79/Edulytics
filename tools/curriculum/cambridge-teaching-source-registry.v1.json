@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Canonical teaching-source registry for Cambridge Mathematics lesson construction. Framework/syllabus proves official scope; endorsed/official teaching resources provide lesson sequencing, examples, depth and pedagogy. No new learner-facing lesson should be authored without both layers.",
+  "policy": {
+    "officialScopeRequired": true,
+    "endorsedTeachingSourceRequired": true,
+    "noSyntheticSupportingInsideOfficialCurriculum": true,
+    "sourceAuthorityOrder": [
+      "Cambridge official framework/syllabus",
+      "Cambridge official Scheme of Work / teacher support",
+      "Cambridge-endorsed publisher textbook/teacher guide",
+      "Edulytics independently authored lesson"
+    ]
+  },
+  "programmes": [
+    {
+      "programme": "Cambridge Primary Mathematics 0096",
+      "stages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "officialScopeSource": "Cambridge Primary Mathematics Curriculum Framework 0096 v2.1",
+      "endorsedSeries": "Cambridge Primary Mathematics Second Edition",
+      "publisher": "Hachette Learning / Hodder Education",
+      "endorsementEvidence": "Cambridge International current resource list for 0096",
+      "books": [
+        {
+          "stage": 1,
+          "title": "Cambridge Primary Mathematics Learner's Book 1 Second Edition",
+          "isbn": "9781398300903",
+          "localSample": "artifacts/curriculum-sources/cambridge/teaching-sources/primary/Stage1_9781398300903_sample.pdf",
+          "contentAccess": "OFFICIAL_SAMPLE_LOCAL"
+        },
+        {
+          "stage": 2,
+          "title": "Cambridge Primary Mathematics Learner's Book 2 Second Edition",
+          "isbn": "9781398300941",
+          "localSample": null,
+          "contentAccess": "BOOK_IDENTIFIED_FULL_ACCESS_NOT_YET_LOCAL"
+        },
+        {
+          "stage": 3,
+          "title": "Cambridge Primary Mathematics Learner's Book 3 Second Edition",
+          "isbn": "9781398300989",
+          "localSample": null,
+          "contentAccess": "BOOK_IDENTIFIED_FULL_ACCESS_NOT_YET_LOCAL"
+        },
+        {
+          "stage": 4,
+          "title": "Cambridge Primary Mathematics Learner's Book 4 Second Edition",
+          "isbn": "9781398301023",
+          "localSample": "artifacts/curriculum-sources/cambridge/teaching-sources/primary/Stage4_9781398301023_sample.pdf",
+          "contentAccess": "OFFICIAL_SAMPLE_LOCAL"
+        },
+        {
+          "stage": 5,
+          "title": "Cambridge Primary Mathematics Learner's Book 5 Second Edition",
+          "isbn": "9781398301061",
+          "localSample": null,
+          "contentAccess": "BOOK_IDENTIFIED_FULL_ACCESS_NOT_YET_LOCAL"
+        },
+        {
+          "stage": 6,
+          "title": "Cambridge Primary Mathematics Learner's Book 6 Second Edition",
+          "isbn": "9781398301108",
+          "localSample": "artifacts/curriculum-sources/cambridge/teaching-sources/primary/Stage6_9781398301108_sample.pdf",
+          "contentAccess": "OFFICIAL_SAMPLE_LOCAL"
+        }
+      ],
+      "readiness": "NOT_READY_FOR_FULL_LESSON_BUILD",
+      "blocker": "Need complete legal access to teaching content for all Stages 1-6, not only samples."
+    },
+    {
+      "programme": "Cambridge Lower Secondary Mathematics 0862",
+      "stages": [
+        7,
+        8,
+        9
+      ],
+      "officialScopeSource": "Cambridge Lower Secondary Mathematics Curriculum Framework 0862 v3.0",
+      "endorsedSeries": "MCE Cambridge Lower Secondary Mathematics",
+      "publisher": "Marshall Cavendish Education",
+      "endorsementEvidence": "Cambridge International current resource list for 0862",
+      "localSamples": [
+        "artifacts/curriculum-sources/cambridge/teaching-sources/lower-secondary/MCE_STAGE7_TEACHER_GUIDE_CH11_SAMPLE.pdf"
+      ],
+      "readiness": "NOT_READY_FOR_FULL_LESSON_BUILD",
+      "blocker": "Need complete Stage 7-9 Student Book/Teacher Guide access; one sample chapter is insufficient."
+    },
+    {
+      "programme": "Cambridge IGCSE Mathematics 0580",
+      "stages": [
+        "Upper Secondary / two-year course"
+      ],
+      "officialScopeSource": "Cambridge IGCSE Mathematics 0580 syllabus 2025-2027",
+      "endorsedSeries": "Cambridge IGCSE Mathematics (0580) Extended",
+      "publisher": "Haese Mathematics",
+      "published": 2026,
+      "endorsementEvidence": "Cambridge International endorsed resources page; supports Extended content of syllabus for examination from 2025",
+      "readiness": "NOT_READY_FOR_FULL_LESSON_BUILD",
+      "blocker": "Need full endorsed teaching-resource access and an evidence-based two-year sequencing plan; Cambridge does not prescribe a Grade 10/11 split in the syllabus."
+    },
+    {
+      "programme": "Cambridge International AS & A Level Mathematics 9709",
+      "stages": [
+        "AS",
+        "A Level"
+      ],
+      "officialScopeSource": "Cambridge International AS & A Level Mathematics 9709 syllabus 2026-2027",
+      "endorsedSeries": "Cambridge International AS & A Level Mathematics",
+      "publisher": "Hodder Education",
+      "endorsedTitles": [
+        "Pure Mathematics 1",
+        "Pure Mathematics 2 & 3",
+        "Mechanics",
+        "Probability & Statistics 1",
+        "Probability & Statistics 2"
+      ],
+      "officialSupportLocal": "artifacts/curriculum-sources/cambridge/teaching-sources/support9709.pdf",
+      "readiness": "PARTIALLY_READY",
+      "blocker": "Need complete endorsed book content and official Scheme of Work access for all components/routes before authoring missing lessons."
+    }
+  ]
+}
